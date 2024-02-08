@@ -16,7 +16,6 @@ Welcome to my learning repository! This repository is dedicated to my journey of
 7. Search Algorithm
 8. Testing and Debugging Techniques
 9. Pseudo codes
-
 **Medium:**
 10. Data Structures
 11. Big O Notation
@@ -28,16 +27,16 @@ Welcome to my learning repository! This repository is dedicated to my journey of
 17. Performance Analysis of Presentations and Objects
 18. Real-world Case Studies
 19. Graph Algorithms (e.g., Graphs, Dijkstra's Algorithm)
-20. Problem-solving approach
 
 **Advanced:**
-21. Performance Analysis of Presentations and Objects
-22. Advanced Data Structures (e.g., Binary Search Trees, Tree Navigation)
-23. Advanced Sorting Algorithms (e.g., Merge Sort, Quick Sort)
-24. Concurrent Programming and Parallel Algorithms
-25. Additional Topics (e.g., Binary Pyramids, Problem-Solving Patterns)
-26. Graph Preview
-27. Binary Pyramids
+20. Performance Analysis of Presentations and Objects
+21. Advanced Data Structures (e.g., Binary Search Trees, Tree Navigation)
+22. Advanced Sorting Algorithms (e.g., Merge Sort, Quick Sort)
+23. Concurrent Programming and Parallel Algorithms
+24. Additional Topics (e.g., Binary Pyramids, Problem-Solving Patterns)
+25. Graph Preview
+26. Binary Pyramids
+27. Problem solving approach
 28. Bubble Sort
 29. Selective Sorting
 30. Insertion Sort
@@ -72,7 +71,6 @@ Welcome to my learning repository! This repository is dedicated to my journey of
 6. Evolutionary Algorithms and Genetic Programming
 7. Computational Complexity Theory
 8. Cryptography and Cryptanalysis Algorithms
-
 ## Learning Resources
 - []()
 ## Progress Tracking
