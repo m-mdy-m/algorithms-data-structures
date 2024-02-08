@@ -6,91 +6,73 @@ Welcome to my learning repository! This repository is dedicated to my journey of
 
 # Learning list:
 
+**Simple:**
 1. Introduction to Algorithms and Problem Solving
+2. Object-Oriented Programming (OOP)
+3. Basic Algorithms
+4. Introduction of Data Structure
+5. String Manipulation and Algorithms
+6. Basic Sorting (e.g., Bubble Sort, Selection Sort, Insertion Sort)
+7. Search Algorithm
+8. Testing and Debugging Techniques
+9. Pseudo codes
 
-2. Performance analysis of presentations and objects
+**Medium:**
+10. Data Structures
+11. Big O Notation
+12. Software Engineering Principles
+13. Coding Challenges
+14. Additional Data Structures (e.g., Linked Lists, Stacks, Queues, Hash Tables)
+15. Dynamic Programming
+16. Software Design Patterns
+17. Performance Analysis of Presentations and Objects
+18. Real-world Case Studies
+19. Graph Algorithms (e.g., Graphs, Dijkstra's Algorithm)
+20. Problem-solving approach
 
-3. Problem solving approach
+**Advanced:**
+21. Performance Analysis of Presentations and Objects
+22. Advanced Data Structures (e.g., Binary Search Trees, Tree Navigation)
+23. Advanced Sorting Algorithms (e.g., Merge Sort, Quick Sort)
+24. Concurrent Programming and Parallel Algorithms
+25. Additional Topics (e.g., Binary Pyramids, Problem-Solving Patterns)
+26. Graph Preview
+27. Binary Pyramids
+28. Bubble Sort
+29. Selective Sorting
+30. Insertion Sort
+31. Comparison of Bubble and Selection and Insertion Sort
+32. Merge Sort
+33. Quick Sort
+34. Basic Sort
+35. Linked and One-way Lists
+36. Two-way Linked Lists
+37. Stacks and Queues
+38. Binary Search Trees
+39. Tree Navigation
+40. Binary Pyramids
+41. Hash Tables
+42. Graphs
+43. Graph Preview
+44. Dijkstra's Algorithm
+45. Optimization Algorithms
+46. Advanced Software Design Patterns
+47. Quantum Computing Concepts
+48. Parallel Computing Techniques
+49. Familiarity with Advanced Graph Algorithms
+50. Advanced Graph Algorithms (e.g., Minimum Spanning Trees, Network Flow Algorithms)
+51. Machine Learning Basics
 
-4. Problem solving patterns
+**More Advanced:**
+1. Artificial Intelligence
+2. Parallel Computing Models (e.g., SIMD, MIMD)
+3. Distributed Systems and Algorithms
+4. Machine Learning Algorithms and Techniques
+5. Natural Language Processing (NLP) Algorithms
+6. Evolutionary Algorithms and Genetic Programming
+7. Computational Complexity Theory
+8. Cryptography and Cryptanalysis Algorithms
 
-5. Software Engineering Principles
-
-6. Object-Oriented Programming (OOP)
-
-7. Data Structures
-
-8. bigO notation
-
-9. coming back
-
-10. Return problems
-
-11. Challenging problems
-
-12. Coding Challenges
-
-13. Testing and Debugging Techniques
-
-14. the basics of concurrent programming and parallel algorithms
-
-15. Basic Algorithms
-
-16. Search algorithm
-
-17. Real-world Case Studie
-
-18. Advanced Data Structures
-
-19. Bubble sort
-
-20. Selective sorting
-
-21. Insertion sort
-
-22. Comparison of bubble and selection and insertion sort
-
-23. Merge sort
-
-24. Quick sort
-
-25. Basic sort
-
-26. Advanced Sorting Algorithms
-
-27. Introduction of data structure
-
-28. Additional Data Structures
-
-29. Linked and one-way lists
-
-30. Two-way linked lists
-
-31. Stacks and queues
-
-32. Binary search trees
-
-33. Tree navigation
-
-34. Binary pyramids
-
-35. Hash tables
-
-36. Graph Algorithms
-
-37. Graphs
-
-38. Graph preview
-
-39. Dijkstra's algorithm
-
-40. String Manipulation and Algorithms
-
-41. Dynamic programming
-
-42. Software Design Patterns Study commonly used design patterns (e.g., Singleton, Factory, Observer)
-
-43. Additional Topics (Binary Pyramids, Commodity Solution Approach, Problem-Solving Patterns, Performance Analysis of Presentations and Objects,)
 ## Learning Resources
 - []()
 ## Progress Tracking
