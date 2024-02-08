@@ -8,69 +8,130 @@ Welcome to my learning repository! This repository is dedicated to my journey of
 
 **Simple:**
 1. Introduction to Algorithms and Problem Solving
+
 2. Object-Oriented Programming (OOP)
+
 3. Basic Algorithms
+
 4. Introduction of Data Structure
+
 5. String Manipulation and Algorithms
+
 6. Basic Sorting (e.g., Bubble Sort, Selection Sort, Insertion Sort)
+
 7. Search Algorithm
+
 8. Testing and Debugging Techniques
+
 9. Pseudo codes
+
 **Medium:**
+
 10. Data Structures
+
 11. Big O Notation
+
 12. Software Engineering Principles
+
 13. Coding Challenges
+
 14. Additional Data Structures (e.g., Linked Lists, Stacks, Queues, Hash Tables)
+
 15. Dynamic Programming
+
 16. Software Design Patterns
+
 17. Performance Analysis of Presentations and Objects
+
 18. Real-world Case Studies
+
 19. Graph Algorithms (e.g., Graphs, Dijkstra's Algorithm)
 
+
 **Advanced:**
+
 20. Performance Analysis of Presentations and Objects
+
 21. Advanced Data Structures (e.g., Binary Search Trees, Tree Navigation)
+
 22. Advanced Sorting Algorithms (e.g., Merge Sort, Quick Sort)
+
 23. Concurrent Programming and Parallel Algorithms
+
 24. Additional Topics (e.g., Binary Pyramids, Problem-Solving Patterns)
+
 25. Graph Preview
+
 26. Binary Pyramids
+
 27. Problem solving approach
+
 28. Bubble Sort
+
 29. Selective Sorting
+
 30. Insertion Sort
+
 31. Comparison of Bubble and Selection and Insertion Sort
+
 32. Merge Sort
+
 33. Quick Sort
+
 34. Basic Sort
+
 35. Linked and One-way Lists
+
 36. Two-way Linked Lists
+
 37. Stacks and Queues
+
 38. Binary Search Trees
+
 39. Tree Navigation
+
 40. Binary Pyramids
+
 41. Hash Tables
+
 42. Graphs
+
 43. Graph Preview
+
 44. Dijkstra's Algorithm
+
 45. Optimization Algorithms
+
 46. Advanced Software Design Patterns
+
 47. Quantum Computing Concepts
+
 48. Parallel Computing Techniques
+
 49. Familiarity with Advanced Graph Algorithms
+
 50. Advanced Graph Algorithms (e.g., Minimum Spanning Trees, Network Flow Algorithms)
+
 51. Machine Learning Basics
 
 **More Advanced:**
+
 1. Artificial Intelligence
+
 2. Parallel Computing Models (e.g., SIMD, MIMD)
+
 3. Distributed Systems and Algorithms
+
 4. Machine Learning Algorithms and Techniques
+
 5. Natural Language Processing (NLP) Algorithms
+
 6. Evolutionary Algorithms and Genetic Programming
+
 7. Computational Complexity Theory
+
 8. Cryptography and Cryptanalysis Algorithms
+
 ## Learning Resources
 - []()
 ## Progress Tracking
