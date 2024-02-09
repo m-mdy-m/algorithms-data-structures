@@ -187,27 +187,75 @@ But what do you think is the `problem`?
 Now customers may not have protested, but our restaurant menu has many problems and we can improve it
 
 ### Problem:
+
 1. **Unavailability of popular foods:**
    - Customers may struggle to find popular dishes among the extensive menu.
 
 ### Optimization Algorithm:
+
 - **Prioritize popular foods:** Sort the menu based on the popularity of dishes. This optimization ensures that highly sought-after items are easily accessible to customers, potentially leading to increased satisfaction and sales.
 
 ### Problem:
+
 2. **Long and exhaustive menu:**
    - Customers may find it overwhelming to navigate through a lengthy menu, especially when they are in a hurry.
 
 ### Optimization Algorithm:
+
 - **Categorize items for easier navigation:** Group similar items together and organize them into sections such as drinks, appetizers, main courses, desserts, etc. This categorization reduces visual clutter and makes it easier for customers to locate their desired items quickly.
 
 ### Problem:
+
 3. **Inaccessibility of the menu for potential customers:**
    - Customers who cannot physically visit the restaurant may have difficulty accessing the menu to make informed decisions.
 
 ### Optimization Algorithm:
+
 - **Create an online menu:** Develop a website or mobile app where customers can view the menu, complete with descriptions and images of dishes. This online presence allows potential customers to browse the menu from anywhere, increasing accessibility and potentially attracting new patrons.
 
 ### Impact on Efficiency:
+
 - These optimizations streamline the menu navigation process, making it more efficient for both customers and restaurant staff.
 - Prioritizing popular foods and categorizing items reduce decision-making time for customers, leading to faster order placements and potentially higher turnover rates.
 - Offering an online menu expands the restaurant's reach and customer base, ultimately boosting efficiency by attracting more customers and facilitating remote ordering.
+
+## Answer Ten
+
+**Algorithm: Shortest Route Finder**
+
+**Problem Statement:**
+Imagine you're embarking on a trip from your humble abode (A) to your desired destination (J) through a series of cities connected by roads of varying travel times.
+
+**Given Cities:**
+
+---
+
+        10MIN                   50Min
+    E-------------------B-------------------------------Y
+    |                   |                               |
+    |5MIn               |                               |20MIN
+    |                   | 20MIN                         |
+    A (HOME)            |                               F
+                        |                               |
+                        |                      10MIN    |30MIN
+                        |    (destination) J <--------- H
+                        |                  ^
+                        |      10MIN       | 5MIN
+                        C------------------V
+
+---
+
+**Routes:**
+
+- **If you want to enjoy the view and drive:** A => E => B => Y => F => H => J
+  - Time: 5+10+50+20+30+10 = 125MIN (Approx. 2 hours)
+- **Save Time:** A => E => B => C => V => J
+  - Time: 5+10+20+10+5 = 50MIN (Less than an hour)
+
+**Choosing Your Path:**
+
+- If you seek adventure and wish to savor the journey, the scenic Route 1 beckons.
+- However, if time is of the essence and urgency is your companion, then Route 2 offers the swiftest passage.
+
+**Conclusion:**
+In this mortal predicament, the traveler faces a timeless dilemma: to indulge in the scenic route or to expedite the journey. Opting for Route 2 not only promises the shortest passage but also ensures the traveler's timely arrival at the destination.
