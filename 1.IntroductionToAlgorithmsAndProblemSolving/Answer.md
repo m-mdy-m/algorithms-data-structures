@@ -101,30 +101,72 @@ Let's put it this way, we can use several algorithms as well!
 How many algorithms are there to reach `2`?
 Available algorithms =>
 
-1. **Multiplication (1*2):**
+1. **Multiplication (1\*2):**
+
    - Runtime: Very quick, usually constant time.
    - Resource Usage: Minimal, only requires the multiplication operation.
 
 2. **Addition (2+0):**
+
    - Runtime: Very quick, usually constant time.
    - Resource Usage: Minimal, only requires the addition operation.
 
 3. **Exponential (to the power of 2√2):**
+
    - Runtime: Depends on the implementation. Generally, exponentiation operations take longer than basic arithmetic operations.
    - Resource Usage: Higher, requires more computational resources due to the exponentiation operation.
 
 4. **Absolute value (|2|):**
+
    - Runtime: Very quick, usually constant time.
    - Resource Usage: Minimal, only requires the absolute value operation.
 
 5. **Subtraction (4-2 or 3-1):**
+
    - Runtime: Very quick, usually constant time.
    - Resource Usage: Minimal, only requires the subtraction operation.
 
 6. **Division (4 divided by 2 or 12 divided by 6):**
+
    - Runtime: Very quick, usually constant time.
    - Resource Usage: Minimal, only requires the division operation.
 
 7. **Addition (1+1):**
    - Runtime: Very quick, usually constant time.
    - Resource Usage: Minimal, only requires the addition operation.
+
+## Answer Eight
+
+It depends on the society and place of residence.
+
+In my society, the algorithm does not work😂
+But for example, in my community, the garbage truck is kept in a place that smells very bad after collecting garbage and after emptying it!
+So what is the algorithm?
+
+Types of algorithms =>
+
+1- Burning the garbage truck😂
+2- Igniting the garbage truck and the driver
+
+### So now let's get to the point!
+
+#### `Problem`:
+
+The area where the garbage truck is kept has a foul smell after collecting garbage, which is unpleasant for residents and potentially harmful to public health.
+
+### Algorithmic Solutions:
+
+1. **Optimizing Garbage Collection Routes:**
+   - Algorithm: Utilize route optimization algorithms to plan efficient garbage collection routes. By analyzing factors such as traffic patterns and collection frequency, these algorithms can minimize the time spent in the storage area, reducing odor exposure.
+
+2. **Real-time Monitoring and Notification Systems:**
+   - Algorithm: Implement real-time monitoring systems on garbage trucks to track their location and status. Algorithms can detect when the truck is approaching the storage area and trigger notifications to alert personnel to prepare for waste disposal activities.
+
+3. **Automated Waste Compaction and Disposal:**
+   - Algorithm: Integrate automated waste compaction systems into garbage trucks. These algorithms can optimize the compaction process to maximize truck capacity and reduce the frequency of emptying, minimizing the time spent in the storage area.
+
+4. **Scheduling and Rotation of Storage Locations:**
+   - Algorithm: Develop algorithms to schedule the rotation of storage locations for garbage trucks. By periodically relocating the storage area to different sites within the community, algorithms can distribute the impact of odors and mitigate nuisance for residents.
+
+5. **Community Feedback and Engagement Platforms:**
+   - Algorithm: Create algorithms to analyze feedback from residents regarding waste management issues. By collecting and analyzing data on complaints and suggestions, algorithms can identify trends and prioritize areas for improvement, enabling authorities to address concerns effectively.
