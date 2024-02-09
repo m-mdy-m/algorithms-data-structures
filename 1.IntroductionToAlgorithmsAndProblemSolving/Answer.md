@@ -67,7 +67,7 @@ This exercise is like the example of building a building or a house, and the com
 
 6. **Additional costs:** Unexpected expenses or changes during the construction process add complexity to the algorithm for managing the project. Adapting to unforeseen circumstances while staying within budget requires careful planning and decision-making.
 
-### Answer Six
+## Answer Six
 
 To answer this question, let's think that we want to make a dish and take help from a book that explains the steps of food preparation.
 
@@ -81,6 +81,7 @@ When you take the food, the food is burnt!
 Because you didn't read the book properly due to too much excitement and you didn't get help from other sources for the correctness of the book (for example, you say to your mother: Mom, is the recipe for this dish correct?)
 
 With this mistake and loss of food, your mother gets nervous and you end up sleeping on the street at night😂
+
 > Here's why correctness is important:
 
 1. **Quality of Results:** A correct algorithm ensures that the desired outcome is achieved. In cooking, following the correct recipe results in a delicious and well-prepared dish. Incorrect algorithms, on the other hand, can lead to subpar or undesirable results.
@@ -92,3 +93,38 @@ With this mistake and loss of food, your mother gets nervous and you end up slee
 4. **Trust and Reliability:** Using correct algorithms builds trust and reliability in the process. If people know they can rely on the algorithm to produce accurate results, they are more likely to use it and have confidence in its outcomes.
 
 5. **Avoiding Negative Consequences:** Incorrect algorithms can have negative consequences beyond the immediate task at hand. In your example, burning the food not only ruins dinner but also causes stress and potentially strained relationships with family members.
+
+## Answer Seven
+
+Let's put it this way, we can use several algorithms as well!
+
+How many algorithms are there to reach `2`?
+Available algorithms =>
+
+1. **Multiplication (1*2):**
+   - Runtime: Very quick, usually constant time.
+   - Resource Usage: Minimal, only requires the multiplication operation.
+
+2. **Addition (2+0):**
+   - Runtime: Very quick, usually constant time.
+   - Resource Usage: Minimal, only requires the addition operation.
+
+3. **Exponential (to the power of 2√2):**
+   - Runtime: Depends on the implementation. Generally, exponentiation operations take longer than basic arithmetic operations.
+   - Resource Usage: Higher, requires more computational resources due to the exponentiation operation.
+
+4. **Absolute value (|2|):**
+   - Runtime: Very quick, usually constant time.
+   - Resource Usage: Minimal, only requires the absolute value operation.
+
+5. **Subtraction (4-2 or 3-1):**
+   - Runtime: Very quick, usually constant time.
+   - Resource Usage: Minimal, only requires the subtraction operation.
+
+6. **Division (4 divided by 2 or 12 divided by 6):**
+   - Runtime: Very quick, usually constant time.
+   - Resource Usage: Minimal, only requires the division operation.
+
+7. **Addition (1+1):**
+   - Runtime: Very quick, usually constant time.
+   - Resource Usage: Minimal, only requires the addition operation.
