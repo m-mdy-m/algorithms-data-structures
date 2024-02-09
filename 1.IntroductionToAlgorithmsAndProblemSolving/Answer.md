@@ -52,6 +52,7 @@ Well, as usual in all their schools, they open the list of school students in al
 Well, now think that the list was not sorted alphabetically and it was messed up! At that time, the school principal had to spend days or even months to find a name
 
 ## Answer Five
+
 This exercise is like the example of building a building or a house, and the complexity of building a house in the first example depends on several reasons, the complexity of an algorithm.
 
 1. **Size of the land:** The size of the land can affect the complexity of the construction project. A larger land area may require more materials, labor, and time to complete the construction, increasing the complexity of the algorithm for planning and executing the project efficiently.
@@ -65,3 +66,29 @@ This exercise is like the example of building a building or a house, and the com
 5. **Speed of construction and workers:** The pace at which the construction progresses depends on the efficiency and skill of the workers, as well as external factors like weather conditions. Optimizing the workflow and coordinating tasks among workers contribute to the efficiency of the algorithm for building the house.
 
 6. **Additional costs:** Unexpected expenses or changes during the construction process add complexity to the algorithm for managing the project. Adapting to unforeseen circumstances while staying within budget requires careful planning and decision-making.
+
+### Answer Six
+
+To answer this question, let's think that we want to make a dish and take help from a book that explains the steps of food preparation.
+
+We say to our mother:
+Mom, don't cook for dinner! I will do this!
+You proceed according to the steps or algorithms written in that book and at the end you put the food on the gas until it is ready and after 20 minutes (according to the book) you take the food and eat it.
+When you take the food, the food is burnt!
+
+**Why do you think it burned?**
+
+Because you didn't read the book properly due to too much excitement and you didn't get help from other sources for the correctness of the book (for example, you say to your mother: Mom, is the recipe for this dish correct?)
+
+With this mistake and loss of food, your mother gets nervous and you end up sleeping on the street at night😂
+> Here's why correctness is important:
+
+1. **Quality of Results:** A correct algorithm ensures that the desired outcome is achieved. In cooking, following the correct recipe results in a delicious and well-prepared dish. Incorrect algorithms, on the other hand, can lead to subpar or undesirable results.
+
+2. **Safety:** In some cases, incorrect algorithms can pose safety risks. For instance, if a cooking recipe fails to mention proper food handling or cooking temperatures, it could lead to foodborne illnesses or kitchen accidents.
+
+3. **Time and Resources:** While it may take longer to execute a correct algorithm, it ultimately saves time and resources in the long run by avoiding mistakes, rework, or wastage. In the example of cooking, redoing a burnt dish consumes additional time and ingredients.
+
+4. **Trust and Reliability:** Using correct algorithms builds trust and reliability in the process. If people know they can rely on the algorithm to produce accurate results, they are more likely to use it and have confidence in its outcomes.
+
+5. **Avoiding Negative Consequences:** Incorrect algorithms can have negative consequences beyond the immediate task at hand. In your example, burning the food not only ruins dinner but also causes stress and potentially strained relationships with family members.
