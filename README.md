@@ -13,7 +13,9 @@ Welcome to my learning repository! This repository is dedicated to my journey of
    - [Grokking Algorithms](https://edu.anarcho-copy.org/Algorithm/grokking-algorithms-illustrated-programmers-curious.pdf) - Download
 
 2. Object-Oriented Programming (OOP)
-
+   - [wikipedia](https://en.wikipedia.org/wiki/Object-oriented_programming)
+   - [MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming)
+   - [GeeksforGeeks](https://www.geeksforgeeks.org/introduction-of-object-oriented-programming/)
 3. Basic Algorithms
 
 4. Introduction of Data Structure
