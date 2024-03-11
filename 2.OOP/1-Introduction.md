@@ -102,58 +102,70 @@ By employing classes and objects within OOP, we can adeptly model and structure 
 
 35. **Object Persistence:**
 
+36. **Mixin Classes:**
+
+37. **Delegation:** 
+
+38. **Object-Oriented Analysis Patterns:**
+
+39. **Object-Oriented Testing Strategies:** 
+
+40. **Object Collaboration:** 
+
 ### Advanced:
 
-36. **Object Pooling:**
+41. **Object Pooling:**
 
-37. **Multithreading and Concurrency:**
+42. **Multithreading and Concurrency:**
 
-38. **Object Relational Mapping (ORM):**
+43. **Object Relational Mapping (ORM):**
 
-39. **Aspect-Oriented Programming (AOP):**
+44. **Aspect-Oriented Programming (AOP):**
 
-40. **Event-Driven Programming:**
+45. **Event-Driven Programming:**
 
-41. **Reflection:**
+46. **Reflection:**
 
-42. **Garbage Collection:**
+47. **Garbage Collection:**
 
-43. **Object-Oriented Metrics:**
+48. **Object-Oriented Data Structures:**
 
-44. **Object-Oriented Testing:**
+49. **Object-Oriented Metrics:**
 
-45. **Object-Oriented Development Methodologies:**
+50. **Object-Oriented Testing:**
 
-46. **Object-Oriented Frameworks and Libraries:**
+51. **Object-Oriented Development Methodologies:**
 
-47. **Design by Contract (DbC):**
+52. **Object-Oriented Frameworks and Libraries:**
 
-48. **Object-Oriented Metaprogramming:**
+53. **Design by Contract (DbC):**
 
-49. **Object-Oriented Analysis Patterns:**
+54. **Object-Oriented Metaprogramming:**
 
-50. **Object-Oriented Software Architecture:**
+55. **Object-Oriented Analysis Patterns:**
 
-51. **Domain-Driven Design (DDD):**
+56. **Object-Oriented Software Architecture:**
 
-52. **Object-Oriented Best Practices:**
+57. **Domain-Driven Design (DDD):**
 
-53. **Object-Oriented Refactoring:**
+58. **Object-Oriented Best Practices:**
 
-54. **Object-Oriented Design Principles:**
+59. **Object-Oriented Refactoring:**
 
-55. **Object-Oriented Design Anti-patterns:**
+60. **Object-Oriented Design Principles:**
 
-56. **Object-Oriented Security:**
+61. **Object-Oriented Design Anti-patterns:**
 
-57. **Object-Oriented Performance Optimization:**
+62. **Object-Oriented Security:**
 
-58. **Object-Oriented Code Quality and Code Smells:**
+63. **Object-Oriented Performance Optimization:**
 
-59. **Object-Oriented User Interface (UI) Design:**
+64. **Object-Oriented Code Quality and Code Smells:**
 
-60. **Object-Oriented Middleware:**
+65. **Object-Oriented User Interface (UI) Design:**
 
-61. **Object-Oriented Web Development:**
+66. **Object-Oriented Middleware:**
 
-62. **Object-Oriented Software Engineering:**
+67. **Object-Oriented Web Development:**
+
+68. **Object-Oriented Software Engineering:**
