@@ -1,7 +1,7 @@
 # Key Concepts in OOP:
 
 ### Beginner:
-
+1. **Class:**
 - **Attributes:**
 - **Methods:**
 
