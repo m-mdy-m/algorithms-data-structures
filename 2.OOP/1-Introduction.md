@@ -26,11 +26,10 @@ By employing classes and objects within OOP, we can adeptly model and structure 
 
 # Key Concepts in OOP:
 
-
 ### Beginner:
 
-   - **Attributes:**
-   - **Methods:**
+- **Attributes:**
+- **Methods:**
 
 2. **Object:**
 
@@ -104,13 +103,13 @@ By employing classes and objects within OOP, we can adeptly model and structure 
 
 36. **Mixin Classes:**
 
-37. **Delegation:** 
+37. **Delegation:**
 
 38. **Object-Oriented Analysis Patterns:**
 
-39. **Object-Oriented Testing Strategies:** 
+39. **Object-Oriented Testing Strategies:**
 
-40. **Object Collaboration:** 
+40. **Object Collaboration:**
 
 ### Advanced:
 
@@ -169,3 +168,7 @@ By employing classes and objects within OOP, we can adeptly model and structure 
 67. **Object-Oriented Web Development:**
 
 68. **Object-Oriented Software Engineering:**
+
+### Specialized:
+
+69. **Object-Oriented Big Data Processing:**
