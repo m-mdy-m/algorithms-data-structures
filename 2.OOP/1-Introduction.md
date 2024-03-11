@@ -22,5 +22,5 @@ It's crucial to clarify that while the term "class" defines the blueprint for ob
 
 By employing classes and objects within OOP, we can adeptly model and structure complex systems, effectively representing real-world entities in a structured and manageable manner.
 
-**Now let's [explain more](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/2-concepts-oop.md)!**
+## Now let's [explain more !](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/2-concepts-oop.md)
 
