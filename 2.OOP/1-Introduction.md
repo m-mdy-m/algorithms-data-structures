@@ -35,11 +35,11 @@ By employing classes and objects within OOP, we can adeptly model and structure 
 
 ### 3. Encapsulation:
 
-### 4. Inheritance:
+### 4. Abstraction:
 
-### 5. Polymorphism:
+### 5. Inheritance:
 
-### 6. Abstraction:
+### 6. Polymorphism:
 
 ### 7. Association, Aggregation, and Composition:
 
