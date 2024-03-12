@@ -27,6 +27,7 @@ Welcome to my learning repository! This repository is dedicated to my journey of
    - [medium](https://medium.com/sessionstack-blog/how-javascript-works-3-types-of-polymorphism-f10ff4992be1)
    - [linkedin](https://www.linkedin.com/pulse/understanding-javascript-polymorphism-powerful-tool-flexible-fahim)
    - [geeksforgeeks](https://www.geeksforgeeks.org/polymorphism-in-javascript/)
+   - [altcademy](https://www.altcademy.com/blog/what-is-polymorphism-in-javascript/)
 3. Basic Algorithms
 
 4. Introduction of Data Structure
