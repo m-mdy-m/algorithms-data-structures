@@ -9,7 +9,7 @@
 
 3. **[Encapsulation](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/3.Encapsulation.md)**
 
-4. **Inheritance:**
+4. **[Inheritance](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/4.Inheritance.md)**
 
 5. **Polymorphism:**
 
