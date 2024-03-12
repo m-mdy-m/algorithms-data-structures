@@ -7,7 +7,7 @@
 
 2. **[Object](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/2-Object.md):**
 
-3. **Encapsulation:**
+3. **[Encapsulation](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/3.Encapsulation.md)**
 
 4. **Inheritance:**
 
