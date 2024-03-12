@@ -7,7 +7,9 @@ Welcome to my learning repository! This repository is dedicated to my journey of
 # Learning list:
 
 **Simple:**
+
 1. Introduction to Algorithms and Problem Solving
+
    - [Introduction to Algorithms](https://dl.ebooksworld.ir/books/Introduction.to.Algorithms.4th.Leiserson.Stein.Rivest.Cormen.MIT.Press.9780262046305.EBooksWorld.ir.pdf) - Download
 
    - [Grokking Algorithms](https://edu.anarcho-copy.org/Algorithm/grokking-algorithms-illustrated-programmers-curious.pdf) - Download
@@ -21,7 +23,9 @@ Welcome to my learning repository! This repository is dedicated to my journey of
    - [press.rebus.community](https://press.rebus.community/programmingfundamentals/chapter/encapsulation/)
    - [enjoyalgorithms](https://www.enjoyalgorithms.com/blog/encapsulation-in-oops)
    - [scoutapm](https://scoutapm.com/blog/what-is-encapsulation)
-   - [coursera](https://www.coursera.org/articles/encapsulation)
+   - [coursera](https://stackoverflow.com/questions/1031273/what-is-polymorphism-what-is-it-for-and-how-is-it-used)
+   - [medium](https://medium.com/@shanikae/polymorphism-explained-simply-7294c8deeef7)
+   - [techtarget](https://www.techtarget.com/searchapparchitecture/tip/Understanding-the-role-of-polymorphism-in-OOP)
 3. Basic Algorithms
 
 4. Introduction of Data Structure
@@ -57,7 +61,6 @@ Welcome to my learning repository! This repository is dedicated to my journey of
 18. Real-world Case Studies
 
 19. Graph Algorithms (e.g., Graphs, Dijkstra's Algorithm)
-
 
 **Advanced:**
 
@@ -144,10 +147,15 @@ Welcome to my learning repository! This repository is dedicated to my journey of
 8. Cryptography and Cryptanalysis Algorithms
 
 ## Learning Resources
+
 - []()
+
 ## Progress Tracking
+
 - [ ]
+
 ## Project
+
 1. ...
 
 ## Collaboration and Feedback
