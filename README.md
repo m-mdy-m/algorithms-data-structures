@@ -24,8 +24,9 @@ Welcome to my learning repository! This repository is dedicated to my journey of
    - [enjoyalgorithms](https://www.enjoyalgorithms.com/blog/encapsulation-in-oops)
    - [scoutapm](https://scoutapm.com/blog/what-is-encapsulation)
    - [coursera](https://stackoverflow.com/questions/1031273/what-is-polymorphism-what-is-it-for-and-how-is-it-used)
-   - [medium](https://medium.com/@shanikae/polymorphism-explained-simply-7294c8deeef7)
-   - [techtarget](https://www.techtarget.com/searchapparchitecture/tip/Understanding-the-role-of-polymorphism-in-OOP)
+   - [medium](https://medium.com/sessionstack-blog/how-javascript-works-3-types-of-polymorphism-f10ff4992be1)
+   - [linkedin](https://www.linkedin.com/pulse/understanding-javascript-polymorphism-powerful-tool-flexible-fahim)
+   - [geeksforgeeks](https://www.geeksforgeeks.org/polymorphism-in-javascript/)
 3. Basic Algorithms
 
 4. Introduction of Data Structure
