@@ -38,4 +38,5 @@ Objects encapsulate their state through attributes, representing the data they h
 Objects exhibit behaviors through methods, which define the actions they can perform. Methods operate on the object's internal state, allowing it to interact with its data and perform tasks. In the `Logger` example, the `log()` and `error()` methods enable the `loggerObj` instance to output messages to the console, demonstrating distinct behaviors based on the class definition.
 
 ### Summary:
+
 Objects in OOP encapsulate both state and behavior. The state of an object is determined by the data it holds, which is initialized during object instantiation. In our example, the `Logger` object holds the message provided during its creation. Meanwhile, the behavior of an object is defined by the methods associated with its class. When methods are invoked on an object, they operate on the object's internal state, allowing it to exhibit various behaviors.
