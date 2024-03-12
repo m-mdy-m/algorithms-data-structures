@@ -17,6 +17,11 @@ Welcome to my learning repository! This repository is dedicated to my journey of
    - [MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming)
    - [GeeksforGeeks](https://www.geeksforgeeks.org/introduction-of-object-oriented-programming/)
    - [educative](https://www.educative.io/blog/object-oriented-programming)
+   - [stackify](https://stackify.com/oop-concept-for-beginners-what-is-encapsulation/)
+   - [press.rebus.community](https://press.rebus.community/programmingfundamentals/chapter/encapsulation/)
+   - [enjoyalgorithms](https://www.enjoyalgorithms.com/blog/encapsulation-in-oops)
+   - [scoutapm](https://scoutapm.com/blog/what-is-encapsulation)
+   - [coursera](https://www.coursera.org/articles/encapsulation)
 3. Basic Algorithms
 
 4. Introduction of Data Structure
