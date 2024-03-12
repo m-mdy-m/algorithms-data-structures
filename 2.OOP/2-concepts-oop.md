@@ -5,7 +5,7 @@
 - **Attributes:**
 - **Methods:**
 
-2. **Object:**
+2. **[Object](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/2-Object.md):**
 
 3. **Encapsulation:**
 
