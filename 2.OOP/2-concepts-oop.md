@@ -13,7 +13,7 @@
 
 5. **[Polymorphism](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/5.Polymorphism.md)**
 
-6. **Abstraction:**
+6. **[Abstraction](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/6.Abstraction.md)**
 
 7. **Association, Aggregation, and Composition:**
 
