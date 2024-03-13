@@ -21,7 +21,7 @@
 
 8. **[Dynamic Binding](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/8.DynamicBinding.md)**
 
-9. **Message Passing**
+9. **[Message Passing](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/9.MessagePassing.md)**
 
 10. **Modularity:**
 
