@@ -15,7 +15,7 @@
 
 6. **[Abstraction](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/6.Abstraction.md)**
 
-7. **Association, Aggregation, and Composition:**
+7. **[Association, Aggregation, and Composition](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/7.AAC.md)**
 
 8. **Dynamic Binding**
 
