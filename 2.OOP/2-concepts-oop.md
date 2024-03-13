@@ -11,7 +11,7 @@
 
 4. **[Inheritance](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/4.Inheritance.md)**
 
-5. **Polymorphism:**
+5. **[Polymorphism](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/5.Polymorphism.md)**
 
 6. **Abstraction:**
 
