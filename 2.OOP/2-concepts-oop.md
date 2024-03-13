@@ -1,7 +1,9 @@
 # Key Concepts in OOP:
 
 ### Beginner:
+
 1. **[Class](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/1-class.md):**
+
 - **Attributes:**
 - **Methods:**
 
@@ -17,7 +19,7 @@
 
 7. **[Association, Aggregation, and Composition](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/7.AAC.md)**
 
-8. **Dynamic Binding**
+8. **[Dynamic Binding](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/8.DynamicBinding.md)**
 
 9. **Message Passing**
 
