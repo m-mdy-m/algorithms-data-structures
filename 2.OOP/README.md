@@ -25,7 +25,7 @@
 
 10. **[Modularity](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/10.Modularity.md)**
 
-11. **[Cohesion and Coupling]:**
+11. **[Cohesion and Coupling](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/11.CohesionAndCoupling.md)**
 
 12. **Overriding and Overloading:**
 
