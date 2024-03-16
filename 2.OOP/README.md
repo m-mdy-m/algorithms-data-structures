@@ -33,110 +33,110 @@
 
 ### Intermediate:
 
-14. **Object-Oriented Design Patterns:**
+1. **Object-Oriented Design Patterns:**
 
-18. **SOLID Principles:**
+2. **SOLID Principles:**
 
-12. **[Overriding and Overloading](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/12.OverridingAndOverloading.md)**
+3. **[Overriding and Overloading](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/12.OverridingAndOverloading.md)**
 
-21. **Constructors and Destructors:**
+4. **Constructors and Destructors:**
 
-22. **Access Modifiers:**
+5. **Access Modifiers:**
 
-23. **Composition:**
+6. **Composition:**
 
-24. **Aggregation:**
+7. **Aggregation:**
 
-25. **Association:**
+8. **Association:**
 
-26. **Dependency Injection:**
+9. **Dependency Injection:**
 
-27. **Object-Oriented Analysis and Design (OOAD):**
+10. **Object-Oriented Analysis and Design (OOAD):**
 
-28. **Object-Oriented Modeling:**
+11. **Object-Oriented Modeling:**
 
-29. **Method Signature:**
+12. **Method Signature:**
 
-30. **Method Visibility:**
+13. **Method Visibility:**
 
-31. **Method Chaining:**
+14. **Method Chaining:**
 
-32. **Object Cloning:**
+15. **Object Cloning:**
 
-33. **Immutable Objects:**
+16. **Immutable Objects:**
 
-34. **Object Serialization:**
+17. **Object Serialization:**
 
-35. **Object Persistence:**
+18. **Object Persistence:**
 
-36. **Mixin Classes:**
+19. **Mixin Classes:**
 
-37. **Delegation:**
+20. **Delegation:**
 
-38. **Object-Oriented Analysis Patterns:**
+21. **Object-Oriented Analysis Patterns:**
 
-39. **Object-Oriented Testing Strategies:**
+22. **Object-Oriented Testing Strategies:**
 
-40. **Object Collaboration:**
+23. **Object Collaboration:**
 
 ### Advanced:
 
-41. **Object Pooling:**
+1. **Object Pooling:**
 
-42. **Multithreading and Concurrency:**
+2. **Multithreading and Concurrency:**
 
-43. **Object Relational Mapping (ORM):**
+3. **Object Relational Mapping (ORM):**
 
-44. **Aspect-Oriented Programming (AOP):**
+4. **Aspect-Oriented Programming (AOP):**
 
-45. **Event-Driven Programming:**
+5. **Event-Driven Programming:**
 
-46. **Reflection:**
+6. **Reflection:**
 
-47. **Garbage Collection:**
+7. **Garbage Collection:**
 
-48. **Object-Oriented Data Structures:**
+8. **Object-Oriented Data Structures:**
 
-49. **Object-Oriented Metrics:**
+9. **Object-Oriented Metrics:**
 
-50. **Object-Oriented Testing:**
+10. **Object-Oriented Testing:**
 
-51. **Object-Oriented Development Methodologies:**
+11. **Object-Oriented Development Methodologies:**
 
-52. **Object-Oriented Frameworks and Libraries:**
+12. **Object-Oriented Frameworks and Libraries:**
 
-53. **Design by Contract (DbC):**
+13. **Design by Contract (DbC):**
 
-54. **Object-Oriented Metaprogramming:**
+14. **Object-Oriented Metaprogramming:**
 
-55. **Object-Oriented Analysis Patterns:**
+15. **Object-Oriented Analysis Patterns:**
 
-56. **Object-Oriented Software Architecture:**
+16. **Object-Oriented Software Architecture:**
 
-57. **Domain-Driven Design (DDD):**
+17. **Domain-Driven Design (DDD):**
 
-58. **Object-Oriented Best Practices:**
+18. **Object-Oriented Best Practices:**
 
-59. **Object-Oriented Refactoring:**
+19. **Object-Oriented Refactoring:**
 
-60. **Object-Oriented Design Principles:**
+20. **Object-Oriented Design Principles:**
 
-61. **Object-Oriented Design Anti-patterns:**
+21. **Object-Oriented Design Anti-patterns:**
 
-62. **Object-Oriented Security:**
+22. **Object-Oriented Security:**
 
-63. **Object-Oriented Performance Optimization:**
+23. **Object-Oriented Performance Optimization:**
 
-64. **Object-Oriented Code Quality and Code Smells:**
+24. **Object-Oriented Code Quality and Code Smells:**
 
-65. **Object-Oriented User Interface (UI) Design:**
+25. **Object-Oriented User Interface (UI) Design:**
 
-66. **Object-Oriented Middleware:**
+26. **Object-Oriented Middleware:**
 
-67. **Object-Oriented Web Development:**
+27. **Object-Oriented Web Development:**
 
-68. **Object-Oriented Software Engineering:**
+28. **Object-Oriented Software Engineering:**
 
 ### Specialized:
 
-69. **Object-Oriented Big Data Processing:**
+1. **Object-Oriented Big Data Processing:**
