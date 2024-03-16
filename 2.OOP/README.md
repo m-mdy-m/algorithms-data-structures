@@ -2,7 +2,7 @@
 
 ### Beginner:
 
-1. **[Class](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/1-class.md):**
+1. **[Class](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/1-class.md):**
 
 - **Attributes:**
 - **Methods:**
