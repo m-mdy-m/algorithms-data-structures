@@ -31,7 +31,7 @@
 
 13. **Static and Instance Members:**
 
-### Intermediate:
+### Medium:
 
 1. **Object-Oriented Design Patterns:**
 
