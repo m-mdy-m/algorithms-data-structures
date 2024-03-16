@@ -27,7 +27,7 @@
 
 11. **[Cohesion and Coupling](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/11.CohesionAndCoupling.md)**
 
-12. **Interfaces and Abstract Classes:**
+12. **[Interfaces and Abstract Classes](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/12.InterfacesAndAbstractClasses.md)**
 
 13. **Static and Instance Members:**
 
