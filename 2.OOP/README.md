@@ -33,7 +33,7 @@
 
 ### Medium:
 
-1. **[Overriding and Overloading](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/12.OverridingAndOverloading.md)**
+1. **[Overriding and Overloading](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Medium/1.OverridingAndOverloading.md)**
 
 2. **Constructors and Destructors:**
 
