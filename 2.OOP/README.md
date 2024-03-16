@@ -27,25 +27,17 @@
 
 11. **[Cohesion and Coupling](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/11.CohesionAndCoupling.md)**
 
-12. **[Overriding and Overloading](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/12.OverridingAndOverloading.md)**
+12. **Interfaces and Abstract Classes:**
 
-13. **Constructors and Destructors:**
-
-14. **Access Modifiers:**
-
-15. **Interfaces and Abstract Classes:**
-
-16. **Static and Instance Members:**
+13. **Static and Instance Members:**
 
 ### Intermediate:
 
-17. **Object-Oriented Design Patterns:**
+14. **Object-Oriented Design Patterns:**
 
 18. **SOLID Principles:**
 
-19. **Method Overriding:**
-
-20. **Method Overloading:**
+12. **[Overriding and Overloading](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/12.OverridingAndOverloading.md)**
 
 21. **Constructors and Destructors:**
 
