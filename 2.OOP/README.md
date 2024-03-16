@@ -7,25 +7,25 @@
 - **Attributes:**
 - **Methods:**
 
-2. **[Object](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/2-Object.md):**
+2. **[Object](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/2-Object.md):**
 
-3. **[Encapsulation](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/3.Encapsulation.md)**
+3. **[Encapsulation](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/3.Encapsulation.md)**
 
-4. **[Inheritance](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/4.Inheritance.md)**
+4. **[Inheritance](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/4.Inheritance.md)**
 
-5. **[Polymorphism](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/5.Polymorphism.md)**
+5. **[Polymorphism](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/5.Polymorphism.md)**
 
-6. **[Abstraction](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/6.Abstraction.md)**
+6. **[Abstraction](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/6.Abstraction.md)**
 
-7. **[Association, Aggregation, and Composition](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/7.AAC.md)**
+7. **[Association, Aggregation, and Composition](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/7.AAC.md)**
 
-8. **[Dynamic Binding](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/8.DynamicBinding.md)**
+8. **[Dynamic Binding](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/8.DynamicBinding.md)**
 
-9. **[Message Passing](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/9.MessagePassing.md)**
+9. **[Message Passing](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/9.MessagePassing.md)**
 
-10. **[Modularity](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/10.Modularity.md)**
+10. **[Modularity](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/10.Modularity.md)**
 
-11. **[Cohesion and Coupling](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/11.CohesionAndCoupling.md)**
+11. **[Cohesion and Coupling](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/11.CohesionAndCoupling.md)**
 
 12. **Interfaces and Abstract Classes:**
 
