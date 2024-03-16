@@ -33,23 +33,23 @@
 
 ### Medium:
 
-1. **Object-Oriented Design Patterns:**
+1. **[Overriding and Overloading](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/12.OverridingAndOverloading.md)**
 
-2. **SOLID Principles:**
+2. **Constructors and Destructors:**
 
-3. **[Overriding and Overloading](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/12.OverridingAndOverloading.md)**
+3. **Access Modifiers:**
 
-4. **Constructors and Destructors:**
+4. **Composition:**
 
-5. **Access Modifiers:**
+5. **Aggregation:**
 
-6. **Composition:**
+6. **Association:**
 
-7. **Aggregation:**
+7. **Dependency Injection:**
 
-8. **Association:**
+8. **Object-Oriented Design Patterns:**
 
-9. **Dependency Injection:**
+9. **SOLID Principles:**
 
 10. **Object-Oriented Analysis and Design (OOAD):**
 
