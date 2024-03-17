@@ -10,7 +10,7 @@
     3.  Discuss with examples how using classes can help organize code better and promote reusability.
     4.  Explain with examples some limitations or drawbacks class .
     5. Write a class called `Calculator` with methods `add()` and `subtract()`.
-- Answer : 
+- [Answer](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/BeginnerAnswer/1.class.js)
 
 2. **[Object](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/2-Object.md):**
 
