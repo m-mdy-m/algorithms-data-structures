@@ -16,6 +16,15 @@
 
 3. **[Encapsulation](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/3.Encapsulation.md)**
 
+- exercises : 
+    1. 
+    2. 
+    3. 
+    4. 
+    5. 
+- [Answer](#)
+
+
 4. **[Inheritance](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/4.Inheritance.md)**
 
 5. **[Polymorphism](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/5.Polymorphism.md)**
