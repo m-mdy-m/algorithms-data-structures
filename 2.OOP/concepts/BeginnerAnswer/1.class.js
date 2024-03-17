@@ -1,50 +1,55 @@
-("1 :");
-
+// 1. Rectangle Class
 class Rectangle {
-  constructor(width, heigh) {
-    this.width = width;
-    this.height = heigh;
+  constructor(width, height) {
+    // Constructor to initialize width and height attributes
+    this.width = width; // Assigning width parameter to width attribute
+    this.height = height; // Assigning height parameter to height attribute
   }
   calculateArea() {
-    return this.width * this.height;
+    // Method to calculate the area of the rectangle
+    return this.width * this.height; // Returning the product of width and height
   }
 }
-console.log(`rectangle area:${new Rectangle(4, 4).calculateArea()}`);
+console.log(`Rectangle area: ${new Rectangle(4, 4).calculateArea()}`); // Creating an instance of Rectangle class and calculating its area
 
-("2:");
+// 2. Person Class
 class Person {
   constructor(name, age) {
-    this.name = name;
-    this.age = age;
+    // Constructor to initialize name and age attributes
+    this.name = name; // Assigning name parameter to name attribute
+    this.age = age; // Assigning age parameter to age attribute
   }
   sayHello() {
-    return `Hello ${this.name}`;
+    // Method to print a greeting message including the person's name
+    return `Hello ${this.name}`; // Returning a greeting message
   }
 }
-console.log(new Person("mahdi", 19).sayHello());
+console.log(new Person("mahdi", 19).sayHello()); // Creating an instance of Person class and invoking the sayHello method
 
-("3:");
+// 3. Discussing Class Benefits
 /**
- * Classes are a way to organize your code in a generic and reusable way. When you use classes you need to represent a set of properties and methods that are used over and over again in other places.
- * and ...(Write on your own)
+ * Classes allow us to organize code into reusable modules. For example, a 'Person' class can be used to represent individuals in various contexts such as customer records, employee management, etc.
  */
 
-("4:");
+// 4. Limitations of Classes
 /**
- * One of the disadvantages of using classes is difficulty in testing
- * Complexity in heredity and ...
+ * Classes can lead to tightly coupled code, making it difficult to modify one class without affecting others.
+ * Inheritance hierarchies can become complex and hard to maintain, especially as the project grows.
+ * Difficulty in testing arises when classes have dependencies on external resources such as databases or network connections.
  */
-("5:");
 
+// 5. Calculator Class
 class Calculator {
   add(num1, num2) {
-    return num1 + num2;
+    // Method to perform addition operation
+    return num1 + num2; // Returning the sum of num1 and num2
   }
   subtract(num1, num2) {
-    return num1 - num2;
+    // Method to perform subtraction operation
+    return num1 - num2; // Returning the difference of num1 and num2
   }
 }
 
-const calculator = new Calculator();
-console.log(`Addition result: ${calculator.add(5, 3)}`);
-console.log(`Subtraction result: ${calculator.subtract(8, 3)}`);
+const calculator = new Calculator(); // Creating an instance of Calculator class
+console.log(`Addition result: ${calculator.add(5, 3)}`); // Invoking add method of Calculator class
+console.log(`Subtraction result: ${calculator.subtract(8, 3)}`); // Invoking subtract method of Calculator class
