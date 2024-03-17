@@ -4,7 +4,7 @@
 
 1. **[Class](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/1-class.md):**
 
-- Exercise : 
+- exercises : 
     1. Define a class called `Rectangle` with a constructor that takes two parameters `width` and `height`. This class should also have a method called `calculateArea()` which returns the area of the rectangle (width * height).
     2. Create a class called `Person` with a constructor that takes two parameters `name` and `age`. Inside the constructor, assign these parameters to attributes `name` and `age` respectively. This class should also have a method called `sayHello()` which prints a greeting message including the person's name.
     3.  Discuss with examples how using classes can help organize code better and promote reusability.
