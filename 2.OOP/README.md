@@ -37,47 +37,49 @@
 
 2. **Constructors and Destructors:**
 
-3. **Access Modifiers:**
+3. **Getter and Setter Methods:**
 
-4. **Composition:**
+4. **Access Modifiers:**
 
-5. **Aggregation:**
+5. **Composition:**
 
-6. **Association:**
+6. **Aggregation:**
 
-7. **Dependency Injection:**
+7. **Association:**
 
-8. **Object-Oriented Design Patterns:**
+8. **Dependency Injection:**
 
-9. **SOLID Principles:**
+9. **Object-Oriented Design Patterns:**
 
-10. **Object-Oriented Analysis and Design (OOAD):**
+10. **SOLID Principles:**
 
-11. **Object-Oriented Modeling:**
+11. **Object-Oriented Analysis and Design (OOAD):**
 
-12. **Method Signature:**
+12. **Object-Oriented Modeling:**
 
-13. **Method Visibility:**
+13. **Method Signature:**
 
-14. **Method Chaining:**
+14. **Method Visibility:**
 
-15. **Object Cloning:**
+15. **Method Chaining:**
 
-16. **Immutable Objects:**
+16. **Object Cloning:**
 
-17. **Object Serialization:**
+17. **Immutable Objects:**
 
-18. **Object Persistence:**
+18. **Object Serialization:**
 
-19. **Mixin Classes:**
+19. **Object Persistence:**
 
-20. **Delegation:**
+20. **Mixin Classes:**
 
-21. **Object-Oriented Analysis Patterns:**
+21. **Delegation:**
 
-22. **Object-Oriented Testing Strategies:**
+22. **Object-Oriented Analysis Patterns:**
 
-23. **Object Collaboration:**
+23. **Object-Oriented Testing Strategies:**
+
+24. **Object Collaboration:**
 
 ### Advanced:
 
