@@ -17,11 +17,11 @@ class Person {
     this.name = name;
     this.age = age;
   }
-  sayHello(){
-    return `Hello ${this.name}`
+  sayHello() {
+    return `Hello ${this.name}`;
   }
 }
-console.log(new Person('mahdi',19).sayHello());
+console.log(new Person("mahdi", 19).sayHello());
 
 ("3:");
 /**
@@ -30,3 +30,17 @@ console.log(new Person('mahdi',19).sayHello());
  */
 
 ("4:");
+/**
+ * One of the disadvantages of using classes is difficulty in testing
+ * Complexity in heredity and ...
+ */
+("5:");
+
+class Calculator{
+    add(){
+        console.log('add method')
+    }
+    subtract(){
+        console.log('subtract method')
+    }
+}
