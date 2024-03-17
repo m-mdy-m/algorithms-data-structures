@@ -36,11 +36,15 @@ console.log(new Person("mahdi", 19).sayHello());
  */
 ("5:");
 
-class Calculator{
-    add(){
-        console.log('add method')
-    }
-    subtract(){
-        console.log('subtract method')
-    }
+class Calculator {
+  add(num1, num2) {
+    return num1 + num2;
+  }
+  subtract(num1, num2) {
+    return num1 - num2;
+  }
 }
+
+const calculator = new Calculator();
+console.log(`Addition result: ${calculator.add(5, 3)}`);
+console.log(`Subtraction result: ${calculator.subtract(8, 3)}`);
