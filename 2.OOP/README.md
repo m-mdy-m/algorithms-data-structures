@@ -17,11 +17,34 @@
 3. **[Encapsulation](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/3.Encapsulation.md)**
 
 - exercises : 
-    1. 
-    2. 
-    3. 
-    4. 
-    5. 
+    1. **Exercise: Bank Account Management System**
+       - Design a `BankAccount` class with private properties including `accountNumber`, `balance`, and `owner`.
+       - Implement methods for depositing, withdrawing, and checking the balance, ensuring accurate balance updates and controlled access to account details.
+       - Challenge: Develop robust access control mechanisms to safeguard sensitive account information, such as account numbers and owner details.
+    
+    2. **Exercise: Library Catalog System**
+       - Create a `Book` class to encapsulate book details like title, author, and ISBN.
+       - Develop a `Library` class to manage a collection of books, providing functionalities for adding, removing, and searching for books.
+       - Ensure that book details are encapsulated within the `Book` class and access to the library catalog is appropriately restricted.
+       - Challenge: Implement a checkout system to monitor book availability and borrower details, ensuring proper encapsulation of borrower information.
+    
+    3. **Exercise: Employee Management System**
+       - Define an `Employee` class with private attributes such as `name`, `employeeId`, and `salary`.
+       - Create methods to update employee details, such as name and salary, while enforcing data validation rules.
+       - Ensure that employee data is encapsulated within the `Employee` class and access is restricted to authorized personnel only.
+       - Challenge: Establish access control mechanisms to manage employee roles and permissions, allowing only authorized users to modify employee information.
+    
+    4. **Exercise: Online Shopping Cart**
+       - Develop a `Product` class to encapsulate product details like name, price, and quantity.
+       - Implement a `ShoppingCart` class to manage shopping cart items, providing functionalities for adding, removing, and updating items.
+       - Ensure that product information is encapsulated within the `Product` class and access to shopping cart data is carefully controlled.
+       - Challenge: Implement inventory management to monitor product availability and handle out-of-stock scenarios while maintaining encapsulation of product data.
+    
+    5. **Exercise: School Management System**
+       - Create a `Student` class with private properties including `name`, `studentId`, and `grade`.
+       - Implement methods to enroll students in courses, update their grades, and generate academic reports.
+       - Ensure that student data is encapsulated within the `Student` class and access is restricted to authorized personnel.
+       - Challenge: Implement grade validation rules and academic performance tracking to ensure data integrity and maintain encapsulation of student records.
 - [Answer](#)
 
 
