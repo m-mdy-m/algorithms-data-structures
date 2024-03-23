@@ -291,3 +291,71 @@ console.log(cart.calculateTotalPrice()); // Output: 1200
 
 cart.removeProduct("Headphones");
 console.log(cart.calculateTotalPrice()); // Output: 200
+
+('5"');
+class Student {
+  constructor(name, studentId) {
+    this._name = name;
+    this._studentId = studentId;
+    this._grade = 0; // Initialize grade to 0
+    this._courses = {};
+  }
+
+  // Method to get student name
+  getName() {
+    return this._name;
+  }
+
+  // Method to get student ID
+  getStudentId() {
+    return this._studentId;
+  }
+
+  // Method to get student grade
+  getGrade() {
+    return this._grade;
+  }
+
+  // Method to enroll student in a course
+  enrollCourse(courseName) {
+    if (!courseName || typeof courseName !== "string") {
+      throw new Error("Invalid course name");
+    }
+    if (!this._courses[courseName]) {
+      this._courses[courseName] = "Enrolled";
+      console.log(`${this._name} has been enrolled in ${courseName}.`);
+    } else {
+      console.log(`${this._name} is already enrolled in ${courseName}.`);
+    }
+  }
+
+  // Method to update student grade
+  updateGrade(newGrade) {
+    if (typeof newGrade !== "number" || newGrade < 0 || newGrade > 100) {
+      throw new Error("Invalid grade");
+    }
+    this._grade = newGrade;
+    console.log(`Grade for ${this._name} has been updated to ${newGrade}.`);
+  }
+
+  // Method to generate academic report
+  generateReport() {
+    console.log(`Academic Report for ${this._name} (ID: ${this._studentId}):`);
+    console.log(`Grade: ${this._grade}`);
+    console.log("Courses Enrolled:");
+    for (const course in this._courses) {
+      console.log(`${course}: ${this._courses[course]}`);
+    }
+  }
+}
+
+// Example usage:
+const student1 = new Student("Mahdi", "123456");
+const student2 = new Student("Shaggy", "654321");
+
+student1.enrollCourse("Mathematics");
+student1.enrollCourse("Science");
+student1.enrollCourse("Mathematics"); // Already enrolled message
+
+student1.updateGrade(90);
+student1.generateReport();
