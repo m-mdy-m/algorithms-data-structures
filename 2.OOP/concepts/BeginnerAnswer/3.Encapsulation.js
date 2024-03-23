@@ -203,3 +203,91 @@ console.log(employee.getName()); // Output: Shaggy
 
 employee.updateSalary(60000);
 console.log(employee.getSalary()); // Output: 60000
+
+("4:");
+class Product {
+  constructor(name, price, quantity) {
+    this._name = name;
+    this._price = price;
+    this._quantity = quantity;
+  }
+
+  // Method to get product name
+  getName() {
+    return this._name;
+  }
+
+  // Method to get product price
+  getPrice() {
+    return this._price;
+  }
+
+  // Method to get product quantity
+  getQuantity() {
+    return this._quantity;
+  }
+
+  // Method to update product quantity
+  updateQuantity(newQuantity) {
+    if (typeof newQuantity === "number" && newQuantity >= 0) {
+      this._quantity = newQuantity;
+    } else {
+      throw new Error("Invalid quantity");
+    }
+  }
+}
+
+class ShoppingCart {
+  constructor() {
+    this._cartItems = [];
+  }
+
+  // Method to add a product to the shopping cart
+  addProduct(product) {
+    this._cartItems.push(product);
+  }
+
+  // Method to remove a product from the shopping cart
+  removeProduct(productName) {
+    this._cartItems = this._cartItems.filter(
+      (item) => item.getName() !== productName
+    );
+  }
+
+  // Method to update the quantity of a product in the shopping cart
+  updateProductQuantity(productName, newQuantity) {
+    const product = this._cartItems.find(
+      (item) => item.getName() === productName
+    );
+    if (product) {
+      product.updateQuantity(newQuantity);
+    } else {
+      throw new Error("Product not found in the shopping cart");
+    }
+  }
+
+  // Method to calculate the total price of items in the shopping cart
+  calculateTotalPrice() {
+    let totalPrice = 0;
+    this._cartItems.forEach((item) => {
+      totalPrice += item.getPrice() * item.getQuantity();
+    });
+    return totalPrice;
+  }
+}
+
+// Example usage:
+const product1 = new Product("Laptop", 1000, 1);
+const product2 = new Product("Headphones", 100, 2);
+
+const cart = new ShoppingCart();
+cart.addProduct(product1);
+cart.addProduct(product2);
+
+console.log(cart.calculateTotalPrice()); // Output: 1200
+
+cart.updateProductQuantity("Laptop", 2);
+console.log(cart.calculateTotalPrice()); // Output: 1200
+
+cart.removeProduct("Headphones");
+console.log(cart.calculateTotalPrice()); // Output: 200
