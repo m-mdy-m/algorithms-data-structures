@@ -45,7 +45,7 @@
        - Implement methods to enroll students in courses, update their grades, and generate academic reports.
        - Ensure that student data is encapsulated within the `Student` class and access is restricted to authorized personnel.
        - Challenge: Implement grade validation rules and academic performance tracking to ensure data integrity and maintain encapsulation of student records.
-- [Answer](#)
+   - [Answer](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/BeginnerAnswer/3.Encapsulation.js)
 
 
 4. **[Inheritance](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/4.Inheritance.md)**
