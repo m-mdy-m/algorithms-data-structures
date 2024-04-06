@@ -118,8 +118,8 @@ public class MyBaseClass {
 class Program {
     static void Main(string[] args) {
         MyBaseClass obj = new MyBaseClass();
-        // obj.PrivateProtectedVar = 70; // Error: PrivateProtectedVar is inaccessible outside MyBaseClass
-        // obj.PrivateProtectedMethod(); // Error: PrivateProtectedMethod is inaccessible outside MyBaseClass
+        // obj.PrivateProtectedVar = 70; // PrivateProtectedVar is inaccessible outside MyBaseClass
+        // obj.PrivateProtectedMethod(); // PrivateProtectedMethod is inaccessible outside MyBaseClass
         obj.AccessPrivateProtected(); // Accessing private protected members using a public method
     }
 }
