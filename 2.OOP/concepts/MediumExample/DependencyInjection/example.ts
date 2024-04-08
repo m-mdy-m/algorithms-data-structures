@@ -1,7 +1,7 @@
 // **1. Constructor Injection:**
 
 class Logger {
-  log(message: string): void;
+  log(message: string): void {}
 }
 class UserService {
   private logger: Logger;
@@ -51,6 +51,7 @@ class logger {
   }
 }
 class Loggable {
+  protected logger : Logger
   setLogger(logger: Logger): void {
     this.logger = logger;
   }
@@ -76,8 +77,10 @@ userService.getUser(123);
 // **4. Method Injection:**
 
 // Dependency interface
-interface Logger {
-  log(message: string): void;
+class Logger4 {
+  log(message: string): void {
+    console.log(message);
+  }
 }
 
 // Class with method injection
@@ -89,10 +92,6 @@ class UserService {
 }
 
 // Usage
-const userService = new UserService();
-const logger = {
-  log(message: string): void {
-    console.log(message);
-  },
-};
+const userService = new UserService4();
+const logger = new Logger4();
 userService.getUser(123, logger);
