@@ -78,7 +78,7 @@
 
 4. **[Access Modifiers](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Medium/4.AccessModifiers.md)**
 
-5. **Dependency Injection**
+5. **[Dependency Injection](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Medium/5.DependencyInjection.md)**
 
 6. **Object-Oriented Design Patterns:**
 
