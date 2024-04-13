@@ -15,21 +15,7 @@ Welcome to my learning repository! This repository is dedicated to my journey of
    - [Grokking Algorithms](https://edu.anarcho-copy.org/Algorithm/grokking-algorithms-illustrated-programmers-curious.pdf) - Download
 
 2. Object-Oriented Programming (OOP)
-   - [wikipedia](https://en.wikipedia.org/)
-   - [MDN](https://developer.mozilla.org/)
-   - [GeeksforGeeks](https://www.geeksforgeeks.org/)
-   - [educative](https://www.educative.io/)
-   - [stackify](https://stackify.com/)
-   - [press.rebus.community](https://press.rebus.community/)
-   - [enjoyalgorithms](https://www.enjoyalgorithms.com/blog/)
-   - [scoutapm](https://scoutapm.com/blog/)
-   - [coursera](https://stackoverflow.com/)
-   - [medium](https://medium.com/)
-   - [linkedin](https://www.linkedin.com/)
-   - [altcademy](https://www.altcademy.com/)
-   - [digitalocean](https://www.digitalocean.com/)
-   - [boardinfinity](https://www.boardinfinity.com//)
-   - [baeldung](https://www.baeldung.com/)
+
 3. Basic Algorithms
 
 4. Introduction of Data Structure
@@ -151,12 +137,25 @@ Welcome to my learning repository! This repository is dedicated to my journey of
 8. Cryptography and Cryptanalysis Algorithms
 
 ## Learning Resources
+> Sites with ⭐ represent the most used
 
-- []()
+ - [wikipedia](https://en.wikipedia.org/)(⭐)
+ - [MDN](https://developer.mozilla.org/)
+ - [GeeksforGeeks](https://www.geeksforgeeks.org/)(⭐)
+ - [educative](https://www.educative.io/)
+ - [stackify](https://stackify.com/)
+ - [press.rebus.community](https://press.rebus.community/)
+ - [enjoyalgorithms](https://www.enjoyalgorithms.com/blog/)
+ - [scoutapm](https://scoutapm.com/blog/)
+ - [coursera](https://stackoverflow.com/)
+ - [medium](https://medium.com/)(⭐)
+ - [linkedin](https://www.linkedin.com/)
+ - [altcademy](https://www.altcademy.com/)
+ - [digitalocean](https://www.digitalocean.com/)
+ - [boardinfinity](https://www.boardinfinity.com//)
+ - [baeldung](https://www.baeldung.com/)
+ - [dev.to](https://dev.to/m__mdy__m)(⭐)
 
-## Progress Tracking
-
-- [ ]
 
 ## Project
 
