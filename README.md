@@ -154,7 +154,7 @@ Welcome to my learning repository! This repository is dedicated to my journey of
  - [digitalocean](https://www.digitalocean.com/)
  - [boardinfinity](https://www.boardinfinity.com//)
  - [baeldung](https://www.baeldung.com/)
- - [dev.to](https://dev.to/m__mdy__m)(⭐)
+ - [dev.to](https://dev.to/)(⭐)
 
 
 ## Project
