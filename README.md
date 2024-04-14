@@ -16,19 +16,32 @@ Welcome to my learning repository! This repository is dedicated to my journey of
 
 2. [Object-Oriented Programming (OOP)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/2.OOP)
    - **Beginner**:
-      - [Class](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/ Beginner/1-class.md)
-      - [Object](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/   Beginner/2-Object.md)
-      - [Encapsulation](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/  concepts/Beginner/3.Encapsulation.md)
-      - [Inheritance](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/ concepts/Beginner/4.Inheritance.md)
-      - [Polymorphism](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/   concepts/Beginner/5.Polymorphism.md)
-      - [Abstraction]https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/  concepts/Beginner/6.Abstraction.md()
-      - [Association, Aggregation, and Composition](https://github.com/m-mdy-m/  algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/7.AAC.md)
-      - [DynamicBinding](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/ concepts/Beginner/8.DynamicBinding.md)
-      - [MessagePassing](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/ concepts/Beginner/9.MessagePassing.md)
-      - [Modularity](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/  concepts/Beginner/10.Modularity.md)
-      - [Cohesion And Coupling](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/   2.OOP/concepts/Beginner/11.CohesionAndCoupling.md)
-      - [Interfaces And Abstract Classes](https://github.com/m-mdy-m/algorithms-data-structures/   blob/main/2.OOP/concepts/Beginner/12.InterfacesAndAbstractClasses.md)
-      - [Static And Instance Members](https://github.com/m-mdy-m/algorithms-data-structures/blob/  main/2.OOP/concepts/Beginner/13.StaticAndInstanceMembers.md)
+   
+      - [Class](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/1-class.md)
+
+      - [Object](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/2-Object.md)
+
+      - [Encapsulation](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/3.Encapsulation.md)
+
+      - [Inheritance](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/4.Inheritance.md)
+      
+      - [Polymorphism](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/5.Polymorphism.md)
+
+      - [Abstraction](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/6.Abstraction.md)
+
+      - [Association, Aggregation, and Composition](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/7.AAC.md)
+      
+      - [DynamicBinding](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/8.DynamicBinding.md)
+
+      - [MessagePassing](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/9.MessagePassing.md)
+
+      - [Modularity](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/10.Modularity.md)
+
+      - [Cohesion And Coupling](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/11.CohesionAndCoupling.md)
+
+      - [Interfaces And Abstract Classes](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/12.InterfacesAndAbstractClasses.md)
+
+      - [Static And Instance Members](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/13.StaticAndInstanceMembers.md)
 
 
 3. Basic Algorithms
