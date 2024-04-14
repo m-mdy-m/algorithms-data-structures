@@ -15,6 +15,19 @@ Welcome to my learning repository! This repository is dedicated to my journey of
    - [Grokking Algorithms](https://edu.anarcho-copy.org/Algorithm/grokking-algorithms-illustrated-programmers-curious.pdf) - Download
 
 2. [Object-Oriented Programming (OOP)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/2.OOP)
+   - [Class]()
+   - [Object]()
+   - [Encapsulation]()
+   - [Inheritance]()
+   - [Abstraction]()
+   - [Association, Aggregation, and Composition]()
+   - [DynamicBinding]()
+   - [MessagePassing]()
+   - [Modularity]()
+   - [Cohesion And Coupling]()
+   - [Interfaces And Abstract Classes]()
+   - [Static And Instance Members]()
+
 
 3. Basic Algorithms
 
