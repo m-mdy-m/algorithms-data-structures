@@ -15,28 +15,28 @@ Welcome to my learning repository! This repository is dedicated to my journey of
    - [Grokking Algorithms](https://edu.anarcho-copy.org/Algorithm/grokking-algorithms-illustrated-programmers-curious.pdf) - Download
 
 2. [Object-Oriented Programming (OOP)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/2.OOP)
-   - ## Beginner:
+   - ## `Beginner`:
    
-      >* [`Class`](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/1-class.md)
-      >* [`Object`](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/2-Object.md)
-      >* [`Encapsulation`](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/3.Encapsulation.md)
-      >* [`Inheritance`](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/4.Inheritance.md)
-      >* [`Polymorphism`](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/5.Polymorphism.md)
-      >* [`Abstraction`](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/6.Abstraction.md)
-      >* [`Association, Aggregation, and Composition`](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/7.AAC.md)
-      >* [`DynamicBinding`](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/8.DynamicBinding.md)
-      >* [`MessagePassing`](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/9.MessagePassing.md)
-      >* [`Modularity`](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/10.Modularity.md)
-      >* [`Cohesion And Coupling`](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/11.CohesionAndCoupling.md)
-      >* [`Interfaces And Abstract Classes`](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/12.InterfacesAndAbstractClasses.md)
-      >* [`Static And Instance Members`](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/13.StaticAndInstanceMembers.md)
-   - ## Medium:
-      >* [`Overriding And Overloading`](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Medium/1.OverridingAndOverloading.md)
-      >* [`Constructors And Destructors`](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Medium/2.ConstructorsAndDestructors.md)
-      >* [`Getter And Setter`](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Medium/3.GetterAndSetter.md)
-      >* [`Access Modifiers`](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Medium/4.AccessModifiers.md)
-      >* [`Dependency Injection`](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Medium/5.DependencyInjection.md)
-      >* [`Object-Oriented-Design-Patterns`](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Medium/6.Object-Oriented-Design-Patterns.md)
+      - > [Class](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/1-class.md)
+      - > [Object](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/2-Object.md)
+      - > [Encapsulation](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/3.Encapsulation.md)
+      - > [Inheritance](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/4.Inheritance.md)
+      - > [Polymorphism](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/5.Polymorphism.md)
+      - > [Abstraction](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/6.Abstraction.md)
+      - > [Association, Aggregation, and Composition](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/7.AAC.md)
+      - > [DynamicBinding](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/8.DynamicBinding.md)
+      - > [MessagePassing](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/9.MessagePassing.md)
+      - > [Modularity](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/10.Modularity.md)
+      - > [Cohesion And Coupling](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/11.CohesionAndCoupling.md)
+      - > [Interfaces And Abstract Classes](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/12.InterfacesAndAbstractClasses.md)
+      - > [Static And Instance Members](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/13.StaticAndInstanceMembers.md)
+   - ## `Medium`:
+      - > [Overriding And Overloading](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Medium/1.OverridingAndOverloading.md)
+      - > [Constructors And Destructors](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Medium/2.ConstructorsAndDestructors.md)
+      - > [Getter And Setter](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Medium/3.GetterAndSetter.md)
+      - > [Access Modifiers](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Medium/4.AccessModifiers.md)
+      - > [Dependency Injection](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Medium/5.DependencyInjection.md)
+      - > [Object-Oriented-Design-Patterns](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Medium/6.Object-Oriented-Design-Patterns.md)
 
 
 3. Basic Algorithms
