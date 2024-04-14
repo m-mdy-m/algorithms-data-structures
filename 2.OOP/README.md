@@ -2,7 +2,7 @@
 
 ### Beginner:
 
-1. **[Class](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/1-class.md):**
+1. **[Class](concepts/Beginner/1-class.md):**
 
 - exercises : 
     1. Define a class called `Rectangle` with a constructor that takes two parameters `width` and `height`. This class should also have a method called `calculateArea()` which returns the area of the rectangle (width * height).
@@ -10,11 +10,11 @@
     3.  Discuss with examples how using classes can help organize code better and promote reusability.
     4.  Explain with examples some limitations or drawbacks class .
     5. Write a class called `Calculator` with methods `add()` and `subtract()`.
-- [Answer](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/BeginnerAnswer/1.class.js)
+- [Answer](concepts/BeginnerAnswer/1.class.js)
 
-2. **[Object](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/2-Object.md):**
+2. **[Object](concepts/Beginner/2-Object.md):**
 
-3. **[Encapsulation](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/3.Encapsulation.md)**
+3. **[Encapsulation](concepts/Beginner/3.Encapsulation.md)**
 
 - exercises : 
     1. **Exercise: Bank Account Management System**
@@ -45,40 +45,40 @@
        - Implement methods to enroll students in courses, update their grades, and generate academic reports.
        - Ensure that student data is encapsulated within the `Student` class and access is restricted to authorized personnel.
        - Challenge: Implement grade validation rules and academic performance tracking to ensure data integrity and maintain encapsulation of student records.
-   - [Answer](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/BeginnerAnswer/3.Encapsulation.js)
+   - [Answer](concepts/BeginnerAnswer/3.Encapsulation.js)
 
 
-4. **[Inheritance](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/4.Inheritance.md)**
+4. **[Inheritance](concepts/Beginner/4.Inheritance.md)**
 
-5. **[Polymorphism](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/5.Polymorphism.md)**
+5. **[Polymorphism](concepts/Beginner/5.Polymorphism.md)**
 
-6. **[Abstraction](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/6.Abstraction.md)**
+6. **[Abstraction](concepts/Beginner/6.Abstraction.md)**
 
-7. **[Association, Aggregation, and Composition](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/7.AAC.md)**
+7. **[Association, Aggregation, and Composition](concepts/Beginner/7.AAC.md)**
 
-8. **[Dynamic Binding](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/8.DynamicBinding.md)**
+8. **[Dynamic Binding](concepts/Beginner/8.DynamicBinding.md)**
 
-9. **[Message Passing](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/9.MessagePassing.md)**
+9. **[Message Passing](concepts/Beginner/9.MessagePassing.md)**
 
-10. **[Modularity](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/10.Modularity.md)**
+10. **[Modularity](concepts/Beginner/10.Modularity.md)**
 
-11. **[Cohesion and Coupling](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/11.CohesionAndCoupling.md)**
+11. **[Cohesion and Coupling](concepts/Beginner/11.CohesionAndCoupling.md)**
 
-12. **[Interfaces and Abstract Classes](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/12.InterfacesAndAbstractClasses.md)**
+12. **[Interfaces and Abstract Classes](concepts/Beginner/12.InterfacesAndAbstractClasses.md)**
 
-13. **[Static and Instance Members](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/13.StaticAndInstanceMembers.md)**
+13. **[Static and Instance Members](concepts/Beginner/13.StaticAndInstanceMembers.md)**
 
 ### Medium:
 
-1. **[Overriding and Overloading](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Medium/1.OverridingAndOverloading.md)**
+1. **[Overriding and Overloading](concepts/Medium/1.OverridingAndOverloading.md)**
 
-2. **[Constructors and Destructors](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Medium/2.ConstructorsAndDestructors.md)**
+2. **[Constructors and Destructors](concepts/Medium/2.ConstructorsAndDestructors.md)**
 
-3. **[Getter and Setter Methods](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Medium/3.GetterAndSetter.md)**
+3. **[Getter and Setter Methods](concepts/Medium/3.GetterAndSetter.md)**
 
-4. **[Access Modifiers](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Medium/4.AccessModifiers.md)**
+4. **[Access Modifiers](concepts/Medium/4.AccessModifiers.md)**
 
-5. **[Dependency Injection](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Medium/5.DependencyInjection.md)**
+5. **[Dependency Injection](concepts/Medium/5.DependencyInjection.md)**
 
 6. **Object-Oriented Design Patterns:**
 
