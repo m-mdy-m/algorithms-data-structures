@@ -10,7 +10,9 @@ Welcome to my learning repository! This repository is dedicated to my journey of
 
 1. [Introduction to Algorithms and Problem Solving](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/1.IntroductionToAlgorithmsAndProblemSolving)
 
-   - [Introduction to Algorithms](https://dl.ebooksworld.ir/books/Introduction.to.Algorithms.4th.Leiserson.Stein.Rivest.Cormen.MIT.Press.9780262046305.EBooksWorld.ir.pdf) - Download
+   - > Only to the extent of introducing the algorithm
+
+   - [Introduction to Algorithms](https://dl.ebooksworld.ir/books/Introduction.to.Algorithms.4th.Leiserson.Stein.Rivest.Cormen.MIT.Press.9780262046305.EBooksWorld.ir.pdf) - Download 
 
    - [Grokking Algorithms](https://edu.anarcho-copy.org/Algorithm/grokking-algorithms-illustrated-programmers-curious.pdf) - Download
 
