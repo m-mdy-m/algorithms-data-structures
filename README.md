@@ -39,6 +39,7 @@ Welcome to my learning repository! This repository is dedicated to my journey of
       * > [Access Modifiers](2.OOP/concepts/Medium/4.AccessModifiers.md)
       * > [Dependency Injection](2.OOP/concepts/Medium/5.DependencyInjection.md)
       * > [Object-Oriented-Design-Patterns](2.OOP/concepts/Medium/6.Object-Oriented-Design-Patterns.md)
+         - [Introduction Design Patterns](book/An%20Introduction%20to%20Design%20Patterns.pdf)
 
 
 3. Basic Algorithms
