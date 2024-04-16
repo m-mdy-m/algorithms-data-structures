@@ -40,6 +40,7 @@ Welcome to my learning repository! This repository is dedicated to my journey of
       * > [Dependency Injection](2.OOP/concepts/Medium/5.DependencyInjection.md)
       * > [Object-Oriented-Design-Patterns](2.OOP/concepts/Medium/6.Object-Oriented-Design-Patterns.md)
          - [Introduction Design Patterns](book/An%20Introduction%20to%20Design%20Patterns.pdf)
+         - [Design Patterns : Elements of Reusable Object-Oriented Software](book/Design%20Patterns--Elements%20of%20Reusable%20Object-Oriented%20Software.pdf)
 
 
 3. Basic Algorithms
