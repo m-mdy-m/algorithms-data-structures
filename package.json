@@ -1,0 +1,23 @@
+{
+  "name": "algorithms-data-structures",
+  "version": "1.0.0",
+  "description": "Learning js algorithm and data structure",
+  "main": "README.md",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-mdy-m/algorithms-data-structures.git"
+  },
+  "keywords": [
+    "algorithms",
+    "algorithms-and-data-structures"
+  ],
+  "author": "Mahdi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/m-mdy-m/algorithms-data-structures/issues"
+  },
+  "homepage": "https://github.com/m-mdy-m/algorithms-data-structures#readme"
+}
