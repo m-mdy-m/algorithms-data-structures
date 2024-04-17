@@ -12,25 +12,19 @@ interface UserInformation {
   createAge(age: number): Age;
 }
 
-abstract class UserFactory{
-    abstract createName(name:string):Name
-    abstract createAge(age:number):Age
+abstract class UserFactory implements UserInformation{
+    public abstract createName(name:string):Name
+    public abstract createAge(age:number):Age
 }
 
 class AddName implements Name{
-    name: string;
-    constructor(name:string){
-        this.name = name
-    }
+    constructor(public readonly name:string) { }
     displayName(): string {
         return `Your Name is :${this.name}`
     }
 }
 class AddAge implements Age{
-    age :number
-    constructor(age:number) {
-        this.age = age
-    }
+    constructor(public readonly age:number) {}
     displayAge(): string {
         return `Your Age is ${this.age}`
     }
@@ -43,9 +37,11 @@ class User extends UserFactory{
         return new AddAge(age)
     }
 }
-const userFactory: UserFactory = new User();
-const userName: Name = userFactory.createName('Mahdi');
-const userAge: Age = userFactory.createAge(20);
 
-console.log(userName.displayName()); 
-console.log(userAge.displayAge());
+function createUserInfo(factory:UserInformation, name:string,age:number):void{
+    const userName :Name = factory.createName(name)
+    const userAge:Age = factory.createAge(age)
+    console.log(userName.displayName());
+    console.log(userAge.displayAge());
+}
+createUserInfo(new User(),'mahdi',20)
