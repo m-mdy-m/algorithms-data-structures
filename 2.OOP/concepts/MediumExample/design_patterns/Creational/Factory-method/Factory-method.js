@@ -1,41 +1,41 @@
 class UserInfo {
-  constructor(username, password, { key, address } = {}) {
+  constructor({ username, password, key = undefined, address = undefined }) {
     this.username = username;
     this.password = password;
-    this.key = key;
-    this.address = address;
+    this.key;
+    this.address;
+    this.key = key ?? undefined;
+    this.address = address ?? undefined;
   }
 }
 
-class UserFactory {
+class UserFactoryJs {
   static create(role, info) {
-    switch (role) {
-      case "admin":
-        return new Admin(info);
-      case "seller":
-        return new Seller(info);
-      default:
-        throw new Error("Invalid role");
-    }
+    const creators = {
+      admin: () => new Admin(info),
+      seller: () => new Seller(info),
+    };
+    const creator = creators[role];
+    return creator(); 
   }
 }
 
 class Admin extends UserInfo {
   constructor(info) {
-    super(info.username, info.password, info);
+    super(info);
   }
 }
 
 class Seller extends UserInfo {
   constructor(info) {
-    super(info.username, info.password, info);
+    super(info);
   }
 }
 
-const adminJs = UserFactory.create("admin", {
+const adminJs = UserFactoryJs.create("admin", {
   username: "mahdi",
-  password: "1234",
-  key: "secret_admin",
+  password: "2312",
+  key: "my_secret",
 });
 
 console.log("admin:", adminJs);
