@@ -6,33 +6,36 @@ class UserInfo {
     this.address = address;
   }
 }
-class FactoryJs extends UserInfo {
-  constructor(role, info) {
-    super(info.username, info.password, info);
-    this.role = role;
-    this.info = info;
-  }
-  createRole() {
-    switch (this.role) {
+
+class UserFactory {
+  static create(role, info) {
+    switch (role) {
       case "admin":
-        return this.AdminFactory();
+        return new Admin(info);
       case "seller":
-        return this.SellerFactory();
+        return new Seller(info);
       default:
-        throw new Error("Invalid Role");
+        throw new Error("Invalid role");
     }
   }
+}
 
-  AdminFactory() {
-    return { ...this.info, key: this.info.key };
-  }
-  SellerFactory() {
-    return { ...this.info, address: this.info.address };
+class Admin extends UserInfo {
+  constructor(info) {
+    super(info.username, info.password, info);
   }
 }
-const adminJs = new FactoryJs('admin',{
-    username:"mahdi",
-    password:"1234",
-    key:"secret_admin"
-}).createRole()
-console.log('admin:',adminJs);
+
+class Seller extends UserInfo {
+  constructor(info) {
+    super(info.username, info.password, info);
+  }
+}
+
+const adminJs = UserFactory.create("admin", {
+  username: "mahdi",
+  password: "1234",
+  key: "secret_admin",
+});
+
+console.log("admin:", adminJs);
