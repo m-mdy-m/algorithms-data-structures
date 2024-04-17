@@ -30,10 +30,10 @@ class AddAge implements Age{
     }
 }
 class User extends UserFactory{
-    createName(name: string): Name {
+    override createName(name: string): Name {
         return new AddName(name)
     }
-    createAge(age: number): Age {
+    override createAge(age: number): Age {
         return new AddAge(age)
     }
 }
