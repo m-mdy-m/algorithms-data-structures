@@ -5,33 +5,33 @@ interface User {
   isEmployee: boolean;
   hasJob: boolean;
 }
-class UserBuilder {
+class UserBuilderTs {
   private name: string = "";
   private age: number = 0;
   private money: number = 0;
   private hasJob: boolean = false;
   private isEmployee: boolean = false;
-  setName(name: string): UserBuilder {
+  setName(name: string): UserBuilderTs {
     this.name = name;
     return this;
   }
 
-  setAge(age: number): UserBuilder {
+  setAge(age: number): UserBuilderTs {
     this.age = age;
     return this;
   }
 
-  setMoney(money: number): UserBuilder {
+  setMoney(money: number): UserBuilderTs {
     this.money = money;
     return this;
   }
 
-  makeJob(): UserBuilder {
+  makeJob(): UserBuilderTs {
     this.hasJob = true;
     return this;
   }
 
-  makeEmployee(): UserBuilder {
+  makeEmployee(): UserBuilderTs {
     this.hasJob = true;
     this.isEmployee = true;
     return this;
@@ -62,6 +62,6 @@ class Person {
   }
 }
 const person: Person = new Person(
-  new UserBuilder().setName("mahdi").setAge(19).setMoney(200).build()
+  new UserBuilderTs().setName("mahdi").setAge(19).setMoney(200).build()
 );
 console.log(person);
