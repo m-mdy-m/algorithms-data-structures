@@ -1,46 +1,51 @@
-interface Name{
-    name:string;
-    addNewName(name:string):void;
+interface Name {
+  name: string;
+  displayName(): string;
 }
-interface Age{
-    age:number;
-    newAge(age:number):void
+interface Age {
+  age: number;
+  displayAge(): string;
 }
 
-interface UserInformation{
-    createName(name:string):Name
-    createAge(age:number):Age
+interface UserInformation {
+  createName(name: string): Name;
+  createAge(age: number): Age;
+}
+
+abstract class UserFactory{
+    abstract createName(name:string):Name
+    abstract createAge(age:number):Age
 }
 
 class AddName implements Name{
-    name:string
+    name: string;
     constructor(name:string){
         this.name = name
     }
-    addNewName(name: string): void {
-        this.name = name
-        console.log(`new Name ${this.name}`);
+    displayName(): string {
+        return `Your Name is :${this.name}`
     }
 }
 class AddAge implements Age{
-    age: number;
-    constructor(age:number){
+    age :number
+    constructor(age:number) {
         this.age = age
     }
-    newAge(age: number): void {
-        this.age = age
-        console.log(`your Age : ${this.age}`);
-        
+    displayAge(): string {
+        return `Your Age is ${this.age}`
     }
 }
-class User implements UserInformation{
-    createAge(age: number): Age {
-        return new AddAge(age)
-    }
+class User extends UserFactory{
     createName(name: string): Name {
         return new AddName(name)
     }
+    createAge(age: number): Age {
+        return new AddAge(age)
+    }
 }
-const user = new User()
-user.createName('mahdi')
-user.createAge(20)
+const userFactory: UserFactory = new User();
+const userName: Name = userFactory.createName('Mahdi');
+const userAge: Age = userFactory.createAge(20);
+
+console.log(userName.displayName()); 
+console.log(userAge.displayAge());
