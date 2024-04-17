@@ -1,11 +1,11 @@
 class UserInfo {
-  constructor({ username, password, key = undefined, address = undefined }) {
+  constructor({ username, password, key, address }) {
     this.username = username;
     this.password = password;
     this.key;
     this.address;
-    this.key = key ?? undefined;
-    this.address = address ?? undefined;
+    this.key = key;
+    this.address = address;
   }
 }
 
@@ -16,7 +16,7 @@ class UserFactoryJs {
       seller: () => new Seller(info),
     };
     const creator = creators[role];
-    return creator(); 
+    return creator();
   }
 }
 
