@@ -5,55 +5,63 @@ interface User {
   isEmployee: boolean;
   hasJob: boolean;
 }
-class CreateUser implements User {
-  name: string;
-  age: number;
-  money: number;
-  hasJob: boolean;
-  isEmployee: boolean;
-  constructor(args) {
-    this.money = 0;
-    this.age = 18;
+class UserBuilder {
+  private name: string = "";
+  private age: number = 0;
+  private money: number = 0;
+  private hasJob: boolean = false;
+  private isEmployee: boolean = false;
+  setName(name: string): UserBuilder {
+    this.name = name;
+    return this;
   }
-  makeJob(): CreateUser {
+
+  setAge(age: number): UserBuilder {
+    this.age = age;
+    return this;
+  }
+
+  setMoney(money: number): UserBuilder {
+    this.money = money;
+    return this;
+  }
+
+  makeJob(): UserBuilder {
     this.hasJob = true;
     return this;
   }
-  makeEmployee(): CreateUser {
+
+  makeEmployee(): UserBuilder {
     this.hasJob = true;
     this.isEmployee = true;
     return this;
   }
-  set addMoney(money: number) {
-    this.money = money;
-  }
-  build() {
-    return new CreateUser(this);
-  }
-  clone(builder: CreateUser) {
-    return new CreateUser(builder);
+  build(): User {
+    return {
+      name: this.name,
+      age: this.age,
+      money: this.money,
+      isEmployee: this.isEmployee,
+      hasJob: this.hasJob,
+    };
   }
 }
 
 class Person {
-  name: string;
-  number: number;
-  isEmployee: boolean;
-  hasJob: boolean;
-  age: number;
-  money: number;
-  constructor(builder: CreateUser) {
+  public name: string;
+  public age: number;
+  public money: number;
+  public isEmployee: boolean;
+  public hasJob: boolean;
+  constructor(builder: User) {
     this.name = builder.name;
     this.age = builder.age;
     this.money = builder.money;
+    this.hasJob = builder.hasJob;
     this.isEmployee = builder.isEmployee;
   }
 }
 const person: Person = new Person(
-  new CreateUser({
-    name: "mahdi",
-    age: 20,
-  })
+  new UserBuilder().setName("mahdi").setAge(19).setMoney(200).build()
 );
 console.log(person);
-
