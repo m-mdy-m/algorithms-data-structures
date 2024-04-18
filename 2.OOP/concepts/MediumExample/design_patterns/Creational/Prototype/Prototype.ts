@@ -1,10 +1,13 @@
 // Interface for user addresses
 interface Addresses {
+  // City where the user resides
   city: string;
+  // Country of residence for the user
   country: string;
 }
 
-class User {
+// Prototype class representing a User
+class UserPrototype {
   public name: string;
   public address: Addresses;
 
@@ -14,31 +17,33 @@ class User {
   }
 
   // Creates a deep copy of the User object
-  public clone(): User {
-    // Create a new User object with the same name
-    return new User(this.name, { ...this.address }); // Deep copy address using spread operator
+  public clone(): UserPrototype {
+    // Create a new User object with the same name and a deep copy of the address
+    return new User(this.name, { ...this.address });
   }
 }
 
-// Create a User object
-const user = new User("mahdi", { city: "Minudasht", country: "Iran" });
+// Concrete class inheriting from the UserPrototype
+class User extends UserPrototype {
+  constructor(name: string, address: Addresses) {
+    super(name, address);
+  }
+}
 
-// Clone the User object using the prototype pattern
-const cloneUser = user.clone();
+// Example usage
+const prototypeUser = new UserPrototype("Prototype User", {
+  city: "Prototype City",
+  country: "Prototype Country",
+});
 
-console.log("user:", user);
-console.log("cloneUser:", cloneUser); // Output: user and cloneUser have same values
+const clonedUser = prototypeUser.clone();
 
-// Modify properties of the cloned user
-cloneUser.name = "ali";
-cloneUser.address = { city: "Teheran", country: "Iran" };
+console.log("Prototype User:", prototypeUser);
+console.log("Cloned User:", clonedUser);
 
-console.log("user (after modification):", user); // Output: user remains unchanged
-console.log("cloneUser (after modification):", cloneUser); // Output: cloneUser has modified values
+// Modifying the cloned user
+clonedUser.name = "Cloned User";
+clonedUser.address.city = "Cloned City";
 
-// Explanation:
-//  1. The User class acts as the prototype for creating new User objects.
-//  2. The clone() method implements the core functionality of the Prototype pattern.
-//     - It creates a new User object with the same name as the original user.
-//     - The spread operator (`...`) ensures a deep copy of the address object,
-//       preventing modifications to the clone's address from affecting the original user.
+console.log("Prototype User (after modification):", prototypeUser);
+console.log("Cloned User (after modification):", clonedUser);
