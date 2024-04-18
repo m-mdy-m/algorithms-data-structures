@@ -1,8 +1,6 @@
 package main
 
-import (
-  "fmt"
-)
+import "fmt"
 
 // UserAddress represents the address information for a user
 type UserAddress struct {
