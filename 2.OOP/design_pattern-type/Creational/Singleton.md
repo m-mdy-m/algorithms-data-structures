@@ -1,4 +1,4 @@
-### Singleton:
+# Singleton:
 
 In software engineering, the singleton pattern is a software design pattern that limits the instantiation of a class to a unique instance. One of the famous "Gang of Four" design patterns that describes how to solve repetitive problems in object-oriented software, this pattern is useful when exactly one object is needed to coordinate actions in a system.
 
@@ -9,7 +9,7 @@ In software engineering, the singleton pattern is a software design pattern that
 
 > The term is derived from the mathematical concept In mathematics, singleton, also known as a unit set or a point set, is a set that has exactly one element. For example A set like {{1,2,3}} is singleton because it contains a single element (which is itself a set, but not singleton).
 
-#### **Simple and understandable explanation:**
+## **Simple and understandable explanation:**
 
 **Imagine a National Park:**
 
@@ -20,7 +20,7 @@ In software engineering, the singleton pattern is a software design pattern that
 
 > Summary : lets you ensure that a class has only one instance, while providing a global access point to this instance.
 
-#### Singleton vs Global Variables:
+## Singleton vs Global Variables:
 
 Singletons are sometimes considered to be an alternative to global variables or static classes. but While Singletons share some similarities with global variables, they offer several key advantages:
 
@@ -41,11 +41,11 @@ While Singletons can be useful, consider these drawbacks:
 
 * **Testing Challenges:** As mentioned earlier, testing code that depends on a Singleton can be tricky. Consider dependency injection or providing mechanisms to swap out the Singleton instance for testing purposes.
 
-##### What are the characteristics of the singleton pattern?
+### What are the characteristics of the singleton pattern?
 
 If the singleton design pattern was used to create an instance of a class, then the pattern makes sure that it really only remains with this single instance. The singleton makes this class of software globally accessible. In different programming languages, there are different methods to achieve this. To make sure that it remains with only one unique instance, users must be prevented from creating new instances. This is achieved by the constructor declaring the pattern as ‘private’. This means that only the code in the singleton can instantiate the singleton itself. In effect, this guarantees that only one and the same object can reach the user. If this instance already exists, no new instance is created.
 
-#### Advantages and Disadvantages
+### Advantages and Disadvantages
 
 **Advantages**
 
@@ -64,14 +64,14 @@ If the singleton design pattern was used to create an instance of a class, then 
 - **Lifecycle Management:** The Singleton pattern may not handle scenarios where the instance needs to be explicitly destroyed or reset. Managing the lifecycle of the Singleton can become a concern.
 - **Global Access Point Abuse:** While a global access point is an advantage, it can also be abused. Developers might be tempted to use the Singleton for everything, leading to an overuse of global state and a less modular design.
 
-#### Structure
+### Structure
 
 ![](https://refactoring.guru/images/patterns/diagrams/singleton/structure-en.png?id=4e4306d3a90f40d74c7a4d2d2506b8ec)
 
 
-#### Example 
-- [TS]()
-- [Js]()
-- [Py]()
-- [JAVA]()
-- [Go]()
+### Example 
+- [TS](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Singleton/Singleton.ts)
+- [Js](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Singleton/Singleton.js)
+- [Py](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Singleton/Singleton.py)
+- [JAVA]https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Singleton/Singleton.java()
+- [Go](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Singleton/Singleton.go)

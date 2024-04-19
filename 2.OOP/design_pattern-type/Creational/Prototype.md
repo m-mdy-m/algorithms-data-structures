@@ -1,4 +1,4 @@
-### Prototype: 
+# Prototype: 
 
 The Prototype design pattern is a creation design pattern that specifies creating new objects by copying an existing object, thus avoiding the need to create new classes. This pattern allows us to clone existing objects, creating new instances with the same data. Any changes made to the cloned object do not affect the original object. It’s especially handy when the cost of creating an object is more expensive or complex than copying an existing one.
 
@@ -24,7 +24,7 @@ Instead of starting from scratch each time, the user can use the Prototype patte
 
 
 
-####  Example Problem 
+##  Example Problem 
 Absolutely! Let's ditch the code and explore the Prototype pattern using a familiar real-world scenario:
 
 **Creating Documents with Templates**
@@ -53,7 +53,7 @@ Imagine you're a teacher who needs to create personalized report cards for your 
 - **Easy Customization:** Cloning allows for easy personalization with specific student information while maintaining the overall format.
 
 
-#### Better Understanding
+## Better Understanding
 
 
 ![](https://softwareparticles.com/wp-content/uploads/2023/07/featured-768x514.jpg)
@@ -62,7 +62,7 @@ Imagine you're a teacher who needs to create personalized report cards for your 
 
 ![](https://www.dofactory.com/img/diagrams/javascript/javascript-prototype.jpg)
 
-#### When to use
+## When to use
 
 - Creating Objects is Costly:
   - Use the Prototype Pattern if you want to create an object with the same property values from another existing object.
@@ -75,7 +75,7 @@ Imagine you're a teacher who needs to create personalized report cards for your 
   - Use the Prototype pattern when you want to reduce the overhead of initializing an object.
 
 
-#### When not to use
+## When not to use
 - Unique Object Instances:
    - Avoid using the Prototype pattern when your application predominantly deals with unique object instances, and the overhead of implementing the pattern outweighs its benefits.
 - Simple Object Creation:
@@ -88,16 +88,16 @@ Imagine you're a teacher who needs to create personalized report cards for your 
 - Limited Object Variations:
    - If there are only a few variations of objects, and creating subclasses or instances with specific configurations is manageable, the Prototype pattern might be overkill.
 
-#### Shallow Copy vs Deep Copy
+## Shallow Copy vs Deep Copy
 When implementing the Prototype Pattern, you need to consider whether to use a shallow copy or a deep copy.
 
 * Shallow Copy – A shallow copy creates a new object and copies the values of all the fields from the original object to the new object. However, if the fields of the original object contain references to other objects, the shallow copy simply copies the references, not the actual objects. As a result, both the original object and the copied object will refer to the same objects. In other words, a shallow copy shares the internal references with the original object.
 * Deep Copy – A deep copy, on the other hand, creates a new object and recursively copies the values of all the fields from the original object to the new object. If the fields of the original object contain references to other objects, the deep copy also creates new copies of those referenced objects and assigns them to the corresponding fields in the copied object. This ensures that the copied object has its own independent copies of all the objects it references. This can be handy in cases where we want to alter the copied object without affecting other references. This approach is usually more expensive than a Shallow copy.
 
 
-#### Example 
-- [TS](../MediumExample/design_patterns/Creational/Prototype/Prototype.ts)
-- [JS](../MediumExample/design_patterns/Creational/Prototype/Prototype.js)
-- [JAVA](../MediumExample/design_patterns/Creational/Prototype/Prototype.java)
-- [Python](../MediumExample/design_patterns/Creational/Prototype/Prototype.py)
-- [Go](../MediumExample/design_patterns/Creational/Prototype/Prototype.go)
+## Example 
+- [TS](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Prototype/Prototype.ts)
+- [JS](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Prototype/Prototype.js)
+- [JAVA](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Prototype/Prototype.java)
+- [Python](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Prototype/Prototype.py)
+- [Go](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Prototype/Prototype.go)

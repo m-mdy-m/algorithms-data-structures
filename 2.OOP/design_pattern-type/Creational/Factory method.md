@@ -1,4 +1,4 @@
-### Factory method:
+# Factory method:
 
 The Factory Method Design Pattern is a creational design pattern that provides an interface for creating objects in a superclass, allowing subclasses to alter the type of objects that will be created. It encapsulates object creation logic in a separate method, promoting loose coupling between the creator and the created objects. This pattern is particularly useful when the exact types of objects to be created may vary or need to be determined at runtime, enabling flexibility and extensibility in object creation.
 
@@ -23,7 +23,7 @@ The Factory Method design pattern describes how to solve such problems:
 - Define a factory method within the superclass that defers the object's creation to a subclass's factory method.
 - Create an object by calling a factory method instead of directly calling a constructor.
 
-#### Example Problem:
+## Example Problem:
 
 [source](https://refactoring.guru/design-patterns/factory-method)
 
@@ -37,7 +37,7 @@ Great news, right? But how about the code? At present, most of your code is coup
 
 As a result, you will end up with pretty nasty code, riddled with conditionals that switch the app’s behavior depending on the class of transportation objects.
 
-#### Solution:
+## Solution:
 
 The Factory Method pattern suggests that you replace direct object construction calls (using the new operator) with calls to a special factory method. Don’t worry: the objects are still created via the new operator, but it’s being called from within the factory method. Objects returned by a factory method are often referred to as products.
 
@@ -51,14 +51,14 @@ At first glance, this change may look pointless: we just moved the constructor c
 ![](https://refactoring.guru/images/patterns/diagrams/factory-method/solution3-en.png?id=b6f53911fc0d56f9ef99501fc4aec059)
 
 
-#### When to use Factory Method Design Pattern?
+## When to use Factory Method Design Pattern?
 
 - **When you want to encapsulate object creation:** If you have a complex object creation process or if the process may vary based on conditions, encapsulating this logic in a factory method can simplify client code and promote reusability.
 - **When you want to decouple client code from concrete classes:** Using the Factory Method Pattern allows you to create objects through an interface or abstract class, abstracting away the specific implementation details of the concrete classes from the client code. This promotes loose coupling and makes it easier to modify or extend the system without impacting existing client code.
 - **When you need to support multiple product variations:** If your application needs to create different variations of a product or if new types of products may be introduced in the future, the Factory Method Pattern provides a flexible way to accommodate these variations by defining factory methods for each product type.
 - **When you want to support customization or configuration:** Factories can be used to encapsulate configuration logic, allowing clients to customize the creation process by providing parameters or configuration options to the factory method.
 
-#### Components of Factory Method Design Pattern
+## Components of Factory Method Design Pattern
 
 **1. Creator (Abstract Class or Interface):**
 
@@ -89,12 +89,12 @@ At first glance, this change may look pointless: we just moved the constructor c
 
 ![](https://scaler.com/topics/images/factory-method.webp)
 
-#### Example 
+## Example 
 
-- [Example Ts](../MediumExample/design_patterns/Creational/Factory-method/Factory-method.ts)
-- [Example Js](../MediumExample/design_patterns/Creational/Factory-method/Factory-method.js)
-- [Example Py](../MediumExample/design_patterns/Creational/Factory-method/Factory-method.py)
+- [Example Ts](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Factory-method/Factory-method.ts)
+- [Example Js](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Factory-method/Factory-method.js)
+- [Example Py](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Factory-method/Factory-method.py)
 
 > You are developing a software system for an e-commerce platform that deals with various types of products. Each product category (e.g., electronics, clothing, books) requires specific handling during creation. However, you want to decouple the client code from the concrete product creation logic to enhance flexibility and maintainability. Additionally, you want to allow for easy extension by adding new product types in the future without modifying existing code. [source](https://www.geeksforgeeks.org/factory-method-design-pattern-in-java/)
 
-- [Example Java](../MediumExample/design_patterns/Creational/Factory-method/Factory-method.java)
+- [Example Java](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Factory-method/Factory-method.java)
