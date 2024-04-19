@@ -44,3 +44,8 @@ Move semantics make it possible to safely transfer resource ownership between ob
 * **Non-Traditional Resources:** RAII is primarily designed for resources with clear acquisition and release semantics. Managing non-traditional resources like threads or complex data structures with intricate lifetime dependencies might require different approaches.
 * **Performance Overhead (Rare):** In rare cases, the boilerplate code associated with RAII constructors and destructors could introduce slight performance overhead. However, this is usually negligible compared to the benefits of robust resource management, especially in larger projects.
 
+## Example
+- [Ts]
+- [Java]
+- [C++]
+- [Go]
