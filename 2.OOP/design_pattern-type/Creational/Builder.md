@@ -1,4 +1,4 @@
-### Builder: 
+# Builder: 
 
 The Builder Design Pattern is a creational pattern used in software design to construct a complex object step by step. It allows the construction of a product in a step-by-step fashion, where the construction process can vary based on the type of product being built. The pattern separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
 
@@ -22,7 +22,7 @@ The Builder design pattern describes how to solve such problems:
 - A class delegates object creation to a Builder object instead of creating the objects directly.
 A class (the same construction process) can delegate to different Builder objects to create different representations of a complex object.
 
-####  Example Problem
+## Example Problem
 [source](https://refactoring.guru/design-patterns/builder)
 
 Imagine a complex object that requires laborious, step-by-step initialization of many fields and nested objects. Such initialization code is usually buried inside a monstrous constructor with lots of parameters. Or even worse: scattered all over the client code.
@@ -37,7 +37,7 @@ There’s another approach that doesn’t involve breeding subclasses. You can c
 
 In most cases most of the parameters will be unused, making the constructor calls pretty ugly. For instance, only a fraction of houses have swimming pools, so the parameters related to swimming pools will be useless nine times out of ten.
 
-#### Solution 
+## Solution 
 
 The Builder pattern suggests that you extract the object construction code out of its own class and move it to separate objects called builders.
 
@@ -48,11 +48,11 @@ The pattern organizes object construction into a set of steps (buildWalls, build
 Some of the construction steps might require different implementation when you need to build various representations of the product. For example, walls of a cabin may be built of wood, but the castle walls must be built with stone.
 
 
-#### **Important Topics for the Builder Design Pattern :**
+## **Important Topics for the Builder Design Pattern :**
 
 > [Source](https://www.geeksforgeeks.org/builder-design-pattern/)
 
-#### Components of the Builder Design Pattern
+### Components of the Builder Design Pattern
 1. **Product:** It may consist of multiple components or parts, and its structure can vary based on the implementation.The Product is typically a class with attributes representing the different parts that the Builder constructs. It has various ingredients (attributes) that come together to form the complete product.
 2. **Builder:** It typically includes methods for constructing individual parts of the product.By defining an interface, the Builder allows for the creation of different concrete builders that can produce variations of the product. It outlines the steps (methods) needed to add each ingredient (set attributes) to create the final product.
 
@@ -64,7 +64,7 @@ It provides a high-level interface for constructing the product and managing the
 5. **Client:** It creates a Builder object and passes it to the Director to initiate the construction process.
 The Client may retrieve the final product from the Builder after construction is complete.
 
-#### When to use Builder Design Pattern?
+### When to use Builder Design Pattern?
 [Source](https://www.geeksforgeeks.org/builder-design-pattern/)
 
 The Builder design pattern is used when you need to create complex objects with a large number of optional components or configuration parameters. This pattern is particularly useful when an object needs to be constructed step by step, some of the scenarios where the Builder design pattern is beneficial are:
@@ -75,7 +75,7 @@ The Builder design pattern is used when you need to create complex objects with 
 * **Immutable Objects:** When you want to create immutable objects, and the Builder pattern allows you to construct the object gradually before making it immutable.
 *  **Creating object variations:**  Do you need to create the same object type with different configurations? The Builder Pattern allows you to define different "builders" that specialize in specific variations, making configuration more flexible and readable.
 
-#### Skip the Builder Pattern if:
+### Skip the Builder Pattern if:
 [Source](https://www.geeksforgeeks.org/builder-design-pattern/)
 
 *  **Simple Objects:**  For objects with just a few parameters and a straightforward construction process, a simple constructor or a static factory method is more efficient. The Builder Pattern might be overkill in these cases.
@@ -91,11 +91,11 @@ The Builder design pattern is used when you need to create complex objects with 
 > [**If you don't know what Coupling is**](https://dev.to/m__mdy__m/cohesion-and-coupling-in-javascript-2efg)
 
 
-#### Advantages
+### Advantages
 * Allows you to vary a product's internal representation.
 * Encapsulates code for construction and representation.
 * Provides control over the steps of the construction process.
-#### Disadvantages
+### Disadvantages
 * A distinct ConcreteBuilder must be created for each type of product.
 * Builder classes must be mutable.
 * May hamper/complicate dependency injection.
@@ -110,9 +110,9 @@ The Builder design pattern is used when you need to create complex objects with 
 
 ![](https://scaler.com/topics/images/builder-pattern.webp)
 
-#### Example
+### Example
 
-- [Example Ts](../MediumExample/design_patterns/Creational/Builder/Builder.ts)
-- [Example Js](../MediumExample/design_patterns/Creational/Builder/Builder.js)
-- [Example Py](../MediumExample/design_patterns/Creational/Builder/Builder.py)
-- [Example Java](../MediumExample/design_patterns/Creational/Builder/Builder.java)
+- [Example Ts](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Builder/Builder.ts)
+- [Example Js](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Builder/Builder.js)
+- [Example Py](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Builder/Builder.py)
+- [Example Java](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Builder/Builder.java)

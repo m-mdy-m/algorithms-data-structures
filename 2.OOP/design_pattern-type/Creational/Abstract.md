@@ -1,4 +1,4 @@
-### Abstract factory
+# Abstract factory
   creates an instance of several derived classes belonging to a single family of objects. However, employment of this pattern, as with similar design patterns, may result in unnecessary complexity and extra work in the initial writing of code.
 
 - Summary : a class requests the objects it requires from a factory object instead of creating the objects directly
@@ -20,7 +20,7 @@ The pattern describes how to solve such problems:
 This makes a class independent of how its objects are created. A class may be configured with a factory object, which it uses to create objects, and the factory object can be exchanged at runtime.
 
 
-#### Key components of Abstract factory Pattern
+## Key components of Abstract factory Pattern
 
 > [source](https://www.geeksforgeeks.org/abstract-factory-pattern-javascript-design-patterns/)
 
@@ -44,10 +44,10 @@ This makes a class independent of how its objects are created. A class may be co
 
 ![](https://www.c-sharpcorner.com/UploadFile/ankurmalik123/abstract-factory-pattern/Images/Factory%20Pattern.PNG)
 
-#### Example : 
-- [Example Ts](../MediumExample/design_patterns/Creational/Abstract/Abstract.ts)
-- [Example JavaScript](../MediumExample/design_patterns/Abstract/Creational/Abstract.js)
-- [Example Java](../MediumExample/design_patterns/Creational/Abstract/Abstract.java)
+## Example : 
+- [Example Ts](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Abstract/Abstract.ts)
+- [Example JavaScript](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Abstract/Abstract.js)
+- [Example Java](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Abstract/Abstract.java)
  **This example was created by ai**
-- [Example Python](../MediumExample/design_patterns/Creational/Abstract/Abstract.py)
+- [Example Python](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Abstract/Abstract.py)
 ---
