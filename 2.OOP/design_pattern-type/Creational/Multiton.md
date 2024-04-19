@@ -35,11 +35,18 @@ While it may appear that the multiton is a hash table with synchronized access t
 3. **Avoiding Global State:** While Singleton promotes global access to an instance, Multiton provides a more controlled access mechanism. By using keys, it avoids the issues associated with global state and allows for a more modular and organized approach to handling instances.
 
 ### When to use Multiton Pattern?
-- Contextual Instances: Use the Multiton Pattern when you need to manage instances in a context-dependent manner, and each instance is uniquely identified by a key.
+- **Contextual Instances:** Use the Multiton Pattern when you need to manage instances in a context-dependent manner, and each instance is uniquely identified by a key.
 
-- Resource Pooling: When dealing with limited resources, such as database connections, thread pools, or network connections, the Multiton Pattern can efficiently manage and reuse instances based on their keys.
+- **Resource Pooling:** When dealing with limited resources, such as database connections, thread pools, or network connections, the Multiton Pattern can efficiently manage and reuse instances based on their keys.
 
-- Configurable Objects: For classes with multiple configurations or states, the Multiton Pattern allows you to create and retrieve instances with specific attributes as needed.
+- **Configurable Objects:** For classes with multiple configurations or states, the Multiton Pattern allows you to create and retrieve instances with specific attributes as needed.
+
+### When not to use Multiton Pattern
+- **Overhead for Small-Scale Applications:** In smaller projects, the overhead of maintaining a registry for Multiton instances may outweigh the benefits; simpler patterns like Singleton or regular instantiation could be more suitable.
+
+- **Unnecessary Complexity:** When uniqueness based on keys is unnecessary, implementing the Multiton Pattern may introduce unnecessary complexity to the code; simpler alternatives should be considered.
+
+- **Global State is Acceptable:** If global access to a single instance suffices and context-dependent instances are not needed, the traditional Singleton Pattern might be sufficient, avoiding the added complexity of the Multiton.
 
 ### Example 
 - [TS]()
