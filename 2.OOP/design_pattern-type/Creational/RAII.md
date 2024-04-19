@@ -45,7 +45,4 @@ Move semantics make it possible to safely transfer resource ownership between ob
 * **Performance Overhead (Rare):** In rare cases, the boilerplate code associated with RAII constructors and destructors could introduce slight performance overhead. However, this is usually negligible compared to the benefits of robust resource management, especially in larger projects.
 
 ## Example
-- [Ts]
-- [Java]
 - [C++]
-- [Go]
