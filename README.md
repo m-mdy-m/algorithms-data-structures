@@ -194,8 +194,6 @@ Welcome to my learning repository! This repository is dedicated to my journey of
    ---
    >* [Character Creator with Abstract Factory (or Singleton Pattern):]()
    ---
-   >* [Text Adventure Game]()
-   ---
    #### **Structural**:
    1.
    2.
