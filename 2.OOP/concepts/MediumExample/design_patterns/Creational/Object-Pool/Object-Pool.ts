@@ -53,6 +53,3 @@ pool.releaseConnection(connection3);
 const connection4 = pool.getConnection();
 connection4.connect();
 pool.releaseConnection(connection4);
-
-
-console.log('connection1:',connection1);
