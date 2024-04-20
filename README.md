@@ -166,41 +166,41 @@ Welcome to my learning repository! This repository is dedicated to my journey of
 ## Learning Resources
 > Sites with ⭐ represent the most used
 
- - [wikipedia](https://en.wikipedia.org/)(⭐)
- - [MDN](https://developer.mozilla.org/)
- - [GeeksforGeeks](https://www.geeksforgeeks.org/)(⭐)
- - [educative](https://www.educative.io/)
- - [stackify](https://stackify.com/)
- - [press.rebus.community](https://press.rebus.community/)
- - [enjoyalgorithms](https://www.enjoyalgorithms.com/blog/)
- - [scoutapm](https://scoutapm.com/blog/)
- - [stackoverflow](https://stackoverflow.com/)
- - [medium](https://medium.com/)(⭐)
- - [linkedin](https://www.linkedin.com/)
- - [altcademy](https://www.altcademy.com/)
- - [digitalocean](https://www.digitalocean.com/)
- - [boardinfinity](https://www.boardinfinity.com//)
- - [baeldung](https://www.baeldung.com/)
- - [dev.to](https://dev.to/)(⭐)
+ - [wikipedia](https://en.wikipedia.org)(⭐)
+ - [MDN](https://developer.mozilla.org)
+ - [GeeksforGeeks](https://www.geeksforgeeks.org)(⭐)
+ - [educative](https://www.educative.io)
+ - [stackify](https://stackify.com)
+ - [press.rebus.community](https://press.rebus.community)
+ - [enjoyalgorithms](https://www.enjoyalgorithms.com/blog)
+ - [scoutapm](https://scoutapm.com/blog)
+ - [stackoverflow](https://stackoverflow.com)
+ - [medium](https://medium.com)(⭐)
+ - [linkedin](https://www.linkedin.com)
+ - [altcademy](https://www.altcademy.com)
+ - [digitalocean](https://www.digitalocean.com)
+ - [boardinfinity](https://www.boardinfinity.com)
+ - [baeldung](https://www.baeldung.com)
+ - [dev.to](https://dev.to)(⭐)
 
 
 ## Project
 
 ### Design Pattern:
-   #### Creational:
-   - [Pizza Builder (Builder Pattern)]()
+   #### `Creational`:
+   > [Pizza Builder (Builder Pattern)]()
    ---
-   - [Maze Game with Factory Method (or Prototype Pattern)]()
+   > [Maze Game with Factory Method (or Prototype Pattern)]()
    ---
-   - [Character Creator with Abstract Factory (or Singleton Pattern):]()
+   > [Character Creator with Abstract Factory (or Singleton Pattern):]()
    ---
-   - [Text Adventure Game]()
+   > [Text Adventure Game]()
    ---
-   #### Structural:
+   #### `Structural`:
    1.
    2.
    3.
-   #### Behavioral:
+   #### `Behavioral`:
    1.
    2.
    3.
