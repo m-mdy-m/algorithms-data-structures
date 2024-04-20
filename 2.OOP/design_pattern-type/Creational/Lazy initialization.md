@@ -20,3 +20,31 @@ The library uses lazy initialization. Lights near reading areas have sensors (th
 > Summary : Lazy initialization is a technique in programming that delays creating an object, calculating a value, or performing some expensive task until it's actually needed. This helps save resources (like memory or processing power) when those things aren't being used.
 
 
+**Lazy Initialization for Efficient Array Handling**
+
+In theoretical computer science, lazy initialization, also known as a lazy array, is a technique for designing data structures that work with uninitialized memory. Imagine you have a table `T` with `n` memory cells (numbered 1 to `n`) that are initially blank. You want to assign values (`vi`) to specific cells (`T[ki]`) for `m` pairs (`ki`, `vi`). Here's where lazy initialization shines.
+
+Traditionally, you might initialize all `n` cells in `T` first, then assign values to the `m` desired ones. This takes `O(m + n)` operations. Lazy initialization offers a more efficient approach, requiring only `O(m)` operations.
+
+**How it Works:**
+
+1. **Store Key-Value Pairs:** Instead of initializing `T`, create a separate table `V` that holds the `m` pairs (`ki`, `vi`) in any order. This table acts as a reference for the actual values.
+2. **Mark Initialized Cells in T:**  For each `ki` in `T`, instead of storing the value `vi`, store the position (index) in `V` where the corresponding pair (`ki`, `vi`) is located. This "marker" indicates that `T[ki]` is an initialized cell.
+3. **Leave Unneeded Cells Empty:** All other cells in `T` remain uninitialized.
+
+**Efficient Lookups:**
+
+When you need to access a cell `T[k]`:
+
+1. **Check if in Initialized Range:**  First, verify if `k` falls within the range of cells that might be initialized (1 to `m`). If not, `T[k]` is simply uninitialized.
+2. **Verify Value Pair in V:**  If `k` is within the range, look up the index stored in `T[k]` within table `V`. Then, check if the first element of the pair stored at that position in `V` actually matches `k`. This double-check ensures `T[k]` wasn't just a random index that fell into the range. 
+3. **Retrieve Value:** If both checks pass, you've confirmed `T[k]` is an initialized cell. The actual value can be retrieved from the second element of the pair stored at the looked-up position in `V`.
+
+
+### Example
+- [Ts]()
+- [Js]()
+- [Go]()
+- [Java]()
+- [Py]()
+- [C++]()
