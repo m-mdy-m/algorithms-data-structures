@@ -1,13 +1,17 @@
-import { Cheese, Pizza, Sauce, Size, Topping } from "./Pizza";
+import { CheeseMenu } from "./Cheese";
+import { Crust } from "./Crust";
+import { Pizza } from "./Pizza";
+import { Sauce } from "./Sauce";
+import { Topping } from "./Topping";
 
 export class PizzaBuilder{
-    setCrust(size:Size){
+    setCrust(Crust:Crust){
 
     } 
     setSauce(sauce:Sauce){
 
     } 
-    setCheese(cheese:Cheese){
+    setCheese(cheese:CheeseMenu){
 
     }
     addTopping(topping : Topping){

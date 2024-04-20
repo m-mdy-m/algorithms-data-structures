@@ -1,5 +1,5 @@
-export interface Size {
-  name: string;
+export interface Crust {
+  type: string;
   price: number;
 }
 
@@ -19,7 +19,7 @@ export interface Topping {
 }
 
 export interface Pizza {
-  size: Size;
+  size: Crust;
   sauce?: Sauce;
   cheese?: Cheese;
   toppings: Topping[];
