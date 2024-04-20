@@ -23,5 +23,5 @@ export interface Pizza {
   sauce?: Sauce;
   cheese?: Cheese;
   toppings: Topping[];
-  calculatePrice(): number;
+  calculatePrice: number;
 }

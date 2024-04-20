@@ -1,4 +1,4 @@
-import { CheeseMenu } from "./Cheese";
+import { CheeseOption } from "./Cheese";
 import { Crust } from "./Crust";
 import { Pizza } from "./Pizza";
 import { Sauce } from "./Sauce";
@@ -11,13 +11,16 @@ export class PizzaBuilder{
     setSauce(sauce:Sauce){
 
     } 
-    setCheese(cheese:CheeseMenu){
+    setCheese(cheese:CheeseOption){
 
     }
     addTopping(topping : Topping){
         
     }
+    private totalPrice():number{
+        return 2
+    }
     build():Pizza{
-        return ;
+        return {}
     }
 }
