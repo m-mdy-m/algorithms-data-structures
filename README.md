@@ -174,7 +174,7 @@ Welcome to my learning repository! This repository is dedicated to my journey of
  - [press.rebus.community](https://press.rebus.community/)
  - [enjoyalgorithms](https://www.enjoyalgorithms.com/blog/)
  - [scoutapm](https://scoutapm.com/blog/)
- - [coursera](https://stackoverflow.com/)
+ - [stackoverflow](https://stackoverflow.com/)
  - [medium](https://medium.com/)(⭐)
  - [linkedin](https://www.linkedin.com/)
  - [altcademy](https://www.altcademy.com/)
