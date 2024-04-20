@@ -186,8 +186,20 @@ Welcome to my learning repository! This repository is dedicated to my journey of
 
 ## Project
 
-1. ...
-
+### Design Pattern:
+   #### Creational:
+   1. 
+   2.
+   3.
+   #### Structural:
+   1.
+   2.
+   3.
+   #### Behavioral:
+   1.
+   2.
+   3.
+---
 ## Collaboration and Feedback
 
 I welcome collaboration and feedback from the community! Feel free to open issues or pull requests with suggestions, corrections, or questions.
