@@ -187,20 +187,20 @@ Welcome to my learning repository! This repository is dedicated to my journey of
 ## Project
 
 ### Design Pattern:
-   #### `Creational`:
-   > [Pizza Builder (Builder Pattern)]()
+   #### **Creational**:
+   >* [Pizza Builder (Builder Pattern)]()
    ---
-   > [Maze Game with Factory Method (or Prototype Pattern)]()
+   >* [Maze Game with Factory Method (or Prototype Pattern)]()
    ---
-   > [Character Creator with Abstract Factory (or Singleton Pattern):]()
+   >* [Character Creator with Abstract Factory (or Singleton Pattern):]()
    ---
-   > [Text Adventure Game]()
+   >* [Text Adventure Game]()
    ---
-   #### `Structural`:
+   #### **Structural**:
    1.
    2.
    3.
-   #### `Behavioral`:
+   #### **Behavioral**:
    1.
    2.
    3.
