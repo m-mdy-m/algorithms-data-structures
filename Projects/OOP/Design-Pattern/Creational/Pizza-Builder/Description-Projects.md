@@ -12,7 +12,7 @@ You can implement this project in various programming languages that support obj
 * **TypeScript:** Offers strong typing and static code checking for better code quality.
 * **Go:** Compiled language known for its simplicity, speed, and ease of use.
 
-**Choosing a language depends on your experience and preference. Python or JavaScript might be easier to start with, while Java or C# offer more robust object-oriented features.**
+**Once you choose a language, follow the implementation steps below specific to that language.**
 
 ###  Implementation Breakdown:
 
