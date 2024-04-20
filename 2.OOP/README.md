@@ -80,7 +80,7 @@
 
 5. **[Dependency Injection](concepts/Medium/5.DependencyInjection.md)**
 
-6. **Object-Oriented Design Patterns:**
+6. **[Object-Oriented Design Patterns:](concepts/Medium/6.Object-Oriented-Design-Patterns.md)**
 
 7. **SOLID Principles:**
 
