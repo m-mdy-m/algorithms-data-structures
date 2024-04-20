@@ -83,7 +83,7 @@ Object pooling can offer a significant performance boost in situations where the
 
 The pooled object is obtained in predictable time when creation of the new objects (especially over network) may take variable time. These benefits are mostly true for objects that are expensive with respect to time, such as database connections, socket connections, threads and large graphic objects like fonts or bitmaps.
 
-In other situations, simple object pooling (that hold no external resources, but only occupy memory) may not be efficient and could decrease performance.[1] In case of simple memory pooling, the slab allocation memory management technique is more suited, as the only goal is to minimize the cost of memory allocation and deallocation by reducing fragmentation.
+In other situations, simple object pooling (that hold no external resources, but only occupy memory) may not be efficient and could decrease performance. In case of simple memory pooling, the slab allocation memory management technique is more suited, as the only goal is to minimize the cost of memory allocation and deallocation by reducing fragmentation.
 
 ## Handling of empty pools
 
