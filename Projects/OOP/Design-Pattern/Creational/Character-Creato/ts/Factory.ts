@@ -1,13 +1,6 @@
 import { CharacterFactory } from "./CharacterFactory";
 import { InfoSoldier } from "./helper";
 import { ArcherSoldier, MageSoldier, Soldier, WarriorSoldier } from "./interface";
-function base ():Soldier{
-    return {
-      name: InfoSoldier.NameSoldier(),
-      age: InfoSoldier.randomAge(),
-      health: 100,
-    };
-}
 class MageFactory extends CharacterFactory  {
     base :Soldier;
   constructor() {
