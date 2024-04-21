@@ -40,24 +40,6 @@ class Circle extends Shape {
     return PI * this.radius * 2;
   }
 
-  getInfo(): string {
-    if (isNaN(this.radius) || this.radius <= 0) {
-      throw new Error(
-        "Invalid radius value. Radius must be a positive number."
-      );
-    }
-
-    const shapeName = this.getName();
-    const formattedPerimeter = this.formatNumber(this.calculatePerimeter(), 2);
-    const formattedArea = this.formatNumber(this.calculateArea(), 2);
-
-    return `Shape Information:
-      - Name: ${shapeName}
-      - Radius: ${this.radius.toFixed(2)}
-      - Perimeter: ${formattedPerimeter}
-      - Area: ${formattedArea}`;
-  }
-
   getName(): string {
     return "Circle";
   }
@@ -97,14 +79,3 @@ console.log(circleInfo); // Output: Shape Information:
                           //        - Radius: 5.00
                           //        - Perimeter: 31.42
                           //        - Area: 78.54
-
-// Create a square object
-const square = new Square(3);
-
-// Get information about the square
-const squareInfo = square.getInfo();
-console.log(squareInfo); // Output: Shape Information:
-                          //        - Name: Square
-                          //        - Side Length: 3.00
-                          //        - Perimeter: 12.00
-                          //        - Area: 9.00
