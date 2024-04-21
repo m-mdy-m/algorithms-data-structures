@@ -25,10 +25,10 @@ interface ToppingType {
 }
 
 export class PizzaBuilder {
-  private crust: PizzaOption;
-  private sauce: PizzaOption;
-  private cheese: PizzaOption;
-  private toppings: PizzaOption;
+  private crust?: PizzaOption;
+  private sauce?: PizzaOption;
+  private cheese?: PizzaOption;
+  private toppings: Topping[] = [];
 
   setCrust(crustType: keyof CrustType): void {
     this.crust = new Crust(crustType);
@@ -43,19 +43,26 @@ export class PizzaBuilder {
   }
 
   addTopping(toppingType: keyof ToppingType): void {
-    this.toppings = new Topping(toppingType);
+    this.toppings.push(new Topping(toppingType));
   }
   private totalPrice(): number {
+    const totalToppingsPrice = this.toppings.reduce(
+      (acc, topping) => acc + topping.price,
+      0
+    );
     return (
-      this.cheese.price +
-      this.sauce.price +
-      this.toppings.price +
-      this.crust.price
+      (this.crust?.price || 0) +
+      (this.sauce?.price || 0) +
+      (this.cheese?.price || 0) +
+      totalToppingsPrice
     );
   }
   build(): Pizza {
+    if (!this.crust) {
+      throw new Error("Crust is required to build a pizza.");
+    }
     return {
-      size: this.crust,
+      size: this.crust, // Assuming size is stored in the crust object
       toppings: this.toppings,
       cheese: this.cheese,
       sauce: this.sauce,
@@ -64,5 +71,18 @@ export class PizzaBuilder {
   }
 }
 
-const a = new PizzaBuilder().setCrust("thick");
-console.log("a:", a);
+const pizzaBuilder = new PizzaBuilder();
+pizzaBuilder.setCheese("cheddar");
+pizzaBuilder.setCrust("thin");
+pizzaBuilder.addTopping("pepperoni");
+pizzaBuilder.addTopping("mushrooms");
+
+const pizza = pizzaBuilder.build();
+
+console.log("Your pizza:");
+console.log(`  Cheese: ${pizza.cheese?.type}`);
+console.log(`  Crust: ${pizza.size?.type}`);
+console.log(`  Toppings:`);
+pizza.toppings.forEach(topping => console.log(`     - ${topping.type} ($${topping.price})`));
+
+console.log(`  Total Price: $${pizza.calculatePrice}`);
