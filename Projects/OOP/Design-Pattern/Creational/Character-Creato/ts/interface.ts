@@ -17,6 +17,11 @@ export interface ArcherSoldier extends Soldier {
   bow: string;
   arrows: number;
 }
+export interface Soldiers {
+  Mage: MageSoldier;
+  Warrior: WarriorSoldier;
+  Archer: ArcherSoldier;
+}
 export interface SoldierData {
   randomAge: Function;
   nameSoldier: Function;
