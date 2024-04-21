@@ -1,46 +1,37 @@
 import { CharacterFactory } from "./CharacterFactory";
 import { InfoSoldier } from "./helper";
-import { ArcherSoldier, MageSoldier, WarriorSoldier } from "./interface";
-class SoldierFactory extends CharacterFactory {
-    protected createSoldier(): MageSoldier | ArcherSoldier | WarriorSoldier {
-      return {
-        age: InfoSoldier.randomAge(),
-        health: 100,
-        name: InfoSoldier.NameSoldier(),
-      };
-    }
-  }
-
-class MageFactory extends SoldierFactory {
+import { ArcherSoldier, MageSoldier, Soldier, WarriorSoldier } from "./interface";
+function base ():Soldier{
+    return {
+      name: InfoSoldier.NameSoldier(),
+      age: InfoSoldier.randomAge(),
+      health: 100,
+    };
+}
+class MageFactory extends CharacterFactory  {
+    base :Soldier;
   constructor() {
     super();
+    this.base = this.createCommonSoldierProps()
   }
   override createMage(): MageSoldier {
-    console.log(this);
-
     return {
-      age: InfoSoldier.randomAge(),
+        ...this.base,
       bookWitchcraft: InfoSoldier.randomBookWitchcraft(),
       cane: InfoSoldier.randomBool(),
-      health: 100,
-      name: InfoSoldier.NameSoldier(),
       name_cane: InfoSoldier.randomNameCane(),
     };
   }
   createArcher(): ArcherSoldier {
     return {
-      age: InfoSoldier.randomAge(),
-      health: 100,
-      name: InfoSoldier.NameSoldier(),
-      arrows: Math.random() * (40 - 200) + 40,
+        ...this.base,
+      arrows: Math.random()* (40 - 200) + 40,
       bow: InfoSoldier.randomOldWeaponName(),
     };
   }
   createWarrior(): WarriorSoldier {
     return {
-      age: InfoSoldier.randomAge(),
-      health: 100,
-      name: InfoSoldier.NameSoldier(),
+        ...this.base,
       sword: InfoSoldier.randomSwordName(),
     };
   }
