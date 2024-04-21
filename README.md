@@ -188,7 +188,7 @@ Welcome to my learning repository! This repository is dedicated to my journey of
 
 ### Design Pattern:
    #### **Creational**:
-   >* [Pizza Builder (Builder Pattern)]()
+   >* [Pizza Builder (Builder Pattern)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/Projects/OOP/Design-Pattern/Creational/Pizza-Builder)
    ---
    >* [Maze Game with Factory Method (or Prototype Pattern)]()
    ---
