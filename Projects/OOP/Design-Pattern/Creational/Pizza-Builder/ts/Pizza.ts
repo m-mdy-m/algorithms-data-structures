@@ -51,18 +51,13 @@ export interface Pizza {
   toppings: Topping[];
   calculatePrice: number;
 }
-export abstract class PizzaBase {
+abstract class PizzaBase {
   readonly type: string;
   constructor(type: string) {
     this.type = type;
   }
   abstract listMenu(): { [key: string]: Function };
-  // Function to find the price of a specific item type within a category
-  // This function takes the category (e.g., "Cheese") and item type (e.g., "mozzarella")
-  // as arguments. It checks if the category exists, then uses the `find` method
-  // to locate the item with the matching type within that category. If found,
-  // it returns the price of the item, otherwise it returns undefined.
-  protected getPrice(category: string):number | undefined {
+  protected getPrice(category: string): number | undefined {
     if (category in (data as PizzaMenu)) {
       const menu = loadPizzaMenu(category);
       const priceInfo = menu?.find(
@@ -70,9 +65,9 @@ export abstract class PizzaBase {
       );
       return priceInfo?.price;
     }
-    return undefined
+    return undefined;
   }
-  protected listCategory(category: string):[]|undefined {
+  protected listCategory(category: string): [] | undefined {
     if (category in (data as PizzaMenu)) {
       const menu = loadPizzaMenu(category);
       const Info = menu?.map((f: PizzaMenuItem) => f?.type);
@@ -83,4 +78,28 @@ export abstract class PizzaBase {
     }
   }
   abstract createCheeseMethod(cheeseType: string): Function;
+}
+export abstract class PizzaTopping extends PizzaBase {
+  readonly price: number;
+  readonly category: string;
+  constructor(type: string, category: string) {
+    super(type);
+    this.category = category;
+    this.price = this.getPrice(category) ?? 250;
+  }
+  override listMenu(): { [key: string]: Function } {
+    const toppingList = this.listCategory(this.category);
+    if (!toppingList) {
+      throw new Error("Failed to retrieve available topping options.");
+    }
+
+    const methods: { [key: string]: Function } = {};
+    for (const topping of toppingList) {
+      methods[topping] = this.createCheeseMethod(topping);
+    }
+    return methods;
+  }
+  override createCheeseMethod(cheeseType: string): Function {
+    return () => ({ type: cheeseType, price: this.price });
+  }
 }
