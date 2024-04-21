@@ -1,28 +1,23 @@
 import { Cheese } from "./Pizza";
-import { PizzaMenuItem, findPriceByType } from "./utils";
+import { PizzaMenuItem, findPriceByType, listCategory } from "./utils";
 export class CheeseOption implements Cheese {
   readonly price: number;
   readonly type: string;
+  readonly category: string = "Cheese";
   constructor(type: string) {
     this.type = type;
-    this.price = findPriceByType("Cheese", type) ?? 25;
-    this.executeCheeseMethod(type)
+    this.price = findPriceByType(this.category, type) ?? 250;
+    this.listMenu();
   }
-  private get availableCheeseTypes(): { [key: string]: Function } {
-    return {
-      method: this.method
-    };
-  }
-  private executeCheeseMethod(method: string): void {
-    if (method in this.availableCheeseTypes) {
-      this.availableCheeseTypes[method]();
-    } else {
-      console.warn(`Cheese type "${method}" not found.`);
+  private listMenu(): { [key: string]: Function } {
+    const cheeseTypes = listCategory(this.category) ?? [];
+    const methods: { [key: string]: Function } = {}; 
+    for (const cheeseType of cheeseTypes) {
+      methods[cheeseType as string] = this.createCheeseMethod(cheeseType);
     }
+    return methods;
   }
-  private method(){
-    return CheeseOption.prototype[this.type] = function():PizzaMenuItem{
-      return{ type: this.type, price: this.price }; 
-    }
+  private createCheeseMethod(cheeseType: string): Function {
+    return () => ({ type: cheeseType, price: this.price });
   }
 }
