@@ -1,14 +1,17 @@
 import { CharacterFactory } from "./CharacterFactory";
 import { InfoSoldier } from "./helper";
 import { ArcherSoldier, MageSoldier, WarriorSoldier } from "./interface";
+class SoldierFactory extends CharacterFactory {
+    protected createSoldier(): MageSoldier | ArcherSoldier | WarriorSoldier {
+      return {
+        age: InfoSoldier.randomAge(),
+        health: 100,
+        name: InfoSoldier.NameSoldier(),
+      };
+    }
+  }
 
-class MageFactory extends CharacterFactory  {
-//   age: number;
-//   name: string;
-//   health: number;
-//   cane: boolean;
-//   name_cane: string;
-//   bookWitchcraft: string;
+class MageFactory extends SoldierFactory {
   constructor() {
     super();
   }
@@ -26,19 +29,19 @@ class MageFactory extends CharacterFactory  {
   }
   createArcher(): ArcherSoldier {
     return {
-      age: 20,
+      age: InfoSoldier.randomAge(),
       health: 100,
-      name: "sj",
-      arrows: 2421,
-      bow: "scxz",
+      name: InfoSoldier.NameSoldier(),
+      arrows: Math.random() * (40 - 200) + 40,
+      bow: InfoSoldier.randomOldWeaponName(),
     };
   }
   createWarrior(): WarriorSoldier {
     return {
-      age: 20,
+      age: InfoSoldier.randomAge(),
       health: 100,
-      name: "sj",
-      sword: "scxz",
+      name: InfoSoldier.NameSoldier(),
+      sword: InfoSoldier.randomSwordName(),
     };
   }
 }
