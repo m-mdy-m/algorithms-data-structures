@@ -1,5 +1,4 @@
 import { CharacterFactory } from "./CharacterFactory";
-import { Soldier } from "./Soldier";
 import { ArcherSoldier, MageSoldier, Soldiers, WarriorSoldier } from "./interface";
 export class MageFactory extends CharacterFactory<MageSoldier> {
   override createSoldierImpl(): any {
