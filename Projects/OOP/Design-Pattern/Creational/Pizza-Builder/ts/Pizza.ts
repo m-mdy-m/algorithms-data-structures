@@ -73,11 +73,13 @@ export abstract class PizzaIngredient extends PizzaBase {
     super(type);
     this.category = category;
     this.price = this.getPrice(category) ?? 250;
+    this.listMenu()
   }
+  // return array list 
   override listMenu(): { [key: string]: Function } {
     const toppingList = this.listCategory(this.category);
     if (!toppingList) {
-      throw new Error("Failed to retrieve available topping options.");
+      throw new Error(`"${this.type}" is not a valid ${this.category} option. Please choose from the available options.`);
     }
 
     const methods: { [key: string]: Function } = {};
@@ -86,6 +88,7 @@ export abstract class PizzaIngredient extends PizzaBase {
     }
     return methods;
   }
+  // create method 
   override createCheeseMethod(cheeseType: string): Function {
     return () => ({ type: cheeseType, price: this.price });
   }
