@@ -11,7 +11,7 @@ interface PizzaMenu {
 // This function checks if the requested category exists in the data
 // and returns the corresponding data if found. It could be useful if you need to
 // access specific categories for other purposes.
-function loadPizzaMenu(category: string):any {
+function loadPizzaMenu(category: string): any {
   if (category in (data as PizzaMenu)) {
     const typedData = data as PizzaMenu;
     return Object.getOwnPropertyDescriptor(typedData, category)?.value;
@@ -53,8 +53,8 @@ export interface Pizza {
 }
 export abstract class PizzaBase {
   readonly type: string;
-  constructor(type:string) {
-    this.type = type
+  constructor(type: string) {
+    this.type = type;
   }
   abstract listMenu(): { [key: string]: Function };
   // Function to find the price of a specific item type within a category
@@ -62,7 +62,7 @@ export abstract class PizzaBase {
   // as arguments. It checks if the category exists, then uses the `find` method
   // to locate the item with the matching type within that category. If found,
   // it returns the price of the item, otherwise it returns undefined.
-  protected getPrice(category: string) {
+  protected getPrice(category: string):number | undefined {
     if (category in (data as PizzaMenu)) {
       const menu = loadPizzaMenu(category);
       const priceInfo = menu?.find(
@@ -70,13 +70,17 @@ export abstract class PizzaBase {
       );
       return priceInfo?.price;
     }
+    return undefined
   }
-  protected listCategory(category: string) {
+  protected listCategory(category: string):[]|undefined {
     if (category in (data as PizzaMenu)) {
       const menu = loadPizzaMenu(category);
       const Info = menu?.map((f: PizzaMenuItem) => f?.type);
-      return Info;
+      if (Info.includes(this.type)) {
+        return Info;
+      }
+      return undefined;
     }
   }
-  abstract createCheeseMethod(cheeseType: string): Function 
+  abstract createCheeseMethod(cheeseType: string): Function;
 }
