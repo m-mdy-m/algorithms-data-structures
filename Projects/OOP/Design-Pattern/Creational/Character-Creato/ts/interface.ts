@@ -1,5 +1,3 @@
-import { InfoSoldier } from "./helper";
-
 export interface Soldier {
   name: string; // Soldier's name
   age: number; // Soldier's age
