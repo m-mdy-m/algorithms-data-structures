@@ -86,3 +86,12 @@ console.log(`  Toppings:`);
 pizza.toppings.forEach(topping => console.log(`     - ${topping.type} ($${topping.price})`));
 
 console.log(`  Total Price: $${pizza.calculatePrice}`);
+`Output:
+Your pizza:
+  Cheese: cheddar
+  Crust: thin
+  Toppings:
+     - pepperoni ($570)
+     - mushrooms ($240)
+  Total Price: $1350
+`
