@@ -1,5 +1,5 @@
 import { PizzaIngredient } from "./Pizza";
-export class CheeseOption extends PizzaIngredient {
+export class Cheese extends PizzaIngredient {
   constructor(type: string) {
     super(type, "Cheese");
   }
