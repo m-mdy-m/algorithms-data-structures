@@ -2,6 +2,7 @@ const PI = Math.PI;
 abstract class Shape {
   abstract calculateArea(): number;
   abstract calculatePerimeter(): number;
+  // getInfo can be implemented in concrete shapes if needed for specific formatting
   getInfo(): string {
     if (isNaN(this.getSideLength()) || this.getSideLength() <= 0) {
       throw new Error(
@@ -19,6 +20,7 @@ abstract class Shape {
         - Perimeter: ${formattedPerimeter}
         - Area: ${formattedArea}`;
   }
+  // Utility function for consistent number formatting (assuming you have many shapes)
   formatNumber(value: number, decimals: number): string {
     return value.toFixed(decimals);
   }
@@ -75,7 +77,7 @@ const circle = new Circle(5);
 // Get information about the circle
 const circleInfo = circle.getInfo();
 console.log(circleInfo); // Output: Shape Information:
-                          //        - Name: Circle
-                          //        - Radius: 5.00
-                          //        - Perimeter: 31.42
-                          //        - Area: 78.54
+//        - Name: Circle
+//        - Radius: 5.00
+//        - Perimeter: 31.42
+//        - Area: 78.54
