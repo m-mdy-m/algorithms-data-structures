@@ -190,9 +190,9 @@ Welcome to my learning repository! This repository is dedicated to my journey of
    #### **Creational**:
    >* [Pizza Builder (Builder Pattern)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/Projects/OOP/Design-Pattern/Creational/Pizza-Builder)
    ---
-   >* [Shape Area Calculator with Factory Method (or Prototype Pattern)]()
+   >* [Shape Area Calculator with Factory Method (or Prototype Pattern)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/Projects/OOP/Design-Pattern/Creational/Shape-Area-Calculator)
    ---
-   >* [Character Creator with Abstract Factory (or Singleton Pattern):]()
+   >* [Character Creator with Abstract Factory (or Singleton Pattern)]()
    ---
    #### **Structural**:
    1.
