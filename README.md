@@ -190,7 +190,7 @@ Welcome to my learning repository! This repository is dedicated to my journey of
    #### **Creational**:
    >* [Pizza Builder (Builder Pattern)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/Projects/OOP/Design-Pattern/Creational/Pizza-Builder)
    ---
-   >* [Maze Game with Factory Method (or Prototype Pattern)]()
+   >* [Shape Area Calculator with Factory Method (or Prototype Pattern)]()
    ---
    >* [Character Creator with Abstract Factory (or Singleton Pattern):]()
    ---
