@@ -6,7 +6,6 @@ export interface Soldier {
   health: number; // Soldier's health points
 }
 export interface MageSoldier extends Soldier {
-  cane: boolean; // Mage's cane
   name_cane: string;
   bookWitchcraft: string; // Mage's book of witchcraft
 }

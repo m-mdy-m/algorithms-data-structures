@@ -5,7 +5,7 @@ export abstract class CharacterFactory {
   abstract createWarrior?(): WarriorSoldier;
   abstract createArcher?(): ArcherSoldier;
   abstract createMage?(): MageSoldier;
-  protected  createCommonSoldierProps(): Soldier {
+  protected  CommonProps(): Soldier {
     return {
       name: InfoSoldier.NameSoldier(),
       age: InfoSoldier.randomAge(),
