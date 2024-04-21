@@ -1,85 +1,26 @@
 import { CharacterFactory } from "./CharacterFactory";
-import { InfoSoldier } from "./helper";
-import { ArcherSoldier, MageSoldier, Soldier, WarriorSoldier } from "./interface";
-class MageFactory extends CharacterFactory  {
-    base :Soldier;
-  constructor() {
-    super();
-    this.base = this.CommonProps()
-  }
-  override createMage(): MageSoldier {
+import { ArcherSoldier, MageSoldier, WarriorSoldier } from "./interface";
+export class MageFactory extends CharacterFactory<MageSoldier> {
+  override createSoldierImpl(): any {
     return {
-        ...this.base,
-      bookWitchcraft: InfoSoldier.randomBookWitchcraft(),
-      name_cane: InfoSoldier.randomNameCane(),
-    };
-  }
-  createArcher(): ArcherSoldier {
-    return {
-        ...this.base,
-      arrows: Math.random()* (40 - 200) + 40,
-      bow: InfoSoldier.randomOldWeaponName(),
-    };
-  }
-  createWarrior(): WarriorSoldier {
-    return {
-        ...this.base,
-      sword: InfoSoldier.randomSwordName(),
+      bookWitchcraft: this.infoSoldier.randomBookWitchcraft(),
+      nameCane: this.infoSoldier.randomNameCane(),
     };
   }
 }
-class WarriorFactory extends CharacterFactory {
-    base :Soldier;
-    constructor() {
-      super();
-      this.base = this.CommonProps()
-    }
-    override createMage(): MageSoldier {
-      return {
-          ...this.base,
-        bookWitchcraft: InfoSoldier.randomBookWitchcraft(),
-        name_cane: InfoSoldier.randomNameCane(),
-      };
-    }
-    createArcher(): ArcherSoldier {
-      return {
-          ...this.base,
-        arrows: Math.random()* (40 - 200) + 40,
-        bow: InfoSoldier.randomOldWeaponName(),
-      };
-    }
-    createWarrior(): WarriorSoldier {
-      return {
-          ...this.base,
-        sword: InfoSoldier.randomSwordName(),
-      };
-    }
+export class WarriorFactory extends CharacterFactory<WarriorSoldier> {
+  override createSoldierImpl(): any {
+    return {
+      sword: this.infoSoldier.randomSwordName(),
+    };
+  }
 }
 
-class ArcherFactory extends CharacterFactory {
-    base :Soldier;
-    constructor() {
-      super();
-      this.base = this.CommonProps()
-    }
-    override createMage(): MageSoldier {
-      return {
-          ...this.base,
-        bookWitchcraft: InfoSoldier.randomBookWitchcraft(),
-        name_cane: InfoSoldier.randomNameCane(),
-      };
-    }
-    createArcher(): ArcherSoldier {
-      return {
-          ...this.base,
-        arrows: Math.random()* (40 - 200) + 40,
-        bow: InfoSoldier.randomOldWeaponName(),
-      };
-    }
-    createWarrior(): WarriorSoldier {
-      return {
-          ...this.base,
-        sword: InfoSoldier.randomSwordName(),
-      };
-    }
+export class ArcherFactory extends CharacterFactory<ArcherSoldier> {
+  override createSoldierImpl(): any {
+    return {
+      bow: this.infoSoldier.randomOldWeaponName(),
+      arrows: Math.floor(Math.random() * (200 - 40 + 1)) + 40,
+    };
+  }
 }

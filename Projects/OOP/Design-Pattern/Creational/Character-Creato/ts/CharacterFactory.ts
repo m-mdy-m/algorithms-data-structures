@@ -1,15 +1,20 @@
+import { Soldier } from "./Soldier";
 import { InfoSoldier } from "./helper";
-import { ArcherSoldier, MageSoldier, Soldier, WarriorSoldier } from "./interface";
+import { SoldierData } from "./interface";
+export abstract class CharacterFactory<T extends Soldier> {
+  protected readonly infoSoldier: SoldierData=InfoSoldier
+  protected abstract createSoldierImpl(): T;
 
-export abstract class CharacterFactory {
-  abstract createWarrior?(): WarriorSoldier;
-  abstract createArcher?(): ArcherSoldier;
-  abstract createMage?(): MageSoldier;
-  protected  CommonProps(): Soldier {
-    return {
-      name: InfoSoldier.NameSoldier(),
-      age: InfoSoldier.randomAge(),
-      health: 100,
-    };
+  public createSoldier(): T {
+    const commonProps = this.createBaseSoldier();
+    return { ...commonProps, ...this.createSoldierImpl() };
+  }
+
+  private createBaseSoldier(): Soldier {
+    return new Soldier(
+      this.infoSoldier.nameSoldier(),
+      this.infoSoldier.randomAge(),
+      100
+    );
   }
 }

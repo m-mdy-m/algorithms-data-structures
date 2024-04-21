@@ -16,7 +16,7 @@ export class InfoSoldier {
   static randomAge(min: number = 18, max: number = 40): number {
     return Math.round(Math.random() * (max - min) + min);
   }
-  static NameSoldier(): string {
+  static nameSoldier(): string {
     const first_name = getDataByKey("first_name");
     const last_name = getDataByKey("last_name");
     var random_first_name_index = this.randomAge(0, first_name.length - 1);

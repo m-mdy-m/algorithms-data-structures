@@ -1,17 +1,30 @@
 export interface Soldier {
-  name: string; // Soldier's name
-  age: number; // Soldier's age
-  health: number; // Soldier's health points
+  name: string;
+  age: number;
+  health: number;
 }
 export interface MageSoldier extends Soldier {
-  name_cane: string;
-  bookWitchcraft: string; // Mage's book of witchcraft
+  bookWitchcraft: string;
+  nameCane: string;
 }
+
 export interface WarriorSoldier extends Soldier {
-  gun?: string; // Warrior's gun (optional)
-  sword: string; // Warrior's sword
+  gun?: string;
+  sword: string;
 }
+
 export interface ArcherSoldier extends Soldier {
-  bow: string; // Archer's bow
-  arrows: number; // Archer's arrow count
+  bow: string;
+  arrows: number;
+}
+export interface SoldierData {
+  randomAge: Function;
+  nameSoldier: Function;
+  randomBool: Function;
+  randomGunName: Function;
+  randomMagicWandName: Function;
+  randomSwordName: Function;
+  randomOldWeaponName: Function;
+  randomBookWitchcraft: Function;
+  randomNameCane: Function;
 }
