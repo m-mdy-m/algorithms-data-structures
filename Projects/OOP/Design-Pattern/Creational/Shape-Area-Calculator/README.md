@@ -1,5 +1,7 @@
 ## Shape Area Calculator with Factory Method (or Prototype Pattern)
 
+> **It can be implemented using the factory method in this project**
+
 This project will create a shape area calculator application that demonstrates the Factory Method or Prototype design pattern. Users can select different shapes and calculate their areas.
 
 ### Choosing a Language
