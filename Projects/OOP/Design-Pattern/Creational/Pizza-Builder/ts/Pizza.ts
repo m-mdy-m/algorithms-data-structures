@@ -18,38 +18,25 @@ function loadPizzaMenu(category: string): any {
   }
   return undefined;
 }
-// Interface defining the structure of a single Pizza Menu item
-// This specifies the properties expected for each item within a category
-interface PizzaMenuItem {
-  type: string;
-  price: number;
-}
-export interface Crust {
-  type: string;
-  price: number;
+// Interface defining a single option within a pizza menu category
+// (e.g., cheese type, crust type, etc.)
+interface PizzaOption {
+  type: string; // Type of the menu item (e.g., "mozzarella", "thin crust")
+  price: number; // Price of the menu item
 }
 
-export interface Sauce {
-  type: string;
-  price: number;
-}
-
-export interface Cheese {
-  type: string;
-  price: number;
-}
-
-export interface Topping {
-  type: string;
-  price: number;
-}
-
+// Type aliases for specific menu category options (improves readability)
+type CheeseOption = PizzaOption;
+type CrustOption = PizzaOption;
+type SauceOption = PizzaOption;
+type ToppingOption = PizzaOption;
+// Interface for a complete Pizza with size, optional sauce & cheese, and toppings
 export interface Pizza {
-  size: Crust;
-  sauce?: Sauce;
-  cheese?: Cheese;
-  toppings: Topping[];
-  calculatePrice: number;
+  size: CrustOption; // Size of the pizza (e.g., "small", "medium", "large")
+  sauce?: SauceOption; // Optional sauce for the pizza
+  cheese?: CheeseOption; // Optional cheese for the pizza
+  toppings: ToppingOption[]; // Array of toppings on the pizza
+  calculatePrice(): number; // Function to calculate the total price of the pizza
 }
 abstract class PizzaBase {
   readonly type: string;
@@ -61,7 +48,7 @@ abstract class PizzaBase {
     if (category in (data as PizzaMenu)) {
       const menu = loadPizzaMenu(category);
       const priceInfo = menu?.find(
-        (item: PizzaMenuItem) => item?.type === this.type
+        (item: PizzaOption) => item?.type === this.type
       );
       return priceInfo?.price;
     }
@@ -70,7 +57,7 @@ abstract class PizzaBase {
   protected listCategory(category: string): [] | undefined {
     if (category in (data as PizzaMenu)) {
       const menu = loadPizzaMenu(category);
-      const Info = menu?.map((f: PizzaMenuItem) => f?.type);
+      const Info = menu?.map((f: PizzaOption) => f?.type);
       if (Info.includes(this.type)) {
         return Info;
       }
@@ -79,7 +66,7 @@ abstract class PizzaBase {
   }
   abstract createCheeseMethod(cheeseType: string): Function;
 }
-export abstract class PizzaTopping extends PizzaBase {
+export abstract class PizzaIngredient extends PizzaBase {
   readonly price: number;
   readonly category: string;
   constructor(type: string, category: string) {
