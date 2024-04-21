@@ -20,7 +20,7 @@ function loadPizzaMenu(category: string): any {
 }
 // Interface defining a single option within a pizza menu category
 // (e.g., cheese type, crust type, etc.)
-interface PizzaOption {
+export interface PizzaOption {
   type: string; // Type of the menu item (e.g., "mozzarella", "thin crust")
   price: number; // Price of the menu item
 }
@@ -35,8 +35,8 @@ export interface Pizza {
   size: CrustOption; // Size of the pizza (e.g., "small", "medium", "large")
   sauce?: SauceOption; // Optional sauce for the pizza
   cheese?: CheeseOption; // Optional cheese for the pizza
-  toppings: ToppingOption[]; // Array of toppings on the pizza
-  calculatePrice(): number; // Function to calculate the total price of the pizza
+  toppings: ToppingOption; // Array of toppings on the pizza
+  calculatePrice: number; // Function to calculate the total price of the pizza
 }
 abstract class PizzaBase {
   readonly type: string;
