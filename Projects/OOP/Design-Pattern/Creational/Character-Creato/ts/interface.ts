@@ -1,9 +1,11 @@
 interface Soldier {
   name: string; // Soldier's name
-  health: number & { readonly min: 0; readonly max: 100 };// Soldier's health points
+  age: number; // Soldier's age
+  health: number; // Soldier's health points
 }
 export interface MageSoldier extends Soldier {
-  cane: string; // Mage's cane
+  cane: boolean; // Mage's cane
+  name_cane: string;
   bookWitchcraft: string; // Mage's book of witchcraft
 }
 export interface WarriorSoldier extends Soldier {
