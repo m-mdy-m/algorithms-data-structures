@@ -35,7 +35,7 @@ export interface Pizza {
   size: CrustOption; // Size of the pizza (e.g., "small", "medium", "large")
   sauce?: SauceOption; // Optional sauce for the pizza
   cheese?: CheeseOption; // Optional cheese for the pizza
-  toppings: ToppingOption; // Array of toppings on the pizza
+  toppings: ToppingOption[]; // Array of toppings on the pizza
   calculatePrice: number; // Function to calculate the total price of the pizza
 }
 abstract class PizzaBase {
