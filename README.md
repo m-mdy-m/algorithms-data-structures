@@ -192,12 +192,12 @@ Welcome to my learning repository! This repository is dedicated to my journey of
    ---
    >* [Shape Area Calculator with Factory Method (or Prototype Pattern)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/Projects/OOP/Design-Pattern/Creational/Shape-Area-Calculator)
    ---
-   >* [Character Creator with Abstract Factory (or Singleton Pattern)]()
+   >* [Character Creator with Abstract Factory (or Singleton Pattern)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/Projects/OOP/Design-Pattern/Creational/Character-Creato)
    ---
    #### **Structural**:
-   1.
-   2.
-   3.
+   1. 
+   2. 
+   3. 
    #### **Behavioral**:
    1.
    2.

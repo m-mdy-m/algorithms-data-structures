@@ -25,12 +25,12 @@ Craft a versatile character creator for your game or story! This project allows 
 
     **a) Abstract Factory:**
 
-        * Define an abstract `CharacterFactory` interface with methods like `createWarrior()`, `createMage()`, and `createArcher()`. These methods return instances of the corresponding character subclasses.
-        * Implement concrete factories like `WarriorFactory`, `MageFactory`, and `ArcherFactory` that implement the `CharacterFactory` interface and create specific character objects with their unique attributes and abilities.
+    * Define an abstract `CharacterFactory` interface with methods like `createWarrior()`, `createMage()`, and `createArcher()`. These methods return instances of the corresponding character subclasses.
+    * Implement concrete factories like `WarriorFactory`, `MageFactory`, and `ArcherFactory` that implement the `CharacterFactory` interface and create specific character objects with their unique attributes and abilities.
 
     **b) Singleton Pattern:**
 
-        * Implement a singleton class called `CharacterFactory` that provides methods like `createWarrior()`, `createMage()`, and `createArcher()`. These methods internally handle the logic of creating the corresponding character objects based on the chosen type.
+    * Implement a singleton class called `CharacterFactory` that provides methods like `createWarrior()`, `createMage()`, and `createArcher()`. These methods internally handle the logic of creating the corresponding character objects based on the chosen type.
 
 3. **Customization (Optional):**
 
