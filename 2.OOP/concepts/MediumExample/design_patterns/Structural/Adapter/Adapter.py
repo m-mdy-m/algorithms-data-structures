@@ -1,27 +1,17 @@
 import math
-class Shape:
-    def __init__(self):
-        pass
-    def getArea(self):
-        pass
-class AreaMeasurable:
-    def __init__(self):
-        pass
-    def getAreaInCm(self):
-        pass
-class Square(Shape):
+class Square:
     def __init__(self,side):
         self.side =side
     def getArea(self):
         return self.side * self.side
 
-class Circle(Shape):
+class Circle:
     def __init__(self,radius):
         self.radius = radius
     def getArea(self):
         return math.pi * self.radius * self.radius
 
-class ShapeAreaCalculator(AreaMeasurable):
+class ShapeAreaCalculator:
     def __init__(self,shape):
         self.shape = shape
     def getAreaInCm(self):
