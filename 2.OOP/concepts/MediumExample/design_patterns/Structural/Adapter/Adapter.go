@@ -32,13 +32,13 @@ func (this *Circle) GetArea() float64 {
 type ShapeAreaCalculator struct {
 	shape Shape
 }
-func (this *ShapeAreaCalculator) getAreaInCm () float64{
+
+func (this *ShapeAreaCalculator) getAreaInCm() float64 {
 	return this.shape.getArea() * 2.54
 }
 func main() {
 	square := Square{Side: 5}
-
-	// circle := Circle(5);
-    fmt.Printf("Area of square: %.2f", square.GetArea())
+	circle := Circle{Radius: 3}
+	fmt.Printf("Area of square: %.4f\n", square.GetArea())
+	fmt.Printf("Area of circle: %.4f", circle.GetArea())
 }
-
