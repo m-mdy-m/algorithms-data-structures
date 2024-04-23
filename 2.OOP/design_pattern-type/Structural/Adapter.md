@@ -2,7 +2,7 @@
 
 In software engineering, the adapter pattern is a software design pattern (also known as wrapper, an alternative naming shared with the decorator pattern) that allows the interface of an existing class to be used as another interface.
 
-> Summary : Allows the use of an existing class with an incompatible interface by creating an adapter class that translates the communication between them.
+> Summary  The adapter pattern facilitates the integration of existing classes with incompatible interfaces into a system by creating an adapter class. This adapter acts as a translator, converting calls between the incompatible interface of the existing class (adaptee) and the desired target interface required by the client code.
 
 **Simple and understandable explanation:**
 
@@ -114,3 +114,11 @@ The client receives the results of the call, remaining unaware of the adapter’
     * **Scenario**: When introducing adapters leads to ambiguity or confusion in the overall system architecture.
     * **Reason:** If the presence of adapters makes the system design less clear or harder to understand, it may be worthwhile to explore alternative solutions that offer a clearer design.
 > [Source](https://www.geeksforgeeks.org/adapter-pattern/)
+
+
+## Example Code:
+- [Ts]()
+- [js]()
+- [java]()
+- [Go]()
+- [Py]()
