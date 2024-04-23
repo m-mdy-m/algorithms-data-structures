@@ -2,7 +2,7 @@
 
 In software engineering, the adapter pattern is a software design pattern (also known as wrapper, an alternative naming shared with the decorator pattern) that allows the interface of an existing class to be used as another interface.
 
-> Summary : Responsible for joining independent relationship functions with incompatible
+> Summary : Allows the use of an existing class with an incompatible interface by creating an adapter class that translates the communication between them.
 
 **Simple and understandable explanation:**
 
