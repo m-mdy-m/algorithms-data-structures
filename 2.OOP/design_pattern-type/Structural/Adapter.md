@@ -69,3 +69,48 @@ Sometimes it’s even possible to create a two-way adapter that can convert the 
 ![](https://refactoring.guru/images/patterns/diagrams/adapter/solution-en.png?id=5f4f1b4575236a3853f274b690bd6656)
 
 Let’s get back to our stock market app. To solve the dilemma of incompatible formats, you can create XML-to-JSON adapters for every class of the analytics library that your code works with directly. Then you adjust your code to communicate with the library only via these adapters. When an adapter receives a call, it translates the incoming XML data into a JSON structure and passes the call to the appropriate methods of a wrapped analytics object.
+
+
+## How Adapter Design Pattern works?
+1. Client Request:
+The client initiates a request by calling a method on the adapter using the target interface.
+2. Adapter Translation:
+The adapter translates or maps the client’s request into a form that the adaptee understands, using the adaptee’s interface.
+3. Adaptee Execution:
+The adaptee performs the actual work based on the translated request from the adapter.
+4. Result to Client:
+The client receives the results of the call, remaining unaware of the adapter’s presence or the specific details of the adaptee.
+
+## Why do we need Adapter Design Pattern?
+1. **Integration of Existing Code:**
+    - **Scenario**: When you have existing code or components with interfaces that are incompatible with the interfaces expected by     new code or systems.
+    - **Need**: The Adapter pattern allows you to integrate existing components seamlessly into new systems without modifying their original code.
+2. **Reuse of Existing Functionality:**
+    * **Scenario**: When you want to reuse classes or components that provide valuable functionality but don’t conform to the desired   interface.
+    * **Need**: The Adapter pattern enables you to reuse existing code by creating an adapter that makes it compatible with the interfaces expected by new code.
+3. **Interoperability**:
+    * **Scenario**: When you need to make different systems or components work together, especially when they have different    interfaces.
+    * **Need**: The Adapter pattern acts as a bridge, allowing systems with incompatible interfaces to collaborate effectively.
+4. Client-Server Communication:
+    - **Scenario**: When building client-server applications, and the client expects a specific interface while the server provides a   different one.
+    - **Need**: Adapters help in translating requests and responses between client and server, ensuring smooth communication despite    interface differences.
+5. Third-Party Library Integration:
+    - **Scenario**: When incorporating third-party libraries or APIs into a project, and their interfaces do not match the rest of the  system.
+    - **Need**: Adapters make it possible to use external components by providing a compatible interface for the rest of the application.
+## When not to use Adapter Design Pattern?
+1. When Interfaces Are Stable:
+    * **Scenario**: If the interfaces of the existing system and the new system are stable and not expected to change frequently.
+    * **Reason:** Adapters are most beneficial when dealing with evolving or incompatible interfaces. If the interfaces are stable, the overhead of maintaining adapters might outweigh the benefits.
+2. When Direct Modification Is Feasible:
+    * **Scenario**: If you have control over the source code of the existing system, and it’s feasible to directly modify its interface to match the target interface.
+    * **Reason:** If you can modify the existing code, direct adaptation of interfaces might be a simpler and more straightforward solution than introducing adapters.
+3. When Performance is Critical:
+    * **Scenario**: In performance-critical applications where the overhead introduced by the Adapter pattern is not acceptable.
+    * **Reason:** Adapters may introduce a level of indirection and abstraction, which could have a minor impact on performance. In situations where every bit of performance matters, the Adapter pattern might not be the best choice.
+4. When Multiple Adapters Are Required:
+    * **Scenario**: If a system requires numerous adapters for various components, and the complexity of managing these adapters becomes overwhelming.
+    * **Reason:** Managing a large number of adapters might lead to increased complexity and maintenance challenges. In such cases, reconsider the overall design or explore alternatives.
+5. When Adapters Introduce Ambiguity:
+    * **Scenario**: When introducing adapters leads to ambiguity or confusion in the overall system architecture.
+    * **Reason:** If the presence of adapters makes the system design less clear or harder to understand, it may be worthwhile to explore alternative solutions that offer a clearer design.
+> [Source](https://www.geeksforgeeks.org/adapter-pattern/)
