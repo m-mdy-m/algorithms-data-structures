@@ -116,7 +116,6 @@ The last decorator in the stack would be the object that the client actually wor
 
 We could apply the same approach to other behaviors such as formatting messages or composing the recipient list. The client can decorate the object with any custom decorators, as long as they follow the same interface as the others.
 
-
 ## How to Implement:
 
 **Preparation:**
