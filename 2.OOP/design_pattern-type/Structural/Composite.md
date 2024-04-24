@@ -1,6 +1,8 @@
 # Composite
 The Composite Design Pattern is a structural design pattern that lets you compose objects into tree-like structures to represent part-whole hierarchies. It allows clients to treat individual objects and compositions of objects uniformly. In other words, whether dealing with a single object or a group of objects (composite), clients can use them interchangeably.
 
+> Summary: 
+
 **What problems can the Composite design pattern solve?**
 
 * A part-whole hierarchy should be represented so that clients can treat part and whole objects uniformly.
@@ -129,4 +131,9 @@ The Composite Design Pattern shines when you need your application to treat indi
 - Implementing the add/remove methods in the interface allows the client to treat all elements equally when composing the tree structure, but it also forces empty implementations in the `Leaf` class. This is a trade-off to consider based on your specific needs.
 - The specific methods defined in the `Component` interface and their implementations in the `Leaf` and `Composite` classes will depend on the functionality required by your application.
 
-By following these steps and carefully considering the trade-offs involved, you can effectively implement the Composite Design Pattern to create flexible and reusable object hierarchies in your object-oriented code.
+## Example ->
+- [Ts]()
+- [Js]()
+- [Py]()
+- [java]()
+- [Go]()
