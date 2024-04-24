@@ -27,10 +27,10 @@ class Milk extends CondimentDecorator {
   constructor(beverage: Beverage) {
     super(beverage);
   }
-  getCost(): number {
+  override getCost(): number {
     return this.beverage.getCost() + 0.5;
   }
-  getDescription(): string {
+  override getDescription(): string {
     return this.beverage.getDescription() + "MILk";
   }
 }
@@ -38,10 +38,10 @@ class Sugar extends CondimentDecorator {
   constructor(beverage: Beverage) {
     super(beverage);
   }
-  getCost(): number {
+  override getCost(): number {
     return this.beverage.getCost() + 0.25;
   }
-  getDescription(): string {
+  override getDescription(): string {
     return this.beverage.getDescription() + "Sugar";
   }
 }
