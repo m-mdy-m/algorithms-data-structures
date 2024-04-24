@@ -8,6 +8,8 @@ The bridge pattern is a design pattern used in software engineering that is mean
 * **Maintainability:** Change abstraction or implementations independently.
 * **Reusability:** Well-defined abstractions promote code reuse.
 * **Testability:** Focus on abstraction behavior simplifies testing.
+
+
 **Simple and understandable explanation:**
 
 Imagine you're building a remote control for different devices (TV, sound system, etc.). Ideally, you don't want to redesign the entire remote every time you encounter a new device. 
@@ -95,3 +97,11 @@ Following this approach, we can extract the color-related code into its own clas
 * **Straightforward Implementations:**  For scenarios with simple and unlikely-to-change implementation details, the Bridge pattern might introduce unnecessary complexity. A more direct approach, where the abstraction and implementation are intertwined, might be more suitable.
 * **Limited Implementation Landscape:**  If a system has a fixed set of implementations with no foreseeable expansion, the Bridge pattern might add overhead for minimal benefit. A simpler approach that directly incorporates the known implementations might be sufficient.
 * **Performance-Critical Systems:**  In situations where performance is paramount, the Bridge pattern can introduce a slight overhead due to the additional layer of abstraction and delegation. Carefully weigh the benefits of flexibility against potential performance implications before employing the Bridge pattern.
+
+
+### Example 
+- [Ts]()
+- [Js]()
+- [Py]()
+- [Go]()
+- [Java]()
