@@ -167,6 +167,7 @@ Welcome to my learning repository! This repository is dedicated to my journey of
 > Sites with ⭐ represent the most used
 
  - [wikipedia](https://en.wikipedia.org)(⭐)
+ - [refactoring](https://refactoring.guru/design-patterns) (⭐)
  - [MDN](https://developer.mozilla.org)
  - [GeeksforGeeks](https://www.geeksforgeeks.org)(⭐)
  - [educative](https://www.educative.io)
