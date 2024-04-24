@@ -170,9 +170,9 @@ The decorator pattern can work alongside the Facade pattern to create more power
 
 
 ### Example 
-- [Ts]()
-- [Js]()
-- [C++]()
-- [Java]()
-- [Py]()
-- [Go]()
+- [Ts](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Structural/Decorator/Decorator.ts)
+- [Js](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Structural/Decorator/Decorator.js)
+- [C++](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Structural/Decorator/Decorator.cpp)
+- [Java](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Structural/Decorator/Decorator.java)
+- [Py](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Structural/Decorator/Decorator.py)
+- [Go](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Structural/Decorator/Decorator.go)
