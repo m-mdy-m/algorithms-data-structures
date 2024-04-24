@@ -1,0 +1,3 @@
+- Add Relations other Pattern
+- Add Pseudo code 
+- Add static structure

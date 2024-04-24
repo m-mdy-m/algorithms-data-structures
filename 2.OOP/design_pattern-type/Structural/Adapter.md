@@ -20,7 +20,7 @@ This is analogous to how the adapter pattern works in software design. It allows
 * How can classes that have incompatible interfaces work together?
 * How can an alternative interface be provided for a class?
 
-The adapter design pattern describes how to solve such problems:
+**The adapter design pattern describes how to solve such problems:**
 
 * Define a separate adapter class that converts the (incompatible) interface of a class (adaptee) into another interface (target) clients require.
 * Work through an adapter to work with (reuse) classes that do not have the required interface.
