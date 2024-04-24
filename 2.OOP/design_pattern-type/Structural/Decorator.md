@@ -6,17 +6,37 @@ In object-oriented programming, the decorator pattern is a design pattern that a
 
 > Summary: Decorator is a structural design pattern that lets you attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors.
 
-**What problems can it solve?**
+**Components:**
 
-* Responsibilities should be added to (and removed from) an object dynamically at run-time.
-* A flexible alternative to subclassing for extending functionality should be provided.
+* **Component:** This is the core object whose functionality you want to extend. It defines the interface that decorators will interact with.
+* **Decorator:** This is the wrapper object that adds behavior to the component. It inherits from or composes the component interface and potentially adds its own functionalities. The decorator can intercept calls to the component and modify them or add entirely new behavior before or after delegating the call to the component. 
+* **ConcreteComponent:** This is a concrete implementation of the component interface. 
+* **ConcreteDecorator:** This is a concrete implementation of the decorator that adds specific functionalities to the component. 
 
-**What solution does it describe?**
+**Benefits:**
 
-* implement the interface of the extended (decorated) object (Component) transparently by forwarding all requests to it
-* perform additional functionality before/after forwarding a request.
+* **Flexibility:** You can dynamically add or remove functionalities from objects at runtime. This allows you to create customized behavior for specific objects without modifying the original class.
+* **Maintainability:** The core functionality of the original object remains untouched, making it easier to understand and maintain.
+* **Open/Closed Principle Adherence:** New functionalities can be added through decorators without modifying the existing class, following the Open-Closed principle.
+* **Single Responsibility Principle Adherence:** By separating concerns into smaller decorator classes, you can adhere to the Single Responsibility Principle, making the code more modular and easier to reason about.
+* **Efficiency:** Compared to subclassing, decorators can be more efficient. You don't need to create a whole new object hierarchy just to add specific functionalities.
+
+**Problems Addressed by the Decorator Pattern:**
+
+* **Dynamic Responsibility Attachment/Removal:** The decorator pattern excels at situations where you need to add or remove functionalities from objects at runtime. This is particularly useful when the specific behavior variations are unknown beforehand or when the decision to apply a particular functionality is context-dependent. Subclassing, on the other hand, requires defining new classes for each variation, leading to a rigid and potentially bloated class hierarchy.
+
+* **Limited Subclassing Flexibility:** Subclassing can become cumbersome when you have a large number of potential functionalities to add. Every combination of functionalities would necessitate a new subclass, leading to an explosion of classes and potential naming conflicts. The decorator pattern provides a more flexible alternative by allowing you to create independent decorators that can be freely combined to achieve the desired behavior.
+
+**Solutions Provided by the Decorator Pattern:**
+
+* **Transparent Interface Forwarding:** Decorators act as wrappers around the core object (component) and implement the same interface. This ensures seamless integration with existing code that interacts with the component. When a method is called on the decorated object, the decorator can transparently forward the call to the component, effectively preserving the original behavior.
+
+* **Flexible Behavior Modification:** Decorators have the power to intercept method calls directed to the component. This interception point allows decorators to perform additional tasks before or after delegating the call to the component. They can modify the arguments passed to the component, alter the return value, or even completely suppress the call. This flexibility empowers you to inject new functionalities into the object's behavior dynamically.
+
+**In essence, the decorator pattern addresses the challenges of statically defined object behavior through dynamic and modular manipulation. It allows you to create a collection of reusable decorators that can be combined to tailor an object's behavior to specific requirements at runtime.**
 
 ## Example Problem :
+> [`Source`](https://refactoring.guru/design-patterns/decorator)
 
 Imagine that you’re working on a notification library which lets other programs notify their users about important events.
 
@@ -40,20 +60,50 @@ You have to find some other way to structure notifications classes so that their
 
 ## Solution
 
+Extending a class is the first thing that comes to mind when you need to alter an object’s behavior. However, inheritance has several serious caveats that you need to be aware of.
 
+- Inheritance is static. You can’t alter the behavior of an existing object at runtime. You can only replace the whole object with another one that’s created from a different subclass.
+- Subclasses can have just one parent class. In most languages, inheritance doesn’t let a class inherit behaviors of multiple classes at the same time.
+One of the ways to overcome these caveats is by using Aggregation or Composition  instead of Inheritance. Both of the alternatives work almost the same way: one object has a reference to another and delegates it some work, whereas with inheritance, the object itself is able to do that work, inheriting the behavior from its superclass.
+
+With this new approach you can easily substitute the linked “helper” object with another, changing the behavior of the container at runtime. An object can use the behavior of various classes, having references to multiple objects and delegating them all kinds of work. Aggregation/composition is the key principle behind many design patterns, including Decorator. On that note, let’s return to the pattern discussion.
+
+![](https://refactoring.guru/images/patterns/diagrams/decorator/solution1-en.png?id=468e68f1e9ae21649d63dd454500741d)
+
+“Wrapper” is the alternative nickname for the Decorator pattern that clearly expresses the main idea of the pattern. A wrapper is an object that can be linked with some target object. The wrapper contains the same set of methods as the target and delegates to it all requests it receives. However, the wrapper may alter the result by doing something either before or after it passes the request to the target.
+
+When does a simple wrapper become the real decorator? As I mentioned, the wrapper implements the same interface as the wrapped object. That’s why from the client’s perspective these objects are identical. Make the wrapper’s reference field accept any object that follows that interface. This will let you cover an object in multiple wrappers, adding the combined behavior of all the wrappers to it.
+
+In our notifications example, let’s leave the simple email notification behavior inside the base `Notifier` class, but turn all other notification methods into decorators.
+
+![](https://refactoring.guru/images/patterns/diagrams/decorator/solution2.png?id=cbee4a27080ce3a0bf773482613e1347)
+
+The client code would need to wrap a basic notifier object into a set of decorators that match the client’s preferences. The resulting objects will be structured as a stack.
+
+![](https://refactoring.guru/images/patterns/diagrams/decorator/solution3-en.png?id=b7e2e2036435265350ba0c6796162ab5)
+
+The last decorator in the stack would be the object that the client actually works with. Since all decorators implement the same interface as the base notifier, the rest of the client code won’t care whether it works with the “pure” notifier object or the decorated one.
+
+We could apply the same approach to other behaviors such as formatting messages or composing the recipient list. The client can decorate the object with any custom decorators, as long as they follow the same interface as the others.
 
 
 ## How to Implement:
-- Make sure your business domain can be represented as a primary component with multiple optional layers over it.
+**Preparation:**
 
-- Figure out what methods are common to both the primary component and the optional layers. Create a component interface and declare those methods there.
+1. **Identify the Core and Optional Layers:** Analyze your problem domain and identify the core functionality (the "primary component"). Then, recognize the additional functionalities (like notification channels) that can be layered on top of the core, making them optional.
 
-- Create a concrete component class and define the base behavior in it.
+2. **Define the Common Interface:** Extract the methods shared by both the core component and the optional layers (decorators). This shared functionality becomes the foundation of a component interface.
 
-- Create a base decorator class. It should have a field for storing a reference to a wrapped object. The field should be declared with the component interface type to allow linking to concrete components as well as decorators. The base decorator must delegate all work to the wrapped object.
+**Building the Blocks:**
 
-- Make sure all classes implement the component interface.
+3. **Concrete Component:** Create a class that implements the component interface and defines the base behavior of sending notifications (e.g., `EmailNotifier`).
 
-- Create concrete decorators by extending them from the base decorator. A concrete decorator must execute its behavior before or after the call to the parent method (which always delegates to the wrapped object).
+4. **Base Decorator:** This class acts as a blueprint for all decorators. It will have a field that holds a reference to a wrapped object (of the component interface type) to allow attaching decorators to the core component or other decorators. This base decorator's primary function is to delegate all work to the wrapped object, ensuring the core functionality remains intact.
 
-- The client code must be responsible for creating decorators and composing them in the way the client needs.
+5. **Ensuring Interface Consistency:** All classes in this design (component, decorators) should implement the component interface to ensure compatibility.
+
+6. **Concrete Decorators:** Create specific decorator classes (e.g., `SMSDecorator`, `SlackDecorator`) that inherit from the base decorator. These decorators will implement additional functionalities like adding SMS or Slack notifications, potentially modifying messages or performing actions before or after delegating the call to the wrapped object.
+
+**Client-Side Usage:**
+
+7. **Client Responsibility:** Client programs are responsible for creating decorators and arranging them in the desired order to achieve the required notification behavior. For instance, the client might create an `EmailNotifier`, wrap it with an `SMSDecorator`, and then further wrap it with a `SlackDecorator` to enable notifications through all three channels.
