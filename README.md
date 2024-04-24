@@ -19,7 +19,6 @@ As you solidify your knowledge base, you'll be prepared to tackle more advanced 
 
 The learning journey is meticulously organized into difficulty levels: Beginner, Intermediate, Advanced, and Expert. Each level offers a curated list of topics with resources and progress tracking to keep you focused and on track.
 
-
 **A Wealth of Learning Resources**
 
 A comprehensive list of trusted learning resources awaits you, featuring highly regarded websites such as Wikipedia, Refactoring Guru, MDN, and GeeksforGeeks. Explore articles, tutorials, and documentations to find the learning materials that best suit your individual preferences.
