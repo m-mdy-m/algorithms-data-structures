@@ -144,8 +144,8 @@ Here's a table summarizing the key differences:
 
 
 ### Example 
-- [Ts]()
-- [Js]()
-- [Py]()
-- [Go]()
-- [Java]()
+- [Ts](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Structural/Bridge/Bridge.ts)
+- [Js](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Structural/Bridge/Bridge.js)
+- [Py](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Structural/Bridge/Bridge.py)
+- [Go](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Structural/Bridge/Bridge.go)
+- [Java](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Structural/Bridge/Bridge.java)
