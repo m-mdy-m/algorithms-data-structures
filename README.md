@@ -202,6 +202,7 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
  - [boardinfinity](https://www.boardinfinity.com)
  - [baeldung](https://www.baeldung.com)
  - [dev.to](https://dev.to)(⭐)
+ - [tutorialspoint](https://www.tutorialspoint.com/design_pattern)
 
 
 ## Project
