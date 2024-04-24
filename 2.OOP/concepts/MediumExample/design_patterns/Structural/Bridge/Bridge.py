@@ -1,31 +1,42 @@
-class red_circle:
-    def __init__(self):
+from abc import ABC,abstractmethod
+class Shape(ABC):
+    @abstractmethod
+    def draw(self)->str:
         pass
-    def draw(self):
-        return "Drawing a red circle"
-class blue_square:
-    def __init__(self):
-        pass
-    def draw(self):
-        return "Drawing a blue square"
+class RedCircle(Shape):
+  """Implementation for drawing a red circle"""
+  def draw(self) -> str:
+    return "Drawing a red circle"
+
+class BlueSquare(Shape):
+  """Implementation for drawing a blue square"""
+  def draw(self) -> str:
+    return "Drawing a blue square"
 
 def create_shape(shape_type):
-    if(shape_type=='red-circle'):
-        return red_circle()
-    else:
-        return  blue_square()
+  """Factory function to create shapes"""
+  if shape_type == "red-circle":
+    return RedCircle()
+  elif shape_type == "blue-square":
+    return BlueSquare()
+  else:
+    raise ValueError(f"Unsupported shape type: {shape_type}")
 
 class Drawing:
-    def __init__(self,shape):
-        self.shape = shape
-    def render(self):
-        return self.shape.draw()
+  """Abstraction for drawing shapes"""
+  def __init__(self, shape: Shape):
+    self.shape = shape
 
-redCircle = create_shape("red-circle")
-blueSquare = create_shape('blue-square')
+  def render(self) -> str:
+    """Delegates drawing to the specific shape implementation"""
+    return self.shape.draw()
 
-redDrawing = Drawing(redCircle)
-print("Red Circle says :",redDrawing.render())
+# Usage
+red_circle = create_shape("red-circle")
+blue_square = create_shape("blue-square")
 
-blueDrawing = Drawing(blueSquare)
-print("Blue Square says : ", blueDrawing.render())
+red_drawing = Drawing(red_circle)
+print(red_drawing.render())  # Output: Drawing a red circle
+
+blue_drawing = Drawing(blue_square)
+print(blue_drawing.render())  # Output: Drawing a blue square
