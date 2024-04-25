@@ -42,8 +42,8 @@ When you need to access a cell `T[k]`:
 
 
 ### Example
-- [Ts](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Lazy-initialization/Lazy-initialization.ts)
-- [Js](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Lazy-initialization/Lazy-initialization.js)
-- [Go](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Lazy-initialization/Lazy-initialization.go)
-- [Java](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Lazy-initialization/Lazy-initialization.java)
-- [Py](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Lazy-initialization/Lazy-initialization.py)
+- [Ts](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Lazy-initialization/Lazy-initialization.ts)
+- [Js](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Lazy-initialization/Lazy-initialization.js)
+- [Go](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Lazy-initialization/Lazy-initialization.go)
+- [Java](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Lazy-initialization/Lazy-initialization.java)
+- [Py](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Lazy-initialization/Lazy-initialization.py)

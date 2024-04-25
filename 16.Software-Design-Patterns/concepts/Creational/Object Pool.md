@@ -142,8 +142,8 @@ While the object pool design pattern offers performance benefits, there are situ
 - **Memory Constraints:** In scenarios with limited memory availability, avoiding unnecessary object creation through pooling can be beneficial.
 
 ## Example
-- [Ts](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Object-Pool/Object-Pool.ts)
-- [Go](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Object-Pool/Object-Pool.go)
-- [Js](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Object-Pool/Object-Pool.js)
-- [Py](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Object-Pool/Object-Pool.py)
-- [Java](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Object-Pool/Object-Pool.java)
+- [Ts](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Object-Pool/Object-Pool.ts)
+- [Go](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Object-Pool/Object-Pool.go)
+- [Js](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Object-Pool/Object-Pool.js)
+- [Py](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Object-Pool/Object-Pool.py)
+- [Java](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Object-Pool/Object-Pool.java)

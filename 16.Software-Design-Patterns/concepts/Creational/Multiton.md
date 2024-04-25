@@ -49,8 +49,8 @@ While it may appear that the multiton is a hash table with synchronized access t
 - **Global State is Acceptable:** If global access to a single instance suffices and context-dependent instances are not needed, the traditional Singleton Pattern might be sufficient, avoiding the added complexity of the Multiton.
 
 ### Example 
-- [TS]()
-- [Js]()
-- [Py]()
-- [JAVA]()
-- [Go]()
+- [TS](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Multiton/Multiton.ts)
+- [Js](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Multiton/Multiton.js)
+- [Py](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Multiton/Multiton.py)
+- [JAVA](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Multiton/Multiton.java)
+- [Go](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Multiton/Multiton.go)
