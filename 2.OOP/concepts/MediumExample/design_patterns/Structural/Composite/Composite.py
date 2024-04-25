@@ -1,5 +1,5 @@
 from abc import ABC,abstractmethod
-class Component:
+class Component(ABC):
     def __init__(self,name):
         self.name = name
     @abstractmethod
