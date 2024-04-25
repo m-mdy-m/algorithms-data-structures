@@ -216,9 +216,7 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
    >* [Character Creator with Abstract Factory (or Singleton Pattern)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/Projects/OOP/Design-Pattern/Creational/Character-Creato)
    ---
    #### **Structural**:
-   1. 
-   2. 
-   3. 
+   > [Image Editor]() -> [description](Projects/OOP/Design-Pattern/Structural)
    #### **Behavioral**:
    1.
    2.
