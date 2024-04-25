@@ -12,35 +12,42 @@ Understanding this state separation is crucial for the Flyweight pattern. By sha
 
 ![](https://miro.medium.com/v2/resize:fit:640/format:webp/0*442VyQ8IMnbkaXmY.png)
 
-### Key Features of the Flyweight Design Pattern:
-1. **Flyweight Factory**: The flyweight factory manages and creates flyweight objects. It ensures that flyweight objects are shared and reused across multiple clients.
-2. **Flyweight Interface**: The flyweight interface defines the methods that flyweight objects must implement. It includes operations that can be shared and executed by multiple objects.
-3. **Concrete Flyweight**: The concrete flyweight class represents the shared flyweight object. It stores the intrinsic state and provides an implementation for shared operations.
-4. **Client**: The client represents the context in which flyweight objects are used. It stores the extrinsic state and interacts with the flyweight objects through the flyweight factory.
+## Key Features of the Flyweight Design Pattern:
 
+1. **Flyweight Factory (Manages Sharing):** The flyweight factory is the central hub for managing and creating flyweight objects. It ensures that flyweight objects are shared and reused across multiple clients. This often involves checking if a suitable flyweight object with the desired intrinsic state already exists before creating a new one.
+2. **Flyweight Interface (Defines Shared Behavior):**  The flyweight interface defines the methods that flyweight objects must implement. It includes operations that can be shared and executed by multiple objects. (In some simpler cases, the Flyweight Interface might be optional).
+3. **Concrete Flyweight (Stores Intrinsic State):**  The concrete flyweight class represents the shared flyweight object. It stores the intrinsic state and provides an implementation for the shared operations defined in the Flyweight Interface (or directly within the class if no interface exists).
+4. **Client (Uses Flyweight Objects):**  The client represents the context in which flyweight objects are used. It stores the extrinsic state and interacts with the flyweight objects through the flyweight factory. 
 
-### What problems can the Flyweight design pattern solve?
-### What problems can the Flyweight design pattern solve?
 ### Simple and understandable explanation:
 ## Example Problem:
 
-To have some fun after long working hours, you decided to create a simple video game: players would be moving around a map and shooting each other. You chose to implement a realistic particle system and make it a distinctive feature of the game. Vast quantities of bullets, missiles, and shrapnel from explosions should fly all over the map and deliver a thrilling experience to the player.
+Imagine you're developing a rich text editor that allows users to format text with various fonts, sizes, and colors. As users type and apply formatting, the editor creates numerous text objects, each encapsulating the character data, font style, size, and color information.
 
-Upon its completion, you pushed the last commit, built the game and sent it to your friend for a test drive. Although the game was running flawlessly on your machine, your friend wasn’t able to play for long. On his computer, the game kept crashing after a few minutes of gameplay. After spending several hours digging through debug logs, you discovered that the game crashed because of an insufficient amount of RAM. It turned out that your friend’s rig was much less powerful than your own computer, and that’s why the problem emerged so quickly on his machine.
+This approach seems straightforward, but consider a scenario where a user is writing a lengthy document with frequent formatting changes. Here's where the problem arises:
 
-The actual problem was related to your particle system. Each particle, such as a bullet, a missile or a piece of shrapnel was represented by a separate object containing plenty of data. At some point, when the carnage on a player’s screen reached its climax, newly created particles no longer fit into the remaining RAM, so the program crashed.
+* **Memory Inefficiency:** Every new formatted text segment creates a new object, storing duplicate font, size, and color data for each instance. This redundancy can lead to significant memory consumption, especially for large documents.
+* **Performance Impact:** As the number of text objects grows, memory management becomes more demanding. Frequent object creation and potential garbage collection can introduce performance slowdowns, affecting the user experience.
+
+These memory and performance issues can become bottlenecks as the document size and complexity increase.
+
 
 ### Solution:
 
-On closer inspection of the Particle class, you may notice that the color and sprite fields consume a lot more memory than other fields. What’s worse is that these two fields store almost identical data across all particles. For example, all bullets have the same color and sprite.
+The Flyweight Design Pattern offers an elegant solution to this challenge:
 
-Other parts of a particle’s state, such as coordinates, movement vector and speed, are unique to each particle. After all, the values of these fields change over time. This data represents the always changing context in which the particle exists, while the color and sprite remain constant for each particle.
+1. **Flyweight Objects:** We define flyweight objects that encapsulate the intrinsic state of formatted text - font style, size, and color. These objects are lightweight as they share this common data.
+2. **Flyweight Factory:**  A Flyweight Factory acts as a central hub for managing flyweight objects. It maintains a pool of existing flyweight objects with different formatting combinations. When a new formatted text segment is created, the client (the rich text editor) requests the appropriate formatting from the Flyweight Factory.
+3. **Client and Extrinsic State:** The client (rich text editor) stores the extrinsic state, which is the actual text content of each segment. It interacts with the Flyweight Factory to obtain flyweight objects representing the desired formatting. The client then associates the retrieved flyweight object with the text content, creating a formatted text segment.
 
-This constant data of an object is usually called the intrinsic state. It lives within the object; other objects can only read it, not change it. The rest of the object’s state, often altered “from the outside” by other objects, is called the extrinsic state.
+By leveraging flyweight objects, we achieve significant memory savings:
 
-The Flyweight pattern suggests that you stop storing the extrinsic state inside the object. Instead, you should pass this state to specific methods which rely on it. Only the intrinsic state stays within the object, letting you reuse it in different contexts. As a result, you’d need fewer of these objects since they only differ in the intrinsic state, which has much fewer variations than the extrinsic.
+* **Shared Intrinsic State:**  Multiple text segments can reference the same flyweight object for identical formatting, eliminating duplicate storage of font, size, and color data.
+* **Reduced Object Creation:** The Flyweight Factory manages a pool of existing flyweight objects, minimizing the need for frequent object creation.
 
-Let’s return to our game. Assuming that we had extracted the extrinsic state from our particle class, only three different objects would suffice to represent all particles in the game: a bullet, a missile, and a piece of shrapnel. As you’ve probably guessed by now, an object that only stores the intrinsic state is called a flyweight.
+This approach not only reduces memory consumption but also potentially improves performance by minimizing object creation overhead. The Flyweight Factory efficiently retrieves existing flyweight objects or creates new ones only when necessary.
+
+In essence, the Flyweight Design Pattern transforms memory-hungry formatted text objects into a lightweight and efficient representation, enhancing the overall performance and scalability of the rich text editor.
 
 ## How does the Flyweight Design Pattern work?
  
