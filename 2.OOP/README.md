@@ -70,6 +70,8 @@
 
 ### Medium:
 
+> !! Before viewing and reading the medium section, please finish the simple section !!
+
 1. **[Overriding and Overloading](concepts/Medium/1.OverridingAndOverloading.md)**
 
 2. **[Constructors and Destructors](concepts/Medium/2.ConstructorsAndDestructors.md)**
