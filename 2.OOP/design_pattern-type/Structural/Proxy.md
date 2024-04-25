@@ -1,6 +1,9 @@
 # Proxy
 ## Introduction:
 In computer programming, the proxy pattern is a software design pattern. A proxy, in its most general form, is a class functioning as an interface to something else. The proxy could interface to anything: a network connection, a large object in memory, a file, or some other resource that is expensive or impossible to duplicate. In short, a proxy is a wrapper or agent object that is being called by the client to access the real serving object behind the scenes. Use of the proxy can simply be forwarding to the real object, or can provide additional logic. In the proxy, extra functionality can be provided, for example caching when operations on the real object are resource intensive, or checking preconditions before operations on the real object are invoked. For the client, usage of a proxy object is similar to using the real object, because both implement the same interface.
+
+> Summary : The proxy pattern provides an indirect way to access an object, offering additional control, flexibility, and potential performance improvements for your code. 
+
 ### What problems can the Proxy design pattern solve?
 - The access to an object should be controlled.
 - Additional functionality should be provided when accessing an object.
@@ -9,27 +12,56 @@ In computer programming, the proxy pattern is a software design pattern. A proxy
 - implements additional functionality to control the access to this subject.
 ### Key Features of the Proxy Design Pattern:
 
-1. **Subject:**
+**1. Subject (Interface):**
 
-The Subject is an interface or an abstract class that defines the common interface shared by the RealSubject and Proxy classes. It declares the methods that the Proxy uses to control access to the RealSubject.
-  - Declares the common interface for both RealSubject and Proxy.
-  - Usually includes the methods that the client code can invoke on the RealSubject and the Proxy.
-2. **RealSubject:**
+* The Subject defines the **contract** for interacting with either the real object or the proxy. It acts as a common interface, outlining the operations (methods) that both can perform. This ensures the client code can seamlessly work with either entity.
 
-The RealSubject is the actual object that the Proxy represents. It contains the real implementation of the business logic or the resource that the client code wants to access.
-  - It Implements the operations declared by the Subject interface.
-  - Represents the real resource or object that the Proxy controls access to.
-3. **Proxy:**
+**Summary:** The Subject establishes a standardized way for the client to interact, promoting loose coupling between the client and the concrete implementation details.
 
-The Proxy acts as a surrogate or placeholder for the RealSubject. It controls access to the real object and may provide additional functionality such as lazy loading, access control, or logging.
-  - Implements the same interface as the RealSubject (Subject).
-  - Maintains a reference to the RealSubject.
-   - Controls access to the RealSubject, adding additional logic if necessary.
+**2. RealSubject (Concrete Class):**
+
+* The RealSubject represents the actual object that the proxy controls access to. It encapsulates the core functionality or resource that the client ultimately desires. The RealSubject implements the methods defined in the Subject interface, providing the actual behavior.
+
+**Summary:** The RealSubject embodies the desired functionality or resource, shielded by the proxy for controlled access.
+
+**3. Proxy (Concrete Class):**
+
+* The Proxy acts as a **surrogate** for the RealSubject. It provides the same interface as the Subject, allowing the client to interact with it transparently. However, the Proxy can mediate access to the RealSubject, performing additional tasks before or after delegating operations to it. These tasks might include security checks, caching results, or lazy loading the RealSubject to optimize performance.
+
+**Summary:** The Proxy sits between the client and the RealSubject, offering a controlled access point and potentially enriching the interaction with additional functionalities.
 
 ### Simple and understandable explanation:
 
-////
+**Imagine visiting a high-security building to access a valuable document.**
 
+* **Client:** You, needing access to the document.
+* **RealSubject:** The sensitive document itself, stored in a secure location.
+* **Proxy:** The security guard stationed at the document vault.
+
+**Why does the building have security guards (proxies)?**
+
+* **Strict Access Control:** The guard verifies your identity and authorization before allowing entry to the vault (access control). They might also log your access attempt for security purposes.
+* **Additional Functionality:** The guard might prepare the document for your review in a designated secure area or offer redacted copies if certain sections are confidential (additional functionalities).
+
+**Benefits of using a security guard (proxy):**
+
+* **Enhanced Security:** The guard ensures only authorized individuals access the document, protecting its confidentiality and integrity.
+* **Simplified Interaction:** You don't need to navigate the secure facility yourself, streamlining the process.
+
+**Beyond Security:**
+
+The Proxy pattern extends beyond access control. Imagine a large online store where product images are stored remotely. A proxy server could act as an intermediary:
+
+* **Client:** The user's web browser requesting product images.
+* **RealSubject:** The remote server where the high-resolution images are stored.
+* **Proxy:** A local server that caches frequently accessed images.
+
+**Benefits of using a proxy server:**
+
+* **Improved Performance:** The proxy server can deliver cached images much faster than fetching them from the remote server every time, enhancing user experience.
+* **Reduced Load:** By handling image requests locally, the proxy server lessens the burden on the remote server, improving overall system scalability.
+
+The Proxy design pattern offers a versatile approach to object interaction. It provides a layer of control, potentially streamlines processes, and can even enhance performance by adding functionalities like caching. This makes it a valuable tool for building flexible and secure software systems.
 
 ## Example Problem:
 
@@ -62,6 +94,7 @@ But what’s the benefit? If you need to execute something either before or afte
 - Remote Object Interaction:
     - Use a proxy when dealing with distributed systems and you want to interact with objects located in different addresses or systems.
     - The proxy can handle the communication details, making remote object interaction more seamless.
+
 ## When not to use Proxy Design Pattern?
 
 **Overhead for Simple Operations:** Avoid using a proxy for simple objects or operations that don’t involve resource-intensive tasks. Introducing a proxy might add unnecessary complexity in such cases.
@@ -70,21 +103,21 @@ But what’s the benefit? If you need to execute something either before or afte
 **When Access Control Isn’t Needed:** If there are no access control requirements and the client code can directly interact with the real object without any restrictions.
 **When Eager Loading is Acceptable:** If eager loading of objects is acceptable and doesn’t affect the performance of the system, introducing a proxy for lazy loading might be unnecessary.
 
-## How does the Proxy Design Pattern work?
-
-///
-
 ## Structure:
 
 ![](https://refactoring.guru/images/patterns/diagrams/proxy/structure.png?id=f2478a82a84e1a1e512a8414bf1abd1c)
 
-## Advantages of the Proxy Design Pattern
+## Advantages of the Proxy Design Pattern:
 
-///
+* **Increased Control:**  The proxy acts as a gatekeeper, allowing you to regulate access to the real object. You can implement security checks, enforce permissions, or introduce logging for access attempts.
+* **Enhanced Functionality:**  The proxy sits between the client and the real object, enabling you to intercept interactions and add extra logic. This could involve caching results, performing validations before passing requests on, or even lazy loading the real object for performance optimization.
+* **Improved Flexibility:**  The client code interacts with the proxy using the same interface as the real object. This allows you to easily swap implementations or introduce new functionalities in the proxy later without modifying the client code. It promotes loose coupling between the client and the concrete implementation.
+* **Potential Performance Gains:**  By caching results or lazy loading the real object, the proxy can streamline interactions and improve overall performance, especially if the real object is expensive to create or access.
 
-## Disadvantages of the Proxy Design Pattern
-
-///
+## Disadvantages of the Proxy Design Pattern:
+* **Increased Complexity:**  Introducing an additional layer of abstraction can make your code more complex, especially for simpler scenarios. You might end up writing more code to handle the proxy logic.
+* **Potential Bottleneck:**  If not implemented carefully, the proxy can become a bottleneck in your system. The additional layer of indirection might introduce overhead, especially for frequent interactions. 
+* **Obscured Functionality:**  The proxy can sometimes mask the behavior of the real object. This can make debugging issues more challenging as errors might not be readily apparent in the client code.
 
 ## How to Implement
 
