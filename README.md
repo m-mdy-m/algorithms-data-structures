@@ -90,7 +90,7 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
 
 15. Dynamic Programming
 
-16. Software Design Patterns
+16. [Software Design Patterns](16.Software-Design-Patterns/)
 
 17. Performance Analysis of Presentations and Objects
 
