@@ -1,5 +1,5 @@
 from abc import ABC,abstractmethod
-class Beverage:
+class Beverage(ABC):
     def __init__(self):
         pass
     @abstractmethod
