@@ -45,9 +45,9 @@ This makes a class independent of how its objects are created. A class may be co
 ![](https://www.c-sharpcorner.com/UploadFile/ankurmalik123/abstract-factory-pattern/Images/Factory%20Pattern.PNG)
 
 ## Example : 
-- [Example Ts](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Abstract/Abstract.ts)
-- [Example JavaScript](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Abstract/Abstract.js)
-- [Example Java](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Abstract/Abstract.java)
+- [Example Ts](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Abstract/Abstract.ts)
+- [Example JavaScript](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Abstract/Abstract.js)
+- [Example Java](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Abstract/Abstract.java)
  **This example was created by ai**
-- [Example Python](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Abstract/Abstract.py)
+- [Example Python](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Abstract/Abstract.py)
 ---

@@ -112,7 +112,7 @@ The Builder design pattern is used when you need to create complex objects with 
 
 ### Example
 
-- [Example Ts](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Builder/Builder.ts)
-- [Example Js](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Builder/Builder.js)
-- [Example Py](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Builder/Builder.py)
-- [Example Java](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Creational/Builder/Builder.java)
+- [Example Ts](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Builder/Builder.ts)
+- [Example Js](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Builder/Builder.js)
+- [Example Py](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Builder/Builder.py)
+- [Example Java](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Creational/Builder/Builder.java)
