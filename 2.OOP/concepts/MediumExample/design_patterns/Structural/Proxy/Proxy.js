@@ -9,6 +9,7 @@ class RealSubject extends Subject {
 
 class ProxyExample extends Subject {
     constructor(realSubject) {
+        super()
         this.realSubject = realSubject;
     }
 
