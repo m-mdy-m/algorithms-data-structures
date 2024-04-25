@@ -27,7 +27,7 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
 
 **Simple:**
 
-1. [Introduction to Algorithms and Problem Solving](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/1.IntroductionToAlgorithmsAndProblemSolving)
+1. [Introduction to Algorithms and Problem Solving](1.IntroductionToAlgorithmsAndProblemSolving/)
 
    - > Only to the extent of introducing the algorithm
 
@@ -35,32 +35,7 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
 
    - [Grokking Algorithms](https://edu.anarcho-copy.org/Algorithm/grokking-algorithms-illustrated-programmers-curious.pdf) - Download
 
-2. [Object-Oriented Programming (OOP)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/2.OOP)
-   - ## Beginner:
-   
-      * > [Class](2.OOP/concepts/Beginner/1-class.md)
-      * > [Object](2.OOP/concepts/Beginner/2-Object.md)
-      * > [Encapsulation](2.OOP/concepts/Beginner/3.Encapsulation.md)
-      * > [Inheritance](2.OOP/concepts/Beginner/4.Inheritance.md)
-      * > [Polymorphism](2.OOP/concepts/Beginner/5.Polymorphism.md)
-      * > [Abstraction](2.OOP/concepts/Beginner/6.Abstraction.md)
-      * > [Association, Aggregation, and Composition](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/Beginner/7.AAC.md)
-      * > [DynamicBinding](2.OOP/concepts/Beginner/8.DynamicBinding.md)
-      * > [MessagePassing](2.OOP/concepts/Beginner/9.MessagePassing.md)
-      * > [Modularity](2.OOP/concepts/Beginner/10.Modularity.md)
-      * > [Cohesion And Coupling](2.OOP/concepts/Beginner/11.CohesionAndCoupling.md)
-      * > [Interfaces And Abstract Classes](2.OOP/concepts/Beginner/12.InterfacesAndAbstractClasses.md)
-      * > [Static And Instance Members](2.OOP/concepts/Beginner/13.StaticAndInstanceMembers.md)
-   - ## Medium:
-      * > [Overriding And Overloading](2.OOP/concepts/Medium/1.OverridingAndOverloading.md)
-      * > [Constructors And Destructors](2.OOP/concepts/Medium/2.ConstructorsAndDestructors.md)
-      * > [Getter And Setter](2.OOP/concepts/Medium/3.GetterAndSetter.md)
-      * > [Access Modifiers](2.OOP/concepts/Medium/4.AccessModifiers.md)
-      * > [Dependency Injection](2.OOP/concepts/Medium/5.DependencyInjection.md)
-      * > [Object-Oriented-Design-Patterns](2.OOP/concepts/Medium/6.Object-Oriented-Design-Patterns.md)
-         - [Introduction Design Patterns](book/An%20Introduction%20to%20Design%20Patterns.pdf)
-         - [Design Patterns : Elements of Reusable Object-Oriented Software](book/Design%20Patterns--Elements%20of%20Reusable%20Object-Oriented%20Software.pdf)
-
+2. [Object-Oriented Programming (OOP)](2.OOP/)
 
 3. Basic Algorithms
 
