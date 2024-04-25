@@ -104,3 +104,11 @@ It's essential to consider whether the facade should assume responsibility for t
 **4. Facade Refinement: Maintaining Modularity (Optional)**
 
 * **Complexity Management:** If the facade class exhibits signs of excessive complexity, a strategic approach should be adopted to enhance its maintainability. This might involve extracting specific functionalities into dedicated facade subclasses. Such a modular approach promotes code clarity and simplifies future maintenance efforts.
+
+
+## Example 
+- [Ts]()
+- [Js]()
+- [Java]()
+- [Go]()
+- [Python]()
