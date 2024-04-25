@@ -167,8 +167,8 @@ But what’s the benefit? If you need to execute something either before or afte
 * **Defer Creation When Possible:** To optimize performance, particularly for scenarios involving expensive real object creation (like objects that require significant resources or complex initialization), consider implementing lazy initialization within the proxy. This approach defers the creation of the real object until it's truly required. The proxy might initially hold a null reference or a placeholder object, and only create the real object when a method is invoked for the first time. This postpones resource allocation until the critical moment, improving application startup time and overall memory usage.
 
 ## Example 
-- [Ts](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Structural/Proxy/Proxy.ts)
-- [Js](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Structural/Proxy/Proxy.js)
-- [Java](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Structural/Proxy/Proxy.java)
-- [Go](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Structural/Proxy/Proxy.go)
-- [Python](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Structural/Proxy/Proxy.py)
+- [Ts](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Structural/Proxy/Proxy.ts)
+- [Js](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Structural/Proxy/Proxy.js)
+- [Java](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Structural/Proxy/Proxy.java)
+- [Go](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Structural/Proxy/Proxy.go)
+- [Python](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/16.Software-Design-Patterns/example/Structural/Proxy/Proxy.py)
