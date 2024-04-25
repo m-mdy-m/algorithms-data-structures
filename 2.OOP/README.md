@@ -70,8 +70,15 @@
 
 ### Medium:
 
-> !! Before viewing and reading the medium section, please finish the simple section !!
+### Medium Section Reminder:
 
+Before exploring the Medium section, make sure you've completed the foundational concepts outlined in the [`Simple`](../README.md) section. These fundamentals provide a solid grounding in Object-Oriented Programming (OOP), ensuring you're well-prepared to delve into more advanced topics.
+
+Once you're confident with the Simple section, you'll be ready to explore the Medium section, where you'll encounter deeper insights into OOP principles and practices. From constructors and access modifiers to design patterns and performance analysis, the Medium section offers a rich learning experience to further enhance your OOP skills.
+
+So, take your time mastering the Simple concepts, and when you're ready, let the Medium section broaden your understanding and proficiency in Object-Oriented Programming!
+
+---
 1. **[Overriding and Overloading](concepts/Medium/1.OverridingAndOverloading.md)**
 
 2. **[Constructors and Destructors](concepts/Medium/2.ConstructorsAndDestructors.md)**
