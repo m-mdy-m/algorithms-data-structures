@@ -120,16 +120,32 @@ But what’s the benefit? If you need to execute something either before or afte
 * **Obscured Functionality:**  The proxy can sometimes mask the behavior of the real object. This can make debugging issues more challenging as errors might not be readily apparent in the client code.
 
 ## How to Implement
+**1. Interface Definition (Optional But Recommended):**
 
-1. If there’s no pre-existing service interface, create one to make proxy and service objects interchangeable. Extracting the interface from the service class isn’t always possible, because you’d need to change all of the service’s clients to use that interface. Plan B is to make the proxy a subclass of the service class, and this way it’ll inherit the interface of the service.
+* **Establish a Common Ground:** If you don't already have one, create a well-defined interface that captures the functionalities exposed by both the real object and the proxy. This interface acts as the contract for client interaction, ensuring seamless interchangeability between the two entities. The client code interacts with this interface, oblivious to whether it's working with the real object or the proxy behind the scenes. This promotes loose coupling and simplifies future modifications.
+* **Alternative Approach:** If modifying the real object's class structure is not feasible, you can leverage inheritance. The proxy class can inherit directly from the real object's class, acquiring its interface implicitly. This approach can be useful when introducing the proxy to an existing codebase where altering the real object's design might be disruptive.
 
-2. Create the proxy class. It should have a field for storing a reference to the service. Usually, proxies create and manage the whole life cycle of their services. On rare occasions, a service is passed to the proxy via a constructor by the client.
+**2. Proxy Class Creation: The Intermediary**
 
-3. Implement the proxy methods according to their purposes. In most cases, after doing some work, the proxy should delegate the work to the service object.
+* **Develop the Proxy Class:** Design a dedicated proxy class that serves as the intermediary between the client and the real object. This class acts as a gatekeeper, controlling access and potentially adding functionalities to object interactions.
+* **Maintain a Reference:**  The proxy class will typically hold a reference variable to store the real object instance. In most scenarios, the proxy is responsible for creating and managing the real object's lifecycle. This allows for centralized control over the real object's creation and potential destruction. However, there might be situations where the client provides the real object during proxy instantiation, offering more flexibility in certain use cases.
 
-4. Consider introducing a creation method that decides whether the client gets a proxy or a real service. This can be a simple static method in the proxy class or a full-blown factory method.
+**3. Proxy Method Implementation: Tailoring Functionality**
 
-5. Consider implementing lazy initialization for the service object.
+* **Implement Interface Methods:** Implement each method defined in the interface (inherited or explicitly defined) within the proxy class. The specific behavior of these implementations can vary based on the intended purpose of the proxy. Often, the proxy might perform preliminary tasks before delegating the actual work to the real object. Here are some examples:
+    * **Security Enhancements:** The proxy can implement access control mechanisms, verifying user permissions or credentials before allowing interaction with the real object. This adds an extra layer of security to sensitive operations.
+    * **Performance Optimization:** The proxy can cache frequently accessed results, reducing the need to constantly involve the real object. This can significantly improve performance, especially for expensive operations.
+    * **Monitoring and Logging:** The proxy can log access attempts to the real object, providing valuable insights into system usage and potential security threats.
+
+**4. Optional: Creation Strategy Consideration - Choosing Wisely**
+
+* **Client Choice or Proxy Decision:** Introduce a mechanism to determine whether the client receives a real object or a proxy instance. This decision-making process can be facilitated by:
+    * **Static Method in Proxy Class:** A static method residing within the proxy class can employ specific criteria (like user role or system load) to choose the appropriate object (proxy for enhanced security or real object for direct access). This approach offers a simple way to manage object creation.
+    * **Factory Method Pattern:**  For intricate scenarios with multiple object types or complex decision logic, a more elaborate factory method pattern implementation can be considered. This pattern encapsulates object creation logic in a separate factory class, promoting code reusability and maintainability.
+
+**5. Optional: Lazy Initialization - Optimizing Performance**
+
+* **Defer Creation When Possible:** To optimize performance, particularly for scenarios involving expensive real object creation (like objects that require significant resources or complex initialization), consider implementing lazy initialization within the proxy. This approach defers the creation of the real object until it's truly required. The proxy might initially hold a null reference or a placeholder object, and only create the real object when a method is invoked for the first time. This postpones resource allocation until the critical moment, improving application startup time and overall memory usage.
 
 ## Example 
 - [Ts](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/2.OOP/concepts/MediumExample/design_patterns/Structural/Proxy/Proxy.ts)
