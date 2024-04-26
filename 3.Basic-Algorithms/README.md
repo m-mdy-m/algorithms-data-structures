@@ -45,7 +45,7 @@ Search cases in search algorithms can be categorized as best case, average case 
 ### Types of algorithms:
 
 
-**1. `Linear Search`: The Methodical Explorer**
+**1. `Linear Search`:**
 
 Imagine searching for a specific book in a messy, unorganized bookshelf. Linear search mimics this approach. It's a straightforward method that examines each item in a collection **one by one** until it finds the target element (your desired book).
 
@@ -74,7 +74,11 @@ Let's search for the value "25" in the unsorted list: [10, 4, 12, 25, 18, 7].
 
 * Slow for large datasets. As the collection size grows, the search time increases proportionally, making it inefficient for massive datasets.
 
-**2. `Binary Search`: The Efficient Divider**
+> How it works :
+
+![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/Linear-Search.png)
+
+**2. `Binary Search`:**
 
 Binary search thrives on **sorted data**. Imagine searching for a specific word in a meticulously organized dictionary. Binary search works much faster than linear search in this scenario. It operates by repeatedly dividing the sorted collection in half. Here's the strategy:
 
@@ -99,6 +103,10 @@ Let's search for the value "18" in the sorted list: [4, 7, 10, 12, 18, 25].
 
 * Requires the data to be sorted beforehand, adding an extra step if the data isn't already organized.
 * Not suitable for unsorted data. The binary search strategy relies on the sorted nature of the data to efficiently eliminate half of the possibilities during each iteration.
+
+> How it works :
+
+![](https://assets.digitalocean.com/articles/alligator/js/linear-vs-binary-search/binary-search.png)
 
 ## 2. Sorting Algorithms:
 
