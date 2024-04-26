@@ -20,9 +20,6 @@ Search cases in search algorithms can be categorized as best case, average case 
 
 > Summary : A search algorithm is the step-by-step procedure used to locate specific data among a collection of data. It is considered a fundamental procedure in computing. In computer science, when searching for data, the difference between a fast application and a slower one often lies in the use of the proper search algorithm.
 
-### Simple explanation(Real-world-Example):
-
-
 ### Terminologies:
 * **Target Element:** This is the treasure you're seeking! It's the specific piece of data you want to find within the collection. Imagine searching a phonebook - the target element is the phone number of a particular person.
 * **Search Space:** Think of this as the haystack where your needle might be hiding. It represents the entire collection of data you're searching through. This could be an array of numbers, a list of names, or a more complex data structure. 
@@ -111,10 +108,39 @@ Let's search for the value "18" in the sorted list: [4, 7, 10, 12, 18, 25].
 
 ## 2. Sorting Algorithms:
 
+
+### What is Sorting?
+
+Sorting refers to rearrangement of a given array or list of elements according to a comparison operator on the elements. The comparison operator is used to decide the new order of elements in the respective data structure. Sorting means reordering of all the elements either in ascending or in descending order.
+
+
+
 ### Introduction
 
+In computer science, a sorting algorithm is an algorithm that puts elements of a list into an order. The most frequently used orders are numerical order and lexicographical order, and either ascending or descending. Efficient sorting is important for optimizing the efficiency of other algorithms (such as search and merge algorithms) that require input data to be in sorted lists. Sorting is also often useful for canonicalizing data and for producing human-readable output.
 
-> Summary : 
+Formally, the output of any sorting algorithm must satisfy two conditions:
+
+The output is in monotonic order (each element is no smaller/larger than the previous element, according to the required order).
+  1. The output is a permutation (a reordering, yet retaining all of the original elements) of the input.
+  2. For optimum efficiency, the input data should be stored in a data structure which allows random access rather than one that allows only sequential access.
+
+> Summary : Sorting algorithms are a set of instructions that take an array or list as an input and arrange the items into a particular order. Sorts are most commonly in numerical or a form of alphabetical (or lexicographical) order, and can be in ascending (A-Z, 0-9) or descending (Z-A, 9-0) order.
+
+### Terminologies:
+
+- **In-place Sorting:** An in-place sorting algorithm uses constant space for producing the output (modifies the given array only). It sorts the list only by modifying the order of the elements within the list. Examples: Selection Sort, Bubble Sort Insertion Sort and Heap Sort.
+- **Internal Sorting:** Internal Sorting is when all the data is placed in the main memory or internal memory. In internal sorting, the problem cannot take input beyond its size. Example: heap sort, bubble sort, selection sort, quick sort, shell sort, insertion sort.
+- **External Sorting :** External Sorting is when all the data that needs to be sorted cannot be placed in memory at a time, the sorting is called external sorting. External Sorting is used for the massive amount of data. Examples: Merge sort, Tag sort, Polyphase sort, Four tape sort, External radix sort, etc.
+- **Stable sorting:** When two same data appear in the same order in sorted data without changing their position is called stable sort. Examples Merge Sort, Insertion Sort, Bubble Sort.
+- **Unstable sorting:** When two same data appear in the different order in sorted data it is called unstable sort. Examples: Quick Sort, Heap Sort, Shell Sort.
+
+### Characteristics of Sorting Algorithms:
+- **Time Complexity:** Time complexity, a measure of how long it takes to run an algorithm, is used to categorize sorting algorithms. The worst-case, average-case, and best-case performance of a sorting algorithm can be used to quantify the time complexity of the process.
+- **Space Complexity:** Sorting algorithms also have space complexity, which is the amount of memory required to execute the algorithm.
+- **Stability:** A sorting algorithm is said to be stable if the relative order of equal elements is preserved after sorting. This is important in certain applications where the original order of equal elements must be maintained.
+- **In-Place Sorting:** An in-place sorting algorithm is one that does not require additional memory to sort the data. This is important when the available memory is limited or when the data cannot be moved.
+- **Adaptivity:** An adaptive sorting algorithm is one that takes advantage of pre-existing order in the data to improve performance
 
 ### Simple explanation:
 
