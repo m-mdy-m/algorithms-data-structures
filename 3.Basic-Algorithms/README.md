@@ -216,6 +216,7 @@ Think of sorting books on a shelf by height. Insertion sort works like this:
 4. **Repeat and Grow the Sorted Sub-list:** You continue this process, taking elements from the unsorted pile, comparing them with the sorted sub-list, and inserting them in the correct sorted position. This gradually grows the sorted sub-list until all elements are incorporated.
 
 **Time Complexity:** Insertion sort shines for partially sorted data.  In the average case for already somewhat sorted data, it boasts a time complexity of O(n), making it efficient.  However, for entirely random data (worst case), it can fall back to O(n^2), similar to bubble and selection sort.
+
 **4. Merge Sort**
 
 **Concept:** Merge sort employs a clever "divide-and-conquer" strategy to efficiently sort a list. It breaks down the problem into smaller, more manageable sub-problems and then combines the solutions back together in a sorted order.
