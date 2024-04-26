@@ -44,6 +44,7 @@ Search cases in search algorithms can be categorized as best case, average case 
 
 ### Types of algorithms:
 
+![](https://www.gatevidyalay.com/wp-content/uploads/2018/07/Searching-Algorithms-Approaches-to-Searching.png)
 
 **1. `Linear Search`:**
 
