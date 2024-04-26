@@ -180,6 +180,7 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
  - [tutorialspoint](https://www.tutorialspoint.com/design_pattern)
  - [freecodecamp](https://www.freecodecamp.org)
  - [techopedia](https://www.techopedia.com)
+ - [programiz](https://www.programiz.com)
 
 ## Project
 
