@@ -67,7 +67,7 @@
 12. **[Interfaces and Abstract Classes](concepts/Beginner/12.InterfacesAndAbstractClasses.md)**
 
 13. **[Static and Instance Members](concepts/Beginner/13.StaticAndInstanceMembers.md)**
-
+---
 ### Medium:
 
 ### Medium Section Reminder:
