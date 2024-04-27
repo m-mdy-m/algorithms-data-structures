@@ -211,7 +211,44 @@ Data structures extend far beyond physical libraries. They are fundamental build
 
 ### Terminologies:
 
+**Abstract Data Type (ADT):**
 
+* An ADT formally defines a collection of data elements and the allowable operations on that data, independent of the underlying implementation details. It acts as a contract, specifying the functionalities a data structure should provide without dictating how the data is physically stored in memory. This separation allows for flexibility in choosing different implementations while maintaining consistent behavior for the user.
+
+**Data Structure:**
+
+* A data structure is a specific realization of an ADT, providing a concrete in-memory representation for the data and the associated operations. It dictates how the data elements are organized and connected, enabling efficient storage, retrieval, and manipulation. Different data structures offer varying performance characteristics for different operations. Arrays excel at random access, while linked lists are more efficient for frequent insertions and deletions.
+
+**Operation:**
+
+* An operation refers to an action performed on a data structure. Common operations include insertion (adding an element), deletion (removing an element), searching (finding a specific element), and traversal (visiting all elements in a particular order). The efficiency of these operations is a crucial factor when selecting an appropriate data structure for a given task.
+
+**Time Complexity:**
+
+* Time complexity analyzes the execution time of an operation on a data structure as the data size increases. It's typically expressed using Big O notation, a mathematical way to categorize algorithms based on their worst-case, average-case, or best-case time complexity. For example, searching an unsorted array has a time complexity of O(n) (linear search), signifying that the search time may grow linearly with the array size. Selecting a data structure with optimal time complexity for the desired operations is essential for efficient program execution.
+
+**Space Complexity:**
+
+* Space complexity measures the amount of memory a data structure requires to store the data. It considers both the size of the data elements themselves and any additional overhead associated with the chosen structure's implementation. For instance, arrays generally have lower space complexity compared to linked lists due to their simpler structure. However, linked lists become more space-efficient when frequent insertions and deletions are needed, as they avoid data shifting during these operations.
+
+**Efficiency:**
+
+* Efficiency refers to the trade-off between time and space complexity of operations on a data structure. The goal is to strike a balance, choosing a structure that allows for frequent operations to be performed quickly while minimizing memory usage. Selecting the right data structure has a significant impact on the overall performance of a program.
+
+**Homogeneous vs. Heterogeneous:**
+
+* **Homogeneous data structures** store elements of the same data type. Examples include arrays of integers or lists of strings.
+* **Heterogeneous data structures** can store elements of different data types within the same structure. For instance, a record in a database might contain an integer (ID), a string (name), and a floating-point number (salary).
+
+**Static vs. Dynamic:**
+
+* **Static data structures** have a fixed size allocated at compile time. They cannot grow or shrink in size after creation. This characteristic provides efficient memory access but limits flexibility for data of unknown size beforehand.
+* **Dynamic data structures** can adjust their size at runtime as needed. They allocate memory as data is added and deallocate when data is removed. This flexibility is beneficial for handling data of unknown size or that may change during program execution.
+
+**Linear vs. Non-Linear:**
+
+* **Linear data structures** arrange elements in a sequential order, like a list. Accessing elements efficiently requires following that order (e.g., first, second, etc.). Examples include arrays, queues, and stacks.
+* **Non-linear data structures** represent relationships between elements, not necessarily in a strict order. This structure allows for efficient searching based on those relationships. Examples include trees and graphs.
 
 ### Implementation
 
