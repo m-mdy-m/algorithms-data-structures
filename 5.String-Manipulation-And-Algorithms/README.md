@@ -65,6 +65,19 @@ The Z-algorithm boasts a significant advantage over the brute-force search in te
 
 While the Z-algorithm excels at general string searching, specific problems demand specialized solutions. Manacher's algorithm emerges as a powerful tool for identifying palindromic substrings within a text string with remarkable efficiency.
 
+**What is Palindromic? :**
+
+A palindrome is a word, phrase, number, or other sequence of characters that reads the same backward as forward, such as "madam" or "racecar". Here are some key points about palindromes:
+
+* **Direction-independent:** The sequence of characters reads the same regardless of whether you start from the beginning or the end. 
+* **Examples:** Common examples of palindromes include words like "noon", "level", "rotor", and phrases like "A man, a plan, a canal: Panama" or "Race car, race!". Numbers can also be palindromes, such as 1111, 1221, or 5885.
+* **Variations:** Palindromes can be single characters ("A"), single words ("noon"), or even entire sentences ("Madam, I'm Adam"). 
+* **Case-sensitivity:** Depending on the context, palindromes might be considered case-sensitive (e.g., "Noon" is not a palindrome) or case-insensitive (e.g., "Noon" is considered the same as "noon").
+
+* **Etymology:** The word "palindrome" comes from the Greek words "palin" (meaning "back again") and "dromos" (meaning "course").
+* **Mathematical Applications:** Palindromes have applications in computer science, linguistics, and even recreational mathematics. For instance, they can be used in data validation (checking if an input is a palindrome) or exploring properties of numbers.
+* **Cultural Significance:** Palindromes appear in literature, wordplay, and even historical writings. They can be found in puzzles, riddles, and creative writing as a form of wordplay or artistic expression.
+
 **Palindromic Substring Problem: Finding Words that Read the Same Backwards and Forwards**
 
 A palindrome is a captivating word or phrase that reads the same backward and forward, like "racecar" or "madam." The palindromic substring problem seeks to locate all such substrings within a given text string.
