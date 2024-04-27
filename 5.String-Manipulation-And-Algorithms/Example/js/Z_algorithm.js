@@ -6,11 +6,12 @@ class ZAlgorithm {
   }
 
   calculate() {
-    let l = 0, r = 0;
+    let l = 0,
+      r = 0;
     for (let i = 1; i < this.n; i++) {
       if (i <= r) {
         let k = i - l;
-        if (this.text[i] == this.text[k]) {
+        if (this.text[i] === this.text[k]) {
           this.z_values[i] = Math.min(r - i + 1, this.z_values[k]);
         } else {
           l = i;
@@ -18,7 +19,7 @@ class ZAlgorithm {
         }
       } else {
         l = r = i;
-        while (r < this.n && this.text[r] == this.text[r - 1]) {
+        while (r < this.n && this.text[r] === this.text[r - 1]) {
           r += 1;
         }
         this.z_values[i] = r - l - 1;
