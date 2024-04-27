@@ -37,9 +37,9 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
 
 2. [Object-Oriented Programming (OOP)](2.OOP/)
 
-3. Basic Algorithms
+3. [Basic Algorithms](3.Basic-Algorithms/)
 
-4. Introduction of Data Structure
+4. [Introduction of Data Structure](4.Introduction-of-Data%20Structure/)
 
 5. String Manipulation and Algorithms
 
