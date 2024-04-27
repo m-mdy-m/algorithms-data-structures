@@ -257,9 +257,7 @@ Data structures can be implemented using a variety of programming languages and 
 The implementation of a data structure usually requires writing a set of procedures that create and manipulate instances of that structure. The efficiency of a data structure cannot be analyzed separately from those operations. This observation motivates the theoretical concept of an abstract data type, a data structure that is defined indirectly by the operations that may be performed on it, and the mathematical properties of those operations (including their space and time cost).
 
 ## Most Popular Data Structures: 
-
 > !! `Ai is used in some descriptions` !!
-
 ### Array:
 
 An array is a fundamental data structure that stores a fixed-size, **ordered** collection of elements of the same data type. Elements are accessed using a numerical index, starting from 0. It's like a shelf where each item has a designated position.
@@ -302,7 +300,6 @@ for score in scores:
   print(score)
 ```
 ---
-
 ### Linked Lists:
 
 Linked lists offer a powerful alternative to arrays, particularly when dealing with data of varying sizes or requiring frequent insertions and deletions. Unlike arrays, linked lists are **dynamic** data structures, meaning their size can adjust as needed at runtime. This flexibility comes at the cost of slightly slower random access compared to arrays.
@@ -401,7 +398,6 @@ Imagine a stack of plates at a cafeteria. People take plates from the top (push 
 * **Peek:** Checking the topmost item in your laundry basket without removing it (peeking at the top element of the stack)
 
 ---
-
 ### Queue:
 A queue adheres to the FIFO (First-In-First-Out) principle, similar to a waiting line at a store. The first element added (enqueued) is the first element removed (dequeued). Queues are ideal for managing tasks or data that needs to be processed in the order they were received.
 
@@ -439,7 +435,6 @@ Imagine a line of people waiting for a movie ticket (queue). People join the bac
 * **Peek:** Checking the next task on your to-do list without marking it complete (peeking at the front element of the queue)
 
 ---
-
 ### Binary Tree:
 
 **Time complexity:**
@@ -454,7 +449,6 @@ Imagine a line of people waiting for a movie ticket (queue). People join the bac
 **simple example**
 
 ---
-
 ### Binary Search Tree:
 
 A binary tree is a hierarchical data structure where each node can have a maximum of two child nodes: a left child and a right child. Nodes can contain data of any type. Binary trees excel at representing hierarchical relationships and enabling efficient searching and sorting algorithms.
@@ -490,7 +484,6 @@ A binary tree is a hierarchical data structure where each node can have a maximu
 Imagine an ancestral family tree. Each person is a node in the tree, with parents as the left and right children. The root node represents the oldest ancestor. Traversing the tree allows you to find relationships between family members efficiently. However, an unbalanced family tree (e.g., with all children on one side) would be less efficient for searching specific ancestors.
 
 ---
-
 ### Heap:
 
 Heaps are specialized tree-based structures that enforce a specific order on their elements. They come in two main varieties:
@@ -530,7 +523,6 @@ Heaps excel at providing efficient retrieval of the element with the highest (ma
 Imagine a priority queue for emergency room patients. Patients are assigned a priority level based on their condition (critical, serious, minor). A max-heap would be ideal here, with the most critical patients (highest priority) at the root for quick retrieval by doctors. New patients can be efficiently added to the heap based on their urgency (insertion), and doctors can always access the most critical patient (root element) in constant time.
 
 ---
-
 ### Hashing :
 
 Hashing data structures offer a powerful technique for storing and retrieving data based on a key. They excel at scenarios where fast access to specific elements is crucial, especially when dealing with large datasets.
@@ -571,7 +563,6 @@ Hashing data structures offer a powerful technique for storing and retrieving da
 Imagine a phone book as a hash table. Names (keys) are mapped to phone numbers (values) using a hash function (e.g., first letter of the name). When you look up a friend's name (key), the hash function quickly directs you to the appropriate section of the phone book (hash table bucket), where you can find their number (value) efficiently. This avoids the need to scan through the entire phone book (linear search), making lookups significantly faster, especially for large phone books.
 
 ---
-
 ### Matrix:
 A matrix, also known as a two-dimensional array, is a fundamental data structure that represents data in a tabular format with rows and columns. Each element in the matrix has a specific location identified by its row index and column index. Matrices excel in tasks involving numerical computations and representing data with inherent two-dimensionality.
 
@@ -605,7 +596,6 @@ A matrix, also known as a two-dimensional array, is a fundamental data structure
 Imagine a spreadsheet where rows represent students and columns represent subjects. Each cell at the intersection of a row and column stores a student's grade in a specific subject. This is a classic example of a matrix, where accessing a student's grade in a particular subject requires only their row and column indices.
 
 ---
-
 ### Trie:
 Tries (also known as prefix trees) are a powerful data structure specifically designed for efficient operations on string data, especially those involving prefixes. They excel in scenarios where searching for words or strings with a common prefix is a frequent task.
 
@@ -643,8 +633,8 @@ Tries (also known as prefix trees) are a powerful data structure specifically de
 **Simple Example:**
 
 Imagine a dictionary implemented using a trie. Each word is inserted into the trie character by character. To search for a word, you follow the path from the root node based on the prefix characters. If you reach a leaf node with a complete word matching your search, you've found it. Tries excel in suggesting words that share a common beginning, making them ideal for autocomplete features.
----
 
+---
 ### Graph:
 
 A graph is a fundamental data structure that models relationships between objects. It consists of a collection of vertices (also called nodes or points) and edges (links or lines) that connect these vertices. Graphs excel at representing networks, social connections, geographical maps, and other scenarios where relationships between entities are crucial.
@@ -685,8 +675,47 @@ Imagine a map of a city with streets as edges and intersections as vertices. A g
 ---
 
 ## How to choose a data structure
-When choosing a data structure for a program or application, developers should consider the answers to the following three questions:
 
-- **Supported operations.** What functions and operations does the program need?
-- **Computational complexity.** What level of computational performance is tolerable? For speed, a data structure whose operations execute in time linear to the number of items managed -- using Big O Notation: O(n) -- will be faster than a data structure whose operations execute in time proportional to the square of the number of items managed -- O(n^2).
-- **Programming elegance.** Are the organization of the data structure and its functional interface easy to use?
+**1. Identify the Required Operations:**
+
+* **What operations will you perform most frequently on the data?**  This includes actions like insertion, deletion, searching, sorting, access, traversal, etc.
+* **How often will these operations be used?**  Prioritize the operations that are critical for your program's performance.
+
+Here are some examples:
+
+* **Frequent insertions and retrievals:** Consider an array, hash table, or linked list (depending on search needs).
+* **Frequent searches and sorting:** Binary search trees, heaps (for specific ordering), or sorted arrays might be suitable.
+* **Network modeling and pathfinding:** Graphs are ideal for representing connections and finding routes.
+
+**2. Analyze the Computational Complexity:**
+
+* **How quickly do you need the operations to be performed?**  This is where Big O Notation comes in. It helps us understand the worst-case scenario for how long an operation takes as the data size increases.
+* **Focus on the dominant terms in the Big O expression.**  For example, if you have O(n log n) for an operation, the n log n term dominates as the data size grows, not the constant factor (n).
+
+Here's a table summarizing common data structures and their complexities for basic operations:
+
+| Data Structure | Access | Search | Insertion | Deletion |
+|---|---|---|---|---|
+| Array | O(1) | O(n) | O(1) (end) | O(n) (other) |
+| Linked List | O(n) | O(n) | O(1) | O(1) |
+| Stack | O(1) | O(n) | O(1) | O(1) |
+| Queue | O(1) | O(n) | O(1) | O(1) |
+| Binary Search Tree | O(log n) | O(log n) | O(log n) | O(log n) |
+| Hash Table (average) | O(1) | O(1) | O(1) | O(1) |
+| Graph (Traversal) | O(V + E) | O(V + E) (BFS/DFS) | - | - |
+
+
+**3. Consider Programming Elegance and Maintainability:**
+
+* **How easy is it to implement and use the chosen data structure in your programming language?**  Some data structures might require more complex code or additional libraries.
+* **How well will the data structure integrate with your existing codebase?**  Consider the learning curve for your team and the effort involved in maintaining the code.
+
+**4. Evaluate Trade-offs:**
+
+* There's no single "best" data structure for all situations. Each has its strengths and weaknesses.
+* You might need to combine different data structures to achieve the desired functionality. For example, a hash table can be used for fast access, and a linked list can be used within each hash table bucket to handle collisions.
+
+**5. Prototype and Test:**
+
+* In some cases, it might be beneficial to prototype your program with different data structures to measure their performance and suitability in your specific context.
+* This can help you make informed decisions based on real-world data and usage patterns.
