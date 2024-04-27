@@ -181,6 +181,8 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
  - [freecodecamp](https://www.freecodecamp.org)
  - [techopedia](https://www.techopedia.com)
  - [programiz](https://www.programiz.com)
+ - [w3schools](https://www.w3schools.com)
+ - [javatpoint](https://www.javatpoint.com)
 
 ## Project
 
