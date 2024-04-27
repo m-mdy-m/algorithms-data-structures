@@ -164,11 +164,11 @@ Z_algorithm(Text)
 7. Finally, the function returns the `Z` list containing the Z-function values for each index in the text string.
 
 > Example Z-algorithm in (Go,Java,python,Js,Ts)
-- [Go]()
-- [Java]()
-- [TypeScript]()
-- [JavaScript]()
-- [Python]()
+- [Go](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/golong/Z_algorithm.go)
+- [Java](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/java/Z_algorithm.java)
+- [TypeScript](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/ts/Z_algorithm.ts)
+- [JavaScript](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/js/Z_algorithm.js)
+- [Python](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/golong/python.py)
 
 ---
 
