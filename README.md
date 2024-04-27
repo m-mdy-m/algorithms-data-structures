@@ -41,8 +41,9 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
 
 4. [Introduction of Data Structure](4.Introduction-of-Data%20Structure/)
 
-5. String Manipulation and Algorithms
-
+5. [String Manipulation and Algorithms](5.String-Manipulation-And-Algorithms/)
+   - > [PDF Helper](book/String%20Manipulation_docx.pdf)
+  
 6. Basic Sorting (e.g., Bubble Sort, Selection Sort, Insertion Sort)
 
 7. Search Algorithm
