@@ -1,35 +1,55 @@
+/**
+This class implements the Z-Algorithm for efficient string searching.
+Attributes:
+    text (str): The text string to search within.
+    z_values (list): A list containing the Z-function values for each index in the text string.
+*/
 interface ZAlgorithmType {
   text: string;
   n: number;
   calculate(): Array<number>;
 }
 class ZAlgorithm implements ZAlgorithm {
+  /**
+  Initializes the ZAlgorithm object.
+  Args:
+     text (str): The text string to search within.
+  */
   text: string;
   n: number;
   z_values: Array<number>;
   constructor(text: string) {
     this.text = text;
     this.n = text.length;
-    this.z_values = new Array(this.n).fill(0); 
+    this.z_values = new Array(this.n).fill(0);
   }
   calculate(): Array<number> {
-    let l: number = 0,
+    /**
+    Calculates the Z-function values for each index in the text string.
+
+    Returns:
+        list: A list containing the Z-function values.
+     */
+    let l: number = 0, // Left and right pointers for tracking the longest prefix match
       r: number = 0;
     for (let i: number = 0; i < this.n; i++) {
+     // Check if the current index is within the window of a previously found match
       if (i <= r) {
-        let k: number = i - l;
+        let k: number = i - l; // Calculate the mirrored index within the window
         if (this.text[i] === this.text[k]) {
-          this.z_values[i] = Math.min(r - i + 1, this.z_values[k]);
+          this.z_values[i] = Math.min(r - i + 1, this.z_values[k]); // Utilize mirroring for efficiency
         } else {
+          // Mismatch, update window based on previously found Z-value
           l = i;
-          r = i + this.z_values[k] - 1;
+          r = i + this.z_values[k] - 1; 
         }
       } else {
+        // Current index is outside the window, search for a new match
         l = r = i;
         while (r < this.n && this.text[r] === this.text[r - l]) {
           r += 1;
         }
-        this.z_values[i] = r - l - 1;
+        this.z_values[i] = r - l - 1; // Length of the new match
       }
     }
     return this.z_values;
