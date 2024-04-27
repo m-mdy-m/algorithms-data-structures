@@ -257,17 +257,181 @@ Data structures can be implemented using a variety of programming languages and 
 The implementation of a data structure usually requires writing a set of procedures that create and manipulate instances of that structure. The efficiency of a data structure cannot be analyzed separately from those operations. This observation motivates the theoretical concept of an abstract data type, a data structure that is defined indirectly by the operations that may be performed on it, and the mathematical properties of those operations (including their space and time cost).
 
 ## Most Popular Data Structures: 
-1. ) Array:
-2. ) Linked Lists:
-3. ) Stack:
-4. ) Queue:
-5. ) Binary Tree:
-6. ) Binary Search Tree:
-7. ) Heap:
-8. ) Hashing Data Structure:
-9. ) Matrix:
-10. ) Trie:
-11. ) Graph:
+### Array:
+
+**Time complexity:**
+
+**Applications of Arrays**
+
+**Advantages of arrays**
+
+**Disadvantages of arrays**
+
+**What is its use?**
+
+**simple example**
+
+---
+
+### Linked Lists:
+
+**Applications of Arrays**
+
+**Time complexity:**
+
+**Advantages of arrays**
+
+**Disadvantages of arrays**
+
+**What is its use?**
+
+**simple example**
+
+---
+
+### Stack:
+
+**Applications of Arrays**
+
+**Time complexity:**
+
+**Advantages of arrays**
+
+**Disadvantages of arrays**
+
+**What is its use?**
+
+**simple example**
+
+---
+
+### Queue:
+
+**Applications of Arrays**
+
+**Time complexity:**
+
+**Advantages of arrays**
+
+**Disadvantages of arrays**
+
+**What is its use?**
+
+**simple example**
+
+---
+
+### Binary Tree:
+
+**Applications of Arrays**
+
+**Time complexity:**
+
+**Advantages of arrays**
+
+**Disadvantages of arrays**
+
+**What is its use?**
+
+**simple example**
+
+---
+
+### Binary Search Tree:
+
+**Applications of Arrays**
+
+**Time complexity:**
+
+**Advantages of arrays**
+
+**Disadvantages of arrays**
+
+**What is its use?**
+
+**simple example**
+
+---
+
+### Heap:
+
+**Applications of Arrays**
+
+**Time complexity:**
+
+**Advantages of arrays**
+
+**Disadvantages of arrays**
+
+**What is its use?**
+
+**simple example**
+
+---
+
+### Hashing Data Structure:
+
+**Applications of Arrays**
+
+**Time complexity:**
+
+**Advantages of arrays**
+
+**Disadvantages of arrays**
+
+**What is its use?**
+
+**simple example**
+
+---
+
+### Matrix:
+
+**Applications of Arrays**
+
+**Time complexity:**
+
+**Advantages of arrays**
+
+**Disadvantages of arrays**
+
+**What is its use?**
+
+**simple example**
+
+---
+
+### Trie:
+
+**Applications of Arrays**
+
+**Time complexity:**
+
+**Advantages of arrays**
+
+**Disadvantages of arrays**
+
+**What is its use?**
+
+**simple example**
+
+---
+
+### Graph:
+
+**Applications of Arrays**
+
+**Time complexity:**
+
+**Advantages of arrays**
+
+**Disadvantages of arrays**
+
+**What is its use?**
+
+**simple example**
+
+---
 
 ## How to choose a data structure
 When choosing a data structure for a program or application, developers should consider the answers to the following three questions:
