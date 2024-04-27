@@ -258,6 +258,8 @@ The implementation of a data structure usually requires writing a set of procedu
 
 ## Most Popular Data Structures: 
 
+> !! `Ai is used in some descriptions` !!
+
 ### Array:
 
 An array is a fundamental data structure that stores a fixed-size, **ordered** collection of elements of the same data type. Elements are accessed using a numerical index, starting from 0. It's like a shelf where each item has a designated position.
@@ -401,26 +403,48 @@ Imagine a stack of plates at a cafeteria. People take plates from the top (push 
 ---
 
 ### Queue:
+A queue adheres to the FIFO (First-In-First-Out) principle, similar to a waiting line at a store. The first element added (enqueued) is the first element removed (dequeued). Queues are ideal for managing tasks or data that needs to be processed in the order they were received.
 
-**Time complexity:**
+**Time Complexity Analysis:**
 
-**Applications**
+* **Enqueue:** O(1) - Constant time. Adding an element (joining the back of the line) is a quick operation, typically involving updating a pointer (reference) to the last element in the queue.
+* **Dequeue:** O(1) - Constant time. Removing the front element (the one who has been waiting the longest) is also a constant time operation, as you simply access and remove the element referenced by the front pointer.
+* **Peek:** O(1) - Constant time (optional). In some implementations, you can examine the front element without removing it (peeking at the front of the line). This operation usually takes constant time as well.
+* **Search:** O(n) - Linear time in the worst case. While enqueue and dequeue are efficient, searching for a specific element within the queue can be slow (O(n)) in the worst case. You might need to traverse the entire queue to find the desired element.
 
+**Applications of Queues:**
 
-**Advantages**
+* **Task Scheduling:** Operating systems use queues to manage processes waiting for CPU resources. Processes are enqueued, and the CPU dequeues them for execution in a FIFO order.
+* **Breadth-First Search (BFS) Algorithms:** Queues are employed in BFS algorithms for graph traversal. Nodes are explored level by level, with neighbors of the current node enqueued for future exploration.
+* **Data Processing Pipelines:** Queues can be used to buffer data between different stages of a processing pipeline. Data is enqueued as it becomes available, and processing units dequeue and handle it in the order it was received.
+* **Message Passing Systems:** Queues are used in message passing systems to manage the transmission and reception of messages between different components. Messages are enqueued and then dequeued for processing by the receiving component.
 
-**Disadvantages**
+**Advantages of Queues:**
 
+* **FIFO Order Guarantee:** The FIFO principle ensures elements are processed in the order they were added, making queues suitable for scenarios where the order of processing is crucial.
+* **Efficient Enqueue/Dequeue:** Adding and removing elements from the front and back of the queue are constant time operations, offering efficient management of the first and last elements.
+* **Simple Implementation:** The core concept of queues is relatively straightforward, making them another good starting point for understanding data structures.
 
-**simple example**
+**Disadvantages of Queues:**
+
+* **Limited Access:** Random access to elements within the queue is generally not supported efficiently. You can only access the front and back elements directly, and searching for a specific element can be slow.
+* **Fixed-Size Limitation (Optional):** Some queue implementations might have a predefined size limit, restricting the number of elements that can be stored.
+
+**Simple Example:**
+
+Imagine a line of people waiting for a movie ticket (queue). People join the back of the line (enqueue operation) and get their tickets when they reach the front (dequeue operation). This adheres to the FIFO principle.  Here's a real-world analogy for each operation:
+
+* **Enqueue:** Adding a new task to your to-do list (enqueuing an item onto the queue)
+* **Dequeue:** Completing the first task on your to-do list (dequeuing an item from the queue)
+* **Peek:** Checking the next task on your to-do list without marking it complete (peeking at the front element of the queue)
 
 ---
 
 ### Binary Tree:
 
-**Applications**
-
 **Time complexity:**
+
+**Applications**
 
 **Advantages**
 
@@ -433,77 +457,172 @@ Imagine a stack of plates at a cafeteria. People take plates from the top (push 
 
 ### Binary Search Tree:
 
-**Applications**
+A binary tree is a hierarchical data structure where each node can have a maximum of two child nodes: a left child and a right child. Nodes can contain data of any type. Binary trees excel at representing hierarchical relationships and enabling efficient searching and sorting algorithms.
 
-**Time complexity:**
+**Time Complexity Analysis:**
 
-**Advantages**
+* **Access:** O(h) - Linear time in the height of the tree in the worst case. Random access (finding a specific node) can be slow in unbalanced trees, requiring traversing down to the target node based on its value. However, balanced trees like AVL trees or red-black trees guarantee O(log n) access time on average.
+* **Search:** O(h) - Linear time in the height of the tree in the worst case. Similar to access, searching for a specific value can be slow in unbalanced trees. Balanced trees offer O(log n) search time on average.
+* **Insertion:** O(h) - Linear time in the height of the tree in the worst case. Inserting a new node can be slow in unbalanced trees, requiring finding the appropriate position for insertion. Balanced trees maintain their structure during insertion, keeping insertion time at O(log n) on average.
+* **Deletion:** O(h) - Linear time in the height of the tree in the worst case. Deleting a node can be complex in unbalanced trees, potentially requiring restructuring the tree. Balanced trees maintain their balance during deletion, keeping deletion time at O(log n) on average.
 
-**Disadvantages**
+**Applications of Binary Trees:**
 
+* **File Systems:** Hierarchical directory structures in file systems are often represented using binary trees, where folders act as nodes and files are stored as leaves.
+* **Search Trees:** Binary search trees (BSTs) are a specific type of binary tree that maintains an order based on the data values. This allows for efficient searching (O(log n) on average) and traversal of elements in sorted order.
+* **Expression Trees:** Binary trees can be used to represent mathematical expressions. Nodes hold operators or operands, and the tree structure reflects the order of operations.
+* **Huffman Coding:** Binary trees are used in Huffman coding for data compression, where frequently occurring symbols are assigned shorter codes for efficient storage and transmission.
 
-**simple example**
+**Advantages of Binary Trees:**
+
+* **Hierarchical Representation:** Binary trees are well-suited for representing hierarchical relationships between data elements, making them ideal for modeling file systems, organizational structures, or family trees.
+* **Efficient Searching (Balanced Trees):** Balanced binary trees (AVL trees, red-black trees) offer efficient searching and sorting algorithms with O(log n) average time complexity.
+* **Dynamic Structure:** Binary trees can grow or shrink as needed, allowing them to adapt to changing data sets.
+
+**Disadvantages of Binary Trees:**
+
+* **Performance Relies on Balance:** Unbalanced binary trees can lead to poor performance for access, search, insertion, and deletion operations.
+* **Not Self-Balancing (Basic Binary Trees):** Basic binary tree implementations require manual balancing to ensure optimal performance. Balanced tree variants like AVL trees or red-black trees address this automatically.
+* **More Complex Implementation:** Compared to arrays or linked lists, binary trees involve more complex logic for navigating the tree structure and maintaining balance.
+
+**Simple Example:**
+
+Imagine an ancestral family tree. Each person is a node in the tree, with parents as the left and right children. The root node represents the oldest ancestor. Traversing the tree allows you to find relationships between family members efficiently. However, an unbalanced family tree (e.g., with all children on one side) would be less efficient for searching specific ancestors.
 
 ---
 
 ### Heap:
 
-**Applications**
+Heaps are specialized tree-based structures that enforce a specific order on their elements. They come in two main varieties:
 
-**Time complexity:**
+* **Max-Heap:** The root node has the largest value, and all child nodes are less than or equal to their parent.
+* **Min-Heap:** The root node has the smallest value, and all child nodes are greater than or equal to their parent.
 
-**Advantages**
+Heaps excel at providing efficient retrieval of the element with the highest (max-heap) or lowest (min-heap) priority.
 
-**Disadvantages**
+**Time Complexity Analysis:**
 
+* **Access (Root Element):** O(1) - Constant time. Retrieving the element with the highest/lowest priority (depending on the heap type) is a constant time operation as it's always at the root.
+* **Search:** O(n) - Linear time in the worst case. Finding a specific element within the heap can be slow, requiring potentially traversing the entire tree.
+* **Insertion:** O(log n) - Logarithmic time on average. Inserting a new element into the heap involves maintaining the heap property (max or min order), which can be done in logarithmic time on average.
+* **Deletion (Root Element):** O(log n) - Logarithmic time on average. Removing the root element and maintaining the heap property takes logarithmic time on average. Deletion of arbitrary elements can be more complex.
 
-**simple example**
+**Applications of Heaps:**
+
+* **Priority Queues:** Heaps are a fundamental implementation for priority queues, where elements with higher priorities are retrieved first. This is useful for tasks like scheduling processes, network routing algorithms, and implementing Dijkstra's algorithm for shortest path finding.
+* **Heap Sort:** Heapsort is a sorting algorithm that leverages the efficient retrieval capabilities of heaps to sort an array in either ascending or descending order.
+* **K-Nearest Neighbors (KNN):** Heaps can be used to efficiently identify the k nearest neighbors (data points) to a new query point in KNN algorithms.
+
+**Advantages of Heaps:**
+
+* **Efficient Priority Retrieval:** The constant time access (O(1)) for the top element makes heaps ideal for scenarios where you need to prioritize element retrieval based on their value.
+* **Efficient Insertion:** Inserting new elements into a heap can be done relatively efficiently (O(log n) on average), maintaining the heap property.
+* **Heap Sort:** Heapsort provides a relatively efficient sorting algorithm (O(n log n)) that can be in-place (modifies the original array).
+
+**Disadvantages of Heaps:**
+
+* **Limited Access:** Random access to elements within the heap is generally not supported efficiently. You can only access the root element directly.
+* **Search Complexity:** Searching for a specific element within the heap can be slow (O(n)) in the worst case.
+* **Not Self-Balancing:** Basic heap implementations require manual maintenance of the heap property during insertions and deletions.
+
+**Simple Example:**
+
+Imagine a priority queue for emergency room patients. Patients are assigned a priority level based on their condition (critical, serious, minor). A max-heap would be ideal here, with the most critical patients (highest priority) at the root for quick retrieval by doctors. New patients can be efficiently added to the heap based on their urgency (insertion), and doctors can always access the most critical patient (root element) in constant time.
 
 ---
 
-### Hashing Data Structure:
+### Hashing :
 
-**Applications**
+Hashing data structures offer a powerful technique for storing and retrieving data based on a key. They excel at scenarios where fast access to specific elements is crucial, especially when dealing with large datasets.
 
-**Time complexity:**
+**Key Concepts:**
 
-**Advantages**
+* **Hash Function:** A function that takes a key (data) and maps it to a unique index (hash value) within a hash table. Ideally, the hash function should distribute keys uniformly across the hash table to minimize collisions.
+* **Hash Table:** An array-like structure where elements are stored at positions determined by their hash values.
 
-**Disadvantages**
+**Time Complexity Analysis (Average Case):**
 
+* **Access:** O(1) - Constant time. The beauty of hashing lies in its ability to retrieve elements based on their key in constant time on average, assuming a good hash function and minimal collisions.
+* **Search:** O(1) - Constant time on average. Similar to access, searching for a specific element using its key is a constant time operation on average.
+* **Insertion:** O(1) - Constant time on average. Inserting a new key-value pair into the hash table can be done in constant time on average, assuming the hash table is not overloaded (too many elements for its size).
+* **Deletion:** O(1) - Constant time on average. Deleting a key-value pair from the hash table can also be done in constant time on average, provided efficient collision resolution techniques are employed.
 
-**simple example**
+**Applications of Hashing:**
+
+* **Symbol Tables:** Hash tables are a cornerstone for implementing symbol tables, which map symbolic names (keys) to their corresponding values (variables, functions). This allows for quick lookup of variables based on their names in programming languages.
+* **Databases (Key-Value Stores):** Many databases employ hash tables internally for efficient retrieval of data based on unique keys (e.g., user ID, product ID).
+* **Memcached (Caching):** Caching systems often utilize hash tables to store frequently accessed data for rapid retrieval, improving overall application performance.
+* **Spell Checkers and Autocomplete:** Hash tables are used in spell checkers to efficiently identify misspelled words and suggest corrections. Similarly, they power autocomplete functionality by providing quick suggestions based on partially typed input.
+
+**Advantages of Hashing:**
+
+* **Fast Average-Case Access:** Hashing offers exceptional speed for retrieving elements based on their key, making it ideal for large datasets.
+* **Dynamic Data Management:** Hash tables can grow or shrink as needed, adapting to the size of the data collection.
+* **Efficient for Sparse Data:** For data sets with many empty keys, hash tables can be more space-efficient compared to storing all possible keys in an array-like structure.
+
+**Disadvantages of Hashing:**
+
+* **Worst-Case Performance:** If the hash function is poor or the hash table becomes overloaded, collisions (multiple keys mapping to the same index) can occur, leading to slower O(n) lookup times in the worst case.
+* **Limited Ordering:** Hash tables do not inherently preserve the order of elements based on their keys. If order is important, alternative data structures like sorted arrays or binary search trees might be a better fit.
+* **Storage Overhead:** Hash tables require additional space for storing hash values and potentially managing collisions.
+
+**Simple Example:**
+
+Imagine a phone book as a hash table. Names (keys) are mapped to phone numbers (values) using a hash function (e.g., first letter of the name). When you look up a friend's name (key), the hash function quickly directs you to the appropriate section of the phone book (hash table bucket), where you can find their number (value) efficiently. This avoids the need to scan through the entire phone book (linear search), making lookups significantly faster, especially for large phone books.
 
 ---
 
 ### Matrix:
 
-**Applications**
-
 **Time complexity:**
+
+**Applications**
 
 **Advantages**
 
 **Disadvantages**
-
 
 **simple example**
 
 ---
 
 ### Trie:
+Tries (also known as prefix trees) are a powerful data structure specifically designed for efficient operations on string data, especially those involving prefixes. They excel in scenarios where searching for words or strings with a common prefix is a frequent task.
 
-**Applications**
+**Key Concepts:**
 
-**Time complexity:**
+* **Nodes:** Each node in a trie can store a character and one or more child nodes.
+* **Root Node:** The root node represents the starting point of the trie and has no associated character.
+* **Paths:** Each path from the root node to a leaf node (a node without children) represents a complete string or a prefix of a longer string.
+* **Prefix Matching:** The core strength of tries lies in their ability to efficiently perform operations based on prefixes.
 
-**Advantages**
+**Time Complexity Analysis (Average Case):**
 
-**Disadvantages**
+* **Search:** O(m) - Linear time in the length (m) of the search prefix. Since searching involves traversing the trie based on the prefix characters, the time complexity is directly related to the prefix length.
+* **Insertion:** O(m) - Linear time in the length (m) of the string being inserted. Inserting a new string involves creating nodes for each character in the string.
+* **Deletion:** O(m) - Linear time in the length (m) of the string being deleted, on average. However, deletion can become more complex in certain scenarios (e.g., removing a prefix that is part of other longer strings).
 
+**Applications of Tries:**
+* **Autocompletion:** Tries are instrumental in implementing autocomplete functionality in search engines or text editors. As the user types a prefix, the trie efficiently retrieves suggestions for words that share the same beginning.
+* **Spell Checkers:** Tries can be used in spell checkers to identify misspelled words and suggest corrections. The trie can be populated with correctly spelled words, and misspelled words that deviate from the trie structure can be flagged as potential errors.
+* **IP Address Lookup:** In network routing, tries can be used to efficiently map IP addresses (prefixes) to network destinations. The trie structure allows for quick routing decisions based on the initial part of the IP address.
+* **Data Compression:** Tries can be employed in data compression algorithms like Huffman coding. By identifying and representing frequently occurring prefixes efficiently, tries can contribute to data size reduction.
 
-**simple example**
+**Advantages of Tries:**
 
+* **Efficient Prefix Matching:** The primary advantage of tries lies in their ability to perform prefix-based operations (search, insertion, deletion) in linear time (O(m)) on average, making them ideal for applications involving string prefixes.
+* **Dynamic Data Management:** Tries can grow or shrink as needed, adapting to the size of the data set.
+* **Space Efficiency for Shared Prefixes:** When multiple strings share common prefixes, tries avoid storing redundant data, leading to space efficiency.
+
+**Disadvantages of Tries:**
+
+* **Storage Overhead:** Compared to storing strings directly in an array, tries require additional space for storing nodes and pointers in the tree structure.
+* **Performance Relies on Average Case:** The efficiency of tries depends on the distribution of strings in the data set. In the worst case, if all strings have unique prefixes, search and insertion can become linear in the entire string length.
+* **Limited Functionality:** Tries are specifically designed for prefix-based operations. They are not as efficient for general string searching or sorting as other data structures like binary search trees.
+
+**Simple Example:**
+
+Imagine a dictionary implemented using a trie. Each word is inserted into the trie character by character. To search for a word, you follow the path from the root node based on the prefix characters. If you reach a leaf node with a complete word matching your search, you've found it. Tries excel in suggesting words that share a common beginning, making them ideal for autocomplete features.
 ---
 
 ### Graph:
