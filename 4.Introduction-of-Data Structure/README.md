@@ -356,23 +356,56 @@ To remove a cabin, you adjust the pointers to bypass it.
 ---
 ### Stack:
 
-**Applications**
+A stack is a fundamental data structure that adheres to the LIFO (Last-In-First-Out) principle. Imagine a stack of plates: the last plate added (pushed) is the first one retrieved (popped). Stacks excel in scenarios where the order of element insertion and removal is crucial.
 
-**Time complexity:**
+**Time Complexity Analysis:**
 
-**Advantages**
+* **Push:** O(1) - Constant time. Adding an element (pushing a plate) to the top of the stack is a quick operation, typically involving updating a single pointer (reference) to the top element.
+* **Pop:** O(1) - Constant time. Removing the top element (popping a plate) is also a constant time operation, as you simply access and remove the element referenced by the top pointer.
+* **Peek:** O(1) - Constant time. In some implementations, you can examine the top element without removing it (peeking at the top plate). This operation usually takes constant time as well.
+* **Search:** O(n) - Linear time in the worst case. While pushing and popping are efficient, searching for a specific element within the stack can be slow (O(n)) in the worst case. You might need to traverse the entire stack to find the desired element.
 
-**Disadvantages**
+**Applications of Stacks:**
 
-**simple example**
+Stacks find their place in a variety of programming tasks:
+
+* **Function Call Stack:** Stacks are used by computer systems to manage function calls. When a function is called, its arguments and local variables are pushed onto the stack. When the function returns, its information is popped off the stack.
+* **Expression Evaluation:** Stacks are instrumental in evaluating expressions using postfix or prefix notation. Operators and operands are pushed onto the stack, and calculations are performed based on the LIFO order.
+* **Undo/Redo Functionality:** Stacks are used to implement undo/redo functions in various software applications. Each action can be pushed onto the stack, allowing users to revert to previous states by popping elements off the stack.
+* **Backtracking Algorithms:** Stacks are employed in backtracking algorithms, where exploration paths are pushed onto the stack. If an unsuitable path is encountered, the stack can be used to backtrack and explore alternative paths.
+
+**Advantages of Stacks:**
+
+* **LIFO Order Guarantee:** The LIFO principle ensures a well-defined order for element access, making stacks suitable for operations that rely on processing elements in the reverse order they were added.
+* **Efficient Push/Pop:** Adding and removing elements from the top of the stack are constant time operations, offering efficient management of the topmost element.
+* **Simple Implementation:** The core concept of stacks is relatively straightforward, making them a good starting point for understanding data structures.
+
+**Disadvantages of Stacks:**
+
+* **Limited Access:** Random access to elements within the stack is generally not supported efficiently. You can only access the top element directly, and searching for a specific element can be slow.
+* **Fixed-Size Limitation (Optional):** Some stack implementations might have a predefined size limit, restricting the number of elements that can be stored.
+
+**Disadvantages of Stacks:**
+
+* **Limited Access:** Random access to elements within the stack is generally not supported efficiently. You can only access the top element directly, and searching for a specific element can be slow.
+* **Fixed-Size Limitation (Optional):** Some stack implementations might have a predefined size limit, restricting the number of elements that can be stored.
+
+**Simple Example:**
+
+Imagine a stack of plates at a cafeteria. People take plates from the top (push operation) and return them by placing them on top (pop operation). This adheres to the LIFO principle.  Here's a real-world analogy for each operation:
+
+* **Push:** Adding a new item to your shopping cart (pushing an item onto the stack)
+* **Pop:** Taking the topmost item out of your backpack (popping an item from the stack)
+* **Peek:** Checking the topmost item in your laundry basket without removing it (peeking at the top element of the stack)
 
 ---
 
 ### Queue:
 
+**Time complexity:**
+
 **Applications**
 
-**Time complexity:**
 
 **Advantages**
 
