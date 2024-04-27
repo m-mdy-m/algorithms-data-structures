@@ -135,7 +135,7 @@ Z_algorithm(Text)
       else:
         # Match ends, need to expand the window
         l = i
-        r = i + Z[k]
+        r = i + Z[k] - 1
     else:
       # Current index is outside the window, search for a new match
       l = r = i
