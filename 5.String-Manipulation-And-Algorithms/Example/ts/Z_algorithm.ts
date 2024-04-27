@@ -10,7 +10,7 @@ class ZAlgorithm implements ZAlgorithm {
   constructor(text: string) {
     this.text = text;
     this.n = text.length;
-    this.z_values = new Array(this.n).fill(0); // Initialize Z-values with zeros
+    this.z_values = new Array(this.n).fill(0); 
   }
   calculate(): Array<number> {
     let l: number = 0,
@@ -21,12 +21,15 @@ class ZAlgorithm implements ZAlgorithm {
         if (this.text[i] === this.text[k]) {
           this.z_values[i] = Math.min(r - i + 1, this.z_values[k]);
         } else {
-          l = r = i;
-          while (r < this.n && this.text[r] === this.text[r - l]) {
-            r += 1;
-          }
-          this.z_values[i] = r - l - 1;
+          l = i;
+          r = i + this.z_values[k] - 1;
         }
+      } else {
+        l = r = i;
+        while (r < this.n && this.text[r] === this.text[r - l]) {
+          r += 1;
+        }
+        this.z_values[i] = r - l - 1;
       }
     }
     return this.z_values;
@@ -75,4 +78,4 @@ Index   | Text Character  | Z-function Value  | Explanation (Visualized)
 
   A      B     A     B    D    A     B    A    C     D     A      B    A     B     C     A     B   A     B
 [ 0( ) -1(X) 1(A) -1(X) 0( ) 2(AB) -1(X) 1(A) 0( ) -1(X) 3(ABA) -1(X) 1(A) -1(X) 0( ) 3(ABA) -1(X) 1(A) -1(X) ]
-`
+`;
