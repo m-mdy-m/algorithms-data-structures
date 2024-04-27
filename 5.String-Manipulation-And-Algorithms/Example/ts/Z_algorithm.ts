@@ -42,7 +42,7 @@ const z_values = z_algorithm.calculate();
 
 console.log("Text:", text);
 console.log("Z-function:", z_values);
-` 
+/**
 -> : Output: 
 
 Text: ABABDABACDABABCABAB
@@ -78,4 +78,4 @@ Index   | Text Character  | Z-function Value  | Explanation (Visualized)
 
   A      B     A     B    D    A     B    A    C     D     A      B    A     B     C     A     B   A     B
 [ 0( ) -1(X) 1(A) -1(X) 0( ) 2(AB) -1(X) 1(A) 0( ) -1(X) 3(ABA) -1(X) 1(A) -1(X) 0( ) 3(ABA) -1(X) 1(A) -1(X) ]
-`;
+ */
