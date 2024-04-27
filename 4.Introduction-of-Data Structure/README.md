@@ -8,6 +8,9 @@ In computer science and computer programming, a data structure may be selected o
 
 For instance, in an object-oriented programming language, the data structure and its associated methods are bound together as part of a class definition. In non-object-oriented languages, there may be functions defined to work with the data structure, but they are not technically part of the data structure.
 
+## What Exactly Are Data Structures?
+At its core, a data structure is a particular way of organizing and storing data in a computer so that it can be accessed and modified efficiently. Just as a library uses shelves, sections, and catalog systems to organize books, software uses data structures to organize and store data. The choice of a specific data structure often depends on the nature of the application and the kind of operations that need to be performed on the data.
+
 ## Why are data structures important?
 
 Typical base data types, such as integers or floating-point values, that are available in most computer programming languages are generally insufficient to capture the logical intent for data processing and use. Yet applications that ingest, manipulate and produce information must understand how data should be organized to simplify processing. Data structures bring together the data elements in a logical way and facilitate the effective use, persistence and sharing of data. They provide a formal model that describes the way the data elements are organized.
