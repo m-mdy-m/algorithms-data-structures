@@ -62,7 +62,7 @@ The Z-algorithm boasts a significant advantage over the brute-force search in te
 
 ---
 
-### B. Manacher's Algorithm (Optional): A Champion for Palindromes
+### B. Manacher's Algorithm : A Champion for Palindromes
 
 While the Z-algorithm excels at general string searching, specific problems demand specialized solutions. Manacher's algorithm emerges as a powerful tool for identifying palindromic substrings within a text string with remarkable efficiency.
 
@@ -89,23 +89,162 @@ While the Z-algorithm can be adapted to find palindromes, Manacher's algorithm i
 
 ## **Applications of String Searching Algorithms**
 
-* Provide real-world applications where string searching algorithms play a crucial role. 
-   * Text editors (find functionality)
-   * Pattern matching in bioinformatics (DNA sequencing analysis)
-   * Plagiarism detection software
-   * Network intrusion detection systems (searching for malicious patterns)
 
-## **Implementation (Choose one language for detailed explanation)**
+String searching algorithms transcend theoretical concepts; they serve as the backbone for a multitude of real-world applications that rely on efficiently locating specific patterns within text data. Here, we explore some prominent examples:
 
-* Select a specific programming language commonly used for string manipulation (e.g., Python, Java, C++).
-* Implement the chosen algorithm (Z-algorithm or Manacher's algorithm) with clear and concise code, accompanied by detailed comments explaining each step.
+* **Text Editors: The Find Function - A Familiar Friend**
 
-## **Conclusion**
+The ubiquitous "find" functionality in text editors exemplifies the practical application of string searching algorithms. When you search for a specific word or phrase within a document, the underlying algorithm swiftly scans the text, identifying occurrences of the search pattern (your query) with remarkable speed. This empowers you to navigate large documents efficiently and locate relevant information effortlessly. 
+
+* **Bioinformatics: Unveiling the Secrets of Life within DNA Sequences**
+
+In the realm of bioinformatics, string searching algorithms play a critical role in analyzing DNA sequences. Scientists utilize these algorithms to identify specific patterns within these sequences, such as genes, regulatory elements, or repetitive motifs. By efficiently locating these patterns, researchers gain valuable insights into the genetic code, furthering our understanding of biological processes and paving the way for advancements in medicine and biotechnology.
+
+* **Plagiarism Detection: Protecting Intellectual Property**
+
+String searching algorithms serve as the foundation for plagiarism detection software. This software scans submitted text against a vast database of existing works, searching for potential matches or significant overlaps. By efficiently identifying instances of copied content, these algorithms help safeguard intellectual property and ensure the originality of academic and creative works.
+
+* **Network Intrusion Detection Systems: Guardians of the Digital Realm**
+
+Network intrusion detection systems (NIDS) rely heavily on string searching algorithms to protect against cyber threats. These systems constantly monitor network traffic, searching for malicious patterns or suspicious strings often embedded within malicious code or attack attempts. By efficiently identifying these patterns, NIDS can trigger alarms and take preventive measures to safeguard computer networks from unauthorized access and data breaches.
+
+> These are just a few examples of how string searching algorithms have revolutionized various fields.
+
+## Implementation
+
+### Implementation: Z-Algorithm in Python
+```python
+def Z_algorithm(text):
+  """
+  This function implements the Z-algorithm for string searching.
+
+  Args:
+      text: The text string to search within.
+
+  Returns:
+      A list containing the Z-function values for each index in the text string.
+  """
+  n = len(text)
+  Z = [0] * n
+
+  # Left and right pointers for tracking the longest prefix match
+  l = r = 0
+  for i in range(1, n):
+    # If the current index is within the window of a previously found match
+    if i <= r:
+      k = i - l
+      # Check if the character at index i matches the character at index k (within the window)
+      if Z[k] <= r - i:
+        Z[i] = Z[k]
+      else:
+        # If the match extends beyond the window, expand the window
+        l = i
+        r = i + Z[k]
+    else:
+      # If the current index is outside the window, search for a new match
+      l = r = i
+      while r < n and text[r] == text[r - l]:
+        r += 1
+      Z[i] = r - l - 1
+
+  return Z
+
+# Example usage
+text = "ABABDABACDABABCABAB"
+Z_values = Z_algorithm(text)
+
+print("Text:", text)
+print("Z-function:", Z_values)
+```
+
+**Explanation:**
+
+1. The `Z_algorithm` function takes a text string as input.
+2. It initializes an empty list `Z` of size `n` (length of the text) to store the Z-function values.
+3. Two variables, `l` and `r`, are used as left and right pointers to track the longest prefix match found so far.
+4. The loop iterates through the text string starting from index 1 (excluding the first character).
+5.  **Within the window:**
+    - If the current index `i` is within the window of a previously found match (i.e., `i <= r`), it checks if the character at the current index (`text[i]`) matches the character at the corresponding index within the window (`text[k]`).
+    - If a match is found and extends within the window (`Z[k] <= r - i`), the Z-value at the current index is set to the corresponding Z-value within the window (`Z[i] = Z[k]`).
+    - Otherwise, the window needs to be expanded (`l = i`, `r = i + Z[k]`) to encompass the new potential match starting at the current index.
+6.  **Outside the window:**
+    - If the current index `i` is outside the window (i.e., `i > r`), it initiates a new search for the longest prefix match starting from this index.
+    - It expands the window (`l = r = i`) and compares characters until a mismatch occurs (`r < n and text[r] == text[r - l]`).
+    - The Z-value at the current index is set to the length of the longest prefix match found (`Z[i] = r - l - 1`). 
+7. Finally, the function returns the `Z` list containing the Z-function values for each index in the text string.
+
+### Implementation: Manachers Algorithm in Python
+
+```python
+def Manachers_Algorithm(text):
+  """
+  This function implements Manacher's Algorithm for finding palindromic substrings.
+
+  Args:
+      text: The text string to search for palindromes.
+
+  Returns:
+      A list containing the starting indices and lengths of all palindromic substrings in the text.
+  """
+
+  C = [0] * (2 * len(text) + 1)  # Center array to store palindrome information
+  P = [0] * (2 * len(text) + 1)  # Length array to store palindrome lengths
+  C_center = R = 0  # Center and right boundary of the current palindrome
+
+  # Preprocess the text by adding a special character between each character
+  processed_text = "#" + "#".join(text) + "#"
+
+  for i in range(1, len(processed_text) - 1):
+    # Check if the current index is within the previously found palindrome's boundary
+    i_mirror = 2 * C_center - i
+    if i <= R:
+      P[i] = min(R - i, P[i_mirror])
+    else:
+      P[i] = 0
+
+    # Expand the palindrome centered at the current index
+    while i - P[i] - 1 >= 0 and i + P[i] + 1 < len(processed_text) and processed_text[i - P[i] - 1] == processed_text[i + P[i] + 1]:
+      P[i] += 1
+
+    # Update center and right boundary if a larger palindrome is found
+    if i + P[i] > R:
+      C_center = i
+      R = i + P[i]
+
+  # Extract starting indices and lengths of palindromes from the P array
+  palindromes = []
+  for i in range(1, len(processed_text) - 1, 2):
+    if P[i] > 0:
+      start_index = (i - P[i]) // 2
+      length = P[i]
+      palindromes.append((start_index, length))
+
+  return palindromes
+
+# Example usage
+text = "ABABDABACDABABCABAB"
+palindromes = Manachers_Algorithm(text)
+
+print("Text:", text)
+for start, length in palindromes:
+  print("Palindrome:", text[start:start + length])
+```
+
+**Explanation:**
+
+1. The `Manachers_Algorithm` function takes a text string as input.
+2. It initializes two empty lists: `C` (center array) and `P` (length array) of size (2 * len(text) + 1) to store information about palindromes. These arrays are used with a special character-padded version of the text (`processed_text`) for efficient processing.
+3. Two variables, `C_center` and `R`, track the center and right boundary of the currently expanding palindrome.
+4. The loop iterates through each character (excluding the first and last special characters) of the `processed_text`.
+5. It first checks if the current index (`i`) falls within the previously found palindrome's boundary (`i <= R`). If so, it utilizes mirroring to efficiently determine the potential palindrome length based on the mirrored index (`i_mirror`) and the corresponding `P` value.
+6. Otherwise, it initializes `P[i]` to 0, signifying no existing palindrome centered at this index.
+7. The loop then expands the potential palindrome centered at the current index (`i`), comparing characters outwards until a mismatch occurs or the boundaries are reached. The `P[i]` value is updated with the current palindrome length.
+8. If the expanded palindrome extends beyond the previously found palindrome (`i + P[i] > R`), the `C_center` and `R` are updated to reflect the new center and right boundary.
+9. After processing all characters, the algorithm extracts starting indices and lengths of palindromes from the `P` array, considering the special character padding.
+10. Finally, the function returns a list of tuples containing the starting index and length for each identified palindrome within the original text.
+
+## Conclusion
 
 * Summarize the key concepts of string manipulation and efficient string searching algorithms.
 * Briefly mention the existence of other advanced string searching algorithms for specific use cases (e.g., Knuth-Morris-Pratt algorithm).
 * Encourage further exploration of the topic and its diverse applications.
-
-## **References**
-
-* List any credible resources you used for your research (academic papers, textbooks, reputable websites).
