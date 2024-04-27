@@ -716,7 +716,7 @@ Here's a table summarizing common data structures and their complexities for bas
 
 | Data Structure | Access | Search | Insertion | Deletion |
 |---|---|---|---|---|
-| Array | O(1) | O(n) | O(1) (end) | O(n) (other) |
+| Array | O(1) | O(n) | O(1) (end) | O(n) (other) |..
 | Linked List | O(n) | O(n) | O(1) | O(1) |
 | Stack | O(1) | O(n) | O(1) | O(1) |
 | Queue | O(1) | O(n) | O(1) | O(1) |
