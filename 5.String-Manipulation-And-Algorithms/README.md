@@ -1,5 +1,5 @@
 # String Manipulation and Algorithms
-## **Introduction**
+## Introduction
 
 The digital world thrives on information, and a substantial portion of this information resides in the form of text. String manipulation and searching algorithms serve as the foundation for processing and analyzing this textual data. These algorithms empower us to perform a wide range of operations on strings, from the fundamental act of combining words (concatenation) to the intricate task of identifying specific patterns buried within vast amounts of text. 
 
@@ -21,8 +21,7 @@ Space complexity, on the other hand, delves into the amount of additional memory
 
 ## **Brute-Force Search: A Baseline Approach**
 
-
- The brute-force search serves as a foundational and intuitive technique for locating patterns within text. However, its simplicity comes at a cost in terms of computational efficiency.
+The brute-force search serves as a foundational and intuitive technique for locating patterns within text. However, its simplicity comes at a cost in terms of computational efficiency.
 
 **Algorithm Description: A Methodical Comparison**
 
@@ -112,98 +111,91 @@ Network intrusion detection systems (NIDS) rely heavily on string searching algo
 
 ## Implementation
 
-### Implementation: Z-Algorithm in Python
-```python
-def Z_algorithm(text):
-  """
-  This function implements the Z-algorithm for string searching.
+### How Implement Z-Algorithm 
 
-  Args:
-      text: The text string to search within.
 
-  Returns:
-      A list containing the Z-function values for each index in the text string.
-  """
-  n = len(text)
-  Z = [0] * n
+```
+Z_algorithm(Text)
+  Input: Text - String to search within
+  Output: Z - List containing the Z-function values for each index in Text
 
-  # Left and right pointers for tracking the longest prefix match
-  l = r = 0
+  n = length(Text)
+  Z = list of size n (initialized with zeros)
+
+  l = 0  # Left pointer for tracking the longest prefix match
+  r = 0  # Right pointer for tracking the longest prefix match
+
   for i in range(1, n):
-    # If the current index is within the window of a previously found match
+    # Check if the current index is within the window of a previously found match
     if i <= r:
       k = i - l
       # Check if the character at index i matches the character at index k (within the window)
-      if Z[k] <= r - i:
-        Z[i] = Z[k]
+      if Text[i] == Text[k]:
+        Z[i] = Z[k]  # Match extends within the window
       else:
-        # If the match extends beyond the window, expand the window
+        # Match ends, need to expand the window
         l = i
         r = i + Z[k]
     else:
-      # If the current index is outside the window, search for a new match
+      # Current index is outside the window, search for a new match
       l = r = i
-      while r < n and text[r] == text[r - l]:
+      while r < n and Text[r] == Text[r - l]:
         r += 1
-      Z[i] = r - l - 1
+      Z[i] = r - l - 1  # Length of the longest prefix match starting at i
 
   return Z
-
-# Example usage
-text = "ABABDABACDABABCABAB"
-Z_values = Z_algorithm(text)
-
-print("Text:", text)
-print("Z-function:", Z_values)
 ```
 
 **Explanation:**
 
-1. The `Z_algorithm` function takes a text string as input.
+1. The `Z_algorithm` function takes a text string (`Text`) as input.
 2. It initializes an empty list `Z` of size `n` (length of the text) to store the Z-function values.
-3. Two variables, `l` and `r`, are used as left and right pointers to track the longest prefix match found so far.
+3. Two variables, `l` and `r`, are used as left and right pointers to track the longest prefix match found so far. They represent the window within which characters have already been matched.
 4. The loop iterates through the text string starting from index 1 (excluding the first character).
-5.  **Within the window:**
-    - If the current index `i` is within the window of a previously found match (i.e., `i <= r`), it checks if the character at the current index (`text[i]`) matches the character at the corresponding index within the window (`text[k]`).
-    - If a match is found and extends within the window (`Z[k] <= r - i`), the Z-value at the current index is set to the corresponding Z-value within the window (`Z[i] = Z[k]`).
-    - Otherwise, the window needs to be expanded (`l = i`, `r = i + Z[k]`) to encompass the new potential match starting at the current index.
-6.  **Outside the window:**
-    - If the current index `i` is outside the window (i.e., `i > r`), it initiates a new search for the longest prefix match starting from this index.
-    - It expands the window (`l = r = i`) and compares characters until a mismatch occurs (`r < n and text[r] == text[r - l]`).
-    - The Z-value at the current index is set to the length of the longest prefix match found (`Z[i] = r - l - 1`). 
+5. **Within the window:**
+    - If the current index (`i`) is within the window of a previously found match (i.e., `i <= r`), it checks if the character at the current index (`Text[i]`) matches the character at the corresponding index within the window (`Text[k]`).
+        - If a match is found (`Text[i] == Text[k]`), it implies the longest prefix match extends within the window. The Z-value at the current index is simply copied from the corresponding Z-value within the window (`Z[i] = Z[k]`).
+        - Otherwise, the match ends at the current index, and the window needs to be expanded (`l = i`, `r = i + Z[k]`) to encompass the new potential match starting at the current index.
+6. **Outside the window:**
+    - If the current index (`i`) is outside the window (i.e., `i > r`), it initiates a new search for the longest prefix match starting from this index.
+    - It expands the window (`l = r = i`) by setting both pointers to the current index. 
+    - The `while` loop iterates, comparing characters outwards until a mismatch occurs (`r < n and Text[r] == Text[r - l]`) or the end of the text is reached.
+    - The Z-value at the current index is set to the length of the longest prefix match found during this expansion (`Z[i] = r - l - 1`). 
 7. Finally, the function returns the `Z` list containing the Z-function values for each index in the text string.
 
-### Implementation: Manachers Algorithm in Python
+> Example Z-algorithm in (Go,Java,python,Js,Ts)
+- [Go]()
+- [Java]()
+- [TypeScript]()
+- [JavaScript]()
+- [Python]()
 
-```python
-def Manachers_Algorithm(text):
-  """
-  This function implements Manacher's Algorithm for finding palindromic substrings.
+---
 
-  Args:
-      text: The text string to search for palindromes.
-
-  Returns:
-      A list containing the starting indices and lengths of all palindromic substrings in the text.
-  """
-
-  C = [0] * (2 * len(text) + 1)  # Center array to store palindrome information
-  P = [0] * (2 * len(text) + 1)  # Length array to store palindrome lengths
-  C_center = R = 0  # Center and right boundary of the current palindrome
+### How Implement Manachers Algorithm 
+```
+Manachers_Algorithm(Text)
+  Input: Text - String to search for palindromes
+  Output: Palindromes - List containing starting indices and lengths of all palindromes in Text
 
   # Preprocess the text by adding a special character between each character
-  processed_text = "#" + "#".join(text) + "#"
+  Processed_Text = "#" + "#".join(Text) + "#"
 
-  for i in range(1, len(processed_text) - 1):
+  C = list of size (2 * len(Processed_Text) + 1) (initialized with zeros)  # Center array for palindrome information
+  P = list of size (2 * len(Processed_Text) + 1) (initialized with zeros)  # Length array for palindrome lengths
+  C_center = 0  # Center of the current palindrome
+  R = 0  # Right boundary of the current palindrome
+
+  for i in range(1, len(Processed_Text) - 1):
     # Check if the current index is within the previously found palindrome's boundary
     i_mirror = 2 * C_center - i
     if i <= R:
-      P[i] = min(R - i, P[i_mirror])
+      P[i] = min(R - i, P[i_mirror])  # Utilize mirrored index for efficiency
     else:
-      P[i] = 0
+      P[i] = 0  # No existing palindrome centered at this index
 
     # Expand the palindrome centered at the current index
-    while i - P[i] - 1 >= 0 and i + P[i] + 1 < len(processed_text) and processed_text[i - P[i] - 1] == processed_text[i + P[i] + 1]:
+    while i - P[i] - 1 >= 0 and i + P[i] + 1 < len(Processed_Text) and Processed_Text[i - P[i] - 1] == Processed_Text[i + P[i] + 1]:
       P[i] += 1
 
     # Update center and right boundary if a larger palindrome is found
@@ -212,39 +204,44 @@ def Manachers_Algorithm(text):
       R = i + P[i]
 
   # Extract starting indices and lengths of palindromes from the P array
-  palindromes = []
-  for i in range(1, len(processed_text) - 1, 2):
+  Palindromes = list 
+  for i in range(1, len(Processed_Text) - 1, 2):
     if P[i] > 0:
       start_index = (i - P[i]) // 2
       length = P[i]
-      palindromes.append((start_index, length))
+      Palindromes.append((start_index, length))
 
-  return palindromes
-
-# Example usage
-text = "ABABDABACDABABCABAB"
-palindromes = Manachers_Algorithm(text)
-
-print("Text:", text)
-for start, length in palindromes:
-  print("Palindrome:", text[start:start + length])
+  return Palindromes
 ```
 
 **Explanation:**
 
-1. The `Manachers_Algorithm` function takes a text string as input.
-2. It initializes two empty lists: `C` (center array) and `P` (length array) of size (2 * len(text) + 1) to store information about palindromes. These arrays are used with a special character-padded version of the text (`processed_text`) for efficient processing.
-3. Two variables, `C_center` and `R`, track the center and right boundary of the currently expanding palindrome.
-4. The loop iterates through each character (excluding the first and last special characters) of the `processed_text`.
-5. It first checks if the current index (`i`) falls within the previously found palindrome's boundary (`i <= R`). If so, it utilizes mirroring to efficiently determine the potential palindrome length based on the mirrored index (`i_mirror`) and the corresponding `P` value.
-6. Otherwise, it initializes `P[i]` to 0, signifying no existing palindrome centered at this index.
-7. The loop then expands the potential palindrome centered at the current index (`i`), comparing characters outwards until a mismatch occurs or the boundaries are reached. The `P[i]` value is updated with the current palindrome length.
-8. If the expanded palindrome extends beyond the previously found palindrome (`i + P[i] > R`), the `C_center` and `R` are updated to reflect the new center and right boundary.
-9. After processing all characters, the algorithm extracts starting indices and lengths of palindromes from the `P` array, considering the special character padding.
-10. Finally, the function returns a list of tuples containing the starting index and length for each identified palindrome within the original text.
+1. The `Manachers_Algorithm` function takes a text string (`Text`) as input.
+2. It creates a preprocessed version of the text (`Processed_Text`) by adding a special character "#" between each character in the original text. This allows for efficient character comparisons during palindrome checks.
+3. Two empty lists are initialized: `C` (center array) and `P` (length array) of size (2 * len(Processed_Text) + 1) to store information about palindromes. These arrays track the center and length of the expanding palindrome for each index in the processed text.
+4. Two variables, `C_center` and `R`, are used to track the center and right boundary of the currently expanding palindrome.
+5. The loop iterates through each character (excluding the first and last special characters) of the `Processed_Text`.
+6. It first checks if the current index (`i`) falls within the previously found palindrome's boundary (`i <= R`). If so, it utilizes mirroring to efficiently determine the potential palindrome length. The `i_mirror` index is calculated based on the `C_center` and reflects the mirrored position within the palindrome. The `P[i]` value is then set to the minimum of the remaining length within the previous palindrome (`R - i`) and the corresponding `P` value at the mirrored index (`P[i_mirror]`).
+7. Otherwise, it initializes `P[i]` to 0, signifying no existing palindrome centered at this index.
+8. The loop then expands the potential palindrome centered at the current index (`i`), comparing characters outwards until a mismatch occurs or the boundaries are reached. The `P[i]` value is updated with the current palindrome length.
+9. If the expanded palindrome extends beyond the previously found palindrome (`i + P[i] > R`), the `C_center` and `R` are updated to reflect the new center and right boundary.
+10. After processing all characters, the algorithm extracts starting indices and lengths of palindromes from the `P` array. It iterates through the `P` array with a step of 2 (skipping the special characters) and checks for non-zero `P` values. If a non-zero value is found, it calculates the starting index based on the current index (`i`) and the palindrome length (`P[i]`).
+
+> Example Manachers algorithm in (Go,Java,python,Js,Ts)
+- [Go]()
+- [Java]()
+- [TypeScript]()
+- [JavaScript]()
+- [Python]()
 
 ## Conclusion
+String manipulation and efficient string searching algorithms are the unsung heroes of the digital world. They empower us to navigate, analyze, and modify textual data with remarkable efficiency.
 
-* Summarize the key concepts of string manipulation and efficient string searching algorithms.
-* Briefly mention the existence of other advanced string searching algorithms for specific use cases (e.g., Knuth-Morris-Pratt algorithm).
-* Encourage further exploration of the topic and its diverse applications.
+This exploration delved into two powerful algorithms:
+
+* **Z-Algorithm:** This algorithm pre-computes information about potential prefix matches within the text, enabling swift pattern searching. It excels at general string searching tasks.
+* **Manacher's Algorithm:** This algorithm leverages a clever data structure to efficiently identify palindromic substrings within a text string. It caters specifically to the problem of finding these intriguing words or phrases that read the same backward and forward.
+
+While Z-algorithm and Manacher's algorithm provide robust solutions, the realm of string searching extends beyond these. Algorithms like the Knuth-Morris-Pratt algorithm offer even faster pattern matching when the search pattern itself exhibits specific characteristics.
+
+This glimpse into the world of string searching algorithms paves the way for further exploration. As the volume and complexity of textual data continue to surge, efficient string searching algorithms will remain at the forefront, empowering us to unlock the valuable insights hidden within the vast ocean of words.
