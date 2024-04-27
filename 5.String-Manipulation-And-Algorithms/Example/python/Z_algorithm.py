@@ -32,7 +32,7 @@ class ZAlgorithm:
         for i in range(1, self.n):
             # Check if the current index is within the window of a previously found match
             if i <= r:
-                k = i - l
+                k = i - l # Calculate the mirrored index within the window
                 # Check if the character at index i matches the character at index k (within the window)
                 if self.text[i] == self.text[k]:
                     self.z_values[i] = min(r - i + 1, self.z_values[k])  # Utilize mirroring for efficiency

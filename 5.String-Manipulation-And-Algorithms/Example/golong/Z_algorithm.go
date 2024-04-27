@@ -3,34 +3,55 @@ package main
 import (
   "fmt"
 )
+/**
+This class implements the Z-Algorithm for efficient string searching.
+Attributes:
+    text (str): The text string to search within.
+    z_values (list): A list containing the Z-function values for each index in the text string.
+ */
+
 type ZAlgorithm struct {
 	Text   string
 	Length int
 	ZValues []int
 }
 func NewZAlgorithm(text string) *ZAlgorithm {
+	/**
+     Initializes the ZAlgorithm object.
+     Args:
+        text (str): The text string to search within.
+     */
   length := len(text)
   zValues := make([]int, length)
   return &ZAlgorithm{Text: text, Length: length, ZValues: zValues}
 }
 func (z *ZAlgorithm) CalculateZValues() {
-	left, right := 0, 0
+	/**
+    Calculates the Z-function values for each index in the text string.
+
+    Returns:
+        list: A list containing the Z-function values.
+     */
+	left, right := 0, 0 // Left and right pointers for tracking the longest prefix match
 	for i := 1; i < z.Length; i++ {
+        // Check if the current index is within the window of a previously found match
 	  if i <= right {
-		k := i - left
+		k := i - left // Calculate the mirrored index within the window
 		if z.Text[i] == z.Text[k] {
-		  z.ZValues[i] = min(right-i+1, z.ZValues[k])
+		  z.ZValues[i] = min(right-i+1, z.ZValues[k])  // Utilize mirroring for efficiency
 		} else {
+          // Mismatch, update window based on previously found Z-value
 		  left = i
-		  right = i + z.ZValues[k] - 1
+		  right = i + z.ZValues[k] - 1 
 		}
 	  } else {
+        // Current index is outside the window, search for a new match
 		left = i
 		right =i
 		for right < z.Length && z.Text[right] == z.Text[right-left] {
 		  right++
 		}
-		z.ZValues[i] = right - left - 1
+		z.ZValues[i] = right - left - 1  // Length of the new match
 	  }
 	}
 }

@@ -1,28 +1,49 @@
 class ZAlgorithm {
+    /**
+    This class implements the Z-Algorithm for efficient string searching.
+
+    Attributes:
+        text (str): The text string to search within.
+        z_values (list): A list containing the Z-function values for each index in the text string.
+     */
   constructor(text) {
+    /**
+     Initializes the ZAlgorithm object.
+     Args:
+        text (str): The text string to search within.
+     */
     this.text = text;
     this.n = text.length;
     this.z_values = new Array(this.n).fill(0);
   }
 
   calculate() {
-    let l = 0,
+    /**
+    Calculates the Z-function values for each index in the text string.
+
+    Returns:
+        list: A list containing the Z-function values.
+     */
+
+    let l = 0,  // Left and right pointers for tracking the longest prefix match
       r = 0;
     for (let i = 1; i < this.n; i++) {
+        // Check if the current index is within the window of a previously found match
       if (i <= r) {
-        let k = i - l;
+        let k = i - l;// Calculate the mirrored index within the window
         if (this.text[i] === this.text[k]) {
-          this.z_values[i] = Math.min(r - i + 1, this.z_values[k]);
+          this.z_values[i] = Math.min(r - i + 1, this.z_values[k]); // Utilize mirroring for efficiency
         } else {
           l = i;
-          r = i + this.z_values[k] - 1;
+          r = i + this.z_values[k] - 1; // Adjust window based on mismatch
         }
       } else {
+       // Mismatch, update window based on previously found Z-value
         l = r = i;
         while (r < this.n && this.text[r] === this.text[r - l]) {
           r += 1;
         }
-        this.z_values[i] = r - l - 1;
+        this.z_values[i] = r - l - 1; // Length of the new match
       }
     }
     return this.z_values;

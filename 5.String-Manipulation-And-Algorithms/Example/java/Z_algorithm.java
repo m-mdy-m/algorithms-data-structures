@@ -1,26 +1,40 @@
 public class ZAlgorithm {
+     /**
+    This class implements the Z-Algorithm for efficient string searching.
 
+    Attributes:
+        text (str): The text string to search within.
+        z_values (list): A list containing the Z-function values for each index in the text string.
+     */
     public static int[] calculateZValues(String text) {
+        /**
+        Initializes the ZAlgorithm object.
+        Args:
+           text (str): The text string to search within.
+        */
         int n = text.length();
         int[] zValues = new int[n];
 
-        int left = 0, right = 0;
+        int left = 0, right = 0; // Left and right pointers for tracking the longest prefix match
         for (int i = 1; i < n; i++) {
+             // Check if the current index is within the window of a previously found match
             if (i <= right) {
-                int k = i - left;
+                int k = i - left;// Calculate the mirrored index within the window
                 if (text.charAt(i) == text.charAt(k)) { 
-                    zValues[i] = Math.min(right - i + 1, zValues[k]);
+                    zValues[i] = Math.min(right - i + 1, zValues[k]);  // Utilize mirroring for efficiency
                 } else {
+                        // Mismatch, update window based on previously found Z-value
                     left = i;
-                    right = i + zValues[k] - 1;
+                    right = i + zValues[k] - 1;  
                 }
             } else {
+                // Current index is outside the window, search for a new match
                 right = i;
                 left = i;
                 while (right < n && text.charAt(right) == text.charAt(right - left)) {
                     right++;
                 }
-                zValues[i] = right - left - 1;
+                zValues[i] = right - left - 1;  // Length of the new match
             }
         }
         return zValues;
