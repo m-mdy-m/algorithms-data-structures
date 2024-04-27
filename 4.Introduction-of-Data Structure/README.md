@@ -437,16 +437,36 @@ Imagine a line of people waiting for a movie ticket (queue). People join the bac
 ---
 ### Binary Tree:
 
-**Time complexity:**
+Binary trees are fundamental data structures that organize elements in a tree-like structure, where each node can have at most two child nodes (left and right). They excel at representing hierarchical relationships and enabling efficient searching, sorting, and traversal operations.
 
-**Applications**
+**Time Complexity Analysis (Average Case):**
 
-**Advantages**
+* **Access:** O(log n) - Logarithmic time in the number of nodes (n). Due to the hierarchical structure, accessing a specific element involves traversing the tree, which can be done efficiently in log n time on average.
+* **Search:** O(log n) - Logarithmic time. Similar to access, searching for a specific element within a binary tree is a log n operation on average, assuming the tree is balanced.
+* **Insertion:** O(log n) - Logarithmic time. Inserting a new element into a balanced binary tree typically takes log n time to find the appropriate insertion point.
+* **Deletion:** O(log n) - Logarithmic time. Deleting an element from a balanced binary tree also involves log n time on average for locating and restructuring the tree.
 
-**Disadvantages**
+**Applications of Binary Trees:**
 
+* **Binary Search Trees (BSTs):** A specific type of binary tree where each node's value is greater than all elements in its left subtree and less than all elements in its right subtree. BSTs enable efficient searching and sorting of data.
+* **Heaps:** Specialized binary trees where the value of a node adheres to a specific order (max-heap or min-heap). Heaps are ideal for priority queues and efficient retrieval of the element with the highest or lowest value.
+* **Trie Data Structures:** Employ binary trees to store strings efficiently, allowing for fast retrieval of prefixes or words with a common beginning.
+* **File Systems:** Hierarchical directory structures in file systems can be represented using binary trees.
 
-**simple example**
+**Advantages of Binary Trees:**
+
+* **Efficient Search and Access:** Binary trees offer efficient searching and access operations (log n on average) due to their hierarchical organization.
+* **Dynamic Data Management:** Binary trees can grow or shrink as needed, adapting to the size of the data set.
+* **Foundation for Other Structures:** Binary trees serve as the basis for more advanced data structures like BSTs, heaps, and tries, which offer specialized functionalities.
+
+**Disadvantages of Binary Trees:**
+
+* **Performance Relies on Balance:** The efficiency of binary trees depends heavily on their balance. Imbalanced trees can lead to O(n) worst-case time complexity for operations like search and insertion.
+* **Limited Functionality for Unsorted Data:** Basic binary trees are not inherently sorted, making them less efficient for general-purpose sorting compared to sorted arrays or balanced binary search trees.
+
+**Simple Example:**
+
+Imagine a family tree. Each person is a node in the binary tree, with parents as the parent nodes and children as the child nodes. This structure allows for efficient navigation (finding a specific ancestor or descendant) based on the hierarchical relationships between family members.
 
 ---
 ### Binary Search Tree:
