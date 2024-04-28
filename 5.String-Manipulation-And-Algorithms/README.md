@@ -280,11 +280,11 @@ Manachers_Algorithm(Text)
 10. After processing all characters, the algorithm extracts starting indices and lengths of palindromes from the `P` array. It iterates through the `P` array with a step of 2 (skipping the special characters) and checks for non-zero `P` values. If a non-zero value is found, it calculates the starting index based on the current index (`i`) and the palindrome length (`P[i]`).
 
 > Example Manachers algorithm in (Go,Java,python,Js,Ts)
-- [Go]()
-- [Java]() - Write with Ai
-- [TypeScript]()
-- [JavaScript]()
-- [Python]()
+- [Go](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/golong/Manachers_Algorithm.go)
+- [Java](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/java/Manachers_Algorithm.go) - Write with Ai
+- [TypeScript](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/ts/Manachers_Algorithm.go)
+- [JavaScript](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/js/Manachers_Algorithm.go)
+- [Python](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/python/Manachers_Algorithm.go)
 
 
 
