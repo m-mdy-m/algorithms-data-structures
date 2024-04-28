@@ -46,7 +46,7 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
   
 6. [Basic Sorting (e.g., Bubble Sort, Selection Sort, Insertion Sort)](6.Basic-Sorting/)
 
-7. Search Algorithm
+7. [Search Algorithm](7.Search-Algorithm/)
 
 8. Testing and Debugging Techniques
 
