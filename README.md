@@ -186,31 +186,15 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
  - [javatpoint](https://www.javatpoint.com)
 
 ## Project
+> Attention : Projects and solution of different algorithms or design patterns are solved in this organization
 
-### String Manipulation and Algorithms
- * **Z Algorithm:**
-   - **Text Summarization:** -> [Project description](Projects/String_Manipulatio/Z_Algorithm/Text_Summarization/)
-   - **Text Search with Highlighting:** -> [Project description](Projects/String_Manipulatio/Z_Algorithm/Text_Search_Highlighting/)
-   ---
- * Manachers Algorithm
-   - **Palindrome Finder:** -> [Project description](Projects/String_Manipulatio/Manachers_Algorithm/Palindrome_Finder/)
-   - **Interactive Palindrome Game:** -> [Project description](Projects/String_Manipulatio/Manachers_Algorithm/Interactive_Palindrome_Game/)
+### [Organization](https://github.com/Algorithmic-Solutions)
+
+
+> [String Manipulation and Algorithms](https://github.com/Algorithmic-Solutions/.github/blob/main/profile/README.md#string-manipulation-and-algorithms)
 ---
 
-### Design Pattern:
-   * **Creational**:
-     - **Pizza Builder (Builder Pattern)** -> [Project description](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/Projects/Design-Patterns/Creational/Pizza-Builder)
-      - **Shape Area Calculator with Factory Method (or Prototype Pattern)** -> [Project description](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/Projects/Design-Patterns/Creational/Shape-Area-Calculator)
-     - **Character Creator with Abstract Factory (or Singleton Pattern)**  -> [Project description](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/Projects/Design-Patterns/Creational/Character-Creato)
-   ---
-   * **Structural**:
-      - **Image Editor** -> [Project description](Projects/OOP/Design-Pattern/Structural)
-   ---
-   **Behavioral**:
-   
-   1.
-   2.
-   3.
+> [Design Pattern](https://github.com/Algorithmic-Solutions/.github/blob/main/profile/README.md#design-pattern)
 ---
 ## Collaboration and Feedback
 
