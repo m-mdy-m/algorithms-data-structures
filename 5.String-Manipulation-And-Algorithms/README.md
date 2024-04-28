@@ -281,7 +281,7 @@ Manachers_Algorithm(Text)
 
 > Example Manachers algorithm in (Go,Java,python,Js,Ts)
 - [Go]()
-- [Java]()
+- [Java]() - Write with Ai
 - [TypeScript]()
 - [JavaScript]()
 - [Python]()
