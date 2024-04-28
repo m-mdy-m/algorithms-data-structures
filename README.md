@@ -198,15 +198,13 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
 ---
 
 ### Design Pattern:
-   **Creational**:
-   >* [Pizza Builder (Builder Pattern)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/Projects/Design-Patterns/Creational/Pizza-Builder)
+   * **Creational**:
+     - **Pizza Builder (Builder Pattern)** -> [Project description](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/Projects/Design-Patterns/Creational/Pizza-Builder)
+      - **Shape Area Calculator with Factory Method (or Prototype Pattern)** -> [Project description](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/Projects/Design-Patterns/Creational/Shape-Area-Calculator)
+     - **Character Creator with Abstract Factory (or Singleton Pattern)**  -> [Project description](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/Projects/Design-Patterns/Creational/Character-Creato)
    ---
-   >* [Shape Area Calculator with Factory Method (or Prototype Pattern)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/Projects/Design-Patterns/Creational/Shape-Area-Calculator)
-   ---
-   >* [Character Creator with Abstract Factory (or Singleton Pattern)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/Projects/Design-Patterns/Creational/Character-Creato)
-   ---
-   **Structural**:
-   > [Image Editor](https://github.com/m-mdy-m/Image-Structr-Pro) -> [description](Projects/OOP/Design-Pattern/Structural)
+   * **Structural**:
+      - **Image Editor** -> [Project description](Projects/OOP/Design-Pattern/Structural)
    ---
    **Behavioral**:
    
