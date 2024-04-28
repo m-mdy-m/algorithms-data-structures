@@ -183,6 +183,45 @@ Z_algorithm(Text)
 - [JavaScript](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/js/Z_algorithm.js)
 - [Python](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/golong/python.py)
 
+
+**Output**->
+```
+Text: ABABDABACDABABCABAB
+Z-function: [0, -1, 1, -1, 0, 2, -1, 1, 0, -1, 3, -1, 1, -1, 0, 3, -1, 1, -1]
+```
+Explanations:
+```
+  A  B  A  B D A  B A C  D A  B A  B C A  B A  B
+[ 0 -1  1 -1 0 2 -1 1 0 -1 3 -1 1 -1 0 3 -1 1 -1 ]
+```
+
+Index   | Text Character  | Z-function Value  | Explanation (Visualized)
+------- | --------------  | ----------------- | ------------------------
+0       | A               | 0                 | The first character, so no prefix match (empty string). Represented by an empty box.
+1       | B               | -1                | No prefix match starting at index 1 is a substring of the entire string. Represented by a box with "X" indicating no match.
+2       | A               | 1                 | "A" itself is the longest prefix match starting at index 2. Represented by a box containing "A".
+3       | B               | -1                | No prefix match starting at index 3 is a substring of the entire string. Represented by a box with "X".
+4       | D               | 0                 | No prefix match starting at index 4 is a substring of the entire string (since "AB" is not a prefix of "ABABDABACDABABCABAB"). Represented by an empty box.
+5       | A               | 2                 | The longest prefix match starting at index 5 is "AB" (shown as a highlighted box).
+6       | B               | -1                | No prefix match starting at index 6 is a substring of the entire string. Represented by a box with "X".
+7       | A               | 1                 | "A" itself is the longest prefix match starting at index 7. Represented by a box containing "A".
+8       | C               | 0                 | No prefix match starting at index 8 is a substring of the entire string. Represented by an empty box.
+9       | D               | -1                | No prefix match starting at index 9 is a substring of the entire string. Represented by a box with "X".
+10      | A               | 3                 | The longest prefix match starting at index 10 is "ABA" (shown as a highlighted box).
+11      | B               | -1                | No prefix match starting at index 11 is a substring of the entire string. Represented by a box with "X".
+12      | A               | 1                 | "A" itself is the longest prefix match starting at index 12. Represented by a box containing "A".
+13      | B               | -1                | No prefix match starting at index 13 is a substring of the entire string. Represented by a box with "X".
+14      | C               | 0                 | No prefix match starting at index 14 is a substring of the entire string. Represented by an empty box.
+15      | A               | 3                 | The longest prefix match starting at index 15 is "ABA" (shown as a highlighted box).
+16      | B               | -1                | No prefix match starting at index 16 is a substring of the entire string. Represented by a box with "X".
+17      | A               | 1                 | "A" itself is the longest prefix match starting at index 17. Represented by a box containing "A".
+18      | B               | -1                | No prefix match starting at index 18 is a substring of the entire string. Represented by a box with "X".
+
+```
+  A      B     A     B    D    A     B    A    C     D     A      B    A     B     C     A     B   A     B
+[ 0( ) -1(X) 1(A) -1(X) 0( ) 2(AB) -1(X) 1(A) 0( ) -1(X) 3(ABA) -1(X) 1(A) -1(X) 0( ) 3(ABA) -1(X) 1(A) -1(X) ]
+```
+
 ---
 
 ### How Implement Manachers Algorithm 
@@ -246,6 +285,46 @@ Manachers_Algorithm(Text)
 - [TypeScript]()
 - [JavaScript]()
 - [Python]()
+
+
+
+**Output**->
+```
+Text: ABABDABACDABABCABAB
+Manachers-function: [(0, 1), (0, 3), (1, 3), (3, 1), (4, 1), (5, 1), (5, 3), (7, 1), (8, 1), (9, 1), (10, 1), (10, 3), (11, 3), (13, 1), (14, 1), (15, 1), (15, 3), (16, 3), (18, 1)]
+processed_text: #A#B#A#B#D#A#B#A#C#D#A#B#A#B#C#A#B#A#B# -> length : 39
+```
+
+- **Text:** This represents the original input string that will be analyzed for palindromes.
+- **Manachers-function:** This is a list of tuples, where each tuple encodes the starting index and length of a palindrome discovered within the processed text.
+- **processed_text:** This showcases a preprocessed version of the original text. Special characters (`#`) are inserted between each character and additional `#` are placed at the beginning and end. This preprocessing step simplifies the palindrome identification process by exploiting character symmetry.
+
+| Index (i) | Processed Text Slice | Start Index (original text) | Length | Reason |
+|---|---|---|---|---|
+| (0, 1) | `#` | 0 | 1 | Single character 'A' at index 0 in the original text is a palindrome of length 1. |
+| (0, 3) | `#A#B#` | 0 | 3 | Palindrome "ABA" centered at index 1 (considering `#` as boundaries). |
+| (1, 3) | `#A#` | (1 - 3) // 2 = -1 (ignored) | 3 | Center of this palindrome is at index 1, but it extends beyond the beginning of the processed text (invalid). |
+| (3, 1) | `#B#A#` | 3 // 2 = 1 | 1 | Single character 'B' at index 1 is a palindrome of length 1. |
+| (4, 1) | `#A#B#` | 4 // 2 = 2 | 1 | Single character 'A' at index 2 is a palindrome of length 1. |
+| (5, 1) | `#D#A#` | 5 // 2 = 2 | 1 | Single character 'D' at index 2 is a palindrome of length 1. |
+| (5, 3) | `#D#A#B#` | 5 // 2 = 2 | 3 | Palindrome "BAB" centered at index 3. |
+| (7, 1) | `#A#C#` | 7 // 2 = 3 | 1 | Single character 'C' at index 3 is a palindrome of length 1. |
+| ... | ... | ... | ... | ... |
+| (18, 1) | `#B#` | 18 // 2 = 9 | 1 | Single character 'B' at index 9 is a palindrome of length 1. |
+
+**Explanation and Diagrams (Conceptual):**
+
+The Manachers Algorithm leverages two key concepts: a "center" (`C_center`) and a "right" boundary (`R`). It employs a `P` array to store the "palindrome radius" for each index, representing the maximum length of a palindrome centered at that index within the current boundaries.
+
+Consider the palindrome "ABA" (centered at index 1) for illustration:
+
+```
+      i (center)
+   0 # A # B #  #  #  #  #
+   -3-2-1--0--1--2--3--4-
+          R (right boundary)
+          P[i] = 1
+```
 
 ## Conclusion
 String manipulation and efficient string searching algorithms are the unsung heroes of the digital world. They empower us to navigate, analyze, and modify textual data with remarkable efficiency.
