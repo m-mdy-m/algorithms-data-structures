@@ -312,8 +312,6 @@ processed_text: #A#B#A#B#D#A#B#A#C#D#A#B#A#B#C#A#B#A#B# -> length : 39
 | ... | ... | ... | ... | ... |
 | (18, 1) | `#B#` | 18 // 2 = 9 | 1 | Single character 'B' at index 9 is a palindrome of length 1. |
 
-**Explanation and Diagrams (Conceptual):**
-
 The Manachers Algorithm leverages two key concepts: a "center" (`C_center`) and a "right" boundary (`R`). It employs a `P` array to store the "palindrome radius" for each index, representing the maximum length of a palindrome centered at that index within the current boundaries.
 
 Consider the palindrome "ABA" (centered at index 1) for illustration:
