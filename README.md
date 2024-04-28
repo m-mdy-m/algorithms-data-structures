@@ -193,14 +193,8 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
    - **Text Search with Highlighting:** -> [Project description](Projects/String_Manipulatio/Z_Algorithm/Text_Search_Highlighting/)
    ---
  * Manachers Algorithm
-   - **Palindrome Finder:** -> [Project description]()
-      * This is the most straightforward project. 
-      * Implement the Manachers Algorithm to find all palindromes within a user-provided text string. 
-      * Display the starting index and length of each palindrome found.
-   - **Interactive Palindrome Game:** -> [Project description]()
-      *  Create a game where the user is presented with random strings and has to guess if they are palindromes or not. 
-      *  Utilize Manachers to verify the user's guess and provide feedback (correct or incorrect). 
-      *  Keep track of the user's score and offer the option to play multiple rounds.
+   - **Palindrome Finder:** -> [Project description](Projects/String_Manipulatio/Manachers_Algorithm/Palindrome_Finder/)
+   - **Interactive Palindrome Game:** -> [Project description](Projects/String_Manipulatio/Manachers_Algorithm/Interactive_Palindrome_Game/)
 ---
 
 ### Design Pattern:
