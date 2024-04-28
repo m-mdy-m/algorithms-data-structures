@@ -189,20 +189,15 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
 
 ### String Manipulation and Algorithms
  * **Z Algorithm:**
-   - **Text Summarization:** -> [description]()
-      * Implement the Z algorithm to identify frequently occurring phrases within a text.
-      * Extract these phrases and rank them based on their frequency or relevance to the overall content.
-      * Use these extracted phrases to generate a concise summary of the text.
-   - **Text Search with Highlighting:** -> [description]()
-      * Implement a search function that utilizes the Z algorithm to quickly find occurrences of a user-provided search term within a text document.
-      * Highlight the found occurrences within the document for easy identification.
+   - **Text Summarization:** -> [Project description](Projects/String_Manipulatio/Z_Algorithm/Text_Summarization/)
+   - **Text Search with Highlighting:** -> [Project description](Projects/String_Manipulatio/Z_Algorithm/Text_Search_Highlighting/)
    ---
  * Manachers Algorithm
-   - **Palindrome Finder:** -> [description]()
+   - **Palindrome Finder:** -> [Project description]()
       * This is the most straightforward project. 
       * Implement the Manachers Algorithm to find all palindromes within a user-provided text string. 
       * Display the starting index and length of each palindrome found.
-   - **Interactive Palindrome Game:** -> [description]()
+   - **Interactive Palindrome Game:** -> [Project description]()
       *  Create a game where the user is presented with random strings and has to guess if they are palindromes or not. 
       *  Utilize Manachers to verify the user's guess and provide feedback (correct or incorrect). 
       *  Keep track of the user's score and offer the option to play multiple rounds.
