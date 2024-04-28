@@ -187,17 +187,40 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
 
 ## Project
 
+### String Manipulation and Algorithms
+ * **Z Algorithm:**
+   - **Text Summarization:** -> [description]()
+      * Implement the Z algorithm to identify frequently occurring phrases within a text.
+      * Extract these phrases and rank them based on their frequency or relevance to the overall content.
+      * Use these extracted phrases to generate a concise summary of the text.
+   - **Text Search with Highlighting:** -> [description]()
+      * Implement a search function that utilizes the Z algorithm to quickly find occurrences of a user-provided search term within a text document.
+      * Highlight the found occurrences within the document for easy identification.
+   ---
+ * Manachers Algorithm
+   - **Palindrome Finder:** -> [description]()
+      * This is the most straightforward project. 
+      * Implement the Manachers Algorithm to find all palindromes within a user-provided text string. 
+      * Display the starting index and length of each palindrome found.
+   - **Interactive Palindrome Game:** -> [description]()
+      *  Create a game where the user is presented with random strings and has to guess if they are palindromes or not. 
+      *  Utilize Manachers to verify the user's guess and provide feedback (correct or incorrect). 
+      *  Keep track of the user's score and offer the option to play multiple rounds.
+---
+
 ### Design Pattern:
-   #### **Creational**:
+   **Creational**:
    >* [Pizza Builder (Builder Pattern)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/Projects/Design-Patterns/Creational/Pizza-Builder)
    ---
    >* [Shape Area Calculator with Factory Method (or Prototype Pattern)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/Projects/Design-Patterns/Creational/Shape-Area-Calculator)
    ---
    >* [Character Creator with Abstract Factory (or Singleton Pattern)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/Projects/Design-Patterns/Creational/Character-Creato)
    ---
-   #### **Structural**:
+   **Structural**:
    > [Image Editor](https://github.com/m-mdy-m/Image-Structr-Pro) -> [description](Projects/OOP/Design-Pattern/Structural)
-   #### **Behavioral**:
+   ---
+   **Behavioral**:
+   
    1.
    2.
    3.
