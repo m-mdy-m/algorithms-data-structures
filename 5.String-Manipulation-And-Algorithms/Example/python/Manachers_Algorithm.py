@@ -38,6 +38,7 @@ if __name__ == "__main__":
 
     print("Text:", text)
     print("Manachers-function:", manachers_values)
+    print("processed_text:",manachers.processed_text)
 
 """
 
@@ -45,29 +46,30 @@ if __name__ == "__main__":
 
 Text: ABABDABACDABABCABAB
 Manachers-function: [(0, 1), (0, 3), (1, 3), (3, 1), (4, 1), (5, 1), (5, 3), (7, 1), (8, 1), (9, 1), (10, 1), (10, 3), (11, 3), (13, 1), (14, 1), (15, 1), (15, 3), (16, 3), (18, 1)]
+processed_text: #A#B#A#B#D#A#B#A#C#D#A#B#A#B#C#A#B#A#B# -> length : 39
+---
+
+
+| Index (i) | Processed Text Slice | Start Index (original text) | Length | Reason |
+|-----------|----------------------|-----------------------------|--------|--------|
+| (0, 1)    | `#` | 0              | 1                           | Single character 'A' at index 0 is a palindrome of length 1. |
+| (0, 3)    | `#A#B#`              | 0                           | 3      | Palindrome "ABA" centered at index 1 (considering `#` as boundaries). |
+| (1, 3)    | `#A#`                | (1 - 3) // 2 = -1 (ignored) | 3      | Center of this palindrome is at index 1, but it extends beyond the beginning of the processed text (invalid). |
+| (3, 1)    | `#B#A#`              | 3 // 2 = 1                  | 1      | Single character 'B' at index 1 is a palindrome of length 1. |
+| (4, 1)    | `#A#B#`              | 4 // 2 = 2                  | 1      | Single character 'A' at index 2 is a palindrome of length 1. |
+| (5, 1)    | `#D#A#`              | 5 // 2 = 2                  | 1      | Single character 'D' at index 2 is a palindrome of length 1. |
+| (5, 3)    | `#D#A#B#`            | 5 // 2 = 2                  | 3      | Palindrome "BAB" centered at index 3. |
+| (7, 1)    | `#A#C#`              | 7 // 2 = 3                  | 1      | Single character 'C' at index 3 is a palindrome of length 1. |
+|-----------|----------------------|-----------------------------|--------|--------|
+| (18, 1)   | `#B#`                | 18 // 2 = 9                 | 1      | Single character 'B' at index 9 is a palindrome of length 1. |
 
 ```
-| Index (i) | Length (P[i]) | Start Index (i - P[i]) // 2 | Length | Palindrome | Explanation |
-|---|---|---|---|---|---|
-| 0        | 1              | 0                       | 1      | A          | Single character palindrome centered at index 0 (processed text). |
-| 0        | 3              | 0                       | 3      | ABA       | Palindrome centered at index 0 with radius 3, covering characters 'A', '#', 'B', and 'A'. |
-| 1        | 3              | 0                       | 3      | ABA       | Overlaps with the previous palindrome (centered at 0) as they share the same center but have a different radius. |
-| 3        | 1              | 1                       | 1      | B          | Single character palindrome centered at index 3 (processed text). |
-| 4        | 1              | 2                       | 1      | A          | Single character palindrome centered at index 4 (processed text). |
-| 5        | 1              | 2                       | 1      | B          | Single character palindrome centered at index 5 (processed text). |
-| 5        | 3              | 1                       | 3      | BAB       | Palindrome centered at index 5 with radius 3, covering characters 'B', '#', 'A', and 'B'. |
-| 7        | 1              | 3                       | 1      | D          | Single character palindrome centered at index 7 (processed text). |
-| 8        | 1              | 4                       | 1      | A          | Single character palindrome centered at index 8 (processed text). |
-| 9        | 1              | 4                       | 1      | C          | Single character palindrome centered at index 9 (processed text). |
-| 10       | 1              | 5                       | 1      | D          | Single character palindrome centered at index 10 (processed text). |
-| 10       | 3              | 3                       | 3      | BAB       | Overlaps with the previous palindrome (centered at 5) as they share the same center but have a different radius. |
-| 11       | 3              | 4                       | 3      | ABC       | Palindrome centered at index 11 with radius 3, covering characters 'A', '#', 'B', and 'C'. |
-| 13       | 1              | 6                       | 1      | A          | Single character palindrome centered at index 13 (processed text). |
-| 14       | 1              | 7                       | 1      | B          | Single character palindrome centered at index 14 (processed text). |
-| 15       | 1              | 7                       | 1      | A          | Single character palindrome centered at index 15 (processed text). |
-| 15       | 3              | 6                       | 3      | ABA       | Overlaps with the previous palindrome (centered at 15) as they share the same center but have a different radius. |
-| 16       | 3              | 7                       | 3      | ABC       | Overlaps with the previous palindrome (centered at 11) as they share the same center but have a different radius. |
-| 18       | 1              | 9                       | 1      | B          | Single character palindrome centered at index 18 (processed text). |
+      i (center)
+   0 # A # B #  #  #  #  #
+   -3-2-1--0--1--2--3--4-
+          R (right boundary)
+          P[i] = 1
+```
 ```
 
 """
