@@ -127,6 +127,8 @@ Sorting algorithms are the cornerstone of data organization, playing a vital rol
 
 ## Popular algorithms:
 
+> `Ai is used in some descriptions`
+
 ### Selection sort
 **Explanation:**
 
