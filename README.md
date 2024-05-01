@@ -52,6 +52,9 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
 
 9. Pseudo codes
 
+0. Challenges:
+   - > challenge coding and implementing concepts
+
 **Medium:**
 
 10. Data Structures
@@ -60,85 +63,83 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
 
 12. Software Engineering Principles
 
-13. Coding Challenges
+13. Additional Data Structures (e.g., Linked Lists, Stacks, Queues, Hash Tables)
 
-14. Additional Data Structures (e.g., Linked Lists, Stacks, Queues, Hash Tables)
+14. Dynamic Programming
 
-15. Dynamic Programming
+15. [Software Design Patterns](16.Software-Design-Patterns/)
 
-16. [Software Design Patterns](16.Software-Design-Patterns/)
+16. Performance Analysis of Presentations and Objects
 
-17. Performance Analysis of Presentations and Objects
+17. Real-world Case Studies
 
-18. Real-world Case Studies
-
-19. Graph Algorithms (e.g., Graphs, Dijkstra's Algorithm)
+18. Graph Algorithms (e.g., Graphs, Dijkstra's Algorithm)
 
 **Advanced:**
 
-20. Performance Analysis of Presentations and Objects
+19. Performance Analysis of Presentations and Objects
 
-21. Advanced Data Structures (e.g., Binary Search Trees, Tree Navigation)
+20. Advanced Data Structures (e.g., Binary Search Trees, Tree Navigation)
 
-22. Advanced Sorting Algorithms (e.g., Merge Sort, Quick Sort)
+21. Advanced Sorting Algorithms (e.g., Merge Sort, Quick Sort)
 
-23. Concurrent Programming and Parallel Algorithms
+22. Concurrent Programming and Parallel Algorithms
 
-24. Additional Topics (e.g., Binary Pyramids, Problem-Solving Patterns)
+23. Additional Topics (e.g., Binary Pyramids, Problem-Solving Patterns)
 
-25. Graph Preview
+24. Graph Preview
 
-26. Binary Pyramids
+25. Binary Pyramids
 
-27. Problem solving approach
+26. Problem solving approach
 
-28. Bubble Sort
+27. Bubble Sort
 
-29. Selective Sorting
+28. Selective Sorting
 
-30. Insertion Sort
+29. Insertion Sort
 
-31. Comparison of Bubble and Selection and Insertion Sort
+30. Comparison of Bubble and Selection and Insertion Sort
 
-32. Merge Sort
+31. Merge Sort
 
-33. Quick Sort
+32. Quick Sort
 
-34. Basic Sort
+33. Basic Sort
 
-35. Linked and One-way Lists
+34. Linked and One-way Lists
 
-36. Two-way Linked Lists
+35. Two-way Linked Lists
 
-37. Stacks and Queues
+36. Stacks and Queues
 
-38. Binary Search Trees
+37. Binary Search Trees
 
-39. Tree Navigation
+38. Tree Navigation
 
-40. Binary Pyramids
+39. Binary Pyramids
 
-41. Hash Tables
+40. Hash Tables
 
-42. Graphs
+41. Graphs
 
-43. Graph Preview
+42. Graph Preview
 
-44. Dijkstra's Algorithm
+43. Dijkstra's Algorithm
 
-45. Optimization Algorithms
+44. Optimization Algorithms
 
-46. Advanced Software Design Patterns
+45. Advanced Software Design Patterns
 
-47. Quantum Computing Concepts
+46. Quantum Computing Concepts
 
-48. Parallel Computing Techniques
+47. Parallel Computing Techniques
 
-49. Familiarity with Advanced Graph Algorithms
+48. Familiarity with Advanced Graph Algorithms
 
-50. Advanced Graph Algorithms (e.g., Minimum Spanning Trees, Network Flow Algorithms)
+49. Advanced Graph Algorithms (e.g., Minimum Spanning Trees, Network Flow Algorithms)
 
-51. Machine Learning Basics
+50. Machine Learning Basics
 
 **More Advanced:**
 
