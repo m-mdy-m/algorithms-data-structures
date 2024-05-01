@@ -571,5 +571,3 @@ The best sorting algorithm for a specific situation depends on various factors l
 - [wikipedia](https://en.wikipedia.org/wiki/Sorting_algorithm)
 - [freecodecamp](https://www.freecodecamp.org/news/sorting-algorithms-explained-with-examples-in-python-java-and-c/)
 - [sitepoint](https://www.sitepoint.com/best-sorting-algorithms/)
-
-## Conclusion
