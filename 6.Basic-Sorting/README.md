@@ -78,20 +78,6 @@ Sorting algorithms are the cornerstone of data organization, playing a vital rol
 
 > Summary: sorting algorithm is like Batman in Gotham City 😂
 
-## Types in Data Structures
-
-There are various types of sorting available. The choice of sorting algorithm depends on various factors, such as the size of the data set, the type of data being sorted, and the desired time and space complexity.
-### Comparison-based sorting algorithms
-These compare elements of the data set and determine their order based on the result of the comparison. Examples of comparison-based sorting algorithms include bubble sort, insertion sort, quicksort, merge sort, and heap sort.
-### Non-comparison-based sorting algorithms
-These don’t compare elements directly, but rather use other properties of the data set to determine their order. Examples of non-comparison-based sorting algorithms include counting sort, radix sort, and bucket sort.
-### In-place sorting algorithms
-These algorithms sort the data set in-place, meaning they don’t require additional memory to store intermediate results. Examples of in-place sorting algorithms include bubble sort, insertion sort, quicksort, and shell sort.
-### Stable sorting algorithms
-These preserve the relative order of equal elements in the data set. Examples of stable sorting algorithms include insertion sort, merge sort, and Timsort.
-### Adaptive sorting algorithms
-These take advantage of any existing order in the data set to improve their efficiency. Examples of adaptive sorting algorithms include insertion sort, bubble sort, and Timsort.
-
 ## Characteristics of Sorting Algorithms:
 
 ## Applications of Sorting Algorithms:
@@ -101,6 +87,89 @@ These take advantage of any existing order in the data set to improve their effi
 - Characteristics
 - How it Work
 ## How it Works?
+
+## Types in Data Structures
+
+Choosing the right sorting algorithm depends on several factors like data size, data type, and desired complexity. Here's a breakdown of the various types:
+
+### Comparison-based:
+
+These algorithms work by repeatedly comparing elements in the data set and swapping them based on a comparison criterion (like numerical value or alphabetical order). They are widely used but may not always be the most efficient option for large datasets.
+
+* **Examples:** Bubble Sort, Insertion Sort, Quicksort, Merge Sort, Heap Sort
+
+**Explanation:**
+
+* **Bubble Sort:**  Imagine repeatedly comparing adjacent elements. If they're in the wrong order (larger element comes first), swap them.  This process is  repeated  through multiple passes over the data, gradually "bubbling" the largest elements to the end of the list. It's simple to understand and implement, but for large datasets, it makes numerous comparisons and swaps, leading to slow performance.
+
+* **Insertion Sort:** Think of building a sorted list one element at a time.  Start with an empty sorted list (initially containing just the first element), then iterate through the remaining data.  For each element,  compare it with elements in the sorted list,  and insert it into its correct position. It's efficient for small datasets or data that is already partially sorted. However, as the unsorted portion shrinks, the number of comparisons increases, impacting performance for larger datasets. 
+
+* **Quicksort:** This divide-and-conquer approach works by recursively sorting the data. It first selects a pivot element (often chosen strategically), partitions the list around the pivot, such that elements less than the pivot are placed before it and elements greater than the pivot are placed after it.  Then, it recursively sorts the two sub-lists (elements less than and greater than the pivot).  On average, quicksort is quite fast. However, its performance can deteriorate in the worst case, where the pivot selection leads to unbalanced partitions.
+
+* **Merge Sort:** This sorting algorithm also follows a divide-and-conquer approach. It recursively divides the unsorted list into halves until single-element sub-lists are obtained (which are inherently sorted). Then, it repeatedly merges these sorted sub-lists back together in a specific order to produce the final sorted list. Merge sort is efficient overall but requires additional space for the temporary sub-lists during the merge operation.
+
+* **Heap Sort:** Utilizes a heap data structure, which can be thought of as a specialized tree-based  array that satisfies a specific ordering property (usually a max-heap where the parent element is greater than or equal to its children).  Heap sort repeatedly extracts the largest element (in a max-heap) from the root of the heap, places it at the end of the sorted list, and rearranges the remaining elements in the heap to maintain the heap property. This process is continued until all elements have been extracted, resulting in a sorted list. Heap sort has good average-case performance but might be slower for nearly sorted data, where it doesn't take full advantage of the heap structure.
+
+### Non-comparison-based:
+
+These algorithms exploit specific properties of the data to sort them, often without directly comparing elements. They can be highly efficient for certain data types but may not be universally applicable.
+
+* **Examples:** Counting Sort, Radix Sort, Bucket Sort
+
+**Explanation:**
+
+* **Counting Sort:** This works well for data with a limited, known range of distinct values. It creates an array of counters, one for each possible value in the data range.  It iterates through the data, incrementing the count for each value encountered.  Then, it uses these counts to place elements in the sorted output list. Counting sort is particularly efficient for integer data with a limited range of values, as it avoids comparisons altogether. However, the size of the counter array is tied to the value range,  which can be impractical for very large ranges.
+
+* **Radix Sort:** Sorts data by individual digits (or characters) from the least significant digit (like the ones place in numbers) to the most significant digit.  For each digit position, it typically leverages counting sort or a similar technique to sort the data based on that specific digit.  This process is repeated for all digit positions. Radix sort is particularly efficient for integer data with a limited range of values, as it leverages counting sort for each digit.  However, it may not be as efficient for data with a wider range of values or for non-numeric data types.
+
+* **Bucket Sort:** Divides the data set into smaller buckets based on a specific criteria. This criteria can involve a range of values, hash function, or other techniques.  Then, a sorting algorithm (often a simple one like insertion sort) is applied to each bucket individually. Finally, the sorted buckets are concatenated to form the final sorted list. Bucket sort can be efficient for
+
+Absolutely, here's a more comprehensive explanation of the different sorting algorithm types within data structures:
+
+### In-place:
+
+These algorithms are memory-efficient champions, sorting the data set within the existing memory allocation. They achieve this by rearranging elements directly in the original data structure, typically an array. No additional space is needed for temporary results, making them a great choice for situations where memory is limited.
+
+* **Examples:** Bubble Sort, Insertion Sort, Quicksort, Shell Sort
+
+**Explanation:**
+
+- **Bubble Sort:**  Imagine repeatedly comparing adjacent elements in the array. If they're in the wrong order, swap them. This process continues through multiple passes, gradually "bubbling" the largest elements to the end. While simple, it modifies the original array in-place through swaps.
+
+- **Insertion Sort:** Think of building a sorted sub-list within the original array, one element at a time.  Starting with an empty sorted sub-list (initially containing just the first element), elements are inserted into their correct positions by shifting elements in the array as needed. This in-place manipulation achieves the sorted result.
+
+- **Quicksort:** This divide-and-conquer approach partitions the original array around a pivot element. Elements are then swapped and rearranged within the array itself to place them on either side of the pivot based on their value.  The sub-lists are then recursively sorted in-place using the same approach.
+
+- **Shell Sort:** This in-place sorting algorithm works by repeatedly performing smaller gap insertion sorts on the array. It starts with a larger gap between elements compared and gradually reduces the gap size with each pass.  During each pass, elements are compared and swapped within the array based on the current gap, eventually achieving a sorted order.
+
+### Stable:
+
+These algorithms prioritize maintaining the original order of elements with equal values during the sorting process. This can be crucial when dealing with data sets where the order of duplicates might be significant, such as timestamps or filenames with versions.
+
+* **Examples:** Insertion Sort, Merge Sort, Timsort (a hybrid sorting algorithm)
+
+**Explanation:**
+
+- **Insertion Sort:**  As elements are inserted into their correct positions within the sorted sub-list, the original order of duplicates is preserved.  If two elements have the same value, the one encountered earlier in the original data will be inserted earlier in the sorted sub-list.
+
+- **Merge Sort:** This sorting algorithm follows a divide-and-conquer approach, but it merges the sorted sub-lists in a way that guarantees stability.  When merging sub-lists, it compares elements and inserts them into the final sorted list while maintaining their relative order if they have the same value.
+
+- **Timsort:** This hybrid sorting algorithm combines the strengths of insertion sort and merge sort. It leverages insertion sort for small sub-lists and merge sort for larger ones. Timsort is also stable, ensuring the original order of duplicates is maintained during the sorting process.
+
+### Adaptive:
+
+These algorithms are opportunistic, taking advantage of any existing order present in the data set to improve their sorting efficiency. This can be beneficial for data that is already partially sorted or has specific characteristics.
+
+* **Examples:** Insertion Sort, Bubble Sort (to some extent), Timsort
+
+**Explanation:**
+
+- **Insertion Sort:** This algorithm shines when the data is already partially sorted.  As elements are inserted into their correct positions, the comparisons and shifts required become less frequent, leading to faster sorting as the data becomes increasingly ordered.
+
+- **Bubble Sort:** While generally slow, bubble sort can benefit slightly from partially sorted data.  If elements are already mostly in order, fewer swaps might be needed in later passes, leading to a minor improvement.
+
+- **Timsort:** This hybrid algorithm can detect partially sorted data and utilize insertion sort efficiently for those sub-lists, reducing the overall number of comparisons and swaps needed.
+
 
 ## Complexity of Sorting Algorithms
 
