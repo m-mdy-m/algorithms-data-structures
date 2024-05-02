@@ -63,7 +63,6 @@ Selection algorithms address a fundamental task: efficiently identifying the **k
         * Upper median with **k = n / 2 + 1**.
 
 > Summary:  Selection algorithms offer a targeted approach to extracting specific elements from unsorted data. Their strength lies in retrieving the kth smallest/largest element without necessarily sorting the entire collection. This makes them efficient for tasks like finding minimum, maximum, or median values in unsorted datasets. They provide a valuable tool for data analysis and manipulation whenever you need to identify specific elements within unordered data.
-
 ## Algorithms
 ### Sorting and heapselect
 
@@ -88,7 +87,6 @@ The overall time complexity of this selection method is dominated by the sorting
 There are optimizations that can be applied when the sorting algorithm itself generates elements one at a time, like selection sort. In such scenarios, it's possible to perform the selection process alongside the sorting. The sorting can then be terminated as soon as the kth element is identified. This optimization, when applied to heapsort, results in the heapselect algorithm. Heapselect boasts a time complexity of O(n + k log n), making it efficient when k is significantly smaller than n. However, this advantage diminishes for larger k values (like k = n/2 for median finding), where it can regress to O(n log n).
 
 > `Summary:` The selection method leveraging sorting offers a clear and straightforward approach for finding the kth smallest element in a collection. While it might not be the most time-efficient solution for all cases, its simplicity and potential benefits for smaller datasets or situations where a pre-existing sorting routine is available make it a valuable option to consider. However, for optimal performance, especially when dealing with larger datasets, exploring specialized selection algorithms is recommended. 
-
 ### Pivoting
 Selection algorithms excel at pinpointing specific elements within unordered data collections. Unlike sorting algorithms that meticulously arrange the entire dataset, selection algorithms focus on retrieving a strategically chosen element based on its rank. At the heart of many efficient selection algorithms lies the concept of pivoting, a technique that partitions the data and guides the search towards the target element.
 
@@ -122,7 +120,6 @@ The efficiency of pivoting-based selection algorithms hinges critically on the s
 In conclusion, pivoting empowers selection algorithms to efficiently locate the kth smallest element within unordered data. By strategically choosing a pivot and dividing the data based on comparisons, these algorithms can effectively narrow down the search space and locate the target element. While the effectiveness significantly relies on the pivot selection strategy, various algorithms cater to different needs. Quickselect offers a fast, randomized approach, while median of medians provides a deterministic guarantee. Hybrid algorithms like introselect attempt to combine the best of both worlds. Understanding these techniques empowers you to select the most appropriate algorithm for your specific data manipulation tasks.
 
 > `Summary:` Pivoting empowers selection algorithms to efficiently locate the kth smallest element within unordered data. By strategically choosing a pivot and dividing the data based on comparisons, these algorithms can effectively narrow down the search space and locate the target element. While the effectiveness significantly relies on the pivot selection strategy, various algorithms like quickselect and median of medians offer practical solutions for different scenarios. 
-
 ### Factories
 While pivoting techniques offer a powerful approach for selection algorithms, the quest for even greater efficiency has led to the exploration of factories. Introduced in 1976, factories represent a sophisticated concept that pushes the boundaries of deterministic selection algorithms, particularly for k values far from 1 or n (i.e., not the very smallest or largest elements).
 
@@ -149,7 +146,6 @@ The ultimate goal of a factory-based selection algorithm is to strategically com
 By meticulously designing these factories and their interactions, researchers have achieved remarkable results. For instance, a factory-based approach specifically designed for median-finding (finding the middle element) can achieve this task using at most 2.942n comparisons. This is significantly more efficient than some standard algorithms. However, employing factories effectively can be quite complex. The design and implementation of these factories require a deep understanding of algorithms and mathematical concepts.
 
 > **Summary:** Factories represent an advanced approach to selection algorithms, particularly for deterministic algorithms targeting specific k values. While they offer the potential for superior efficiency, their complexity makes them a niche area explored by researchers pushing the boundaries of what's possible. For most practical applications, pivoting-based techniques like quickselect might be a more approachable and well-suited choice. 
-
 ### Parallel algorithms
 The exploration of parallel selection algorithms began in the mid-1970s. Researchers have investigated how to perform selection using a parallel comparison tree model, a theoretical framework for analyzing parallel algorithms. This model revealed an interesting trade-off:
 
@@ -182,7 +178,6 @@ The exploration of selection algorithms extends beyond the comparison model of c
 It's important to note that streaming algorithms with sublinear memory limitations (both in terms of n and k) cannot perform exact selection queries on dynamic data. However, techniques like the count-min sketch offer approximate solutions, identifying a value whose position in the ordering (if included) would be within an εn range of k. This approach utilizes a sketch with a size that scales logarithmically with respect to 1/ε.
 
 > Summary : Selection algorithms can be parallelized to achieve faster computation times. In the parallel RAM model, selection can be achieved in O(log n) time using O(n/log n) processors. When data is already organized in specific data structures, selection can be even faster. For example, selection on a sorted array takes constant time.
-
 ## Lower bounds
 Selection algorithms, despite their apparent simplicity, face a fundamental challenge: the minimum number of comparisons required to identify the desired element. This section delves into the fascinating realm of lower bounds, exploring the theoretical limitations on selection efficiency and the distinctions between randomized and deterministic approaches.
 
@@ -211,9 +206,7 @@ The quest for efficiency extends beyond the average-case scenario. For determini
 Finding the median element (k = n/2) presents a special case with a slightly stricter lower bound on comparisons. Deterministic algorithms require at least (2 + ε)n comparisons, where ε is a very small constant value. This suggests that even for finding the middle element, there's a theoretical limit on how efficiently deterministic algorithms can operate.
 
 > **Summary:** Selection algorithms, while seemingly straightforward, are subject to inherent limitations on their efficiency. Understanding these lower bounds empowers researchers to design algorithms that approach these theoretical limits and navigate the trade-offs between deterministic and randomized approaches. Randomized algorithms can offer better average-case performance by incorporating probabilistic elements, while deterministic algorithms provide guaranteed performance but might require more comparisons in the worst case. By delving into the complexities of lower bounds, we gain a deeper appreciation for the challenges and accomplishments in the realm of selection algorithms.
-
 ## Exact numbers of comparisons
-
 Donald Knuth, a renowned computer scientist, compiled a fascinating table known as the "selection cost triangle." This triangle offers a glimpse into the exact number of comparisons required by an optimal selection algorithm for various scenarios. 
 
 **Understanding the Triangle:**
