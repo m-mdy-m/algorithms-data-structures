@@ -252,3 +252,28 @@ Here, n represents the data size, k represents the target element position (kth 
 While the formula provides valuable insights, some entries in the triangle, particularly the larger ones, were established as optimal through extensive computer searches. This signifies that for certain data sizes and target element positions, the exact number of comparisons needed might not have a simple closed-form expression.
 
 > **Summary:** The selection cost triangle serves as a valuable reference for understanding the inherent efficiency limitations associated with selection algorithms. By analyzing the triangle, researchers can gain insights into the optimal number of comparisons required for various scenarios and guide the development of more efficient selection algorithms. The existence of a formula for most entries on the left half of the table provides a foundation for theoretical analysis, while computer searches aid in establishing optimality for more complex cases. As research in selection algorithms continues to evolve, the triangle might be further refined or expanded to encompass a wider range of data sizes and target element positions. 
+
+## Conclusion
+
+True, understanding selection algorithms can involve some complex concepts, especially when delving into lower bounds and advanced techniques like order statistic trees. However, by grasping the core principles and exploring different approaches like sorting, heaps, and pivoting, you gain a solid foundation for appreciating their efficiency and applicability in various scenarios.
+
+**Real-World Example: Finding the Median Salary in a Company**
+
+Imagine a company needs to determine the median employee salary. They have a dataset containing salary information for all employees (n data points). To find the median (the middle value when the data is ordered from least to greatest), a selection algorithm can be employed. Here's how it might work using the quickselect algorithm, a popular randomized approach:
+
+1. **Randomly Choose a Pivot:** The algorithm picks an element from the dataset at random and designates it as the pivot.
+
+2. **Partition the Data:** The remaining data is divided into two subsets based on a comparison with the pivot:
+   - Less Than (L): Elements with salaries less than the pivot's value.
+   - Greater Than (R): Elements with salaries greater than the pivot's value.
+
+3. **Identify the Median's Location:** The median's position (k) within the sorted data depends on the sizes of these subsets. 
+   - If the size of subset L (number of employees earning less than the pivot) is greater than or equal to k (halfway point), the median resides within subset L.
+   - If the size of L is exactly k - 1, then the pivot itself is the median!
+   - Otherwise, the median is positioned at (k - |L| - 1) within subset R (since some elements in L are smaller and the rest in R are larger).
+
+4. **Recursive Calls (if necessary):** Depending on the pivot's position and the desired median's location (k), the algorithm might recursively call itself on either subset L or R, focusing on the specific location where the median is guaranteed to reside. This process continues until the median element is identified.
+
+5. **Return the Median:** Once the median's position is pinpointed within the data (either the pivot itself or an element within a specific subset), the algorithm returns this value as the median salary in the company.
+
+By strategically selecting pivots and partitioning the data, quickselect efficiently narrows down the search space and locates the median element in the salary dataset. This principle applies to various selection algorithms, each with its own strengths and considerations.
