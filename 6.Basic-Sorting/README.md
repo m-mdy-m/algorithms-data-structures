@@ -1,5 +1,7 @@
 # Basic-Sorting Algorithm
 
+Data organization is crucial in today’s digital world. Sorting algorithms are the silent heroes behind the scenes, efficiently arranging information — from massive datasets to your to-do list — in a specific order. This article delves into the fascinating world of sorting algorithms, exploring their inner workings and how they impact your daily digital interactions.
+
 ## What is Sorting?
 Sorting refers to rearrangement of a given array or list of elements according to a comparison operator on the elements. The comparison operator is used to decide the new order of elements in the respective data structure. Sorting means reordering of all the elements either in ascending or in descending order.
 
