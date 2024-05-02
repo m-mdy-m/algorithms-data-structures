@@ -124,8 +124,31 @@ In conclusion, pivoting empowers selection algorithms to efficiently locate the 
 > `Summary:` Pivoting empowers selection algorithms to efficiently locate the kth smallest element within unordered data. By strategically choosing a pivot and dividing the data based on comparisons, these algorithms can effectively narrow down the search space and locate the target element. While the effectiveness significantly relies on the pivot selection strategy, various algorithms like quickselect and median of medians offer practical solutions for different scenarios. 
 
 ### Factories
-The deterministic selection algorithms with the smallest known numbers of comparisons, for values of 𝑘 that are far from 1 or 𝑛, are based on the concept of factories, introduced in 1976 by Arnold Schönhage, Mike Paterson, and Nick Pippenger.[18] These are methods that build partial orders of certain specified types, on small subsets of input values, by using comparisons to combine smaller partial orders. As a very simple example, one type of factory can take as input a sequence of single-element partial orders, compare pairs of elements from these orders, and produce as output a sequence of two-element totally ordered sets. The elements used as the inputs to this factory could either be input values that have not been compared with anything yet, or "waste" values produced by other factories. The goal of a factory-based algorithm is to combine together different factories, with the outputs of some factories going to the inputs of others, in order to eventually obtain a partial order in which one element (the 
-𝑘 th smallest) is larger than some 𝑘−1 other elements and smaller than another 𝑛−𝑘 others. A careful design of these factories leads to an algorithm that, when applied to median-finding, uses at most 2.942𝑛 comparisons. For other values of 𝑘, the number of comparisons is smaller.
+While pivoting techniques offer a powerful approach for selection algorithms, the quest for even greater efficiency has led to the exploration of factories. Introduced in 1976, factories represent a sophisticated concept that pushes the boundaries of deterministic selection algorithms, particularly for k values far from 1 or n (i.e., not the very smallest or largest elements).
+
+**What are Factories?**
+
+Imagine a specialized workshop dedicated to meticulously ordering elements. These factories, within the context of selection algorithms, are methods that construct partial orders for small subsets of input values. They leverage comparisons to meticulously combine smaller, pre-established partial orders.
+
+**A Simplified Example:**
+
+Consider a basic factory that takes a series of single-element partial orders (think of each element as an individual unit waiting to be compared and positioned). This factory compares pairs of elements from these single-element orders and produces a new output: a sequence containing two totally ordered sets. The elements fed into this factory could be:
+
+* Uncompared input values (fresh data waiting to be placed in the order).
+* "Waste" values produced by other factories during the overall process.
+
+**The Grand Objective:**
+
+The ultimate goal of a factory-based selection algorithm is to strategically combine these factories. The outputs from some factories become the inputs for others, ultimately aiming to achieve a comprehensive partial order where:
+
+* One specific element (the kth smallest) is positioned higher than k-1 other elements.
+* The same element is positioned lower than n-k other elements (remember n is the total number of elements).
+
+**Benefits and Challenges:**
+
+By meticulously designing these factories and their interactions, researchers have achieved remarkable results. For instance, a factory-based approach specifically designed for median-finding (finding the middle element) can achieve this task using at most 2.942n comparisons. This is significantly more efficient than some standard algorithms. However, employing factories effectively can be quite complex. The design and implementation of these factories require a deep understanding of algorithms and mathematical concepts.
+
+> **Summary:** Factories represent an advanced approach to selection algorithms, particularly for deterministic algorithms targeting specific k values. While they offer the potential for superior efficiency, their complexity makes them a niche area explored by researchers pushing the boundaries of what's possible. For most practical applications, pivoting-based techniques like quickselect might be a more approachable and well-suited choice. 
 
 ### Parallel algorithms
 Parallel algorithms for selection have been studied since 1975, when Leslie Valiant introduced the parallel comparison tree model for analyzing these algorithms, and proved that in this model selection using a linear number of comparisons requires Ω(log log 𝑛) parallel steps, even for selecting the minimum or maximum. Researchers later found parallel algorithms for selection in 
