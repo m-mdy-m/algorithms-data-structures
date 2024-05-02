@@ -73,3 +73,23 @@ For deterministic algorithms, it has been shown that selecting the 𝑘 th eleme
 1−𝑥
 
 is the binary entropy function.[35] The special case of median-finding has a slightly larger lower bound on the number of comparisons, at least (2+𝜀)𝑛, for 𝜀≈2−80.
+
+### Exact numbers of comparisons
+Knuth supplies the following triangle of numbers summarizing pairs of 𝑛 and 𝑘 for which the exact number of comparisons needed by an optimal selection algorithm is known. The 𝑛 th row of the triangle (starting with 𝑛=1 in the top row) gives the numbers of comparisons for inputs of 𝑛
+values, and the 𝑘 th number within each row gives the number of comparisons needed to select the 
+𝑘 th smallest value from an input of that size. The rows are symmetric because selecting the 𝑘 th smallest requires exactly the same number of comparisons, in the worst case, as selecting the 𝑘 th largest
+
+                                      0
+                                    1    1
+                                  2    3    2
+                                3    4    4    3
+                              4    6    6    6    4
+                            5    7    8    8    7    5
+                          6    8   10   10   10   8    6
+                        7    9   11   12   12   11   9    7
+                      8   11   12   14   14   14   12   11   8
+                    9   12   14   15   16   16   15   14   12   9
+
+Most, but not all, of the entries on the left half of each row can be found using the formula
+
+𝑛−𝑘+(𝑘−1)⌈log2⁡(𝑛+2−𝑘)⌉.This describes the number of comparisons made by a method of Abdollah Hadian and Milton Sobel, related to heapselect, that finds the smallest value using a single-elimination tournament and then repeatedly uses a smaller tournament among the values eliminated by the eventual tournament winners to find the next successive values until reaching the 𝑘 th smallest. Some of the larger entries were proven to be optimal using a computer search.
