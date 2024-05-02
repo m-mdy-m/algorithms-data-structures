@@ -11,7 +11,24 @@ For data that is already structured, faster algorithms may be possible. As an ex
 > Summary: A selection algorithm efficiently retrieves the kth smallest (or largest) element from a collection of unordered data. It's particularly useful for finding specific values like minimum, maximum, or median. While selection algorithms have a linear time complexity for unsorted data, they offer a significant advantage over sorting the entire collection when you only need a specific element.
 
 ## How it Work:
-**Simple Gif:**
+
+Selection algorithms efficiently find the kth smallest (or largest) element in a collection of unordered data. Unlike sorting algorithms that arrange the entire collection, selection algorithms focus on finding a specific element. 
+
+Here's a general breakdown of how selection algorithms work:
+
+1. **Initialization:** We start by choosing an initial element from the data. This element could be any element in the collection.
+
+2. **Comparison Loop:** We enter a loop that iterates through the remaining data. In each iteration, we compare the current element with the initial element (or the current candidate for the kth smallest/largest).
+
+3. **Update Candidate:**  
+    * If the current element is smaller (for smallest) or larger (for largest) than the candidate element, we update the candidate. This means the current element becomes a better candidate for the kth smallest/largest position.
+    * If the current element is equal to the candidate, the specific behavior depends on the selection algorithm. Some algorithms might treat them equally, while others might have a tie-breaking mechanism. 
+
+4. **Repeat:**  Steps 2 and 3 are repeated until all elements in the collection have been compared with the candidate.
+
+5. **Result:** After examining all elements, the final candidate element becomes the kth smallest (or largest) value in the collection.
+
+**Visualizing the Process (Optional):**
 
 ![](https://codepumpkin.com/wp-content/uploads/2017/10/selectionSort.gif)
 
@@ -21,13 +38,33 @@ For data that is already structured, faster algorithms may be possible. As an ex
 
 ---
 
-**Problem statement**
-An algorithm for the selection problem takes as input a collection of values, and a number 𝑘. It outputs the 𝑘 th smallest of these values, or, in some versions of the problem, a collection of the 𝑘 smallest values. For this to be well-defined, it should be possible to sort the values into an order from smallest to largest; for instance, they may be integers, floating-point numbers, or some other kind of object with a numeric key. However, they are not assumed to have been already sorted. Often, selection algorithms are restricted to a comparison-based model of computation, as in comparison sort algorithms, where the algorithm has access to a comparison operation that can determine the relative ordering of any two values, but may not perform any other kind of arithmetic operations on these values.
+### Problem statement
+Selection algorithms address a fundamental task: efficiently identifying the **kth smallest (or largest)** element within a collection of unordered data. This data can encompass numbers, characters, or even objects with a comparable property like size or date. Unlike sorting algorithms that arrange the entire collection, selection algorithms focus on retrieving a specific element based on its position within the sorted order.
 
-To simplify the problem, some works on this problem assume that the values are all distinct from each other, or that some consistent tie-breaking method has been used to assign an ordering to pairs of items with the same value as each other. Another variation in the problem definition concerns the numbering of the ordered values: is the smallest value obtained by setting 𝑘=0, as in zero-based numbering of arrays, or is it obtained by setting 𝑘=1 following the usual English-language conventions for the smallest, second-smallest, etc.? This article follows the conventions used by Cormen et al., according to which all values are distinct and the minimum value is obtained from 𝑘=1
+**Core Characteristics:**
 
-With these conventions, the maximum value, among a collection of 𝑛 values, is obtained by setting 𝑘=𝑛. When 𝑛 is an odd number, the median of the collection is obtained by setting 𝑘=(𝑛+1)/2. When 
-𝑛 is even, there are two choices for the median, obtained by rounding this choice of 𝑘 down or up, respectively: the lower median with 𝑘=𝑛/2 and the upper median with 𝑘=𝑛/2+1.
+* **Unsorted Data:** The data is assumed to be in its initial, unordered state. Selection algorithms don't require any prior sorting to function.
+* **Input:** The algorithm takes two inputs:
+    1. The collection of data values.
+    2. A number **k** representing the desired position (kth smallest or largest element).
+* **Output:** The algorithm outputs the **kth smallest element** if configured to find minimum values. Conversely, for finding maximum values, it outputs the **kth largest element**. Some variations might return a collection of the k smallest/largest elements.
+* **Comparison-Based Approach:** Selection algorithms typically rely on comparisons between elements to determine their relative order. Imagine comparing numbers to see which is bigger or smaller. This approach avoids complex mathematical operations, making them suitable for various data types.
+
+**Addressing Challenges:**
+
+* **Handling Duplicates:** To simplify the analysis of selection algorithms, some theoretical discussions assume the data has **distinct values** (no duplicates).
+* **Tie-Breaking Mechanism:** In real-world scenarios, data might contain duplicates. To address this, a consistent **tie-breaking method** can be established to determine the order of elements with the same value.
+* **Numbering the kth Element:** There are variations in how the "kth" element is numbered. This explanation follows the convention established by Cormen et al.:
+    * The **minimum value** is obtained with **k = 1**.
+    * The **maximum value** is obtained with **k = n** (n being the total number of elements).
+    * The **median** for an odd number of elements (n) is found with **k = (n + 1) / 2**.
+    * For even n, there are two medians:
+        * Lower median with **k = n / 2**.
+        * Upper median with **k = n / 2 + 1**.
+
+## Summary
+
+Selection algorithms offer a targeted approach to extracting specific elements from unsorted data. Their strength lies in retrieving the kth smallest/largest element without necessarily sorting the entire collection. This makes them efficient for tasks like finding minimum, maximum, or median values in unsorted datasets. They provide a valuable tool for data analysis and manipulation whenever you need to identify specific elements within unordered data.
 
 ## Algorithms
 ### Sorting and heapselect
