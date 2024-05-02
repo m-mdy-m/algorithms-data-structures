@@ -1,14 +1,27 @@
 # Selection algorithm
 
 ## Introduction:
-In computer science, a selection algorithm is an algorithm for finding the 𝑘 smallest value in a collection of ordered values, such as numbers. The value that it finds is called the 𝑘 order statistic. Selection includes as special cases the problems of finding the minimum, median, and maximum element in the collection. Selection algorithms include quickselect, and the median of medians algorithm. When applied to a collection of 𝑛 values, these algorithms take linear time, 𝑂(𝑛) as expressed using big O notation. For data that is already structured, faster algorithms may be possible; as an extreme case, selection in an already-sorted array takes time 𝑂(1).
 
-## Definition
+In computer science, a selection algorithm is an algorithm for finding the **kth smallest (or largest)** value in a collection of **unorganized data**. This data can be a list of numbers, characters, or even objects. The value that it finds is called the **kth order statistic**. Selection algorithms include finding the minimum, median, and maximum element in the collection as special cases. 
 
-## Examples
+Common selection algorithms include quickselect and the median of medians algorithm. When applied to a collection of **n unsorted elements**, these algorithms typically have a time complexity of **O(n)**, as expressed using big O notation. This means the execution time grows linearly with the number of elements.
+
+For data that is already structured, faster algorithms may be possible. As an extreme case, selecting the kth element in an already-sorted array takes constant time, **O(1)**. This is because we can directly access the element at the desired index.
+
+> Summary: A selection algorithm efficiently retrieves the kth smallest (or largest) element from a collection of unordered data. It's particularly useful for finding specific values like minimum, maximum, or median. While selection algorithms have a linear time complexity for unsorted data, they offer a significant advantage over sorting the entire collection when you only need a specific element.
 
 ## How it Work:
-Problem statement
+**Simple Gif:**
+
+![](https://codepumpkin.com/wp-content/uploads/2017/10/selectionSort.gif)
+
+![](https://codepumpkin.com/wp-content/uploads/2017/10/SelectionSort_Avg_case.gif)
+
+![](https://www.codingconnect.net/wp-content/uploads/2016/09/Selection-Sort.gif)
+
+---
+
+**Problem statement**
 An algorithm for the selection problem takes as input a collection of values, and a number 𝑘. It outputs the 𝑘 th smallest of these values, or, in some versions of the problem, a collection of the 𝑘 smallest values. For this to be well-defined, it should be possible to sort the values into an order from smallest to largest; for instance, they may be integers, floating-point numbers, or some other kind of object with a numeric key. However, they are not assumed to have been already sorted. Often, selection algorithms are restricted to a comparison-based model of computation, as in comparison sort algorithms, where the algorithm has access to a comparison operation that can determine the relative ordering of any two values, but may not perform any other kind of arithmetic operations on these values.
 
 To simplify the problem, some works on this problem assume that the values are all distinct from each other, or that some consistent tie-breaking method has been used to assign an ordering to pairs of items with the same value as each other. Another variation in the problem definition concerns the numbering of the ordered values: is the smallest value obtained by setting 𝑘=0, as in zero-based numbering of arrays, or is it obtained by setting 𝑘=1 following the usual English-language conventions for the smallest, second-smallest, etc.? This article follows the conventions used by Cormen et al., according to which all values are distinct and the minimum value is obtained from 𝑘=1
