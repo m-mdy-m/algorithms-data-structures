@@ -181,28 +181,50 @@ The exploration of selection algorithms extends beyond the comparison model of c
 
 It's important to note that streaming algorithms with sublinear memory limitations (both in terms of n and k) cannot perform exact selection queries on dynamic data. However, techniques like the count-min sketch offer approximate solutions, identifying a value whose position in the ordering (if included) would be within an εn range of k. This approach utilizes a sketch with a size that scales logarithmically with respect to 1/ε.
 
+> Summary : Selection algorithms can be parallelized to achieve faster computation times. In the parallel RAM model, selection can be achieved in O(log n) time using O(n/log n) processors. When data is already organized in specific data structures, selection can be even faster. For example, selection on a sorted array takes constant time.
 
 ## Lower bounds
-The 𝑂(𝑛) running time of the selection algorithms described above is necessary, because a selection algorithm that can handle inputs in an arbitrary order must take that much time to look at all of its inputs. If any one of its input values is not compared, that one value could be the one that should have been selected, and the algorithm can be made to produce an incorrect answer. Beyond this simple argument, there has been a significant amount of research on the exact number of comparisons needed for selection, both in the randomized and deterministic cases.
-Selecting the minimum of 𝑛 values requires 𝑛−1 comparisons, because the 𝑛−1 values that are not selected must each have been determined to be non-minimal, by being the largest in some comparison, and no two of these values can be largest in the same comparison. The same argument applies symmetrically to selecting the maximum.
+Selection algorithms, despite their apparent simplicity, face a fundamental challenge: the minimum number of comparisons required to identify the desired element. This section delves into the fascinating realm of lower bounds, exploring the theoretical limitations on selection efficiency and the distinctions between randomized and deterministic approaches.
 
-The next simplest case is selecting the second-smallest. After several incorrect attempts, the first tight lower bound on this case was published in 1964 by Soviet mathematician Sergey Kislitsyn. It can be shown by observing that selecting the second-smallest also requires distinguishing the smallest value from the rest, and by considering the number 𝑝 of comparisons involving the smallest value that an algorithm for this problem makes. Each of the 𝑝 items that were compared to the smallest value is a candidate for second-smallest, and 𝑝−1 of these values must be found larger than another value in a second comparison in order to rule them out as second-smallest. With 𝑛−1 values being the larger in at least one comparison, and 𝑝−1 values being the larger in at least two comparisons, there are a total of at least 𝑛+𝑝−2 comparisons. An adversary argument, in which the outcome of each comparison is chosen in order to maximize 𝑝 (subject to consistency with at least one possible ordering) rather than by the numerical values of the given items, shows that it is possible to force 𝑝 to be at least log2𝑛. Therefore, the worst-case number of comparisons needed to select the second smallest is 𝑛+⌈log2⁡𝑛⌉−2 ,the same number that would be obtained by holding a single-elimination tournament with a run-off tournament among the values that lost to the smallest value. However, the expected number of comparisons of a randomized selection algorithm can be better than this bound; for instance, selecting the second-smallest of six elements requires seven comparisons in the worst case, but may be done by a randomized algorithm with an expected number of 6.5 comparisons.
+**Understanding the Necessity of Comparisons:**
 
-More generally, selecting the 𝑘 th element out of 𝑛 requires at least 𝑛+min(𝑘,𝑛−𝑘)−𝑂(1) comparisons, in the average case, matching the number of comparisons of the Floyd–Rivest algorithm up to its 𝑜(𝑛) term. The argument is made directly for deterministic algorithms, with a number of comparisons that is averaged over all possible permutations of the input values.[1] By Yao's principle, it also applies to the expected number of comparisons for a randomized algorithm on its worst-case input.
+The linear running time (O(n)) observed in most selection algorithms is not a coincidence. It stems from the inherent nature of the problem. When dealing with unordered data, every element must be considered at least once to ensure the target element isn't overlooked. Skipping a comparison introduces the risk of missing the crucial piece of information that could lead to the correct selection. This inherent requirement for comparisons establishes a baseline level of efficiency that all selection algorithms must strive to achieve.
 
-For deterministic algorithms, it has been shown that selecting the 𝑘 th element requires (1+𝐻(𝑘/𝑛))𝑛+Ω(𝑛) comparisons, where 
-𝐻(𝑥)=𝑥 log2⁡1𝑥+(1−𝑥)log2 
- 1
---
-1−𝑥
+**Beyond the Basics: Exploring Specific Cases**
 
-is the binary entropy function.[35] The special case of median-finding has a slightly larger lower bound on the number of comparisons, at least (2+𝜀)𝑛, for 𝜀≈2−80.
+Researchers haven't stopped at this basic understanding. They've delved deeper, seeking the exact number of comparisons needed for selection in various scenarios. This exploration reveals intriguing differences between randomized and deterministic algorithms:
 
-### Exact numbers of comparisons
-Knuth supplies the following triangle of numbers summarizing pairs of 𝑛 and 𝑘 for which the exact number of comparisons needed by an optimal selection algorithm is known. The 𝑛 th row of the triangle (starting with 𝑛=1 in the top row) gives the numbers of comparisons for inputs of 𝑛
-values, and the 𝑘 th number within each row gives the number of comparisons needed to select the 
-𝑘 th smallest value from an input of that size. The rows are symmetric because selecting the 𝑘 th smallest requires exactly the same number of comparisons, in the worst case, as selecting the 𝑘 th largest
+* **Minimum and Maximum Selection:** Finding the minimum or maximum element presents a relatively straightforward case. To identify the minimum element, each element in the data set must be compared against the current minimum candidate. This process ensures that every other element is demonstrably "non-minimal." The same logic applies to maximum selection, just with the comparison criteria reversed. This analysis leads to a lower bound of n-1 comparisons for both minimum and maximum selection – every element needs to be compared at least once to definitively establish its position relative to the minimum or maximum value.
 
+* **Second-Smallest Selection:** Selecting the second-smallest element presents a more intricate challenge. Here, the algorithm must first distinguish the absolute minimum element. The number of comparisons involving the minimum value (p) plays a crucial role. Each element compared to the minimum becomes a candidate for the second-smallest position. However, to eliminate these contenders, p-1 of them must be proven larger than another element in a separate comparison. This intricate analysis reveals a lower bound of n + ⌈log2⁡𝑛⌉ - 2 comparisons for deterministic selection algorithms. Interestingly, this bound aligns with the number of comparisons required in a single-elimination tournament structure, where elements compete in pairs and the loser is eliminated. However, randomized algorithms can achieve a lower expected number of comparisons in this scenario by exploiting the element selection process probabilistically.
+
+**Generalizing the Lower Bound:**
+
+The lower bound for selecting the kth element (out of n) can be expressed as n + min(k, n-k) - O(1) comparisons, on average. This matches the number of comparisons used by the Floyd-Rivest selection algorithm, disregarding its constant term. This bound applies to both deterministic algorithms (averaged over all possible input permutations) and the expected number of comparisons for randomized algorithms on their worst-case inputs, based on Yao's principle. In simpler terms, the lower bound suggests that the number of comparisons required, on average, scales linearly with the data size (n) and is influenced by the position of the target element (k) within the data set.
+
+**Deterministic vs. Randomized Approaches:**
+
+The quest for efficiency extends beyond the average-case scenario. For deterministic selection algorithms, a more complex lower bound exists, involving the binary entropy function (H(x)). This function captures the inherent uncertainty associated with a given probability distribution. The lower bound suggests that deterministic selection necessitates at least (1 + H(k/n))n + Ω(n) comparisons. While this bound might seem abstract, it essentially indicates that deterministic algorithms face a trade-off between the number of comparisons and the certainty of the outcome. Algorithms with fewer comparisons might have a higher probability of encountering situations where the input data leads to a larger number of comparisons in the worst case.
+
+**Median Finding: A Special Case:**
+
+Finding the median element (k = n/2) presents a special case with a slightly stricter lower bound on comparisons. Deterministic algorithms require at least (2 + ε)n comparisons, where ε is a very small constant value. This suggests that even for finding the middle element, there's a theoretical limit on how efficiently deterministic algorithms can operate.
+
+> **Summary:** Selection algorithms, while seemingly straightforward, are subject to inherent limitations on their efficiency. Understanding these lower bounds empowers researchers to design algorithms that approach these theoretical limits and navigate the trade-offs between deterministic and randomized approaches. Randomized algorithms can offer better average-case performance by incorporating probabilistic elements, while deterministic algorithms provide guaranteed performance but might require more comparisons in the worst case. By delving into the complexities of lower bounds, we gain a deeper appreciation for the challenges and accomplishments in the realm of selection algorithms.
+
+## Exact numbers of comparisons
+
+Donald Knuth, a renowned computer scientist, compiled a fascinating table known as the "selection cost triangle." This triangle offers a glimpse into the exact number of comparisons required by an optimal selection algorithm for various scenarios. 
+
+**Understanding the Triangle:**
+
+Imagine a triangular table where rows represent the number of elements (n) in the data set, starting with n = 1 at the top. Within each row, the kth number signifies the minimum comparisons needed to select the kth smallest element from that specific data size (n). The table is symmetrical because selecting the kth smallest element requires the same number of comparisons as selecting the kth largest element, in the worst-case scenario.
+
+**Exploring the Triangle's Content:**
+
+The table is partially populated with the following numbers:
+
+```
                                       0
                                     1    1
                                   2    3    2
@@ -213,7 +235,20 @@ values, and the 𝑘 th number within each row gives the number of comparisons n
                         7    9   11   12   12   11   9    7
                       8   11   12   14   14   14   12   11   8
                     9   12   14   15   16   16   15   14   12   9
+```
 
-Most, but not all, of the entries on the left half of each row can be found using the formula
+**Formula for Efficiency:**
 
-𝑛−𝑘+(𝑘−1)⌈log2⁡(𝑛+2−𝑘)⌉.This describes the number of comparisons made by a method of Abdollah Hadian and Milton Sobel, related to heapselect, that finds the smallest value using a single-elimination tournament and then repeatedly uses a smaller tournament among the values eliminated by the eventual tournament winners to find the next successive values until reaching the 𝑘 th smallest. Some of the larger entries were proven to be optimal using a computer search.
+For most entries on the left half of each row, a formula exists to calculate the optimal number of comparisons. This formula, developed by Abdollah Hadian and Milton Sobel, leverages a method related to heap selection. It considers a single-elimination tournament followed by a series of smaller tournaments to progressively identify the desired kth smallest element.
+
+**Formula:**
+
+𝑛−𝑘+(𝑘−1)⌈log2⁡(𝑛+2−𝑘)⌉
+
+Here, n represents the data size, k represents the target element position (kth smallest), and ⌈log2⁡(𝑛+2−𝑘)⌉ denotes the ceiling function of the base-2 logarithm of (n + 2 - k).
+
+**Beyond the Formula:**
+
+While the formula provides valuable insights, some entries in the triangle, particularly the larger ones, were established as optimal through extensive computer searches. This signifies that for certain data sizes and target element positions, the exact number of comparisons needed might not have a simple closed-form expression.
+
+> **Summary:** The selection cost triangle serves as a valuable reference for understanding the inherent efficiency limitations associated with selection algorithms. By analyzing the triangle, researchers can gain insights into the optimal number of comparisons required for various scenarios and guide the development of more efficient selection algorithms. The existence of a formula for most entries on the left half of the table provides a foundation for theoretical analysis, while computer searches aid in establishing optimality for more complex cases. As research in selection algorithms continues to evolve, the triangle might be further refined or expanded to encompass a wider range of data sizes and target element positions. 
