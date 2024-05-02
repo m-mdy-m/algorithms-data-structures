@@ -132,6 +132,9 @@ Sorting algorithms are the cornerstone of data organization, playing a vital rol
 > `Ai is used in some descriptions`
 
 ### Selection sort
+
+> [Full explanation with examples](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/6.Basic-Sorting/Selection)
+
 **Explanation:**
 
 Selection sort is a sorting algorithm that works its way through a list by repeatedly finding the minimum (or maximum, depending on desired order) element from the unsorted portion and swapping it with the first element in that unsorted portion. This process continues until the entire list is sorted.
