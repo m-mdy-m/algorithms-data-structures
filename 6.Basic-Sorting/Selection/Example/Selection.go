@@ -27,35 +27,35 @@ import (
  *    comparisons and swaps. Other sorting algorithms like Merge Sort are more suitable for parallel execution
  *    on multi-core processors.
  */
-func selectionSort(arr []int) []int {
-  // Loop through each element of the slice (excluding the last element)
-  for i := 0; i < len(arr)-1; i++ {
-    minIndex := i
+func selectionSort(arr []int) ([]int, int) {
+	comparisons := 0 // Variable to track comparisons in inner loop
+	// Loop through each element of the slice (excluding the last element)
+	for i := 0; i < len(arr)-1; i++ {
+		minIndex := i
 
-    // Find the index of the minimum element in the unsorted part
-    for j := i + 1; j < len(arr); j++ {
-      if arr[j] < arr[minIndex] {
-        minIndex = j
-      }
-      // Count comparisons during inner loop (for exact number calculation)
-      comparisons++
-    }
+		// Find the index of the minimum element in the unsorted part
+		for j := i + 1; j < len(arr); j++ {
+			if arr[j] < arr[minIndex] {
+				minIndex = j
+			}
+			// Count comparisons during inner loop (for exact number calculation)
+			comparisons++
+		}
 
-    // Swap the element at the current index with the minimum element if necessary
-    if minIndex != i {
-      arr[i], arr[minIndex] = arr[minIndex], arr[i]
-    }
-  }
+		// Swap the element at the current index with the minimum element if necessary
+		if minIndex != i {
+			arr[i], arr[minIndex] = arr[minIndex], arr[i]
+		}
+	}
 
-  return arr
+	return arr, comparisons
 }
 
 func main() {
-  unsortedArray := []int{64, 25, 12, 22, 11}
-  var comparisons int // Variable to track comparisons in inner loop
-  sortedArray := selectionSort(append([]int{}, unsortedArray...)) // Sort a copy to avoid modifying original slice
+	unsortedArray := []int{64, 25, 12, 22, 11}
+	sortedArray, comparisons := selectionSort(append([]int{}, unsortedArray...))// Sort a copy to avoid modifying original slice
 
-  fmt.Println("Original Array:", unsortedArray) // Output: [64, 25, 12, 22, 11]
-  fmt.Println("Sorted Array :", sortedArray)     // Output: [11, 12, 22, 25, 64]
-  fmt.Println("Number of Comparisons:", comparisons) // Output: Number of Comparisons: 9 (example for this specific array)
+	fmt.Println("Original Array:", unsortedArray)      // Output: [64, 25, 12, 22, 11]
+	fmt.Println("Sorted Array :", sortedArray)         // Output: [11, 12, 22, 25, 64]
+	fmt.Println("Number of Comparisons:", comparisons) // Output: Number of Comparisons: 10 (example for this specific array)
 }
