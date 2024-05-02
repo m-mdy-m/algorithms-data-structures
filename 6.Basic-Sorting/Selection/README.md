@@ -277,3 +277,11 @@ Imagine a company needs to determine the median employee salary. They have a dat
 5. **Return the Median:** Once the median's position is pinpointed within the data (either the pivot itself or an element within a specific subset), the algorithm returns this value as the median salary in the company.
 
 By strategically selecting pivots and partitioning the data, quickselect efficiently narrows down the search space and locates the median element in the salary dataset. This principle applies to various selection algorithms, each with its own strengths and considerations.
+
+
+## Example
+- [Ts]()
+- [Js]()
+- [Go]()
+- [Java]()
+- [Python]()
