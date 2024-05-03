@@ -44,8 +44,10 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
 5. [String Manipulation and Algorithms](5.String-Manipulation-And-Algorithms/)
    - > [PDF Helper](book/String%20Manipulation_docx.pdf) - Download
   
+
 6. [Basic Sorting (e.g., Bubble Sort, Selection Sort, Insertion Sort)](6.Basic-Sorting/)
-   - > [Selection](6.Basic-Sorting/Selection/)
+   > 6.5  [Selection Algorithm](6.5-Selection-Algothm/)
+   - > [Selection-Sort](6.Basic-Sorting/Selection/)
    - > [Bubble]()
    - > [Insertion]()
 
