@@ -1,10 +1,8 @@
 function bubbleSort(arr) {
-  let swapped = false,
-    i,
-    j;
-  for (i = 0; i < arr.length; i++) {
-    swapped = false;
-    for (j = 0; arr.length - i; j++) {
+  const n = arr.length;
+  for (let i = 0; i < arr.length - 1; i++) {
+    let swapped = false;
+    for (let j = 0; j < arr.length - i - 1; j++) {
       if (arr[j] > arr[j + 1]) {
         let temp = arr[j];
         arr[j] = arr[j + 1];
@@ -16,7 +14,9 @@ function bubbleSort(arr) {
       break;
     }
   }
-  return arr
+  return arr;
 }
-const a = bubbleSort([1, 2, 4, 6, 8])
-console.log('A;',a);
+const unsortedArray = [20, 10, 4, 51, 0, 2, 4];
+const sortedArray = bubbleSort(unsortedArray.slice());
+console.log("Original array:", unsortedArray);
+console.log("Sorted array:", sortedArray);

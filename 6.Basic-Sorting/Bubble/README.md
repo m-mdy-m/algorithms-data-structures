@@ -75,11 +75,11 @@ Consider the unsorted list: `[6, 4, 2, 8, 1]`. Here's how bubble sort would work
 
 **2. Looping Through the List:**
 
-- Initiate a `for` loop that iterates from `0` to `n-2` (where `n` is the length of the array). This loop controls the number of passes required to sort the list.
+- Initiate a `for` loop that iterates from `0` to `n-1` (where `n` is the length of the array). This loop controls the number of passes required to sort the list.
 
 **3. Comparing Adjacent Elements:**
 
-- Inside the loop, create another `for` loop that iterates from `0` to `n-i-2` (where `i` is the current loop counter for the outer loop). This inner loop compares adjacent elements within each pass.
+- Inside the loop, create another `for` loop that iterates from `0` to `n-i-1` (where `i` is the current loop counter for the outer loop). This inner loop compares adjacent elements within each pass.
 
 **4. Swapping if Necessary:**
 
@@ -100,10 +100,10 @@ Consider the unsorted list: `[6, 4, 2, 8, 1]`. Here's how bubble sort would work
 function bubble_sort(array)
   swapped = False  // Initialize swapped flag
 
-  for i = 0 to n-2  // Loop for number of passes (n-1)
+  for i = 0 to n-1  // Loop for number of passes (n-1)
     swapped = False  // Reset swapped flag for each pass
 
-    for j = 0 to n-i-2  // Loop to compare adjacent elements
+    for j = 0 to n-i-1  // Loop to compare adjacent elements
       if array[j] > array[j + 1] then
         temp = array[j]  // Temporary variable for swap
         array[j] = array[j + 1]
