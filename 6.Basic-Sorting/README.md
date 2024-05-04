@@ -186,6 +186,8 @@ Selection sort is a stable sorting algorithm. This means that if two elements ha
 
 ### Bubble sort
 
+> [Full explanation with examples](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/6.Basic-Sorting/Bubble)
+
 **Explanation:**
 
 Bubble sort is another simple sorting algorithm that works by repeatedly iterating through the data set, comparing adjacent elements, and swapping them if they are in the wrong order. It's like repeatedly "bubbling" the largest elements to the end of the list with each pass.
