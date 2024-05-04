@@ -241,8 +241,22 @@ Finally, selection sort is greatly outperformed on larger arrays by Θ(𝑛 log�
 
 ## FAQ
 
-### When should we use it?
-### When should we not use it?
+> `Ai is used`
+
+**When to Use Selection Sort:**
+
+* **Learning purposes:** Selection sort's simplicity makes it an excellent choice for beginners to grasp the fundamental concepts of sorting algorithms. Its clear logic and step-by-step nature allow for easy understanding of how sorting works.
+* **Small datasets:** For relatively small lists where efficiency isn't a paramount concern, selection sort's memory efficiency can be beneficial. Since it operates directly on the original data, it avoids the need for additional memory allocation, which might be limited in specific scenarios.
+
+**When to Avoid Selection Sort:**
+
+* **Large datasets:** Selection sort's Achilles' heel is its O(n^2) time complexity. As the number of elements in the list grows, the sorting time increases quadratically, making it sluggish for handling massive datasets. In such cases, resorting to sorting algorithms with better time complexity (e.g., Merge Sort, Quick Sort) is highly recommended for optimal performance.
+* **Stability matters:** If maintaining the original order of elements with equal values is crucial (stable sorting), selection sort is not the ideal choice. It doesn't guarantee that elements with identical keys will preserve their relative positions in the sorted list.
+
+**Additional Considerations:**
+
+* **Hybrid approaches:** In some situations, selection sort might be used as a preliminary step for a more complex sorting algorithm. For instance, it could be employed to partially sort a small sub-list before feeding it into a divide-and-conquer sorting algorithm like Merge Sort.
+
 
 ## References:
 
