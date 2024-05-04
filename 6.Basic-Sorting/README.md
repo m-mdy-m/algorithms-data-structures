@@ -490,8 +490,6 @@ These algorithms exploit specific properties of the data to sort them, often wit
 
 * **Bucket Sort:** Divides the data set into smaller buckets based on a specific criteria. This criteria can involve a range of values, hash function, or other techniques.  Then, a sorting algorithm (often a simple one like insertion sort) is applied to each bucket individually. Finally, the sorted buckets are concatenated to form the final sorted list. Bucket sort can be efficient for
 
-Absolutely, here's a more comprehensive explanation of the different sorting algorithm types within data structures:
-
 ### In-place:
 
 These algorithms are memory-efficient champions, sorting the data set within the existing memory allocation. They achieve this by rearranging elements directly in the original data structure, typically an array. No additional space is needed for temporary results, making them a great choice for situations where memory is limited.

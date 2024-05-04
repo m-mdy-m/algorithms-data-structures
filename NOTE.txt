@@ -1,5 +1,0 @@
-- Add Relations other Pattern -> *Design-Pattern
-- Add Pseudo code -> *Design-Pattern
-- Add static structure - > *Design-Pattern
-- Example Go for All  -> *
-- Example Python for All -> *
