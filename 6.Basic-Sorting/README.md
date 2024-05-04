@@ -536,37 +536,35 @@ These algorithms are opportunistic, taking advantage of any existing order prese
 
 - **Timsort:** This hybrid algorithm can detect partially sorted data and utilize insertion sort efficiently for those sub-lists, reducing the overall number of comparisons and swaps needed.
 
-
 ## Classification
 
 > `Ai is used in some descriptions`
 
 1. **Time Complexity:** This refers to the amount of time an algorithm takes to execute, typically expressed using Big O notation (O(n), O(n log n), etc.). It indicates how the execution time grows with the size of the input data (n). Common time complexities for sorting algorithms include:
 
-    * **O(n^2):** Quadratic time complexity, where the execution time grows quadratically with the input size. This is seen in algorithms like bubble sort, selection sort, and insertion sort in the worst case.
-    * **O(n log n):** Logarithmic time complexity, where the execution time grows proportionally to the logarithm of the input size. This is considered efficient and is achieved by algorithms like merge sort, quicksort (average case), and heap sort.
-    * **O(n):** Linear time complexity, where the execution time grows linearly with the input size. This is ideal but uncommon in sorting algorithms, though counting sort can achieve this in specific cases.
+* **O(n^2):** Quadratic time complexity, where the execution time grows quadratically withthe input size. This is seen in algorithms like bubble sort, selection sort, and insertionsort in the worst case.
+* **O(n log n):** Logarithmic time complexity, where the execution time grows proportionallyto the logarithm of the input size. This is considered efficient and is achieved byalgorithms like merge sort, quicksort (average case), and heap sort.
+* **O(n):** Linear time complexity, where the execution time grows linearly with the inputsize. This is ideal but uncommon in sorting algorithms, though counting sort can achieve thisin specific cases.
 
 2. **Space Complexity:** This refers to the amount of additional memory space required by the algorithm beyond the input data itself. It's also expressed using Big O notation:
-
-    * **O(1):** Constant space complexity, where the algorithm sorts the data in-place without requiring extra space. This is seen in algorithms like selection sort, bubble sort, insertion sort, quicksort, and heap sort.
-    * **O(n):** Linear space complexity, where the algorithm requires additional space proportional to the input size. This is seen in merge sort, which typically uses an extra array to store temporary results during the merge process.
+* **O(1):** Constant space complexity, where the algorithm sorts the data in-place withoutrequiring extra space. This is seen in algorithms like selection sort, bubble sort, insertionsort, quicksort, and heap sort.
+* **O(n):** Linear space complexity, where the algorithm requires additional spaceproportional to the input size. This is seen in merge sort, which typically uses an extraarray to store temporary results during the merge process.
 
 3. **Recursion:**
 
-    * **Recursive:** Some algorithms, like quicksort and merge sort, use a recursive approach. They break down the problem into smaller sub-problems, solve those sub-problems recursively, and then combine the solutions. This can be efficient but might have overhead associated with function calls.
-    * **Non-Recursive:** Other algorithms, like selection sort, bubble sort, and insertion sort, utilize iterative loops to solve the sorting problem without recursion. This can be simpler to understand but might require more explicit control flow.
-    * **Hybrid:** Some algorithms, like merge sort, use a combination of recursive and non-recursive techniques.
+* **Recursive:** Some algorithms, like quicksort and merge sort, use a recursive approach.They break down the problem into smaller sub-problems, solve those sub-problems recursively,and then combine the solutions. This can be efficient but might have overhead associated withfunction calls.
+* **Non-Recursive:** Other algorithms, like selection sort, bubble sort, and insertion sort,utilize iterative loops to solve the sorting problem without recursion. This can be simplerto understand but might require more explicit control flow.
+* **Hybrid:** Some algorithms, like merge sort, use a combination of recursive andnon-recursive techniques.
 
 4. **Stability:**
 
-    * **Stable:** Stable sorting algorithms maintain the original order of elements with equal values during the sorting process. This means that if two elements were originally in order (e.g., A then B), they will remain in that order (A then B) even after sorting. This can be important in specific applications where preserving the order of duplicates is crucial. Examples of stable sorting algorithms include insertion sort, merge sort, and bubble sort.
-    * **Unstable:** Unstable sorting algorithms do not necessarily preserve the original order of elements with equal values. The order of duplicates in the sorted output might differ from their original order. This is generally not a problem unless maintaining the order of duplicates is essential. Examples of unstable sorting algorithms include quicksort and heap sort.
+ * **Stable:** Stable sorting algorithms maintain the original order of elements with equal values during the sorting process. This means that if two elements were originally in order (e.g., A then B), they will remain in that order (A then B) even after sorting. This can be important in specific applications where preserving the order of duplicates is crucial. Examples of stable sorting algorithms include insertion sort, merge sort, and bubble sort.
+ * **Unstable:** Unstable sorting algorithms do not necessarily preserve the original order of elements with equal values. The order of duplicates in the sorted output might differ from their original order. This is generally not a problem unless maintaining the order of duplicates is essential. Examples of unstable sorting algorithms include quicksort and heap sort.
 
 5. **In-place vs. Out-of-place:**
 
-    * **In-place:** These algorithms sort the data by rearranging elements within the existing data structure (typically an array) without creating a new array to store the sorted data. This is memory-efficient but might involve more swaps or element movements. Examples include selection sort, bubble sort, insertion sort, quicksort, and heap sort.
-    * **Out-of-place:** These algorithms create a new data structure (typically an array) to store the sorted data. This can be less memory-efficient  but might involve fewer swaps or element movements compared to in-place algorithms. Merge sort is a common example of an out-of-place sorting algorithm.
+* **In-place:** These algorithms sort the data by rearranging elements within the existingdata structure (typically an array) without creating a new array to store the sorted data.This is memory-efficient but might involve more swaps or element movements. Examples includeselection sort, bubble sort, insertion sort, quicksort, and heap sort.
+* **Out-of-place:** These algorithms create a new data structure (typically an array) tostore the sorted data. This can be less memory-efficient  but might involve fewer swaps orelement movements compared to in-place algorithms. Merge sort is a common example of anout-of-place sorting algorithm.
 
 **Choosing the Right Algorithm:**
 
