@@ -174,7 +174,31 @@ Bubble sort is considered a space-efficient sorting algorithm. It only requires 
 * **Comparison-based sorting:** Bubble sort, like many sorting algorithms, is comparison-based. It relies on comparing elements to determine their order. In certain cases, this comparison-based approach might be inherently less efficient than non-comparison-based sorting algorithms for specific data types or sorting criteria.
 
 ## FAQ
+**1. What is the Boundary Case for Bubble Sort?**
 
+Bubble sort exhibits its best-case time complexity of O(n) when the input list is already sorted in ascending order. In this scenario, the `swapped` flag will remain `False` throughout the first pass itself. Since no swaps are necessary, the loop terminates immediately after the first iteration, requiring only n comparisons (one for each element). This highlights that bubble sort can be efficient for pre-sorted or nearly sorted data.
 
+**2. Does Sorting Happen In-place in Bubble Sort?**
+
+Yes, bubble sort is considered an in-place sorting algorithm. It sorts the data by modifying the original array itself, without allocating significant additional memory space. During the sorting process, elements are swapped within the existing array until the desired order is achieved. This in-place nature can be advantageous in situations with memory limitations.
+
+**3. Is Bubble Sort a Stable Sorting Algorithm?**
+
+Yes, bubble sort is a stable sorting algorithm. This means that if two elements in the original list have equal values (the key being sorted by), their relative order remains preserved in the sorted output. This stability arises because bubble sort only compares adjacent elements. If two elements have the same value, they won't be swapped unless they're in the wrong order based on their position in the list. This property can be crucial when maintaining the order of duplicates is essential.
+
+**4. Where is Bubble Sort Used?**
+
+Despite its limitations in real-world sorting due to time complexity, bubble sort finds applications in specific scenarios:
+
+* **Educational Tool:** Due to its simplicity, bubble sort is often used as an introductory sorting algorithm in computer science education. It allows students to grasp the fundamental concepts of sorting and how comparisons and swaps lead to ordered data.
+
+* **Nearly Sorted Arrays:** For situations where the data is already partially sorted or has only a few elements out of order, bubble sort can be surprisingly efficient. Its linear complexity (O(n)) in this best-case scenario makes it suitable for fine-tuning the order of a nearly sorted list.
+
+* **Computer Graphics:** In specific computer graphics applications, such as polygon filling algorithms, bubble sort can be used to detect and fix minor errors (like swapping just two elements) in almost-sorted arrays with linear complexity (O(2n)). This can be beneficial for maintaining order within specific graphical operations.
 
 ## Example
+- [Ts]()
+- [Js]()
+- [Go]()
+- [Py]()
+- [Java]()
