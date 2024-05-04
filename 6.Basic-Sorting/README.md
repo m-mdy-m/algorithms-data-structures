@@ -234,6 +234,8 @@ Bubble sort is also a stable sorting algorithm, meaning it preserves the origina
 ---
 ### Insertion sort
 
+> [Full explanation with examples](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/6.Basic-Sorting/Insertion)
+
 **Explanation:**
 
 Insertion sort is a sorting algorithm that works similarly to how you might organize playing cards in your hand. It iterates through the list, building a sorted sub-list one element at a time.  For each element, it compares it to the elements in the sorted sub-list and inserts it in its correct position. 
