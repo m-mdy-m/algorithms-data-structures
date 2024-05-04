@@ -2,10 +2,6 @@
 
 ## Introduction:
 
-I can provide a more detailed and professional explanation of selection sort:
-
-**Selection Sort**
-
 Selection sort is a sorting algorithm that categorizes as an in-place comparison sort. This means it operates directly on the data it receives (in-place) and determines the order through comparisons between elements (comparison sort). While it has a time complexity of O(n^2), making it less efficient for massive datasets, selection sort offers advantages in specific scenarios due to its simplicity.
 
 **Conceptual Breakdown:**
@@ -219,16 +215,34 @@ On the bright side, selection sort is a space-efficient algorithm. It performs i
 
 ## Advantages and Disadvantages
 
-### Advantages:
 
-### Disadvantages:
+**Advantages:**
 
+* **Simplicity:** Selection sort's core concept is straightforward to understand and implement. It's a good sorting algorithm to learn as it lays the foundation for grasping more complex sorting techniques.
+* **In-place sorting:** Selection sort operates directly on the original data list, modifying it in place. This eliminates the need for extra memory to store a temporary sorted copy, making it memory-efficient for smaller datasets.
+* **Favorable for small datasets:** For relatively small lists, selection sort might perform reasonably well due to its simpler structure. In scenarios where memory is a tight constraint and the data size is limited, selection sort can be a suitable choice.
 
+**Disadvantages:**
+
+* **O(n^2) time complexity:** The primary drawback of selection sort lies in its time complexity. As the number of elements (n) in the list grows, the number of comparisons required to sort the list increases quadratically (n^2). This makes selection sort inefficient for handling large datasets where other sorting algorithms with better time complexity (e.g., Merge Sort, Quick Sort) are more preferable.
+* **Unstable sorting:** Selection sort doesn't necessarily preserve the original order of elements with identical values. This means if you have multiple elements with the same value, their relative positions in the sorted list might differ from their original order. While this might not be a critical concern in all situations, it's an important factor to consider when specific ordering requirements exist.
 ## Comparison to other sorting algorithms
 
-## Variants
+Among quadratic sorting algorithms (sorting algorithms with a simple average-case of Θ(n2)), selection sort almost always outperforms bubble sort and gnome sort. Insertion sort is very similar in that after the kth iteration, the first 
+𝑘 elements in the array are in sorted order. Insertion sort's advantage is that it only scans as many elements as it needs in order to place the 𝑘+1 st element, while selection sort must scan all remaining elements to find the 𝑘+1 st element.
+
+Simple calculation shows that insertion sort will therefore usually perform about half as many comparisons as selection sort, although it can perform just as many or far fewer depending on the order the array was in prior to sorting. It can be seen as an advantage for some real-time applications that selection sort will perform identically regardless of the order of the array, while insertion sort's running time can vary considerably. However, this is more often an advantage for insertion sort in that it runs much more efficiently if the array is already sorted or "close to sorted."
+
+While selection sort is preferable to insertion sort in terms of number of writes (𝑛−1 swaps versus up to 𝑛(𝑛−1)/2 swaps, with each swap being two writes), this is roughly twice the theoretical minimum achieved by cycle sort, which performs at most n writes. This can be important if writes are significantly more expensive than reads, such as with EEPROM or Flash memory, where every write lessens the lifespan of the memory.
+
+Selection sort can be implemented without unpredictable branches for the benefit of CPU branch predictors, by finding the location of the minimum with branch-free code and then performing the swap unconditionally.
+
+Finally, selection sort is greatly outperformed on larger arrays by Θ(𝑛 log⁡ 𝑛) divide-and-conquer algorithms such as mergesort. However, insertion sort or selection sort are both typically faster for small arrays (i.e. fewer than 10–20 elements). A useful optimization in practice for the recursive algorithms is to switch to insertion sort or selection sort for "small enough" sublists.
 
 ## FAQ
+
+### When should we use it?
+### When should we not use it?
 
 ## References:
 
