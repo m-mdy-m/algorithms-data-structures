@@ -97,6 +97,70 @@ In selection sort, this "desired element" is the minimum (or maximum) element wi
 
 ## Implementations
 
+**Initialization: Setting the Stage**
+
+1. **Data Acquisition:** We begin with an unsorted list of elements `data` that needs to be arranged in ascending order (you can modify the comparison operator to sort in descending order if needed).
+2. **Sorted Sublist Boundary:** We establish a variable `sorted_end` to keep track of the sorted sublist's end. Initially, it points to the beginning of the list (index 0) since there are no sorted elements yet. This variable essentially marks the dividing line between the sorted and unsorted portions of the list.
+
+**Looping Through the Unsorted Wilderness**
+
+1. **Iterating Through Unsorted Elements:** We enter a loop that systematically iterates through the unsorted sublist. The loop counter `i` ranges from 0 to the second-last element (index `len(data) - 1`) because the last element will naturally fall into its correct position during the process.
+
+```
+for i in range(length(data) - 1):
+```
+
+**Finding the Minimum Within the Unsorted Realm**
+
+1. **Tentative Minimum:** We initialize a variable `min_index` to hold the index of the assumed minimum element. We start by assuming the first element in the unsorted sublist (at index `i`) is the minimum.
+2. **Scouring for the True Minimum:** We iterate through the remaining elements in the unsorted sublist (from `i + 1` to the end).
+
+```
+  min_index = i
+  for j in range(i + 1, length(data)):
+```
+
+3. **Challenging the Assumption:** Within the inner loop, we compare each element (`data[j]`) with the current assumed minimum (`data[min_index]`). If we encounter an element smaller than the assumed minimum, we update `min_index` to point to this new challenger, effectively tracking the true minimum element's index.
+
+```
+    if data[j] < data[min_index]:
+      min_index = j
+```
+
+**Swapping and Shrinking: Bringing Order to Chaos**
+
+1. **Placing the Minimum in its Rightful Place:** After examining the entire unsorted sublist, `min_index` holds the index of the true minimum element. We swap the element at `min_index` with the element at the current `sorted_end` position. This essentially lifts the minimum element out of the unsorted chaos and places it in its rightful sorted position at the front of the sorted sublist.
+
+```
+  if i != min_index:  # Swap only if minimum isn't already at the sorted_end
+    data[i], data[min_index] = data[min_index], data[i]
+```
+
+2. **Shrinking the Unsorted Territory:** Since one element is now sorted and placed in its correct position, the unsorted sublist shrinks. We increment `sorted_end` by 1 to reflect this change. The sorted sublist now encompasses one more element.
+
+**Loop Termination and the Sorted List**
+
+The loop continues its relentless march through the unsorted sublist, performing the steps mentioned above in each iteration. With each pass, the sorted sublist steadily grows, and the unsorted sublist correspondingly shrinks.
+
+* **Loop Completion:** The loop terminates when the counter `i` reaches the second-last element (index `len(data) - 2`). At this point, the last remaining element is automatically placed in its correct position (either the largest or smallest depending on the sorting order).
+
+**Pseudocode in Plain English:**
+
+```
+function selectionSort(data):
+  sorted_end = 0  # Initialize sorted sublist boundary
+  for i in range(length(data) - 1):  # Loop through unsorted elements
+    min_index = i                 # Assume first element in unsorted sublist is minimum
+    for j in range(i + 1, length(data)):  # Find the true minimum in the unsorted sublist
+      if data[j] < data[min_index]:
+        min_index = j
+    if i != min_index:            # Swap minimum with element at sorted_end if necessary
+      data[i], data[min_index] = data[min_index], data[i]
+    sorted_end += 1                # Increment sorted sublist boundary
+  return data
+```
+
+
 ## Complexity
 
 ## Advantages and Disadvantages
