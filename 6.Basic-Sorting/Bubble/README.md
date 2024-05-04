@@ -68,12 +68,98 @@ Consider the unsorted list: `[6, 4, 2, 8, 1]`. Here's how bubble sort would work
 - While not recommended for real-world sorting tasks due to its inefficiency, bubble sort serves as a valuable pedagogical tool for understanding the fundamental concepts of sorting algorithms. 
 ## Implementations
 
+**1. Initialization:**
 
+- Define a function `bubble_sort(array)` that takes an unsorted array of elements as input.
+- Inside the function, initialize a variable `swapped` to `False` to track if any swaps occurred during a pass.
 
+**2. Looping Through the List:**
 
+- Initiate a `for` loop that iterates from `0` to `n-2` (where `n` is the length of the array). This loop controls the number of passes required to sort the list.
+
+**3. Comparing Adjacent Elements:**
+
+- Inside the loop, create another `for` loop that iterates from `0` to `n-i-2` (where `i` is the current loop counter for the outer loop). This inner loop compares adjacent elements within each pass.
+
+**4. Swapping if Necessary:**
+
+- Within the inner loop, compare the element at index `j` with the element at index `j + 1`.
+- If the element at index `j` is greater than the element at index `j + 1`, it means they're in the wrong order. Set the `swapped` flag to `True` and swap their positions in the array using a temporary variable `temp`.
+
+**5. Checking for Swaps:**
+
+- After completing the inner loop (one pass through the list), check the `swapped` flag.
+
+**6. Termination Condition:**
+
+- If the `swapped` flag remained `False` throughout the entire pass (meaning no swaps were necessary), it signifies the list is already sorted. In this case, we can optimize by breaking out of the outer loop using a `break` statement. This avoids unnecessary iterations.
+
+**Pseudocode:**
+
+```
+function bubble_sort(array)
+  swapped = False  // Initialize swapped flag
+
+  for i = 0 to n-2  // Loop for number of passes (n-1)
+    swapped = False  // Reset swapped flag for each pass
+
+    for j = 0 to n-i-2  // Loop to compare adjacent elements
+      if array[j] > array[j + 1] then
+        temp = array[j]  // Temporary variable for swap
+        array[j] = array[j + 1]
+        array[j + 1] = temp
+        swapped = True  // Set swapped flag if a swap occurred
+    end if
+    if not swapped then  // Optimization: break if no swaps in a pass
+      break
+    end if
+  end for
+end function
+```
+
+**Explanation:**
+
+- The outer loop controls the number of passes required to sort the list. With each pass, the largest element "bubbles" to the end.
+- The inner loop compares adjacent elements within each pass.
+- The swapping logic ensures elements are placed in ascending order.
+- The `swapped` flag is crucial to determine if the list is already sorted and avoid unnecessary iterations.
+- The `break` statement in the outer loop is an optimization to exit early if the list is sorted in a particular pass.
 
 ## Complexity
+**Time Complexity:**
+
+* **Worst-case:** O(n^2)
+* **Average-case:** O(n^2)
+* **Best-case:** O(n)
+
+* **Worst-case (O(n^2)):** This scenario occurs when the list is initially sorted in descending order. In each pass, only the largest element "bubbles" to its correct position at the end. The remaining elements need to be compared again in subsequent passes. This requires `n-1` comparisons in the first pass, `n-2` comparisons in the second pass, and so on, leading to a total of:
+
+```
+(n-1) + (n-2) + ... + 1 = n(n-1)/2 ≈ O(n^2)
+```
+
+* **Average-case (O(n^2)):** Even for randomly ordered lists, the average number of comparisons required to sort the list remains O(n^2). This is because the nested loops still need to iterate through all possible pairs of elements in the worst-case scenario, even if it happens less frequently for random data.
+
+* **Best-case (O(n)):** The only situation where bubble sort achieves O(n) time complexity is when the list is already sorted in ascending order. In this case, the `swapped` flag will remain `False` throughout the first pass itself, and the `break` statement will immediately terminate the loop, requiring only n comparisons (one for each element).
+
+**Space Complexity:**
+
+* **Space complexity:** O(1)
+
+Bubble sort is considered a space-efficient sorting algorithm. It only requires a constant amount of extra space for variables like `swapped`, `i`, and `j` used in the loops. These variables don't depend on the input size (number of elements) and remain constant throughout the sorting process.
+
+**Key Points:**
+
+* The nested loops in bubble sort lead to its quadratic time complexity, making it inefficient for large datasets. 
+* Although bubble sort has a best-case of O(n), this scenario is uncommon in practice.
+* For real-world sorting tasks, algorithms like quicksort, timsort, or merge sort with lower average-case time complexities are preferred.
+
+
 ## Advantages and Disadvantages
+
+
+
+
 ## Comparison to other sorting algorithms
 ## FAQ
 ## Example
