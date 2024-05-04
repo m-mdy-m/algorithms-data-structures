@@ -6,7 +6,13 @@
 
 ## Algorithms
 
-## Conclusion
+## Implementations
+## Complexity
+## Advantages and Disadvantages
+## Comparison to other sorting algorithms
+## FAQ
+## References
+## Example
 
 
 

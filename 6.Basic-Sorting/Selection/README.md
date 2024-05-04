@@ -1,5 +1,4 @@
 # Selection Sort
-
 ## Introduction:
 
 Selection sort is a sorting algorithm that categorizes as an in-place comparison sort. This means it operates directly on the data it receives (in-place) and determines the order through comparisons between elements (comparison sort). While it has a time complexity of O(n^2), making it less efficient for massive datasets, selection sort offers advantages in specific scenarios due to its simplicity.
@@ -26,7 +25,6 @@ Here's a breakdown of how selection sort works:
 * However, the time complexity of O(n^2) becomes a significant drawback for very large datasets. As the number of elements (n) increases, the number of comparisons required grows quadratically, leading to slower performance compared to algorithms with better time complexity (e.g., Merge Sort, Quick Sort).
 
 In essence, selection sort repeatedly finds the extreme element (minimum or maximum) within the unsorted data, swaps it into its sorted position, and shrinks the unsorted portion until the entire list is sorted. While it might not be the most efficient choice for all sorting needs, its simplicity and low memory requirements make it a valuable tool in specific situations. 
-
 ## How it Work:
 Selection sort, despite its O(n^2) complexity, offers a straightforward approach to sorting. Here's a detailed breakdown of the algorithm along with an illustrative example:
 
@@ -83,14 +81,11 @@ By repeatedly finding the minimum element and swapping it into its sorted positi
 ![](https://codepumpkin.com/wp-content/uploads/2017/10/SelectionSort_Avg_case.gif)
 
 ![](https://www.codingconnect.net/wp-content/uploads/2016/09/Selection-Sort.gif)
-
-
 ## Algorithm:
 
 Selection sort is a type of **selection algorithm**. Selection algorithms work by repeatedly finding the desired element (minimum or maximum depending on the sorting order) from a collection and placing it in its sorted position. You can find more information about selection algorithms in general [Selection-Algorithm](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/6.5-Selection-Algorithm).
 
 In selection sort, this "desired element" is the minimum (or maximum) element within the unsorted data. The algorithm iteratively finds this minimum element, swaps it into its sorted position, and shrinks the unsorted portion until the entire list is sorted. 
-
 ## Implementations
 
 **Initialization: Setting the Stage**
@@ -155,8 +150,6 @@ function selectionSort(data):
     sorted_end += 1                # Increment sorted sublist boundary
   return data
 ```
-
-
 ## Complexity
 
 **Time Complexity: O(n^2)**
@@ -211,8 +204,6 @@ On the bright side, selection sort is a space-efficient algorithm. It performs i
 | Space Complexity       | O(1). The algorithm is space-efficient and uses constant extra space.           |
 
 **In essence,** selection sort's simplicity and low memory requirements make it a potential choice for specific scenarios where memory is a constraint. However, for larger datasets, its O(n^2) time complexity becomes a significant drawback, and other sorting algorithms with better time complexity (e.g., Merge Sort, Quick Sort) are preferable.
-
-
 ## Advantages and Disadvantages
 
 
@@ -238,7 +229,6 @@ While selection sort is preferable to insertion sort in terms of number of write
 Selection sort can be implemented without unpredictable branches for the benefit of CPU branch predictors, by finding the location of the minimum with branch-free code and then performing the swap unconditionally.
 
 Finally, selection sort is greatly outperformed on larger arrays by Θ(𝑛 log⁡ 𝑛) divide-and-conquer algorithms such as mergesort. However, insertion sort or selection sort are both typically faster for small arrays (i.e. fewer than 10–20 elements). A useful optimization in practice for the recursive algorithms is to switch to insertion sort or selection sort for "small enough" sublists.
-
 ## FAQ
 
 > `Ai is used`
@@ -256,13 +246,10 @@ Finally, selection sort is greatly outperformed on larger arrays by Θ(𝑛 log�
 **Additional Considerations:**
 
 * **Hybrid approaches:** In some situations, selection sort might be used as a preliminary step for a more complex sorting algorithm. For instance, it could be employed to partially sort a small sub-list before feeding it into a divide-and-conquer sorting algorithm like Merge Sort.
-
-
 ## References:
 
 - [wikipedia](https://en.wikipedia.org/wiki/Selection_sort)
 - [geeksforgeeks](https://www.geeksforgeeks.org/selection-sort/)
-
 ## Example
 - [Ts](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/6.Basic-Sorting/Selection/Example/Selection.ts)
 - [Js](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/6.Basic-Sorting/Selection/Example/Selection.js)
