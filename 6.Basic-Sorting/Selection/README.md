@@ -163,6 +163,60 @@ function selectionSort(data):
 
 ## Complexity
 
+**Time Complexity: O(n^2)**
+
+Selection sort exhibits a time complexity of O(n^2), signifying that the execution time grows quadratically with the input size (n). This analysis hinges on the nested loop structure inherent to the algorithm.
+
+* **Nested Loops:** The core operation involves two nested loops. The outer loop iterates through the unsorted sublist, progressively shrinking its size as elements are placed in their sorted positions. The inner loop, for each iteration of the outer loop, traverses the remaining unsorted elements to identify the minimum (or maximum, depending on the sorting order).
+* **Comparisons in Inner Loop:** In the worst-case scenario, to place an element in its sorted position, the inner loop needs to compare it with all the remaining unsorted elements (n - 1 comparisons) to pinpoint the minimum.
+* **Total Comparisons:** As this process repeats for n-1 elements (the outer loop iterates n-1 times), the total number of comparisons in the worst case scenario culminates in:
+
+```
+(n - 1) + (n - 2) + ... + 1
+```
+
+This summation represents an arithmetic series. By leveraging the formula for the sum of an arithmetic series, we arrive at:
+
+```
+Sum = (n-1 + 1) / 2 * (n-1)
+= n(n-1) / 2
+= 1/2 * n^2 - 1/2 * n
+```
+
+Ignoring the constant term (1/2 * n), we're left with n^2, which dominates the expression and defines the overall time complexity. Consequently, selection sort exhibits a time complexity of O(n^2).
+
+Ignoring the constant term (1/2 * n), we're left with n^2, which is the dominant term and defines the overall time complexity. Therefore, selection sort has a time complexity of O(n^2).
+
+> I know it might be a bit complicated, that's why better and simpler explanations:
+**Simple explanation**
+
+Here's a simpler explanation of selection sort's time complexity:
+
+**Imagine a race with n runners.** Selection sort is like picking the slowest runner one by one and placing them at the front of the line (sorted position).
+
+* **Inner Loop:** To find the slowest runner (minimum element) in each round (iteration), you need to compare them all. This is like the inner loop, which takes n-1 comparisons in the worst case (comparing each runner with the remaining ones).
+* **Outer Loop:** You repeat this process (outer loop) n-1 times to find and place n-1 runners (elements) in their sorted positions.
+
+**The Problem:** As the number of runners (n) increases, the comparisons per round (inner loop) and the number of rounds (outer loop) both grow. This makes selection sort slow for large datasets.
+
+**The Math:** We can express this growth using a formula (n^2) that reflects the quadratic increase in comparisons with the number of elements (n). This is why selection sort has a time complexity of O(n^2).
+
+**In simpler terms:** The more runners you have (data elements), the more comparisons it takes to find the slowest one (minimum element) in each round (iteration), and the more rounds it takes to sort everyone (all elements). This makes selection sort slow for big datasets.
+
+**Space Complexity: O(1)**
+
+On the bright side, selection sort is a space-efficient algorithm. It performs in-place sorting, meaning it sorts the data within the original list without requiring significant additional memory. The space complexity remains constant (O(1)) irrespective of the input list size. This is because it only utilizes a few variables (like `sorted_end` and `min_index`) to track the sorting process, and these variables' space requirements don't grow with the input size.
+
+**Complexity Summary:**
+
+| Complexity             | Description                                                                |
+|-------------------------|-------------------------------------------------------------------------------|
+| Time Complexity        | O(n^2). The number of comparisons grows quadratically with the input size (n). |
+| Space Complexity       | O(1). The algorithm is space-efficient and uses constant extra space.           |
+
+**In essence,** selection sort's simplicity and low memory requirements make it a potential choice for specific scenarios where memory is a constraint. However, for larger datasets, its O(n^2) time complexity becomes a significant drawback, and other sorting algorithms with better time complexity (e.g., Merge Sort, Quick Sort) are preferable.
+
+
 ## Advantages and Disadvantages
 
 ### Advantages:
