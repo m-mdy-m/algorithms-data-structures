@@ -80,7 +80,7 @@ This approach merges the explanation of insertion sort with the corresponding ps
 
 ```
 function insertionSort(array)
-  for i = 1 to length(array) - 1  // Loop through the unsorted portion (starting from the second element)
+  for i = 1 to length(array)  // Loop through the unsorted portion (starting from the second element)
     currentElement = array[i]  // Focus on the current element
 
     j = i  // Initialize the index for shifting within the sorted sub-list (starts at current element position)
