@@ -197,8 +197,8 @@ Despite its limitations in real-world sorting due to time complexity, bubble sor
 * **Computer Graphics:** In specific computer graphics applications, such as polygon filling algorithms, bubble sort can be used to detect and fix minor errors (like swapping just two elements) in almost-sorted arrays with linear complexity (O(2n)). This can be beneficial for maintaining order within specific graphical operations.
 
 ## Example
-- [Ts]()
-- [Js]()
-- [Go]()
-- [Py]()
-- [Java]()
+- [Ts](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/6.Basic-Sorting/Bubble/Example/Bubble.ts)
+- [Js](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/6.Basic-Sorting/Bubble/Example/Bubble.js)
+- [Go](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/6.Basic-Sorting/Bubble/Example/Bubble.go)
+- [Py](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/6.Basic-Sorting/Bubble/Example/Bubble.py)
+- [Java](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/6.Basic-Sorting/Bubble/Example/Bubble.java)
