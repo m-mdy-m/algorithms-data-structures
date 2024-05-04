@@ -157,9 +157,24 @@ Bubble sort is considered a space-efficient sorting algorithm. It only requires 
 
 ## Advantages and Disadvantages
 
+**Advantages:**
 
+* **Simplicity:** Bubble sort's most significant advantage lies in its sheer simplicity. The algorithm is incredibly easy to understand and implement, even for beginners with basic programming knowledge. This makes it a valuable educational tool for grasping fundamental sorting concepts.
 
+* **In-place sorting:** Bubble sort is an in-place sorting algorithm, meaning it sorts the data by modifying the original array without requiring significant additional memory space. This can be beneficial for situations with memory constraints.
 
-## Comparison to other sorting algorithms
+* **Stable sorting:** Bubble sort is a stable sorting algorithm. This means that if two elements have equal keys (values to be sorted by), their original order is preserved in the sorted output. This can be useful in specific use cases where maintaining the relative order of duplicates is important.
+
+**Disadvantages:**
+
+* **Time complexity:** The primary drawback of bubble sort is its unfavorable time complexity. In the worst-case scenario, and often in the average case, bubble sort has a time complexity of O(n^2). This translates to significantly slower sorting times as the data size (n) increases. For large datasets, this inefficiency makes bubble sort impractical.
+
+* **Inefficiency for large datasets:** Due to its quadratic time complexity, bubble sort becomes exceptionally slow when dealing with large datasets. There are significantly faster sorting algorithms available, such as quicksort, merge sort, or timsort, which should be tercih for real-world sorting tasks.
+
+* **Comparison-based sorting:** Bubble sort, like many sorting algorithms, is comparison-based. It relies on comparing elements to determine their order. In certain cases, this comparison-based approach might be inherently less efficient than non-comparison-based sorting algorithms for specific data types or sorting criteria.
+
 ## FAQ
+
+
+
 ## Example
