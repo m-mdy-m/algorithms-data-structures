@@ -34,7 +34,7 @@ Now that we have a solid grasp of insertion sort's step-by-step process, let's e
 **1. Seeding the Sorted Sub-list (Initialization):**
 
 ```
-for i = 1 to length(array) - 1  // Loop through the unsorted portion (starting from the second element)
+for i = 1 to length(array) // Loop through the unsorted portion (starting from the second element)
 ```
 
 This loop iterates through the elements in the array, starting from the second element (index 1). We don't need to process the first element because it's considered "already sorted" in our initial sub-list of size 1.
