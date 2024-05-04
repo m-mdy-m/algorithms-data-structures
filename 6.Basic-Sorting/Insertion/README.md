@@ -200,8 +200,8 @@ Insertion Sort is a good choice for several reasons:
 * **Useful for partially sorted arrays:** Takes advantage of the partial order to reduce comparisons.
 
 ## Example
-- [Ts]()
-- [Js]()
-- [Java]()
-- [Go]()
-- [Py]()
+- [Ts](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/6.Basic-Sorting/Insertion/Example/Insertion.ts)
+- [Js](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/6.Basic-Sorting/Insertion/Example/Insertion.js)
+- [Java](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/6.Basic-Sorting/Insertion/Example/Insertion.java)
+- [Go](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/6.Basic-Sorting/Insertion/Example/Insertion.go)
+- [Py](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/6.Basic-Sorting/Insertion/Example/Insertion.py)
