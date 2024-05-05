@@ -50,8 +50,8 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
 A general term for a class of algorithms that aim to find a specific element in a data set, such as the minimum, maximum, or kiloth smallest element. -> It is not necessary to understand by reading this article, but it is good to know
 
    - > [Selection-Sort](6.Basic-Sorting/Selection/) - selection sort is a type of selection algorithm
-   - > [Bubble]()
-   - > [Insertion]()
+   - > [Bubble](6.Basic-Sorting/Bubble/)
+   - > [Insertion](6.Basic-Sorting/Insertion/)
 
 7. [Search Algorithm](7.Search-Algorithm/)
 

@@ -1,4 +1,16 @@
-## Testing Techniques:**
+# Testing Techniques and More
+
+## What is software testing?
+
+## Why important
+
+## Goals
+
+## Types of software testing
+
+
+## Categorization
+
 
 * **Test Case Design:** Crafting a variety of inputs to comprehensively test your program's behavior.
 * **Unit Testing:** Verifying the correctness of individual code units in isolation.
@@ -15,3 +27,7 @@
 * **Smoke Testing:** A high-level test to validate basic functionality after a new build or major code change.
 * **Regression Testing:** Re-running previously successful tests on modified code to ensure no regressions (unintended functionality breaks).
 * **Exploratory Testing:** A more creative approach where the tester actively explores the application to find bugs.
+
+## Quality
+
+## Best Practices
