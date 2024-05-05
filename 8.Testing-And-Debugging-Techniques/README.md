@@ -14,7 +14,25 @@ This document delves deep into the world of testing and debugging, providing in-
 
 
 ## Development Process
-* **Coding Practices:**
+### Coding Practices:**
+
+**Writing Clean and Readable Code:**
+
+- **Clear Variable and Function Naming:** Choose descriptive names that accurately reflect the purpose of variables and functions. This makes your code easier to understand for both yourself and others,  facilitating the creation of clear and maintainable tests.
+- **Proper Code Formatting:** Use consistent indentation, spacing, and line breaks to improve code readability. Well-formatted code is easier to visually scan, making it faster to identify potential issues during testing and debugging.
+- **Commenting:** Add clear and concise comments to explain complex logic or non-obvious sections of code. Comments can be invaluable for understanding the code's intent, especially for testers who may not be familiar with every detail of the implementation.
+
+**Writing Modular Code:**
+
+- **Breaking Down Functionality into Smaller Units:**  Structure your code into well-defined functions or modules that perform specific tasks. This facilitates unit testing, where you can isolate and thoroughly test individual units of code.
+- **Loose Coupling:** Strive for loose coupling between code modules. This means modules should depend on each other as little as possible, making them easier to test and debug in isolation.
+
+**Writing Defensive Code:**
+
+- **Input Validation:** Implement mechanisms to validate user input or data coming from other sources. This helps prevent unexpected errors that might occur due to invalid data during testing or real-world usage.
+- **Error Handling:**  Use mechanisms like try-catch blocks to handle potential errors gracefully. This ensures your program doesn't crash due to unexpected situations, and can provide valuable information for debugging.
+- **Assertions:** Use assertions (statements that verify assumptions about your code) to check for expected conditions throughout your code.  If an assertion fails, it indicates a potential problem that can be investigated during testing or debugging.
+
 * **Testing Strategies:**
 * **Debugging Techniques:**
 
