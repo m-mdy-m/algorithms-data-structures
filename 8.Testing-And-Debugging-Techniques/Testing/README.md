@@ -9,3 +9,9 @@
 * **Security Testing:** Identifying and mitigating security vulnerabilities.
 * **Usability Testing:** Evaluating how easy and intuitive the system is to use for the target audience.
 * **Mutation Testing:** Deliberately introducing errors into the code and checking if the tests detect them.
+* **Non-Functional Testing:** This category encompasses testing aspects beyond the core functionality, such as performance, usability, security (which you already have), and reliability.
+* **API Testing:** If your application interacts with APIs (external or internal), there are specific techniques to ensure they function as expected.
+* **GUI Testing (Graphical User Interface Testing):** This focuses on testing the visual elements and user interactions of a graphical application.
+* **Smoke Testing:** A high-level test to validate basic functionality after a new build or major code change.
+* **Regression Testing:** Re-running previously successful tests on modified code to ensure no regressions (unintended functionality breaks).
+* **Exploratory Testing:** A more creative approach where the tester actively explores the application to find bugs.
