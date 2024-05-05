@@ -46,7 +46,7 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
   
 
 6. [Basic Sorting (e.g., Bubble Sort, Selection Sort, Insertion Sort)](6.Basic-Sorting/)
-- > 6/5:  [Selection Algorithm](6.5-Selection-Algothm/) :
+- > 6/5:  [Selection Algorithm](6.5-Selection-Algorithm/) :
 A general term for a class of algorithms that aim to find a specific element in a data set, such as the minimum, maximum, or kiloth smallest element. -> It is not necessary to understand by reading this article, but it is good to know
 
    - > [Selection-Sort](6.Basic-Sorting/Selection/) - selection sort is a type of selection algorithm
