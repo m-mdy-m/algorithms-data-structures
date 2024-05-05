@@ -60,11 +60,9 @@ A general term for a class of algorithms that aim to find a specific element in 
    - > [Test](8.Testing-And-Debugging-Techniques/Testing/)
 
 9. Pseudo codes
-
-0. Challenges:
-   - > challenge coding and implementing concepts
-
-0. Clean_Code()
+   - Challenges:
+       > challenge coding and implementing concepts
+   - Clean Code:
 
 **Medium:**
 
