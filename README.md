@@ -55,7 +55,9 @@ A general term for a class of algorithms that aim to find a specific element in 
 
 7. [Search Algorithm](7.Search-Algorithm/)
 
-8. Testing and Debugging Techniques
+8. [Testing and Debugging Techniques](8.Testing-And-Debugging-Techniques/)
+   - > [Debug](8.Testing-And-Debugging-Techniques/Debugging/)
+   - > [Test](8.Testing-And-Debugging-Techniques/Testing/)
 
 9. Pseudo codes
 
