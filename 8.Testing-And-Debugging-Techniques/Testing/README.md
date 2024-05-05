@@ -63,47 +63,79 @@ Software testing is typically goal driven.
 
 * Software should not only be functional but also user-friendly. Usability testing focuses on how users interact with the software, evaluating factors like intuitiveness, learnability, and overall user satisfaction. By identifying usability issues early on, testers can ensure the software is designed with the user in mind, resulting in a more enjoyable and productive user experience.
 
-## Types of software testing
-
-
 ## Categorization
+* **Development Testing:** This isn't a single, specific category, but rather an umbrella term encompassing all testing activities performed during the software development lifecycle. It includes unit testing, integration testing, system testing, regression testing, and smoke testing, among others. These tests are typically conducted by developers or QA testers before the software is released to the public.
 
+### By Automation Level:**
 
-* **Automated testing**
-* **Unit testing**
-* **Integration testing**
-* **System testing**
-* **Static, dynamic, and passive testing**
-* **Exploratory Testing**
-* **Preset testing vs adaptive testing**
-* **Black/white box**
-* **Installation testing**
-* **Compatibility testing**
-* **Smoke and sanity testing**
-* **Regression testing**
-* **Acceptance testing**
-* **Alpha testing**
-* **Beta testing**
-* **Functional vs non-functional testing**
-* **Continuous testing**
-* **Destructive testing**
-* **Performance Testing**
-* **Usability testing**
-* **Accessibility testing**
-* **Security testing**
-* **Development testing**
-* **A/B testing**
-* **Concurrent testing**
-* **Conformance testing or type testing**
-* **Output comparison testing**
-* **Property testing**
-* **Metamorphic testing**
-* **VCR testing**
-* **Stress testing**
-* **API Testing:**
-* **Test Case Design:** 
-* **Mutation Testing:**
----
+* **Automated Testing:** Uses tools and scripts to automate repetitive tasks, saving time and effort.
+* **Manual Testing:** Performed by humans, often for exploratory testing or tasks requiring human judgment.
+
+### By Development Stage:**
+
+* **Unit Testing:** Focuses on individual software units (functions, modules) during development (usually by developers).
+* **Integration Testing:** Tests how different software units interact with each other after development.
+* **System Testing:** Evaluates the entire software system as a whole against requirements after development.
+* **Regression Testing:** Ensures new changes haven't caused regressions in existing functionalities (after development).
+* **Alpha Testing:** Early testing conducted by a limited group of in-house users (before public release).
+* **Beta Testing:** Testing done by a wider group of external users before public release (before public release).
+* **Acceptance Testing (including User acceptance Testing:(UAT)):** Performed by users or stakeholders to validate the software meets their needs (before or after public release).
+
+### By Testing Method:**
+
+* **Static Testing (Code Review):** Analyzes the code itself without running the software, to identify potential issues (during development).
+* **Dynamic Testing (Execution Testing):** Runs the software with various inputs to test its behavior (during or after development).
+* **Passive Testing (Monitoring):** Monitors the software's performance and behavior in a production environment (after deployment).
+
+### By Testing Style:**
+
+* **Exploratory Testing:**  A flexible, creative approach where testers actively explore the software to uncover unexpected issues (during or after development).
+* **Preset Testing:**  Structured testing with pre-defined test cases and expected results (during development).
+
+* **adaptive testing**
+
+### By Testers' Knowledge of Internal System (Focus):**
+
+* **Black-Box Testing:** Testers treat the software as a black box, focusing on functionalities without knowledge of internal workings (during or after development).
+* **White-Box Testing:** Testers have knowledge of the software's internal structure and code, allowing for more in-depth testing (during development).
+
+### By Purpose:**
+
+* **Functional Testing:** Ensures the software performs its intended functions correctly according to requirements (during or after development).
+* **Non-Functional Testing:** Evaluates aspects like performance, usability, security, and scalability (during or after development).
+
+  * **Performance Testing:** Measures the software's speed, responsiveness, and stability under load.
+  * **Usability Testing:** Evaluates how easy and user-friendly the software is.
+  * **Accessibility Testing:** Ensures the software is usable by people with disabilities.
+  * **Security Testing:** Identifies and mitigates vulnerabilities that could be exploited by attackers.
+  * **A/B testing**
+
+### Other Important Testing Techniques:**
+
+* **Installation Testing:** Verifies if the software can be installed correctly on different systems (during development).
+* **Compatibility Testing:** Ensures the software functions properly across various devices, operating systems, and browsers (during or after development).
+* **Smoke Testing:** Basic tests to ensure a new build is stable enough for further testing (during development).
+* **Sanity Testing:** Quick tests to confirm major functionalities work after a change (during development).
+* **Continuous Testing:** Integrates testing throughout the development lifecycle for faster feedback (throughout development).
+* **Destructive Testing:** Pushes the software to its limits to identify breaking points (during development).
+
+### Test Design Techniques:**
+
+* **Test Case Design:**  Creating a plan for how to test the software with specific scenarios and inputs (during development).
+* **Mutation Testing:**  Deliberately introducing errors in the code to see if tests can detect them (during development).
+* **Boundary Value Testing:**  Testing software with inputs at the edges of expected ranges (during development).
+
+### *Specialized Testing Techniques:**
+
+* **API Testing:** Focuses on validating Application Programming Interfaces (APIs) (during or after development).
+* **Concurrent Testing:** Simulates real-world usage by running multiple user sessions simultaneously (during or after development).
+* **Conformance Testing (or Type Testing):** Verifies adherence to industry standards (during development).
+* **Output Comparison Testing:** Compares the software's actual output against expected results (during or after development).
+* **Property Testing:** Leverages formal properties to define desired behavior and generate test cases (during development).
+* **Metamorphic Testing:** Transforms inputs and verifies predictable output transformation (during development).
+* **VCR Testing (Virtual Cassette Recorder Testing):** Records user interactions for replay in future tests (during or after development).
+* **Stress Testing:** Puts the software under extreme load conditions (during or after development).
+
 ## Quality
 
 ## Best Practices
