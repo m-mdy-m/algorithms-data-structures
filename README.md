@@ -64,6 +64,8 @@ A general term for a class of algorithms that aim to find a specific element in 
 0. Challenges:
    - > challenge coding and implementing concepts
 
+0. Clean_Code()
+
 **Medium:**
 
 10. Data Structures
