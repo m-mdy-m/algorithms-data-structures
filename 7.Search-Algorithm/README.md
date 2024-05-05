@@ -1,24 +1,32 @@
 #  Searching Algorithms:
-### What is Searching?
+## What is Searching?
 
-Searching is the fundamental process of locating a specific element or item within a collection of data. This collection of data can take various forms, such as arrays, lists, trees, or other structured representations. The primary objective of searching is to determine whether the desired element exists within the data, and if so, to identify its precise location or retrieve it. It plays an important role in various computational tasks and real-world applications, including information retrieval, data analysis, decision-making processes, and more.
+Searching is the essential process of finding a specific element or item within a dataset. This data can be organized in various structures like arrays, lists, trees, or any other formatted representation. The core goal of searching is to determine if the desired element exists in the data and, if it does, to pinpoint its exact location or extract it. Searching is fundamental to many computational tasks and real-world applications, including retrieving information, analyzing data, and informing decision-making processes.
 
-### Introduction Searching Algorithms
+## Introduction 
+In computer science, a search algorithm is a method for efficiently finding information within a dataset.  These algorithms can retrieve data stored in specific structures or calculate it within a defined search space. They are crucial for various applications like information retrieval and data analysis.
 
-All search algorithms make use of a search key in order to proceed with the procedure. Search algorithms are expected to return a success or a failure status, usually denoted by Boolean true/false. Different search algorithms are available, and the performance and efficiency of the same depend on the data and on the manner in which they are used.
+**Choosing the right search algorithm depends on the data structure and any prior knowledge about the data itself.** Specialized data structures like search trees and hash tables can significantly improve search efficiency.
 
-A linear search algorithm is considered the most basic of all search algorithms. The best perhaps is binary search. There are other search algorithms such as the depth-first search algorithm, breadth-first algorithm, etc. The efficiency of a search algorithm is measured by the number of times a comparison of the search key is done in the worst case. The notation used in search algorithms is O(n), where n is the number of comparisons done. It gives the idea of the asymptotic upper bound of execution time required for the algorithm with respect to a given condition.
+### Types of Search Algorithms
 
-Search cases in search algorithms can be categorized as best case, average case and worst case. In some algorithms, all the three cases might be asymptotically the same, whereas in some others there could be a large difference. The average behavior of the search algorithm helps in determining the usefulness of the algorithm.
+There are three main categories of search algorithms based on their mechanisms:
 
-> Summary : A search algorithm is the step-by-step procedure used to locate specific data among a collection of data. It is considered a fundamental procedure in computing. In computer science, when searching for data, the difference between a fast application and a slower one often lies in the use of the proper search algorithm.
+1. **Linear Search:** Examines each record one by one until the target is found.
+2. **Binary Search:** Repeatedly divides the search space in half by targeting the center of the data structure, making it much faster than linear search for sorted data. 
+3. **Hashing:** Uses a hash function to directly map keys to their corresponding records, offering very fast lookups.
 
-> Example : 
+> !! NOTE : it's important to clarify that this is a high-level categorization. !! 
+
+**Search algorithms are evaluated based on their computational complexity, which describes the maximum time required to find the target.** Binary search, for example, boasts a logarithmic time complexity (O(log n)), meaning the number of steps needed to find the target grows proportionally to the logarithm of the data size.
+
+**Summary:** Search algorithms are essential tools for efficiently finding information within datasets. The choice of algorithm depends on the data structure and properties, with each type offering varying efficiency trade-offs.
+
 
 ### Simple explanation:
-
-
-### Searching terminologies:
+## How it Work
+## Why important?
+## Searching terminologies:
 - **Target Element:**
     In searching, there is always a specific target element or item that you want to find within the data collection. This target could be a value, a record, a key, or any other data entity of interest.
 - **Search Space:**
@@ -27,8 +35,7 @@ Search cases in search algorithms can be categorized as best case, average case 
     Searching can have different levels of complexity depending on the data structure and the algorithm used. The complexity is often measured in terms of time and space requirements.
 - **Deterministic vs. Non-deterministic:**
 Some searching algorithms, like binary search, are deterministic, meaning they follow a clear, systematic approach. Others, such as linear search, are non-deterministic, as they may need to examine the entire search space in the worst case.
-
-### Applications of Searching:
+## Applications of Searching:
 Applications of search algorithms
 Specific applications of search algorithms include:
 
@@ -46,10 +53,11 @@ Specific applications of search algorithms include:
 - Retrieving a record from a database
 - Finding the maximum or minimum value in a list or array
 - Checking to see if a given value is present in a set of values
-
 ## Types of algorithms:
 
 ### **Linear Search:**
 - `Example` :
 ### **Binary Search:**
 - `Example` :
+## Popular algorithms:
+## Classification
