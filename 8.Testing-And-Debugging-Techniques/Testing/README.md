@@ -152,8 +152,8 @@ Software testing is typically goal driven.
 
 ### Other Important Testing Techniques:
 
-* [**Smoke Testing** ]()
-* [**Sanity Testing** ]()
+* [**Smoke Testing**]()
+* [**Sanity Testing**]()
 * [**Exploratory Testing**]()
 * [**Black-Box Testing**]()
 * [**White-Box Testing**]()
