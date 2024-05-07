@@ -344,31 +344,31 @@ The controversies surrounding software testing highlight the ongoing evolution o
 
 ### Patterns for Writing Effective Tests:
 
-* **Arrange-Act-Assert (AAA) Pattern:** This common structure promotes readability and maintainability of unit tests. It involves setting up the test environment (Arrange), executing the code under test (Act), and then verifying the expected outcome (Assert). [More complete description]()
+* **Arrange-Act-Assert (AAA) Pattern:** This common structure promotes readability and maintainability of unit tests. It involves setting up the test environment (Arrange), executing the code under test (Act), and then verifying the expected outcome (Assert). [More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Patterns/AAA.md)
 
-* **Test Naming Conventions:** Regardless of the framework you use, your test names should be descriptive and clearly communicate the functionality being tested. Aim for names that anyone reading the code can easily understand.  Some frameworks or teams might use a standardized prefix for test names (e.g., "test_", "spec_", "it_"). [More complete description]()
+* **Test Naming Conventions:** Regardless of the framework you use, your test names should be descriptive and clearly communicate the functionality being tested. Aim for names that anyone reading the code can easily understand.  Some frameworks or teams might use a standardized prefix for test names (e.g., "test_", "spec_", "it_"). [More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Patterns/Naming-Conventions.md)
 
-* **Test Doubles:** This is a broader term encompassing mocks, stubs, fakes, and spies.  Test doubles are any object used to replace a real dependency during testing. [More complete description]()
+* **Test Doubles:** This is a broader term encompassing mocks, stubs, fakes, and spies.  Test doubles are any object used to replace a real dependency during testing. [More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Patterns/Doubles.md)
 
-* **Boundary Value Analysis (BVA):**  This technique involves testing software with values at the edges of expected input ranges.  For example, testing a function that accepts numbers between 1 and 100 would include values like 1, 100, 0, and 101. [More complete description]()
+* **Boundary Value Analysis (BVA):**  This technique involves testing software with values at the edges of expected input ranges.  For example, testing a function that accepts numbers between 1 and 100 would include values like 1, 100, 0, and 101. [More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Patterns/BVA.md)
 
-* **Equivalence Partitioning:**  This technique divides the input domain into partitions where the program is expected to behave similarly for all values within a partition.  Tests are then designed to cover each partition. [More complete description]()
+* **Equivalence Partitioning:**  This technique divides the input domain into partitions where the program is expected to behave similarly for all values within a partition.  Tests are then designed to cover each partition. [More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Patterns/Equivalence-Partitioning.md)
 
 ### Testing Practices
 
-* **Testing Frameworks (Unit Testing):** These frameworks provide tools for building and running automated tests. They offer features like test discovery, organization, assertion libraries, and mocking (simulating dependencies). [More complete description]()
+* **Testing Frameworks (Unit Testing):** These frameworks provide tools for building and running automated tests. They offer features like test discovery, organization, assertion libraries, and mocking (simulating dependencies). [More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Practices/Frameworks.md)
 
-* **BDD (Behavior-Driven Development):**  BDD utilizes a human-readable Gherkin syntax to describe test scenarios in terms of user stories and expected behavior. This promotes collaboration between developers, testers, and stakeholders. [More complete description]()
+* **BDD (Behavior-Driven Development):**  BDD utilizes a human-readable Gherkin syntax to describe test scenarios in terms of user stories and expected behavior. This promotes collaboration between developers, testers, and stakeholders. [More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Practices/BDD.md)
 
 ### Informative Standards (Not Mandatory)
 
-* **IEEE (Institute of Electrical and Electronics Engineers):**  While IEEE doesn't have a dedicated test writing standard, their broader software development standards (IEEE Std 1028-2016) address testing practices indirectly.  These standards emphasize the importance of documented testing plans and procedures.[More complete description]()
+* **IEEE (Institute of Electrical and Electronics Engineers):**  While IEEE doesn't have a dedicated test writing standard, their broader software development standards (IEEE Std 1028-2016) address testing practices indirectly.  These standards emphasize the importance of documented testing plans and procedures.[More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Standards/IEEE.md)
 
-* **ISO (International Organization for Standardization):** Similar to IEEE, ISO offers general software development standards (ISO/IEC 12207) that influence testing practices  by setting guidelines for the software development lifecycle, which includes testing phases. [More complete description]()
+* **ISO (International Organization for Standardization):** Similar to IEEE, ISO offers general software development standards (ISO/IEC 12207) that influence testing practices  by setting guidelines for the software development lifecycle, which includes testing phases. [More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Standards/ISO.md)
 
-* **Software Requirements Specification (SRS):** This document outlines the functional and non-functional requirements of a software system.  Testing should ensure the software fulfills these defined requirements.   [More complete description]()
+* **Software Requirements Specification (SRS):** This document outlines the functional and non-functional requirements of a software system.  Testing should ensure the software fulfills these defined requirements.   [More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Standards/SRS.md)
 
-* **IEC (International Electrotechnical Commission):**  IEC 61508 is a series of standards specifically for safety-critical systems.  These standards include detailed guidelines for testing such systems, with a focus on ensuring they meet rigorous safety requirements. [More complete description]()
+* **IEC (International Electrotechnical Commission):**  IEC 61508 is a series of standards specifically for safety-critical systems.  These standards include detailed guidelines for testing such systems, with a focus on ensuring they meet rigorous safety requirements. [More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Standards/IEC.md)
 ## implementations
 Reading about testing is great, but true learning comes from implementing them. Hands-on experience lets you practice, solve unexpected issues, and see the impact firsthand. Dive into different tests in your project - unit, integration, functional - and remember, testing is a continuous journey!
 
