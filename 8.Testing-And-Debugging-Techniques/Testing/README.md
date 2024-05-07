@@ -351,11 +351,19 @@ The controversies surrounding software testing highlight the ongoing evolution o
 
 ## Standards and Patterns
 
+### Patterns for Writing Effective Tests:
+
 * **Arrange-Act-Assert (AAA) Pattern:** This common structure promotes readability and maintainability of unit tests. It involves setting up the test environment (Arrange), executing the code under test (Act), and then verifying the expected outcome (Assert). [More complete description]()
 
-* **xUnit (Unit Testing):**  Many popular unit testing frameworks have their own conventions for naming tests and structuring assertions.  For instance, xUnit typically uses test names that start with "test_" followed by a descriptive name of the functionality being tested. [More complete description]()
+* * **Test Naming Conventions:** Regardless of the framework you use, your test names should be descriptive and clearly communicate the functionality being tested. Aim for names that anyone reading the code can easily understand.  Some frameworks or teams might use a standardized prefix for test names (e.g., "test_", "spec_", "it_"). [More complete description]()
+
+### Testing Practices
+
+* **Testing Frameworks (Unit Testing):** These frameworks provide tools for building and running automated tests. They offer features like test discovery, organization, assertion libraries, and mocking (simulating dependencies). [More complete description]()
 
 * **BDD (Behavior-Driven Development):**  BDD utilizes a human-readable Gherkin syntax to describe test scenarios in terms of user stories and expected behavior. This promotes collaboration between developers, testers, and stakeholders. [More complete description]()
+
+### Informative Standards (Not Mandatory)
 
 * **IEEE (Institute of Electrical and Electronics Engineers):**  While IEEE doesn't have a dedicated test writing standard, their broader software development standards (IEEE Std 1028-2016) address testing practices indirectly.  These standards emphasize the importance of documented testing plans and procedures.[More complete description]()
 
