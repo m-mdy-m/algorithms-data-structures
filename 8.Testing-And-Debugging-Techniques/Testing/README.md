@@ -357,6 +357,12 @@ The controversies surrounding software testing highlight the ongoing evolution o
 
 * * **Test Naming Conventions:** Regardless of the framework you use, your test names should be descriptive and clearly communicate the functionality being tested. Aim for names that anyone reading the code can easily understand.  Some frameworks or teams might use a standardized prefix for test names (e.g., "test_", "spec_", "it_"). [More complete description]()
 
+* **Test Doubles:** This is a broader term encompassing mocks, stubs, fakes, and spies.  Test doubles are any object used to replace a real dependency during testing. [More complete description]()
+
+* **Boundary Value Analysis (BVA):**  This technique involves testing software with values at the edges of expected input ranges.  For example, testing a function that accepts numbers between 1 and 100 would include values like 1, 100, 0, and 101. [More complete description]()
+
+* **Equivalence Partitioning:**  This technique divides the input domain into partitions where the program is expected to behave similarly for all values within a partition.  Tests are then designed to cover each partition. [More complete description]()
+
 ### Testing Practices
 
 * **Testing Frameworks (Unit Testing):** These frameworks provide tools for building and running automated tests. They offer features like test discovery, organization, assertion libraries, and mocking (simulating dependencies). [More complete description]()
@@ -372,8 +378,6 @@ The controversies surrounding software testing highlight the ongoing evolution o
 * **Software Requirements Specification (SRS):** This document outlines the functional and non-functional requirements of a software system.  Testing should ensure the software fulfills these defined requirements.   [More complete description]()
 
 * **IEC (International Electrotechnical Commission):**  IEC 61508 is a series of standards specifically for safety-critical systems.  These standards include detailed guidelines for testing such systems, with a focus on ensuring they meet rigorous safety requirements. [More complete description]()
-
-
 ## implementations
 Reading about testing is great, but true learning comes from implementing them. Hands-on experience lets you practice, solve unexpected issues, and see the impact firsthand. Dive into different tests in your project - unit, integration, functional - and remember, testing is a continuous journey!
 
