@@ -63,6 +63,13 @@ A general term for a class of algorithms that aim to find a specific element in 
    - Challenges:
        > challenge coding and implementing concepts
    - Clean Code:
+   - > Utils :(`It is not related to data structure and algorithm`)
+      - Virtualization/Containerization: (Docker, Kubernetes, Vagrant) 
+      - Unit Testing Frameworks
+      - Linters/Static Code Analyzers: (ESLint, Pylint, StyleCop, JSHint)
+      - Continuous Integration/Continuous Delivery (CI/CD): (Jenkins, Travis CI, CircleCI, GitLab CI/CD) 
+      - API Documentation Tools: (Swagger, OpenAPI, POSTMAN)
+      - Version Control Systems (VCS)
 
 **Medium:**
 
