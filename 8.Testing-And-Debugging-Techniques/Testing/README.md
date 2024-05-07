@@ -26,7 +26,6 @@ The following are important reasons why software testing techniques should be in
 - **Detects security vulnerabilities.** Insecure application code can leave vulnerabilities that attackers can exploit. Since most applications are online today, they can be a leading vector for cyber attacks and should be tested thoroughly during various stages of application development. For example, a web application published without proper software testing can easily fall victim to a cross-site scripting attack where the attackers try to inject malicious code into the user's web browser by gaining access through the vulnerable web application. The nontested application thus becomes the vehicle for delivering the malicious code, which could have been prevented with proper software testing.
 - **Helps with scalability.** A type of nonfunctional software testing process, scalability testing is done to gauge how well an application scales with increasing workloads, such as user traffic, data volume and transaction counts. It can also identify the point where an application might stop functioning and the reasons behind it, which may include meeting or exceeding a certain threshold, such as the total number of concurrent app users.
 - **Saves money.** Software development issues that go unnoticed due to a lack of software testing can haunt organizations later with a bigger price tag. After the application launches, it can be more difficult to trace and resolve the issues, as software patching is generally more expensive than testing during the development stages.
-
 ## Goals
 
 Software testing is typically goal driven.
@@ -62,7 +61,6 @@ Software testing is typically goal driven.
 **8.  Enhancing Usability and User Experience:**
 
 * Software should not only be functional but also user-friendly. Usability testing focuses on how users interact with the software, evaluating factors like intuitiveness, learnability, and overall user satisfaction. By identifying usability issues early on, testers can ensure the software is designed with the user in mind, resulting in a more enjoyable and productive user experience.
-
 ## Categorization
 * **Development Testing:** This isn't a single, specific category, but rather an umbrella term encompassing all testing activities performed during the software development lifecycle. It includes unit testing, integration testing, system testing, regression testing, and smoke testing, among others. These tests are typically conducted by developers or QA testers before the software is released to the public.
 
@@ -135,7 +133,6 @@ Software testing is typically goal driven.
 * **Metamorphic Testing:** Transforms inputs and verifies predictable output transformation (during development).
 * **VCR Testing (Virtual Cassette Recorder Testing):** Records user interactions for replay in future tests (during or after development).
 * **Stress Testing:** Puts the software under extreme load conditions (during or after development).
-
 ## Quality
 ### Software verification and validation
 Software development relies heavily on verification and validation (V&V) to ensure the final product meets its intended purpose. While these terms are often used interchangeably, there's a crucial distinction between them:
@@ -279,7 +276,6 @@ Think of a test case as a detailed recipe for testing a particular aspect of the
 * **Test Run:**  This is the act of executing a collection of test cases or test suites.  The tester runs the tests, compares the actual results with the expected results, and documents any discrepancies. After a test run is complete, a report summarizing the execution and results might be generated.
 
 * **Certifications:**  The world of software testing offers various certification programs to validate a tester's skills and knowledge. While some advocate for these certifications, others debate whether the field is fully ready for them. Regardless, continuous learning and skill development are crucial for any software tester.
-
 ## Look at Key Controversies
 
 Software testing, while crucial for ensuring software quality, isn't without its share of debates and disagreements. Here's a breakdown of some of the most prominent controversies in the field:
@@ -307,7 +303,6 @@ A widely held belief is that defects are cheaper to fix the earlier they're caug
 **Conclusion: A Field in Flux**
 
 The controversies surrounding software testing highlight the ongoing evolution of the field. As methodologies and technologies change, so too will testing practices.  The key takeaway is to remain informed about these debates and choose the approaches that best suit the specific needs of each project. 
-
 ## Best Practices:
 
 **Planning and Strategy:**
@@ -347,8 +342,6 @@ The controversies surrounding software testing highlight the ongoing evolution o
 * **Involve Stakeholders:**  Get valuable insights from stakeholders throughout the testing process.
 * **Security Testing is Paramount:**  Integrate security testing throughout the development lifecycle to identify and mitigate vulnerabilities.
 * **Testing is Not a Gatekeeper:**  Testing should be collaborative, aiming to improve software quality, not hinder development progress.
-
-
 ## Standards and Patterns
 
 ### Patterns for Writing Effective Tests:
@@ -382,7 +375,6 @@ The controversies surrounding software testing highlight the ongoing evolution o
 Reading about testing is great, but true learning comes from implementing them. Hands-on experience lets you practice, solve unexpected issues, and see the impact firsthand. Dive into different tests in your project - unit, integration, functional - and remember, testing is a continuous journey!
 
 **Want to see these tests in action?** Check out my repository for code examples on implementing various software tests: []().  In my repository, you can not only see the code, but also participate and contribute to the implementation of these tests! 
-
 ## References:
 
 - [wikipedia](https://en.wikipedia.org/wiki/Software_testing#)
