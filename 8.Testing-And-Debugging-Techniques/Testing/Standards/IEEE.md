@@ -12,4 +12,3 @@
 - [geeksforgeeks](https://www.geeksforgeeks.org/ieee-full-form/)
 - [wikipedia](https://en.wikipedia.org/wiki/IEEE_Standards_Association)
 - []()
-- []()
