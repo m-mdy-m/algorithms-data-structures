@@ -144,12 +144,10 @@ Software development relies heavily on verification and validation (V&V) to ensu
 The confusion arises from how "requirements" and "specified requirements" are interpreted in different standards:
 
 * **IEEE Standards:** 
-    > [What is IEEE Standard](./What-is-IEEE-Standard.md)
     * **Validation** refers to checking if the final product meets the set of stakeholder needs documented in the Software Requirements Specification (SRS).
     * **Verification** focuses on whether each development phase output aligns with the specifications from the preceding phase.
 
 * **ISO 9000:** 
-    > [What Is ISO Standard](./What-is-ISO-Standard.md)
     * **Verification** ensures the development artifacts (specifications) themselves meet the requirements set forth in the previous phase. These "specified requirements" are essentially internal documents used during development.
     * **Validation** confirms if the final product adheres to the entire set of specifications created throughout the process.
 
@@ -348,7 +346,7 @@ The controversies surrounding software testing highlight the ongoing evolution o
 
 * **Arrange-Act-Assert (AAA) Pattern:** This common structure promotes readability and maintainability of unit tests. It involves setting up the test environment (Arrange), executing the code under test (Act), and then verifying the expected outcome (Assert). [More complete description]()
 
-* * **Test Naming Conventions:** Regardless of the framework you use, your test names should be descriptive and clearly communicate the functionality being tested. Aim for names that anyone reading the code can easily understand.  Some frameworks or teams might use a standardized prefix for test names (e.g., "test_", "spec_", "it_"). [More complete description]()
+* **Test Naming Conventions:** Regardless of the framework you use, your test names should be descriptive and clearly communicate the functionality being tested. Aim for names that anyone reading the code can easily understand.  Some frameworks or teams might use a standardized prefix for test names (e.g., "test_", "spec_", "it_"). [More complete description]()
 
 * **Test Doubles:** This is a broader term encompassing mocks, stubs, fakes, and spies.  Test doubles are any object used to replace a real dependency during testing. [More complete description]()
 
