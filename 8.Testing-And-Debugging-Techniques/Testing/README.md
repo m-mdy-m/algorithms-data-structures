@@ -380,3 +380,37 @@ Reading about testing is great, but true learning comes from implementing them. 
 - [ibm](https://www.ibm.com/topics/software-testing)
 - [medium](https://medium.com/@mehmetbarannakipoglu/what-is-software-testing-d5fee1ed4870)
 - [geeksforgeeks](https://www.geeksforgeeks.org/software-testing-techniques/)
+
+
+## Example 
+
+### Functional Testing:
+
+* **Unit Testing** 
+* **Integration Testing** 
+* **System Testing**
+* **Regression Testing** 
+* **Acceptance Testing (including User Acceptance Testing (UAT))** 
+
+### Non-Functional Testing:
+
+* **Performance Testing** 
+* **Usability Testing** 
+* **Accessibility Testing** 
+* **Security Testing** I
+
+### Other Important Testing Techniques:
+
+* **Smoke Testing** 
+* **Sanity Testing** 
+* **Exploratory Testing** 
+* **Black-Box Testing** 
+* **White-Box Testing** 
+* **API Testing** 
+* **Concurrent Testing** 
+
+### Additional Considerations:
+
+* **Test Automation** 
+* **Static Testing (Code Review)** 
+* **Test Case Design** 
