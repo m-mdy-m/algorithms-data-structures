@@ -137,34 +137,34 @@ Software testing is typically goal driven.
 
 ### Functional Testing:
 
-* [**Unit Testing** ]()
-* [**Integration Testing** ]()
+* [**Unit Testing**]()
+* [**Integration Testing**]()
 * [**System Testing**]()
-* [**Regression Testing** ]()
-* [**Acceptance Testing (including User Acceptance Testing (UAT))** ]()
+* [**Regression Testing**]()
+* [**Acceptance Testing (including User Acceptance Testing (UAT))**]()
 
 ### Non-Functional Testing:
 
-* [**Performance Testing** ]()
-* [**Usability Testing** ]()
-* [**Accessibility Testing** ]()
+* [**Performance Testing**]()
+* [**Usability Testing**]()
+* [**Accessibility Testing**]()
 * [**Security Testing**]()
 
 ### Other Important Testing Techniques:
 
 * [**Smoke Testing** ]()
 * [**Sanity Testing** ]()
-* [**Exploratory Testing** ]()
-* [**Black-Box Testing** ]()
-* [**White-Box Testing** ]()
-* [**API Testing** ]()
+* [**Exploratory Testing**]()
+* [**Black-Box Testing**]()
+* [**White-Box Testing**]()
+* [**API Testing**]()
 * [**Concurrent Testing**]() 
 
 ### Additional Considerations:
 
-* [**Test Automation** ]()
-* [**Static Testing (Code Review)** ]()
-* [**Test Case Design** ]()
+* [**Test Automation**]()
+* [**Static Testing (Code Review)**]()
+* [**Test Case Design**]()
 ## Quality
 ### Software verification and validation
 Software development relies heavily on verification and validation (V&V) to ensure the final product meets its intended purpose. While these terms are often used interchangeably, there's a crucial distinction between them:
