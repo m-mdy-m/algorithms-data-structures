@@ -159,6 +159,7 @@ Software testing is typically goal driven.
 * [**White-Box Testing**]()
 * [**API Testing**]()
 * [**Concurrent Testing**]() 
+* [**E2E**](https://github.com/Testing-Guild/E2E-Testing)
 
 ### Additional Considerations:
 
