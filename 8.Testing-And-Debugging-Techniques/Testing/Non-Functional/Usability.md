@@ -13,7 +13,6 @@ Here's a breakdown of the usability testing process:
 
 5. **Iteration and Refinement:**  Based on the usability test findings, the product can be iterated upon and refined to address the identified issues.  This may involve changes in design, layout, functionality, or even the overall user flow.  New iterations can then be subjected to further usability testing to ensure ongoing improvement. 
 
-## What usability testing is not
 ## What Usability Testing Is Not
 
 Before we dive into the specifics of usability testing, it's important to clear up some common misconceptions. User research, user testing, and usability testing are all terms frequently used in the design world, but they have distinct purposes.
