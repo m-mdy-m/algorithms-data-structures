@@ -137,35 +137,35 @@ Software testing is typically goal driven.
 
 ### Functional Testing:
 
-* [**Unit Testing**](https://github.com/Testing-Guild/Unit-Testing)
-* [**Integration Testing**](https://github.com/Testing-Guild/Integration-Test)
-* [**System Testing**](https://github.com/Testing-Guild/System-Testing)
-* [**Regression Testing**](https://github.com/Testing-Guild/Regression-Testing)
-* [**Acceptance Testing (including User Acceptance Testing (UAT))**](https://github.com/Testing-Guild/Acceptance-Testing)
-* [**E2E**](https://github.com/Testing-Guild/E2E-Testing)
+* [**Unit Testing**](https://github.com/Testing-Guild/Unit-Testing) - `Article And implementation`
+* [**Integration Testing**](https://github.com/Testing-Guild/Integration-Test) - `Article And implementation`
+* [**System Testing**](https://github.com/Testing-Guild/System-Testing) - `Article And implementation`
+* [**Regression Testing**](https://github.com/Testing-Guild/Regression-Testing) - `Article And implementation`
+* [**Acceptance Testing (including User Acceptance Testing (UAT))**](https://github.com/Testing-Guild/Acceptance-Testing) - `Article And implementation`
+* [**E2E**](https://github.com/Testing-Guild/E2E-Testing) - `Article And implementation`
 
 ### Non-Functional Testing:
 
-* [**Performance Testing**]()
-* [**Usability Testing**]()
-* [**Accessibility Testing**]()
-* [**Security Testing**]()
+* [**Performance Testing**]() `Article`
+* [**Usability Testing**]() `Article`
+* [**Accessibility Testing**]() `Article`
+* [**Security Testing**]() `Article`
 
 ### Other Important Testing Techniques:
 
-* [**Smoke Testing**]()
-* [**Sanity Testing**]()
-* [**Exploratory Testing**]()
-* [**Black-Box Testing**]()
-* [**White-Box Testing**]()
-* [**API Testing**]()
-* [**Concurrent Testing**]() 
+* [**Smoke Testing**]() `Article And implementation`
+* [**Sanity Testing**]() `Article`
+* [**Exploratory Testing**]() `Article And implementation`
+* [**Black-Box Testing**]() `Article`
+* [**White-Box Testing**]() `Article`
+* [**API Testing**]() `Article`
+* [**Concurrent Testing**]()  `Article`
 
 ### Additional Considerations:
 
-* [**Test Automation**]()
-* [**Static Testing (Code Review)**]()
-* [**Test Case Design**]()
+* [**Test Automation**]() `Article`
+* [**Static Testing (Code Review)**]() `Article`
+* [**Test Case Design**]() `Article`
 ## Quality
 ### Software verification and validation
 Software development relies heavily on verification and validation (V&V) to ensure the final product meets its intended purpose. While these terms are often used interchangeably, there's a crucial distinction between them:
