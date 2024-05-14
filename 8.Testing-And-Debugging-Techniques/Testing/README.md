@@ -141,7 +141,7 @@ Software testing is typically goal driven.
 * [**Integration Testing**](https://github.com/Testing-Guild/Integration-Test)
 * [**System Testing**](https://github.com/Testing-Guild/System-Testing)
 * [**Regression Testing**](https://github.com/Testing-Guild/Regression-Testing)
-* [**Acceptance Testing (including User Acceptance Testing (UAT))**]()
+* [**Acceptance Testing (including User Acceptance Testing (UAT))**](https://github.com/Testing-Guild/Acceptance-Testing)
 
 ### Non-Functional Testing:
 
