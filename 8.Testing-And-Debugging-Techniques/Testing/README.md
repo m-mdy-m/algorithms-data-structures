@@ -142,6 +142,7 @@ Software testing is typically goal driven.
 * [**System Testing**](https://github.com/Testing-Guild/System-Testing)
 * [**Regression Testing**](https://github.com/Testing-Guild/Regression-Testing)
 * [**Acceptance Testing (including User Acceptance Testing (UAT))**](https://github.com/Testing-Guild/Acceptance-Testing)
+* [**E2E**](https://github.com/Testing-Guild/E2E-Testing)
 
 ### Non-Functional Testing:
 
@@ -159,7 +160,6 @@ Software testing is typically goal driven.
 * [**White-Box Testing**]()
 * [**API Testing**]()
 * [**Concurrent Testing**]() 
-* [**E2E**](https://github.com/Testing-Guild/E2E-Testing)
 
 ### Additional Considerations:
 
