@@ -147,19 +147,19 @@ Software testing is typically goal driven.
 ### Non-Functional Testing:
 
 * [**Performance Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Non-Functional/Performance.md) `Article`
-* [**Usability Testing**]() `Article`
-* [**Accessibility Testing**]() `Article`
-* [**Security Testing**]() `Article`
+* [**Usability Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Non-Functional/Usability.md) `Article`
+* [**Accessibility Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Non-Functional/Accessibility.md) `Article`
+* [**Security Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Non-Functional/Security.md) `Article`
 
 ### Other Important Testing Techniques:
 
 * [**Smoke Testing**]() `Article And implementation`
-* [**Sanity Testing**]() `Article`
+* [**Sanity Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Techniques/Sanity.md) `Article`
 * [**Exploratory Testing**]() `Article And implementation`
-* [**Black-Box Testing**]() `Article`
-* [**White-Box Testing**]() `Article`
-* [**API Testing**]() `Article`
-* [**Concurrent Testing**]()  `Article`
+* [**Black-Box Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Techniques/Black-Box.md) `Article`
+* [**White-Box Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Techniques/White-Box.md) `Article`
+* [**API Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Techniques/API.md) `Article`
+* [**Concurrent Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Techniques/Concurrent.md)  `Article`
 
 ### Additional Considerations:
 
