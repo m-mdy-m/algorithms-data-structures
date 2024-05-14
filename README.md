@@ -203,6 +203,7 @@ A general term for a class of algorithms that aim to find a specific element in 
  - [w3schools](https://www.w3schools.com)
  - [javatpoint](https://www.javatpoint.com)
  - [tricentis](https://www.tricentis.com)
+ - [maze](https://maze.co)
 
 ## Project
 > Attention : Projects and solution of different algorithms or design patterns are solved in this organization
