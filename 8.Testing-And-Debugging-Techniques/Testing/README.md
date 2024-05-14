@@ -163,9 +163,9 @@ Software testing is typically goal driven.
 
 ### Additional Considerations:
 
-* [**Test Automation**]() `Article`
-* [**Static Testing (Code Review)**]() `Article`
-* [**Test Case Design**]() `Article`
+* [**Test Automation**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Additional/Test-Automation.md) `Article`
+* [**Static Testing (Code Review)**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Additional/Static-Testing.md) `Article`
+* [**Test Case Design**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Additional/Test-Case-Design.md) `Article`
 ## Quality
 ### Software verification and validation
 Software development relies heavily on verification and validation (V&V) to ensure the final product meets its intended purpose. While these terms are often used interchangeably, there's a crucial distinction between them:
