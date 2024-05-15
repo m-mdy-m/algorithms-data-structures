@@ -1,105 +1,164 @@
 ## What is Sanity Testing
-Sanity testing is a type of software testing that aims to quickly evaluate whether the basic functionality of a new software build is working correctly or not. It is usually performed on builds that are in the initial stages of development before the full regression testing is performed. Sanity testing is limited in scope and typically focuses on critical functionality and does not aim to uncover every possible error or bug in the system. It is a quick and lightweight way to ensure that the software is functioning as expected before further testing is conducted.
-It is a subset of regression testing. Sanity testing is performed to ensure that the code changes that are made are working properly. Sanity testing is a stoppage to check whether testing for the build can proceed or not. The focus of the team during the sanity testing process is to validate the functionality of the application and not detailed testing. Sanity testing is generally performed on a build where the production deployment is required immediately like a critical bug fix. 
 
-## Functionality of Sanity Testing:
-Verification of Integration: To make sure that recent adjustments or bug fixes haven’t negatively impacted the integration of various modules or components, sanity testing may involve an integration check.
-Verification of Fixed Bugs: Sanity testing follows bug fixes or modifications to make that associated features continue to function appropriately and that reported issues have been satisfactorily resolved.
-Efficiency of Time and Resources: Sanity testing saves time and aids in resource optimization by rapidly determining whether a build is stable enough for further testing.
-Check for Regression: Sanity testing may include a rudimentary check for regressions to make sure that current functionalities have not been adversely affected, even if it is not as thorough as regression testing.
-Repetitive Procedure: It can be carried often frequently to swiftly validate each incremental build, particularly in agile and continuous integration setups.
-## Attributes of Sanity Testing:
-In order to comprehend the foundation of sanity testing techniques, we must acquire knowledge of their attributes along with several other components. Therefore, the following are some crucial aspects of sanity testing:
+Sanity testing is a type of software testing aimed at quickly evaluating whether the basic functionality of a new software build is working correctly. It is usually performed on builds that are in the initial stages of development, before full regression testing is conducted. Sanity testing is limited in scope, focusing on critical functionality, and does not aim to uncover every possible error or bug in the system. It serves as a quick and lightweight method to ensure the software is functioning as expected before further testing is conducted.
 
-Narrow and deep: In the Software testing sanity testing is a narrow and deep method to protect the components.
-A Subset of Regression Testing: Subset of regression testing mainly focus on the less important unit of the application. it’s used to test application new features with the requirement that is matched or not.
-Unscripted: sanity testing commonly unscripted.
-Not documented: sanity testing can’t be documented.
-Performed by testers. sanity testing is done by the test engineers.
+Sanity testing is a subset of regression testing. It is performed to ensure that code changes are working properly. This testing acts as a checkpoint to determine whether testing for the build can proceed. The focus during the sanity testing process is to validate the core functionality of the application rather than conducting detailed testing. Sanity testing is generally performed on a build where immediate production deployment is required, such as for a critical bug fix.
+
+## Functionality of Sanity Testing
+
+1. **Verification of Integration**: Ensures that recent adjustments or bug fixes have not negatively impacted the integration of various modules or components.
+2. **Verification of Fixed Bugs**: Confirms that bug fixes or modifications have resolved the reported issues and that associated features continue to function properly.
+3. **Efficiency of Time and Resources**: Saves time and optimizes resources by quickly determining whether a build is stable enough for further testing.
+4. **Check for Regression**: Includes a basic check for regressions to ensure that existing functionalities have not been adversely affected, even though it is not as thorough as full regression testing.
+5. **Repetitive Procedure**: Conducted frequently to swiftly validate each incremental build, especially in agile and continuous integration setups.
+## Attributes of Sanity Testing
+
+To comprehend the foundation of sanity testing techniques, it is essential to understand their attributes and several other components. The following are some crucial aspects of sanity testing:
+
+1. **Narrow and Deep**: Sanity testing is a narrow and deep method focusing on specific components to ensure their functionality is protected.
+2. **Subset of Regression Testing**: It is a subset of regression testing that primarily focuses on less critical units of the application. It tests whether new features align with requirements.
+3. **Unscripted**: Sanity testing is commonly unscripted, allowing testers to explore the application freely.
+4. **Not Documented**: Sanity testing is typically not documented, emphasizing speed and flexibility.
+5. **Performed by Testers**: Sanity testing is conducted by test engineers to quickly validate the stability and functionality of new builds.
 ## Sanity Testing Process:
 
-Identification: Identification is the initial phase in the sanity testing process, where we look for newly added features and components as well as code modifications made to address bugs.
-Evaluation: After the identification phase, we will examine recently added features and components and make necessary modifications to ensure they function as intended and in accordance with the specifications.
-Testing: Upon the successful completion of the identification and evaluation phases, we will proceed to the testing phase. In this stage, we examine and evaluate each of the associated parameters, elements, and critical components of the previously analyzed attributed and adjusted them to ensure optimal functionality.
-If every step listed above is completed without a hitch, the build can move on to more in-depth and demanding testing, and the release can be approved for comprehensive testing.
+1. **Identification**: This initial phase involves identifying newly added features and components, as well as code modifications made to address bugs.
+2. **Evaluation**: After identification, the newly added features and components are examined to ensure they function as intended and meet specifications.
+3. **Testing**: Upon successful completion of the identification and evaluation phases, testing begins. In this stage, each associated parameter, element, and critical component is examined and adjusted to ensure optimal functionality.
 
 ## Example of Sanity Testing: 
-In an e-commerce project, main modules are login page, home page, user profile page, user registration etc. There is a defect in the login page when the password field accepts less than four alpha numeric characters, and the requirement mentions that this password field should not be below eight characters. Hence, the defect is reported by the testing team to the development team to resolve it.
+**Scenario:**
 
-Then, the development team fixes the reported defect and sends it to the testing team for clearance.
-Then, the testing team checks whether the changes done are working fine or not.
-It is also determined, if it does have an impact on other related functionalities.
-Now, there is a functionality to update the password in the user profile page. As part of the sanity testing, login page is validated as well as the profile page to ensure that the checks are working fine at both the places. 
+- A bug is identified in the login page. The password field allows entries less than four characters, violating the requirement of a minimum eight-character alphanumeric password.
+- The testing team reports this defect to developers, and they fix it.
+- The development team sends the revised build back for testing.
+
+**Sanity Testing Process:**
+
+1. **Identification:**
+    - Testers analyze the release notes and confirm the password field fix.
+
+2. **Evaluation:**
+    - Testers review the password field requirements, ensuring the fix adheres to the minimum eight-character mandate.
+    - Test cases are developed to specifically target the login page's password field functionality. These cases should verify:
+        - Successful login with an eight-character password.
+        - Error message displayed for passwords less than eight characters. 
+        - Error message wording aligns with expectations (e.g., "Password must be at least 8 characters").
+
+3. **Testing:**
+    - The testers execute the developed test cases.
+    - They record results (pass/fail) and observations for each test case, meticulously documenting any discrepancies.
+
+4. **Regression Check:**
+    - Since the login page was modified, sanity testing extends beyond just the password field fix. Testers verify other functionalities on the login page, such as:
+        - Valid login with correct username and password.
+        - Functionality of forgot password link.
+        - Visual elements like login button and error messages render correctly.
+    -  **Regression Prevention:**  The testers also consider the impact on related functionalities, such as password update in the user profile page. They create a test case to ensure the minimum character requirement is enforced there as well. This helps prevent regressions where a fix in one area unintentionally breaks functionality elsewhere.
+
+5. **Go/No-Go Decision:**
+    -  After comprehensive testing, the results are analyzed. A high pass rate for the test cases indicates the build is stable.
+    - If the password field fix works as intended, with no regressions in login or user profile functionalities, the build can proceed to further testing.
+    - Conversely, if critical issues are found, the build may be sent back to developers with detailed defect reports for further resolution.
+
+**Benefits of this approach:**
+
+- **Faster Feedback:** Sanity testing provides quick feedback on the stability of the build, allowing developers to address critical issues before extensive testing.
+- **Reduced Regression Risk:** By checking related functionalities and user profile password update, sanity testing helps prevent regressions and ensures consistent behavior across the application.
+
 ## Features of Sanity Testing:
-Subset of Regression Testing: Sanity testing is a subset of regression testing and focuses on the smaller section of the application. Sanity testing focuses specifically on a smaller group of features that are essential for the fundamental operation of the program, whereas regression testing confirms that new changes do not negatively affect current functionality.
-Unscripted: Most of the time sanity testing is not scripted. Without using pre-written scripts, testers frequently conduct ad hoc testing on particular functionalities.
-Not documented: Usually, sanity testing is undocumented. Developing thorough test plans is not the main priority, instead, quick and focused testing essential.
-Narrow and deep: Sanity testing is a narrow and deep approach of testing where limited functionalities are covered deeply. Instead of aiming to cover the entire application, the testing effort is focused on particular sections.
-Performed by testers: Sanity testing is normally performed by testers. Examiners concentrate on the regions impacted by the most recent modifications, quickly evaluating their stability.
-## Advantages of Sanity Testing:
-Sanity testing helps to quickly identify defects in the core functionality.
-It can be carried out in lesser time as no documentation is required for sanity testing.
-If the defects are found during sanity testing, project is rejected that is helpful in saving time for execution of regression tests.
-This testing technique is not so expensive when compared to another types of testing.
-It helps to identify the dependent missing objects.
-It is used to verify a small functionality of the system application whether it is still working or not even after a small change.
-It helps in the scenario when the time for testing of the product is limited or having less time to complete the test.
-Quick Feedback: Sanity testing is a fast process that provides quick feedback on the overall functionality of a software build, allowing teams to quickly identify and address any critical issues.
-Cost-effective: Sanity testing is less time-consuming and less expensive than other types of testing, making it a cost-effective solution for evaluating new builds.
-Early Detection of Issues: Sanity testing helps to identify major issues early in the development cycle, which can help to avoid costly rework later on.
-Increased Confidence: Sanity testing helps to increase confidence in the quality of the software, by ensuring that the most critical functions are working as expected before more comprehensive testing is performed.
-Improved Productivity: Sanity testing enables developers and testers to focus on more complex testing scenarios, improving overall productivity and reducing the time required for full regression testing.
-## Disadvantages of Sanity Testing:
-It focuses only on the functions and commands of the system application.
-It is not possible to cover all the test cases in test scenarios.
-It covers only few functionalities in the system application. Issues in the unchecked functionalities can’t be recovered.
-Sanity testing is usually unscripted. Hence, future references are not available.
-It doesn’t cover the design structure level and hence it will be difficult for development team to identify and fix the issues.
-Limited Scope: The limited scope of sanity testing means that it may not uncover all potential issues or bugs in the software. This means that more comprehensive testing will be required to thoroughly validate the software’s functionality.
-Incomplete Testing: Sanity testing is only a preliminary evaluation of the software, and it does not provide a complete picture of the software’s performance or quality.
-Potential for False Positives: Sanity testing is a quick process that may produce false positives, indicating that a particular feature or function is working correctly when it is actually broken.
-Dependence on Expertise: The success of sanity testing depends on the expertise and knowledge of the tester, who must have a deep understanding of the software’s critical functions in order to perform the tests effectively.
-Time Constraints: While sanity testing is faster than other forms of testing, it can still be time-consuming and may require a significant amount of time and resources to complete. This can be a disadvantage when time is a critical factor in the development process.
+**1. Focused Approach:**
 
+* **Subset of Regression Testing:** Unlike regression testing, which aims to comprehensively verify existing functionalities after a change, sanity testing focuses on a smaller, critical set of features. These features are essential for the core operation of the program and directly impacted by recent modifications.
+
+**2. Lightweight and Agile:**
+
+* **Unscripted and Ad-hoc:** Sanity testing often utilizes an unscripted approach. Testers leverage their expertise to conduct ad-hoc testing on specific functionalities. This allows for quicker execution and adaptation to the changes at hand.
+* **Minimized Documentation:** Detailed test plans are not a primary concern in sanity testing. The emphasis lies on rapid, focused testing rather than extensive documentation.
+
+**3. Deep Dive into Critical Areas:**
+
+* **Narrow and Deep:** Sanity testing adopts a "narrow and deep" approach. Instead of aiming for broad coverage across the entire application, it delves deeply into a limited set of functionalities. This ensures a thorough examination of how recent changes have impacted these critical areas.
+
+**4. Performed by Testers:**
+
+* **Executed by Testers:** Sanity testing is typically performed by experienced testers who can leverage their knowledge to prioritize areas for testing based on the recent modifications. These testers focus on regions most likely to be affected by the changes, conducting quick checks to assess their stability.
+
+**Additional Considerations:**
+
+* **Automation Potential:** While primarily manual, core sanity tests can be automated for faster execution and improved consistency. 
+* **Regression Prevention:** Sanity testing plays a crucial role in regression prevention by ensuring changes in one area don't unintentionally break functionalities elsewhere.
+
+## Advantages
+* **Early Detection of Critical Issues:** By focusing on core functionalities, sanity testing allows for the swift identification of major defects early in the development cycle. This enables developers to address these issues promptly, preventing costly rework and delays later on.
+* **Quick Feedback and Go/No-Go Decisions:**  The rapid nature of sanity testing provides quick feedback on the overall stability of a build. This empowers teams to make informed decisions about whether to proceed with further testing or return the build to developers for rectification.
+* **Cost-Effectiveness:**  Sanity testing is less time-consuming and resource-intensive compared to other testing methods. This translates to significant cost savings, especially during the initial stages of development.
+* **Improved Development Efficiency:**  By identifying critical issues early, sanity testing allows developers to focus their efforts on fixing core functionalities before delving into more intricate testing phases. This streamlines the development process and improves overall efficiency.
+* **Increased Confidence in Build Quality:**  Successful sanity testing instills confidence in the basic functionality of a build. This provides a solid foundation for subsequent testing phases, ensuring a higher quality software product.
+
+## Disadvantages 
+
+* **Limited Scope:**  The primary focus of sanity testing is on core functionalities. This inherently limits the scope of testing, potentially leaving other areas of the software untested. More comprehensive testing is still required to ensure complete software validation.
+* **Incomplete Testing Picture:**  Sanity testing serves as a preliminary evaluation, providing a glimpse into the software's stability. It doesn't offer a complete picture of the software's performance or quality. Additional testing phases are crucial to thoroughly assess all aspects of the software.
+* **Potential for False Positives:**  The rapid nature of sanity testing can sometimes lead to false positives. This occurs when a test indicates a feature is functioning correctly, even though it might have underlying issues. Careful analysis and follow-up testing are essential to avoid being misled by false positives.
+* **Dependence on Tester Expertise:**  The effectiveness of sanity testing heavily relies on the expertise and knowledge of the testers. Testers need a deep understanding of the software's critical functionalities to design and execute effective test cases.
+* **Unscripted Approach and Limited Future Reference:**  Sanity testing is often unscripted, which can limit its future reference value. While this promotes flexibility, it can make it challenging to replicate the testing process consistently across different builds.
 
 ## Difference between sanity testing and smoke testing
-Software tester working on laptop
-As the name implies and as we explained above, sanity testing aims at checking the obvious—whether the intended result of a code change works correctly. Smoke testing, on the other hand, checks if nothing else important was broken in the process.
+While both sanity and smoke testing play crucial roles in the software development lifecycle, they serve distinct purposes and have key differences. Here's a breakdown to help you understand them better:
 
-Some believe that the term 'smoke testing' originated in electronic hardware testing. In his book “Lessons Learned in Software Testing”, Bret Pettichord provides the origin of the term:
+**Scope:**
 
-"The phrase smoke test comes from electronic hardware testing. You plug in a new board and turn on the power. If you see smoke coming from the board, turn off the power. You don't have to do any more testing."
-Thankfully, in software testing there isn’t any actual smoke in the event of failure.
+* **Sanity Testing:** Focused and narrow. It targets specific functionalities, often related to a recent code change or bug fix. Testers aim to verify if the intended changes work correctly and haven't caused unintended regressions (reappearance of old bugs) in those areas.
+* **Smoke Testing:** Broader and more thorough. It concentrates on verifying the most critical functionalities of the entire application, ensuring they operate as expected. Smoke testing doesn't delve into specific changes, but rather checks if the core functionalities are stable enough for further testing.
 
-Smoke testing is a type of testing that is used to determine if the software is stable enough to proceed with further testing. It is usually done early in the testing process and is designed to ensure that the most important functionality of the software is working correctly. For people new to software testing it can be difficult to differentiate between smoke and sanity testing, as they are similar. Both are used to verify the basic functionality of an application, but there are three main differences:
+**Depth:**
 
-Scope
-Sanity testing is typically more focused in scope than smoke testing. Sanity testing checks specific functionality, for example, if a particular bug fix is working as expected. Smoke testing, in contrast, has a broader and more thorough test scope that checks the most crucial functionality of the application.
-Depth
-Sanity testing is a superficial check for one or few specific parts of the application. It is a quick and lightweight testing process that is not designed to uncover deep-seated issues or errors in the system. In comparison, smoke testing is a more thorough test that can uncover major issues or defects in the system, as it tests the critical functionalities independent of the new feature, change or fix.
-Purpose
-The primary purpose of sanity testing is to confirm that a small change to the system has not caused any unintended side effects or broken any existing functionality. Smoke testing, on the other hand, is used to verify the overall functionality of the system and ensure that it is stable and ready for further testing.
-To sum up, the main difference between sanity and smoke testing is that sanity testing checks one or few specific parts of the application, while smoke testing checks the critical functionalities independent of the new feature, change or fix. Now that the main characteristics of sanity and smoke testing are clear, there is another question—which should be done first, sanity or smoke testing?
+* **Sanity Testing:** Superficial and quick. It's a lightweight process designed to identify major issues introduced by recent modifications. Testers typically don't delve deep into functionalities, focusing on core aspects to ensure they haven't broken.
+* **Smoke Testing:** More in-depth. Smoke testing aims to uncover significant defects that could prevent further testing. It involves testing critical functionalities more thoroughly to ensure core stability.
 
-## Pros and cons of sanity testing
-Pros of sanity testing:
-Quick. Sanity testing helps to avoid wasting time and effort by quickly determining whether an application is too flawed to merit more rigorous testing.
-Efficient. Sanity testing is an efficient way to verify that a small change or modification to the system has not caused any unintended side effects or broken any existing functionality.
-Focused scope. Because it is a more focused test, sanity testing allows testers to focus on one or few specific areas of the system and confirm that the changes there have not caused any unintended side effects.
-Cost-effective. Sanity testing is typically a fast and lightweight testing process that does not require a lot of resources or time to complete. As a result, it can be a cost-effective way to ensure that the system is still functioning as expected after a change has been made.
-Cons of sanity testing
-Limited scope. The limited scope of sanity testing means that it may not uncover deep-seated issues or defects in the system.
-May not detect all issues. Because it is a superficial check, sanity testing may not detect all issues or errors that may be present in the system.
-May not be sufficient. In some cases, the changes made to the system may be more significant than a simple bug fix or code change, in which case a more thorough testing process, such as regression testing, may be needed to ensure the stability and functionality of the system.
-Now that we know what sanity testing is, why and when it should be done as well as the advantages and disadvantages of it, only one question remains.
+**Purpose:**
+
+* **Sanity Testing:** Confirms that recent changes haven't caused unintended consequences. It helps identify regressions in areas impacted by modifications and ensures the build is stable enough for further testing.
+* **Smoke Testing:** Determines overall application stability and readiness for further testing. It verifies if the critical functionalities are operational, providing a go/no-go decision for proceeding with more comprehensive testing.
+
+**Execution Timing:**
+
+* **Sanity Testing:** Typically performed after a code change or bug fix is implemented. It acts as a gatekeeper for further testing on a specific build.
+* **Smoke Testing:** Often conducted early in the testing cycle, on initial builds or after major code integrations. It serves as a preliminary check before investing time in more rigorous testing.
+
+**Analogy:**
+
+Imagine a newly built car. Smoke testing is like checking if the engine starts, lights turn on, and brakes work – essential functionalities for basic operation. Sanity testing, on the other hand, is like verifying if a specific repair (e.g., fixing a broken window) didn't affect other crucial systems like the steering or acceleration.
+
+**In Summary:**
+
+* **Sanity testing** is a focused check on specific functionalities, ensuring recent changes haven't caused regressions.
+* **Smoke testing** is a broader check on core functionalities, determining overall application stability for further testing.
 
 ## How to do sanity testing right?
-QA engineer planning sanity testing
-Here are three best practices for conducting effective sanity testing:
+**1. Define a Clear Scope:**
 
-Define the scope. Clearly define the scope of the sanity testing process, establish what exactly needs to be tested. This should include the specific areas of the system that will be tested, as well as any specific requirements or constraints that need to be considered. Sanity testing usually is unscripted, which means that there are no test steps to follow, however, defining the scope (for example, as a checklist of things that need to be tested) would definitely be useful so that nothing important is missed.
-Use automated tools. If possible, it is a good idea to automate tests that are run often. Consider using automation testing tools to help streamline the sanity testing process and reduce the time and effort required to complete it. Automating tests speeds up checking and comparing the expected result with the actual one and allows tests to run in parallel. It would also decrease the reliance on regression testing since sanity tests are based on regression tests and if the sanity tests are automated that means that troubleshooting can be continuous.
-Review the results. The results of the sanity testing will help to identify any areas where additional testing may be needed. This may include running additional test cases or conducting more thorough testing, such as regression testing.
-These best practices may as well be used for other types of testing, like smoke or regression testing, because they are more or less universal. However, sanity testing is relatively easy to do compared to other types of testing that, of course, have their own benefits and purpose but require much more effort. By following these best practices, the sanity testing process will be effective and help to confirm the stability and functionality of the application after small changes or modifications have been made.
+* **Identify Targeted Areas:**  Clearly define the specific functionalities or features impacted by recent changes (code modifications, bug fixes). This ensures the testing effort is focused on areas most likely to be affected.
+* **Prioritize Critical Functionalities:**  Prioritize testing of functionalities essential for core operation. This ensures critical issues are identified early, preventing wasted effort on further testing of a flawed build.
+* **Consider User Impact:**  Think about how recent changes might impact user workflows. Include basic user journeys to validate expected behavior hasn't been disrupted.
+* **Document the Scope:**  Document the defined scope, creating a checklist or short test plan to guide the testing process and ensure nothing crucial is missed.
 
+**2. Leverage Automation (When Possible):**
 
+* **Identify Repetitive Tests:**  Pinpoint tests that are frequently executed with minimal variations. These are prime candidates for automation using testing frameworks like Selenium or Cypress.
+* **Benefits of Automation:**  Automation streamlines the testing process, reducing manual effort and execution time. It also allows for parallel testing, further enhancing efficiency.
+* **Maintainable Automated Tests:**  Ensure automated tests are well-structured and easy to maintain. This minimizes the need for frequent updates as the application evolves.
+* **Focus Remains on Critical Thinking:**  Automation should free up testers' time for more strategic tasks like analyzing results, identifying regressions, and designing exploratory tests.
+
+**3. Analyze and Utilize Results:**
+
+* **Evaluate Pass/Fail Rates:**  Carefully analyze the results, paying close attention to failed test cases. Identify patterns or trends that might indicate underlying issues.
+* **Investigate Failures:**  Thoroughly investigate failed test cases. Reproduce the issue, document your findings, and report them to developers for resolution.
+* **Regression Prevention:**  Use sanity test results to identify potential regressions in untested areas. This proactive approach helps prevent issues from resurfacing later in the testing lifecycle.
+* **Go/No-Go Decision:**  Based on the overall results (pass/fail rates, identified issues), make an informed decision about proceeding with further testing. A high success rate indicates the build is likely stable for further evaluation.
+
+**Remember:**
+
+* **Sanity testing is complementary, not a replacement for other testing methods.**  It works best in conjunction with more comprehensive testing approaches like regression testing.
+* **Effective communication is key.**  Maintain clear communication with developers regarding the scope of sanity testing and any identified issues.
