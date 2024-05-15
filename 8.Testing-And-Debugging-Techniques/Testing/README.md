@@ -153,7 +153,7 @@ Software testing is typically goal driven.
 
 ### Other Important Testing Techniques:
 
-* [**Smoke Testing**]() `Article And implementation`
+* [**Smoke Testing**](https://github.com/Testing-Guild/Smoke-Testing) `Article And implementation`
 * [**Sanity Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Techniques/Sanity.md) `Article`
 * [**Exploratory Testing**]() `Article And implementation`
 * [**Black-Box Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Techniques/Black-Box.md) `Article`
