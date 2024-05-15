@@ -150,6 +150,7 @@ The following are important reasons why software testing techniques should be in
 * [**Exploratory Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Techniques/Exploratory.md) `Article`
 * [**Black-Box Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Techniques/Black-Box.md) `Article`
 * [**White-Box Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Techniques/White-Box.md) `Article`
+* [**Gray-Box Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Techniques/Gray-Box.md) `Article`
 * [**API Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Techniques/API.md) `Article`
 * [**Concurrent Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Techniques/Concurrent.md)  `Article`
 
