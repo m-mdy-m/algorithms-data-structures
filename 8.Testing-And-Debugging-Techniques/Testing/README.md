@@ -153,9 +153,6 @@ The following are important reasons why software testing techniques should be in
 * [**Gray-Box Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Techniques/Gray-Box.md) `Article`
 
 ### Additional Considerations:
-
-* [**Test Automation**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Additional/Test-Automation.md) `Article`
-* [**Static Testing (Code Review)**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Additional/Static-Testing.md) `Article`
 * [**Test Case Design**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Additional/Test-Case-Design.md) `Article`
 ## Quality
 ### Software verification and validation
