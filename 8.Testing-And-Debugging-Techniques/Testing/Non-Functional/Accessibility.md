@@ -151,29 +151,20 @@ The provided examples are a limited subset of the actual testing procedures. A c
 
 * **User Testing with Assistive Technologies:** Including users with disabilities and assistive technologies in the testing process provides invaluable real-world feedback on the effectiveness of your accessibility efforts. 
 * **WCAG Compliance Levels:** Testing often targets specific WCAG conformance levels (A, AA, or AAA) depending on legal requirements and website goals.
-## Who should perform Accessibility Testing?
-To ensure digital experiences are inclusive and meet the needs of all users, it is important to have a combination of different teams involved in accessibility testing.
-
-Product Managers:  They should ensure accessibility is considered in the product roadmap and allocate resources for testing and remediation.
-Designers: It’s crucial to involve designers in the accessibility process to ensure that the UI and UX  are designed with accessibility as a key consideration. 
-Testers:  Accessibility experts conduct in-depth evaluations of compliance with accessibility guidelines and report issues to developers. During functional testing, QA teams ensure accessibility principles are met by identifying common web accessibility issues.
-Developers: Developers are responsible for implementing and fixing accessibility issues. They should be trained in accessibility best practices and perform code reviews to comply with accessibility standards.
-Legal Teams: In some cases, organizations may need to ensure compliance with global accessibility laws, and they can play a role in setting policies and overseeing accessibility initiatives.
-No matter who performs it, accessibility isn’t a one-time project. It’s an ongoing initiative whose continued success is built on ensuring that existing and future product features remain accessible. 
-
-
-
 ## Types of Accessibility Testing 
-Teams can deploy manual, automated, or hybrid testing methods based on their advantages, limitations, use cases, and overall project needs. Ideally, both manual and automated testing should be used for a well-rounded approach. 
+| Feature | Manual Accessibility Testing | Automated Accessibility Testing |
+|---|---|---|
+| **Definition** | Human testers examine a website or web application to identify accessibility issues. | Testing tools scan and analyze web content to identify potential accessibility issues. |
+| **Advantages** |  - Uncovers nuanced or context-specific accessibility challenges.  - Provides insights into user experience for people with disabilities.  - Evaluates complex interactions and user flows. |  - Offers rapid testing and identification of common issues.  - Cost-effective for large websites.  - Scalable for frequent testing. |
+| **Limitations** |  - Time-consuming and expensive, especially for large websites.  - Requires expertise in accessibility standards and assistive technologies. |  - May not catch all accessibility issues, especially complex ones requiring human judgment.  - Can flag non-issues (false positives) requiring manual verification. |
+| **Use Cases** |  - Evaluating forms/input fields for accessibility.  - Reviewing multimedia content for captions, transcripts, and audio descriptions.  - Assessing user experience with assistive technologies like screen readers. |  - Scanning the website for common accessibility issues like missing alt text, insufficient color contrast, and keyboard navigation problems.  - Analyzing HTML, CSS, and JavaScript code for potential violations of accessibility standards.  - Providing quick feedback during development cycles. |
+| **Ideal Use** | In-depth evaluation and user experience insights. | Efficient identification of common accessibility barriers. |
 
-Difference between Manual Accessibility Testing and Automated Accessibility Testing
+**Additional Considerations:**
 
-MANUAL ACCESSIBILITY TESTING	AUTOMATED ACCESSIBILITY TESTING
-Definition 	Manual web accessibility testing involves human testers examining a website or web application to identify accessibility issues. 	Automated accessibility involves testing tools that scan and analyze web content to identify potential accessibility issues.
-Advantages	It is essential for uncovering nuanced or context-specific accessibility challenges that automated tools may not detect. 	They help quickly identify common accessibility problems, providing developers and testers with feedback on areas that need improvement. 
-Limitations	Manual testing can be time-consuming	Automated tools may not fully grasp the context or intent behind certain elements, especially those that require subjective evaluation
-Use Cases	Setting up the test environment with the necessary tools and assistive technologies to evaluate forms/input fields or review multimedia content for captions, transcripts, and audio descriptions.	Using automated tools to scan the website for accessibility issues, automatically analyzing the HTML, CSS, and JavaScript for potential violations of accessibility standards.
-
+* A well-rounded accessibility testing approach often combines both manual and automated testing methods. 
+* Manual testing helps validate the results of automated testing and identify issues that automation might miss.
+* The choice of testing method depends on factors like project scope, budget, and available resources.
 ## Components and Metrics of Accessibility Testing
 First, consider different disabilities requiring additional assistance when conducting web accessibility testing. Your accessibility tests must guarantee a seamless experience for all users, including those who face the following obstacles:
 
