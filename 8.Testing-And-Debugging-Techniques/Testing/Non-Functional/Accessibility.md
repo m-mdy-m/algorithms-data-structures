@@ -166,61 +166,111 @@ The provided examples are a limited subset of the actual testing procedures. A c
 * Manual testing helps validate the results of automated testing and identify issues that automation might miss.
 * The choice of testing method depends on factors like project scope, budget, and available resources.
 ## Components and Metrics of Accessibility Testing
-First, consider different disabilities requiring additional assistance when conducting web accessibility testing. Your accessibility tests must guarantee a seamless experience for all users, including those who face the following obstacles:
 
-Visual Impairment: People with visual impairments encounter obstacles, including complete blindness, color blindness, or other types of vision loss. Despite these challenges, there are many ways to make videos and text accessible to them.
-Hearing Impairment: This category pertains to individuals who encounter hindrances in hearing-spoken communication or digital media due to deafness or other types of hearing impairment.
-Mobility Impairment: This pertains to individuals who may have difficulty with physical movement, including using the physical components of technology like a keyboard or mouse.
-Cognitive Impairment: This encompasses memory, concentration, or decision-making difficulties.
-Once you’ve fully understood the obstacles people with disabilities face, your team needs to map the testing roadmap to the following key components for a smooth process. 
+**Understanding Disabilities:**
 
-Here are the key components of performing accessibility testing:
+Effective accessibility testing requires considering the various challenges faced by users with disabilities. Here are some key categories:
 
-Evaluating Compliance: The most widely recognized standard is the Web Content Accessibility Guidelines (WCAG), which provides comprehensive guidelines for creating accessible digital content. 
-Usability and Interaction: Focus on whether content is perceivable and how it can be interacted with. This includes keyboard navigation, focus management, form interactions, and the responsiveness of user interface elements.
-Testing Different Environments: Test how the website or app performs on different browsers, operating systems, and devices. Ensuring compatibility across diverse device-browser-OS combinations is a non-negotiable for comprehensive accessibility.
-Analyzing Design and Layout: Evaluating aspects like color contrast, font choices, layout structure, and multimedia elements ensures they are designed in a way that supports accessibility.
-Remediation Recommendations: These recommendations aim to help developers and designers make necessary changes to improve accessibility.
-Documenting and Reporting Findings: Testers document their findings, which may include specific issues, their impact on users, and recommendations for improvements. A comprehensive report is typically provided to stakeholders and development teams.
+* **Visual Impairments:** This includes complete blindness, low vision, and color blindness. Users may require assistive technologies like screen readers and alternative text descriptions for images.
+* **Hearing Impairments:**  Deafness or hearing loss can hinder access to audio content. Accessibility features include captions and transcripts for videos, and alternative ways to present audio information.
+* **Mobility Impairments:**  Individuals with limited physical movement may struggle with using a mouse or keyboard.  Accessibility features include ensuring full functionality with keyboard navigation and designing user interfaces that are touch-friendly.
+* **Cognitive Impairments:**  These can affect memory, concentration, or decision-making.  Accessible design principles include clear and concise language, logical content organization, and avoiding overly complex interfaces.
 
+**Components of Accessibility Testing:**
+
+A comprehensive accessibility testing process involves evaluating various aspects of a website or application:
+
+1. **WCAG Compliance:**  The Web Content Accessibility Guidelines (WCAG) provide a internationally recognized framework for creating accessible content. Testing should assess conformance to WCAG standards, typically aiming for Level A, AA, or AAA depending on project goals and legal requirements.
+
+2. **Usability and Interaction:**  This focuses on how users perceive and interact with the content.  Key areas include:
+    * **Keyboard Navigation:** Ensuring all functionalities are accessible using only a keyboard.
+    * **Focus Management:**  Verifying that focus indicators are clear and predictable, allowing users to navigate using the keyboard or assistive technologies.
+    * **Form Interactions:**  Testing forms for proper labeling, error handling, and accessibility for users with screen readers.
+    * **User Interface (UI) Responsiveness:**  Ensuring UI elements like buttons and menus function correctly across different screen sizes and devices.
+
+3. **Testing Across Environments:** 
+    * **Browsers:**  Verifying consistent accessibility across popular web browsers like Chrome, Firefox, Safari, and Edge.
+    * **Operating Systems:**  Testing functionality on different operating systems like Windows, macOS, iOS, and Android.
+    * **Devices:**  Ensuring accessibility on desktop computers, laptops, tablets, and mobile phones. 
+
+4. **Design and Layout Analysis:**
+
+    * **Color Contrast:**  Evaluating sufficient color contrast between text and background for readability by users with low vision.
+    * **Font Choices:**  Verifying fonts are clear, legible, and appropriate for users with visual impairments.
+    * **Layout Structure:**  Assessing if the content is organized logically and  easy to navigate for users with cognitive disabilities.
+    * **Multimedia:**  Ensuring videos have captions and transcripts, and non-text content has alternative representations.
+
+5. **Remediation Recommendations:**
+
+    *  Accessibility testing should identify specific accessibility issues and provide actionable recommendations to developers and designers for improvement.  
+    *  Recommendations should be clear, concise, and prioritized based on severity and impact on users.
+
+6. **Documentation and Reporting:**
+
+    *  Accessibility testers should document their findings in a comprehensive report. 
+    *  The report should include:
+        *  A list of identified accessibility issues.
+        *  The impact of each issue on users with disabilities.
+        *  Recommendations for remediation. 
+        *  Screenshots or other evidence to support findings.
+    *  This report serves as a valuable reference for developers, designers, and stakeholders involved in the website or application's development and maintenance.
+
+
+**Metrics of Accessibility Testing:**
+
+While there's no single perfect metric for accessibility, some key indicators can gauge progress:
+
+* **Number of WCAG Success Criteria Met:**  Tracks compliance with specific WCAG criteria.
+* **Number of Accessibility Issues Identified:**  Indicates the scope of accessibility barriers present.
+* **Severity of Accessibility Issues:**  Prioritizes issues based on their impact on users.
+* **User Testing Feedback:**  Provides real-world insights from users with disabilities.
 ## Best Accessibility Testing Tools
-To make your website more acceptable and user-friendly, it is crucial that it is easily accessible. There are various accessibility testing tools that can check the accessibility of the website.
+Accessibility testing tools are crucial for identifying and addressing barriers that prevent users with disabilities from accessing your website. Here's a breakdown of some popular options, categorized by their functionalities:
 
-Following are some of the popular Accessibility Testing Tools:
+**Free and Browser-Based Tools:**
 
-1) Wave
-Wave
-Wave is a free web accessibility tool created by WEBAIM. It is used to validate the web page manually for various aspects of accessibility. This tool can be used to check the intranet, pass-word protected, dynamically generated, or sensitive web pages. Major functions of Web Accessibility Toolbar includes identifying components of a webpage, providing access to alternative view of page content and facilitating the use of third party online applications. It ensures 100% private and secure accessibility reporting
+* **Wave:** Developed by WebAIM, Wave is a free online tool that allows manual accessibility evaluation. It highlights potential issues across various WCAG criteria and works effectively for intranet, password-protected, and dynamic webpages.
 
-Visit here
+* **Accessibility Developer Tools (Chrome Extension):** This Google Chrome extension automates accessibility audits, pinpointing violations of WCAG standards within the inspected webpage. Users benefit from its frequent updates and high user ratings.
 
-2) TAW
-TAW
-TAW is the online tool for determining accessibility of your web. This tool analyzes the web site in accordance with W3C web accessibility guidelines and shows accessibilities issues. Web accessibility test issues are categorized into priority 1, priority 2 and priority 3. The interesting feature of TAW is the ability to generate subsets of WCAG 1.0 to test against. In TAW tool, you can either choose to test a single page or multiple pages by “spider” a site. TAW also enable us to define additional checks via the “User Checking’s” dialog box
+* **Quick Accessibility Page Tester (Bookmarklet):** This convenient bookmarklet offers a quick accessibility analysis of any webpage. It identifies potential issues, warns about accessibility concerns, and highlights areas that could benefit from ARIA (Accessible Rich Internet Applications) attributes. 
 
-Visit here
+**Freemium or Paid Tools with Advanced Features:**
 
-3) Accessibility Developer Tools
-It is a Chrome extension. It does and accessibility audit. The results of the audit show accessibility rules that are violated by the Page Under Test. The extension has high reviews and is frequently updated
+* **TAW:** This online tool analyzes websites against WCAG guidelines, categorizing accessibility issues by priority (1, 2, and 3).  A valuable feature is the ability to generate custom subsets of WCAG criteria for targeted testing. Additionally, TAW allows testing single pages or entire websites by "crawling" them. Users can also define additional checks through the "User Checking" dialogue box.
 
-Visit Here
+* **aXe (Multiple Platforms):** Available as a browser extension for Chrome, Firefox, and Edge, aXe offers automated testing with detailed reports on WCAG conformance. It integrates seamlessly with development workflows and provides clear remediation guidance. Freemium plans offer basic features, while paid plans unlock advanced functionalities.
 
-4) Quick Accessibility Page Tester
-Since there are some excellent accessibility toolbars, Quick Page Accessibility Tester is a bookmark that you can click to get a quick analysis of the web page. It will figure out various issues with your page, warns about possible issues and highlight areas on the page which might benefit from ARIA (Accessible Rich Internet Applications).
+**Specialized Tools (Paid):**
 
-Visit Here
+* **aDesigner (IBM):** This design tool simulates the experience of visual impairments, allowing designers to understand the challenges faced by users with low vision or color blindness. This empathy-building tool helps create more inclusive website designs.
 
-There are various tools available in the market to perform web accessibility testing given below:
+* **WebAnywhere (Browser-Based):** This browser-based tool functions similarly to screen readers like JAWS, reading web content aloud to users. This assists users with visual impairments in accessing and navigating websites.
 
-5) aDesigner
-This is a tool developed by IBM which simulates the experience of visually impaired individuals so that the designer can better understand the needs of disabled people and develop applications accordingly.
+**Choosing the Right Tool:**
 
-Visit Here
+The ideal accessibility testing toolset depends on your specific needs and budget. Here are some factors to consider:
 
-6) WebAnywhere
-This is a browser based tool that works similarly to the screen readers like Jaws. It assists the readers how to read the web page.
+* **Project Scope:** For smaller websites, free browser-based tools might suffice. Larger websites or those with stricter accessibility requirements may benefit from paid tools with advanced features.
+* **Technical Expertise:** If your team has limited accessibility expertise, consider tools with user-friendly interfaces and clear guidance.
+* **Integration with Development Workflow:** Choose tools that integrate seamlessly with your development process for efficient testing and remediation.
 
-Visit Here
+## Example :
+**Scenario:**
 
-7) Web accessibility toolbar
-WAT is an extension of Internet explorer or Opera that offers web page designers with useful features in the analysis of web page. One best feature is GreyScale feature which helps to find low contrast spots in the design.
+* You are a small business owner who has recently launched a new e-commerce website.
+* You want to ensure your website is accessible to everyone, but you have a limited budget and your team doesn't have extensive accessibility testing experience.
+
+**Choosing Accessibility Testing Tools:**
+
+* **Free and Browser-Based Tools:** A good starting point would be to use free tools like Wave and the Accessibility Developer Tools Chrome extension. These tools can help you identify major accessibility issues without any additional costs. 
+* **Freemium Tools:** Consider a freemium tool like aXe's basic plan. This can provide more comprehensive accessibility reports and basic remediation guidance.
+
+**Benefits:**
+
+By using this combination of free and freemium tools, you can achieve a good balance between functionality and cost-effectiveness.  You'll be able to identify a wide range of accessibility issues and get basic guidance on how to fix them.
+
+**Additional Considerations:**
+
+* As your website grows and accessibility becomes a higher priority, you might consider investing in paid tools with more advanced features like automated testing across multiple pages and in-depth WCAG conformance reports.
+* Regardless of the tools you choose, it's important to supplement automated testing with manual testing using assistive technologies to gain a deeper understanding of the user experience for people with disabilities.
