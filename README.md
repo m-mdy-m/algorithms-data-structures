@@ -200,10 +200,10 @@ A general term for a class of algorithms that aim to find a specific element in 
  - [freecodecamp](https://www.freecodecamp.org)
  - [techopedia](https://www.techopedia.com)
  - [programiz](https://www.programiz.com)
- - [w3schools](https://www.w3schools.com)
  - [javatpoint](https://www.javatpoint.com)
  - [tricentis](https://www.tricentis.com)
  - [maze](https://maze.co)
+ - [browserstack](https://www.browserstack.com) ⭐
 
 ## Project
 > Attention : Projects and solution of different algorithms or design patterns are solved in this organization
