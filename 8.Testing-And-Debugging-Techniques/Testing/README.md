@@ -27,9 +27,6 @@ The following are important reasons why software testing techniques should be in
 - **Helps with scalability.** A type of nonfunctional software testing process, scalability testing is done to gauge how well an application scales with increasing workloads, such as user traffic, data volume and transaction counts. It can also identify the point where an application might stop functioning and the reasons behind it, which may include meeting or exceeding a certain threshold, such as the total number of concurrent app users.
 - **Saves money.** Software development issues that go unnoticed due to a lack of software testing can haunt organizations later with a bigger price tag. After the application launches, it can be more difficult to trace and resolve the issues, as software patching is generally more expensive than testing during the development stages.
 ## Goals
-
-Software testing is typically goal driven.
-
 **1. Unmasking Bugs and Defects:**
 
 * This is the classic goal of testing – identifying errors in the code that cause malfunctions. Testers act like code detectives, meticulously examining the software for bugs that might hinder performance or lead to unexpected behavior. Early detection is crucial, as fixing bugs during development is far easier and cheaper than patching them after launch.
@@ -62,8 +59,6 @@ Software testing is typically goal driven.
 
 * Software should not only be functional but also user-friendly. Usability testing focuses on how users interact with the software, evaluating factors like intuitiveness, learnability, and overall user satisfaction. By identifying usability issues early on, testers can ensure the software is designed with the user in mind, resulting in a more enjoyable and productive user experience.
 ## Categorization
-* **Development Testing:** This isn't a single, specific category, but rather an umbrella term encompassing all testing activities performed during the software development lifecycle. It includes unit testing, integration testing, system testing, regression testing, and smoke testing, among others. These tests are typically conducted by developers or QA testers before the software is released to the public.
-
 ### By Automation Level:
 
 * **Automated Testing:** Uses tools and scripts to automate repetitive tasks, saving time and effort.
@@ -89,9 +84,6 @@ Software testing is typically goal driven.
 
 * **Exploratory Testing:**  A flexible, creative approach where testers actively explore the software to uncover unexpected issues (during or after development).
 * **Preset Testing:**  Structured testing with pre-defined test cases and expected results (during development).
-
-* **adaptive testing**
-
 ### By Testers' Knowledge of Internal System (Focus):
 
 * **Black-Box Testing:** Testers treat the software as a black box, focusing on functionalities without knowledge of internal workings (during or after development).
@@ -280,7 +272,7 @@ Imagine a detailed travel itinerary for a complex journey – that's essentially
 
 -simple explanation »
 
-Imagine a meticulous detective board that tracks every clue – a traceability matrix functions similarly in the software testing world. This powerful tool helps ensure no requirement gets overlooked during testing. It's essentially a table that meticulously maps the relationships between various project documents. Typically, it tracks how high-level requirements (think of them as broad goals for the software) translate into detailed design specifications, test plans, and individual test cases. This traceability matrix ensures that every requirement has corresponding tests designed to verify its successful implementation in the final software.
+> Imagine a meticulous detective board that tracks every clue – a traceability matrix functions similarly in the software testing world. This powerful tool helps ensure no requirement gets overlooked during testing. It's essentially a table that meticulously maps the relationships between various project documents. Typically, it tracks how high-level requirements (think of them as broad goals for the software) translate into detailed design specifications, test plans, and individual test cases. This traceability matrix ensures that every requirement has corresponding tests designed to verify its successful implementation in the final software.
 
 * **Test Case:** This is the workhorse of testing. A test case defines a specific scenario to be tested. It typically includes:
     * A unique identifier for easy reference.
@@ -405,7 +397,7 @@ The controversies surrounding software testing highlight the ongoing evolution o
 ## implementations
 Reading about testing is great, but true learning comes from implementing them. Hands-on experience lets you practice, solve unexpected issues, and see the impact firsthand. Dive into different tests in your project - unit, integration, functional - and remember, testing is a continuous journey!
 
-**Want to see these tests in action?** Check out my repository for code examples on implementing various software tests: []().  In my repository, you can not only see the code, but also participate and contribute to the implementation of these tests! 
+**Want to see these tests in action?** Check out my repository for code examples on implementing various software tests: [Testing-Guild](https://github.com/Testing-Guild).In my repository, you can not only see the code, but also participate and contribute to the implementation of these tests! 
 ## References:
 
 - [wikipedia](https://en.wikipedia.org/wiki/Software_testing#)
