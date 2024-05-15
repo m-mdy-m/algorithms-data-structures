@@ -155,7 +155,7 @@ Software testing is typically goal driven.
 
 * [**Smoke Testing**](https://github.com/Testing-Guild/Smoke-Testing) `Article And implementation`
 * [**Sanity Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Techniques/Sanity.md) `Article`
-* [**Exploratory Testing**]() `Article And implementation`
+* [**Exploratory Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Techniques/Exploratory.md) `Article`
 * [**Black-Box Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Techniques/Black-Box.md) `Article`
 * [**White-Box Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Techniques/White-Box.md) `Article`
 * [**API Testing**](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Techniques/API.md) `Article`
