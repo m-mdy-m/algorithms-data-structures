@@ -103,46 +103,54 @@ This combined approach ensures comprehensive testing and a more accessible websi
 
 * **User Testing with Assistive Technologies:** Including people with disabilities and users of assistive technologies in the testing process provides invaluable real-world feedback. 
 * **WCAG Compliance Levels:**  Accessibility testing often focuses on achieving specific WCAG conformance levels (A, AA, or AAA) depending on legal requirements and website goals.
-## The accessibility testing process
-The accessibility testing process can be conducted by website owners themselves, if they choose to do so. To that end, they can thoroughly review a website, online document, or any other relevant web-based application and inspect its level of conformance with relevant web accessibility standards. Given that the latter is a complex process, many website owners choose to rely on expert service providers to perform the accessibility testing process for them. Often, they will first rely on an automated tool to run a quick audit of their website to gauge their website’s overall level of accessibility. If the results indicate that the website suffers from gaps in accessibility, website owners will then turn to expert service providers to more thoroughly investigate these issues.
+## The Accessibility Testing Process: A Comprehensive Guide
 
-Accessibility testing for specific disability categories 
-The goal of accessibility testing is to ensure that people with various disabilities can access a website or web-based application. Given that different disabilities present specific challenges when engaging with a website or web-based application, the testing process will need to account for such varying user experiences. To that end, most accessibility testing agencies divide disabilities into five major categories:
+Accessibility testing ensures websites and web applications are usable by everyone, regardless of ability. Here's a breakdown of the comprehensive testing process, considerations for different disabilities, and how you can approach testing:
 
+**Who can perform Accessibility Testing?**
 
-Low vision/Blindness
-These range from complete blindness to more moderate vision impairments, such as low vision. Color blindness and poor eyesight are also vision impairments that accessibility testers check for. To test whether websites and web-based applications are accessible for people with these disabilities, testers should verify whether:
+Website owners can conduct accessibility testing themselves, but it's a complex process requiring specific expertise and tools. Many organizations choose to rely on the following options:
 
-They are compatible with screen readers
-There is sufficient color contrasts between text and its background
-Text text can be resized to 200% without loss of content or function 
-Important note: These are only a select few elements a tester will need to examine. The actual list of action items is much longer.
+* **Internal Accessibility Teams:**  Organizations with dedicated accessibility specialists can leverage their in-house knowledge and resources to conduct testing. This approach offers greater control over the testing process and timeline, but requires investment in personnel training and accessibility testing tools.
+* **Accessibility Testing Agencies:**  External firms specializing in accessibility testing offer a comprehensive and efficient approach. They employ certified accessibility professionals and utilize advanced testing tools to ensure thorough evaluation. This option is ideal for organizations lacking internal accessibility expertise or resources, but comes with associated service costs.
 
+**The Accessibility Testing Process: A Step-by-Step Guide**
 
-Physical disabilities 
-A wide range of permanent and temporary disabilities can make it difficult to use a computer mouse. For people who have these disabilities to be able to access them, websites need to be configured so that they facilitate keyboard navigation. Testing whether websites and web-based applications are accessible for people with these disabilities, therefore entails examining whether they can be operated fully using only a keyboard.
+1. **Preparation:**
+    * **Define Scope:** Clearly identify the specific web content or application targeted for testing. This could be the entire website, a specific section, or a mobile app.
+    * **Set Goals:** Determine the desired level of accessibility compliance you want to achieve. The Web Content Accessibility Guidelines (WCAG) provide a framework with different conformance levels (A, AA, and AAA). Consider factors like legal requirements, target audience needs, and brand reputation when setting your goals.
+    * **Gather Information:**  Gain a deep understanding of the website's purpose, target audience demographics, and any existing accessibility documentation or policies. This information helps tailor the testing process and identify potential areas of concern.
 
+2. **Discovery:**
+    * **Automated Testing:** Run automated accessibility scanners to efficiently identify a wide range of common accessibility issues. These tools can detect missing alternative text for images, insufficient color contrast, and keyboard navigation problems. While automation offers speed and efficiency, it's important to remember that these tools may not catch all accessibility barriers.
+    * **Manual Review:** Conduct a thorough manual review of the website using assistive technologies like screen readers and keyboard navigation. This user-centric approach allows testers to experience the website firsthand and identify usability challenges that might be missed by automation. Testers should also review content structure, language clarity, and overall user experience for people with disabilities.
 
-Important note: These are only a select few elements a tester will need to examine. The actual list of action items is much longer.
+3. **Evaluation:**
+    * **Analyze Results:**  Compile and analyze the findings from both automated and manual testing phases. Categorize identified accessibility issues based on severity, WCAG criteria they violate, and the impact they have on users with different disabilities.
+    * **Prioritize Issues:**  Prioritize accessibility issues based on their severity and impact. Critical issues that significantly hinder usability for users with disabilities should be addressed first.
 
+4. **Remediation:**
+    * **Develop a Remediation Plan:**  Create a plan to address the identified accessibility barriers. This may involve code changes to improve keyboard navigation, writing alternative text descriptions for images, or restructuring content for better clarity.
+    * **Fix Accessibility Issues:**  Implement the remediation plan to remove accessibility barriers and ensure the website meets the defined accessibility goals.
 
-Learning and cognitive disabilities
-Developmental disabilities, learning disabilities, and brain injuries can make it hard for people to navigate complex web experiences. Additionally, people with learning disabilities can find reading and writing difficult. To test whether websites and web-based applications are accessible for people with these disabilities, testers should verify whether:
+5. **Verification:**
+    * **Re-test the Website:**  After addressing accessibility issues, conduct retesting of the website or application to verify that the remediation efforts were successful and the website now functions as intended for users with disabilities.
 
-It is devoid of unnecessary jargon and complex terminology
-It features content that is structured in a simple and intuitive way
-Its web pages are designed so that they aren’t overly cluttered 
-Important note: These are only a select few elements a tester will need to examine. The actual list of action items is much longer.
+**Accessibility Testing for Different Disabilities:**
 
+* **Visual Impairments:** Testers focus on ensuring compatibility with screen readers, providing alternative text descriptions for images that convey meaning, and verifying sufficient color contrast between text and background to ensure readability for users with low vision or color blindness. 
+* **Physical Disabilities:** Testing ensures full functionality using only a keyboard, allowing users with motor limitations to navigate and interact with the website without relying on a mouse. This includes verifying keyboard navigation for menus, forms, and interactive elements.
+* **Learning and Cognitive Disabilities:** Testers evaluate the website's content structure, language clarity, and overall layout. The goal is to ensure clear and concise language, logical and predictable organization of information, and an uncluttered design that avoids overwhelming users with complex interfaces. 
+* **Hearing Disabilities:** Testing involves verifying that video content has captions or transcripts to provide alternative access to auditory information. Additionally, testers ensure that non-text alerts or notifications are also presented visually for users who rely on visual cues.
 
-Hearing disabilities
-Auditory problems span from total deafness to difficulty hearing quiet sounds. To test whether websites and web-based applications are accessible for people with these disabilities, testers should verify whether:
+**Important Note:**
 
-Videos feature captions
-Audible alerts, such as for chat notifications, are provided in a visual format
-Important note: These are only a select few elements a tester will need to examine. The actual list of action items is much longer.
+The provided examples are a limited subset of the actual testing procedures. A comprehensive accessibility testing process involves a much more extensive evaluation across various aspects of the website, including proper coding practices, user interface elements, and content structure. 
 
+**Additional Considerations:**
 
+* **User Testing with Assistive Technologies:** Including users with disabilities and assistive technologies in the testing process provides invaluable real-world feedback on the effectiveness of your accessibility efforts. 
+* **WCAG Compliance Levels:** Testing often targets specific WCAG conformance levels (A, AA, or AAA) depending on legal requirements and website goals.
 ## Who should perform Accessibility Testing?
 To ensure digital experiences are inclusive and meet the needs of all users, it is important to have a combination of different teams involved in accessibility testing.
 
