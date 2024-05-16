@@ -204,6 +204,7 @@ A general term for a class of algorithms that aim to find a specific element in 
  - [tricentis](https://www.tricentis.com)
  - [maze](https://maze.co)
  - [browserstack](https://www.browserstack.com) ⭐
+ - [techtarget](https://www.techtarget.com) ⭐
 
 ## Project
 > Attention : Projects and solution of different algorithms or design patterns are solved in this organization
