@@ -373,20 +373,13 @@ The controversies surrounding software testing highlight the ongoing evolution o
 * **Boundary Value Analysis (BVA):**  This technique involves testing software with values at the edges of expected input ranges.  For example, testing a function that accepts numbers between 1 and 100 would include values like 1, 100, 0, and 101. [More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Patterns/BVA.md)
 
 * **Equivalence Partitioning:**  This technique divides the input domain into partitions where the program is expected to behave similarly for all values within a partition.  Tests are then designed to cover each partition. [More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Patterns/Equivalence-Partitioning.md)
-
-### Testing Practices
-
-* **Testing Frameworks (Unit Testing):** These frameworks provide tools for building and running automated tests. They offer features like test discovery, organization, assertion libraries, and mocking (simulating dependencies). [More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Practices/Frameworks.md)
-
-* **BDD (Behavior-Driven Development):**  BDD utilizes a human-readable Gherkin syntax to describe test scenarios in terms of user stories and expected behavior. This promotes collaboration between developers, testers, and stakeholders. [More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Practices/BDD.md)
-
-### Informative Standards (Not Mandatory)
+### Informative Standards
 
 * **IEEE (Institute of Electrical and Electronics Engineers):**  While IEEE doesn't have a dedicated test writing standard, their broader software development standards (IEEE Std 1028-2016) address testing practices indirectly.  These standards emphasize the importance of documented testing plans and procedures.[More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Standards/IEEE.md)
 
 * **ISO (International Organization for Standardization):** Similar to IEEE, ISO offers general software development standards (ISO/IEC 12207) that influence testing practices  by setting guidelines for the software development lifecycle, which includes testing phases. [More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Standards/ISO.md)
 
-* **Software Requirements Specification (SRS):** This document outlines the functional and non-functional requirements of a software system.  Testing should ensure the software fulfills these defined requirements.   [More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Standards/SRS.md)
+* **Software Requirements Specification (SRS):** This document outlines the functional and non-functional requirements of a software system.  Testing should ensure the software fulfills these defined requirements. [More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Standards/SRS.md)
 
 * **IEC (International Electrotechnical Commission):**  IEC 61508 is a series of standards specifically for safety-critical systems.  These standards include detailed guidelines for testing such systems, with a focus on ensuring they meet rigorous safety requirements. [More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Standards/IEC.md)
 ## implementations
