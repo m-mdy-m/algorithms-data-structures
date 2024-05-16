@@ -455,7 +455,74 @@ A well-structured Software Requirements Specification (SRS) serves as the bluepr
 * **Stakeholder Involvement:**  Involve key stakeholders from development, testing, and the client side throughout the SRS creation process.  Gather feedback from various perspectives to ensure the document comprehensively captures all the necessary requirements.
 
 * **Document Reviews:**  Conduct regular reviews of the SRS document with relevant stakeholders.  This collaborative review process helps identify any inconsistencies, missing information, or areas for improvement.
+## Example
+- > CMS Project (Nodejs)
+### Software Requirements Specification (SRS)
+
+**1. Introduction**
+
+* **1.1 Project Title:** Simple Node.js Express CMS
+* **1.2 Purpose:** This document outlines the requirements for a web-based Content Management System (CMS) built using Node.js and Express framework. 
+* **1.3 Target Audience:** This SRS is intended for developers, testers, and any stakeholders involved in the project. 
+**2. Overall Description**
+
+* **2.1 Product Perspective:**  This CMS will allow authorized users to create, edit, and publish content on a website.
+* **2.2 Product Functions:**
+    * User Management:
+        * User registration and login with secure password hashing.
+        * Role-based access control (e.g., admin, editor, author).
+    * Content Management:
+        * Create, edit, and publish website content (pages, posts, etc.).
+        * Manage content structure (categories, tags).
+        * Upload and manage media files (images, videos).
+    * Basic Page Functionality:
+        * Ability to define page titles, meta descriptions, and content.
+        * WYSIWYG editor (or similar) for content creation with basic formatting options (bold, italics, lists).
+
+**3. Specific Requirements**
+
+* **3.1 User Management**
+    * Users should be able to register for an account with a username, email, and password.
+    * The system should securely hash and store user passwords.
+    * Login functionality should authenticate users with username/password combination.
+    * Implement role-based access control (RBAC) to restrict functionalities based on user roles (e.g., only admins can manage users).
+* **3.2 Content Management**
+    * Users with appropriate permissions should be able to create new content pages or posts.
+    * The system should allow editing existing content with a user-friendly interface.
+    * Users should be able to publish content, making it visible on the website.
+    * Allow for creation and management of categories and tags for content organization.
+    * Implement functionality to upload and manage media files (images, videos) associated with content.
+* **3.3 Basic Page Functionality**
+    *  The system should allow defining page titles, meta descriptions, and content for each webpage.
+    *  Integrate a WYSIWYG editor (or similar) for content creation with basic formatting options (bold, italics, lists).
+    *  Content should be rendered correctly on the website frontend.
+
+**4. Non-Functional Requirements**
+
+* **4.1 Performance:** The CMS should have a response time of less than 5 seconds for common operations like login, content creation, and page editing.
+* **4.2 Security:** The system should implement secure user authentication and authorization mechanisms.  
+* **4.3 Scalability:** The CMS should be designed to accommodate future growth in terms of users, content volume, and website traffic.
+* **4.4 Usability:** The user interface should be intuitive and user-friendly for users with varying levels of technical expertise.
+
+**5.  Additional Considerations**
+
+*  Error handling and user feedback mechanisms for invalid inputs or failed operations.
+*  Data backup and recovery procedures to ensure content security.
+*  Search functionality for content management purposes.
+*  Content versioning to allow reverting to previous versions if necessary.
+*  Implementation details regarding database selection and storage mechanisms can be further defined in a separate document.
+
+**6.  Acceptance Criteria**
+
+* The CMS should successfully complete user registration, login, and role-based access control functionalities.
+* Users should be able to create, edit, publish, and manage content (pages, posts) with assigned permissions.
+* The system should display content accurately on the website frontend based on defined page titles, meta descriptions, and content structure.
+* Performance benchmarks for response times should be met.
+* Security testing should be conducted to ensure secure user authentication and data protection.
+
+This is a basic example, and the specific requirements can be further expanded upon based on the project's needs. Remember, an SRS is a living document and can evolve as the project progresses. 
+
+
 ## Read More SRS :
 - [Software Requirements Specification](https://www.cse.chalmers.se/~feldt/courses/reqeng/examples/srs_example_2010_group2.pdf) -Download
-- [SRS]https://seniord.cs.iastate.edu/2020-May-01/files/inline-files/SRS.pdf() -Download
-- [SRS Example](https://m.mu.edu.sa/sites/default/files/content/2019/10/Final%20report.pdf)
+- [SRS Example](https://m.mu.edu.sa/sites/default/files/content/2019/10/Final%20report.pdf) -Download
