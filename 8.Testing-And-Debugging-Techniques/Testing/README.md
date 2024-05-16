@@ -366,8 +366,6 @@ The controversies surrounding software testing highlight the ongoing evolution o
 
 * **Arrange-Act-Assert (AAA) Pattern:** This common structure promotes readability and maintainability of unit tests. It involves setting up the test environment (Arrange), executing the code under test (Act), and then verifying the expected outcome (Assert). [More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Patterns/AAA.md)
 
-* **Test Naming Conventions:** Regardless of the framework you use, your test names should be descriptive and clearly communicate the functionality being tested. Aim for names that anyone reading the code can easily understand.  Some frameworks or teams might use a standardized prefix for test names (e.g., "test_", "spec_", "it_"). [More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Patterns/Naming-Conventions.md)
-
 * **Test Doubles:** This is a broader term encompassing mocks, stubs, fakes, and spies.  Test doubles are any object used to replace a real dependency during testing. [More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Patterns/Doubles.md)
 
 * **Boundary Value Analysis (BVA):**  This technique involves testing software with values at the edges of expected input ranges.  For example, testing a function that accepts numbers between 1 and 100 would include values like 1, 100, 0, and 101. [More complete description](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Patterns/BVA.md)
