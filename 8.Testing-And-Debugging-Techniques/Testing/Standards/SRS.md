@@ -196,7 +196,7 @@ Congratulations! You've reached the final step of crafting your SRS document.  N
 * **Reference Point:** The finalized SRS becomes a central reference point for the development team. Developers can use it to understand the functionalities and features to build. Testers can leverage it to design test cases that ensure the software meets all the outlined requirements. Project managers can utilize it to track progress and ensure the project stays aligned with the defined goals.
 
 ### Example: 
-## Example: Library Management System SRS
+**Example: Library Management System SRS**
 
 **1. Define the Purpose with an Outline**
 
@@ -455,3 +455,7 @@ A well-structured Software Requirements Specification (SRS) serves as the bluepr
 * **Stakeholder Involvement:**  Involve key stakeholders from development, testing, and the client side throughout the SRS creation process.  Gather feedback from various perspectives to ensure the document comprehensively captures all the necessary requirements.
 
 * **Document Reviews:**  Conduct regular reviews of the SRS document with relevant stakeholders.  This collaborative review process helps identify any inconsistencies, missing information, or areas for improvement.
+## Read More SRS :
+- [Software Requirements Specification](https://www.cse.chalmers.se/~feldt/courses/reqeng/examples/srs_example_2010_group2.pdf) -Download
+- [SRS]https://seniord.cs.iastate.edu/2020-May-01/files/inline-files/SRS.pdf() -Download
+- [SRS Example](https://m.mu.edu.sa/sites/default/files/content/2019/10/Final%20report.pdf)
