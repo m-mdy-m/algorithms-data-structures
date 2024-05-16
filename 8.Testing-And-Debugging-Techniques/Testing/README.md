@@ -185,7 +185,6 @@ Here's a table summarizing the key differences:
 When we use consistent terminology, the apparent contradiction disappears. Both the SRS and the final software need validation:
 
 * **SRS Validation:**
-    > [What is SRS Validation](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/8.Testing-And-Debugging-Techniques/Testing/Standards/SRS.md)
     * Static validation involves consulting stakeholders to ensure the SRS accurately reflects their needs.
     * Dynamic validation can involve building prototypes or partial implementations to confirm the SRS on a practical level.
 
