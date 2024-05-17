@@ -60,8 +60,6 @@ A general term for a class of algorithms that aim to find a specific element in 
    - > [Test](8.Testing-And-Debugging-Techniques/Testing/)
 
 9. [Additional Concept](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept) - (Not Necessary)
-   - [Challenges](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Challenges)
-       > challenge coding and implementing concepts
    - [Clean Code](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Clean%20Code)
    - > [Utils](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils) :(`It is not related to data structure and algorithm`)
       - Virtualization/Containerization: (Docker, Kubernetes, Vagrant) 
@@ -71,6 +69,8 @@ A general term for a class of algorithms that aim to find a specific element in 
       - Version Control Systems (VCS): (Git, Mercurial, Subversion) 
       - Bug Tracking Systems: (Jira, Bugzilla)
       - Command Line Interface (CLI)
+
+   - `Finally` - > [Challenges](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Challenges) >> challenge coding and implementing concepts
 
 **Medium:**
 
