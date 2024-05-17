@@ -59,10 +59,10 @@ A general term for a class of algorithms that aim to find a specific element in 
    - > [Debug](8.Testing-And-Debugging-Techniques/Debugging/)
    - > [Test](8.Testing-And-Debugging-Techniques/Testing/)
 
-9. Pseudo codes
-   - Challenges:
+9. [Pseudo codes](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Pseudo-Codes)
+   - [Challenges](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Pseudo-Codes/Challenges)
        > challenge coding and implementing concepts
-   - Clean Code:
+   - [Clean Code](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Pseudo-Codes/Clean%20Code)
    - > Utils :(`It is not related to data structure and algorithm`)
       - Virtualization/Containerization: (Docker, Kubernetes, Vagrant) 
       - Continuous Integration/Continuous Delivery (CI/CD): (Jenkins, Travis CI, CircleCI, GitLab CI/CD) 
