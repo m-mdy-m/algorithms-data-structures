@@ -61,7 +61,7 @@ A general term for a class of algorithms that aim to find a specific element in 
 
 9. [Additional Concept](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept) - (Not Necessary)
    - [Clean Code](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Clean%20Code)
-      - [Book](https://thixalongmy.haugiang.gov.vn/media/1175/clean_code.pdf)
+      - [Book](https://github.com/jnguyen095/clean-code/blob/master/Clean.Code.A.Handbook.of.Agile.Software.Craftsmanship.pdf)
    - > [Utils](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils) :(`It is not related to data structure and algorithm`)
       - Virtualization/Containerization: (Docker, Kubernetes, Vagrant) 
       - Continuous Integration/Continuous Delivery (CI/CD): (Jenkins, Travis CI, CircleCI, GitLab CI/CD) 
