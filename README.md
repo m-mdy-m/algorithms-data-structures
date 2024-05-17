@@ -59,11 +59,11 @@ A general term for a class of algorithms that aim to find a specific element in 
    - > [Debug](8.Testing-And-Debugging-Techniques/Debugging/)
    - > [Test](8.Testing-And-Debugging-Techniques/Testing/)
 
-9. [Pseudo codes](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Pseudo-Codes)
-   - [Challenges](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Pseudo-Codes/Challenges)
+9. [Additional Concept](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept) - (Not Necessary)
+   - [Challenges](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Challenges)
        > challenge coding and implementing concepts
-   - [Clean Code](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Pseudo-Codes/Clean%20Code)
-   - > Utils :(`It is not related to data structure and algorithm`)
+   - [Clean Code](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Clean%20Code)
+   - > [Utils](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils) :(`It is not related to data structure and algorithm`)
       - Virtualization/Containerization: (Docker, Kubernetes, Vagrant) 
       - Continuous Integration/Continuous Delivery (CI/CD): (Jenkins, Travis CI, CircleCI, GitLab CI/CD) 
       - API Documentation Tools: (Swagger, OpenAPI, POSTMAN)
