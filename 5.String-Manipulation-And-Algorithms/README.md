@@ -177,11 +177,11 @@ Z_algorithm(Text)
 7. Finally, the function returns the `Z` list containing the Z-function values for each index in the text string.
 
 > Example Z-algorithm in (Go,Java,python,Js,Ts)
-- [Go](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/golong/Z_algorithm.go)
+- [Go](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/golang/Z_algorithm.go)
 - [Java](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/java/Z_algorithm.java)
 - [TypeScript](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/ts/Z_algorithm.ts)
 - [JavaScript](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/js/Z_algorithm.js)
-- [Python](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/golong/python.py)
+- [Python](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/golang/python.py)
 
 
 **Output**->
@@ -280,7 +280,7 @@ Manachers_Algorithm(Text)
 10. After processing all characters, the algorithm extracts starting indices and lengths of palindromes from the `P` array. It iterates through the `P` array with a step of 2 (skipping the special characters) and checks for non-zero `P` values. If a non-zero value is found, it calculates the starting index based on the current index (`i`) and the palindrome length (`P[i]`).
 
 > Example Manachers algorithm in (Go,Java,python,Js,Ts)
-- [Go](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/golong/Manachers_Algorithm.go)
+- [Go](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/golang/Manachers_Algorithm.go)
 - [Java](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/java/Manachers_Algorithm.go) - Write with Ai
 - [TypeScript](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/ts/Manachers_Algorithm.go)
 - [JavaScript](https://github.com/m-mdy-m/algorithms-data-structures/blob/main/5.String-Manipulation-And-Algorithms/Example/js/Manachers_Algorithm.go)
