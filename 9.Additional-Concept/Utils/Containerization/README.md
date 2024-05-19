@@ -306,7 +306,7 @@ A comprehensive container security strategy should encompass the entire containe
 
 * **Security scanning of container images:**  Identify and address vulnerabilities in base images and application code before deployment.
 * **Least privilege principle:**  Grant containers only the minimum permissions required to function, minimizing the attack surface.
-* **Network segmentation:**  Isolate container networks to prevent unauthorized communication between containers.
+* **Network segmentation:**  Isolate container networks to prevent unauthorized communication betwee138319n containers.
 * **Regular security audits:**  Proactively identify and address security weaknesses in the container environment.
 ## What is serverless computing?
 Serverless computing is a cloud computing execution model where the cloud provider manages the server infrastructure that runs your code.  Developers can deploy and run applications without provisioning or managing servers.  Serverless services automatically scale based on the incoming workload, eliminating the need for manual capacity planning.
