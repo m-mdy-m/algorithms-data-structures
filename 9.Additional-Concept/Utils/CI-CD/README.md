@@ -1,112 +1,101 @@
 # What is Continuous Integration(CI)
-Continuous integration (CI) is the practice of frequently building and testing a software system during its development. It is intended to ensure that code written by programmers is always buildable, runnable and passes automated testing. Developers merge to an integration branch and an automated system builds and tests.[1] Often, the automated process runs on each commit or runs on a schedule such as once a day.
+## Continuous Integration (CI): Streamlining Software Development
 
-Grady Booch first proposed the term CI in 1991,[2] although he did not advocate integrating multiple times a day, but later, CI came to include that aspect.[3]
+Continuous integration (CI) is a cornerstone practice in modern software development. It revolves around frequently merging code changes and running automated builds and tests. This ensures your codebase remains stable and high-quality throughout the development cycle.
+
+**Origins of CI:**
+
+The concept of CI was first introduced by Grady Booch in 1991. While his initial definition didn't emphasize daily or multiple integrations, the practice has evolved to encompass this frequent integration approach.
+
+> Summary: Continuous Integration (CI) is like having a software checkup after every small change. Developers regularly merge their code, and an automated system instantly builds and tests it. This catches bugs early and keeps the code stable, making development faster and smoother.
 
 ## Goal
-A stated goal of CI is to run the automated process frequently enough that no intervening window remains between commit and build, and such that no errors can arise without developers noticing them and correcting them immediately.[1] Generally, this means triggering builds on each commit to a repository. Due to processing limitations, sometimes multiple changes are committed between automation runs.
+The ultimate aim of continuous integration (CI) is to establish a development environment where errors are identified and addressed as swiftly as possible. This is achieved by:
 
-## Related practices
+* **Frequent Automation:** Ideally, the CI pipeline should run frequently enough to eliminate any significant gap between a code commit and its corresponding build and test execution. This near-instantaneous feedback allows developers to be promptly notified of any issues introduced by their changes.
+* **Early Bug Identification:** By catching errors early in the development cycle, CI minimizes the time and effort required for fixing them. Fresh code changes are easier to understand and debug compared to those that have been integrated and potentially interacted with other parts of the codebase for longer periods.
+* **Rapid Response:** The prompt feedback provided by CI empowers developers to react quickly to any identified problems. This minimizes the risk of errors accumulating and potentially causing more complex issues later in the development process.
 
-This section contains instructions, advice, or how-to content. Please help rewrite the content so that it is more encyclopedic or move it to Wikiversity, Wikibooks, or Wikivoyage. (May 2015)
-This section lists best practices from practitioners for other practices that enhance CI.
+**Practical Considerations:**
 
-Build automation
-Build automation is a best practice.[11][12]
+While the ideal scenario involves triggering builds on every single commit, real-world limitations, such as processing power or resource constraints, might necessitate a slightly less frequent approach. In such cases, the CI pipeline might be configured to run on a schedule (e.g., every few minutes) or upon every few commits.
 
-Atomic commits
-CI requires the version control system to support atomic commits; i.e., all of a developer's changes are handled as a single commit.
+## Continuous Integration: A Collaborative Development Ecosystem
 
-Committing changes
-When making a code change, a developer creates a branch that is a copy of the current codebase. As other changes are committed to the repository, this copy diverges from the latest version.
+Continuous Integration (CI) fosters a collaborative development environment through a set of practices that streamline the integration of code changes. Here's a breakdown of key aspects related to CI:
 
-The longer development continues on a branch without merging to the integration branch, the greater the risk of multiple integration conflicts[13] and failures when the developer branch is eventually merged back. When developers submit code to the repository they must first update their code to reflect the changes in the repository since they took their copy. The more changes the repository contains, the more work developers must do before submitting their own changes.
+**Essential Practices:**
 
-Eventually, the repository may become so different from the developers' baselines that they enter what is sometimes referred to as "merge hell", or "integration hell",[14] where the time it takes to integrate exceeds the time it took to make their original changes.[15]
+* **Build Automation:** Streamline the build process with automation tools, ensuring successful code compilation and conversion into a working program with each commit. 
+* **Atomic Commits:** Utilize a version control system that supports atomic commits, guaranteeing all changes within a commit are treated as a single unit.
+* **Frequent Commits:** Encourage developers to commit code changes regularly (ideally daily or per completed feature) to minimize conflicts and facilitate smoother integration.
+* **Local Testing:**  Advocate for test-driven development (TDD) practices. Developers should ensure all unit tests pass locally before committing to the integration branch, preventing potential disruptions for others.
+* **Version Control:** Store all files and build-related information within a version control system (e.g., Git repository). The system should be buildable from a fresh checkout, eliminating the need for additional external dependencies.
+* **Single Build Command:**  A single command should trigger the entire build process, promoting simplicity and repeatability.
+* **Fast Builds:** Prioritize rapid build completion times for swift identification and resolution of integration issues.
 
-Testing locally
-Proponents of CI suggest that developers should use test-driven development and to ensure that all unit tests pass locally before committing to the integration branch so that one developer's work does not break another developer's copy.
+**Collaborative Workflow:**
 
-Incomplete features can be disabled before committing, using feature toggles.
+* **Shared Integration Branch:**  Consider using a single integration branch where all developers commit their changes. This fosters collaboration and reduces the risk of conflicts. 
+* **Continuous Delivery/Deployment (CD):**  Integrate CI with CD practices. Continuous delivery ensures the code on the integration branch is always deployable, while continuous deployment automates the deployment process itself. These practices, often combined as CI/CD pipelines, further streamline software delivery.
 
-Continuous delivery and continuous deployment
-Continuous delivery ensures the software checked in on an integration branch is always in a state that can be deployed to users, and continuous deployment automates the deployment process.
+**Testing and Feedback:**
 
-Continuous delivery and continuous deployment are often performed in conjunction with CI and together form a CI/CD pipeline.
+* **Production-like Test Environments:**  Utilize test environments that closely resemble the production environment to minimize discrepancies and ensure successful deployments. Techniques like service virtualization can be employed to manage external dependencies within these environments.
+* **Easy Access to Build Deliverables:**  Make builds readily available to stakeholders and testers. This facilitates early testing and reduces rework due to unmet requirements. 
+* **Build Status Transparency:**  Ensure clear visibility into build success or failure, including identification of the responsible changes and developers.
 
-Version control
-Main article: Version control
-Proponents of CI recommend storing all files and information needed for building in version control, (for git a repository); that the system should be buildable from a fresh checkout and not require additional dependencies.
+**Additional Considerations:**
 
-Martin Fowler recommends that all developers commit to the same integration branch.[16]
-
-Automate the build
-Main article: Build automation
-Build automation tools automate building.
-
-Proponents of CI recommend that a single command should have the capability of building the system.
-
-Automation often includes automating the integration, which often includes deployment into a production-like environment. In many cases, the build script not only compiles binaries but also generates documentation, website pages, statistics and distribution media (such as Debian DEB, Red Hat RPM or Windows MSI files).
-
-Everyone commits to the baseline every day
-By committing regularly, every committer can reduce the number of conflicting changes. Checking in a week's worth of work runs the risk of conflicting with other features and can be very difficult to resolve. Early, small conflicts in an area of the system cause team members to communicate about the change they are making.[17] Committing all changes at least once a day (once per feature built) is generally considered part of the definition of Continuous Integration. In addition, performing a nightly build is generally recommended.[citation needed] These are lower bounds; the typical frequency is expected to be much higher.
-
-Every commit should be built
-The system should build commits to the current working version to verify that they integrate correctly. A common practice is to use Automated Continuous Integration, although this may be done manually. Automated Continuous Integration employs a continuous integration server or daemon to monitor the revision control system for changes, then automatically run the build process.
-
-Every bug-fix commit should come with a test case
-When fixing a bug, it is a good practice to push a test case that reproduces the bug. This avoids the fix to be reverted, and the bug to reappear, which is known as a regression.
-
-Keep the build fast
-The build needs to complete rapidly so that if there is a problem with integration, it is quickly identified.
-
-Test in a clone of the production environment
-Main article: Test environment
-Having a test environment can lead to failures in tested systems when they deploy in the production environment because the production environment may differ from the test environment in a significant way. However, building a replica of a production environment is cost-prohibitive. Instead, the test environment or a separate pre-production environment ("staging") should be built to be a scalable version of the production environment to alleviate costs while maintaining technology stack composition and nuances. Within these test environments, service virtualisation is commonly used to obtain on-demand access to dependencies (e.g., APIs, third-party applications, services, mainframes, etc.) that are beyond the team's control, still evolving, or too complex to configure in a virtual test lab.
-
-Make it easy to get the latest deliverables
-Making builds readily available to stakeholders and testers can reduce the amount of rework necessary when rebuilding a feature that doesn't meet requirements. Additionally, early testing reduces the chances that defects survive until deployment. Finding errors earlier can reduce the amount of work necessary to resolve them.
-
-All programmers should start the day by updating the project from the repository. That way, they will all stay up to date.
-
-Everyone can see the results of the latest build
-It should be easy to find out whether the build breaks and, if so, who made the relevant change and what that change was.
-
-Automate deployment
-Most CI systems allow the running of scripts after a build finishes. In most situations, it is possible to write a script to deploy the application to a live test server that everyone can look at. A further advance in this way of thinking is continuous deployment, which calls for the software to be deployed directly into production, often with additional automation to prevent defects or regressions.[18][19]
-
+* **Nightly Builds:**  In addition to frequent commits, consider running a nightly build process for comprehensive testing.
+* **Bug Fix Testing:**  When fixing bugs, include a corresponding test case that reproduces the issue to prevent regressions (reintroducing the bug in future updates).
+* **Daily Synchronization:**  Encourage all developers to begin their workday by updating the project from the repository, ensuring everyone remains on the same page.
 
 ## Benefits
-Continuous integration is intended to produce benefits such as:
+* **Early Bug Detection and Resolution:** By integrating code changes frequently and in smaller batches, CI facilitates the identification of bugs at an early stage. This translates to faster and easier fixes, as developers are dealing with smaller code segments where the root cause of the issue can be pinpointed more readily.
 
-Helps detect bugs early and facilitate fixing them due to smaller changesets
-Avoids build chaos that otherwise ensures at release time
-When a test fails or a bug is found, reverting the codebase to a bug-free baseline entails fewer lost changes
-Frequent availability of a known-good build for testing, demo, and release
-Frequent code check-in encourages modular, less complex code[20]
-Continuous automated testing may include benefits:
+* **Reduced Integration Nightmares:**  The traditional approach of integrating code changes right before a release can often lead to last-minute chaos. CI eliminates this by ensuring seamless integration throughout the development cycle. This proactive approach prevents compatibility issues from snowballing and becoming major roadblocks closer to release.
 
-Quick feedback on system-wide impact of code changes
-Software metrics such as code coverage, code complexity, and feature completeness can focus developers on developing functional, quality code, and help develop momentum in a team[citation needed]
+* **Simplified Rollbacks:** When a bug surfaces during testing, CI simplifies the rollback process. Since changes are integrated in smaller chunks, reverting to a known-good state involves discarding a smaller amount of code, minimizing lost work.
+
+* **Always-Available Builds for Various Needs:** CI ensures the frequent availability of builds that are demonstrably functional. These builds can be readily utilized for testing, demonstrations, and even releases if necessary. This constant availability promotes efficiency and flexibility throughout the development workflow.
+
+* **Encouraging Modular and Maintainable Code:** The frequent code check-ins encouraged by CI naturally foster the development of more modular and less complex code. Smaller code segments are easier to understand, test, and maintain, leading to a more robust and sustainable codebase in the long run.
+
+**Beyond the Core: The Power of Automated Testing**
+
+Continuous integration often incorporates automated testing, which unlocks additional benefits:
+
+* **Swift System-Wide Impact Feedback:** Automated testing provides developers with rapid insights into the potential system-wide ramifications of their code changes. This allows for immediate course correction if any unintended consequences are detected.
+
+* **Software Quality Metrics:**  Automated testing can generate valuable software metrics like code coverage, code complexity, and feature completeness.  These metrics provide developers with data-driven insights to focus their efforts on crafting high-quality, functional code. Additionally, these metrics can foster a sense of momentum within the development team by highlighting progress and areas for improvement.
 
 ## Costs
-Downsides of continuous integration include:
 
-Setup of a build system requires effort.[21]
-Constructing and maintaining an automated test suite requires effort although this cost may be offset by the benefits of testing
-CI may not be valuable if the project is small
-Value added depends on the quality of tests[22]
-Tracking deliveries while preserving quality can be difficult
-Builds can sit in queue which limits value.[22]
-Partial implementation for a feature could easily be pushed and therefore integration tests will fail until the feature is complete.[22]
-Safety and mission-critical development assurance (e.g., DO-178C, ISO 26262) require rigorous documentation and in-process review that are difficult to achieve using continuous integration
+* **Initial Setup Effort:**  Establishing a CI system requires upfront effort to configure a build system and design automated test suites. While this initial investment can be significant, the long-term gains in efficiency and quality often outweigh the initial costs.
+
+* **Test Suite Maintenance:**  Building and maintaining a comprehensive automated test suite requires ongoing effort. However, the benefits of improved code coverage and early bug detection can significantly offset this cost by reducing the time and resources needed for manual testing and bug fixing later in the development cycle.
+
+* **Project Size Considerations:**  The value proposition of CI might be less compelling for very small projects. The overhead of setting up and maintaining a CI pipeline may outweigh the benefits for projects with limited codebases and infrequent changes.
+
+* **Test Quality Dependence:**  CI's effectiveness hinges on the quality of the implemented tests. Poorly designed or incomplete test suites can provide a false sense of security and fail to detect critical issues.  Investing in high-quality test creation is essential to reap the full benefits of CI.
+
+* **Balancing Delivery Speed and Quality:**  Achieving a balance between rapid delivery and maintaining code quality can be challenging. Pressure to meet deadlines might incentivize developers to push partially implemented features, leading to failing integration tests.  Clear communication, development guidelines, and well-defined testing strategies can help mitigate this risk.
+
+* **Safety-Critical Considerations:**  CI can be more challenging to implement in safety-critical projects with strict development assurance requirements (e.g., DO-178C, ISO 26262). These standards often mandate rigorous documentation and in-process reviews, which can be difficult to integrate seamlessly with a CI pipeline.  Careful planning and adaptation of CI practices might be necessary to ensure compliance within these contexts.
+
+* **Build Queues and Bottlenecks:**  Large development teams or complex projects can experience delays due to build queues. Builds might wait for resources before execution, limiting the immediate feedback loop and potential benefits of CI.  Optimizing build processes, scaling infrastructure, or implementing parallel builds can help address these bottlenecks.
 
 ## CI Workflow
-Below is a pictorial representation of a CI pipeline– the workflow from developers checking in their code to its automated build, test, and final notification of the build status.
-Once the developer commits their code to a version control system like Git, it triggers the CI pipeline which fetches the changes and runs automated build and unit tests. Based on the status of the step, the server then notifies the concerned developer whether the integration of the new code to the existing code base was a success or a failure.
+1. **Code Commit:**  The journey begins when a developer commits their code changes to a version control system like Git. This commit acts as a signal to initiate the CI pipeline.
 
-This helps in finding and addressing the bugs much more quickly, makes the team more productive by freeing the developers from manual tasks, and helps teams deliver updates to their customers more frequently. It has been found that integrating the entire development cycle can reduce the developer’s time involved by ~25 – 30%.
+2. **Pipeline Trigger:**  Upon detecting a code commit, the CI server springs into action. It retrieves the newly committed code from the version control system.
 
+3. **Build Automation:**  The CI server then executes the build process. This typically involves compiling the code, ensuring it's free of syntax errors, and generating an executable program.
+
+4. **Automated Testing:**  Once the build is complete, the CI server unleashes a battery of automated tests. These tests verify the functionality of the newly introduced code and ensure it doesn't break existing features.
+
+5. **Feedback Loop:**  Based on the outcome of the build and test phases, the CI server generates a notification. This notification informs the developer (and potentially other stakeholders) whether the code integration was successful (passed all tests) or unsuccessful (failed any tests).
 
 # What is Continuous Delivery(CD)
 
