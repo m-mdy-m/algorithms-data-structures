@@ -62,7 +62,7 @@ A general term for a class of algorithms that aim to find a specific element in 
 9. [Additional Concept](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept) - (Not Necessary)
    - [Clean Code](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Clean%20Code)
       - [Book](https://github.com/jnguyen095/clean-code/blob/master/Clean.Code.A.Handbook.of.Agile.Software.Craftsmanship.pdf)
-   - > [Utils](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils) :(`It is not related to data structure and algorithm`)
+   - > [Utils](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils) :(`It is not related to data structure and algorithm`- Most of this part is my own additional learning roadmap)
       - [Version Control Systems (VCS): (Git)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/VCS)
       - [Command Line Interface (CLI)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/CLI)
       - [Continuous Integration/Continuous Delivery (CI/CD)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/CI-CD)
@@ -70,9 +70,19 @@ A general term for a class of algorithms that aim to find a specific element in 
       - [API Documentation tools](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/API-Documentation)
          - [Swagger&OpenAPI](https://github.com/m-mdy-m/openapi-playground)
       - Database (Redis,PostgreSQL)
+      - Authentication(JWT-basicAuth-TokenAuth-OAuth-CookieBased)
+      - Caching(CDN-ClintSide)
+      - WebSecurity(HTTPS-CORS-SSL/TLS-CSP-ServerSecurity-OWASPRisks)
+      - Scaling Databases(DatabaseIndexes)
+      - Architectural Patterns(MonolithicApp-Microservices-SQA)
+      - MessageBrokers(RabbitMQ||Kafka)
       - [Containerization: (Docker, Kubernetes)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/Containerization)
+      - SearchEngines(Elasticsearch)
+      - WebServers(Nginx || Apache)
+      - RealTimeData(WebSockets)
+      - GraphQl
       - Bug Tracking Systems: (Jira, Bugzilla)
-
+      - Building for Scale()
    - `Finally` - > [Challenges](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Challenges) >> challenge coding and implementing concepts
 
 **Medium:**
