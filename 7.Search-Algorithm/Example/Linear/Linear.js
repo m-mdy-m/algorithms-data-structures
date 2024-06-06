@@ -8,3 +8,5 @@ function linearSearch(array, num) {
   }
   return -1;
 }
+console.log(linearSearch(numbers, 4)); // 2
+console.log(linearSearch(numbers, 6)); // -1
