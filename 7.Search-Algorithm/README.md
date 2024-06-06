@@ -12,8 +12,6 @@ There are three main categories of search algorithms based on their mechanisms:
 
 1. **Linear Search:** Examines each record one by one until the target is found.
 2. **Binary Search:** Repeatedly divides the search space in half by targeting the center of the data structure, making it much faster than linear search for sorted data. 
-3. **Hashing:** Uses a hash function to directly map keys to their corresponding records, offering very fast lookups.
-
 > !! NOTE : it's important to clarify that this is a high-level categorization. !! 
 
 **Search algorithms are evaluated based on their computational complexity, which describes the maximum time required to find the target.** Binary search, for example, boasts a logarithmic time complexity (O(log n)), meaning the number of steps needed to find the target grows proportionally to the logarithm of the data size.
@@ -26,8 +24,6 @@ Imagine you're looking for a specific book in a library. Here's how different se
 * **Linear Search:** This is like checking each shelf in the library, one by one, until you find the book you're looking for. It works but can be slow, especially in a large library.
 
 * **Binary Search:**  This is like going to the middle section of the library first. If your book should be alphabetically before the middle section, you only search the left half. If it should be after, you only search the right half. You keep halving the remaining section until you find the book. Much faster than linear search, especially if the books are sorted alphabetically!
-
-* **Hashing:** Imagine the library assigns a unique code to each book based on its title. You could look up that code in a special index (like a hash table) that tells you exactly which shelf the book is on. This is incredibly fast for finding specific books, but requires setting up the code system beforehand.
 ## How it Work
 
 Search algorithms come in many varieties, but they all share a core principle: efficiently locating a specific element within a dataset. Here's a breakdown of the general process, considering different factors:
@@ -50,7 +46,6 @@ Most search algorithms rely on loops to iterate through the data structure. With
     * If the target element is smaller, the search continues only in the left half of the data structure (excluding the middle element).
     * If the target element is larger, the search continues only in the right half of the data structure (excluding the middle element).
     * This process of dividing the search space in half and comparing with the middle element continues until the target is found or the entire data structure is exhausted.
-* **Hashing:** This approach uses a hash function to convert the target element into a unique key. The hash function maps this key to a specific location (index) in a hash table. The algorithm directly accesses that location in the hash table to retrieve the corresponding element (if it exists).
 
 **4. Termination:**
 
