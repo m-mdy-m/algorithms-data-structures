@@ -8,7 +8,7 @@ In computer science, a search algorithm is a method for efficiently finding info
 **Choosing the right search algorithm depends on the data structure and any prior knowledge about the data itself.** Specialized data structures like search trees and hash tables can significantly improve search efficiency.
 ### Types of Search Algorithms
 
-There are three main categories of search algorithms based on their mechanisms:
+There are two main categories of search algorithms based on their mechanisms:
 
 1. **Linear Search:** Examines each record one by one until the target is found.
 2. **Binary Search:** Repeatedly divides the search space in half by targeting the center of the data structure, making it much faster than linear search for sorted data. 
