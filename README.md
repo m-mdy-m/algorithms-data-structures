@@ -70,6 +70,8 @@ A general term for a class of algorithms that aim to find a specific element in 
       - [API Documentation tools](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/API-Documentation)
          - [Swagger&OpenAPI](https://github.com/m-mdy-m/openapi-playground)
       - Database (Redis,PostgreSQL)
+         - [Redis](https://github.com/m-mdy-m/Redis-Playground)
+
       - Authentication(OAuth)
       - Scaling Databases(DatabaseIndexes)
       - Architectural Patterns(MonolithicApp-Microservices-SQA)
