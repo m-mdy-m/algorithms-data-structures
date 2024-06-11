@@ -73,7 +73,7 @@ A general term for a class of algorithms that aim to find a specific element in 
          - [Redis](https://github.com/m-mdy-m/Redis-Playground)
 
       - Authentication(OAuth)
-      - Scaling Databases(DatabaseIndexes)
+      - [Scaling Databases(DatabaseIndexes)](https://www.freecodecamp.org/news/database-indexing-at-a-glance-bb50809d48bd/)
       - Architectural Patterns(MonolithicApp-Microservices-SQA)
       - MessageBrokers(RabbitMQ||Kafka)
       - [Containerization: (Docker, Kubernetes)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/Containerization)
