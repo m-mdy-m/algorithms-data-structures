@@ -77,6 +77,7 @@ A general term for a class of algorithms that aim to find a specific element in 
       - Architectural Patterns(MonolithicApp-Microservices-SQA)
       - MessageBrokers(RabbitMQ||Kafka)
       - [Containerization: (Docker, Kubernetes)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/Containerization)
+        - [Docker&Kubernetes](https://github.com/m-mdy-m/docker-playground)
       - SearchEngines(Elasticsearch)
       - WebServers(Nginx || Apache)
       - RealTimeData(WebSockets)
@@ -87,23 +88,23 @@ A general term for a class of algorithms that aim to find a specific element in 
 
 **Medium:**
 
-10. Data Structures
+1.  Data Structures
 
-11. Big O Notation
+2.  Big O Notation
 
-12. Software Engineering Principles
+3.  Software Engineering Principles
 
-13. Additional Data Structures (e.g., Linked Lists, Stacks, Queues, Hash Tables)
+4.  Additional Data Structures (e.g., Linked Lists, Stacks, Queues, Hash Tables)
 
-14. Dynamic Programming
+5.  Dynamic Programming
 
-15. [Software Design Patterns](16.Software-Design-Patterns/)
+6.  [Software Design Patterns](16.Software-Design-Patterns/)
 
-16. Performance Analysis of Presentations and Objects
+7.  Performance Analysis of Presentations and Objects
 
-17. Real-world Case Studies
+8.  Real-world Case Studies
 
-18. Graph Algorithms (e.g., Graphs, Dijkstra's Algorithm)
+9.  Graph Algorithms (e.g., Graphs, Dijkstra's Algorithm)
 
 **Advanced:**
 
