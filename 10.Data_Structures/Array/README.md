@@ -132,3 +132,12 @@ Associative arrays provide a mechanism for array-like functionality without huge
 Balanced trees require O(log n) time for indexed access, but also permit inserting or deleting elements in O(log n) time,[13] whereas growable arrays require linear (Θ(n)) time to insert or delete elements at an arbitrary position.
 
 Linked lists allow constant time removal and insertion in the middle but take linear time for indexed access. Their memory use is typically worse than arrays, but is still linear.
+
+![](./Array_of_array_storage.svg)
+
+An Iliffe vector is an alternative to a multidimensional array structure. It uses a one-dimensional array of references to arrays of one dimension less. For two dimensions, in particular, this alternative structure would be a vector of pointers to vectors, one for each row(pointer on c or c++). Thus an element in row i and column j of an array A would be accessed by double indexing (A[i][j] in typical notation). This alternative structure allows jagged arrays, where each row may have a different size—or, in general, where the valid range of each index depends on the values of all preceding indices. It also saves one multiplication (by the column address increment) replacing it by a bit shift (to index the vector of row pointers) and one extra memory access (fetching the row address), which may be worthwhile in some architectures.
+
+### Dimension
+The dimension of an array is the number of indices needed to select an element. Thus, if the array is seen as a function on a set of possible index combinations, it is the dimension of the space of which its domain is a discrete subset. Thus a one-dimensional array is a list of data, a two-dimensional array is a rectangle of data, a three-dimensional array a block of data, etc.
+
+This should not be confused with the dimension of the set of all matrices with a given domain, that is, the number of elements in the array. For example, an array with 5 rows and 4 columns is two-dimensional, but such matrices form a 20-dimensional space. Similarly, a three-dimensional vector can be represented by a one-dimensional array of size three.
