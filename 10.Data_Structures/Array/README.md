@@ -106,3 +106,29 @@ Some array data structures do not reallocate storage, but do store a count of th
 ### Non-linear formulas
 More complicated (non-linear) formulas are occasionally used. For a compact two-dimensional triangular array, for instance, the addressing formula is a polynomial of degree 2.
 
+### Efficiency
+Both store and select take (deterministic worst case) constant time. Arrays take linear (O(n)) space in the number of elements n that they hold.
+
+In an array with element size k and on a machine with a cache line size of B bytes, iterating through an array of n elements requires the minimum of ceiling(nk/B) cache misses, because its elements occupy contiguous memory locations. This is roughly a factor of B/k better than the number of cache misses needed to access n elements at random memory locations. As a consequence, sequential iteration over an array is noticeably faster in practice than iteration over many other data structures, a property called locality of reference (this does not mean however, that using a perfect hash or trivial hash within the same (local) array, will not be even faster - and achievable in constant time). Libraries provide low-level optimized facilities for copying ranges of memory (such as memcpy) which can be used to move contiguous blocks of array elements significantly faster than can be achieved through individual element access. The speedup of such optimized routines varies by array element size, architecture, and implementation.
+
+Memory-wise, arrays are compact data structures with no per-element overhead. There may be a per-array overhead (e.g., to store index bounds) but this is language-dependent. It can also happen that elements stored in an array require less memory than the same elements stored in individual variables, because several array elements can be stored in a single word; such arrays are often called packed arrays. An extreme (but commonly used) case is the bit array, where every bit represents a single element. A single octet can thus hold up to 256 different combinations of up to 8 different conditions, in the most compact form.
+
+Array accesses with statically predictable access patterns are a major source of data parallelism.
+
+| Data Structure         | Peek (index) | Mutate (insert or delete) at ... | Excess space, average |
+|------------------------|--------------|----------------------------------|-----------------------|
+| Linked list            | Θ(n)         | Θ(1)                             | Θ(n)                  |
+| Array                  | Θ(1)         | —                                | 0                     |
+| Dynamic array          | Θ(1)         | Θ(n)                             | Θ(n)                  |
+| Balanced tree          | Θ(log n)     | Θ(log n)                         | Θ(n)                  |
+| Random-access list     | Θ(log n)     | Θ(1)                             | Θ(n)                  |
+| Hashed array tree      | Θ(1)         | Θ(n)                             | Θ(√n)                 |
+
+
+Dynamic arrays or growable arrays are similar to arrays but add the ability to insert and delete elements; adding and deleting at the end is particularly efficient. However, they reserve linear (Θ(n)) additional storage, whereas arrays do not reserve additional storage.
+
+Associative arrays provide a mechanism for array-like functionality without huge storage overheads when the index values are sparse. For example, an array that contains values only at indexes 1 and 2 billion may benefit from using such a structure. Specialized associative arrays with integer keys include Patricia tries, Judy arrays, and van Emde Boas trees.
+
+Balanced trees require O(log n) time for indexed access, but also permit inserting or deleting elements in O(log n) time,[13] whereas growable arrays require linear (Θ(n)) time to insert or delete elements at an arbitrary position.
+
+Linked lists allow constant time removal and insertion in the middle but take linear time for indexed access. Their memory use is typically worse than arrays, but is still linear.
