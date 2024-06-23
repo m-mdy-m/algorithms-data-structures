@@ -79,3 +79,21 @@ The addressing formula is completely defined by the dimension d, the base addres
 
 ### Compact layouts
 Often the coefficients are chosen so that the elements occupy a contiguous area of memory. However, that is not necessary. Even if arrays are always created with contiguous elements, some array slicing operations may create non-contiguous sub-arrays from them.
+
+There are two systematic compact layouts for a two-dimensional array. For example, consider the matrix
+
+![](./e5ce1bbaec43174abf6887a29b8f3a3612d0b1f5.svg)
+
+In the row-major order layout (adopted by C for statically declared arrays), the elements in each row are stored in consecutive positions and all of the elements of a row have a lower address than any of the elements of a consecutive row:
+
+`1	2	3	4	5	6	7	8	9
+`
+In column-major order (traditionally used by Fortran), the elements in each column are consecutive in memory and all of the elements of a column have a lower address than any of the elements of a consecutive column:
+
+`1	4	7	2	5	8	3	6	9`
+
+For arrays with three or more indices, "row major order" puts in consecutive positions any two elements whose index tuples differ only by one in the last index. "Column major order" is analogous with respect to the first index.
+
+![](./Row_and_column_major_order.svg)
+
+In systems which use processor cache or virtual memory, scanning an array is much faster if successive elements are stored in consecutive positions in memory, rather than sparsely scattered. This is known as spatial locality, which is a type of locality of reference. Many algorithms that use multidimensional arrays will scan them in a predictable order. A programmer (or a sophisticated compiler) may use this information to choose between row- or column-major layout for each array. For example, when computing the product A·B of two matrices, it would be best to have A stored in row-major order, and B in column-major order.
