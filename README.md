@@ -88,7 +88,7 @@ A general term for a class of algorithms that aim to find a specific element in 
 
 **Medium:**
 
-1.  Data Structures
+1.  [Data Structures](10.Data_Structures/)
 
 2.  Big O Notation
 
