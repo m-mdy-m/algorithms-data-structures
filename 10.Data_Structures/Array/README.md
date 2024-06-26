@@ -521,12 +521,12 @@ Here's a comparison of arrays with other common data structures:
 
 | Data Structure         | Peek (index) | Mutate (insert or delete) at ... | Excess space, average |
 |------------------------|--------------|----------------------------------|-----------------------|
-| Linked list            | \(\Theta(n)\)         | \(\Theta(1)\)                             | \(\Theta(n)\)                  |
-| Array                  | \(\Theta(1)\)         | —                                | 0                     |
-| Dynamic array          | \(\Theta(1)\)         | \(\Theta(n)\)                             | \(\Theta(n)\)                  |
-| Balanced tree          | \(\Theta(\log n)\)     | \(\Theta(\log n)\)                         | \(\Theta(n)\)                  |
-| Random-access list     | \(\Theta(\log n)\)     | \(\Theta(1)\)                             | \(\Theta(n)\)                  |
-| Hashed array tree      | \(\Theta(1)\)         | \(\Theta(n)\)                             | \(\Theta(\sqrt{n})\)                 |
+| Linked list            | O(n)         | O(1)                             | O(n)                  |
+| Array                  | O(1)         | —                                | 0                     |
+| Dynamic array          | O(1)         | O(n)                             | O(n)                  |
+| Balanced tree          | O(log n)     | O(log n)                         | O(n)                  |
+| Random-access list     | O(log n)     | O(1)                             | O(n)                  |
+| Hashed array tree      | O(1)         | O(n)                             | O(sqrt{n})                 |
 
 #### Real-World Example: Database Systems
 
@@ -540,13 +540,38 @@ Balanced trees, like B-trees, are used in databases for maintaining sorted data 
 
 ### Iliffe Vectors
 
-An Iliffe vector is an alternative to a multidimensional array structure. It uses a one-dimensional array of references to arrays of one dimension less. For two dimensions, in particular, this alternative structure would be a vector of pointers to vectors, one for each row. Thus, an element in row \(i\) and column \(j\) of an array \(A\) would be accessed by double indexing (\(A[i][j]\) in typical notation). This alternative structure allows jagged arrays, where each row may have a different size—or, in general, where the valid range of each index depends on the values of all preceding indices. It also saves one multiplication (by the column address increment), replacing it by a bit shift (to index the vector of row pointers) and one extra memory access (fetching the row address), which may be worthwhile in some architectures.
+An Iliffe vector is an alternative to the traditional multidimensional array structure. It consists of a one-dimensional array of references (or pointers) to arrays of one dimension less. For example, a two-dimensional Iliffe vector would be a vector of pointers to vectors, with each pointer corresponding to a row in the matrix. An element in row \(i\) and column \(j\) of an array \(A\) would be accessed using double indexing (\(A[i][j]\) in typical notation).
+
+This structure is particularly useful for creating jagged arrays, where each row can have a different number of elements. In general, the valid range of each index can depend on the values of all preceding indices. The Iliffe vector structure can save one multiplication (by the column address increment), replacing it with a bit shift (to index the vector of row pointers) and an additional memory access (fetching the row address). This trade-off can be beneficial on some architectures.
+
+#### Real-World Example: Spreadsheet Applications
+
+A common real-world example of Iliffe vectors is in spreadsheet applications like Microsoft Excel or Google Sheets. These applications often deal with tables that are conceptually two-dimensional, but where different rows can have different numbers of columns (i.e., jagged arrays). Each row in a spreadsheet can be thought of as an array, and the entire spreadsheet as a vector of these row arrays.
+
+When accessing a particular cell in the spreadsheet, the software first uses the row index to find the pointer to the correct row array, and then uses the column index to access the specific cell within that row. This structure allows for the flexible addition and removal of columns in individual rows without requiring the entire spreadsheet to be restructured.
+
+Another real-world example is in image processing, where Iliffe vectors can be used to represent images with varying row lengths. For instance, consider a panoramic image stitched together from multiple photos, where each row of pixels may have a different width. Using Iliffe vectors allows efficient access to pixel data while accommodating the varying row sizes.
 
 ### Dimension
 
-The dimension of an array is the number of indices needed to select an element. Thus, if the array is seen as a function on a set of possible index combinations, it is the dimension of the space of which its domain is a discrete subset. Thus, a one-dimensional array is a list of data, a two-dimensional array is a rectangle of data, a three-dimensional array a block of data, etc.
+The dimension of an array refers to the number of indices needed to select an element within the array. In this context, if the array is viewed as a function on a set of possible index combinations, the dimension corresponds to the dimension of the space from which its domain is a discrete subset. 
 
-This should not be confused with the dimension of the set of all matrices with a given domain, that is, the number of elements in the array. For example, an array with 5 rows and 4 columns is two-dimensional, but such matrices form a 20-dimensional space. Similarly, a three-dimensional vector can be represented by a one-dimensional array of size three.
+- A one-dimensional array is essentially a list of data.
+- A two-dimensional array represents a rectangle of data.
+- A three-dimensional array forms a block of data.
+- Higher-dimensional arrays continue this pattern into more complex structures.
+
+It is important not to confuse this definition with the dimension of the set of all matrices with a given domain, which refers to the number of elements in the array. For instance, an array with 5 rows and 4 columns is considered two-dimensional, but such matrices form a 20-dimensional space if we consider the number of elements. Similarly, a three-dimensional vector can be represented by a one-dimensional array of size three.
+
+#### Real-World Example: Image Processing
+
+A real-world example of multidimensional arrays can be found in image processing. An image is often represented as a two-dimensional array (or matrix) of pixels. Each pixel can be further represented as a one-dimensional array containing color values (e.g., RGB - Red, Green, Blue channels). Therefore, a color image can be viewed as a three-dimensional array where:
+- The first two dimensions correspond to the spatial coordinates (rows and columns of the image).
+- The third dimension represents the color channels.
+
+For example, a 1920x1080 resolution image with three color channels can be represented as a 3D array of size [1920][1080][3].
+
+When processing images, such as applying filters, detecting edges, or compressing data, these multidimensional arrays are essential. Efficient manipulation of these arrays using specialized libraries like OpenCV or NumPy allows for rapid and sophisticated image processing techniques. For example, converting an image to grayscale involves reducing the third dimension by averaging the color values, effectively transforming a 3D array into a 2D array.
 
 ## Example
 - [Rust](./example/Array.rs)
