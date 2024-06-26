@@ -156,3 +156,11 @@ An Iliffe vector is an alternative to a multidimensional array structure. It use
 The dimension of an array is the number of indices needed to select an element. Thus, if the array is seen as a function on a set of possible index combinations, it is the dimension of the space of which its domain is a discrete subset. Thus, a one-dimensional array is a list of data, a two-dimensional array is a rectangle of data, a three-dimensional array a block of data, etc.
 
 This should not be confused with the dimension of the set of all matrices with a given domain, that is, the number of elements in the array. For example, an array with 5 rows and 4 columns is two-dimensional, but such matrices form a 20-dimensional space. Similarly, a three-dimensional vector can be represented by a one-dimensional array of size three.
+
+## Example
+- [Rust](./example/Array.rs)
+- [Golang](./example/Array.go)
+- [Java](./example/Array2D.java)
+- [Javascript](./example/Array.js)
+- [Typescript](./example/Array.ts)
+- [Python](./example/Array.py)
