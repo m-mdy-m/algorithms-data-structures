@@ -443,8 +443,6 @@ In database management systems, arrays or similar data structures are used to ma
 
 ### Non-linear Formulas
 
-### Non-linear Formulas
-
 While arrays often use linear addressing formulas for simplicity and efficiency, there are scenarios where more complex, non-linear formulas are employed. These formulas are particularly useful for representing specialized data structures, such as triangular or other irregularly shaped arrays. 
 
 #### Compact Two-dimensional Triangular Array
