@@ -13,7 +13,7 @@ The term "array" may also refer to an array data type, a kind of data type provi
 
 The term is also used, especially in the description of algorithms, to mean associative array or "abstract array," a theoretical computer science model (an abstract data type or ADT) intended to capture the essential properties of arrays.
 
-![What is abstract array](./Abstract_Arrays_Associative_Arrays.md)
+[What is abstract array](./Abstract_Arrays_Associative_Arrays.md)
 
 ### Real-World Example
 
