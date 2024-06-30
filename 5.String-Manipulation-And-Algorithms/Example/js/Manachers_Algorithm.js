@@ -1,8 +1,6 @@
 class ManachersAlgorithm {
   constructor(text) {
-    this.text = text;
-    this.processed_text = `#${this.text.split("").join("#")}#`;
-    this.C = new Array(this.processed_text.length).fill(0);
+    this.processed_text = `#${text.split("").join("#")}#`;
     this.P = new Array(this.processed_text.length).fill(0);
     this.C_center = 0;
     this.R = 0;
@@ -31,11 +29,11 @@ class ManachersAlgorithm {
       }
     }
     const palindromes = [];
-    for (let i = 1; i < this.processed_text.length - 1; i += 2) {
+    for (let i = 1; i < this.processed_text.length - 1; i++) {
       if (this.P[i] > 0) {
         const startIndex = Math.floor((i - this.P[i]) / 2);
         const length = this.P[i];
-        palindromes.push([startIndex, length]);
+        palindromes.push({ startIndex, length });
       }
     }
     return palindromes;
@@ -48,6 +46,10 @@ const manachersValues = manachers.calculate();
 console.log("Text:", textInput);
 console.log("Manachers-function:", manachersValues);
 console.log("processed_text:", manachers.processed_text);
+manachersValues.forEach(({ startIndex, length }) => {
+  const palindrome = textInput.substr(startIndex, length);
+  console.log(`Start Index: ${startIndex}, Length: ${length}, Palindrome: ${palindrome}`);
+});
 /**
  - > output : 
 
