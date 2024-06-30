@@ -178,7 +178,7 @@ Consider a library's system for tracking which books are checked out by which pa
 
 Let's use a Python or JSON-like notation to represent this associative array:
 
-```python
+```json
 {
     "Pride and Prejudice": "Alice",
     "Wuthering Heights": "Alice",
@@ -205,7 +205,7 @@ del library["Great Expectations"]
 
 The updated associative array is now:
 
-```python
+```json
 {
     "Pride and Prejudice": "Alice",
     "Wuthering Heights": "Alice"
@@ -222,7 +222,7 @@ library["The Brothers Karamazov"] = "Pat"
 
 The associative array now reflects the new state:
 
-```python
+```json
 {
     "Pride and Prejudice": "Alice",
     "Wuthering Heights": "Alice",
