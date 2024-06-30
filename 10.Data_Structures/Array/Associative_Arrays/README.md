@@ -172,10 +172,11 @@ Let's define the terms used in the properties:
 - **Lookup** in a new empty associative array fails, indicating the absence of any keys.
 - **Remove** after an **insertion** either results in the original associative array without the key if the removed key is the same as the inserted key, or maintains the insertion while removing the specified key.
 - **Remove** in a new empty associative array has no effect, leaving the array empty.
-
 ## Example
 
-Suppose that the set of loans made by a library is represented in a data structure. Each book in a library may be checked out by one patron at a time. However, a single patron may be able to check out multiple books. Therefore, the information about which books are checked out to which patrons may be represented by an associative array, in which the books are the keys and the patrons are the values. Using notation from Python or JSON, the data structure would be:
+Consider a library's system for tracking which books are checked out by which patrons. Each book can be checked out by only one patron at a time, but a patron can check out multiple books. This can be efficiently represented using an associative array, where the keys are the book titles and the values are the patrons who have checked them out. 
+
+Let's use a Python or JSON-like notation to represent this associative array:
 
 ```python
 {
@@ -185,15 +186,65 @@ Suppose that the set of loans made by a library is represented in a data structu
 }
 ```
 
-A lookup operation on the key "Great Expectations" would return "John". If John returns his book, that would cause a deletion operation, and if Pat checks out a book, that would cause an insertion operation, leading to a different state:
+### Lookup Operation
+
+If we perform a lookup operation for the key "Great Expectations", we retrieve the value associated with it, which is "John". This means John has checked out the book "Great Expectations":
+
+```python
+patron = library["Great Expectations"]
+print(patron)  # Output: "John"
+```
+
+### Deletion Operation
+
+If John returns "Great Expectations", we need to remove this key-value pair from the associative array. The deletion operation updates the data structure to reflect that "Great Expectations" is no longer checked out by anyone:
+
+```python
+del library["Great Expectations"]
+```
+
+The updated associative array is now:
 
 ```python
 {
     "Pride and Prejudice": "Alice",
-    "The Brothers Karamazov": "Pat",
     "Wuthering Heights": "Alice"
 }
 ```
+
+### Insertion Operation
+
+If a new patron, Pat, checks out a new book, "The Brothers Karamazov", we perform an insertion operation to add this new key-value pair to the associative array:
+
+```python
+library["The Brothers Karamazov"] = "Pat"
+```
+
+The associative array now reflects the new state:
+
+```python
+{
+    "Pride and Prejudice": "Alice",
+    "Wuthering Heights": "Alice",
+    "The Brothers Karamazov": "Pat"
+}
+```
+
+### Comprehensive Explanation
+
+In this example:
+
+1. **Initial State**: The associative array initially has three books checked out:
+   - "Pride and Prejudice" and "Wuthering Heights" are checked out by Alice.
+   - "Great Expectations" is checked out by John.
+
+2. **Lookup Operation**: Performing `lookup("Great Expectations")` returns "John", indicating that John has checked out "Great Expectations".
+
+3. **Deletion Operation**: When John returns "Great Expectations", we remove this entry from the associative array using `delete("Great Expectations")`. The updated array no longer includes "Great Expectations".
+
+4. **Insertion Operation**: When Pat checks out "The Brothers Karamazov", we add this new entry to the associative array using `insert("The Brothers Karamazov", "Pat")`.
+
+By using an associative array, the library system efficiently manages the check-out status of books, allowing for quick lookups, insertions, and deletions. This method ensures that each book is accurately tracked, and patrons' interactions with the library's inventory are easily managed.
 
 ## Implementation
 
