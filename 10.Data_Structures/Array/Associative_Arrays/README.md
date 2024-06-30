@@ -247,10 +247,65 @@ In this example:
 By using an associative array, the library system efficiently manages the check-out status of books, allowing for quick lookups, insertions, and deletions. This method ensures that each book is accurately tracked, and patrons' interactions with the library's inventory are easily managed.
 
 ## Implementation
+Implementing a dictionary (associative array) can vary based on the size and characteristics of the dataset. Here are two straightforward implementation techniques: using an association list and using direct addressing.
 
-For dictionaries with very few mappings, it may make sense to implement the dictionary using an association list, which is a linked list of mappings. With this implementation, the time to perform the basic dictionary operations is linear in the total number of mappings. However, it is easy to implement and the constant factors in its running time are small.
+### Association List
 
-Another very simple implementation technique, usable when the keys are restricted to a narrow range, is direct addressing into an array: the value for a given key k is stored at the array cell A[k], or if there is no mapping for k then the cell stores a special sentinel value that indicates the lack of a mapping. This technique is simple and fast, with each dictionary operation taking constant time. However, the space requirement for this structure is the size of the entire keyspace, making it impractical unless the keyspace is small.
+An association list is a simple implementation suitable for dictionaries with a small number of mappings. Here's how it works:
+
+1. **Data Structure**: The dictionary is represented as a linked list, where each node contains a key-value pair (mapping).
+
+2. **Insertion**: To insert a new key-value pair, you add a new node with the given key and value at the beginning (or end) of the list.
+
+3. **Lookup**: To find the value associated with a key, you start at the beginning of the list and traverse each node, checking the key in each node until you find the desired key.
+
+4. **Deletion**: To remove a key-value pair, you traverse the list to find the node with the key, then update the pointers to exclude that node from the list.
+
+**Pros**:
+- Simple to implement.
+- Suitable for small dictionaries.
+
+**Cons**:
+- Lookup, insertion, and deletion operations have a linear time complexity (O(n)), where n is the number of mappings.
+- Not efficient for large dictionaries due to the linear search time.
+
+### Direct Addressing
+
+Direct addressing is a technique used when keys are restricted to a narrow range. This method uses an array to store values, where the position in the array directly corresponds to a key. Here’s how it works:
+
+1. **Data Structure**: An array is created with a size equal to the range of possible keys. Each position in the array represents a key, and the value at that position is the value associated with that key.
+
+2. **Insertion**: To insert a key-value pair, you place the value in the array position corresponding to the key.
+
+3. **Lookup**: To find the value associated with a key, you simply access the array position corresponding to the key.
+
+4. **Deletion**: To remove a key-value pair, you set the array position corresponding to the key to a special sentinel value indicating the absence of a value.
+
+**Pros**:
+- Lookup, insertion, and deletion operations have constant time complexity (O(1)).
+- Extremely fast due to direct access.
+
+**Cons**:
+- Requires a large amount of memory if the range of possible keys is large.
+- Impractical if the key space is very sparse or large because of the excessive memory usage.
+
+### Comparison
+
+- **Association List**: Best for small dictionaries where the overhead of managing a list is acceptable. It's simple and has small constant factors in its running time, but operations can become slow as the dictionary grows.
+
+- **Direct Addressing**: Best for scenarios where keys fall within a small, contiguous range, allowing for constant time operations. However, it becomes impractical if the key range is vast, as it requires a large array that could waste a lot of memory.
+
+### Example Scenario
+
+1. **Association List**:
+   - **Insertion**: Add a node with the key-value pair to the start of the linked list.
+   - **Lookup**: Traverse the list from the beginning, checking each node’s key until the target key is found.
+   - **Deletion**: Traverse the list to find the node with the target key, then update the list pointers to remove that node.
+
+2. **Direct Addressing**:
+   - **Insertion**: Store the value at the array index corresponding to the key.
+   - **Lookup**: Directly access the array at the index of the key to retrieve the value.
+   - **Deletion**: Set the array element at the index of the key to a sentinel value indicating no value.
 
 ### Hash Table Implementations
 
@@ -260,6 +315,47 @@ Hash tables must be able to handle collisions: the mapping by the hash function 
 
 Open addressing has a lower cache miss ratio than separate chaining when the table is mostly empty. However, as the table becomes filled with more elements, open addressing's performance degrades exponentially. Additionally, separate chaining uses less memory in most cases, unless the entries are very small (less than four times the size of a pointer).
 
+**Core Idea:**
+
+Imagine a large filing cabinet with numerous drawers labeled with numbers (buckets). A hash function acts like a super-fast sorting mechanism. It takes a key (like a person's name) and converts it into a unique number (drawer number) within a predefined range. This number is used to directly access the corresponding bucket in the cabinet (hash table array). Ideally, each key maps to a unique bucket, allowing for quick retrieval of its associated value stored in that bucket.
+
+**Implementation Steps:**
+
+1. **Define the Hash Table:**
+    - An array to store key-value pairs (buckets).
+    - A hash function that takes a key and returns a bucket index within the array's range.
+
+2. **Adding a Key-Value Pair:**
+    - Calculate the hash index for the key using the hash function.
+    - Check the bucket at that index:
+        - If empty, store the key-value pair directly in that bucket.
+    - **Collision Resolution:** If the bucket is already occupied (collision!), a collision resolution strategy comes into play (explained later).
+
+3. **Finding a Value:**
+    - Calculate the hash index for the key.
+    - Look at the bucket at that index.
+        - If it contains the exact key-value pair, return the value.
+    - **Collision Resolution:** If there's a collision, use the chosen strategy to find the key-value pair within the bucket or nearby locations (explained later).
+
+4. **Removing a Key-Value Pair:**
+    - Calculate the hash index for the key.
+    - Find the key-value pair using the collision resolution strategy (similar to finding).
+    - Once located, remove the pair from the bucket.
+
+**Collision Resolution Techniques:**
+
+- **Separate Chaining:** Each bucket stores a linked list or another data structure to hold all key-value pairs that hashed to the same index. This offers flexibility but can increase memory usage.
+
+- **Open Addressing:** If the bucket is full, the table probes for the next empty slot in the array following a predefined pattern (linear probing, quadratic probing, etc.). This is faster in terms of space but might lead to clustering of elements and slower access as the table fills up.
+
+**Choosing the Right Method:**
+
+Separate chaining is generally preferred for its memory efficiency and simpler implementation, especially for scenarios with a high fill factor (many elements in the table). Open addressing might be considered if memory is a tight constraint and the fill factor is expected to be low.
+
+**Hash Function Design:**
+
+A good hash function should distribute keys uniformly across the buckets to minimize collisions. Common techniques involve bitwise operations and mathematical manipulations on the key's data.
+
 ### Tree Implementations
 
 Self-balancing binary search trees are another common approach to implementing an associative array, such as an AVL tree or a red–black tree.
@@ -267,6 +363,40 @@ Self-balancing binary search trees are another common approach to implementing a
 Compared to hash tables, these structures have both strengths and weaknesses. The worst-case performance of self-balancing binary search trees is significantly better than that of a hash table, with a time complexity in big O notation of O(log n). This is in contrast to hash tables, whose worst-case performance involves all elements sharing a single bucket, resulting in O(n) time complexity. In addition, and like all binary search trees, self-balancing binary search trees keep their elements in order. Thus, traversing its elements follows a least-to-greatest pattern, whereas traversing a hash table can result in elements being in seemingly random order. Because they are in order, tree-based maps can also satisfy range queries (find all values between two bounds) whereas a hashmap can only find exact values. However, hash tables have a much better average-case time complexity than self-balancing binary search trees of O(1), and their worst-case performance is highly unlikely when a good hash function is used.
 
 A self-balancing binary search tree can be used to implement the buckets for a hash table that uses separate chaining. This allows for average-case constant lookup but assures a worst-case performance of O(log n). However, this introduces extra complexity into the implementation and may cause even worse performance for smaller hash tables, where the time spent inserting into and balancing the tree is greater than the time needed to perform a linear search on all elements of a linked list or similar data structure.
+
+*Strengths of Trees:**
+
+- **Worst-Case Efficiency:** Tree operations like finding, adding, or removing elements have a worst-case time complexity of O(log n), where n is the number of elements. This is significantly better than the worst-case O(n) for hash tables that suffer from collisions.
+
+- **Ordered Elements:** Unlike hash tables, trees inherently keep elements in a specific order (usually ascending or descending). This allows for efficient retrieval of elements within a specific range (range queries) – a feature not readily available with hash tables.
+
+**Implementation (Conceptual):**
+
+1. **Structure:** Imagine a binary tree where each node holds a key-value pair.
+2. **Ordering:** Keys are compared during insertion to maintain the order property (e.g., left subtree contains keys less than the current node's key, right subtree contains greater keys).
+3. **Self-Balancing:** Specific balancing rules (AVL or red-black) ensure the tree remains roughly balanced, meaning the height (number of levels) doesn't grow excessively with each insertion. This is crucial for maintaining efficient operations.
+
+**Comparison with Hash Tables:**
+
+- **Average Case:** Hash tables generally excel in average-case performance, with O(1) time complexity for most operations due to their direct bucket access using a hash function. This can be faster than tree operations, especially for smaller dictionaries.
+
+- **Worst Case:** However, hash tables can suffer from collisions where multiple keys map to the same bucket, leading to a worst-case O(n) lookup time if the collision resolution strategy involves iterating through all elements in the bucket. Trees guarantee a worst-case of O(log n) even with unbalanced data.
+
+**Hybrid Approach:**
+
+- **Separate Chaining with Trees:** A self-balancing tree can be used as the underlying data structure for each bucket in a hash table that employs separate chaining. This approach offers the average-case efficiency of O(1) from hash tables with the worst-case guarantee of O(log n) from trees.
+
+**Trade-offs:**
+
+- **Complexity:** This hybrid approach adds complexity to the implementation compared to a basic hash table with linked lists.
+- **Overhead for Smaller Tables:** For small dictionaries, the overhead of maintaining the tree's balance in the hybrid approach might outweigh the benefits. A simple linked list within each bucket might be more efficient.
+
+**Choosing the Right Approach:**
+
+The choice between trees and hash tables depends on your priorities:
+
+- If **worst-case performance** is critical and you can tolerate a slightly slower average-case lookup, a self-balancing tree might be ideal.
+- If **average-case speed** is paramount, and the worst-case scenario is less concerning with a good hash function, a hash table is generally preferred.
 
 ### Other Trees
 
@@ -286,12 +416,42 @@ Associative arrays may also be stored in unbalanced binary search trees or in da
 
 ## Ordered Dictionary
 
-The basic definition of a dictionary does not mandate an order. To guarantee a fixed order of enumeration, ordered versions of the associative array are often used. There are two senses of an ordered dictionary:
+While dictionaries typically focus on efficient key-value retrieval, some use cases require a specific order for iterating through the elements. This is where ordered dictionaries come in. There are two main interpretations of "ordered":
 
-1. The order of enumeration is always deterministic for a given set of keys by sorting. This is the case for tree-based implementations, one representative being the `<map>` container of C++.
-2. The order of enumeration is key-independent and is instead based on the order of insertion. This is the case for the "ordered dictionary" in .NET Framework, the LinkedHashMap of Java and Python.
+**1. Order based on Sorting Keys:**
 
-The latter is more common. Such ordered dictionaries can be implemented using an association list, by overlaying a doubly linked list on top of a normal dictionary, or by moving the actual data out of the sparse (unordered) array and into a dense insertion-ordered one.
+- In this approach, the order of elements during iteration is determined by sorting the keys within the dictionary. This is similar to how elements in a tree-based implementation (e.g., C++ `<map>`) are presented.
+- Whenever the dictionary is modified (adding, removing, or updating elements), the keys are potentially re-sorted to maintain the desired order.
+
+**2. Order based on Insertion:**
+
+- This is the more prevalent approach. The order of elements reflects the sequence in which they were added to the dictionary. This means the first element inserted is retrieved first during iteration, followed by the second, and so on.
+- This insertion order is preserved even if elements are subsequently updated or removed.
+
+**Implementation Techniques:**
+
+Here are three common ways to implement ordered dictionaries:
+
+1. **Association List:**
+
+- This is a simple approach for small dictionaries. It uses a linked list where each node holds a key-value pair. New elements are added at the end, maintaining insertion order.
+
+2. **Doubly Linked List on Top of a Regular Dictionary:**
+
+- This technique combines a standard dictionary (like a hash table) for efficient key-based lookups with a doubly linked list. The linked list connects all the key-value pairs in the order they were inserted, regardless of their position in the underlying dictionary.
+
+3. **Dense Insertion-Ordered Array:**
+
+- This approach abandons the sparse (potentially unevenly filled) array structure of a traditional hash table. Instead, it uses a dense array where elements are stored consecutively based on insertion order. This offers efficient iteration but might require resizing the array as elements are added.
+
+**Choosing the Right Approach:**
+
+The best implementation for an ordered dictionary depends on factors like:
+
+- **Expected size:** Association lists are suitable for small dictionaries.
+- **Access patterns:** If frequent key-based lookups are needed, a hybrid approach with a dictionary and linked list might be beneficial.
+- **Memory usage:** Dense arrays can be less memory-efficient compared to other methods, especially for frequently updated dictionaries.
+
 
 ## Language Support
 
@@ -308,7 +468,6 @@ Many programs using associative arrays will need to store that data in a more pe
 For programs that use very large data sets, this sort of individual file storage is not appropriate, and a database management system (DB) is required. Some DB systems natively store associative arrays by serializing the data and then storing that serialized data and the key. Individual arrays can then be loaded or saved from the database using the key to refer to them. These key–value stores have been used for many years and have a history as long as that of the more common relational database (RDBs), but a lack of standardization, among other reasons, limited their use to certain niche roles. RDBs were used for these roles in most cases, although saving objects to a RDB can be complicated, a problem known as object-relational impedance mismatch.
 
 After approximately 2010, the need for high-performance databases suitable for cloud computing and more closely matching the internal structure of the programs using them led to a renaissance in the key–value store market. These systems can store and retrieve associative arrays in a native fashion, which can greatly improve performance in common web-related workflows.
-
 
 ## History and Evolution of Associative Arrays
 
