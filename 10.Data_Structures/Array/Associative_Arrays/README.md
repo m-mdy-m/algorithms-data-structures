@@ -93,6 +93,7 @@ Many programming languages provide built-in support for associative arrays, ofte
 - **C#**: `Dictionary` and `SortedDictionary`
 - **Ruby**: `Hash`
 - **PHP**: Associative arrays are a core part of the language's array type
+- **Rust** : `HashMap`
 
 ### Performance Considerations
 
@@ -116,14 +117,61 @@ Many programming languages provide built-in support for associative arrays, ofte
 
 ## Properties
 
-The operations of the associative array should satisfy various properties:
+The operations of the associative array should satisfy various properties to ensure consistent and predictable behavior. These properties define how insertion, lookup, and removal operations interact with each other.
 
 - `lookup(k, insert(j, v, D)) = if k == j then v else lookup(k, D)`
 - `lookup(k, new()) = fail`, where fail is an exception or default value
 - `remove(k, insert(j, v, D)) = if k == j then remove(k, D) else insert(j, v, remove(k, D))`
 - `remove(k, new()) = new()`
 
-where k and j are keys, v is a value, D is an associative array, and new() creates a new, empty associative array.
+### Definitions
+
+Let's define the terms used in the properties:
+
+- **k** and **j**: Keys in the associative array.
+- **v**: Value associated with a key.
+- **D**: An associative array.
+- **new()**: A function that creates a new, empty associative array.
+- **lookup(k, D)**: A function that retrieves the value associated with the key **k** in the associative array **D**. If the key **k** is not present in **D**, it returns an exception or a default value.
+- **insert(j, v, D)**: A function that inserts the key-value pair (**j**, **v**) into the associative array **D**. If **j** already exists in **D**, it updates the value associated with **j** to **v**.
+- **remove(k, D)**: A function that removes the key **k** and its associated value from the associative array **D**. If **k** is not present in **D**, the operation has no effect.
+
+### Properties
+
+1. **Lookup After Insertion**
+
+    `lookup(k, insert(j, v, D)) = if k == j then v else lookup(k, D)`
+
+    This property states that if you look up a key **k** after inserting a key-value pair (**j**, **v**) into the associative array **D**, the result depends on whether **k** is equal to **j**:
+    - If **k** equals **j**, the lookup should return the value **v** that was just inserted.
+    - If **k** does not equal **j**, the lookup should return the value associated with **k** in the original associative array **D**.
+
+2. **Lookup in a New Associative Array**
+
+    `lookup(k, new()) = fail`
+
+    This property states that if you look up any key **k** in a newly created empty associative array, the operation should fail. The failure can be represented as an exception or a default value, indicating that the key **k** is not present in the associative array.
+
+3. **Remove After Insertion**
+
+    `remove(k, insert(j, v, D)) = if k == j then remove(k, D) else insert(j, v, remove(k, D))`
+
+    This property describes the effect of removing a key **k** after inserting a key-value pair (**j**, **v**) into the associative array **D**:
+    - If **k** equals **j**, the removal operation should result in the associative array **D** without the key **k**.
+    - If **k** does not equal **j**, the removal operation should first remove the key **k** from the original associative array **D** and then insert the key-value pair (**j**, **v**). This ensures that the inserted pair (**j**, **v**) remains in the associative array, except for the key **k**.
+
+4. **Remove in a New Associative Array**
+
+    `remove(k, new()) = new()`
+
+    This property states that removing any key **k** from a newly created empty associative array should result in another new empty associative array. Since the associative array is already empty, the removal operation has no effect.
+
+### Summary
+
+- **Lookup** after an **insertion** either returns the newly inserted value or the value from the original associative array.
+- **Lookup** in a new empty associative array fails, indicating the absence of any keys.
+- **Remove** after an **insertion** either results in the original associative array without the key if the removed key is the same as the inserted key, or maintains the insertion while removing the specified key.
+- **Remove** in a new empty associative array has no effect, leaving the array empty.
 
 ## Example
 
