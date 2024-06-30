@@ -12,6 +12,8 @@ Associative arrays have many applications, including such fundamental programmin
 
 The name does not come from the associative property known in mathematics. Rather, it arises from the association of values with keys. It is not to be confused with associative processors.
 
+> Summary : The dictionary problem refers to the challenge of designing and implementing efficient data structures that support the functionality of associative arrays, which allow for the storage, retrieval, and management of key-value pairs. The goal is to develop data structures that can efficiently handle a set of operations such as insertion, deletion, and lookup.
+
 ## Operations
 
 In an associative array, the association between a key and a value is often known as a "mapping"; the same word may also be used to refer to the process of creating a new association.
