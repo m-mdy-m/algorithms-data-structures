@@ -93,7 +93,7 @@ Many programming languages provide built-in support for associative arrays, ofte
 - **C#**: `Dictionary` and `SortedDictionary`
 - **Ruby**: `Hash`
 - **PHP**: Associative arrays are a core part of the language's array type
-- **Rust** : `HashMap`
+- **Rust** : `HashMap` and `BTreeMap`
 
 ### Performance Considerations
 
@@ -364,7 +364,7 @@ Compared to hash tables, these structures have both strengths and weaknesses. Th
 
 A self-balancing binary search tree can be used to implement the buckets for a hash table that uses separate chaining. This allows for average-case constant lookup but assures a worst-case performance of O(log n). However, this introduces extra complexity into the implementation and may cause even worse performance for smaller hash tables, where the time spent inserting into and balancing the tree is greater than the time needed to perform a linear search on all elements of a linked list or similar data structure.
 
-*Strengths of Trees:**
+**Strengths of Trees:**
 
 - **Worst-Case Efficiency:** Tree operations like finding, adding, or removing elements have a worst-case time complexity of O(log n), where n is the number of elements. This is significantly better than the worst-case O(n) for hash tables that suffer from collisions.
 
