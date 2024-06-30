@@ -8,8 +8,8 @@ class ManachersAlgorithm {
   constructor(text: string) {
     this.text = text;
     this.processed_text = `#${this.text.split("").join("#")}#`;
-    this.C = new Array(2 * this.processed_text.length + 1).fill(0);
-    this.P = new Array(2 * this.processed_text.length + 1).fill(0);
+    this.C = new Array(this.processed_text.length).fill(0);
+    this.P = new Array(this.processed_text.length).fill(0);
     this.C_center = 0;
     this.R = 0;
   }
@@ -39,7 +39,7 @@ class ManachersAlgorithm {
     const palindromes: number[][] = [];
     for (let i = 1; i < this.processed_text.length - 1; i += 2) {
       if (this.P[i] > 0) {
-        const startIndex = (i - this.P[i]) / 2;
+        const startIndex = Math.floor((i - this.P[i]) / 2);
         const length = this.P[i];
         palindromes.push([startIndex, length]);
       }
