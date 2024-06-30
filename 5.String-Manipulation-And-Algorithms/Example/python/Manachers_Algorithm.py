@@ -1,8 +1,6 @@
 class Manachers_Algorithm:
     def __init__(self, text):
-        self.text = text
-        self.processed_text = "#" + "#".join(self.text) + "#"
-        self.C = [0] * (2 * len(self.processed_text) + 1)  
+        self.processed_text = "#" + "#".join(text) + "#"
         self.P = [0] * (2 * len(self.processed_text) + 1) 
         self.C_center = 0
         self.R = 0
