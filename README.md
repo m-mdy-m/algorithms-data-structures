@@ -282,6 +282,85 @@ A general term for a class of algorithms that aim to find a specific element in 
 - Maximum Bipartite Matching
 - Circulation with Demands
 
+### 10. Low-Level Programming Concepts
+
+#### Binary and Hexadecimal Numbers
+- **Binary Numbers**
+  - Representation of Data
+  - Binary Arithmetic
+  - Bitwise Operations (AND, OR, XOR, NOT, Shifts)
+- **Hexadecimal Numbers**
+  - Conversion between Binary and Hexadecimal
+  - Uses in Memory Addressing and Debugging
+
+#### Integer Overflow and Underflow
+- **Concepts**
+  - Definition and Causes
+  - Detection and Handling
+- **Examples**
+  - Integer Overflow in Different Programming Languages (C/C++, Java, Python)
+  - Real-world Cases of Integer Overflow Exploits
+
+#### Endianness
+- **Big Endian vs. Little Endian**
+  - Definitions and Differences
+  - How Endianness Affects Data Storage and Transmission
+- **Endianness in Systems**
+  - Determining Endianness Programmatically
+  - Handling Endianness in Data Exchange
+
+#### Buffer and Buffer Overflows
+- **Buffers**
+  - Definition and Usage in Memory Management
+  - Types of Buffers (Static vs. Dynamic)
+- **Buffer Overflow**
+  - Definition and Causes
+  - Stack-based vs. Heap-based Buffer Overflows
+- **Buffer Overflow Exploits**
+  - Common Vulnerabilities and Exploit Techniques
+  - Mitigation Strategies (Bounds Checking, Safe Libraries, ASLR, DEP)
+
+#### Memory Management
+- **Memory Allocation**
+  - Static vs. Dynamic Allocation
+  - Stack vs. Heap Memory
+- **Garbage Collection**
+  - Concepts and Mechanisms
+  - Garbage Collection Algorithms (Mark and Sweep, Reference Counting, Generational GC)
+
+#### Pointers and References
+- **Pointers in C/C++**
+  - Pointer Arithmetic
+  - Null Pointers and Dangling Pointers
+- **Smart Pointers**
+  - Unique Pointers, Shared Pointers, and Weak Pointers (C++11 and beyond)
+- **References in Other Languages**
+  - References in Java, Python, and Other High-Level Languages
+
+#### Assembly Language Basics
+- **Introduction to Assembly Language**
+  - Basic Syntax and Structure
+  - Registers, Instructions, and Addressing Modes
+- **Writing and Understanding Simple Programs**
+  - Hello World in Assembly
+  - Basic Arithmetic Operations
+
+#### System Calls and Interrupts
+- **System Calls**
+  - Definition and Examples
+  - How System Calls Work in Different Operating Systems (Unix/Linux, Windows)
+- **Interrupts**
+  - Hardware vs. Software Interrupts
+  - Interrupt Handling and Interrupt Service Routines (ISRs)
+
+#### Debugging and Profiling
+- **Debugging Tools**
+  - GDB, LLDB for C/C++
+  - PDB for Python
+- **Profiling Tools**
+  - CPU Profilers (gprof, Valgrind, perf)
+  - Memory Profilers (Massif, Valgrind)
+
 ## Advanced Level
 
 ### 1. Performance Analysis of Presentations and Objects
