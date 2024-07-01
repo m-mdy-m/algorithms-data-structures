@@ -355,6 +355,10 @@ A general term for a class of algorithms that aim to find a specific element in 
   - **Borrowing and Lifetimes**: 
     - **Borrowing**: Allows you to reference data without taking ownership. Mutable and immutable borrowing are supported.
     - **Lifetimes**: Specify how long references are valid to ensure they don’t outlive the data they point to.
+- **Ownership and Concurrency**
+  - **Concurrency Model**:
+    - Ownership rules prevent data races at compile time.
+    - Guarantees thread safety without locks or atomic operations in most cases.
 - **Garbage Collection**
   - Concepts and Mechanisms
     - **Automatic Memory Management**: Garbage collection automatically reclaims memory occupied by objects that are no longer in use.
