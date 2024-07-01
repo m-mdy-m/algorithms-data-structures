@@ -175,7 +175,6 @@ A general term for a class of algorithms that aim to find a specific element in 
 - Graph Representation (Adjacency List, Adjacency Matrix)
 - Graph Traversal (Depth-First Search, Breadth-First Search)
 
-
 ### 5. Dynamic Programming
 
 #### Memoization vs. Tabulation
