@@ -120,7 +120,10 @@ A general term for a class of algorithms that aim to find a specific element in 
 - **Collision Resolution Techniques**
   - Chaining
   - Open Addressing (Linear Probing, Quadratic Probing, Double Hashing)
-
+- **Advanced Hash Functions**
+  - Universal Hashing
+  - Perfect Hashing
+  
 #### Trees
 - **Binary Trees**
   - Properties, Traversals (Inorder, Preorder, Postorder)
@@ -133,6 +136,9 @@ A general term for a class of algorithms that aim to find a specific element in 
 - **Heaps**
   - Min-Heap, Max-Heap
   - Heapify, Heapsort, Priority Queue Implementation
+- **Trie Variants**
+  - Radix Trees
+  - Suffix Arrays
 
 ### 2. Big O Notation
 
@@ -144,6 +150,11 @@ A general term for a class of algorithms that aim to find a specific element in 
 #### Space Complexity
 - Measuring Space Complexity
 - Trade-offs with Time Complexity
+
+#### Advanced Complexity Analysis
+- Recurrence Relations
+- Master Theorem
+- Iterative Substitution
 
 ### 3. Software Engineering Principles
 
@@ -161,8 +172,15 @@ A general term for a class of algorithms that aim to find a specific element in 
 - Design by Contract
 - Code Refactoring Techniques
 
+#### Code Quality
+- Static Code Analysis
+- Code Review Best Practices
+
 ### 4. Additional Data Structures
 
+#### Bloom Filters
+- Space-Efficient Probabilistic Data Structures
+- 
 #### Advanced Linked Lists
 - Skip Lists
 
@@ -176,6 +194,11 @@ A general term for a class of algorithms that aim to find a specific element in 
 - Graph Traversal (Depth-First Search, Breadth-First Search)
 
 ### 5. Dynamic Programming
+
+#### Advanced Problems
+- Edit Distance
+- Traveling Salesman Problem (TSP)
+- Subset Sum Problem
 
 #### Memoization vs. Tabulation
 - Top-Down Approach (Memoization)
@@ -218,6 +241,11 @@ A general term for a class of algorithms that aim to find a specific element in 
 
 ### 7. Performance Analysis
 
+#### Profiling Tools
+- GProf, Valgrind (for C/C++)
+- Py-Spy, cProfile (for Python)
+- JProfiler, VisualVM (for Java)
+
 #### Benchmarking
 - Measuring Performance
 - Comparing Algorithms
@@ -233,6 +261,8 @@ A general term for a class of algorithms that aim to find a specific element in 
 ### 8. Real-world Case Studies
 - Analysis of Successful Projects
 - Post-mortem Analysis of Failed Projects
+- Continuous Integration/Continuous Deployment (CI/CD) Pipelines
+- Scalable System Design (Case Studies like Twitter, Netflix)
 
 ### 9. Graph Algorithms
 
@@ -248,6 +278,10 @@ A general term for a class of algorithms that aim to find a specific element in 
 - Ford-Fulkerson Algorithm
 - Edmonds-Karp Algorithm
 
+#### Advanced Network Flow
+- Maximum Bipartite Matching
+- Circulation with Demands
+
 ## Advanced Level
 
 ### 1. Performance Analysis of Presentations and Objects
@@ -259,8 +293,14 @@ A general term for a class of algorithms that aim to find a specific element in 
 #### Memory Management
 - Manual Memory Management
 - Garbage Collection Algorithms (Reference Counting, Mark-and-Sweep, Generational GC)
+- Memory Pools
+- Slab Allocation
 
 ### 2. Advanced Data Structures
+
+#### Persistent Data Structures
+- Versioned Trees
+- Copy-on-Write
 
 #### Balanced Trees
 - Splay Trees
@@ -306,6 +346,13 @@ A general term for a class of algorithms that aim to find a specific element in 
 - Parallel Merge Sort
 - Parallel Quick Sort
 
+#### Synchronization Primitives
+- Mutexes, Locks, Semaphores, Barriers
+- 
+#### Concurrent Data Structures
+- Lock-Free and Wait-Free Algorithms
+- Concurrent Queues and Stacks
+
 ### 5. Additional Topics
 
 #### Advanced Graph Algorithms
@@ -321,6 +368,11 @@ A general term for a class of algorithms that aim to find a specific element in 
 - Quad Trees
 - KD-Trees
 - R-Trees
+
+#### Computational Geometry
+- Convex Hull Algorithms (Graham Scan, Jarvis March)
+- Voronoi Diagrams
+- Delaunay Triangulation
 
 ### 6. Problem Solving Approach
 
@@ -340,6 +392,10 @@ A general term for a class of algorithms that aim to find a specific element in 
 - Upper and Lower Bounds
 - Best-First Search
 
+#### Advanced Backtracking
+- N-Queens Problem
+- Sudoku Solver
+
 ### 7. Optimization Algorithms
 
 #### Linear Programming
@@ -355,6 +411,10 @@ A general term for a class of algorithms that aim to find a specific element in 
 - Genetic Algorithms
 - Particle Swarm Optimization
 
+#### Advanced Metaheuristics
+- Ant Colony Optimization
+- Tabu Search
+
 ### 8. Advanced Software Design Patterns
 
 #### Concurrency Patterns
@@ -366,7 +426,11 @@ A general term for a class of algorithms that aim to find a specific element in 
 - Microservices
 - Serverless Architecture
 - Event-Driven Architecture
-
+  
+#### Event-Driven Architecture
+- Event Sourcing
+- CQRS (Command Query Responsibility Segregation)
+  
 ### 9. Quantum Computing Concepts
 
 #### Quantum Algorithms
@@ -386,7 +450,11 @@ A general term for a class of algorithms that aim to find a specific element in 
 #### Distributed Algorithms
 - Consensus Algorithms (Paxos, Raft)
 - MapReduce
-
+- 
+#### Advanced Parallel Algorithms
+- Parallel Prefix Sum (Scan)
+- Parallel Graph Algorithms
+  
 ### 11. Advanced Graph Algorithms
 
 #### Advanced Spanning Trees and Network Flow
@@ -400,6 +468,10 @@ A general term for a class of algorithms that aim to find a specific element in 
 #### Graph Matching Algorithms
 - Bipartite Matching
 - Maximum Matching (Hopcroft-Karp Algorithm)
+
+#### Graph Partitioning
+- Kernighan-Lin Algorithm
+- Spectral Clustering
 
 ### 12. Machine Learning Basics
 
@@ -418,6 +490,14 @@ A general term for a class of algorithms that aim to find a specific element in 
 - Convolutional Neural Networks (CNNs)
 - Recurrent Neural Networks (RNNs)
 - Generative Adversarial Networks (GANs)
+
+#### Feature Engineering
+- Feature Selection
+- Dimensionality Reduction (t-SNE, PCA)
+
+#### Model Evaluation
+- Cross-Validation Techniques
+- Hyperparameter Tuning (Grid Search, Random Search)
 
 ## More Advanced Level
 
@@ -438,6 +518,10 @@ A general term for a class of algorithms that aim to find a specific element in 
 - STRIPS
 - Temporal Planning
 
+#### Advanced Search Algorithms
+- IDA* (Iterative Deepening A*)
+- Monte Carlo Tree Search (MCTS)
+
 ### 2. Parallel Computing Models
 
 #### SIMD, MIMD Architectures
@@ -448,6 +532,10 @@ A general term for a class of algorithms that aim to find a specific element in 
 - Message Passing Interface (MPI)
 - OpenMP
 - CUDA for GPU Programming
+
+#### Heterogeneous Computing
+- OpenCL
+- CUDA Streams
 
 ### 3. Distributed Systems and Algorithms
 
@@ -462,6 +550,10 @@ A general term for a class of algorithms that aim to find a specific element in 
 #### Distributed Consensus
 - Byzantine Fault Tolerance
 - Raft, Paxos Algorithms
+
+#### Advanced Distributed Systems
+- Consistent Hashing
+- Distributed Databases (CAP Theorem Applications)
 
 ### 4. Machine Learning Algorithms and Techniques
 
@@ -478,6 +570,10 @@ A general term for a class of algorithms that aim to find a specific element in 
 - Policy Gradient Methods
 - Deep Q-Networks (DQN)
 
+#### Deep Learning
+- Transfer Learning
+- Attention Mechanisms (Transformers)
+
 ### 5. Natural Language Processing (NLP) Algorithms
 
 #### Text Processing
@@ -490,20 +586,30 @@ A general term for a class of algorithms that aim to find a specific element in 
 - Long Short-Term Memory (LSTM)
 - Transformers (BERT, GPT)
 
+#### Advanced NLP Techniques
+- Named Entity Recognition (NER)
+- Machine Translation (Seq2Seq Models)
+
 ### 6. Evolutionary Algorithms and Genetic Programming
 
 #### Genetic Algorithms
 - Selection, Crossover, Mutation
 - Fitness Functions
 
+#### Hybrid Approaches
+- Memetic Algorithms
+- Genetic Algorithm + Simulated Annealing
+
 #### Evolution Strategies
-
-
 - Covariance Matrix Adaptation (CMA-ES)
 
 #### Genetic Programming
 - Tree-Based Representations
 - Evolving Programs
+
+#### Advanced Topics
+- Probabilistic Complexity Classes (BPP, RP, ZPP)
+- Interactive Proof Systems
 
 ### 7. Computational Complexity Theory
 
@@ -537,6 +643,10 @@ A general term for a class of algorithms that aim to find a specific element in 
 #### Quantum Cryptography
 - Quantum Key Distribution (QKD)
 - Post-Quantum Cryptography
+
+#### Advanced Cryptographic Protocols
+- Zero-Knowledge Proofs
+- Homomorphic Encryption
 
 ## Learning Resources
 > Sites with ⭐ represent the most used
