@@ -267,20 +267,42 @@ A general term for a class of algorithms that aim to find a specific element in 
 ### 9. Graph Algorithms
 
 #### Shortest Path Algorithms
-- Dijkstra's Algorithm
-- Bellman-Ford Algorithm
+- **Dijkstra's Algorithm**
+  - Finds the shortest path from a single source to all other nodes in a graph with non-negative weights.
+  - Utilizes a priority queue for efficiency.
+- **Bellman-Ford Algorithm**
+  - Computes shortest paths from a single source to all vertices in a graph, handling negative weights.
+  - Can detect negative weight cycles.
 
 #### Minimum Spanning Tree Algorithms
-- Kruskal's Algorithm
-- Prim's Algorithm
+- **Kruskal's Algorithm**
+  - Finds a minimum spanning tree for a connected weighted graph.
+  - Sorts all edges in the graph and adds them one by one to the tree, avoiding cycles.
+- **Prim's Algorithm**
+  - Builds the minimum spanning tree by starting from an arbitrary vertex and expanding it by adding the cheapest edge that connects a vertex in the tree to a vertex outside the tree.
 
 #### Network Flow Algorithms
-- Ford-Fulkerson Algorithm
-- Edmonds-Karp Algorithm
+- **Ford-Fulkerson Algorithm**
+  - Computes the maximum flow in a flow network.
+  - Uses augmenting paths and capacity constraints.
+- **Edmonds-Karp Algorithm**
+  - An implementation of the Ford-Fulkerson method using BFS to find augmenting paths, ensuring polynomial time complexity.
 
 #### Advanced Network Flow
-- Maximum Bipartite Matching
-- Circulation with Demands
+- **Maximum Bipartite Matching**
+  - Finds the largest matching in a bipartite graph.
+  - Can be solved using network flow algorithms.
+- **Circulation with Demands**
+  - Generalizes network flow problems by introducing demands and supplies at vertices.
+  - Ensures flow conservation and meets vertex demands.
+
+#### Directed Acyclic Graphs (DAG)
+- **Topological Sorting**
+  - Linear ordering of vertices such that for every directed edge `uv`, vertex `u` comes before `v`.
+  - Useful in scheduling tasks, finding dependencies.
+- **Longest Path in DAG**
+  - Unlike general graphs, the longest path in a DAG can be found using dynamic programming or topological sort.
+  - Applications in project scheduling and other planning problems.
 
 ### 10. Low-Level Programming Concepts
 
@@ -323,10 +345,25 @@ A general term for a class of algorithms that aim to find a specific element in 
 #### Memory Management
 - **Memory Allocation**
   - Static vs. Dynamic Allocation
+    - **Static Allocation**: Memory allocated at compile time. Once allocated, it cannot be freed until the program terminates. Used for global and static variables.
+    - **Dynamic Allocation**: Memory allocated at runtime using functions like `malloc`, `calloc`, and `realloc` in C. This memory must be explicitly freed using `free`.
   - Stack vs. Heap Memory
+    - **Stack Memory**: Used for static memory allocation. Functions and local variables are stored here. It operates on a LIFO (Last In, First Out) principle.
+    - **Heap Memory**: Used for dynamic memory allocation. The size is determined at runtime and it must be managed manually by the programmer.
+- **Ownership (Rust)**
+  - **Concept**: Ownership is a feature in Rust that ensures memory safety without needing a garbage collector. It enforces rules at compile time to prevent data races and memory leaks.
+  - **Borrowing and Lifetimes**: 
+    - **Borrowing**: Allows you to reference data without taking ownership. Mutable and immutable borrowing are supported.
+    - **Lifetimes**: Specify how long references are valid to ensure they don’t outlive the data they point to.
 - **Garbage Collection**
   - Concepts and Mechanisms
-  - Garbage Collection Algorithms (Mark and Sweep, Reference Counting, Generational GC)
+    - **Automatic Memory Management**: Garbage collection automatically reclaims memory occupied by objects that are no longer in use.
+    - **Mechanisms**: Implemented in languages like Java, C#, and Python to simplify memory management for developers.
+  - Garbage Collection Algorithms
+    - **Mark and Sweep**: The collector traverses all reachable objects starting from root references, marks them, and then sweeps through memory to collect unmarked objects.
+    - **Reference Counting**: Each object has a counter tracking how many references point to it. When the count drops to zero, the object can be collected.
+    - **Generational GC**: Divides objects into generations. Younger objects are collected more frequently than older ones, improving efficiency.
+
 
 #### Pointers and References
 - **Pointers in C/C++**
@@ -415,12 +452,51 @@ A general term for a class of algorithms that aim to find a specific element in 
   - Hazards and Mitigation Techniques
 
 #### Concurrency and Synchronization
-- **Threading and Multithreading**
-  - Creating and Managing Threads
-  - Thread Safety and Race Conditions
-- **Synchronization Primitives**
-  - Mutexes, Semaphores, Spinlocks
-  - Deadlock and Livelock Prevention
+#### Threading and Multithreading
+- **Creating and Managing Threads**
+  - Using libraries such as `pthread` in C or `std::thread` in C++ to create and manage threads.
+  - Importance of joining and detaching threads to avoid resource leaks.
+- **Thread Safety and Race Conditions**
+  - Ensuring that shared resources are accessed in a thread-safe manner.
+  - Using mutexes, locks, and atomic operations to prevent race conditions.
+  
+#### Synchronization Primitives
+- **Mutexes, Semaphores, Spinlocks**
+  - **Mutexes**: Ensure that only one thread can access a resource at a time.
+  - **Semaphores**: Use counters to control access to a shared resource by multiple threads.
+  - **Spinlocks**: Busy-wait until the lock becomes available, suitable for short wait times.
+- **Deadlock and Livelock Prevention**
+  - Techniques to prevent deadlock include resource ordering, lock timeout, and avoiding nested locks.
+  - Livelock occurs when threads continuously change state in response to other threads without making progress.
+
+#### Distributed Locks
+- **Concept**: Ensures that multiple instances of a distributed application do not simultaneously perform a critical operation.
+- **Implementation**: 
+  - Using services like ZooKeeper, Redis, or etcd.
+  - Ensuring consistency, fault tolerance, and performance.
+
+
+### Serialization
+- **Concept**: Process of converting an object into a format that can be easily stored or transmitted and then reconstructed.
+- **Formats**
+  - **JSON**: Lightweight, text-based format.
+  - **XML**: More verbose, supports a wide range of data structures.
+  - **Protobuf**: Efficient, binary format used by Google.
+- **Techniques**
+  - Ensuring backward and forward compatibility.
+  - Handling complex data structures and cyclic references.
+
+### Low-Level Networking
+- **Concepts**: 
+  - Understanding of IP addresses, ports, and protocols.
+  - Differences between connection-oriented and connectionless communication.
+- **Protocol Basics**
+  - **TCP**: Reliable, connection-oriented protocol.
+  - **UDP**: Unreliable, connectionless protocol.
+  - **QUIC**: Modern transport protocol designed by Google, built on top of UDP for reduced latency and improved performance.
+- **Socket Programming**
+  - Using APIs to establish network connections, send and receive data.
+  - Handling network errors and timeouts.
 
 #### Virtual Memory
 - **Paging and Segmentation**
