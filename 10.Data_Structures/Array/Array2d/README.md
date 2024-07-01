@@ -175,6 +175,9 @@ This example demonstrates how a two-dimensional array can be used to manage a gr
 
 Two-dimensional arrays are a powerful data structure that allow for the representation and manipulation of data in a matrix format. They extend the concept of one-dimensional arrays by adding an extra dimension, making them ideal for applications involving grids or matrices, such as images or game boards. Through the use of nested loops, elements in a two-dimensional array can be efficiently accessed and modified, enabling complex operations and visual representations.
 
+## You can see these resources for better understanding:
+- [Pseudocode: Multi-dimensional Arrays](https://www.youtube.com/watch?v=2ku6oCIvCoE)
+- [Arrays 1D and 2D Before you Solve 15 Mark Question](https://www.youtube.com/watch?v=gbDrUQIG7AY)
 
 ---
 
