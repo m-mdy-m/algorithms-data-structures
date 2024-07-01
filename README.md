@@ -476,7 +476,7 @@ A general term for a class of algorithms that aim to find a specific element in 
   - Ensuring consistency, fault tolerance, and performance.
 
 
-### Serialization
+#### Serialization
 - **Concept**: Process of converting an object into a format that can be easily stored or transmitted and then reconstructed.
 - **Formats**
   - **JSON**: Lightweight, text-based format.
@@ -486,7 +486,7 @@ A general term for a class of algorithms that aim to find a specific element in 
   - Ensuring backward and forward compatibility.
   - Handling complex data structures and cyclic references.
 
-### Low-Level Networking
+#### Low-Level Networking
 - **Concepts**: 
   - Understanding of IP addresses, ports, and protocols.
   - Differences between connection-oriented and connectionless communication.
@@ -522,7 +522,7 @@ A general term for a class of algorithms that aim to find a specific element in 
   - Common Signals (SIGINT, SIGKILL, SIGSEGV)
   - Writing Signal Handlers
 
-### Detailed Concepts
+### 12. Detailed Concepts
 
 #### Data Alignment and Padding
 
