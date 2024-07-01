@@ -180,7 +180,7 @@ A general term for a class of algorithms that aim to find a specific element in 
 
 #### Bloom Filters
 - Space-Efficient Probabilistic Data Structures
-- 
+  
 #### Advanced Linked Lists
 - Skip Lists
 
