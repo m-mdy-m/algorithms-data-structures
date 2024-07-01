@@ -88,107 +88,211 @@ A general term for a class of algorithms that aim to find a specific element in 
 
 **Medium:**
 
-1.  [Data Structures](10.Data_Structures/)
+1. Data Structures
+   - **Arrays and Lists**
+     - Array & Array2D & Array3D
+     - Dynamic Arrays
+     - Linked Lists (Singly and Doubly Linked Lists)
+   - **Stacks and Queues**
+     - Implementation using Arrays and Linked Lists
+     - Circular Queues
+   - **Hash Tables**
+     - Hash Functions
+     - Collision Resolution Techniques (Chaining, Open Addressing)
+   - **Trees**
+     - Binary Trees
+     - Binary Search Trees
+     - AVL Trees
+     - Red-Black Trees
+     - Heaps (Min-Heap, Max-Heap)
 
-2.  Big O Notation
+2. Big O Notation
+   - **Time Complexity**
+     - Best, Average, and Worst Case
+     - Amortized Analysis
+   - **Space Complexity**
+   - **Common Complexities**
+     - O(1), O(n), O(log n), O(n log n), O(n^2)
 
-3.  Software Engineering Principles
+3. Software Engineering Principles
+   - **SOLID Principles**
+   - **DRY, KISS, YAGNI**
+   - **Design by Contract**
+   - **Refactoring**
 
-4.  Additional Data Structures (e.g., Linked Lists, Stacks, Queues, Hash Tables)
+4. Additional Data Structures
+   - **Advanced Linked Lists**
+     - Skip Lists
+   - **Advanced Trees**
+     - B-Trees and B+ Trees
+     - Segment Trees
+     - Fenwick Trees (Binary Indexed Trees)
+   - **Graphs**
+     - Representation (Adjacency List, Adjacency Matrix)
+     - Traversal (DFS, BFS)
 
-5.  Dynamic Programming
+5. Dynamic Programming
+   - **Memoization vs. Tabulation**
+   - **Common Problems**
+     - Knapsack Problem
+     - Longest Common Subsequence
+     - Longest Increasing Subsequence
+     - Matrix Chain Multiplication
 
-6.  [Software Design Patterns](16.Software-Design-Patterns/)
+6. Software Design Patterns
+   - **Creational Patterns**
+     - Singleton, Factory, Abstract Factory, Builder, Prototype
+   - **Structural Patterns**
+     - Adapter, Composite, Proxy, Flyweight, Facade, Bridge, Decorator
+   - **Behavioral Patterns**
+     - Strategy, Observer, Command, Chain of Responsibility, Mediator, Memento, Template, Visitor, State
 
-7.  Performance Analysis of Presentations and Objects
+7. Performance Analysis of Presentations and Objects
+   - **Benchmarking**
+   - **Profiling**
+   - **Optimization Techniques**
 
-8.  Real-world Case Studies
+8. Real-world Case Studies
+   - **Case Studies of Successful Projects**
+   - **Post-mortem Analysis of Failed Projects**
 
-9.  Graph Algorithms (e.g., Graphs, Dijkstra's Algorithm)
+9. Graph Algorithms
+   - **Shortest Path Algorithms**
+     - Dijkstra's Algorithm, Bellman-Ford Algorithm
+   - **Minimum Spanning Tree Algorithms**
+     - Kruskal's Algorithm, Prim's Algorithm
+   - **Network Flow Algorithms**
+     - Ford-Fulkerson Algorithm, Edmonds-Karp Algorithm
 
 **Advanced:**
 
-19. Performance Analysis of Presentations and Objects
+1. Performance Analysis of Presentations and Objects
+   - **Advanced Profiling Techniques**
+   - **Memory Management**
+   - **Garbage Collection Algorithms**
 
-20. Advanced Data Structures (e.g., Binary Search Trees, Tree Navigation)
+2. Advanced Data Structures
+   - **Balanced Trees**
+     - Splay Trees, Treaps
+   - **Self-adjusting Data Structures**
+     - Self-balancing Binary Search Trees
+   - **Union-Find Data Structures**
+     - Disjoint Set Union (DSU)
+   - **Trie Data Structures**
+     - Prefix Trees, Suffix Trees
 
-21. Advanced Sorting Algorithms (e.g., Merge Sort, Quick Sort)
+3. Advanced Sorting Algorithms
+   - **Merge Sort, Quick Sort**
+   - **Heap Sort, Radix Sort, Counting Sort, Bucket Sort**
+   - **External Sorting Algorithms**
 
-22. Concurrent Programming and Parallel Algorithms
+4. Concurrent Programming and Parallel Algorithms
+   - **Concurrency in Modern Programming Languages**
+   - **Multithreading and Synchronization**
+   - **Parallel Sorting and Searching Algorithms**
 
-23. Additional Topics (e.g., Binary Pyramids, Problem-Solving Patterns)
+5. Additional Topics
+   - **Advanced Graph Algorithms**
+     - Articulation Points, Bridges
+     - Strongly Connected Components (Tarjan's Algorithm, Kosaraju's Algorithm)
+     - Topological Sorting
+   - **Binary Heaps and Fibonacci Heaps**
+   - **Spatial Data Structures**
+     - Quad Trees, KD-Trees, R-Trees
 
-24. Graph Preview
+6. Problem Solving Approach
+   - **Problem Decomposition**
+   - **Greedy Algorithms**
+   - **Backtracking**
+   - **Branch and Bound**
 
-25. Binary Pyramids
+7. Optimization Algorithms
+   - **Linear Programming**
+   - **Integer Programming**
+   - **Simulated Annealing**
+   - **Genetic Algorithms**
 
-26. Problem solving approach
+8. Advanced Software Design Patterns
+   - **Concurrency Patterns**
+     - Producer-Consumer, Reader-Writer, Thread Pool
+   - **Architectural Patterns**
+     - Microservices, Serverless Architecture, Event-Driven Architecture
 
-27. Bubble Sort
+9. Quantum Computing Concepts
+   - **Quantum Algorithms**
+     - Shor’s Algorithm, Grover’s Algorithm
+   - **Quantum Cryptography**
 
-28. Selective Sorting
+10. Parallel Computing Techniques
+    - **Parallel Algorithms for Sorting, Searching**
+    - **Distributed Algorithms**
+      - Consensus Algorithms (Paxos, Raft)
 
-29. Insertion Sort
+11. Advanced Graph Algorithms
+    - **Minimum Spanning Trees, Network Flow Algorithms**
+    - **Graph Coloring**
+    - **Graph Matching Algorithms**
 
-30. Comparison of Bubble and Selection and Insertion Sort
-
-31. Merge Sort
-
-32. Quick Sort
-
-33. Basic Sort
-
-34. Linked and One-way Lists
-
-35. Two-way Linked Lists
-
-36. Stacks and Queues
-
-37. Binary Search Trees
-
-38. Tree Navigation
-
-39. Binary Pyramids
-
-40. Hash Tables
-
-41. Graphs
-
-42. Graph Preview
-
-43. Dijkstra's Algorithm
-
-44. Optimization Algorithms
-
-45. Advanced Software Design Patterns
-
-46. Quantum Computing Concepts
-
-47. Parallel Computing Techniques
-
-48. Familiarity with Advanced Graph Algorithms
-
-49. Advanced Graph Algorithms (e.g., Minimum Spanning Trees, Network Flow Algorithms)
-
-50. Machine Learning Basics
+12. Machine Learning Basics
+    - **Supervised Learning**
+      - Regression, Classification
+    - **Unsupervised Learning**
+      - Clustering, Dimensionality Reduction
+    - **Neural Networks and Deep Learning**
+      - CNNs, RNNs, GANs
 
 **More Advanced:**
 
 1. Artificial Intelligence
+   - **Search Algorithms**
+     - A*, Minimax, Alpha-Beta Pruning
+   - **Knowledge Representation**
+     - Logic, Semantic Networks
+   - **Planning and Scheduling**
 
-2. Parallel Computing Models (e.g., SIMD, MIMD)
+2. Parallel Computing Models
+   - **SIMD, MIMD Architectures**
+   - **Parallel Programming Models**
+     - MPI, OpenMP, CUDA
 
 3. Distributed Systems and Algorithms
+   - **Distributed Computing Paradigms**
+     - MapReduce, Apache Spark
+   - **Consistency Models**
+     - CAP Theorem, BASE Properties
+   - **Distributed Consensus**
+     - Byzantine Fault Tolerance
 
 4. Machine Learning Algorithms and Techniques
+   - **Advanced Supervised Learning Techniques**
+     - Ensemble Methods (Bagging, Boosting)
+   - **Advanced Unsupervised Learning  Techniques**
+     - Hierarchical Clustering
+   - **Reinforcement Learning**
 
 5. Natural Language Processing (NLP) Algorithms
+   - **Text Processing**
+     - Tokenization, Stemming, Lemmatization
+   - **Language Models**
+     - N-grams, LSTM, Transformers (BERT, GPT)
 
 6. Evolutionary Algorithms and Genetic Programming
+   - **Genetic Algorithms**
+   - **Evolution Strategies**
+   - **Genetic Programming**
 
 7. Computational Complexity Theory
+   - **P vs NP Problem**
+   - **NP-Complete and NP-Hard Problems**
+   - **Approximation Algorithms**
 
 8. Cryptography and Cryptanalysis Algorithms
+   - **Symmetric and Asymmetric Encryption**
+     - AES, RSA, ECC
+   - **Cryptographic Hash Functions**
+     - SHA-256, MD5
+   - **Public Key Infrastructure (PKI)**
+   - **Quantum Cryptography**
 
 ## Learning Resources
 > Sites with ⭐ represent the most used
