@@ -86,7 +86,7 @@ A general term for a class of algorithms that aim to find a specific element in 
       - Building for Scale()
    - `Finally` - > [Challenges](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Challenges) >> challenge coding and implementing concepts
 
-### Additional Foundations:
+### 10. Additional Foundations:
 
 1. **Mathematics for Computer Science**:
    - **Discrete Mathematics**: Important for understanding the theoretical underpinnings of algorithms and data structures.
