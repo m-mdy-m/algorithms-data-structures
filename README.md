@@ -88,19 +88,19 @@ A general term for a class of algorithms that aim to find a specific element in 
 
 ### [10. Additional Foundations:](./10.Additional_Foundations/)
 
-1. **Mathematics for Computer Science**:
+1. [**Mathematics for Computer Science**](./10.Additional_Foundations/1.Mathematics_Computer_Science/):
    - **Discrete Mathematics**: Important for understanding the theoretical underpinnings of algorithms and data structures.
      - Resource: [Discrete Mathematics and Its Applications](https://www.mheducation.com/highered/product/discrete-mathematics-its-applications-rosen/M9781259676512.html) by Kenneth H. Rosen
 
-2. **Algorithm Analysis**:
+2. [**Algorithm Analysis**](./10.Additional_Foundations/2.Algorithm_Analysis/):
    - Understanding Big O notation, time complexity, and space complexity in more depth.
      - Resource: [Introduction to the Design and Analysis of Algorithms](https://www.amazon.com/Introduction-Design-Analysis-Algorithms-3rd/dp/0132316811) by Anany Levitin
 
-3. **Recursion and Backtracking**:
+3. [**Recursion and Backtracking**](/10.Additional_Foundations/3.Recursion_Backtracking/):
    - Fundamental concepts for solving complex problems.
      - Resource: [Grokking Recursion](https://www.manning.com/books/grokking-recursion) by Jeremy Kevitt
 
-#### Practical Coding Practice:
+#### [Practical Coding Practice](./10.Additional_Foundations/4.Practical_Coding_Practice/):
 
 1. **Coding Platforms**:
    - Engaging in regular coding practice to apply the concepts you've learned.
@@ -112,7 +112,7 @@ A general term for a class of algorithms that aim to find a specific element in 
    - Solve mathematical problems to improve your problem-solving skills.
      - [Project Euler](https://projecteuler.net/)
 
-#### Additional Reading:
+#### [Additional Reading](./10.Additional_Foundations/5.Additional_Reading/):
 
 1. **Problem-Solving Strategies**:
    - Techniques for approaching and solving complex problems.
@@ -122,7 +122,7 @@ A general term for a class of algorithms that aim to find a specific element in 
    - Understanding different programming paradigms can enhance your coding versatility.
      - Resource: [Programming Paradigms for Dummies: What Every Programmer Should Know](https://www.amazon.com/Programming-Paradigms-Dummies-Programmer-Should/dp/1518837611) by Oliver Powell
 
-#### Enhancing Coding Efficiency:
+#### [Enhancing Coding Efficiency](./10.Additional_Foundations/6.Enhancing_Coding_Efficiency/):
 
 1. **Design Patterns**:
    - Understanding design patterns can help in writing efficient and reusable code.
