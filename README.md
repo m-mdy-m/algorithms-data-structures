@@ -86,7 +86,7 @@ A general term for a class of algorithms that aim to find a specific element in 
       - Building for Scale()
    - `Finally` - > [Challenges](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Challenges) >> challenge coding and implementing concepts
 
-### 10. Additional Foundations:
+### [10. Additional Foundations:](./10.Additional_Foundations/)
 
 1. **Mathematics for Computer Science**:
    - **Discrete Mathematics**: Important for understanding the theoretical underpinnings of algorithms and data structures.
@@ -135,7 +135,7 @@ A general term for a class of algorithms that aim to find a specific element in 
 
 ## Intermediate Level
 
-### 1. Data Structures
+### [1. Data Structures](./1.Data_Structures/)
 
 #### Arrays and Lists
 - **Static Arrays**
@@ -257,7 +257,7 @@ A general term for a class of algorithms that aim to find a specific element in 
 - Longest Increasing Subsequence
 - Matrix Chain Multiplication
 
-### 6. Software Design Patterns
+### [6. Software Design Patterns](./6.Software-Design-Patterns/)
 
 #### Creational Patterns
 - Singleton
