@@ -11,7 +11,7 @@ If you aim to become a computer professional, understanding algorithms is essent
 
 From a theoretical perspective, studying algorithms—or algorithmics—is fundamental to computer science. David Harel, in his book *Algorithmics: The Spirit of Computing*, emphasizes the central role of algorithms:
 
-> "Algorithmics is more than a branch of computer science. It is the core of computer science, and, in all fairness, can be said to be relevant to most of science, business, and technology." — [Har92, p. 6]
+> "Algorithmics is more than a branch of computer science. It is the core of computer science, and, in all fairness, can be said to be relevant to most of science, business, and technology." 
 
 This underscores the importance of algorithms beyond just computing; they are integral to various scientific, business, and technological fields.
 
@@ -26,7 +26,7 @@ Even if you are not pursuing a computing-related program, there are compelling r
 
 The precision required in algorithmic thinking has significant educational benefits. Donald Knuth, a prominent figure in computer science, elaborates on this:
 
-> "A person well-trained in computer science knows how to deal with algorithms: how to construct them, manipulate them, understand them, analyze them. This knowledge is preparation for much more than writing good computer programs; it is a general-purpose mental tool that will be a definite aid to the understanding of other subjects, whether they be chemistry, linguistics, or music, etc. The reason for this may be understood in the following way: It has often been said that a person does not really understand something until after teaching it to someone else. Actually, a person does not really understand something until after teaching it to a computer, i.e., expressing it as an algorithm . . . An attempt to formalize things as algorithms leads to a much deeper understanding than if we simply try to comprehend things in the traditional way." — [Knu96, p. 9]
+> "A person well-trained in computer science knows how to deal with algorithms: how to construct them, manipulate them, understand them, analyze them. This knowledge is preparation for much more than writing good computer programs; it is a general-purpose mental tool that will be a definite aid to the understanding of other subjects, whether they be chemistry, linguistics, or music, etc. The reason for this may be understood in the following way: It has often been said that a person does not really understand something until after teaching it to someone else. Actually, a person does not really understand something until after teaching it to a computer, i.e., expressing it as an algorithm . . . An attempt to formalize things as algorithms leads to a much deeper understanding than if we simply try to comprehend things in the traditional way."
 
 ### Introduction to Algorithms
 
