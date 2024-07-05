@@ -71,19 +71,19 @@ A general term for a class of algorithms that aim to find a specific element in 
          - [Swagger&OpenAPI](https://github.com/m-mdy-m/openapi-playground)
       - Database (Redis,PostgreSQL)
          - [Redis](https://github.com/m-mdy-m/Redis-Playground)
-
-      - Authentication(OAuth)
+         - [PostgreSQL](https://github.com/m-mdy-m/postgreSQL-playground)
       - [Scaling Databases(DatabaseIndexes)](https://www.freecodecamp.org/news/database-indexing-at-a-glance-bb50809d48bd/)
       - Architectural Patterns(MonolithicApp-Microservices-SQA)
       - MessageBrokers(RabbitMQ||Kafka)
+        - RabbitMQ 
+        - Kafka
       - [Containerization: (Docker, Kubernetes)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/Containerization)
         - [Docker&Kubernetes](https://github.com/m-mdy-m/docker-playground)
       - SearchEngines(Elasticsearch)
       - WebServers(Nginx || Apache)
+        - Nginx
       - RealTimeData(WebSockets)
-      - GraphQl
-      - Bug Tracking Systems: (Jira, Bugzilla)
-      - Building for Scale()
+      - [GraphQl](https://github.com/m-mdy-m/learn_graphql)
    - `Finally` - > [Challenges](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Challenges) >> challenge coding and implementing concepts
 
 ### [10. Additional Foundations:](./10.Additional_Foundations/)
