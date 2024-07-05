@@ -96,7 +96,7 @@ A general term for a class of algorithms that aim to find a specific element in 
    - Understanding Big O notation, time complexity, and space complexity in more depth.
      - Resource: [Introduction to the Design and Analysis of Algorithms](https://www.amazon.com/Introduction-Design-Analysis-Algorithms-3rd/dp/0132316811) by Anany Levitin
 
-#### [Practical Coding Practice](./10.Additional_Foundations/4.Practical_Coding_Practice/):
+#### [Practical Coding Practice](./10.Additional_Foundations/3.Practical_Coding_Practice/):
 
 1. **Coding Platforms**:
    - Engaging in regular coding practice to apply the concepts you've learned.
@@ -108,15 +108,15 @@ A general term for a class of algorithms that aim to find a specific element in 
    - Solve mathematical problems to improve your problem-solving skills.
      - [Project Euler](https://projecteuler.net/)
 
-#### [Additional Reading](./10.Additional_Foundations/5.Additional_Reading/):
+#### [Additional Reading](./10.Additional_Foundations/4.Additional_Reading/):
 
-1. **Problem-Solving Strategies**:
-   - Techniques for approaching and solving complex problems.
-     - Resource: [How to Solve It](https://press.princeton.edu/books/paperback/9780691164076/how-to-solve-it) by George Pólya
+1. **Advanced Problem-Solving Techniques**:
+   - Exploring more advanced strategies and methodologies.
+     - Resource: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693) by Steven S. Skiena
 
-2. **Programming Paradigms**:
-   - Understanding different programming paradigms can enhance your coding versatility.
-     - Resource: [Programming Paradigms for Dummies: What Every Programmer Should Know](https://www.amazon.com/Programming-Paradigms-Dummies-Programmer-Should/dp/1518837611) by Oliver Powell
+2. **Deep Dive into Algorithms**:
+   - Detailed exploration of specific algorithms and their applications.
+     - Resource: [Algorithms](https://www.amazon.com/Algorithms-4th-Robert-Sedgewick/dp/032157351X) by Robert Sedgewick and Kevin Wayne
 
 #### [Enhancing Coding Efficiency](./10.Additional_Foundations/6.Enhancing_Coding_Efficiency/):
 
@@ -124,7 +124,10 @@ A general term for a class of algorithms that aim to find a specific element in 
    - Learn how to improve the design of existing code.
      - Resource: [Refactoring: Improving the Design of Existing Code](https://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0134757599) by Martin Fowler
 
-
+#### [Computational Thinking](./10.Additional_Foundations/6.Computational_Thinking/):
+1. **Developing Computational Thinking Skills**:
+   - Learning how to approach problems from a computational perspective.
+     - Resource: [Computational Thinking](https://www.amazon.com/Computational-Thinking-Problem-Solving-Today/dp/1506369121) by Peter J. Denning and Matti Tedre
 ## Intermediate Level
 
 ### [1. Data Structures](./1.Data_Structures/)
