@@ -80,105 +80,55 @@ So, take your time mastering the Simple concepts, and when you're ready, let the
 
 ---
 1. **[Overriding and Overloading](concepts/Medium/1.OverridingAndOverloading.md)**
-
 2. **[Constructors and Destructors](concepts/Medium/2.ConstructorsAndDestructors.md)**
-
 3. **[Getter and Setter Methods](concepts/Medium/3.GetterAndSetter.md)**
-
 4. **[Access Modifiers](concepts/Medium/4.AccessModifiers.md)**
-
 5. **[Dependency Injection](concepts/Medium/5.DependencyInjection.md)**
-
-6. **[Object-Oriented Design Patterns:](concepts/Medium/6.Object-Oriented-Design-Patterns.md)**
-
-7. **SOLID Principles:**
-
-8. **Object-Oriented Analysis and Design (OOAD):**
-
-9. **Object-Oriented Modeling:**
-
-10. **Method Signature:**
-
-11. **Method Visibility:**
-
-12. **Method Chaining:**
-
-13. **Object Cloning:**
-
-14. **Immutable Objects:**
-
-15. **Object Serialization:**
-
-16. **Object Persistence:**
-
-17. **Mixin Classes:**
-
-18. **Delegation:**
-
-19. **Object-Oriented Analysis Patterns:**
-
-20. **Object-Oriented Testing Strategies:**
-
-21. **Object Collaboration:**
+6. **[Object-Oriented Design Patterns](concepts/Medium/6.Object-Oriented-Design-Patterns.md)**
+7. **SOLID Principles**
+8. **Object-Oriented Analysis and Design (OOAD)**
+9. **Object-Oriented Modeling**
+10. **Method Signature**
+11. **Method Visibility**
+12. **Method Chaining**
+13. **Object Cloning**
+14. **Immutable Objects**
+15. **Object Serialization**
+16. **Object Persistence**
+17. **Mixin Classes**
+18. **Delegation**
+19. **Object Collaboration**
 
 ### Advanced:
 
-1. **Object Pooling:**
-
-2. **Multithreading and Concurrency:**
-
-3. **Object Relational Mapping (ORM):**
-
-4. **Aspect-Oriented Programming (AOP):**
-
-5. **Event-Driven Programming:**
-
-6. **Reflection:**
-
-7. **Garbage Collection:**
-
-8. **Object-Oriented Data Structures:**
-
-9. **Object-Oriented Metrics:**
-
-10. **Object-Oriented Testing:**
-
-11. **Object-Oriented Development Methodologies:**
-
-12. **Object-Oriented Frameworks and Libraries:**
-
-13. **Design by Contract (DbC):**
-
-14. **Object-Oriented Metaprogramming:**
-
-15. **Object-Oriented Analysis Patterns:**
-
-16. **Object-Oriented Software Architecture:**
-
-17. **Domain-Driven Design (DDD):**
-
-18. **Object-Oriented Best Practices:**
-
-19. **Object-Oriented Refactoring:**
-
-20. **Object-Oriented Design Principles:**
-
-21. **Object-Oriented Design Anti-patterns:**
-
-22. **Object-Oriented Security:**
-
-23. **Object-Oriented Performance Optimization:**
-
-24. **Object-Oriented Code Quality and Code Smells:**
-
-25. **Object-Oriented User Interface (UI) Design:**
-
-26. **Object-Oriented Middleware:**
-
-27. **Object-Oriented Web Development:**
-
-28. **Object-Oriented Software Engineering:**
+1. **Object Pooling**
+2. **Multithreading and Concurrency (in the context of OOP)**
+3. **Object Relational Mapping (ORM)**
+4. **Aspect-Oriented Programming (AOP)**
+5. **Event-Driven Programming (in the context of OOP)**
+6. **Reflection (in the context of OOP)**
+7. **Garbage Collection (related to OOP)**
+8. **Object-Oriented Data Structures**
+9. **Object-Oriented Metrics**
+10. **Object-Oriented Testing**
+11. **Object-Oriented Development Methodologies**
+12. **Object-Oriented Frameworks and Libraries**
+13. **Design by Contract (DbC)**
+14. **Object-Oriented Metaprogramming**
+15. **Object-Oriented Software Architecture**
+16. **Domain-Driven Design (DDD)**
+17. **Object-Oriented Best Practices**
+18. **Object-Oriented Refactoring**
+19. **Object-Oriented Design Principles**
+20. **Object-Oriented Design Anti-patterns**
+21. **Object-Oriented Security**
+22. **Object-Oriented Performance Optimization**
+23. **Object-Oriented Code Quality and Code Smells**
+24. **Object-Oriented User Interface (UI) Design**
+25. **Object-Oriented Middleware**
+26. **Object-Oriented Web Development**
+27. **Object-Oriented Software Engineering**
 
 ### Specialized:
 
-1. **Object-Oriented Big Data Processing:**
+1. **Object-Oriented Big Data Processing**
