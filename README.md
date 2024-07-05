@@ -89,14 +89,24 @@ A general term for a class of algorithms that aim to find a specific element in 
 ### [10. Additional Foundations:](./10.Additional_Foundations/)
 
 1. [**Mathematics for Computer Science**](./10.Additional_Foundations/1.Mathematics_Computer_Science/):
-   - **Discrete Mathematics**: Important for understanding the theoretical underpinnings of algorithms and data structures.
+   - **Discrete Mathematics**: Essential for understanding the theoretical underpinnings of algorithms and data structures.
      - Resource: [Discrete Mathematics and Its Applications](https://www.mheducation.com/highered/product/discrete-mathematics-its-applications-rosen/M9781259676512.html) by Kenneth H. Rosen
+   - **Linear Algebra**: Important for machine learning, computer graphics, and scientific computing.
+     - Resource: [Linear Algebra and Its Applications](https://www.pearson.com/store/p/linear-algebra-and-its-applications/P100000160707) by Gilbert Strang
 
 2. [**Algorithm Analysis**](./10.Additional_Foundations/2.Algorithm_Analysis/):
    - Understanding Big O notation, time complexity, and space complexity in more depth.
      - Resource: [Introduction to the Design and Analysis of Algorithms](https://www.amazon.com/Introduction-Design-Analysis-Algorithms-3rd/dp/0132316811) by Anany Levitin
 
-#### [Practical Coding Practice](./10.Additional_Foundations/3.Practical_Coding_Practice/):
+3. [**Basic Computer Architecture**](./10.Additional_Foundations/8.Basic_Computer_Architecture/):
+   - Understanding how computers work, including memory, CPU, and basic assembly language.
+     - Resource: [Computer Organization and Design: The Hardware/Software Interface](https://www.amazon.com/Computer-Organization-Design-MIPS-Architecture/dp/0124077269) by David A. Patterson and John L. Hennessy
+
+4. [**Networking Basics**](./10.Additional_Foundations/11.Networking_Basics/):
+   - Understanding basic networking concepts, protocols, and architecture.
+     - Resource: [Computer Networking: A Top-Down Approach](https://www.amazon.com/Computer-Networking-Top-Down-James-Kurose/dp/0133594149) by James Kurose and Keith Ross
+
+#### [Practical Coding Practice](./10.Additional_Foundations/5.Practical_Coding_Practice/):
 
 1. **Coding Platforms**:
    - Engaging in regular coding practice to apply the concepts you've learned.
@@ -108,7 +118,7 @@ A general term for a class of algorithms that aim to find a specific element in 
    - Solve mathematical problems to improve your problem-solving skills.
      - [Project Euler](https://projecteuler.net/)
 
-#### [Additional Reading](./10.Additional_Foundations/4.Additional_Reading/):
+#### [Additional Reading](./10.Additional_Foundations/6.Additional_Reading/):
 
 1. **Advanced Problem-Solving Techniques**:
    - Exploring more advanced strategies and methodologies.
@@ -118,13 +128,13 @@ A general term for a class of algorithms that aim to find a specific element in 
    - Detailed exploration of specific algorithms and their applications.
      - Resource: [Algorithms](https://www.amazon.com/Algorithms-4th-Robert-Sedgewick/dp/032157351X) by Robert Sedgewick and Kevin Wayne
 
-#### [Enhancing Coding Efficiency](./10.Additional_Foundations/6.Enhancing_Coding_Efficiency/):
+#### [Enhancing Coding Efficiency](./10.Additional_Foundations/7.Enhancing_Coding_Efficiency/):
 
 1. **Refactoring**:
    - Learn how to improve the design of existing code.
      - Resource: [Refactoring: Improving the Design of Existing Code](https://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0134757599) by Martin Fowler
 
-#### [Computational Thinking](./10.Additional_Foundations/6.Computational_Thinking/):
+#### [Computational Thinking](./10.Additional_Foundations/8.Computational_Thinking/):
 1. **Developing Computational Thinking Skills**:
    - Learning how to approach problems from a computational perspective.
      - Resource: [Computational Thinking](https://www.amazon.com/Computational-Thinking-Problem-Solving-Today/dp/1506369121) by Peter J. Denning and Matti Tedre
