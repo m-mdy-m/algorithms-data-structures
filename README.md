@@ -96,10 +96,6 @@ A general term for a class of algorithms that aim to find a specific element in 
    - Understanding Big O notation, time complexity, and space complexity in more depth.
      - Resource: [Introduction to the Design and Analysis of Algorithms](https://www.amazon.com/Introduction-Design-Analysis-Algorithms-3rd/dp/0132316811) by Anany Levitin
 
-3. [**Recursion and Backtracking**](/10.Additional_Foundations/3.Recursion_Backtracking/):
-   - Fundamental concepts for solving complex problems.
-     - Resource: [Grokking Recursion](https://www.manning.com/books/grokking-recursion) by Jeremy Kevitt
-
 #### [Practical Coding Practice](./10.Additional_Foundations/4.Practical_Coding_Practice/):
 
 1. **Coding Platforms**:
