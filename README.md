@@ -120,11 +120,7 @@ A general term for a class of algorithms that aim to find a specific element in 
 
 #### [Enhancing Coding Efficiency](./10.Additional_Foundations/6.Enhancing_Coding_Efficiency/):
 
-1. **Design Patterns**:
-   - Understanding design patterns can help in writing efficient and reusable code.
-     - Resource: [Design Patterns: Elements of Reusable Object-Oriented Software](https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612) by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides
-
-2. **Refactoring**:
+1. **Refactoring**:
    - Learn how to improve the design of existing code.
      - Resource: [Refactoring: Improving the Design of Existing Code](https://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0134757599) by Martin Fowler
 
