@@ -90,49 +90,81 @@ A general term for a class of algorithms that aim to find a specific element in 
 ### [10. Additional Foundations:](./10.Additional_Foundations/)
 
 #### [Mathematics for Computer Science](./10.Additional_Foundations/1.Mathematics_Computer_Science/)
-  1. **Basic Algebra and Calculus**:
-      - **Why It's Important**: Provides foundational skills needed for understanding more complex mathematical concepts.
-      - **Resource**: *Algebra and Trigonometry* by Robert F. Blitzer [Pearson](https://www.pearson.com/store/p/algebra-and-trigonometry/P100002917175).
-      - **Resource**: *Calculus: Early Transcendentals* by James Stewart [Cengage](https://www.cengage.com/c/calculus-early-transcendentals-9e-stewart/9781337613927/).
 
-##### **Intermediate Mathematics**:
+#### Basic Mathematics:
 
-   1. **Discrete Mathematics**:
-      - **Why It's Important**: Essential for understanding the theoretical underpinnings of algorithms  and data structures.
-      - **Resource**: *Discrete Mathematics and Its Applications* by Kenneth H. Rosen [McGraw-Hill   Education](https://www.mheducation.com/highered/product/discrete-mathematics-its-applications-rosen/M9781259676512.html).
+1. **Basic Algebra and Calculus**:
+   - **Why It's Important**: Provides foundational skills needed for understanding more complex mathematical concepts.
+   - **Resource**: *Algebra and Trigonometry* by Robert F. Blitzer [Pearson](https://www.pearson.com/store/p/algebra-and-trigonometry/P100002917175).
+   - **Resource**: *Calculus: Early Transcendentals* by James Stewart [Cengage](https://www.cengage.com/c/calculus-early-transcendentals-9e-stewart/9781337613927/).
 
-   2. **Linear Algebra**:
-      - **Why It's Important**: Important for machine learning, computer graphics, and scientific computing.
-      - **Resource**: *Linear Algebra and Its Applications* by Gilbert Strang [Pearson](https://www.pearson.com/store/p/linear-algebra-and-its-applications/P100000160707).
+2. **Basic Probability and Statistics**:
+   - **Why It's Important**: Introduces essential concepts for data analysis and understanding randomness in algorithms.
+   - **Resource**: *Probability and Statistics* by Morris H. DeGroot and Mark J. Schervish [Pearson](https://www.pearson.com/store/p/probability-and-statistics/P100000628984).
 
-##### **Advanced Mathematics**:
+3. **Elementary Number Theory**:
+   - **Why It's Important**: Provides the basics for understanding cryptography and algorithmic foundations.
+   - **Resource**: *Elementary Number Theory* by David M. Burton [McGraw-Hill Education](https://www.mheducation.com/highered/product/elementary-number-theory-burton/M9780073383149.html).
 
-   1. **Probability and Statistics**:
-      - **Why It's Important**: Crucial for algorithms involving data analysis, machine learning, and randomized algorithms.
-      - **Resource**: *Probability and Statistics for Computer Scientists* by Michael Baron [CRC Press](https://www.routledge.com/Probability-and-Statistics-for-Computer-Scientists/Baron/p/book/9780367255730).
+#### Intermediate Mathematics:
 
-   2. **Graph Theory**:
-      - **Why It's Important**: Fundamental for understanding network structures, optimization, and algorithm design.
-      - **Resource**: *Introduction to Graph Theory* by Douglas B. West [Pearson](https://www.pearson.com/store/p/introduction-to-graph-theory/P100000736445).
+1. **Discrete Mathematics**:
+   - **Why It's Important**: Essential for understanding the theoretical underpinnings of algorithms and data structures.
+   - **Resource**: *Discrete Mathematics and Its Applications* by Kenneth H. Rosen [McGraw-Hill Education](https://www.mheducation.com/highered/product/discrete-mathematics-its-applications-rosen/M9781259676512.html).
 
-   3. **Number Theory and Cryptography**:
-      - **Why It's Important**: Essential for security algorithms and understanding complex numerical algorithms.
-      - **Resource**: *An Introduction to Mathematical Cryptography* by Jeffrey Hoffstein, Jill Pipher, and Joseph H. Silverman [Springer](https://www.springer.com/gp/book/9781441926746).
+2. **Linear Algebra**:
+   - **Why It's Important**: Important for machine learning, computer graphics, and scientific computing.
+   - **Resource**: *Linear Algebra and Its Applications* by Gilbert Strang [Pearson](https://www.pearson.com/store/p/linear-algebra-and-its-applications/P100000160707).
 
-   4. **Advanced Calculus and Real Analysis**:
-      - **Why It's Important**: Provides the rigorous mathematical foundation necessary for advanced algorithm analysis.
-      - **Resource**: *Principles of Mathematical Analysis* by Walter Rudin [McGraw-Hill Education](https://www.mheducation.com/highered/product/principles-mathematical-analysis-rudin/M9780070542358.html).
+3. **Mathematical Logic**:
+   - **Why It's Important**: Provides a basis for understanding formal reasoning, proofs, and computational theory.
+   - **Resource**: *Mathematical Logic for Computer Science* by Mordechai Ben-Ari [Springer](https://www.springer.com/gp/book/9783319625331).
 
-   5. **Combinatorics and Optimization**:
-      - **Why It's Important**: Important for advanced problem-solving strategies in algorithm design.
-        - **Resource**: *Combinatorial Optimization: Algorithms and Complexity* by Christos H. Papadimitriou and Kenneth Steiglitz [Dover Publications](https://store.doverpublications.com/0486402584.html).
+4. **Combinatorics**:
+   - **Why It's Important**: Essential for counting problems, permutations, combinations, and algorithm design.
+   - **Resource**: *Introduction to Combinatorial Mathematics* by C. L. Liu [McGraw-Hill Education](https://www.amazon.com/Introduction-Combinatorial-Mathematics-C-Liu/dp/0070381305).
 
-   6. **Complexity Theory**:
-      - **Why It's Important**: Provides an understanding of the computational limits and complexity classes of algorithms.
-      - **Resource**: *Computational Complexity: A Modern Approach* by Sanjeev Arora and Boaz Barak [Cambridge University Press](https://www.cambridge.org/core/books/computational-complexity/ED6472F4E8A946BE3A1A51A03B168173).
-   7. [**Algorithm Analysis**](./10.Additional_Foundations/2.Algorithm_Analysis/):
-      - Understanding Big O notation, time complexity, and space complexity in more depth.
-        - Resource: [Introduction to the Design and Analysis of Algorithms](https://www.amazon.com/Introduction-Design-Analysis-Algorithms-3rd/dp/0132316811) by Anany Levitin
+#### Advanced Mathematics:
+
+1. **Probability and Statistics**:
+   - **Why It's Important**: Crucial for algorithms involving data analysis, machine learning, and randomized algorithms.
+   - **Resource**: *Probability and Statistics for Computer Scientists* by Michael Baron [CRC Press](https://www.routledge.com/Probability-and-Statistics-for-Computer-Scientists/Baron/p/book/9780367255730).
+
+2. **Graph Theory**:
+   - **Why It's Important**: Fundamental for understanding network structures, optimization, and algorithm design.
+   - **Resource**: *Introduction to Graph Theory* by Douglas B. West [Pearson](https://www.pearson.com/store/p/introduction-to-graph-theory/P100000736445).
+
+3. **Number Theory and Cryptography**:
+   - **Why It's Important**: Essential for security algorithms and understanding complex numerical algorithms.
+   - **Resource**: *An Introduction to Mathematical Cryptography* by Jeffrey Hoffstein, Jill Pipher, and Joseph H. Silverman [Springer](https://www.springer.com/gp/book/9781441926746).
+
+4. **Advanced Calculus and Real Analysis**:
+   - **Why It's Important**: Provides the rigorous mathematical foundation necessary for advanced algorithm analysis.
+   - **Resource**: *Principles of Mathematical Analysis* by Walter Rudin [McGraw-Hill Education](https://www.mheducation.com/highered/product/principles-mathematical-analysis-rudin/M9780070542358.html).
+
+5. **Combinatorics and Optimization**:
+   - **Why It's Important**: Important for advanced problem-solving strategies in algorithm design.
+   - **Resource**: *Combinatorial Optimization: Algorithms and Complexity* by Christos H. Papadimitriou and Kenneth Steiglitz [Dover Publications](https://store.doverpublications.com/0486402584.html).
+
+6. **Complexity Theory**:
+   - **Why It's Important**: Provides an understanding of the computational limits and complexity classes of algorithms.
+   - **Resource**: *Computational Complexity: A Modern Approach* by Sanjeev Arora and Boaz Barak [Cambridge University Press](https://www.cambridge.org/core/books/computational-complexity/ED6472F4E8A946BE3A1A51A03B168173).
+
+7. **Stochastic Processes**:
+   - **Why It's Important**: Critical for understanding systems that evolve over time, applicable in algorithms for networking, queuing, and more.
+   - **Resource**: *Introduction to Stochastic Processes with R* by Robert P. Dobrow [Wiley](https://www.wiley.com/en-us/Introduction+to+Stochastic+Processes+with+R-p-9781118740651).
+
+8. **Fourier Analysis and Signal Processing**:
+   - **Why It's Important**: Essential for understanding algorithms related to data compression, image processing, and time-series analysis.
+   - **Resource**: *Fourier Analysis: An Introduction* by Elias M. Stein and Rami Shakarchi [Princeton University Press](https://press.princeton.edu/books/paperback/9780691113845/fourier-analysis).
+
+9. **Information Theory**:
+   - **Why It's Important**: Provides the mathematical foundation for data compression and transmission, crucial for algorithm efficiency in communication.
+   - **Resource**: *Elements of Information Theory* by Thomas M. Cover and Joy A. Thomas [Wiley](https://www.wiley.com/en-us/Elements+of+Information+Theory%2C+2nd+Edition-p-9780471241959).
+
+10. [**Algorithm Analysis**](./10.Additional_Foundations/2.Algorithm_Analysis/):
+    - **Why It's Important**: Understanding Big O notation, time complexity, and space complexity in more depth.
+    - **Resource**: *Introduction to the Design and Analysis of Algorithms* by Anany Levitin [Pearson](https://www.amazon.com/Introduction-Design-Analysis-Algorithms-3rd/dp/0132316811).
 
 #### [Basic Computer Architecture*](./10.Additional_Foundations/3.Basic_Computer_Architecture/):
    - Understanding how computers work, including memory, CPU, and basic assembly language.
