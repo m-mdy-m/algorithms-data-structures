@@ -42,3 +42,57 @@ To clarify the often confusing terminology around data sizes, the text provides 
 This chart highlights how binary terms are slightly larger than their corresponding decimal terms, with the difference growing more significant as the sizes increase. These prefixes are applicable to both bits and bytes, providing clarity in understanding data sizes.
 
 By exploring these three main classes of computing applications—personal computers, servers, and embedded computers—this book aims to provide a comprehensive understanding of the diverse uses and design requirements of modern computing technologies.
+
+---
+
+### The PostPC Era and the Rise of Personal Mobile Devices
+
+The computing landscape has dramatically shifted in recent years, marking the onset of the PostPC era. This era is characterized by the rise of personal mobile devices (PMDs) such as tablets and smartphones, which have become central to computing, surpassing traditional personal computers (PCs) and conventional cell phones in production numbers. Figure 1.2 illustrates this shift, showing the rapid increase in the manufacturing of tablets and smartphones compared to PCs and traditional cell phones. By 2011, smartphones had already overtaken PCs in production volume, and tablets emerged as the fastest-growing category, nearly doubling their numbers between 2011 and 2012. In contrast, the production of recent PCs and traditional cell phones has remained relatively flat or has declined.
+
+PMDs are defined as battery-operated devices with wireless connectivity to the Internet, typically costing a few hundred dollars. They are similar to PCs in that users can download software applications ("apps") to run on them. However, unlike PCs, PMDs have moved away from traditional input devices like keyboards and mice, instead relying on touch-sensitive screens or even speech input. Examples of today's PMDs include smartphones and tablet computers, but the category could expand in the future to include devices such as electronic glasses.
+
+### Cloud Computing and Warehouse Scale Computers
+
+The traditional server model is being replaced by Cloud Computing, which utilizes giant datacenters now referred to as Warehouse Scale Computers (WSCs). Companies like Amazon and Google have built these massive facilities containing hundreds of thousands of servers. They then offer portions of these WSCs for rent to other companies, allowing them to provide software services to PMDs without the need to build their own WSCs. This model has given rise to Software as a Service (SaaS), which is revolutionizing the software industry just as PMDs and WSCs are revolutionizing hardware. Modern software developers often design their applications with components that run on PMDs and other components that run in the Cloud.
+
+### What You Can Learn in This Book
+
+Successful software development has always hinged on the performance of the programs. In the 1960s and 1970s, a key constraint on computer performance was the size of the computer’s memory, leading to a programming credo of minimizing memory space to maximize speed. Advances in computer design and memory technology over the last decade have reduced the importance of small memory sizes in most applications, except for embedded computing systems. However, new challenges have arisen.
+
+Programmers now need to grasp the parallel nature of processors and the hierarchical structure of memories. Additionally, as discussed in Section 1.7, understanding the energy efficiency of programs running on either PMDs or in the Cloud is crucial. This requires a deeper knowledge of the underlying computer organization. By delving into the details of software and hardware, this book aims to equip you with the knowledge necessary to improve the performance and efficiency of your programs.
+
+By the time you finish this book, you will be able to answer several fundamental questions:
+
+1. **Translation of High-Level Languages to Hardware Language:**
+   - How are programs written in high-level languages such as C or Java translated into the language of the hardware?
+   - How does the hardware execute the resulting program?
+   - Understanding these concepts is essential for grasping the hardware and software aspects that affect program performance.
+
+2. **Software-Hardware Interface:**
+   - What is the interface between software and hardware?
+   - How does software instruct hardware to perform necessary functions?
+   - These concepts are crucial for writing various kinds of software.
+
+3. **Program Performance:**
+   - What determines the performance of a program?
+   - How can a programmer improve performance?
+   - This depends on the original program, the software translation of that program into the computer’s language, and the hardware's effectiveness in executing the program.
+
+4. **Improving Performance through Hardware Design:**
+   - What techniques can hardware designers use to improve performance?
+   - This book introduces the basic concepts of modern computer design, with more detailed material available in our advanced book, "Computer Architecture: A Quantitative Approach."
+
+5. **Energy Efficiency:**
+   - What techniques can hardware designers use to improve energy efficiency?
+   - How can programmers contribute to or hinder energy efficiency?
+
+6. **Parallel Processing:**
+   - What are the reasons for and consequences of the switch from sequential to parallel processing?
+   - This book provides the motivation, describes current hardware mechanisms supporting parallelism, and surveys the new generation of "multicore" microprocessors, as discussed in Chapter 6.
+
+7. **Foundational Ideas in Computer Architecture:**
+   - What great ideas from computer architects since the first commercial computer in 1951 lay the foundation of modern computing?
+
+### Multicore Microprocessors
+
+A multicore microprocessor is a single integrated circuit containing multiple processors ("cores"). This book will explore these processors in depth, discussing their design, function, and impact on modern computing.
