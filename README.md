@@ -99,11 +99,11 @@ A general term for a class of algorithms that aim to find a specific element in 
    - Understanding Big O notation, time complexity, and space complexity in more depth.
      - Resource: [Introduction to the Design and Analysis of Algorithms](https://www.amazon.com/Introduction-Design-Analysis-Algorithms-3rd/dp/0132316811) by Anany Levitin
 
-3. [**Basic Computer Architecture**](./10.Additional_Foundations/8.Basic_Computer_Architecture/):
+3. [**Basic Computer Architecture**](./10.Additional_Foundations/3.Basic_Computer_Architecture/):
    - Understanding how computers work, including memory, CPU, and basic assembly language.
      - Resource: [Computer Organization and Design: The Hardware/Software Interface](https://www.amazon.com/Computer-Organization-Design-MIPS-Architecture/dp/0124077269) by David A. Patterson and John L. Hennessy
 
-4. [**Networking Basics**](./10.Additional_Foundations/11.Networking_Basics/):
+4. [**Networking Basics**](./10.Additional_Foundations/4.Networking%20Basics/):
    - Understanding basic networking concepts, protocols, and architecture.
      - Resource: [Computer Networking: A Top-Down Approach](https://www.amazon.com/Computer-Networking-Top-Down-James-Kurose/dp/0133594149) by James Kurose and Keith Ross
 
