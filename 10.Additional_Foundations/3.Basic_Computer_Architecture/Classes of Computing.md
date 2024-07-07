@@ -96,3 +96,63 @@ By the time you finish this book, you will be able to answer several fundamental
 ### Multicore Microprocessors
 
 A multicore microprocessor is a single integrated circuit containing multiple processors ("cores"). This book will explore these processors in depth, discussing their design, function, and impact on modern computing.
+
+
+---
+
+### The Importance of Understanding Computer Fundamentals
+
+Without a clear understanding of fundamental questions about computer architecture and software interactions, improving the performance of your programs or evaluating the features of different computers for specific applications becomes a complex process of trial and error. Instead, it should be a scientific procedure driven by insight and analysis.
+
+### Laying the Foundation
+
+This first chapter is designed to lay the foundation for the entire book. It introduces basic ideas and definitions, places major software and hardware components in perspective, explains how to evaluate performance and energy, introduces integrated circuits (the technology that fuels the computer revolution), and explains the shift to multicore processors.
+
+### Terminology and Acronyms
+
+As you proceed through this chapter and the subsequent ones, you will likely encounter many new terms, or words that you may have heard but are unsure about their meanings. Don’t panic! Yes, the field of modern computing uses a lot of specialized terminology, but this actually helps in precisely describing functions or capabilities. Additionally, computer designers (including the authors of this book) love using acronyms. Acronyms are easy to understand once you know what the letters stand for. To assist with this, every term is highlighted and defined in the margins the first time it appears in the text. After some time working with the terminology, you will become fluent, and your friends will be impressed as you correctly use acronyms such as BIOS, CPU, DIMM, DRAM, PCIe, SATA, and many others.
+
+### Understanding Program Performance
+
+To reinforce how software and hardware systems affect program performance, we have included a special section called "Understanding Program Performance" throughout the book. These sections summarize important insights into program performance. The first one appears below.
+
+### How Different Components Affect Performance
+
+The performance of a program depends on several factors: the effectiveness of the algorithms used, the software systems used to create and translate the program into machine instructions, and the effectiveness of the computer in executing those instructions, including input/output (I/O) operations. The table below summarizes how different hardware and software components affect performance.
+
+| Hardware or Software Component | How This Component Affects Performance                             | Where is This Topic Covered? |
+|--------------------------------|-------------------------------------------------------------------|------------------------------|
+| Algorithm                      | Determines the number of source-level statements and I/O operations | Other books!                 |
+| Programming language, compiler, and architecture | Determines the number of computer instructions for each source-level statement | Chapters 2 and 3             |
+| Processor and memory system    | Determines how fast instructions can be executed                   | Chapters 4, 5, and 6         |
+| I/O system (hardware and operating system) | Determines how fast I/O operations may be executed                   | Chapters 4, 5, and 6         |
+
+### Improving Program Performance
+
+To demonstrate the impact of the ideas in this book, we will improve the performance of a C program that multiplies a matrix by a vector across several chapters. Each step leverages an understanding of how underlying hardware works in a modern microprocessor to improve performance by a factor of 200!
+
+- **Data Level Parallelism**: In Chapter 3, we use subword parallelism via C intrinsics to increase performance by a factor of 3.8.
+- **Instruction Level Parallelism**: In Chapter 4, we use loop unrolling to exploit multiple instruction issue and out-of-order execution hardware, increasing performance by another factor of 2.3.
+- **Memory Hierarchy Optimization**: In Chapter 5, we use cache blocking to increase performance on large matrices by another factor of 2.5.
+- **Thread Level Parallelism**: In Chapter 6, we use parallel for loops in OpenMP to exploit multicore hardware, increasing performance by another factor of 14.
+
+### Check Yourself Sections
+
+"Check Yourself" sections are designed to help readers assess whether they comprehend the major concepts introduced in a chapter and understand the implications of those concepts. Some "Check Yourself" questions have simple answers, while others are meant for group discussion. Answers to specific questions can be found at the end of the chapter. These sections only appear at the end of a section, making it easy to skip them if you are confident in your understanding of the material.
+
+#### Example Check Yourself Questions:
+
+1. **Embedded Processors vs. PCs and PostPC Processors**:
+   - The number of embedded processors sold each year greatly outnumbers the number of PC and PostPC processors. Can you confirm or deny this based on your own experience? Try counting the embedded processors in your home. How does this number compare to the number of conventional computers in your home?
+
+2. **Performance Bottlenecks**:
+   - Both software and hardware affect the performance of a program. Can you think of examples where each of the following is the right place to look for a performance bottleneck?
+     - The algorithm chosen
+     - The programming language or compiler
+     - The operating system
+     - The processor
+     - The I/O system and devices
+
+### Conclusion
+
+This chapter sets the stage for a comprehensive exploration of computer architecture and organization, providing the necessary tools and concepts to understand and improve program performance on modern computers. By mastering these concepts, you will be equipped to evaluate and enhance the efficiency of both software and hardware, ultimately leading to better-performing applications.
