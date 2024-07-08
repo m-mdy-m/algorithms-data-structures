@@ -94,9 +94,23 @@ A general term for a class of algorithms that aim to find a specific element in 
 #### Basic Mathematics:
 
 1. **Basic Algebra and Calculus**:
-   - **Why It's Important**: Provides foundational skills needed for understanding more complex mathematical concepts.
-   - **Resource**: *Algebra and Trigonometry* by Robert F. Blitzer [Pearson](https://www.pearson.com/store/p/algebra-and-trigonometry/P100002917175).
-   - **Resource**: *Calculus: Early Transcendentals* by James Stewart [Cengage](https://www.cengage.com/c/calculus-early-transcendentals-9e-stewart/9781337613927/).
+   #### Algebra:
+   1. **"College Algebra" by Michael Sullivan**:
+      - **Why It's Important**: This book provides thorough coverage of algebraic principles, including functions, polynomials, rational expressions, and exponential/logarithmic functions. It emphasizes problem-solving and real-world applications.
+      - **Resource**: *College Algebra* by Michael Sullivan [Pearson](https://www.pearson.com/store/p/college-algebra/P100003477637).
+
+   2. **"Algebra: Structure and Method, Book 1" by Richard G. Brown**:
+      - **Why It's Important**: This classic text offers a comprehensive approach to algebra, starting   from basic concepts and progressing to more advanced topics. It's well-suited for building a solid foundation in algebra.
+      - **Resource**: *Algebra: Structure and Method, Book 1* by Richard G. Brown [McDougal Littell/Houghton Mifflin](https://www.amazon.com/Algebra-Structure-Method-Richard-Brown/dp/0395977223).
+
+    #### Calculus:
+   3. **"Calculus" by Michael Spivak**:
+      - **Why It's Important**: Spivak's *Calculus* is renowned for its rigorous and thorough  introduction to calculus, making it ideal for students seeking a deep understanding of the subject. It covers both single-variable and introductory multi-variable calculus.
+      - **Resource**: *Calculus* by Michael Spivak [Publish or Perish, Inc.](https://www.amazon.com/Calculus-4th-Michael-Spivak/dp/0914098918).
+
+   4. **"Thomas' Calculus" by George B. Thomas, Maurice D. Weir, and Joel Hass**:
+      - **Why It's Important**: This textbook is well-regarded for its clear explanations, comprehensive coverage, and a wealth of examples and exercises. It covers both single-variable and multi-variable calculus extensively.
+      - **Resource**: *Thomas' Calculus* by George B. Thomas, Maurice D. Weir, and Joel Hass [Pearson](https://www.pearson.com/store/p/thomas-calculus/P100003993636).
 
 2. **Basic Probability and Statistics**:
    - **Why It's Important**: Introduces essential concepts for data analysis and understanding randomness in algorithms.
