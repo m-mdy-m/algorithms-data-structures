@@ -94,14 +94,13 @@ A general term for a class of algorithms that aim to find a specific element in 
 #### Basic Mathematics:
 
 1. **Basic Algebra and Calculus**:
-   #### Algebra:
-   1. **"College Algebra" by Michael Sullivan**:
-      - **Why It's Important**: This book provides thorough coverage of algebraic principles, including functions, polynomials, rational expressions, and exponential/logarithmic functions. It emphasizes problem-solving and real-world applications.
-      - **Resource**: *College Algebra* by Michael Sullivan [Pearson](https://www.pearson.com/store/p/college-algebra/P100003477637).
-
-   2. **"Algebra: Structure and Method, Book 1" by Richard G. Brown**:
-      - **Why It's Important**: This classic text offers a comprehensive approach to algebra, starting   from basic concepts and progressing to more advanced topics. It's well-suited for building a solid foundation in algebra.
-      - **Resource**: *Algebra: Structure and Method, Book 1* by Richard G. Brown [McDougal Littell/Houghton Mifflin](https://www.amazon.com/Algebra-Structure-Method-Richard-Brown/dp/0395977223).
+   #### Algebra and Trigonometry:
+   1. **"Algebra and Trigonometry" by Robert F. Blitzer**:
+      - **Why It's Important**: This book provides a thorough coverage of algebraic and trigonometric principles, emphasizing problem-solving and real-world applications. It is known for its engaging and relatable examples, making complex concepts more accessible.
+      - **Resource**: *Algebra and Trigonometry* by Robert F. Blitzer [Pearson](https://www.pearson.com/store/p/algebra-and-trigonometry/P100002917175).
+   2. **"Precalculus: Mathematics for Calculus" by James Stewart, Lothar Redlin, and Saleem Watson**:
+      - **Why It's Important**: This book offers comprehensive coverage of both algebra and trigonometry with a strong focus on preparation for calculus. It includes a variety of examples and exercises to build a solid foundation in these subjects.
+      - **Resource**: *Precalculus: Mathematics for Calculus* by James Stewart, Lothar Redlin, and   Saleem Watson [Cengage](https://www.cengage.com/c/precalculus-mathematics-for-calculus-7e-stewart/9781305071759/).
 
     #### Calculus:
    3. **"Calculus" by Michael Spivak**:
