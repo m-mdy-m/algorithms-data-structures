@@ -67,175 +67,19 @@ A general term for a class of algorithms that aim to find a specific element in 
 
 ## Intermediate Level
 
-### [1. Data Structures](./1.Data_Structures/)
+### 1. [Data Structures](./1.Data_Structures/)
 
-#### Arrays and Lists
-- **Static Arrays**
-  - Single-Dimensional Arrays
-  - Multi-Dimensional Arrays (2D, 3D)
-- **Dynamic Arrays**
-  - ArrayList (Java), Vector (C++), List (Python)
-- **Linked Lists**
-  - Singly Linked List
-  - Doubly Linked List
-  - Circular Linked List
+### 2. [Big O Notation](./2.%20Big%20O%20Notation/)
 
-#### Stacks and Queues
-- **Stacks**
-  - Implementation using Arrays
-  - Implementation using Linked Lists
-  - Applications: Expression Evaluation, Backtracking
-- **Queues**
-  - Implementation using Arrays
-  - Implementation using Linked Lists
-  - Circular Queues
-  - Deques (Double-Ended Queues)
-  - Priority Queues
+### 3. [Software Engineering Principles](./3.%20Software%20Engineering%20Principles/)
 
-#### Hash Tables
-- **Hash Functions**
-  - Division Method
-  - Multiplication Method
-- **Collision Resolution Techniques**
-  - Chaining
-  - Open Addressing (Linear Probing, Quadratic Probing, Double Hashing)
-- **Advanced Hash Functions**
-  - Universal Hashing
-  - Perfect Hashing
-  
-#### Trees
-- **Binary Trees**
-  - Properties, Traversals (Inorder, Preorder, Postorder)
-- **Binary Search Trees**
-  - Insertion, Deletion, Search
-- **AVL Trees**
-  - Rotations (Single and Double), Balancing
-- **Red-Black Trees**
-  - Properties, Insertion, Deletion
-- **Heaps**
-  - Min-Heap, Max-Heap
-  - Heapify, Heapsort, Priority Queue Implementation
-- **Trie Variants**
-  - Radix Trees
-  - Suffix Arrays
+### 4. [Additional Data Structures](./4.%20Additional%20Data%20Structures/)
 
-### 2. Big O Notation
+### 5. [Dynamic Programming](./5.%20Dynamic%20Programming/)
 
-#### Time Complexity
-- Best, Average, and Worst Case Analysis
-- Amortized Analysis (e.g., Dynamic Arrays)
-- Common Complexities: O(1), O(n), O(log n), O(n log n), O(n^2)
-
-#### Space Complexity
-- Measuring Space Complexity
-- Trade-offs with Time Complexity
-
-#### Advanced Complexity Analysis
-- Recurrence Relations
-- Master Theorem
-- Iterative Substitution
-
-### 3. Software Engineering Principles
-
-#### SOLID Principles
-- Single Responsibility Principle (SRP)
-- Open/Closed Principle (OCP)
-- Liskov Substitution Principle (LSP)
-- Interface Segregation Principle (ISP)
-- Dependency Inversion Principle (DIP)
-
-#### Other Principles
-- DRY (Don't Repeat Yourself)
-- KISS (Keep It Simple, Stupid)
-- YAGNI (You Aren't Gonna Need It)
-- Design by Contract
-- Code Refactoring Techniques
-
-#### Code Quality
-- Static Code Analysis
-- Code Review Best Practices
-
-### 4. Additional Data Structures
-
-#### Bloom Filters
-- Space-Efficient Probabilistic Data Structures
-  
-#### Advanced Linked Lists
-- Skip Lists
-
-#### Advanced Trees
-- B-Trees and B+ Trees
-- Segment Trees
-- Fenwick Trees (Binary Indexed Trees)
-
-#### Graphs
-- Graph Representation (Adjacency List, Adjacency Matrix)
-- Graph Traversal (Depth-First Search, Breadth-First Search)
-
-### 5. Dynamic Programming
-
-#### Advanced Problems
-- Edit Distance
-- Traveling Salesman Problem (TSP)
-- Subset Sum Problem
-
-#### Memoization vs. Tabulation
-- Top-Down Approach (Memoization)
-- Bottom-Up Approach (Tabulation)
-
-#### Common Dynamic Programming Problems
-- Knapsack Problem
-- Longest Common Subsequence
-- Longest Increasing Subsequence
-- Matrix Chain Multiplication
-
-### [6. Software Design Patterns](./6.Software-Design-Patterns/)
-
-#### Creational Patterns
-- Singleton
-- Factory Method
-- Abstract Factory
-- Builder
-- Prototype
-
-#### Structural Patterns
-- Adapter
-- Composite
-- Proxy
-- Flyweight
-- Facade
-- Bridge
-- Decorator
-
-#### Behavioral Patterns
-- Strategy
-- Observer
-- Command
-- Chain of Responsibility
-- Mediator
-- Memento
-- Template Method
-- Visitor
-- State
+### 6. [Software Design Patterns](./6.Software-Design-Patterns/)
 
 ### 7. Performance Analysis
-
-#### Profiling Tools
-- GProf, Valgrind (for C/C++)
-- Py-Spy, cProfile (for Python)
-- JProfiler, VisualVM (for Java)
-
-#### Benchmarking
-- Measuring Performance
-- Comparing Algorithms
-
-#### Profiling
-- Identifying Performance Bottlenecks
-- Profiling Tools
-
-#### Optimization Techniques
-- Code Optimization
-- Algorithm Optimization
 
 ### 8. Real-world Case Studies
 - Analysis of Successful Projects
