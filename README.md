@@ -25,7 +25,7 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
 
 # Learning list:
 
-## [Elementary level](./Elementary/)
+## [Elementary level](./1.Elementary%20level//)
 
 ## [Intermediate Level](./Intermediate%20Level/)
 
