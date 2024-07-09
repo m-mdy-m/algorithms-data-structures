@@ -1,103 +1,140 @@
-### Section P.1 Algebraic Expressions, Mathematical Models, and Real Numbers
+### PEMDAS Rule Explained
 
-#### Evaluating Algebraic Expressions
+**PEMDAS** stands for Parentheses, Exponents, Multiplication, Division, Addition, and Subtraction. It is a mnemonic device used to remember the order of operations for solving arithmetic problems effectively.
 
-Evaluating an algebraic expression means finding its value for specific values of the variables within it. Many algebraic expressions involve multiple operations (like addition, subtraction, multiplication, division, and exponents). To evaluate them correctly without a calculator, you must follow the order of operations, often remembered by the acronym PEMDAS:
+### What is PEMDAS Rule?
+The PEMDAS rule is a sequence of operations that tells us the correct order to solve a mathematical expression. This ensures that everyone solves the problem in the same way and gets the same result. 
 
-1. **P**arentheses
-2. **E**xponents
-3. **M**ultiplication and **D**ivision (from left to right)
-4. **A**ddition and **S**ubtraction (from left to right)
+### PEMDAS Definition
+PEMDAS is an acronym representing the sequence of operations:
 
-### Order of Operations Agreement
+- **P**arentheses: Solve expressions inside parentheses first.
+- **E**xponents: Evaluate exponents (powers and roots, like squares and square roots).
+- **M**ultiplication and **D**ivision: Perform these operations next, moving from left to right.
+- **A**ddition and **S**ubtraction: Finally, perform these operations, moving from left to right.
 
-1. **Parentheses:** 
-   - Perform all operations inside the innermost parentheses first and then work outward.
-   - If the expression includes a fraction, treat the numerator (top part) and the denominator (bottom part) as if each is enclosed in parentheses.
+### Full Form of PEMDAS
+PEMDAS is a set of rules that helps solve mathematical problems in the correct order. It's like a recipe for solving equations:
 
-2. **Exponents:**
-   - Evaluate all exponential expressions next.
+- **P** stands for Parentheses: First, solve whatever is inside parentheses.
+- **E** stands for Exponents: Then solve exponents (numbers raised to a power).
+- **MD** stands for Multiplication and Division: Do these next, from left to right.
+- **AS** stands for Addition and Subtraction: Lastly, perform these operations from left to right.
 
-3. **Multiplication and Division:**
-   - Perform these operations as they appear from left to right.
+### Example: Using PEMDAS to Solve an Expression
 
-4. **Addition and Subtraction:**
-   - Finally, perform these operations as they appear from left to right.
+**Problem:** Simplify \(5 + 2[10 - 3(4 - 2)] ÷ 2\)
 
-### Example: Evaluating an Algebraic Expression
+1. **Parentheses:** Solve inside the innermost parentheses first:
+   \[ 4 - 2 = 2 \]
+   Now the expression is \(5 + 2[10 - 3(2)] ÷ 2\).
 
-**Problem:**
-Evaluate $7 + 5(x - 4)^3$ for $x = 6$.
+2. **Parentheses:** Solve the next set of parentheses:
+   \[ 3 \times 2 = 6 \]
+   Now the expression is \(5 + 2[10 - 6] ÷ 2\).
 
-**Solution:**
+3. **Parentheses:** Continue solving inside the brackets:
+   \[ 10 - 6 = 4 \]
+   Now the expression is \(5 + 2[4] ÷ 2\).
 
-1. **Substitute the given value of $x$:**
+4. **Multiplication:** Solve the multiplication inside the brackets:
+   \[ 2 \times 4 = 8 \]
+   Now the expression is \(5 + 8 ÷ 2\).
 
-   Replace $x$ with 6 in the expression:
-   $7 + 5(6 - 4)^3$
+5. **Division:** Perform the division:
+   \[ 8 ÷ 2 = 4 \]
+   Now the expression is \(5 + 4\).
 
-2. **Evaluate inside the parentheses:**
+6. **Addition:** Finally, add the numbers:
+   \[ 5 + 4 = 9 \]
 
-   Perform the subtraction inside the parentheses:
-   $7 + 5(2)^3$
-   (Here, $6 - 4 = 2$)
+So, \(5 + 2[10 - 3(4 - 2)] ÷ 2 = 9\).
 
-3. **Evaluate the exponent:**
+### PEMDAS vs BODMAS
 
-   Calculate the cube of 2 (which is $2 \times 2 \times 2$):
-   $7 + 5(8)$
-   (Here, $2^3 = 8$)
+PEMDAS is very similar to BODMAS, which is another acronym used to remember the order of operations. The only difference is in terminology:
+- **PEMDAS:** Parentheses, Exponents, Multiplication, Division, Addition, Subtraction.
+- **BODMAS:** Brackets, Orders, Division, Multiplication, Addition, Subtraction.
 
-4. **Perform the multiplication:**
+Despite the different terms, both acronyms ensure that calculations are performed in a specific and consistent order.
 
-   Multiply 5 by 8:
-   $7 + 40$
-   (Here, $5 \times 8 = 40$)
+### Applications of PEMDAS
 
-5. **Perform the addition:**
+Understanding PEMDAS is crucial for various fields:
 
-   Add 7 and 40:
-   $47$
+- **Engineering:** Ensures correct calculations in designing structures, like calculating loads and stresses in bridges.
+- **Computer Science:** Helps in writing correct algorithms, ensuring accurate results in programs.
+- **Economics and Finance:** Used to calculate financial metrics, ensuring sound investment decisions.
+- **Pharmacy:** Ensures correct medication dosages.
+- **Architecture:** Ensures precise calculations in designing buildings.
 
-So, the value of the expression $7 + 5(x - 4)^3$ for $x = 6$ is 47.
+### Examples
 
-### Check Point
+**Example 1:** Simplify \([18 + {12 - (4 \times 8)}]\)
 
-Now, let’s evaluate a similar expression:
+1. **Parentheses:** Solve inside the innermost parentheses first:
+   \[ 4 \times 8 = 32 \]
+   Now the expression is \([18 + {12 - 32}]\).
 
-**Problem:**
-Evaluate $8 + 6(x - 3)^2$ for $x = 13$.
+2. **Parentheses:** Continue solving inside the brackets:
+   \[ 12 - 32 = -20 \]
+   Now the expression is \([18 + (-20)]\).
 
-**Solution:**
+3. **Addition:** Finally, add the numbers:
+   \[ 18 + (-20) = -2 \]
 
-1. **Substitute the given value of $x$:**
+**Example 2:** Calculate \((14 + 2 \div 3 + 1) - 2\)
 
-   Replace $x$ with 13 in the expression:
-   $8 + 6(13 - 3)^2$
+1. **Parentheses:** Solve inside the parentheses first:
+   \[ 2 \div 3 = 0.6667 \]
+   Now the expression is \((14 + 0.6667 + 1) - 2\).
 
-2. **Evaluate inside the parentheses:**
+2. **Addition:** Continue solving inside the parentheses:
+   \[ 14 + 0.6667 + 1 = 15.6667 \]
+   Now the expression is \(15.6667 - 2\).
 
-   Perform the subtraction inside the parentheses:
-   $8 + 6(10)^2$
-   (Here, $13 - 3 = 10$)
+3. **Subtraction:** Finally, subtract the numbers:
+   \[ 15.6667 - 2 = 13.6667 \]
 
-3. **Evaluate the exponent:**
+### Practice Problems
 
-   Calculate the square of 10 (which is $10 \times 10$):
-   $8 + 6(100)$
-   (Here, $10^2 = 100$)
+1. **Solve:** \(2 - 7 \div (6 - 2) \times 3 + 8\)
+2. **Solve:** \(5 + 8 \times (2 + 3) \div 4 - 3\)
+3. **Simplify:** \(15 \div (6 - 3 \times 4)\)
+4. **Calculate:** \([20 + {12 - (5 \times 8)}]\)
 
-4. **Perform the multiplication:**
+### Conclusion
 
-   Multiply 6 by 100:
-   $8 + 600$
-   (Here, $6 \times 100 = 600$)
+The PEMDAS rule is an essential guideline for solving math problems that involve multiple operations. By following PEMDAS, you ensure that you perform calculations in the correct order, avoiding mistakes and getting accurate results. This rule is crucial not only in academic settings but also in various professional fields where precise calculations are necessary.
 
-5. **Perform the addition:**
+### FAQs
 
-   Add 8 and 600:
-   $608$
+1. **What is PEMDAS, and why is it relevant?**
+   - PEMDAS is a sequence of operations to solve mathematical problems accurately. It ensures consistency in solving equations.
 
-So, the value of the expression $8 + 6(x - 3)^2$ for $x = 13$ is 608.
+2. **How does PEMDAS help solve complex problems?**
+   - PEMDAS specifies the order of operations, reducing confusion and ensuring consistent and accurate results.
 
-By following these steps carefully and adhering to the order of operations, you can accurately evaluate algebraic expressions for any given value of the variable.
+3. **How is PEMDAS different from BODMAS?**
+   - Both PEMDAS and BODMAS serve the same purpose but use different terms. PEMDAS uses "Parentheses" and "Exponents," while BODMAS uses "Brackets" and "Orders."
+
+4. **What mnemonic can help remember PEMDAS?**
+   - "Please Excuse My Dear Aunt Sally" is a common mnemonic to remember the order of operations.
+
+5. **Can you provide an example using PEMDAS?**
+   - Sure! For example, to solve \(5 + 2[10 - 3(4 - 2)] ÷ 2\), you would start with parentheses, then exponents, multiplication/division, and finally addition/subtraction, resulting in 9.
+
+6. **What common mistakes occur with PEMDAS?**
+   - Common mistakes include not prioritizing parentheses or ignoring the importance of exponents, leading to incorrect answers.
+
+7. **How can one become proficient in applying PEMDAS?**
+   - Practice regularly with a variety of problems and revisit the PEMDAS concept often to strengthen understanding and application skills.
+
+8. **How to use PEMDAS with fractions?**
+   - Apply the PEMDAS rule the same way as with whole numbers, treating the numerator and denominator separately if necessary.
+
+9. **What does the 'P' in PEMDAS stand for?**
+   - 'P' stands for Parentheses, indicating that operations inside parentheses should be performed first.
+
+10. **What is the use of a PEMDAS calculator?**
+    - A PEMDAS calculator helps solve complex expressions by following the order of operations, ensuring accurate results.
