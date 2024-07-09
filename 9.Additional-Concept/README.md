@@ -1,0 +1,26 @@
+# [Clean Code](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Clean%20Code)
+      - [Book](https://github.com/jnguyen095/clean-code/blob/master/Clean.Code.A.Handbook.of.Agile.Software.Craftsmanship.pdf)
+### [Utils](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils) :(`It is not related to data structure and algorithm`- Most of this part is my own additional learning roadmap)
+- [Version Control Systems (VCS): (Git)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/VCS)
+- [Command Line Interface (CLI)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/CLI)
+- [Continuous Integration/Continuous Delivery (CI/CD)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/CI-CD)
+- [Task Runners: (Gulp, Grunt)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/Task-Runners)
+- [API Documentation tools](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/API-Documentation)
+         - [Swagger&OpenAPI](https://github.com/m-mdy-m/openapi-playground)
+      - Database (Redis,SQL(PostgreSQL))
+         - [Redis](https://github.com/m-mdy-m/Redis-Playground)
+         - [SQL](https://github.com/m-mdy-m/SQL-Playground)
+         - [PostgreSQL](https://github.com/m-mdy-m/postgreSQL-playground)
+      - [Scaling Databases(DatabaseIndexes)](https://www.freecodecamp.org/news/database-indexing-at-a-glance-bb50809d48bd/)
+      - MessageBrokers(RabbitMQ||Kafka)
+        - RabbitMQ
+        - Kafka
+      - [Containerization: (Docker, Kubernetes)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/Containerization)
+        - [Docker&Kubernetes](https://github.com/m-mdy-m/docker-playground)
+      - SearchEngines(Elasticsearch)
+      - WebServers(Nginx || Apache)
+        - Nginx
+      - [Architectural Patterns(Microservices)](https://github.com/m-mdy-m/microservices-explorer)
+      - RealTimeData(WebSockets)
+      - [GraphQl](https://github.com/m-mdy-m/learn_graphql)
+   - `Finally` - > [Challenges](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Challenges) >> challenge coding and implementing concepts

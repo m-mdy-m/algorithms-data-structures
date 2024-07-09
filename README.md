@@ -60,77 +60,12 @@ A general term for a class of algorithms that aim to find a specific element in 
    - > [Test](8.Testing-And-Debugging-Techniques/Testing/)
 
 ### 9. [Additional Concept](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept) - (Not Necessary)
-   - [Clean Code](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Clean%20Code)
-      - [Book](https://github.com/jnguyen095/clean-code/blob/master/Clean.Code.A.Handbook.of.Agile.Software.Craftsmanship.pdf)
-   - > [Utils](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils) :(`It is not related to data structure and algorithm`- Most of this part is my own additional learning roadmap)
-      - [Version Control Systems (VCS): (Git)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/VCS)
-      - [Command Line Interface (CLI)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/CLI)
-      - [Continuous Integration/Continuous Delivery (CI/CD)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/CI-CD)
-      - [Task Runners: (Gulp, Grunt)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/Task-Runners)
-      - [API Documentation tools](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/API-Documentation)
-         - [Swagger&OpenAPI](https://github.com/m-mdy-m/openapi-playground)
-      - Database (Redis,SQL(PostgreSQL))
-         - [Redis](https://github.com/m-mdy-m/Redis-Playground)
-         - [SQL](https://github.com/m-mdy-m/SQL-Playground)
-         - [PostgreSQL](https://github.com/m-mdy-m/postgreSQL-playground)
-      - [Scaling Databases(DatabaseIndexes)](https://www.freecodecamp.org/news/database-indexing-at-a-glance-bb50809d48bd/)
-      - MessageBrokers(RabbitMQ||Kafka)
-        - RabbitMQ
-        - Kafka
-      - [Containerization: (Docker, Kubernetes)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/Containerization)
-        - [Docker&Kubernetes](https://github.com/m-mdy-m/docker-playground)
-      - SearchEngines(Elasticsearch)
-      - WebServers(Nginx || Apache)
-        - Nginx
-      - [Architectural Patterns(Microservices)](https://github.com/m-mdy-m/microservices-explorer)
-      - RealTimeData(WebSockets)
-      - [GraphQl](https://github.com/m-mdy-m/learn_graphql)
-   - `Finally` - > [Challenges](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Challenges) >> challenge coding and implementing concepts
+   
 
-### [10. Mathematics for Computer Science](./10.Mathematics%20for%20Computer%20Science/)
+### 10. [Mathematics for Computer Science](./10.Mathematics%20for%20Computer%20Science/)
   
-### [11. Additional Foundations:](./11.Additional_Foundations/)
+### 11. [ Additional Foundations:](./11.Additional_Foundations/)
 
-#### [Basic Computer Architecture*](./11.Additional_Foundations/1.Basic_Computer_Architecture/):
-   - Understanding how computers work, including memory, CPU, and basic assembly language.
-     - Resource: [Computer Organization and Design: The Hardware/Software Interface](https://www.amazon.com/Computer-Organization-Design-MIPS-Architecture/dp/0124077269) by David A. Patterson and John L. Hennessy
-
-#### [Networking Basics](./11.Additional_Foundations/2.Networking%20Basics/):
-   - Understanding basic networking concepts, protocols, and architecture.
-     - Resource: [Computer Networking: A Top-Down Approach](https://www.amazon.com/Computer-Networking-Top-Down-James-Kurose/dp/0133594149) by James Kurose and Keith Ross
-
-#### [Practical Coding Practice](./11.Additional_Foundations/3.Practical_Coding_Practice/):
-
-1. **Coding Platforms**:
-   - Engaging in regular coding practice to apply the concepts you've learned.
-     - [LeetCode](https://leetcode.com/)
-     - [HackerRank](https://www.hackerrank.com/)
-     - [CodeSignal](https://codesignal.com/)
-
-2. **Project Euler**:
-   - Solve mathematical problems to improve your problem-solving skills.
-     - [Project Euler](https://projecteuler.net/)
-
-#### [Additional Reading](./11.Additional_Foundations/4.Additional_Reading/):
-
-1. **Advanced Problem-Solving Techniques**:
-   - Exploring more advanced strategies and methodologies.
-     - Resource: [The Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693) by Steven S. Skiena
-
-2. **Deep Dive into Algorithms**:
-   - Detailed exploration of specific algorithms and their applications.
-     - Resource: [Algorithms](https://www.amazon.com/Algorithms-4th-Robert-Sedgewick/dp/032157351X) by Robert Sedgewick and Kevin Wayne
-
-#### [Enhancing Coding Efficiency](./11.Additional_Foundations/5.Enhancing_Coding_Efficiency/):
-
-1. **Refactoring**:
-   - Learn how to improve the design of existing code.
-     - Resource: [Refactoring: Improving the Design of Existing Code](https://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0134757599) by Martin Fowler
-
-#### [Computational Thinking](./11.Additional_Foundations/6.Computational_Thinking/):
-1. **Developing Computational Thinking Skills**:
-   - Learning how to approach problems from a computational perspective.
-     - Resource: [Computational Thinking](https://www.amazon.com/Computational-Thinking-Problem-Solving-Today/dp/1506369121) by Peter J. Denning and Matti Tedre
 ## Intermediate Level
 
 ### [1. Data Structures](./1.Data_Structures/)
