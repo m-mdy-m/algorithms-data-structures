@@ -23,32 +23,32 @@ PEMDAS is a set of rules that helps solve mathematical problems in the correct o
 
 ### Example: Using PEMDAS to Solve an Expression
 
-**Problem:** Simplify \(5 + 2[10 - 3(4 - 2)] ÷ 2\)
+**Problem:** Simplify $5 + 2[10 - 3(4 - 2)] ÷ 2$
 
 1. **Parentheses:** Solve inside the innermost parentheses first:
-   \[ 4 - 2 = 2 \]
-   Now the expression is \(5 + 2[10 - 3(2)] ÷ 2\).
+   $4 - 2 = 2$
+   Now the expression is $5 + 2[10 - 3(2)] ÷ 2$.
 
 2. **Parentheses:** Solve the next set of parentheses:
-   \[ 3 \times 2 = 6 \]
-   Now the expression is \(5 + 2[10 - 6] ÷ 2\).
+   $3 \times 2 = 6$
+   Now the expression is $5 + 2[10 - 6] ÷ 2$.
 
 3. **Parentheses:** Continue solving inside the brackets:
-   \[ 10 - 6 = 4 \]
-   Now the expression is \(5 + 2[4] ÷ 2\).
+   $10 - 6 = 4$
+   Now the expression is $5 + 2[4] ÷ 2$.
 
 4. **Multiplication:** Solve the multiplication inside the brackets:
-   \[ 2 \times 4 = 8 \]
-   Now the expression is \(5 + 8 ÷ 2\).
+   $2 \times 4 = 8$
+   Now the expression is $5 + 8 ÷ 2$.
 
 5. **Division:** Perform the division:
-   \[ 8 ÷ 2 = 4 \]
-   Now the expression is \(5 + 4\).
+   $8 ÷ 2 = 4$
+   Now the expression is $5 + 4$.
 
 6. **Addition:** Finally, add the numbers:
-   \[ 5 + 4 = 9 \]
+   $5 + 4 = 9$
 
-So, \(5 + 2[10 - 3(4 - 2)] ÷ 2 = 9\).
+So, $5 + 2[10 - 3(4 - 2)] ÷ 2 = 9$.
 
 ### PEMDAS vs BODMAS
 
@@ -70,38 +70,38 @@ Understanding PEMDAS is crucial for various fields:
 
 ### Examples
 
-**Example 1:** Simplify \([18 + {12 - (4 \times 8)}]\)
+**Example 1:** Simplify $[18 + {12 - (4 \times 8)}]$
 
 1. **Parentheses:** Solve inside the innermost parentheses first:
-   \[ 4 \times 8 = 32 \]
-   Now the expression is \([18 + {12 - 32}]\).
+   $4 \times 8 = 32$
+   Now the expression is $[18 + {12 - 32}]$.
 
 2. **Parentheses:** Continue solving inside the brackets:
-   \[ 12 - 32 = -20 \]
-   Now the expression is \([18 + (-20)]\).
+   $12 - 32 = -20$
+   Now the expression is $[18 + (-20)]$.
 
 3. **Addition:** Finally, add the numbers:
-   \[ 18 + (-20) = -2 \]
+   $18 + (-20) = -2$
 
-**Example 2:** Calculate \((14 + 2 \div 3 + 1) - 2\)
+**Example 2:** Calculate $(14 + 2 \div 3 + 1) - 2$
 
 1. **Parentheses:** Solve inside the parentheses first:
-   \[ 2 \div 3 = 0.6667 \]
-   Now the expression is \((14 + 0.6667 + 1) - 2\).
+   $2 \div 3 = 0.6667$
+   Now the expression is $(14 + 0.6667 + 1) - 2$.
 
 2. **Addition:** Continue solving inside the parentheses:
-   \[ 14 + 0.6667 + 1 = 15.6667 \]
-   Now the expression is \(15.6667 - 2\).
+   $14 + 0.6667 + 1 = 15.6667$
+   Now the expression is $15.6667 - 2$.
 
 3. **Subtraction:** Finally, subtract the numbers:
-   \[ 15.6667 - 2 = 13.6667 \]
+   $15.6667 - 2 = 13.6667$
 
 ### Practice Problems
 
-1. **Solve:** \(2 - 7 \div (6 - 2) \times 3 + 8\)
-2. **Solve:** \(5 + 8 \times (2 + 3) \div 4 - 3\)
-3. **Simplify:** \(15 \div (6 - 3 \times 4)\)
-4. **Calculate:** \([20 + {12 - (5 \times 8)}]\)
+1. **Solve:** $2 - 7 \div (6 - 2) \times 3 + 8$
+2. **Solve:** $5 + 8 \times (2 + 3) \div 4 - 3$
+3. **Simplify:** $15 \div (6 - 3 \times 4)$
+4. **Calculate:** $[20 + {12 - (5 \times 8)}]$
 
 ### Conclusion
 
@@ -122,7 +122,7 @@ The PEMDAS rule is an essential guideline for solving math problems that involve
    - "Please Excuse My Dear Aunt Sally" is a common mnemonic to remember the order of operations.
 
 5. **Can you provide an example using PEMDAS?**
-   - Sure! For example, to solve \(5 + 2[10 - 3(4 - 2)] ÷ 2\), you would start with parentheses, then exponents, multiplication/division, and finally addition/subtraction, resulting in 9.
+   - Sure! For example, to solve $5 + 2[10 - 3(4 - 2)] ÷ 2$, you would start with parentheses, then exponents, multiplication/division, and finally addition/subtraction, resulting in 9.
 
 6. **What common mistakes occur with PEMDAS?**
    - Common mistakes include not prioritizing parentheses or ignoring the importance of exponents, leading to incorrect answers.
