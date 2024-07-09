@@ -60,7 +60,6 @@ A general term for a class of algorithms that aim to find a specific element in 
    - > [Test](8.Testing-And-Debugging-Techniques/Testing/)
 
 ### 9. [Additional Concept](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept) - (Not Necessary)
-   
 
 ### 10. [Mathematics for Computer Science](./10.Mathematics%20for%20Computer%20Science/)
   
