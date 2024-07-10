@@ -38,25 +38,20 @@
 ### GraphQL
 - [Learn GraphQL](https://github.com/m-mdy-m/learn_graphql)
 
-### Finally
-- [Challenges](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Challenges) >> challenge coding and implementing concepts
-
-### Additional Concepts and Technologies
-
-#### **Protocols**
-1. **HTTP/HTTPS**:
-   - **Why It's Important**: Understanding the protocol behind the web. HTTPS ensures secure communication.
-   - **Resource**: [HTTP: The Definitive Guide](https://www.oreilly.com/library/view/http-the-definitive/1565925092/)
-
-2. **TCP/IP**:
+### **Protocols**
+1. **TCP/IP**:
    - **Why It's Important**: Fundamental for network communication.
    - **Resource**: [TCP/IP Illustrated, Volume 1](https://www.pearson.com/store/p/tcp-ip-illustrated-volume-1-the-protocols/P100000135613)
 
-3. **gRPC**:
+2. **gRPC**:
    - **Why It's Important**: For efficient microservice communication.
    - **Resource**: [gRPC: Up and Running](https://www.oreilly.com/library/view/grpc-up-and/9781492058328/)
 
-#### **Security**
+3. **HTTP/2 and HTTP/3**:
+   - **Why It's Important**: Modern web protocols that improve performance and security.
+   - **Resource**: [HTTP/2 in Action](https://www.manning.com/books/http2-in-action)
+
+### **Security**
 1. **Authentication & Authorization**:
    - **Why It's Important**: Critical for securing access to applications and data.
    - **Resource**: [OAuth 2 in Action](https://www.manning.com/books/oauth-2-in-action)
@@ -69,7 +64,11 @@
    - **Why It's Important**: Protect data during transmission and secure network infrastructure.
    - **Resource**: [Network Security Essentials](https://www.pearson.com/store/p/network-security-essentials-applications-and-standards/P100000774536)
 
-#### **Database Design**
+4. **Secure Coding Practices**:
+   - **Why It's Important**: Prevent vulnerabilities in software development.
+   - **Resource**: [Secure Coding in C and C++](https://www.pearson.com/store/p/secure-coding-in-c-and-c-plus-plus/P100000188054)
+
+### **Database Design**
 1. **Database Normalization**:
    - **Why It's Important**: Ensures efficient and organized database structure.
    - **Resource**: [Database System Concepts](https://www.db-book.com/)
@@ -82,7 +81,15 @@
    - **Why It's Important**: Understanding different types of databases for handling various data structures.
    - **Resource**: [NoSQL Distilled](https://www.pearson.com/store/p/nosql-distilled-a-brief-guide-to-the-emerging-world-of-polyglot-persistence/P100000630100)
 
-#### **Additional Technologies**
+4. **Advanced SQL**:
+   - **Why It's Important**: For complex queries, optimization, and managing large datasets.
+   - **Resource**: [SQL Performance Explained](https://sql-performance-explained.com/)
+
+5. **Database Administration**:
+   - **Why It's Important**: For managing and maintaining database systems.
+   - **Resource**: [Database Administration: The Complete Guide to DBA Practices and Procedures](https://www.pearson.com/store/p/database-administration/P100000289881)
+
+### **Additional Technologies**
 
 1. **Message Queues**:
    - **Why It's Important**: For asynchronous communication and decoupling of services.
@@ -96,4 +103,33 @@
    - **Why It's Important**: Essential for modern application deployment and scaling.
    - **Resource**: [Cloud Computing: Concepts, Technology & Architecture](https://www.pearson.com/store/p/cloud-computing-concepts-technology-architecture/P100000684090)
 
-By integrating these additional concepts, your learning roadmap will cover a comprehensive range of technologies and principles critical for back-end development and overall system architecture.
+4. **Infrastructure as Code (IaC)**:
+   - **Why It's Important**: Automate and manage infrastructure with code.
+   - **Resource**: [Terraform: Up & Running](https://www.oreilly.com/library/view/terraform-up/9781492046905/)
+
+5. **Service Mesh**:
+   - **Why It's Important**: Manage microservice communication with enhanced security, reliability, and observability.
+   - **Resource**: [The Enterprise Path to Service Mesh Architectures](https://www.oreilly.com/library/view/the-enterprise-path/9781492059868/)
+
+6. **DevOps Practices**:
+   - **Why It's Important**: Improve collaboration, automation, and monitoring in software development and IT operations.
+   - **Resource**: [The DevOps Handbook](https://www.oreilly.com/library/view/the-devops-handbook/9781457191381/)
+
+7. **Blockchain Fundamentals**:
+   - **Why It's Important**: Understanding distributed ledger technology and its applications.
+   - **Resource**: [Mastering Blockchain](https://www.packtpub.com/product/mastering-blockchain-fourth-edition/9781803241067)
+
+8. **Edge Computing**:
+   - **Why It's Important**: For processing data closer to where it is generated, reducing latency and bandwidth usage.
+   - **Resource**: [Edge Computing: A Primer](https://www.oreilly.com/library/view/edge-computing/9781492043294/)
+
+9. **Serverless Architecture**:
+   - **Why It's Important**: Building and running applications without managing server infrastructure.
+   - **Resource**: [Serverless Architectures on AWS](https://www.oreilly.com/library/view/serverless-architectures-on/9781492059882/)
+
+10. **Site Reliability Engineering (SRE)**:
+    - **Why It's Important**: Applying software engineering principles to infrastructure and operations to create scalable and reliable software systems.
+    - **Resource**: [Site Reliability Engineering: How Google Runs Production Systems](https://sre.google/sre-book/table-of-contents/)
+
+### Finally
+- [Challenges](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Challenges) >> challenge coding and implementing concepts
