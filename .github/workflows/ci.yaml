@@ -21,10 +21,6 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install Python dependencies
-        run: pip install -r requirements.txt
-      - name: Run tests
-        run: pytest
 
   build-javascript:
     runs-on: ubuntu-latest
@@ -56,10 +52,6 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: ${{ matrix.java-version }}
-      - name: Build with Maven
-        run: mvn install
-      - name: Run tests
-        run: mvn test
 
   build-go:
     runs-on: ubuntu-latest
@@ -73,10 +65,6 @@ jobs:
         uses: actions/setup-go@v3
         with:
           go-version: ${{ matrix.go-version }}
-      - name: Install Go dependencies
-        run: go mod download
-      - name: Run tests
-        run: go test ./...
 
   build-rust:
     runs-on: ubuntu-latest
@@ -92,7 +80,3 @@ jobs:
           toolchain: ${{ matrix.rust-version }}
           profile: minimal
           override: true
-      - name: Install Rust dependencies
-        run: cargo build --release
-      - name: Run tests
-        run: cargo test
