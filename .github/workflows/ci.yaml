@@ -9,53 +9,90 @@ on:
       - main
 
 jobs:
-  build:
+  build-python:
     runs-on: ubuntu-latest
-
     strategy:
-        matrix:
-            language: [python, javascript, typescript, java, go, rust]
-            python-version: [3.8, 3.9, 3.10]
-            node-version: [14, 16, 18]
-            go-version: [1.17, 1.18, 1.19]
-            java-version: [11, 17]
-            rust-version: [1.52, 1.53, 1.54]
-
+      matrix:
+        python-version: [3.8, 3.9, 3.10]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
       - name: Set up Python
-        if: matrix.language == 'python'
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+      - name: Run tests
+        run: pytest
 
+  build-javascript:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14, 16, 18]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
       - name: Set up Node.js
-        if: matrix.language == 'javascript' || matrix.language == 'typescript'
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-
       - name: Install Node.js dependencies
-        if: matrix.language == 'javascript' || matrix.language == 'typescript'
         run: npm install
+      - name: Run tests
+        run: npm test
 
+  build-java:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java-version: [11, 17]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
       - name: Set up Java
-        if: matrix.language == 'java'
         uses: actions/setup-java@v3
         with:
           distribution: 'adopt'
           java-version: ${{ matrix.java-version }}
+      - name: Build with Maven
+        run: mvn install
+      - name: Run tests
+        run: mvn test
+
+  build-go:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        go-version: [1.17, 1.18, 1.19]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
       - name: Set up Go
-        if: matrix.language == 'go'
         uses: actions/setup-go@v3
         with:
           go-version: ${{ matrix.go-version }}
+      - name: Install Go dependencies
+        run: go mod download
+      - name: Run tests
+        run: go test ./...
+
+  build-rust:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        rust-version: [1.52, 1.53, 1.54]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
       - name: Set up Rust
-        if: matrix.language == 'rust'
         uses: actions-rs/toolchain@v1
         with:
-            toolchain: ${{ matrix.rust-version }}
-            profile: minimal
-            override: true
+          toolchain: ${{ matrix.rust-version }}
+          profile: minimal
+          override: true
+      - name: Install Rust dependencies
+        run: cargo build --release
+      - name: Run tests
+        run: cargo test
