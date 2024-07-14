@@ -1,18 +1,18 @@
-### [Clean Code](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Clean%20Code)
+### [Clean Code](./Clean%20Code/)
 - [Book](https://github.com/jnguyen095/clean-code/blob/master/Clean.Code.A.Handbook.of.Agile.Software.Craftsmanship.pdf)
 
-### [Utils](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils) : (`It is not related to data structure and algorithm` - Most of this part is my own additional learning roadmap)
-- [Version Control Systems (VCS): (Git)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/VCS)
-- [Command Line Interface (CLI)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/CLI)
-- [Continuous Integration/Continuous Delivery (CI/CD)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/CI-CD)
-- [Task Runners: (Gulp, Grunt)](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/Task-Runners)
-- [API Documentation tools](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/9.Additional-Concept/Utils/API-Documentation)
-  - [Swagger & OpenAPI](https://github.com/m-mdy-m/openapi-playground)
+### [Utils](./Utils/) : (`It is not related to data structure and algorithm` - Most of this part is my own additional learning roadmap)
+- [Version Control Systems (VCS): (Git)](./Utils/VCS/)
+- [Command Line Interface (CLI)](./Utils/CLI)
+- [Continuous Integration/Continuous Delivery (CI/CD)](./Utils/CI-CD)
+- [Task Runners: (Gulp, Grunt)](./Utils/Task-Runners)
+- [API Documentation tools](./Utils/API-Documentation)
+  - [Swagger & OpenAPI](https://github.com/m-mdy-m/openapi-learning)
 
 ### Database
-- [Redis](https://github.com/m-mdy-m/Redis-Playground)
-- [SQL](https://github.com/m-mdy-m/SQL-Playground)
-- [PostgreSQL](https://github.com/m-mdy-m/postgreSQL-playground)
+- [Redis](https://github.com/m-mdy-m/Redis-Learning)
+- [SQL](https://github.com/m-mdy-m/SQL-DeepDiveLearning)
+- [PostgreSQL](https://github.com/m-mdy-m/Mastering-PostgreSQL)
 - [Scaling Databases (Database Indexes)](https://www.freecodecamp.org/news/database-indexing-at-a-glance-bb50809d48bd/)
 
 ### Message Brokers
@@ -20,7 +20,7 @@
 - Kafka
 
 ### Containerization
-- [Docker & Kubernetes](https://github.com/m-mdy-m/docker-playground)
+- [Docker & Kubernetes](https://github.com/m-mdy-m/docker-deep-dive)
 
 ### Search Engines
 - Elasticsearch
@@ -38,8 +38,11 @@
 ### GraphQL
 - [Learn GraphQL](https://github.com/m-mdy-m/learn_graphql)
 
-### **Protocols**
-1. **TCP/IP**:
+### [**Protocols**](./Utils/Protocols/)
+
+> [Before Read](./Utils/Protocols/1.Please_Read./)
+
+1. [**TCP/IP**](./Utils/Protocols/TCP-IP/):
    - **Why It's Important**: Fundamental for network communication.
    - **Resource**: [TCP/IP Illustrated, Volume 1](https://www.pearson.com/store/p/tcp-ip-illustrated-volume-1-the-protocols/P100000135613)
 
