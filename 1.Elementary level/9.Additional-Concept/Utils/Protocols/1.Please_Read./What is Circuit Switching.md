@@ -11,14 +11,17 @@ In circuit switching, network resources (such as bandwidth) are allocated and re
 1. **Circuit Establishment:**
    - A dedicated path or circuit is set up between the source and destination nodes through a series of intermediary switches or nodes.
    - Resources along the path, including bandwidth and switches, are reserved to ensure uninterrupted data transmission.
+   - This phase involves signaling protocols to establish the path, which may include dialing a number in a telephone network or a similar connection request in a data network.
 
 2. **Data Transfer:**
    - Once the circuit is established, data can be transmitted between the communicating parties without interruption.
    - The dedicated path remains active and reserved until the communication session is terminated.
+   - The data transfer phase benefits from the pre-established path, resulting in minimal delay and consistent transmission quality.
 
 3. **Circuit Disconnection:**
    - Either party can initiate the disconnection of the circuit once the communication session is complete.
    - Upon disconnection, all reserved resources are released and made available for other communications.
+   - This phase ensures that network resources are efficiently reallocated to new communication requests.
 
 ### Examples of Circuit Switching
 
