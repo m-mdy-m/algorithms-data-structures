@@ -11,6 +11,6 @@ def binarySearch(arr,key):
             start = mid +1
     return -1
 
-arr = [0,1,2,3,4,6,100,10000];
+arr = [0,1,2,3,4,6,100,10000]
 
 print(binarySearch(arr, 100)); # 6
