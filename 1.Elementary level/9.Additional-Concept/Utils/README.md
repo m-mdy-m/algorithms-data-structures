@@ -36,8 +36,6 @@
 
 ### [**Protocols**](./Protocols/)
 
-> [Before Read](./Protocols/1.Please_Read./)
-
 1. [**TCP/IP**](./Protocols/TCP-IP/):
    - **Why It's Important**: Fundamental for network communication.
    - **Resource**: [TCP/IP Illustrated, Volume 1](https://www.pearson.com/store/p/tcp-ip-illustrated-volume-1-the-protocols/P100000135613)
