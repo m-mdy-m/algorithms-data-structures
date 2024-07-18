@@ -2,14 +2,14 @@
 
 > [Before Read](./1.Please_Read./)
 
-### 1. [**FDM (Frequency Division Multiplexing)**](./1.Please_Read./FDM.md)
+### 1. [**FDM (Frequency Division Multiplexing)**]()
 - **Deeper Understanding**:
   - **Guard Bands**: Small frequency ranges between channels to prevent overlap and interference.
   - **Applications**: Analog broadcasting, cable television, and cellular networks.
   - **Advantages**: Simultaneous transmission of multiple signals.
   - **Challenges**: Requires a wider bandwidth and more complex receiver design.
 
-### 2. [**Circuit Switching**](./1.Please_Read./What%20is%20Circuit%20Switching.md)
+### 2. [**Circuit Switching**]()
 - **Deeper Understanding**:
   - **Phases**:
     1. **Circuit Establishment**: Connection path is set up.
