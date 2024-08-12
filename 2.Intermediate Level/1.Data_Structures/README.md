@@ -1,7 +1,7 @@
 ## [Arrayss](./Array/)
 - [**Static Arrays**](./Array/Static_Arrays/)
-  - Single-Dimensional Arrays
-  - Multi-Dimensional Arrays (2D, 3D)
+  - [Single-Dimensional Arrays](./Array/Static_Arrays/Single-Dimensional/)
+  - [Multi-Dimensional Arrays (2D, 3D)](./Array/Static_Arrays/Multi-Dimensional/)
 - **Dynamic Arrays**
   - ArrayList (Java), Vector (C++), List (Python)
 - **Linked Lists**
