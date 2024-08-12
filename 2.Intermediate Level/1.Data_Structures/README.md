@@ -1,5 +1,5 @@
 ## [Arrayss](./Array/)
-- **Static Arrays**
+- [**Static Arrays**](./Array/Static_Arrays/)
   - Single-Dimensional Arrays
   - Multi-Dimensional Arrays (2D, 3D)
 - **Dynamic Arrays**
