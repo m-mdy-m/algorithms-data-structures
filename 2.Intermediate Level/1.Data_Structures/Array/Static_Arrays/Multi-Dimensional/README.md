@@ -106,22 +106,22 @@ For example, in edge detection, a filter might emphasize the difference between 
 #### Example 1: 2D Matrix (2x3 Matrix)
 A 2D matrix is essentially a grid of numbers arranged in rows and columns. For example, a 2x3 matrix (2 rows and 3 columns) can be represented as:
 
-\[
+$
 \mathbf{A} = 
 \begin{pmatrix}
 1 & 2 & 3 \\
 4 & 5 & 6
 \end{pmatrix}
-\]
+$
 
 This matrix has:
-- 2 rows: \([1, 2, 3]\) and \([4, 5, 6]\)
-- 3 columns: \([1, 4]\), \([2, 5]\), and \([3, 6]\)
+- 2 rows: $[1, 2, 3]$ and $[4, 5, 6]$
+- 3 columns: $[1, 4]$, $[2, 5]$, and $[3, 6]$
 
 #### Example 2: 3D Matrix (2x2x3 Tensor)
 A 3D matrix (or tensor) can be thought of as a stack of 2D matrices. For example, a 2x2x3 tensor can be represented as:
 
-\[
+$
 \mathbf{B} = 
 \begin{pmatrix}
 \begin{pmatrix}
@@ -133,7 +133,7 @@ A 3D matrix (or tensor) can be thought of as a stack of 2D matrices. For example
 10 & 11 & 12
 \end{pmatrix}
 \end{pmatrix}
-\]
+$
 
 This tensor can also be visualized as two 2x3 matrices stacked along a third dimension.
 
@@ -141,24 +141,24 @@ This tensor can also be visualized as two 2x3 matrices stacked along a third dim
 
 A 2D shape, such as a rectangle, can be described using its vertices (corner points) in a 2D coordinate system:
 
-- Let the vertices be \((0, 0)\), \((4, 0)\), \((4, 3)\), and \((0, 3)\).
+- Let the vertices be $(0, 0)$, $(4, 0)$, $(4, 3)$, and $(0, 3)$.
 
 This rectangle can be represented as a set of coordinate pairs:
 
-\[
+$
 \text{Vertices} = \{(0, 0), (4, 0), (4, 3), (0, 3)\}
-\]
+$
 
 #### Example 4: 3D Shape (Cube)
 
 A 3D shape, such as a cube, can be described using its vertices in a 3D coordinate system. For a cube of side length 2 centered at the origin, the vertices are:
 
-\[
+$
 \text{Vertices} = \{
 (-1, -1, -1), (-1, -1, 1), (-1, 1, -1), (-1, 1, 1), \\
 (1, -1, -1), (1, -1, 1), (1, 1, -1), (1, 1, 1)
 \}
-\]
+$
 
 This cube can be visualized as having 8 vertices, 12 edges, and 6 faces.
 
