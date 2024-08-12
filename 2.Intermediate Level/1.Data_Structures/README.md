@@ -1,4 +1,4 @@
-## Arrays and Lists
+## [Arrayss](./Array/)
 - **Static Arrays**
   - Single-Dimensional Arrays
   - Multi-Dimensional Arrays (2D, 3D)
