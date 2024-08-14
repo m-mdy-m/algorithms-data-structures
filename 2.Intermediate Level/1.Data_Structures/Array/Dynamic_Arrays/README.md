@@ -189,6 +189,80 @@ Dynamic arrays offer several performance advantages, particularly when dealing w
 - **Tiered Vectors**: A more advanced variant offering $O(n^{1/k})$ performance for insertions and deletions, where $k$ is a constant.
 - **Hashed Array Trees**: This variant aims to optimize space usage and maintain $O(1)$ amortized performance while avoiding the need for large contiguous memory blocks.
 
+### Implementing a Dynamic Array: Pseudocode and Flowchart
+
+A dynamic array is a data structure that allows you to store a collection of elements with the ability to resize itself automatically when the capacity is exceeded. Below is a conceptual explanation of how to implement a dynamic array, described in both pseudocode and a flowchart format.
+
+#### Pseudocode for Dynamic Array Implementation
+
+1. **Initialize the Dynamic Array:**
+   - Start with an initial capacity for the array (e.g., 4).
+   - Create an array of this initial capacity.
+   - Set the size of the array (number of elements currently in the array) to 0.
+
+2. **Add Element to the Array:**
+   - Check if the array is full (i.e., if the size is equal to the capacity).
+   - If the array is full:
+     - Double the capacity of the array.
+     - Create a new array with the doubled capacity.
+     - Copy all elements from the old array to the new array.
+     - Replace the old array with the new array.
+   - Add the new element to the array.
+   - Increment the size of the array by 1.
+
+3. **Remove Element from the Array:**
+   - Check if the array is empty (i.e., if the size is 0).
+   - If not empty:
+     - Remove the element from the desired position (usually the end or a specific index).
+     - Shift all elements after the removed element to fill the gap (if removed from a specific index).
+     - Decrement the size of the array by 1.
+
+4. **Resize the Array:**
+   - Implement a method to shrink the array if the number of elements falls below a certain threshold (e.g., less than 30% of the capacity).
+   - Allocate a smaller array.
+   - Copy the elements to this new array.
+   - Replace the old array with the new array.
+
+#### Flowchart for Dynamic Array Implementation
+
+Here is a description of how the flowchart for implementing a dynamic array would look:
+
+1. **Start:**
+   - Initialize the dynamic array with a certain capacity and set the size to 0.
+
+2. **Add Element:**
+   - **Is the Array Full?**
+     - Yes: 
+       - Double the capacity.
+       - Allocate new memory with doubled capacity.
+       - Copy elements from the old array to the new array.
+       - Update the reference to the new array.
+     - No:
+       - Add the element at the end of the array.
+   - **Increment Size:**
+     - Increase the size of the array by 1.
+
+3. **Remove Element:**
+   - **Is the Array Empty?**
+     - Yes:
+       - Output an error message or return without removing an element.
+     - No:
+       - Remove the element from the array (usually from the end).
+       - Shift elements if necessary.
+       - Decrement the size by 1.
+
+4. **Resize Array (Optional):**
+   - **Is the Array Under-utilized?**
+     - Yes:
+       - Shrink the array size if usage is below a certain threshold.
+       - Allocate smaller memory and copy elements.
+   - No: Continue using the current array.
+
+5. **End:**
+   - The dynamic array implementation allows for efficient addition and removal of elements with automatic resizing.
+
+This step-by-step process in pseudocode and flowchart outlines the basic structure and logic for implementing a dynamic array. The actual implementation would vary depending on the programming language and specific requirements, but the core concepts remain the same.
+
 ### Conclusion
 
 Dynamic arrays are a versatile and essential data structure in computer science, offering a balance between the fixed size of static arrays and the flexibility of linked lists. Their ability to grow and shrink dynamically while providing efficient random access makes them invaluable for many applications. With numerous implementations and variants, dynamic arrays continue to be a fundamental concept in both theoretical and practical computing.
