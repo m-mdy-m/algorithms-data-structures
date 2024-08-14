@@ -39,7 +39,4 @@ int main(){
     }
     printf("%3d min\n",min);
     printf("%3d max\n",max);
-
-
-
 }
