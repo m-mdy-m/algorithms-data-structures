@@ -1,16 +1,4 @@
-## [Arrayss](./Array/)
-- [**Static Arrays**](./Array/Static_Arrays/)
-  - [Single-Dimensional Arrays](./Array/Static_Arrays/Single-Dimensional/)
-  - [Multi-Dimensional Arrays (2D, 3D)](./Array/Static_Arrays/Multi-Dimensional/)
-- [**Dynamic Arrays**](./Array/Dynamic_Arrays/)
-  - [Single-Dimensional Arrays](./Array/Dynamic_Arrays/Single-Dimensional/)
-  - [Multi-Dimensional Arrays (2D, 3D)](./Array/Dynamic_Arrays/Multi-Dimensional/)
-  - [ArrayList (Java)](./Array/Dynamic_Arrays/other/ArrayList/), [Vector (C++)](./Array/Dynamic_Arrays/other/Vector/), [List (Python)](./Array/Dynamic_Arrays/other/List/)
-- **Linked Lists**
-  - Singly Linked List
-  - Doubly Linked List
-  - Circular Linked List
-
+## [Arrayss](https://github.com/m-mdy-m/Arliz)
 ## Stacks and Queues
 - **Stacks**
   - Implementation using Arrays
