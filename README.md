@@ -25,7 +25,7 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
 
 # Learning list:
 
-## [befor](./The-Labors-of-Learning/)
+## [Before](./The-Labors-of-Learning/)
 
 ## [Elementary level](./1.Elementary%20level//)
 
