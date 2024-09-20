@@ -6,10 +6,10 @@ Greetings! This repository serves as your comprehensive guide to mastering the i
 
 **What You'll Learn:**
 
-* **Programming Fundamentals:** Gain a solid foundation in core programming concepts, building blocks for any programming language you choose to tackle.
-* **Algorithmic Problem Solving:** Develop your problem-solving skills with a focus on algorithms, the step-by-step instructions that computers follow to solve problems.
-* **Data Structure Mastery:** Explore various data structures, the organized ways to store and manage data efficiently within your programs. 
-* **Advanced Concepts:** As you solidify your knowledge, delve into more advanced topics like Big O Notation, Design Patterns, and potentially explore specific algorithms related to different programming areas.
+- **Programming Fundamentals:** Gain a solid foundation in core programming concepts, building blocks for any programming language you choose to tackle.
+- **Algorithmic Problem Solving:** Develop your problem-solving skills with a focus on algorithms, the step-by-step instructions that computers follow to solve problems.
+- **Data Structure Mastery:** Explore various data structures, the organized ways to store and manage data efficiently within your programs.
+- **Advanced Concepts:** As you solidify your knowledge, delve into more advanced topics like Big O Notation, Design Patterns, and potentially explore specific algorithms related to different programming areas.
 
 **Delving Deeper:**
 
@@ -25,56 +25,55 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
 
 # Learning list:
 
+## [befor](./The-Labors-of-Learning/)
+
 ## [Elementary level](./1.Elementary%20level//)
 
 ## [Intermediate Level](./Intermediate%20Level/)
 
-## [Advanced Level](./3.Advanced%20Level/)
-
-## [More Advanced Level](./4.More%20Advanced%20Level/)
-
 ## Learning Resources
+
 > Sites with ⭐ represent the most used
 
- - [wikipedia](https://en.wikipedia.org)(⭐)
- - [refactoring](https://refactoring.guru/design-patterns) (⭐)
- - [MDN](https://developer.mozilla.org)
- - [GeeksforGeeks](https://www.geeksforgeeks.org)(⭐)
- - [educative](https://www.educative.io)
- - [stackify](https://stackify.com)
- - [press.rebus.community](https://press.rebus.community)
- - [enjoyalgorithms](https://www.enjoyalgorithms.com/blog)
- - [scoutapm](https://scoutapm.com/blog)
- - [stackoverflow](https://stackoverflow.com)
- - [medium](https://medium.com)(⭐)
- - [linkedin](https://www.linkedin.com)
- - [altcademy](https://www.altcademy.com)
- - [digitalocean](https://www.digitalocean.com)
- - [boardinfinity](https://www.boardinfinity.com)
- - [baeldung](https://www.baeldung.com)
- - [dev.to](https://dev.to)(⭐)
- - [tutorialspoint](https://www.tutorialspoint.com/design_pattern)
- - [freecodecamp](https://www.freecodecamp.org)
- - [techopedia](https://www.techopedia.com)
- - [programiz](https://www.programiz.com)
- - [javatpoint](https://www.javatpoint.com)
- - [tricentis](https://www.tricentis.com)
- - [maze](https://maze.co)
- - [browserstack](https://www.browserstack.com) ⭐
- - [techtarget](https://www.techtarget.com) ⭐
+- [wikipedia](https://en.wikipedia.org)(⭐)
+- [refactoring](https://refactoring.guru/design-patterns) (⭐)
+- [MDN](https://developer.mozilla.org)
+- [GeeksforGeeks](https://www.geeksforgeeks.org)(⭐)
+- [educative](https://www.educative.io)
+- [stackify](https://stackify.com)
+- [press.rebus.community](https://press.rebus.community)
+- [enjoyalgorithms](https://www.enjoyalgorithms.com/blog)
+- [scoutapm](https://scoutapm.com/blog)
+- [stackoverflow](https://stackoverflow.com)
+- [medium](https://medium.com)(⭐)
+- [linkedin](https://www.linkedin.com)
+- [altcademy](https://www.altcademy.com)
+- [digitalocean](https://www.digitalocean.com)
+- [boardinfinity](https://www.boardinfinity.com)
+- [baeldung](https://www.baeldung.com)
+- [dev.to](https://dev.to)(⭐)
+- [tutorialspoint](https://www.tutorialspoint.com/design_pattern)
+- [freecodecamp](https://www.freecodecamp.org)
+- [techopedia](https://www.techopedia.com)
+- [programiz](https://www.programiz.com)
+- [javatpoint](https://www.javatpoint.com)
+- [tricentis](https://www.tricentis.com)
+- [maze](https://maze.co)
+- [browserstack](https://www.browserstack.com) ⭐
+- [techtarget](https://www.techtarget.com) ⭐
 
 ## Project
+
 > Attention : Projects and solution of different algorithms or design patterns are solved in this organization
 
 ### [Organization](https://github.com/Algorithmic-Solutions)
 
-
 > [String Manipulation and Algorithms](https://github.com/Algorithmic-Solutions/.github/blob/main/profile/README.md#string-manipulation-and-algorithms)
+
 ---
 
-> [Design Pattern](https://github.com/Algorithmic-Solutions/.github/blob/main/profile/README.md#design-pattern)
----
 ## Organizations
+
 - [Algorithmic Solutions](https://github.com/Algorithmic-Solutions) solution of all kinds of algorithms
 - [Testing](https://github.com/Testing-Guild) implement all types of tests and test techniques
 

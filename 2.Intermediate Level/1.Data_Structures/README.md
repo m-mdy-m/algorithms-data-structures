@@ -1,5 +1,7 @@
-## [Arrayss](https://github.com/m-mdy-m/Arliz)
+## [Arrayss](../../Arliz/)
+
 ## Stacks and Queues
+
 - **Stacks**
   - Implementation using Arrays
   - Implementation using Linked Lists
@@ -12,6 +14,7 @@
   - Priority Queues
 
 ## Hash Tables
+
 - **Hash Functions**
   - Division Method
   - Multiplication Method
@@ -21,8 +24,9 @@
 - **Advanced Hash Functions**
   - Universal Hashing
   - Perfect Hashing
-  
+
 ## Trees
+
 - **Binary Trees**
   - Properties, Traversals (Inorder, Preorder, Postorder)
 - **Binary Search Trees**
