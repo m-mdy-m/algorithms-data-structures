@@ -1,6 +1,6 @@
 [submodule "Arliz"]
 	path = Arliz
 	url = https://github.com/m-mdy-m/Arliz
-[submodule "The-Labors-of-Learning"]
-	path = The-Labors-of-Learning
-	url = https://github.com/m-mdy-m/The-Labors-of-Learning
+[submodule "SPathways"]
+	path = SPathways
+	url = https://github.com/m-mdy-m/SPathways.git
