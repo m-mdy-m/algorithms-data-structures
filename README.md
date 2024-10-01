@@ -27,9 +27,15 @@ A comprehensive list of trusted learning resources awaits you, featuring highly 
 
 ## [Before](./The-Labors-of-Learning/)
 
-## [Elementary level](./1.Elementary%20level//)
+## [Elementary level](./1.Elementary%20level)
 
-## [Intermediate Level](./Intermediate%20Level/)
+## [Intermediate Level](./2.Intermediate%20Level/)
+
+## [Advanced level](./3.Advanced%20level/)
+
+## [Thanos Level](./4.Thanos%20level/)
+
+## [Merlin level](./5.Merlin%20level/)
 
 ## Learning Resources
 
