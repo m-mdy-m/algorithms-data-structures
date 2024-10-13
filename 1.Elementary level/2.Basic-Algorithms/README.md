@@ -2,7 +2,7 @@
 
 Algorithms are the lifeblood of computing. They are the step-by-step instructions that computers follow to solve problems, analyze data, and make decisions. Just like recipes, they break down complex tasks into manageable procedures. Understanding these fundamental algorithms is a stepping stone to mastering computer science and programming.
 
-> [What is Algorithm](https://github.com/m-mdy-m/algorithms-data-structures/tree/main/1.IntroductionToAlgorithmsAndProblemSolving)
+> [What is Algorithm](../1.Understanding%20Algorithms/README.md)
 
 ## 1. Searching Algorithms:
 
