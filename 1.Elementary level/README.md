@@ -12,8 +12,6 @@
 - **Algorithm Analysis**:
   - Time complexity: Big-O notation, best/worst/average cases.
   - Space complexity.
-- **Flowchart Basics**:
-  - How to represent algorithms visually with flowcharts.
 - **Example: Basic Arithmetic Algorithms** (e.g., addition, subtraction).
   - Create flowcharts for simple algorithms.
 
