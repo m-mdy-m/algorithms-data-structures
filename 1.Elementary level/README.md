@@ -20,8 +20,6 @@
 - **Why Data Structures?**
   - Understanding the relationship between data structures and algorithms.
   - Flowcharts for operations like inserting or searching data in arrays, stacks, queues.
-  - Resources:
-    - [Introduction of Data Structure](3.Introduction-of-Data%20Structure/)
 
 ### 4. [**String Manipulation Algorithms**](./4.String-Manipulation-And-Algorithms/)
 
