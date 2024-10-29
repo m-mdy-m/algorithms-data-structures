@@ -9,16 +9,12 @@
 
 ### 2. [**Basic Algorithm Concepts**](./2.Basic-Algorithms/)
 
-- **Algorithm Analysis**:
-  - Time complexity: Big-O notation, best/worst/average cases.
-  - Space complexity.
-- **Example: Basic Arithmetic Algorithms** (e.g., addition, subtraction).
-  - Create flowcharts for simple algorithms.
+- **[Algorithm Analysis](./2.Basic-Algorithms/Algorithm%20Analysis.md)**:
 
 ### 3. [**Introduction to Data Structures**](./3.Introduction-of-Data%20Structure/)
 
 - **Why Data Structures?**
-  - Understanding the relationship between data structures and algorithms.
+  - [Understanding the relationship between data structures and algorithms.](https://typeset.io/pdf/discovering-relationships-between-data-structures-and-4iw98s3et8.pdf)
   - Flowcharts for operations like inserting or searching data in arrays, stacks, queues.
 
 ### 4. [**String Manipulation Algorithms**](./4.String-Manipulation-And-Algorithms/)
