@@ -1,3 +1,2 @@
 - **[Algorithm Analysis](./Algorithm%20Analysis.md)**:
 - **Example: [Basic Arithmetic Algorithms](https://github.com/m-mdy-m/TechShelf/tree/main/Algorithms/Arithmetic)** (e.g., addition, subtraction).
-  - Create flowcharts for simple algorithms.
