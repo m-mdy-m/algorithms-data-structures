@@ -1,8 +1,6 @@
 ### 1.[ **Understanding Algorithms**](./1.IntroductionToAlgorithms/)
 
 - **What is an Algorithm?**
-  - Definition, characteristics, and importance of algorithms.
-  - Flowcharts and pseudocode for basic algorithm representation.
   - [Resources](https://github.com/m-mdy-m/TechShelf/tree/main/Algorithms)
 
 ### 2. [**Basic Algorithm Concepts**](./2.Basic-Algorithms/)
