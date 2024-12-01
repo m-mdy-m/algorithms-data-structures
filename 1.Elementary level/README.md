@@ -11,7 +11,8 @@
 
 - **Why Data Structures?**
   - [Understanding the relationship between data structures and algorithms.](https://typeset.io/pdf/discovering-relationships-between-data-structures-and-4iw98s3et8.pdf)
-  - Flowcharts for operations like inserting or searching data in arrays, stacks, queues.
+  - [Flowcharts for operations like inserting or searching data in arrays, stacks, queues.](https://github.com/m-mdy-m/Arliz)
+  - Everything about arrays should be said or done in this repository and book.
 
 ### 4. [**String Manipulation Algorithms**](./4.String-Manipulation-And-Algorithms/)
 
