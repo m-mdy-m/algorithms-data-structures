@@ -14,14 +14,17 @@
   - [Flowcharts for operations like inserting or searching data in arrays, stacks, queues.](https://github.com/m-mdy-m/Arliz)
   - Everything about arrays should be said or done in this repository and book.
 
-### 4. [**String Manipulation Algorithms**](./4.String-Manipulation-And-Algorithms/)
+### 4. [**String Algorithms**](https://github.com/m-mdy-m/TechShelf/tree/main/Algorithms/String)
 
-- **Common String Operations**:
-  - Searching (e.g., finding substrings).
-  - String reversal.
-- Flowchart examples for simple string operations.
-- **Key Algorithms**:
-  - String search algorithms (e.g., Knuth-Morris-Pratt, Rabin-Karp).
+- [Projects](./4.String/Project.md) - [Explanation](./4.String/README.md)
+
+#### 4.1 [**String Manipulation Algorithms**](https://github.com/m-mdy-m/TechShelf/tree/main/Algorithms/String/Manipulation)
+
+- [Projects](./4.String/Manipulation//Project.md) - [Explanation](./4.String/Manipulation//README.md)
+
+#### 4.2 [**String Searching Algorithms**](https://github.com/m-mdy-m/TechShelf/tree/main/Algorithms/String/Searching)
+
+- [Projects](./4.String/Searching/Project.md) - [Explanation](./4.String/Searching/README.md)
 
 ### 5. [**Basic Sorting Algorithms**](./5.Basic-Sorting/)
 
