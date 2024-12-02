@@ -22,8 +22,6 @@
 - Flowchart examples for simple string operations.
 - **Key Algorithms**:
   - String search algorithms (e.g., Knuth-Morris-Pratt, Rabin-Karp).
-  - Resources:
-    - [String Manipulation and Algorithms PDF](book/String%20Manipulation_docx.pdf)
 
 ### 5. [**Basic Sorting Algorithms**](./5.Basic-Sorting/)
 
