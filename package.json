@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/m-mdy-m/algorithms-data-structures#readme",
   "devDependencies": {
-    "ts-node": "^10.9.2"
+    "@types/node": "^22.10.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
   }
 }
