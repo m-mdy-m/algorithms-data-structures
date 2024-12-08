@@ -1,6 +1,6 @@
 # Project for String Algorithms
 
-## [x] **[1. String Parsing for Natural Language Understanding](./1/)**
+## **[1. String Parsing for Natural Language Understanding](./1/)**
 
 **Objective**: Build a parser that processes natural language text into a structured representation like a syntax tree.
 
