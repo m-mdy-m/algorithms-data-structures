@@ -38,7 +38,7 @@ Syntax Tree:
 ---
 
 ## **2. String Compression Validator**
-
+**[FlowChart](https://codepen.io/m-mdy-m/pen/OPLbmWM)**
 **Objective**: Design a tool that validates whether a compressed string representation is correct according to a specific encoding scheme.
 
 ### **Requirements**:
