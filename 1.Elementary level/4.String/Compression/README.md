@@ -1,6 +1,6 @@
 ### **Compression Algorithms**
 
-- Run-Length Encoding (RLE)
+- [Run-Length Encoding (RLE)](./rle/)
 - Huffman Encoding
 - Arithmetic Encoding
 - Burrows-Wheeler Transform (BWT)
