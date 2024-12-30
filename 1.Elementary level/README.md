@@ -16,16 +16,6 @@
 
 ### 4. [**String Algorithms**](https://github.com/m-mdy-m/TechShelf/tree/main/Algorithms/String)
 
-- [Projects](./4.String/Project.md) - [Explanation](./4.String/README.md)
-
-#### 4.1 [**String Manipulation Algorithms**](https://github.com/m-mdy-m/TechShelf/tree/main/Algorithms/String/Manipulation)
-
-- [Projects](./4.String/Manipulation//Project.md) - [Explanation](./4.String/Manipulation//README.md)
-
-#### 4.2 [**String Searching Algorithms**](https://github.com/m-mdy-m/TechShelf/tree/main/Algorithms/String/Searching)
-
-- [Projects](./4.String/Searching/Project.md) - [Explanation](./4.String/Searching/README.md)
-
 ### 5. [**Basic Sorting Algorithms**](./5.Basic-Sorting/)
 
 - **Introduction to Sorting**:
