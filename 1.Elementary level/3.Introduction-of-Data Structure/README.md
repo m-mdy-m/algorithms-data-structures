@@ -1,3 +1,0 @@
-- **Why Data Structures?**
-  - [Understanding the relationship between data structures and algorithms.](https://medium.com/@srishti.nath/the-very-very-basic-relationship-between-data-structures-and-algorithms-1fb935db2faa)
-  - Flowcharts for operations like inserting or searching data in arrays, stacks, queues.
