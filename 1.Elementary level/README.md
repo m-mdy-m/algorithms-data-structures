@@ -6,7 +6,9 @@
 
 - **Definition and Significance**
 
-  - Historical perspective: Early algorithms (Euclid's algorithm, Al-Khwarizmi's contributions)
+  - [Historical perspective: Early algorithms (Euclid's algorithm, Al-Khwarizmi's contributions)](https://quantumzeitgeist.com/the-secret-life-of-algorithms-how-ancient-mathematical-ideas-power-modern-computing/)
+  - [https://en.wikipedia.org/wiki/Euclidean_algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm)
+  - [https://languagelog.ldc.upenn.edu/nll/?p=29074](https://languagelog.ldc.upenn.edu/nll/?p=29074)
 
 - **Algorithms vs. Programs**
 
@@ -358,4 +360,4 @@
   - Breaking complex problems into subproblems
   - Interface design between components
   - Recombination strategies
-ط
+    ط
