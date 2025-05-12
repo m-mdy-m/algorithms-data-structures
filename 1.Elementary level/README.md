@@ -10,17 +10,9 @@
   - [https://en.wikipedia.org/wiki/Euclidean_algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm)
   - [https://languagelog.ldc.upenn.edu/nll/?p=29074](https://languagelog.ldc.upenn.edu/nll/?p=29074)
 
-- **Algorithms vs. Programs**
-
-  - Distinction between algorithmic thinking and coding
-  - How algorithms transcend specific programming languages
-  - The implementation spectrum: Pseudocode → Flowcharts → Code
-
-- **Computational Thinking Foundations**
-  - Decomposition: Breaking problems into manageable parts
-  - Pattern recognition: Identifying similarities with known problems
-  - Abstraction: Focusing on relevant details while ignoring others
-  - Algorithmic design: Creating step-by-step solutions
+- **Algorithms & Computational Thinking Foundations**
+  - https://www.learning.com/blog/defining-computational-algorithmic-design-thinking
+  - https://gasstationwithoutpumps.wordpress.com/2010/08/12/algorithmic-vs-computational-thinking/
 
 ## 2. **Algorithm Representation**
 
