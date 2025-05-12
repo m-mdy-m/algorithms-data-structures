@@ -16,58 +16,8 @@
 
 ## 2. **Algorithm Analysis Basics**
 
-### Why Analyze Algorithms?
-
-- **The Importance of Efficiency**
-
-  - Impact of algorithm choice on system performance
-
-- **Performance Metrics**
-
-  - Execution time (CPU utilization)
-  - Memory consumption
-  - I/O operations
-  - Power efficiency considerations
-
-- **Scalability Concerns**
-
-  - How algorithms behave as input size grows
-  - The concept of growth rates
-
-- **Comparative Analysis**
-  - Benchmarking fundamentals
-  - Empirical vs. theoretical analysis
-  - When different algorithms are appropriate
-
-### Simple Complexity Analysis
-
-- **Counting Operations**
-
-  - Identifying elementary operations
-  - Cost models for different operations
-  - Analyzing dominant operations
-
-- **Introduction to Big O Notation**
-
-  - Mathematical foundation of complexity analysis
-  - Common complexity classes (O(1), O(n), O(log n), O(n²), etc.)
-
-- **Best, Average, and Worst Case Analysis**
-
-  - Understanding different input scenarios
-  - How to identify worst-case inputs
-  - Amortized analysis introduction
-
-- **Space Complexity**
-
-  - Memory usage analysis
-  - Auxiliary space vs. input space
-  - Time-space tradeoffs
-
-- **Practical Complexity Analysis**
-  - Simplification techniques
-  - Loop analysis
-  - Nested structures and recursive calls
+I built a tool to understand this in depth and better:
+[https://github.com/medishen/TideityIQ](https://github.com/medishen/TideityIQ)
 
 ## 3. **Fundamental Data Structures**
 
