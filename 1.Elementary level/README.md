@@ -19,6 +19,9 @@
 I built a tool to understand this in depth and better:
 [https://github.com/medishen/TideityIQ](https://github.com/medishen/TideityIQ)
 
+Various resources regarding algorithm analysis:
+[https://github.com/m-mdy-m/TechShelf/tree/main/Algorithms/Analysis](https://github.com/m-mdy-m/TechShelf/tree/main/Algorithms/Analysis)
+
 ## 3. **Fundamental Data Structures**
 
 ### Why Data Structures Matter
