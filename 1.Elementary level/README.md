@@ -14,23 +14,7 @@
   - https://www.learning.com/blog/defining-computational-algorithmic-design-thinking
   - https://gasstationwithoutpumps.wordpress.com/2010/08/12/algorithmic-vs-computational-thinking/
 
-## 2. **Algorithm Representation**
-
-### Flowchart Fundamentals
-
-- **Basic Flowchart Elements**
-- **Structured Programming Through Flowcharts**
-- **From Problem to Flowchart**
-- **Flowchart to Pseudocode Translation**
-
-### Decision Trees
-
-- **Decision-Based Problem Solving**
-- **Decision Tree Construction**
-- **Applications in Computing**
-- **Optimization of Decision Processes**
-
-## 3. **Algorithm Analysis Basics**
+## 2. **Algorithm Analysis Basics**
 
 ### Why Analyze Algorithms?
 
@@ -85,7 +69,7 @@
   - Loop analysis
   - Nested structures and recursive calls
 
-## 4. **Fundamental Data Structures**
+## 3. **Fundamental Data Structures**
 
 ### Why Data Structures Matter
 
@@ -144,7 +128,7 @@
   - Introduction to traversal methods
   - Real-world modeling with trees and graphs
 
-## 5. **Basic Searching Techniques**
+## 4. **Basic Searching Techniques**
 
 ### Linear Search
 
@@ -181,7 +165,7 @@
   - Structure and properties
   - Dynamic searching capabilities
 
-## 6. **Elementary Sorting Algorithms**
+## 5. **Elementary Sorting Algorithms**
 
 ### Why Sorting Matters
 
@@ -219,7 +203,7 @@
 - **Special Cases Analysis**
 - **Algorithm Selection Guidelines**
 
-## 7. **Introduction to Recursion**
+## 6. **Introduction to Recursion**
 
 ### Thinking Recursively
 
@@ -284,7 +268,7 @@
   - Trading space for time
   - Implementation techniques
 
-## 8. **Pattern Recognition in Algorithms**
+## 7. **Pattern Recognition in Algorithms**
 
 ### Common Algorithm Patterns
 
@@ -352,4 +336,3 @@
   - Breaking complex problems into subproblems
   - Interface design between components
   - Recombination strategies
-    ط
