@@ -28,6 +28,11 @@ Various resources regarding algorithm analysis:
 
 - **Data Organization Principles**
 
+  - https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/14867/Good_dataMan.pdf
+  - https://people.umass.edu/biostat690c/pdf/1.%20%20Principles%20of%20Data%20Management%202020.pdf
+  - https://ws1.nbninternational.com/fusion/v2.0/supplement/62d96a37646eb15fd4cb7208.pdf
+  - https://www.intrac.org/app/uploads/2017/01/Principles-of-data-collection.pdf
+
 - **Abstract Data Types (ADTs)**
 
   - Common ADTs: Lists, stacks, queues, dictionaries
