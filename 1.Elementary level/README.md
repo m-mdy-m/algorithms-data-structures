@@ -35,7 +35,7 @@ Various resources regarding algorithm analysis:
 
 - **Abstract Data Types (ADTs)**
 
-  - Common ADTs: Lists, stacks, queues, dictionaries
+  - https://math.hws.edu/eck/cs327_s04/chapter2.pdf
 
 - **Data Structure Design Considerations**
 
@@ -293,4 +293,5 @@ Various resources regarding algorithm analysis:
 - **Problem Decomposition**
   - Breaking complex problems into subproblems
   - Interface design between components
+  - Recombination strategies
   - Recombination strategies
