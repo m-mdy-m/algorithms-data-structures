@@ -37,54 +37,9 @@ Various resources regarding algorithm analysis:
 
   - https://math.hws.edu/eck/cs327_s04/chapter2.pdf
 
-- **Data Structure Design Considerations**
-
-  - Access patterns (random vs. sequential)
-  - Insertion and deletion frequency
-  - Memory constraints
-  - Expected data volume
-
-- **The Relationship Between Algorithms and Data Structures**
-  - How algorithms leverage data structure properties
-  - Choosing the right structure for specific algorithms
-  - Compound data structures
-
 ### Basic Data Structures
 
-- **Arrays and Lists**
-
-  - Static vs. dynamic arrays
-  - Random access vs. sequential access
-  - Implementation considerations
-  - Common operations and their complexity
-  - Multi-dimensional arrays
-
-- **Stacks**
-
-  - LIFO (Last-In-First-Out) principle
-  - Core operations: push, pop, peek
-  - Implementation approaches (array-based vs. linked)
-  - Application scenarios: Expression evaluation, backtracking, function calls
-
-- **Queues**
-
-  - FIFO (First-In-First-Out) principle
-  - Core operations: enqueue, dequeue
-  - Implementation approaches (array-based, linked, circular)
-  - Application scenarios: Resource scheduling, breadth-first search
-
-- **Linked Structures**
-
-  - Singly linked lists: Node structure and traversal
-  - Doubly linked lists: Bidirectional navigation
-  - Circular linked lists: Special properties
-  - Comparison with contiguous storage structures
-
-- **Basic Trees and Graphs**
-  - Tree terminology and properties
-  - Graph representation (adjacency lists/matrices)
-  - Introduction to traversal methods
-  - Real-world modeling with trees and graphs
+I will complete the first chapters of Arliz's book to understand the data structure of arrays and their children, such as stacks, queues, etc., and then move on to the next ones.
 
 ## 4. **Basic Searching Techniques**
 
