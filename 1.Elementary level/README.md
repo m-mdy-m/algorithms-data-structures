@@ -41,114 +41,13 @@ Various resources regarding algorithm analysis:
 
 I will complete the first chapters of Arliz's book to understand the data structure of arrays and their children, such as stacks, queues, etc., and then move on to the next ones.
 
-## 4. **Basic Searching Techniques**
-
-### Linear Search
-
-- **Sequential Access Pattern**
-
-- **Implementation Approaches**
-
-  - Iterative implementation
-  - Recursive implementation
-  - Sentinel-based optimization
-
-- **Linear Search Variations**
-  - Binary outcome vs. element location
-  - Finding all occurrences
-  - Searching in multiple arrays
-
-### Binary Search
-
-- **Divide and Conquer Strategy**
-
-- **Implementation Approaches**
-
-  - Iterative implementation
-  - Recursive implementation
-  - Handling edge cases
-
-- **Binary Search Variations**
-
-  - Finding insertion points
-  - Locating boundaries (first/last occurrence)
-
-- **Binary Search Trees Preview**
-  - Connection to binary search algorithm
-  - Structure and properties
-  - Dynamic searching capabilities
-
-## 5. **Elementary Sorting Algorithms**
-
-### Why Sorting Matters
-
-- **Applications of Sorted Data**
-
-  - Enabling efficient searching
-  - Facilitating merging operations
-  - Supporting order statistics (min, max, median)
-  - Human readability and interpretation
-
-- **Classification of Sorting Problems**
-
-  - Internal vs. external sorting
-  - Stable vs. unstable sorting
-  - In-place vs. out-of-place approaches
-  - Numeric vs. lexicographic ordering
-
-- **Evaluation Criteria**
-  - Time complexity considerations
-  - Space efficiency
-  - Stability requirements
-  - Implementation complexity
-
-### Simple Sorting Algorithms
-
-- **Bubble Sort**
-
-- **Selection Sort**
-
-- **Insertion Sort**
-
-### Comparing Sorting Algorithms
-
-- **Performance Benchmarks**
-- **Special Cases Analysis**
-- **Algorithm Selection Guidelines**
-
-## 6. **Introduction to Recursion**
+## 4. **Introduction to Recursion**
 
 ### Thinking Recursively
 
-- **Recursive Problem Decomposition**
-
-  - Breaking problems into smaller instances
-  - Self-reference and self-similarity
-  - Recursive vs. iterative thinking
-
-- **Elements of Recursive Solutions**
-
-  - Base cases: When recursion terminates
-  - Recursive cases: Self-referential calls
-  - Progress toward base case
-
-- **Classic Recursive Problems**
-
-  - Factorial calculation
-  - Fibonacci sequence generation
-  - Tower of Hanoi puzzle
-  - Binary tree traversals
-
-- **Recursion in Mathematical Induction**
-
-  - Connection to inductive proofs
-  - Establishing correctness through induction
-  - Mathematical foundations of recursive thinking
-
-- **Recursive Data Structures**
-  - Self-referential structures (linked lists, trees)
-  - Natural recursive operations on these structures
-  - Traversal and search patterns
+- https://unamer34.wordpress.com/wp-content/uploads/2008/06/pr.pdf
+- https://cseweb.ucsd.edu/classes/sp05/cse101/JeffEdmondsBook.pdf
+- https://home.cs.colorado.edu/~main/supplements/pdf/notes09.pdf
 
 ### Avoiding Pitfalls
 
@@ -181,7 +80,7 @@ I will complete the first chapters of Arliz's book to understand the data struct
   - Trading space for time
   - Implementation techniques
 
-## 7. **Pattern Recognition in Algorithms**
+## 5. **Pattern Recognition in Algorithms**
 
 ### Common Algorithm Patterns
 
@@ -248,5 +147,4 @@ I will complete the first chapters of Arliz's book to understand the data struct
 - **Problem Decomposition**
   - Breaking complex problems into subproblems
   - Interface design between components
-  - Recombination strategies
   - Recombination strategies
