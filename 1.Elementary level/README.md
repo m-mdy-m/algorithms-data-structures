@@ -49,69 +49,12 @@ I will complete the first chapters of Arliz's book to understand the data struct
 
 ## 5. **Pattern Recognition in Algorithms**
 
-### Common Algorithm Patterns
-
 - **Iteration Patterns**
-
-  - Linear iteration (traversal)
-  - Nested iteration
-  - Jump and skip patterns (stride, sampling)
-  - Convergence patterns
 
 - **Divide and Conquer**
 
-  - Problem subdivision strategy
-  - Independent subproblem resolution
-  - Result combination techniques
-  - Examples: Binary search, merge sort
-
 - **Greedy Approach**
-
-  - Making locally optimal choices
-  - When greedy strategies are optimal
-  - Counterexamples to greedy optimality
-  - Examples: Coin change, scheduling
 
 - **Dynamic Programming Introduction**
 
-  - Overlapping subproblems characteristic
-  - Optimal substructure property
-  - Top-down vs. bottom-up approaches
-  - Examples: Fibonacci, shortest paths
-
 - **Transformation Patterns**
-  - Preprocessing data for efficiency
-  - Transform-solve-transform back approach
-  - Examples: Sorting before searching
-
-### Problem-Solving Strategies
-
-- **Problem Classification**
-
-  - Identifying problem categories
-  - Matching problems to known algorithm types
-  - Recognizing hybrid problems
-
-- **Algorithm Selection Framework**
-
-  - Decision tree for algorithm selection
-  - Input characteristics assessment
-  - Output requirements analysis
-  - Resource constraint evaluation
-
-- **Heuristic Development**
-
-  - Creating approximate solutions
-  - When exactness can be sacrificed
-  - Performance vs. accuracy tradeoffs
-
-- **Incremental Refinement**
-
-  - Starting with naive solutions
-  - Identifying bottlenecks
-  - Progressive optimization techniques
-
-- **Problem Decomposition**
-  - Breaking complex problems into subproblems
-  - Interface design between components
-  - Recombination strategies
