@@ -43,42 +43,9 @@ I will complete the first chapters of Arliz's book to understand the data struct
 
 ## 4. **Introduction to Recursion**
 
-### Thinking Recursively
-
 - https://unamer34.wordpress.com/wp-content/uploads/2008/06/pr.pdf
 - https://cseweb.ucsd.edu/classes/sp05/cse101/JeffEdmondsBook.pdf
 - https://home.cs.colorado.edu/~main/supplements/pdf/notes09.pdf
-
-### Avoiding Pitfalls
-
-- **Common Recursive Errors**
-
-  - Missing or incorrect base cases
-  - Failure to make progress toward base case
-  - Excessive recursion depth
-
-- **Stack Overflow Prevention**
-
-  - Understanding the call stack mechanism
-  - Estimating maximum recursion depth
-  - Tail recursion and optimization
-
-- **Memory Consumption Analysis**
-
-  - Stack frame contents
-  - Space complexity of recursive solutions
-  - Visualizing stack growth
-
-- **Recursion to Iteration Conversion**
-
-  - Explicit stack usage
-  - State tracking techniques
-  - When conversion is beneficial
-
-- **Memoization Introduction**
-  - Avoiding redundant recursive calls
-  - Trading space for time
-  - Implementation techniques
 
 ## 5. **Pattern Recognition in Algorithms**
 
