@@ -47,14 +47,6 @@ I will complete the first chapters of Arliz's book to understand the data struct
 - https://cseweb.ucsd.edu/classes/sp05/cse101/JeffEdmondsBook.pdf
 - https://home.cs.colorado.edu/~main/supplements/pdf/notes09.pdf
 
-## 5. **Pattern Recognition in Algorithms**
-
-- **Iteration Patterns**
-
-- **Divide and Conquer**
-
-- **Greedy Approach**
-
-- **Dynamic Programming Introduction**
-
-- **Transformation Patterns**
+## 5. **Algorithm Design Paradigms**
+ - https://www.researchgate.net/publication/266552405_A_Guide_to_Algorithm_Design_Paradigms_Methods_and_Complexity_Analysis
+ - same https://perpustakaan.atmaluhur.ac.id/uploaded_files/temporary/DigitalCollection/Y2Y2NDBjMzg1NmExNTcwMThkNzJjYmU0ZjE0MGI4NWJmNmEyM2U0Mg==.pdf
