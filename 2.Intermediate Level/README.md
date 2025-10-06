@@ -4,7 +4,8 @@
 
 ## 1. Algorithmic Analysis (deeper)
 
-* Asymptotic notations: Big-O, Ω, Θ
+* [Asymptotic notations](https://www.youtube.com/watch?v=7dz8Iaf_weM): Big-O, Ω, Θ
+
 * Amortized analysis (aggregate, accounting, potential)
 * Average vs worst vs best case; probabilistic analysis
 * Recurrence relations and solving (substitution, recursion tree, Master Theorem)
