@@ -7,7 +7,7 @@
 * [Asymptotic notations](https://www.youtube.com/watch?v=7dz8Iaf_weM): Big-O, Ω, Θ
 
 * Amortized analysis (aggregate, accounting, potential)
-* Average vs worst vs best case; probabilistic analysis
+* [Average vs worst vs best case; probabilistic analysis](https://dev.to/m__mdy__m/introduction-to-analysis-of-algorithms-46b0)
 * Recurrence relations and solving (substitution, recursion tree, Master Theorem)
 * Space complexity, I/O complexity, cache-aware analysis
 
