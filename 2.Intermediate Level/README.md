@@ -8,8 +8,11 @@
 
 * [Amortized analysis (aggregate, accounting, potential)](https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2012/83b82d45beb3776da72b7f3e1b3f42df_MIT6_046JS12_lec11.pdf)
 * [Average vs worst vs best case; probabilistic analysis](https://dev.to/m__mdy__m/introduction-to-analysis-of-algorithms-46b0)
-* Recurrence relations and solving (substitution, recursion tree, Master Theorem)
-* Space complexity, I/O complexity, cache-aware analysis
+* [Recurrence relations and solving](https://itk.ilstu.edu/faculty/chungli/DIS300/dis300chapter8.pdf)
+* [Space complexity](https://users.cs.duke.edu/~reif/courses/complectures/books/AB/spacechap.pdf), [I/O complexity](https://www3.cs.stonybrook.edu/~bender/newpub/2016-BenderChCo-LATIN-sieve.pdf), cache-aware analysis ->
+   - https://abhikrc.com/pdf/ecrts07.pdf
+   - https://embedded.cs.uni-saarland.de/literature/CacheAwareSchedulingAndAnalysisForMulticores.pdf
+   - https://www.vldb.org/pvldb/vol12/p709-archer.pdf
 
 **Goal:** measure and reason about algorithm costs precisely so you can compare and choose designs reliably.
 
