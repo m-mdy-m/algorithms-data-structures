@@ -1,0 +1,43 @@
+%----------------------------------------------
+% Custom Commands for Special Pages
+%----------------------------------------------
+
+% Command for part pages (if using \part)
+\newcommand{\partpage}{
+	\thispagestyle{empty}
+	\cleardoublepage
+}
+
+% Command for appendix pages
+\newcommand{\appendixpage}{
+	\thispagestyle{chapter}
+}
+
+%----------------------------------------------
+% Page Number Formatting Enhancements
+%----------------------------------------------
+
+% Ensure proper page numbering format
+\renewcommand{\thepage}{\arabic{page}}
+
+% Custom page number formatting for special sections
+\newcommand{\frontmatterpagenumber}{
+	\renewcommand{\thepage}{\roman{page}}
+}
+
+\newcommand{\mainmatterpagenumber}{
+	\renewcommand{\thepage}{\arabic{page}}
+}
+
+%----------------------------------------------
+% Header Content Customization
+%----------------------------------------------
+
+% Customize chapter and section marks
+\renewcommand{\chaptermark}[1]{
+	\markboth{\textsc{Chapter \thechapter:\ #1}}{}
+}
+
+\renewcommand{\sectionmark}[1]{
+	\markright{\textsc{\thesection\ #1}}
+}

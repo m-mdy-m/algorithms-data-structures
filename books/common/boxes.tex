@@ -1,0 +1,35 @@
+%----------------------------------------------
+% Special Boxes and Environments
+%----------------------------------------------
+\usepackage{tcolorbox}
+\tcbuselibrary{most}
+
+%----------------------------------------------
+% Note Box
+%----------------------------------------------
+\newtcolorbox{notebox}[1][]{
+	colback   = blue!5!white,
+	colframe  = blue!75!black,
+	title     = Note,
+	#1
+}
+
+%----------------------------------------------
+% Tip Box
+%----------------------------------------------
+\newtcolorbox{tipbox}[1][]{
+	colback   = green!5!white,
+	colframe  = green!75!black,
+	title     = Tip,
+	#1
+}
+
+%----------------------------------------------
+% Warning Box
+%----------------------------------------------
+\newtcolorbox{warningbox}[1][]{
+	colback   = red!5!white,
+	colframe  = red!75!black,
+	title     = Important,
+	#1
+}

@@ -16,6 +16,8 @@
 
 **Goal:** measure and reason about algorithm costs precisely so you can compare and choose designs reliably.
 
+**My Book:** [The Art of Algorithmic Analysis](../books/books/The%20Art%20of%20Algorithmic%20Analysis/main.pdf) 
+
 ---
 
 ## 2. Data Structures — core & tradeoffs
