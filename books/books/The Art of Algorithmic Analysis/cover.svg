@@ -1,0 +1,179 @@
+<svg viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Clean dark gradient background -->
+    <radialGradient id="mainBg" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#1a1d29;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#0f1419;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0d14;stop-opacity:1" />
+    </radialGradient>
+    
+    <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8e8e8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d0d0d0;stop-opacity:0.95" />
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90e2;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#357abd;stop-opacity:0.3" />
+    </linearGradient>
+    
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="textShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="0" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.5" result="flood"/>
+      <feComposite in="flood" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="400" height="600" fill="url(#mainBg)"/>
+  
+  <!-- Subtle mathematical elements in background -->
+  <g opacity="0.04">
+    <!-- Asymptotic curves -->
+    <path d="M 50 150 Q 150 140 250 160" stroke="#4a90e2" stroke-width="2" fill="none"/>
+    <path d="M 80 300 Q 200 280 320 310" stroke="#4a90e2" stroke-width="1.5" fill="none"/>
+    
+    <!-- Simple geometric shapes -->
+    <circle cx="100" cy="400" r="30" stroke="#4a90e2" stroke-width="1" fill="none"/>
+    <circle cx="300" cy="200" r="25" stroke="#4a90e2" stroke-width="1" fill="none"/>
+    
+    <!-- Algorithm flow -->
+    <rect x="60" y="450" width="8" height="8" fill="#4a90e2" opacity="0.5"/>
+    <rect x="75" y="450" width="8" height="8" fill="#4a90e2" opacity="0.4"/>
+    <rect x="90" y="450" width="8" height="8" fill="#4a90e2" opacity="0.3"/>
+  </g>
+  
+  <!-- Very subtle notation -->
+  <g font-family="'Latin Modern Math', 'Georgia', serif" font-size="14" fill="#4a90e2" opacity="0.06">
+    <text x="70" y="250">O(n)</text>
+    <text x="310" y="350">Θ(log n)</text>
+    <text x="100" y="500">Ω(n²)</text>
+  </g>
+  
+  <!-- Main Title Section -->
+  <g transform="translate(200,180)">
+    <!-- THE (small and subtle) -->
+    <text x="0" y="-60" 
+          font-family="'Helvetica Neue', 'Arial', sans-serif" 
+          font-size="16" 
+          font-weight="200" 
+          fill="#a0a0a0" 
+          text-anchor="middle" 
+          letter-spacing="8px"
+          opacity="0.7">THE</text>
+    
+    <!-- ART (emphasized with bold) -->
+    <text x="0" y="-8" 
+          font-family="'Playfair Display', 'Georgia', serif" 
+          font-size="58" 
+          font-weight="700" 
+          fill="url(#titleGradient)" 
+          text-anchor="middle" 
+          letter-spacing="4px"
+          filter="url(#textShadow)">ART</text>
+    
+    <!-- OF (small connector) -->
+    <text x="0" y="15" 
+          font-family="'Helvetica Neue', 'Arial', sans-serif" 
+          font-size="14" 
+          font-weight="300" 
+          fill="#a0a0a0" 
+          text-anchor="middle" 
+          letter-spacing="6px"
+          opacity="0.7">OF</text>
+    
+    <!-- ALGORITHM (normal weight) -->
+    <text x="0" y="50" 
+          font-family="'Helvetica Neue', 'Arial', sans-serif" 
+          font-size="24" 
+          font-weight="300" 
+          fill="url(#titleGradient)" 
+          text-anchor="middle" 
+          letter-spacing="3px"
+          filter="url(#textShadow)">ALGORITHM</text>
+    
+    <!-- ANALYSIS (emphasized with bold) -->
+    <text x="0" y="105" 
+          font-family="'Playfair Display', 'Georgia', serif" 
+          font-size="50" 
+          font-weight="700" 
+          fill="url(#titleGradient)" 
+          text-anchor="middle" 
+          letter-spacing="4px"
+          filter="url(#textShadow)">ANALYSIS</text>
+  </g>
+  
+  <!-- Simple elegant divider -->
+  <g transform="translate(200,295)" opacity="0.5">
+    <line x1="-60" y1="0" x2="-20" y2="0" stroke="#4a90e2" stroke-width="1"/>
+    <circle cx="0" cy="0" r="2" fill="#4a90e2"/>
+    <line x1="20" y1="0" x2="60" y2="0" stroke="#4a90e2" stroke-width="1"/>
+  </g>
+  
+  <!-- Subtitle -->
+  <text x="200" y="320" 
+        font-family="'Helvetica Neue', 'Arial', sans-serif" 
+        font-size="11" 
+        font-weight="300" 
+        fill="#888888" 
+        text-anchor="middle" 
+        opacity="0.8" 
+        letter-spacing="4px">FROM FOUNDATIONS TO PRACTICE</text>
+  
+  <!-- Minimal accent elements -->
+  <g opacity="0.08">
+    <!-- Top corner -->
+    <path d="M 40 40 L 40 70 L 70 40 Z" fill="#4a90e2"/>
+    
+    <!-- Bottom corner -->
+    <path d="M 360 560 L 360 530 L 330 560 Z" fill="#4a90e2"/>
+  </g>
+  
+  <!-- Six part indicators (very subtle) -->
+  <g transform="translate(200,370)" opacity="0.15">
+    <circle cx="-50" cy="0" r="2.5" fill="#4a90e2"/>
+    <circle cx="-30" cy="0" r="2.5" fill="#4a90e2"/>
+    <circle cx="-10" cy="0" r="2.5" fill="#4a90e2"/>
+    <circle cx="10" cy="0" r="2.5" fill="#4a90e2"/>
+    <circle cx="30" cy="0" r="2.5" fill="#4a90e2"/>
+    <circle cx="50" cy="0" r="2.5" fill="#4a90e2"/>
+  </g>
+  
+  <!-- Author name -->
+  <text x="200" y="510" 
+        font-family="'Helvetica Neue', 'Arial', sans-serif" 
+        font-size="24" 
+        font-weight="200" 
+        fill="#d0d0d0" 
+        text-anchor="middle" 
+        letter-spacing="4px"
+        filter="url(#textShadow)">Mahdi</text>
+  
+  <!-- Edition -->
+  <text x="200" y="535" 
+        font-family="'Helvetica Neue', 'Arial', sans-serif" 
+        font-size="9" 
+        font-weight="300" 
+        fill="#707070" 
+        text-anchor="middle" 
+        opacity="0.8" 
+        letter-spacing="2px">LIVING FIRST EDITION</text>
+  
+  <!-- Clean border -->
+  <rect x="30" y="30" width="340" height="540" fill="none" 
+        stroke="#333333" stroke-width="1" opacity="0.3" rx="4"/>
+  
+</svg>
