@@ -20,10 +20,44 @@
 \input{../../common/index}             % Index and TOC
 \input{../../common/pagestyles}        % Page styles and headers/footers
 \begin{document}
-\part{Preface}
-\part{Foundations of Algorithmic Analysis}
-\part{Advanced Analysis Techniques}
-\part{Lower Bounds and Optimality}
-\part{Specialized Topics and Applications}
-\part{Practical Considerations and Case Studies}
+\input{parts/part01/part01} % Preface
+\input{parts/part02/part02} % Foundations of Algorithmic Analysis
+\input{parts/part03/part03} % Advanced Analysis Techniques
+\input{parts/part04/part04} % Lower Bounds and Optimality
+\input{parts/part05/part05} % Specialized Topics and Applications
+\input{parts/part06/part06} % Practical Considerations and Case Studies
+%----------------------------------------------
+% APPENDICES
+%----------------------------------------------
+\appendix
+
+\chapter{Mathematical Background}
+\section{Summation Formulas}
+\section{Logarithms and Exponentials}
+\section{Recurrence Relations (Quick Reference)}
+\section{Probability Distributions}
+\section{Matrix Operations}
+
+\chapter{Pseudocode Conventions}
+\section{Notation and Style}
+\section{Common Data Structures}
+
+\chapter{Solutions to Selected Exercises}
+
+\chapter{Glossary of Terms}
+
+\chapter{Index of Algorithms}
+
+\chapter{Annotated Bibliography}
+\section{Foundational Texts}
+\section{Research Papers by Topic}
+\section{Online Courses and Resources}
+
+%----------------------------------------------
+% BIBLIOGRAPHY AND INDEX
+%----------------------------------------------
+% \backmatter
+% \bibliographystyle{plain}
+% \bibliography{references}
+% \printindex
 \end{document}
