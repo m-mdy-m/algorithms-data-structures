@@ -8,8 +8,13 @@
 \input{../../common/layout}            % Page layout and spacing
 \input{../../common/commands}          % Custom commands
 \newcommand{\PDFTitle}{The Art of Algorithmic Analysis}
+\newcommand{\PDFTitleFront}{The Art of Analysis}
+\newcommand{\PDFCoverTitle}{Analysis}
+\newcommand{\PDFCoverDescription}{Algorithms • Abstraction • Analysis • Art}
 \newcommand{\PDFSubject}{Algorithmic Cost Analysis and Asymptotic Reasoning}
 \newcommand{\PDFKeywords}{Big-O, Algorithmic Analysis, Asymptotics, Complexity}
+% \newcommand{\LOGO_PDF}{cover.pdf}
+\newcommand{\PDFURL}{https://github.com/m-mdy-m/algorithms-data-structures/tree/main/books/books}
 \input{../../common/hyperref}          % Hyperlinks and PDF metadata
 \input{../../common/graphics}          % Graphics and diagrams
 \input{../../common/tables}            % Tables and arrays
@@ -20,6 +25,17 @@
 \input{../../common/index}             % Index and TOC
 \input{../../common/pagestyles}        % Page styles and headers/footers
 \begin{document}
+%	\input{../../common/frontmatter/cover}
+    \frontmatter
+    \frontmatterpagenumber
+    \input{../../common/frontmatter/title}
+    \input{../../common/frontmatter/copyright}
+	\tableofcontents
+    % \input{frontmatter/preface}
+	\input{../../common/frontmatter/acknowledgments}
+    \input{../../common/frontmatter/how-to-read}
+\mainmatter
+\mainmatterpagenumber
 \input{parts/part01/part01} % Preface
 \input{parts/part02/part02} % Foundations of Algorithmic Analysis
 \input{parts/part03/part03} % Advanced Analysis Techniques

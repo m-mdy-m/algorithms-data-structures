@@ -1,0 +1,117 @@
+% ----------------------------------------------
+% License Page
+% ----------------------------------------------
+\thispagestyle{empty}
+
+\begin{tikzpicture}[remember picture, overlay]
+	\draw[line width=3pt, color=myblue!30, rotate around={45:(current page.north west)}, 
+	shift={(current page.north west)}] (0.5cm,-0.5cm) -- (3cm,-0.5cm);
+	\draw[line width=3pt, color=myblue!30, rotate around={45:(current page.south east)}, 
+	shift={(current page.south east)}] (-0.5cm,0.5cm) -- (-3cm,0.5cm);
+\end{tikzpicture}
+
+\begin{center}
+	\vspace*{1.5cm}
+	
+	{\Large\bfseries\textcolor{myblue}{LICENSE \& DISTRIBUTION}}\\[0.5em]
+	{\large\textsc{\PDFTitle : \PDFSubject}}\\[0.3em]
+	{\footnotesize\textit{A Living Architecture of Computing}}
+	
+	\vspace{1em}
+	\rule{0.6\textwidth}{1pt}
+	\vspace{1.5em}
+\end{center}
+
+\begin{flushleft}
+	{\small
+		\textbf{\PDFTitle} is released under the \textbf{Creative Commons Attribution-ShareAlike 4.0 International License} (CC BY-SA 4.0).
+		\vspace{1.5em}
+		
+		%--------------------------------------------
+		% Formal License Terms
+		%--------------------------------------------
+		\begin{center}
+			\textbf{FORMAL LICENSE TERMS}
+		\end{center}
+		
+		\textbf{Copyright \textcopyright\ 2025 Mahdi}\\
+		This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.\\
+		\textbf{License URL:} \url{https://creativecommons.org/licenses/by-sa/4.0/}
+		
+		\vspace{1em}
+		\textbf{You are free to:}
+		\begin{itemize}\itemsep2pt
+			\item \textbf{Share} — copy and redistribute the material in any medium or format for any purpose, even commercially.
+			\item \textbf{Adapt} — remix, transform, and build upon the material for any purpose, even commercially.
+		\end{itemize}
+		
+		\textbf{Under the following terms:}
+		\begin{itemize}\itemsep2pt
+			\item \textbf{Attribution} — You must give appropriate credit to Mahdi, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+			\item \textbf{ShareAlike} — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+			\item \textbf{No additional restrictions} — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+		\end{itemize}
+		
+		\newpage{}
+		
+		%--------------------------------------------
+		% Technical and Distribution Information
+		%--------------------------------------------
+		\begin{center}
+			\textbf{DISTRIBUTION \& SOURCE ACCESS}
+		\end{center}
+		
+		\textbf{Repository:} The complete source code (LaTeX, diagrams, examples) is available at:\\
+		\url{\PDFURL}
+		
+		\textbf{Preferred Citation Format:}\\
+		Mahdi. (2025). \textit{\PDFTitle}. Retrieved from \url{\PDFURL}
+		
+		\textbf{Version Control:} This is a living document. Check the repository for the most current version and revision history.
+		
+		\vspace{1.5em}
+		
+		%--------------------------------------------
+		% Warranties and Disclaimers
+		%--------------------------------------------
+		\begin{center}
+			\textbf{WARRANTIES \& DISCLAIMERS}
+		\end{center}
+		
+		\textbf{No Warranty:} This work is provided "AS IS" without warranty of any kind, either expressed or implied, including but not limited to the implied warranties of merchantability and fitness for a particular purpose.
+		
+		\textbf{Limitation of Liability:} In no event shall Mahdi be liable for any direct, indirect, incidental, special, exemplary, or consequential damages arising from the use of this work.
+		
+		\textbf{Educational Purpose:} This work is intended for educational and research purposes. Practical implementation of algorithms and techniques should be thoroughly tested and validated for production use.
+		
+		\vspace{1.5em}
+		
+		%--------------------------------------------
+		% Technical Specifications
+		%--------------------------------------------
+		\begin{center}
+			\textbf{TECHNICAL SPECIFICATIONS}
+		\end{center}
+		
+		\textbf{Typeset with:} \LaTeX\ using Charter and Palatino font families\\
+		\textbf{Graphics:} TikZ and custom illustrations\\
+		\textbf{Standards:} Follows academic publishing conventions\\
+		\textbf{Encoding:} UTF-8 with full Unicode support\\
+		\textbf{Format:} Available in PDF, and LaTeX source formats
+	}
+\end{flushleft}
+
+\vfill
+
+\begin{center}
+	{\footnotesize
+		\begin{tikzpicture}
+			\node (footer) {\textit{License last updated: \today}};
+			\draw[line width=0.5pt, color=myblue!50] ($(footer.west)+(-2cm,0)$) -- ($(footer.west)+(-0.2cm,0)$);
+			\draw[line width=0.5pt, color=myblue!50] ($(footer.east)+(0.2cm,0)$) -- ($(footer.east)+(2cm,0)$);
+		\end{tikzpicture}\\[0.3em]
+		\textbf{For questions about licensing, contact:} \url{bitsgenix@gmail.com}
+	}
+\end{center}
+
+\clearpage

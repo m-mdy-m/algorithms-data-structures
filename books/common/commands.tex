@@ -41,3 +41,26 @@
 \renewcommand{\sectionmark}[1]{
 	\markright{\textsc{\thesection\ #1}}
 }
+
+
+% spacing parameters 
+\newcommand{\CoverFirstGap}{0.8em}
+\newcommand{\CoverOtherGap}{0.6em}
+
+\newcommand{\SpacedCoverTitle}{%
+  \begingroup
+    \StrLen{\PDFCoverTitle}[\TitleLen]%
+    \newcount\c 
+    \c=1
+    \loop
+      \StrChar{\PDFCoverTitle}{\the\c}[\ThisChar]%
+      \ifnum\c=1
+        \ThisChar\hspace{\CoverFirstGap}%
+      \else
+        \ThisChar\hspace{\CoverOtherGap}%
+      \fi
+      \advance\c by 1
+    \ifnum\c<\numexpr\TitleLen+1\relax
+    \repeat
+  \endgroup
+}
