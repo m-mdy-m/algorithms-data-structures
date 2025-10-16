@@ -1,0 +1,168 @@
+
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+
+Every rigorous journey begins with a question. For this book, that question was deceptively simple: \textit{How do we truly measure the cost of computation?}
+
+Throughout my years of studying computer science, I encountered algorithm analysis in fragments—asymptotic notation in one course, recurrence relations in another, amortized analysis buried in advanced data structures. Each concept felt isolated, a tool without context. I could apply Big-O notation mechanically, solve recurrences by pattern matching, but I lacked the deeper understanding that connects these techniques into a coherent framework for reasoning about algorithmic efficiency.
+
+This book emerged from a commitment to build that understanding from the ground up. Not merely to catalog techniques, but to understand \textit{why} we analyze algorithms the way we do, \textit{how} different analysis methods relate to one another, and \textit{when} each approach provides the most insight.
+
+\section*{What This Book Represents}
+
+\textbf{The Art of Algorithmic Analysis} is neither a traditional algorithms textbook nor a pure mathematics text. Instead, it occupies the essential middle ground: the rigorous study of \textit{measuring computational cost}. While most algorithms books treat analysis as a supporting tool, this book makes analysis itself the central focus.
+
+This approach reflects a fundamental belief: before you can design optimal algorithms, you must develop sophisticated tools for understanding algorithmic behavior. Analysis is not merely evaluation—it is a lens through which we perceive the deep structure of computational problems.
+
+The book is organized around six major themes:
+
+\begin{enumerate}
+    \item \textbf{Foundations} — Establishing the mathematical and conceptual groundwork for all subsequent analysis
+    \item \textbf{Advanced Techniques} — Exploring sophisticated methods like amortized analysis and cache-aware complexity
+    \item \textbf{Lower Bounds} — Understanding fundamental limits on what algorithms can achieve
+    \item \textbf{Specialized Topics} — Applying analysis to specific algorithmic paradigms
+    \item \textbf{Practical Considerations} — Bridging the gap between theoretical analysis and real-world performance
+    \item \textbf{Mathematical Prerequisites} — Building the necessary mathematical machinery
+\end{enumerate}
+
+\section*{Who This Book Is For}
+
+This book serves multiple audiences, each approaching with different backgrounds and goals:
+
+\paragraph{Undergraduate Students} who have completed introductory data structures and algorithms courses and want to develop deeper analytical skills. You should be comfortable with basic programming, mathematical notation, and proof techniques (though we review these in the Preface).
+
+\paragraph{Graduate Students} preparing for advanced algorithms courses or research in theoretical computer science. This book provides the analytical foundation necessary for reading and understanding research papers in algorithms and complexity theory.
+
+\paragraph{Practitioners and Engineers} who want to move beyond rule-of-thumb performance reasoning to rigorous cost analysis. Understanding these techniques enables you to make principled decisions about algorithm choice and optimization strategies.
+
+\paragraph{Self-Learners} with strong mathematical curiosity and programming experience. If you've wondered why certain algorithms are taught as "efficient" or wanted to understand the mathematical machinery behind performance analysis, this book is written for you.
+
+\section*{What You Need to Know}
+
+I have written this book assuming you bring certain foundations:
+
+\begin{itemize}
+    \item \textbf{Programming Experience}: Comfort with at least one programming language and basic data structures (arrays, linked lists, trees)
+    \item \textbf{Mathematical Maturity}: Familiarity with mathematical notation, basic proof techniques, and comfort working with abstractions
+    \item \textbf{Discrete Mathematics}: Basic understanding of sets, functions, relations, and combinatorics (we review these in Chapter 3)
+    \item \textbf{Calculus and Probability}: Exposure to limits, summations, and basic probability (we provide refreshers where needed)
+\end{itemize}
+
+If you lack some of these prerequisites, don't be discouraged. Part 1 (Preface) includes substantial review material, and the book builds concepts incrementally. However, you will find the journey more comfortable with these foundations in place.
+
+\section*{How to Use This Book}
+
+\paragraph{Read Sequentially, At Least Initially} The first three parts build systematically. Concepts in later chapters depend on earlier material. Resist the temptation to skip ahead until you've established solid foundations.
+
+\paragraph{Work Through Examples Carefully} Each concept is illustrated with detailed examples. Don't just read them—work through the mathematics yourself. Understanding comes from active engagement, not passive reading.
+
+\paragraph{Attempt Every Exercise} The exercises are not optional enrichment—they are integral to learning. Many exercises introduce concepts that later chapters assume. Solutions to selected exercises appear in Appendix C, but attempt problems yourself first.
+
+\paragraph{Use the Book as Reference} After your first reading, this book becomes a reference. The detailed table of contents, comprehensive index, and cross-references make it easy to locate specific techniques or refresh your memory on particular concepts.
+
+\paragraph{Engage with the Mathematical Rigor} This book does not shy away from proofs and formal arguments. Mathematics is the language of precise reasoning about algorithms. Take time to understand proofs, even if you initially find them challenging.
+
+\section*{Pedagogical Approach}
+
+Several principles guide how material is presented:
+
+\begin{itemize}
+    \item \textbf{Motivation Before Formalism}: Every technique is introduced with concrete motivation—a problem that existing tools cannot adequately address
+    \item \textbf{Multiple Perspectives}: Complex concepts are approached from multiple angles: intuitive explanations, formal definitions, visual representations, and worked examples
+    \item \textbf{Progressive Formalization}: We begin with intuitive understanding and gradually introduce mathematical rigor as concepts solidify
+    \item \textbf{Explicit Connections}: The book constantly highlights relationships between concepts, showing how techniques build upon one another
+    \item \textbf{Theory-Practice Balance}: Every theoretical development connects to practical considerations and real-world applications
+\end{itemize}
+
+\section*{Structure of Chapters}
+
+Most chapters follow a consistent structure:
+
+\begin{enumerate}
+    \item \textbf{Introduction}: Motivation and overview of chapter contents
+    \item \textbf{Informal Exploration}: Intuitive development of key ideas
+    \item \textbf{Formal Development}: Precise definitions, theorems, and proofs
+    \item \textbf{Examples and Applications}: Detailed worked examples
+    \item \textbf{Connections}: How the material relates to earlier and later topics
+    \item \textbf{Exercises}: Problems ranging from conceptual to computational to proof-based
+\end{enumerate}
+
+\section*{Notation and Conventions}
+
+We use standard mathematical notation throughout, with conventions explained as they arise. Key conventions include:
+
+\begin{itemize}
+    \item Algorithms appear in pseudocode that translates naturally to any imperative language
+    \item Mathematical variables typically use single letters ($n$, $m$, $k$ for sizes; $i$, $j$ for indices)
+    \item Functions and algorithm names use descriptive names (\textsc{MergeSort}, \textsc{BinarySearch})
+    \item Asymptotic notation ($O$, $\Omega$, $\Theta$) follows standard definitions from computer science literature
+    \item Proofs are clearly marked with \textbf{Proof} and \textbf{$\square$} delimiters
+\end{itemize}
+
+Appendix B provides comprehensive notation reference.
+
+\section*{Online Resources}
+
+Supplementary materials are available at:
+
+\begin{center}
+    \url{https://github.com/m-mdy-m/algorithms-data-structures/tree/main/books/books}
+\end{center}
+
+Resources include:
+\begin{itemize}
+    \item Complete LaTeX source code
+    \item Additional exercises with solutions
+    \item Code implementations of algorithms
+    \item Errata and updates
+    \item Discussion forums for questions and clarifications
+\end{itemize}
+
+\section*{A Living Work}
+
+This book represents understanding in development. While the core material is stable and thoroughly reviewed, algorithmic analysis continues to evolve. New techniques emerge, understanding deepens, and connections become clearer.
+
+I view this book as a living document—regularly updated with corrections, improvements, and new material. Your feedback helps this evolution. If you discover errors, have suggestions for improvement, or develop insights worth sharing, please contribute through the GitHub repository.
+
+\section*{Acknowledgments}
+
+This book stands on the shoulders of giants. The analytical techniques presented here emerged from decades of research by computer scientists and mathematicians too numerous to list comprehensively. However, several works deserve special mention:
+
+\begin{itemize}
+    \item \textit{Introduction to Algorithms} by Cormen, Leiserson, Rivest, and Stein—the foundational text that introduced many of us to rigorous algorithm analysis
+    \item \textit{The Art of Computer Programming} by Donald Knuth—whose mathematical rigor and attention to detail set the standard for algorithmic analysis
+    \item \textit{Algorithms} by Sedgewick and Wayne—for demonstrating how practical implementation insights complement theoretical understanding
+    \item Countless research papers that developed the techniques this book synthesizes
+\end{itemize}
+
+I am grateful to the open-source community for tools that made this book possible: \LaTeX{} for typesetting, Git for version control, and numerous open-source packages that enhance presentation.
+
+Most importantly, I thank the readers who engage with this material, work through exercises, and contribute to improving the book. Your questions, corrections, and insights make this work stronger.
+
+\section*{About the Author}
+
+I am \textbf{Mahdi}, known online as \textit{Genix}. At the time of writing, I am a Computer Engineering student driven by a simple question: What lies beneath the abstractions we use daily in computing?
+
+My relationship with computers has always been one of curiosity—not merely using tools, but understanding their fundamental nature. This book represents an attempt to build that understanding rigorously, from first principles.
+
+You can reach me through the GitHub repository or at the contact information provided there. I welcome questions, corrections, and discussions about the material.
+
+\section*{Final Thoughts}
+
+Algorithmic analysis is often presented as a necessary but somewhat dry prerequisite for "real" algorithms work. I believe this view is backwards. Analysis is not merely evaluation—it is a powerful framework for \textit{thinking} about computation.
+
+Mastering these analytical techniques changes how you approach problems. You begin to see patterns in computational costs, recognize when problems have hidden structure, and develop intuition about what solutions might be possible. This shift in perspective is the ultimate goal of this book.
+
+The journey ahead is demanding. You will encounter abstract mathematical concepts, work through detailed proofs, and solve challenging exercises. But the reward—a deep, rigorous understanding of how to reason about algorithmic efficiency—is worth the effort.
+
+Welcome to \textbf{The Art of Algorithmic Analysis}. Let's begin.
+
+\vspace{1cm}
+
+\begin{flushright}
+\textit{Mahdi (Genix)} \\
+\textit{[Date]} \\
+\textit{[Location]}
+\end{flushright}
+
+\clearpage
