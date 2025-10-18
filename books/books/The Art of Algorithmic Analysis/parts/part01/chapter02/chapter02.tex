@@ -1,0 +1,1162 @@
+\chapter{Mathematical Foundations II: Analysis and Probability}
+\label{ch:analysis-probability}
+
+\lettrine[lines=3]{A}{lgorithm analysis} is fundamentally about asymptotic 
+behavior: what happens as input size grows without bound? This requires tools 
+from mathematical analysis—limits, series, asymptotic expansions. Meanwhile, 
+randomized algorithms demand probability theory.
+
+\begin{chapterintro}
+\textbf{Chapter Organization:}
+
+This chapter covers four major areas:
+\begin{enumerate}[noitemsep]
+    \item \textbf{Mathematical Analysis} — Limits, series, asymptotics
+    \item \textbf{Probability Theory} — Measure-theoretic foundations to applications
+    \item \textbf{Information Theory} — Entropy, coding, lower bounds
+    \item \textbf{Number Theory} — Modular arithmetic, primality, factorization
+\end{enumerate}
+
+\textbf{Prerequisites:} Single-variable calculus (derivatives, integrals, series). 
+Basic probability at the level of a first course.
+\end{chapterintro}
+
+% %==============================================
+% % SECTION 1: MATHEMATICAL ANALYSIS
+% %==============================================
+% \section{Mathematical Analysis for Asymptotic Reasoning}
+% \label{sec:mathematical-analysis}
+
+% \begin{sectionintro}
+% Algorithm analysis lives in the asymptotic realm: we care about behavior as 
+% $n \to \infty$. This section develops the analytical tools—limits, series, 
+% approximations—that make precise asymptotic reasoning possible.
+
+% \textbf{Core Philosophy:} We don't just state formulas—we prove them, understand 
+% their limitations, and learn when they apply.
+% \end{sectionintro}
+
+% %----------------------------------------------
+% \subsection{Sequences, Series, and Limits}
+% \label{subsec:sequences-series}
+
+% \subsubsection{Sequences and Convergence}
+% \paragraph{Definition of Limit: $\lim_{n \to \infty} a_n = L$}
+% \begin{itemize}[noitemsep]
+%     \item Formal $\varepsilon$-$N$ definition
+%     \item Intuitive meaning and visualization
+%     \item Example: $\lim_{n \to \infty} \frac{1}{n} = 0$
+% \end{itemize}
+
+% \paragraph{Limit Laws}
+% \begin{itemize}[noitemsep]
+%     \item Sum, difference, product, quotient rules
+%     \item Squeeze theorem
+%     \item Monotone convergence theorem
+% \end{itemize}
+
+% \paragraph{Important Limits}
+% \begin{itemize}[noitemsep]
+%     \item $\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n = e$
+%     \item $\lim_{n \to \infty} \frac{n^k}{a^n} = 0$ for $a > 1$
+%     \item $\lim_{n \to \infty} \frac{\log n}{n^\varepsilon} = 0$ for any $\varepsilon > 0$
+% \end{itemize}
+
+% \subsubsection{Infinite Series}
+% \paragraph{Definition and Convergence}
+% \begin{itemize}[noitemsep]
+%     \item Partial sums: $S_n = \sum_{k=1}^{n} a_k$
+%     \item Convergence: $\lim_{n \to \infty} S_n$ exists
+%     \item Divergence and oscillation
+% \end{itemize}
+
+% \paragraph{Convergence Tests}
+% \begin{itemize}[noitemsep]
+%     \item Comparison test
+%     \item Ratio test (d'Alembert)
+%     \item Root test (Cauchy)
+%     \item Integral test
+%     \item Alternating series test (Leibniz)
+% \end{itemize}
+
+% \paragraph{Absolute vs. Conditional Convergence}
+
+% \subsubsection{Special Series}
+% \paragraph{Geometric Series}
+% \begin{itemize}[noitemsep]
+%     \item $\sum_{k=0}^{\infty} r^k = \frac{1}{1-r}$ for $|r| < 1$
+%     \item Finite sum: $\sum_{k=0}^{n} r^k = \frac{1-r^{n+1}}{1-r}$
+%     \item Applications to algorithm analysis
+% \end{itemize}
+
+% \paragraph{Harmonic Series}
+% \begin{itemize}[noitemsep]
+%     \item $H_n = \sum_{k=1}^{n} \frac{1}{k} = \ln n + \gamma + O(1/n)$
+%     \item Euler-Mascheroni constant: $\gamma \approx 0.5772$
+%     \item Generalized harmonic numbers: $H_n^{(r)} = \sum_{k=1}^{n} \frac{1}{k^r}$
+% \end{itemize}
+
+% \paragraph{Power Series}
+% \begin{itemize}[noitemsep]
+%     \item Definition: $\sum_{n=0}^{\infty} a_n x^n$
+%     \item Radius of convergence
+%     \item Operations on power series
+% \end{itemize}
+
+% %----------------------------------------------
+% \subsection{Asymptotic Notation (Informal Introduction)}
+% \label{subsec:asymptotic-informal}
+
+% \begin{subsectionintro}
+% We introduce asymptotic notation informally here; rigorous definitions appear 
+% in Part 2. This preview helps us use the notation in subsequent proofs.
+% \end{subsectionintro}
+
+% \subsubsection{Big-O Notation: $O(g(n))$}
+% \paragraph{Intuition: Upper Bound}
+% \begin{itemize}[noitemsep]
+%     \item $f(n) = O(g(n))$ means $f$ grows no faster than $g$
+%     \item Formal (preview): $\exists c, n_0 : f(n) \leq c \cdot g(n)$ for $n \geq n_0$
+% \end{itemize}
+
+% \paragraph{Common Examples}
+% \begin{itemize}[noitemsep]
+%     \item $3n^2 + 5n + 7 = O(n^2)$
+%     \item $\log n = O(n^\varepsilon)$ for any $\varepsilon > 0$
+% \end{itemize}
+
+% \subsubsection{Big-Omega: $\Omega(g(n))$}
+% \paragraph{Intuition: Lower Bound}
+
+% \subsubsection{Big-Theta: $\Theta(g(n))$}
+% \paragraph{Intuition: Tight Bound}
+
+% \subsubsection{Little-o and Little-omega}
+% \paragraph{Strict Inequalities}
+
+% \subsubsection{Growth Rate Hierarchy}
+% $$1 \prec \log \log n \prec \log n \prec \sqrt{n} \prec n \prec n \log n \prec n^2 \prec 2^n \prec n!$$
+
+% %----------------------------------------------
+% \subsection{Summation Techniques}
+% \label{subsec:summations}
+
+% \begin{subsectionintro}
+% Converting sums to closed forms is a fundamental skill in complexity analysis. 
+% We develop multiple techniques, from elementary to advanced.
+% \end{subsectionintro}
+
+% \subsubsection{Basic Formulas}
+% \paragraph{Arithmetic Series}
+% $$\sum_{k=1}^{n} k = \frac{n(n+1)}{2}$$
+
+% \paragraph{Sum of Squares}
+% $$\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}$$
+
+% \paragraph{Sum of Cubes}
+% $$\sum_{k=1}^{n} k^3 = \left(\frac{n(n+1)}{2}\right)^2$$
+
+% \paragraph{Geometric Sum}
+% $$\sum_{k=0}^{n} r^k = \frac{r^{n+1} - 1}{r - 1}$$
+
+% \subsubsection{Perturbation Method}
+% \paragraph{Technique}
+% \begin{enumerate}[noitemsep]
+%     \item Write $S_n = \sum_{k=1}^{n} f(k)$
+%     \item Consider $S_n - S_{n-1}$ or $S_n - r \cdot S_{n-1}$
+%     \item Solve the resulting equation
+% \end{enumerate}
+
+% \paragraph{Example: Geometric Series Derivation}
+
+% \subsubsection{Repertoire Method}
+% \paragraph{Technique (Concrete Mathematics)}
+% \begin{enumerate}[noitemsep]
+%     \item Assume solution form: $S_n = A \cdot \alpha(n) + B \cdot \beta(n) + \cdots$
+%     \item Test with known special cases
+%     \item Solve for coefficients $A, B, \ldots$
+% \end{enumerate}
+
+% \paragraph{Example: Solving $S_n = S_{n-1} + n$}
+
+% \subsubsection{Integral Approximation}
+% \paragraph{Integral Test}
+% $$\int_1^n f(x) \, dx \leq \sum_{k=1}^{n} f(k) \leq f(1) + \int_1^n f(x) \, dx$$
+
+% \paragraph{Example: Harmonic Series}
+% $$\ln n < H_n < 1 + \ln n$$
+
+% \subsubsection{Euler-Maclaurin Formula}
+% \paragraph{Statement}
+% $$\sum_{k=a}^{b} f(k) = \int_a^b f(x) \, dx + \frac{f(a) + f(b)}{2} + \sum_{k=1}^{p} \frac{B_{2k}}{(2k)!} \left(f^{(2k-1)}(b) - f^{(2k-1)}(a)\right) + R_p$$
+
+% where $B_{2k}$ are Bernoulli numbers.
+
+% \paragraph{Applications}
+% \begin{itemize}[noitemsep]
+%     \item Precise asymptotics of $H_n$
+%     \item Stirling's approximation derivation
+%     \item Correcting integral approximations
+% \end{itemize}
+
+% \paragraph{Bernoulli Numbers}
+% \begin{itemize}[noitemsep]
+%     \item Generating function: $\frac{x}{e^x - 1} = \sum_{n=0}^{\infty} B_n \frac{x^n}{n!}$
+%     \item First few: $B_0 = 1, B_1 = -1/2, B_2 = 1/6, B_4 = -1/30$
+% \end{itemize}
+
+% \subsubsection{Generating Function Method}
+% \paragraph{See Section~\ref{subsec:generating-functions} in Chapter 1}
+
+% %----------------------------------------------
+% \subsection{Asymptotic Analysis of Functions}
+% \label{subsec:asymptotic-functions}
+
+% \subsubsection{L'Hôpital's Rule}
+% \paragraph{Statement}
+% If $\lim_{x \to a} f(x) = \lim_{x \to a} g(x) = 0$ or $\pm\infty$, then:
+% $$\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)}$$
+% (if the right limit exists).
+
+% \paragraph{Applications}
+% \begin{itemize}[noitemsep]
+%     \item Comparing growth rates
+%     \item Resolving indeterminate forms: $0/0, \infty/\infty, 0 \cdot \infty$
+% \end{itemize}
+
+% \paragraph{Example: $\lim_{n \to \infty} \frac{\log n}{n}$}
+
+% \subsubsection{Taylor Series and Expansions}
+% \paragraph{Taylor Series}
+% $$f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!} (x-a)^n$$
+
+% \paragraph{Maclaurin Series (at $a=0$)}
+
+% \paragraph{Common Series}
+% \begin{align*}
+% e^x &= \sum_{n=0}^{\infty} \frac{x^n}{n!} \\
+% \sin x &= \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!} \\
+% \cos x &= \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!} \\
+% \ln(1+x) &= \sum_{n=1}^{\infty} \frac{(-1)^{n-1} x^n}{n} \quad (|x| < 1) \\
+% (1+x)^\alpha &= \sum_{n=0}^{\infty} \binom{\alpha}{n} x^n \quad (|x| < 1)
+% \end{align*}
+
+% \paragraph{Applications to Approximation}
+% \begin{itemize}[noitemsep]
+%     \item $e^x \approx 1 + x + \frac{x^2}{2}$ for small $x$
+%     \item $\ln(1+x) \approx x - \frac{x^2}{2}$ for small $x$
+% \end{itemize}
+
+% \subsubsection{Asymptotic Expansions}
+% \paragraph{Definition}
+% $f(x) \sim \sum_{n=0}^{\infty} \frac{a_n}{x^n}$ as $x \to \infty$ means:
+% $$f(x) = \sum_{n=0}^{N-1} \frac{a_n}{x^n} + O\left(\frac{1}{x^N}\right)$$
+
+% \paragraph{Stirling's Approximation (Full Expansion)}
+% $$n! = \sqrt{2\pi n} \left(\frac{n}{e}\right)^n \left(1 + \frac{1}{12n} + \frac{1}{288n^2} - \frac{139}{51840n^3} + O\left(\frac{1}{n^4}\right)\right)$$
+
+% \paragraph{Ramanujan's Refinement}
+% $$n! \approx \sqrt{\pi} \left(\frac{n}{e}\right)^n \sqrt{8n^3 + 4n^2 + n + \frac{1}{30}}$$
+
+% %----------------------------------------------
+% \subsection{Stirling's Approximation}
+% \label{subsec:stirling-detailed}
+
+% \begin{subsectionintro}
+% Stirling's approximation is one of the most important results in asymptotic 
+% analysis. We present three derivations and discuss applications.
+% \end{subsectionintro}
+
+% \subsubsection{Statement of Stirling's Formula}
+% \paragraph{Simple Form}
+% $$n! \sim \sqrt{2\pi n} \left(\frac{n}{e}\right)^n$$
+
+% \paragraph{Relative Error}
+% The error is: $\frac{1}{12n} + O(1/n^2)$, so extremely accurate even for small $n$.
+
+% \subsubsection{First Derivation: Euler-Maclaurin Formula}
+% \paragraph{Step 1: Logarithm of Factorial}
+% $$\ln(n!) = \sum_{k=1}^{n} \ln k$$
+
+% \paragraph{Step 2: Apply Euler-Maclaurin}
+% $$\sum_{k=1}^{n} \ln k = \int_1^n \ln x \, dx + \frac{\ln 1 + \ln n}{2} + O(1)$$
+
+% \paragraph{Step 3: Evaluate Integral}
+% $$\int_1^n \ln x \, dx = n \ln n - n + 1$$
+
+% \paragraph{Step 4: Combine and Exponentiate}
+% $$\ln(n!) = n \ln n - n + \frac{1}{2} \ln n + C + O(1/n)$$
+
+% Determining $C = \frac{1}{2} \ln(2\pi)$ requires Wallis's product.
+
+% \subsubsection{Second Derivation: Wallis's Product}
+% \paragraph{Wallis's Product Formula}
+% $$\prod_{n=1}^{\infty} \frac{4n^2}{4n^2 - 1} = \frac{\pi}{2}$$
+
+% \paragraph{Connection to Stirling}
+% Use binomial coefficients $\binom{2n}{n}$ and asymptotic analysis.
+
+% \subsubsection{Third Derivation: Laplace's Method}
+% \paragraph{Idea: Approximate $n!$ via Integral}
+% $$n! = \int_0^{\infty} x^n e^{-x} \, dx$$
+
+% \paragraph{Laplace's Method}
+% Approximate integral by Gaussian near maximum.
+
+% \subsubsection{Applications}
+% \paragraph{Asymptotics of Binomial Coefficients}
+% $$\binom{2n}{n} \sim \frac{4^n}{\sqrt{\pi n}}$$
+
+% \paragraph{Entropy and Information Theory}
+% $$\log_2(n!) \approx n \log_2 n - n \log_2 e + \frac{1}{2} \log_2(2\pi n)$$
+
+% \paragraph{Catalan Numbers}
+% $$C_n = \frac{1}{n+1} \binom{2n}{n} \sim \frac{4^n}{n^{3/2} \sqrt{\pi}}$$
+
+% %----------------------------------------------
+% \subsection{Integration Techniques}
+% \label{subsec:integration}
+
+% \subsubsection{Fundamental Theorem of Calculus}
+% \subsubsection{Integration by Parts}
+% \subsubsection{Integration by Substitution}
+% \subsubsection{Partial Fractions}
+% \subsubsection{Numerical Integration and Error Bounds}
+
+% %----------------------------------------------
+% \subsection{Advanced Asymptotic Methods}
+% \label{subsec:advanced-asymptotics}
+
+% \subsubsection{Saddle-Point Method}
+% \paragraph{For Integral Asymptotics}
+
+% \subsubsection{Method of Steepest Descent}
+
+% \subsubsection{Singularity Analysis of Generating Functions}
+% \paragraph{Transfer Theorems}
+
+% \subsection{Exercises}
+% \subsubsection{Warmup Problems (25)}
+% \subsubsection{Standard Problems (35)}
+% \subsubsection{Challenging Problems (30)}
+% \subsubsection{Research Problems ($\star$) (10)}
+
+% %==============================================
+% % SECTION 2: PROBABILITY THEORY
+% %==============================================
+% \section{Probability Theory for Algorithmic Analysis}
+% \label{sec:probability-theory}
+
+% \begin{sectionintro}
+% Randomized algorithms and average-case analysis demand rigorous probability 
+% theory. We develop probability from measure-theoretic foundations to practical 
+% applications, with emphasis on techniques used in algorithm analysis.
+
+% \textbf{Approach:} We start with formal measure theory (briefly), then focus on 
+% discrete probability with full proofs of major theorems.
+% \end{sectionintro}
+
+% %----------------------------------------------
+% \subsection{Probability Spaces and Measure Theory}
+% \label{subsec:measure-theory}
+
+% \subsubsection{Measure-Theoretic Foundations (Overview)}
+% \paragraph{$\sigma$-Algebras}
+% \paragraph{Probability Measures}
+% \paragraph{Random Variables as Measurable Functions}
+
+% \subsubsection{Discrete Probability Spaces}
+% \paragraph{Sample Space: $\Omega$}
+% \paragraph{Events: Subsets of $\Omega$}
+% \paragraph{Probability Function: $\Prob: 2^\Omega \to [0,1]$}
+
+% \subsubsection{Kolmogorov's Axioms}
+% \begin{enumerate}[noitemsep]
+%     \item $\Prob(A) \geq 0$ for all events $A$
+%     \item $\Prob(\Omega) = 1$
+%     \item For disjoint events: $\Prob(A_1 \cup A_2 \cup \cdots) = \Prob(A_1) + \Prob(A_2) + \cdots$
+% \end{enumerate}
+
+% \subsubsection{Consequences of Axioms}
+% \paragraph{$\Prob(\emptyset) = 0$}
+% \paragraph{$\Prob(A^c) = 1 - \Prob(A)$}
+% \paragraph{Inclusion-Exclusion for Probability}
+
+% %----------------------------------------------
+% \subsection{Conditional Probability and Independence}
+% \label{subsec:conditional-probability}
+
+% \subsubsection{Conditional Probability}
+% \paragraph{Definition}
+% $$\Prob(A \mid B) = \frac{\Prob(A \cap B)}{\Prob(B)}$$
+
+% \paragraph{Intuition: Updating Beliefs}
+
+% \subsubsection{Law of Total Probability}
+% \paragraph{Partition Formula}
+% If $B_1, \ldots, B_n$ partition $\Omega$:
+% $$\Prob(A) = \sum_{i=1}^{n} \Prob(A \mid B_i) \Prob(B_i)$$
+
+% \subsubsection{Bayes' Theorem}
+% \paragraph{Statement}
+% $$\Prob(B \mid A) = \frac{\Prob(A \mid B) \Prob(B)}{\Prob(A)}$$
+
+% \paragraph{Bayesian Inference}
+% \paragraph{Applications to Machine Learning}
+
+% \subsubsection{Independence}
+% \paragraph{Definition}
+% Events $A$ and $B$ are independent if:
+% $$\Prob(A \cap B) = \Prob(A) \cdot \Prob(B)$$
+
+% \paragraph{Mutual Independence}
+% \paragraph{Pairwise vs. Mutual Independence}
+
+% %----------------------------------------------
+% \subsection{Random Variables}
+% \label{subsec:random-variables-detailed}
+
+% \subsubsection{Definition}
+% \paragraph{Formal: Measurable Function $X: \Omega \to \mathbb{R}$}
+% \paragraph{Intuitive: Numerical Outcome of Experiment}
+
+% \subsubsection{Probability Mass Function (PMF)}
+% \paragraph{Definition: $p_X(x) = \Prob(X = x)$}
+% \paragraph{Properties: $\sum_x p_X(x) = 1$}
+
+% \subsubsection{Cumulative Distribution Function (CDF)}
+% \paragraph{Definition: $F_X(x) = \Prob(X \leq x)$}
+% \paragraph{Properties: Non-decreasing, right-continuous, limits}
+
+% \subsubsection{Expected Value}
+% \paragraph{Definition}
+% $\Expect[X] \geq \Expect[a \cdot I] = a \cdot \Expect[I] = a \cdot \Prob(X \geq a)$
+% \end{proof}
+
+% \paragraph{Applications}
+% \begin{itemize}[noitemsep]
+%     \item Tail bounds for non-negative random variables
+%     \item Analysis of randomized algorithms
+% \end{itemize}
+
+% \subsubsection{Chebyshev's Inequality}
+% \paragraph{Statement}
+% For any random variable $X$ with finite variance and $k > 0$:
+% $\Prob(|X - \Expect[X]| \geq k) \leq \frac{\Var(X)}{k^2}$
+
+% \paragraph{Alternative Form}
+% $\Prob(|X - \Expect[X]| \geq k\sigma) \leq \frac{1}{k^2}$
+
+% \paragraph{Proof}
+% \begin{proof}
+% Apply Markov's inequality to $(X - \Expect[X])^2$:
+% $\Prob(|X - \Expect[X]| \geq k) = \Prob((X - \Expect[X])^2 \geq k^2) \leq \frac{\Expect[(X - \Expect[X])^2]}{k^2} = \frac{\Var(X)}{k^2}$
+% \end{proof}
+
+% \paragraph{Example: Balls into Bins}
+% With $n$ balls thrown into $n$ bins uniformly, the maximum load is 
+% $O\left(\frac{\log n}{\log \log n}\right)$ with high probability.
+
+% \subsubsection{Chernoff Bounds}
+% \paragraph{Statement (Multiplicative Form)}
+% Let $X = \sum_{i=1}^{n} X_i$ where $X_i$ are independent Bernoulli r.v.s. 
+% Let $\mu = \Expect[X]$. Then:
+% \begin{itemize}[noitemsep]
+%     \item Upper tail: $\Prob(X \geq (1+\delta)\mu) \leq e^{-\frac{\delta^2 \mu}{3}}$ for $0 < \delta < 1$
+%     \item Lower tail: $\Prob(X \leq (1-\delta)\mu) \leq e^{-\frac{\delta^2 \mu}{2}}$ for $0 < \delta < 1$
+% \end{itemize}
+
+% \paragraph{Proof Technique}
+% Use moment generating functions and Markov's inequality.
+
+% \paragraph{Why Chernoff is Powerful}
+% \begin{itemize}[noitemsep]
+%     \item Exponential decay in deviation
+%     \item Much stronger than Chebyshev ($1/k^2$ decay)
+%     \item Applies to sums of independent random variables
+% \end{itemize}
+
+% \paragraph{Applications}
+% \begin{itemize}[noitemsep]
+%     \item Randomized rounding in approximation algorithms
+%     \item Load balancing with multiple choices
+%     \item Probabilistic data structures (Bloom filters)
+% \end{itemize}
+
+% \subsubsection{Hoeffding's Inequality}
+% \paragraph{For Bounded Random Variables}
+
+% \subsubsection{Azuma's Inequality}
+% \paragraph{For Martingales}
+
+% %----------------------------------------------
+% \subsection{Randomized Algorithms: Analysis Techniques}
+% \label{subsec:randomized-techniques}
+
+% \subsubsection{Las Vegas vs. Monte Carlo}
+% \paragraph{Las Vegas}
+% \begin{itemize}[noitemsep]
+%     \item Always correct
+%     \item Random running time
+%     \item Example: Randomized QuickSort
+% \end{itemize}
+
+% \paragraph{Monte Carlo}
+% \begin{itemize}[noitemsep]
+%     \item May be incorrect with small probability
+%     \item Deterministic running time
+%     \item Example: Miller-Rabin primality test
+% \end{itemize}
+
+% \subsubsection{Probabilistic Method}
+% \paragraph{Erdős's Technique}
+% \begin{enumerate}[noitemsep]
+%     \item Show expected value has certain property
+%     \item Conclude object with that property must exist
+% \end{enumerate}
+
+% \paragraph{Example: Graph Coloring Lower Bound}
+
+% \subsubsection{Derandomization Techniques}
+% \paragraph{Method of Conditional Expectations}
+% \paragraph{Pairwise Independence}
+% \paragraph{Limited Independence}
+
+% %----------------------------------------------
+% \subsection{Limit Theorems}
+% \label{subsec:limit-theorems}
+
+% \subsubsection{Law of Large Numbers}
+% \paragraph{Weak Law}
+% $\Prob\left(\left|\frac{X_1 + \cdots + X_n}{n} - \mu\right| > \varepsilon\right) \to 0 \text{ as } n \to \infty$
+
+% \paragraph{Strong Law}
+% $\Prob\left(\lim_{n \to \infty} \frac{X_1 + \cdots + X_n}{n} = \mu\right) = 1$
+
+% \subsubsection{Central Limit Theorem}
+% \paragraph{Statement}
+% Let $X_1, X_2, \ldots$ be i.i.d. with $\Expect[X_i] = \mu$, $\Var(X_i) = \sigma^2$. Then:
+% $\frac{X_1 + \cdots + X_n - n\mu}{\sigma\sqrt{n}} \xrightarrow{d} \mathcal{N}(0,1)$
+
+% \paragraph{Interpretation}
+% Sums of many independent r.v.s are approximately normal.
+
+% \paragraph{Berry-Esseen Theorem}
+% Quantifies convergence rate.
+
+% \paragraph{Applications}
+% \begin{itemize}[noitemsep]
+%     \item Approximating binomial with normal
+%     \item Confidence intervals
+%     \item Statistical testing
+% \end{itemize}
+
+% \subsection{Exercises}
+% \subsubsection{Warmup Problems (30)}
+% \subsubsection{Standard Problems (40)}
+% \subsubsection{Challenging Problems (35)}
+% \subsubsection{Research Problems ($\star$) (15)}
+
+% %==============================================
+% % SECTION 3: INFORMATION THEORY
+% %==============================================
+% \section{Information Theory and Entropy}
+% \label{sec:information-theory}
+
+% \begin{sectionintro}
+% Information theory provides fundamental limits on compression, communication, 
+% and computation. Entropy appears in lower bounds for comparison-based sorting, 
+% data structure space usage, and communication complexity.
+
+% \textbf{Focus:} We develop Shannon entropy, coding theorems, and applications 
+% to algorithm analysis.
+% \end{sectionintro}
+
+% %----------------------------------------------
+% \subsection{Entropy and Information Content}
+% \label{subsec:entropy}
+
+% \subsubsection{Self-Information}
+% \paragraph{Definition}
+% For event $A$ with $\Prob(A) = p$:
+% $I(A) = \log_2 \frac{1}{p} = -\log_2 p \text{ bits}$
+
+% \paragraph{Interpretation}
+% Information gained by observing event $A$.
+
+% \subsubsection{Shannon Entropy}
+% \paragraph{Definition}
+% For discrete random variable $X$ with PMF $p_X$:
+% $H(X) = -\sum_{x} p_X(x) \log_2 p_X(x)$
+
+% \paragraph{Alternative Notation}
+% $H(X) = \Expect[-\log_2 p_X(X)]$
+
+% \paragraph{Properties}
+% \begin{itemize}[noitemsep]
+%     \item $H(X) \geq 0$ with equality iff $X$ is deterministic
+%     \item $H(X) \leq \log_2 |X|$ with equality iff $X$ is uniform
+%     \item Concave function of the distribution
+% \end{itemize}
+
+% \subsubsection{Joint and Conditional Entropy}
+% \paragraph{Joint Entropy}
+% $H(X,Y) = -\sum_{x,y} p_{XY}(x,y) \log_2 p_{XY}(x,y)$
+
+% \paragraph{Conditional Entropy}
+% $H(Y|X) = \sum_x p_X(x) H(Y|X=x)$
+
+% \paragraph{Chain Rule}
+% $H(X,Y) = H(X) + H(Y|X)$
+
+% \subsubsection{Mutual Information}
+% \paragraph{Definition}
+% $I(X;Y) = H(X) + H(Y) - H(X,Y) = H(X) - H(X|Y)$
+
+% \paragraph{Interpretation}
+% Amount of information $X$ provides about $Y$.
+
+% \paragraph{Properties}
+% \begin{itemize}[noitemsep]
+%     \item $I(X;Y) \geq 0$ with equality iff $X$ and $Y$ are independent
+%     \item Symmetric: $I(X;Y) = I(Y;X)$
+% \end{itemize}
+
+% %----------------------------------------------
+% \subsection{Source Coding Theorems}
+% \label{subsec:source-coding}
+
+% \subsubsection{Prefix-Free Codes}
+% \paragraph{Kraft's Inequality}
+% For prefix-free code with codeword lengths $\ell_1, \ldots, \ell_n$:
+% $\sum_{i=1}^{n} 2^{-\ell_i} \leq 1$
+
+% \paragraph{Converse}
+% If $\sum 2^{-\ell_i} \leq 1$, a prefix-free code with these lengths exists.
+
+% \subsubsection{Shannon's Source Coding Theorem}
+% \paragraph{Statement}
+% For source $X$ with entropy $H(X)$, the expected codeword length $L$ satisfies:
+% $H(X) \leq L < H(X) + 1$
+
+% \paragraph{Interpretation}
+% Cannot compress below entropy on average.
+
+% \paragraph{Huffman Coding}
+% Optimal prefix-free code achieving $L < H(X) + 1$.
+
+% \subsubsection{Arithmetic Coding}
+% \paragraph{Achieves $L \approx H(X)$ for long sequences}
+
+% %----------------------------------------------
+% \subsection{Applications to Algorithm Analysis}
+% \label{subsec:info-theory-algorithms}
+
+% \subsubsection{Sorting Lower Bound}
+% \paragraph{Information-Theoretic Argument}
+% \begin{itemize}[noitemsep]
+%     \item $n!$ possible permutations
+%     \item Each comparison provides $\leq 1$ bit of information
+%     \item Need $\log_2(n!)$ bits total
+%     \item By Stirling: $\log_2(n!) \approx n \log_2 n$
+% \end{itemize}
+
+% Therefore: comparison sorting requires $\Omega(n \log n)$ comparisons.
+
+% \subsubsection{Lower Bounds for Data Structures}
+% \paragraph{Cell-Probe Model}
+% \paragraph{Information Transfer}
+
+% \subsubsection{Communication Complexity}
+% \paragraph{Two-Party Communication}
+% \paragraph{Equality Testing Lower Bound}
+
+% \subsection{Exercises}
+% \subsubsection{Warmup Problems (20)}
+% \subsubsection{Standard Problems (25)}
+% \subsubsection{Challenging Problems (20)}
+% \subsubsection{Research Problems ($\star$) (10)}
+
+% %==============================================
+% % SECTION 4: NUMBER THEORY
+% %==============================================
+% \section{Number Theory for Algorithmic Applications}
+% \label{sec:number-theory}
+
+% \begin{sectionintro}
+% Number theory is essential for cryptography, hashing, pseudorandom generation, 
+% and complexity theory. This section develops computational number theory with 
+% complete proofs and complexity analysis.
+
+% \textbf{Unique Feature:} We analyze the complexity of every algorithm we present.
+% \end{sectionintro}
+
+% %----------------------------------------------
+% \subsection{Divisibility and Modular Arithmetic}
+% \label{subsec:modular-arithmetic}
+
+% \subsubsection{Division Algorithm}
+% \paragraph{Theorem}
+% For integers $a$ and $b > 0$, there exist unique integers $q$ and $r$ such that:
+% $a = bq + r, \quad 0 \leq r < b$
+
+% \paragraph{Proof}
+% \begin{proof}
+% Existence: Consider $S = \{a - kb : k \in \mathbb{Z}, a - kb \geq 0\}$. 
+% Let $r$ be the minimum element. Then $r = a - qb$ for some $q$. If $r \geq b$, 
+% then $r - b \in S$ contradicts minimality.
+
+% Uniqueness: If $a = bq_1 + r_1 = bq_2 + r_2$, then $b(q_1 - q_2) = r_2 - r_1$. 
+% Since $|r_2 - r_1| < b$, we must have $q_1 = q_2$ and $r_1 = r_2$.
+% \end{proof}
+
+% \subsubsection{Congruences}
+% \paragraph{Definition}
+% $a \equiv b \pmod{m}$ iff $m \mid (a - b)$
+
+% \paragraph{Properties}
+% \begin{itemize}[noitemsep]
+%     \item Reflexive, symmetric, transitive (equivalence relation)
+%     \item Compatible with addition: $a \equiv b \pmod{m} \implies a+c \equiv b+c \pmod{m}$
+%     \item Compatible with multiplication: $a \equiv b \pmod{m} \implies ac \equiv bc \pmod{m}$
+% \end{itemize}
+
+% \subsubsection{Modular Arithmetic}
+% \paragraph{$\mathbb{Z}_m = \{0, 1, \ldots, m-1\}$}
+% \paragraph{Operations: $+_m, \times_m$}
+% \paragraph{Complexity: $O(\log m)$ per operation (using long arithmetic)}
+
+% \subsubsection{Units and Inverses}
+% \paragraph{Definition}
+% $a \in \mathbb{Z}_m$ is a unit if $\exists b : ab \equiv 1 \pmod{m}$
+
+% \paragraph{Theorem}
+% $a$ is a unit in $\mathbb{Z}_m$ iff $\gcd(a, m) = 1$.
+
+% \paragraph{Euler's Totient Function}
+% $\phi(m) = |\{a \in \mathbb{Z}_m : \gcd(a,m) = 1\}|$
+
+% \paragraph{Computing $\phi(m)$}
+% If $m = p_1^{a_1} \cdots p_k^{a_k}$:
+% $\phi(m) = m \prod_{i=1}^{k} \left(1 - \frac{1}{p_i}\right)$
+
+% %----------------------------------------------
+% \subsection{Greatest Common Divisor}
+% \label{subsec:gcd}
+
+% \subsubsection{Definition and Properties}
+% \paragraph{$\gcd(a,b)$ is the largest positive integer dividing both $a$ and $b$}
+
+% \paragraph{Properties}
+% \begin{itemize}[noitemsep]
+%     \item $\gcd(a,b) = \gcd(b,a)$
+%     \item $\gcd(a,0) = |a|$
+%     \item $\gcd(a,b) = \gcd(a-b, b)$
+% \end{itemize}
+
+% \subsubsection{Euclidean Algorithm}
+% \paragraph{Algorithm}
+% \begin{algorithm}[H]
+% \caption{Euclidean Algorithm}
+% \begin{algorithmic}[1]
+% \Require Integers $a, b$ with $a \geq b > 0$
+% \Ensure $\gcd(a,b)$
+% \While{$b \neq 0$}
+%     \State $r \gets a \bmod b$
+%     \State $a \gets b$
+%     \State $b \gets r$
+% \EndWhile
+% \State \Return $a$
+% \end{algorithmic}
+% \end{algorithm}
+
+% \paragraph{Correctness}
+% Invariant: $\gcd(a,b)$ remains constant throughout.
+
+% \paragraph{Complexity Analysis}
+% \begin{theorem}[Lamé's Theorem]
+% The number of steps in Euclidean algorithm for $\gcd(a,b)$ with $a \geq b$ is 
+% $O(\log b)$.
+% \end{theorem}
+
+% \begin{proof}
+% If $a = bq + r$ with $r < b/2$, then two steps reduce the larger number by at 
+% least half. If $r \geq b/2$, the next step gives $b = r \cdot 1 + (b-r)$ with 
+% $b - r < b/2$. So every two steps reduce by half, giving $O(\log b)$ steps.
+% \end{proof}
+
+% \paragraph{Worst Case: Consecutive Fibonacci Numbers}
+% $\gcd(F_{n+1}, F_n) \text{ requires exactly } n-1 \text{ steps}$
+
+% \subsubsection{Extended Euclidean Algorithm}
+% \paragraph{Goal}
+% Find integers $x, y$ such that $ax + by = \gcd(a,b)$ (Bézout's identity).
+
+% \paragraph{Algorithm}
+% \begin{algorithm}[H]
+% \caption{Extended Euclidean Algorithm}
+% \begin{algorithmic}[1]
+% \Require Integers $a, b$
+% \Ensure $(\gcd(a,b), x, y)$ where $ax + by = \gcd(a,b)$
+% \If{$b = 0$}
+%     \State \Return $(a, 1, 0)$
+% \EndIf
+% \State $(d, x', y') \gets \text{ExtendedGCD}(b, a \bmod b)$
+% \State $x \gets y'$
+% \State $y \gets x' - \lfloor a/b \rfloor \cdot y'$
+% \State \Return $(d, x, y)$
+% \end{algorithmic}
+% \end{algorithm}
+
+% \paragraph{Applications}
+% \begin{itemize}[noitemsep]
+%     \item Computing modular inverses
+%     \item Solving linear Diophantine equations
+%     \item Chinese Remainder Theorem
+% \end{itemize}
+
+% %----------------------------------------------
+% \subsection{Prime Numbers}
+% \label{subsec:primes}
+
+% \subsubsection{Definition and Basic Properties}
+% \paragraph{Prime: $p > 1$ with only divisors 1 and $p$}
+% \paragraph{Composite: $n > 1$ that is not prime}
+
+% \subsubsection{Fundamental Theorem of Arithmetic}
+% \paragraph{Statement}
+% Every integer $n > 1$ can be written uniquely (up to order) as:
+% $n = p_1^{a_1} p_2^{a_2} \cdots p_k^{a_k}$
+% where $p_i$ are distinct primes and $a_i > 0$.
+
+% \paragraph{Proof}
+% Existence by strong induction; uniqueness by Euclid's lemma.
+
+% \subsubsection{Infinitude of Primes}
+% \paragraph{Euclid's Proof}
+% \begin{proof}
+% Suppose finitely many primes $p_1, \ldots, p_k$. Consider:
+% $N = p_1 \cdots p_k + 1$
+% $N$ is not divisible by any $p_i$, so either $N$ is prime (contradiction) or 
+% $N$ has a prime divisor not in the list (contradiction).
+% \end{proof}
+
+% \paragraph{Euler's Proof (via $\zeta$ function)}
+
+% \subsubsection{Prime Counting Function}
+% \paragraph{Definition: $\pi(x) = |\{p \leq x : p \text{ prime}\}|$}
+
+% \paragraph{Prime Number Theorem}
+% $\pi(x) \sim \frac{x}{\ln x} \text{ as } x \to \infty$
+
+% \paragraph{Better Approximation}
+% $\pi(x) \sim \text{Li}(x) = \int_2^x \frac{dt}{\ln t}$
+
+% \subsubsection{Sieve of Eratosthenes}
+% \paragraph{Algorithm}
+% \begin{enumerate}[noitemsep]
+%     \item Create list of integers from 2 to $n$
+%     \item For each prime $p \leq \sqrt{n}$: mark multiples $2p, 3p, \ldots$
+%     \item Remaining unmarked numbers are prime
+% \end{enumerate}
+
+% \paragraph{Complexity: $O(n \log \log n)$}
+
+% \paragraph{Space: $O(n)$ bits using bit array}
+
+% \subsubsection{Primality Testing}
+% \paragraph{Trial Division: $O(\sqrt{n})$ time}
+
+% \paragraph{Fermat's Little Theorem}
+% If $p$ is prime and $\gcd(a,p) = 1$:
+% $a^{p-1} \equiv 1 \pmod{p}$
+
+% \paragraph{Miller-Rabin Test}
+% \begin{itemize}[noitemsep]
+%     \item Probabilistic algorithm
+%     \item Error probability $\leq 4^{-k}$ with $k$ rounds
+%     \item Complexity: $O(k \log^3 n)$ using fast modular exponentiation
+% \end{itemize}
+
+% \paragraph{AKS Primality Test}
+% \begin{itemize}[noitemsep]
+%     \item Deterministic polynomial-time algorithm
+%     \item Complexity: $\tilde{O}(\log^{6} n)$ (original), improved to $\tilde{O}(\log^{6} n)$
+%     \item Theoretical importance > practical use
+% \end{itemize}
+
+% %----------------------------------------------
+% \subsection{Modular Exponentiation}
+% \label{subsec:modexp}
+
+% \subsubsection{Repeated Squaring Algorithm}
+% \paragraph{Goal: Compute $a^n \bmod m$ efficiently}
+
+% \paragraph{Algorithm}
+% \begin{algorithm}[H]
+% \caption{Modular Exponentiation}
+% \begin{algorithmic}[1]
+% \Require $a, n, m$ with $n \geq 0$, $m > 0$
+% \Ensure $a^n \bmod m$
+% \State $result \gets 1$
+% \State $base \gets a \bmod m$
+% \While{$n > 0$}
+%     \If{$n \bmod 2 = 1$}
+%         \State $result \gets (result \times base) \bmod m$
+%     \EndIf
+%     \State $n \gets \lfloor n/2 \rfloor$
+%     \State $base \gets (base \times base) \bmod m$
+% \EndWhile
+% \State \Return $result$
+% \end{algorithmic}
+% \end{algorithm}
+
+% \paragraph{Complexity: $O(\log n)$ multiplications mod $m$}
+% \paragraph{Total: $O(\log n \cdot \log^2 m)$ bit operations}
+
+% %----------------------------------------------
+% \subsection{Chinese Remainder Theorem}
+% \label{subsec:crt}
+
+% \subsubsection{Statement}
+% \paragraph{Theorem}
+% Let $m_1, \ldots, m_k$ be pairwise coprime positive integers. Then the system:
+% \begin{align*}
+% x &\equiv a_1 \pmod{m_1} \\
+% &\vdots \\
+% x &\equiv a_k \pmod{m_k}
+% \end{align*}
+% has a unique solution modulo $M = m_1 \cdots m_k$.
+
+% \subsubsection{Constructive Proof and Algorithm}
+% \paragraph{Let $M_i = M / m_i$}
+% \paragraph{Find $y_i$ such that $M_i y_i \equiv 1 \pmod{m_i}$ (using Extended GCD)}
+% \paragraph{Solution: $x = \sum_{i=1}^{k} a_i M_i y_i \pmod{M}$}
+
+% \subsubsection{Applications}
+% \paragraph{Fast Modular Arithmetic}
+% \paragraph{RSA Speedup}
+% \paragraph{Secret Sharing Schemes}
+
+% %----------------------------------------------
+% \subsection{Applications to Cryptography}
+% \label{subsec:cryptography}
+
+% \subsubsection{RSA Cryptosystem}
+% \paragraph{Key Generation}
+% \begin{enumerate}[noitemsep]
+%     \item Choose large primes $p, q$
+%     \item $n = pq$, $\phi(n) = (p-1)(q-1)$
+%     \item Choose $e$ with $\gcd(e, \phi(n)) = 1$
+%     \item Compute $d \equiv e^{-1} \pmod{\phi(n)}$
+%     \item Public key: $(n, e)$; private key: $(n, d)$
+% \end{enumerate}
+
+% \paragraph{Encryption/Decryption}
+% \begin{itemize}[noitemsep]
+%     \item Encrypt: $c \equiv m^e \pmod{n}$
+%     \item Decrypt: $m \equiv c^d \pmod{n}$
+% \end{itemize}
+
+% \paragraph{Correctness: Euler's Theorem}
+% $m^{\phi(n)} \equiv 1 \pmod{n} \implies m^{ed} \equiv m \pmod{n}$
+
+% \paragraph{Security}
+% Based on hardness of integer factorization.
+
+% \subsubsection{Diffie-Hellman Key Exchange}
+% \paragraph{Protocol}
+% \paragraph{Security: Discrete Logarithm Problem}
+
+% \subsubsection{Hash Functions}
+% \paragraph{Universal Hashing}
+% \paragraph{Cryptographic Hash Functions: SHA-256, SHA-3}
+
+% \subsection{Exercises}
+% \subsubsection{Warmup Problems (25)}
+% \subsubsection{Standard Problems (30)}
+% \subsubsection{Challenging Problems (25)}
+% \subsubsection{Research Problems ($\star$) (10)}
+
+% %==============================================
+% % CHAPTER SUMMARY
+% %==============================================
+% \section{Chapter Summary and Road Ahead}
+% \label{sec:chapter2-summary}
+
+% \begin{sectionintro}
+% This chapter developed the analytical and probabilistic foundations for 
+% algorithm analysis. We've covered:
+
+% \begin{itemize}[noitemsep]
+%     \item \textbf{Analysis:} Limits, series, asymptotic methods, Stirling's approximation
+%     \item \textbf{Probability:} Rigorous foundations, concentration inequalities, limit theorems
+%     \item \textbf{Information Theory:} Entropy, coding theorems, lower bounds
+%     \item \textbf{Number Theory:} GCD algorithms, primality testing, modular arithmetic
+% \end{itemize}
+
+% \textbf{What's Next:}
+
+% Part 2 begins the formal study of algorithm analysis, building on these 
+% mathematical foundations:
+% \begin{itemize}[noitemsep]
+%     \item Rigorous asymptotic notation
+%     \item Recurrence relation solving methods
+%     \item Probabilistic analysis of randomized algorithms
+%     \item Amortized analysis techniques
+% \end{itemize}
+% \end{sectionintro}
+
+% %==============================================
+% % END OF CHAPTER 2
+% %==============================================] = \sum_x x \cdot p_X(x)$$
+
+% \paragraph{Law of the Unconscious Statistician}
+% $$\Expect[g(X)] = \sum_x g(x) \cdot p_X(x)$$
+
+% \paragraph{Properties}
+% \begin{itemize}[noitemsep]
+%     \item Linearity: $\Expect[aX + bY] = a\Expect[X] + b\Expect[Y]$
+%     \item Monotonicity: $X \leq Y \implies \Expect[X] \leq \Expect[Y]$
+% \end{itemize}
+
+% \subsubsection{Variance and Standard Deviation}
+% \paragraph{Variance}
+% $$\Var(X) = \Expect[(X - \Expect[X])^2] = \Expect[X^2] - (\Expect[X])^2$$
+
+% \paragraph{Standard Deviation}
+% $$\sigma_X = \sqrt{\Var(X)}$$
+
+% \paragraph{Properties}
+% \begin{itemize}[noitemsep]
+%     \item $\Var(aX + b) = a^2 \Var(X)$
+%     \item If $X, Y$ independent: $\Var(X + Y) = \Var(X) + \Var(Y)$
+% \end{itemize}
+
+% \subsubsection{Higher Moments}
+% \paragraph{$k$-th Moment: $\Expect[X^k]$}
+% \paragraph{Moment Generating Functions}
+
+% %----------------------------------------------
+% \subsection{Common Probability Distributions}
+% \label{subsec:distributions-detailed}
+
+% \subsubsection{Bernoulli Distribution}
+% \paragraph{Parameters: $p \in [0,1]$}
+% \paragraph{PMF: $\Prob(X = 1) = p, \Prob(X = 0) = 1-p$}
+% \paragraph{$\Expect[X] = p, \Var(X) = p(1-p)$}
+
+% \subsubsection{Binomial Distribution}
+% \paragraph{Parameters: $n \in \mathbb{N}, p \in [0,1]$}
+% \paragraph{PMF: $\Prob(X = k) = \binom{n}{k} p^k (1-p)^{n-k}$}
+% \paragraph{$\Expect[X] = np, \Var(X) = np(1-p)$}
+% \paragraph{Applications: Success counts in $n$ trials}
+
+% \subsubsection{Geometric Distribution}
+% \paragraph{Parameters: $p \in (0,1]$}
+% \paragraph{PMF: $\Prob(X = k) = (1-p)^{k-1} p$}
+% \paragraph{$\Expect[X] = 1/p, \Var(X) = (1-p)/p^2$}
+% \paragraph{Memoryless Property}
+% \paragraph{Applications: Waiting times}
+
+% \subsubsection{Poisson Distribution}
+% \paragraph{Parameters: $\lambda > 0$}
+% \paragraph{PMF: $\Prob(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}$}
+% \paragraph{$\Expect[X] = \lambda, \Var(X) = \lambda$}
+% \paragraph{Approximation to Binomial}
+% \paragraph{Applications: Rare events, hashing}
+
+% \subsubsection{Uniform Distribution}
+% \paragraph{Discrete: $X \in \{1, 2, \ldots, n\}$ equally likely}
+% \paragraph{$\Expect[X] = (n+1)/2, \Var(X) = (n^2-1)/12$}
+
+% \subsubsection{Negative Binomial Distribution}
+% \paragraph{Waiting for $r$ successes}
+
+% %----------------------------------------------
+% \subsection{Linearity of Expectation}
+% \label{subsec:linearity-detailed}
+
+% \begin{subsectionintro}
+% Linearity of expectation is the single most powerful tool in probabilistic 
+% algorithm analysis. We prove it rigorously and demonstrate its power.
+% \end{subsectionintro}
+
+% \subsubsection{Statement and Proof}
+% \paragraph{Theorem}
+% For any random variables $X_1, \ldots, X_n$ (not necessarily independent):
+% $$\Expect\left[\sum_{i=1}^{n} X_i\right] = \sum_{i=1}^{n} \Expect[X_i]$$
+
+% \paragraph{Proof}
+% \begin{proof}
+% Let $X = \sum_{i=1}^{n} X_i$. Then:
+% \begin{align*}
+% \Expect[X] &= \sum_{(x_1, \ldots, x_n)} \left(\sum_{i=1}^{n} x_i\right) \Prob(X_1=x_1, \ldots, X_n=x_n) \\
+% &= \sum_{i=1}^{n} \sum_{(x_1, \ldots, x_n)} x_i \Prob(X_1=x_1, \ldots, X_n=x_n) \\
+% &= \sum_{i=1}^{n} \Expect[X_i]
+% \end{align*}
+% \end{proof}
+
+% \subsubsection{Why Independence Is Not Required}
+% \paragraph{Key Insight}
+% The proof uses only the definition of expectation and the distributive law—no 
+% independence assumption needed.
+
+% \subsubsection{Indicator Random Variables}
+% \paragraph{Definition}
+% $$I_A = \begin{cases} 1 & \text{if event } A \text{ occurs} \\ 0 & \text{otherwise} \end{cases}$$
+
+% \paragraph{Key Property}
+% $$\Expect[I_A] = \Prob(A)$$
+
+% \paragraph{Power of Indicators}
+% Express complicated random variables as sums of indicators.
+
+% \subsubsection{Case Study: QuickSort Analysis}
+% \paragraph{Setup}
+% Let $X$ = number of comparisons in QuickSort on $n$ elements.
+
+% \paragraph{Indicator Variable Approach}
+% Define $X_{ij} = 1$ if elements $i$ and $j$ are compared, 0 otherwise.
+
+% Then: $X = \sum_{1 \leq i < j \leq n} X_{ij}$
+
+% \paragraph{Computing $\Expect[X_{ij}]$}
+% Elements $i$ and $j$ are compared iff one is chosen as pivot before any element 
+% between them. Probability: $\frac{2}{j-i+1}$.
+
+% \paragraph{Final Calculation}
+% \begin{align*}
+% \Expect[X] &= \sum_{1 \leq i < j \leq n} \Expect[X_{ij}] \\
+% &= \sum_{1 \leq i < j \leq n} \frac{2}{j-i+1} \\
+% &= \sum_{k=1}^{n-1} (n-k) \cdot \frac{2}{k+1} \\
+% &= 2(n+1) \sum_{k=1}^{n} \frac{1}{k} - 2n \\
+% &= 2(n+1) H_n - 2n \\
+% &\sim 2n \ln n
+% \end{align*}
+
+% Thus $\Expect[X] = \Theta(n \log n)$.
+
+% \subsubsection{More Applications}
+% \paragraph{Expected Number of Fixed Points in Random Permutation}
+% \paragraph{Coupon Collector Problem}
+% \paragraph{Load Balancing: Balls into Bins}
+
+% %----------------------------------------------
+% \subsection{Concentration Inequalities}
+% \label{subsec:concentration}
+
+% \begin{subsectionintro}
+% Knowing the expected value is not enough—we need bounds on how far a random 
+% variable can deviate from its expectation.
+% \end{subsectionintro}
+
+% \subsubsection{Markov's Inequality}
+% \paragraph{Statement}
+% For any non-negative random variable $X$ and $a > 0$:
+% $$\Prob(X \geq a) \leq \frac{\Expect[X]}{a}$$
+
+% \paragraph{Proof}
+% \begin{proof}
+% Let $I = \mathbbm{1}_{X \geq a}$. Then $X \geq a \cdot I$, so:
+% $$\Expect[X

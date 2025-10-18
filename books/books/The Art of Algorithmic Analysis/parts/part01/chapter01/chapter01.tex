@@ -1,464 +1,629 @@
-%----------------------------------------------
-% CHAPTER 1: Mathematical and Algorithmic Prerequisites
-%----------------------------------------------
-\chapter{Mathematical and Algorithmic Prerequisites}
-\label{ch:prerequisites}
+\chapter{Mathematical Foundations I: Discrete Structures}
+\label{ch:discrete-foundations}
 
-%===============================================
-% CHAPTER INTRODUCTION
-%===============================================
-\lettrine[lines=3, lhang=0.1, loversize=0.15]{T}{his chapter} establishes 
-the mathematical foundation required for rigorous algorithm analysis. We cover 
-discrete mathematics, probability theory, mathematical analysis, linear algebra, 
-and number theory—each selected for its direct relevance to algorithmic reasoning.
+\lettrine[lines=3]{D}{iscrete mathematics} is the native language of computer 
+science. Unlike the continuous mathematics of physics and engineering, we work 
+with countable, distinct objects: integers, graphs, logic formulas, finite 
+automata. This chapter develops the discrete structures essential for 
+algorithmic reasoning.
 
 \begin{chapterintro}
-\textbf{Why This Chapter Matters:}
+\textbf{Chapter Organization:}
+
+This chapter covers five fundamental areas:
+\begin{enumerate}[noitemsep]
+    \item \textbf{Logic and Proof Theory} — The language of correctness
+    \item \textbf{Set Theory and Relations} — The foundation of abstraction
+    \item \textbf{Combinatorial Analysis} — Counting and enumeration
+    \item \textbf{Graph Theory} — Modeling relationships
+    \item \textbf{Algebraic Structures} — Symmetry and structure
+\end{enumerate}
+
+Each section includes:
 \begin{itemize}[noitemsep]
-    \item \textbf{Discrete Mathematics} provides the language of algorithms: sets, functions, graphs, and proof techniques
-    \item \textbf{Probability Theory} enables average-case and randomized algorithm analysis
-    \item \textbf{Mathematical Analysis} gives us tools for asymptotic reasoning and limits
-    \item \textbf{Linear Algebra} underpins graph algorithms, Markov chains, and numerical methods
-    \item \textbf{Number Theory} appears in cryptography, hashing, and randomization
+    \item Complete proofs of major theorems
+    \item Worked examples from algorithm analysis
+    \item Historical context and development
+    \item Exercises at three levels: Basic, Intermediate, Advanced
+    \item Research-level problems marked with $\star$
 \end{itemize}
 
-\textbf{How to Use This Chapter:}
-If you're already comfortable with a topic, skim it for notation and conventions.
-Each section includes self-assessment problems to verify your understanding.
+\textbf{Prerequisites:} Mathematical maturity at the level of a first-year 
+university mathematics course. Comfort with symbolic manipulation and logical 
+reasoning.
 \end{chapterintro}
 
-\section{Discrete Mathematics: The Language of Algorithms}
-\label{sec:discrete-math}
+%----------------------------------------------
+% SECTION 1: LOGIC AND PROOF THEORY
+%----------------------------------------------
+\section{Logic and Proof Theory}
+\label{sec:logic-proof}
 
 \begin{sectionintro}
-Discrete mathematics forms the grammatical structure of algorithm design.
-Unlike continuous mathematics, we work with countable, distinct objects:
-integers, graphs, logical propositions. This section covers the foundational
-concepts that appear repeatedly throughout algorithm analysis.
+Before we can prove algorithms correct or establish complexity bounds, we must 
+understand the nature of proof itself. This section develops propositional and 
+predicate logic, formal proof systems, and the art of mathematical argumentation.
+
+\textbf{Why This Matters:} Every correctness proof, every lower bound, every 
+impossibility result rests on logical foundations. Mastery of proof techniques 
+is not optional—it is the essence of computer science.
 \end{sectionintro}
 
-\subsection{Sets, Functions, and Relations}
-\label{subsec:sets-functions-relations}
+\subsection{Propositional Logic}
+\label{subsec:propositional-logic}
 
-\subsubsection{Set Theory Fundamentals}
-\subsubsection{Operations on Sets: Union, Intersection, Difference, Cartesian Product}
-\subsubsection{Functions: Injective, Surjective, Bijective Mappings}
-\subsubsection{Relations and Equivalence Classes}
-\subsubsection{Order Relations: Partial Orders, Total Orders, Lattices}
+\subsubsection{Syntax: Well-Formed Formulas}
+\paragraph{Formal Definition.}
+\paragraph{Parse Trees and Unique Readability.}
+\paragraph{Inductive Definition of Formulas.}
 
-%-----------------------------------------------
-\subsection{Combinatorics: Counting and Arrangements}
-\label{subsec:combinatorics}
+\subsubsection{Semantics: Truth Tables and Valuations}
+\paragraph{Boolean Valuations.}
+\paragraph{Truth-Functional Connectives: $\land, \lor, \neg, \rightarrow, \leftrightarrow$.}
+\paragraph{Tautologies, Contradictions, and Contingencies.}
 
-\begin{subsectionintro}
-Combinatorics answers "how many?" questions essential to algorithm analysis:
-How many possible inputs exist? How many comparisons are necessary?
-\end{subsectionintro}
+\subsubsection{Logical Equivalence and Normal Forms}
+\paragraph{Substitution and Equivalence Relations.}
+\paragraph{Conjunctive Normal Form (CNF).}
+\paragraph{Disjunctive Normal Form (DNF).}
+\paragraph{Theorem: Every Formula Has Equivalent CNF/DNF.}
 
-\subsubsection{Fundamental Counting Principles: Sum and Product Rules}
-\subsubsection{Permutations: With and Without Repetition}
-\subsubsection{Combinations and the Binomial Theorem}
-\subsubsection{Pigeonhole Principle and Its Applications}
-\subsubsection{Inclusion-Exclusion Principle}
-\subsubsection{Generating Functions for Combinatorial Sequences}
-\subsubsection{Combinatorial Identities and Proof Techniques}
+\subsubsection{Proof Systems for Propositional Logic}
+\paragraph{Natural Deduction.}
+\paragraph{Sequent Calculus.}
+\paragraph{Resolution Principle and SAT Solving.}
 
-\subsection{Graph Theory Essentials}
-\label{subsec:graph-theory}
+\subsection{Predicate Logic (First-Order Logic)}
+\label{subsec:predicate-logic}
 
-\begin{subsectionintro}
-Graphs model relationships between entities. They appear everywhere:
-networks, dependencies, state machines, data structures.
-\end{subsectionintro}
+\subsubsection{Syntax: Terms, Predicates, Quantifiers}
+\paragraph{Variables, Constants, Function Symbols.}
+\paragraph{Universal ($\forall$) and Existential ($\exists$) Quantifiers.}
+\paragraph{Free vs. Bound Variables.}
 
-\subsubsection{Graph Definitions: Vertices, Edges, Degree}
-\subsubsection{Representations: Adjacency Matrix, Adjacency List, Edge List}
-\subsubsection{Paths, Walks, Cycles, and Connectivity}
-\subsubsection{Trees: Definitions, Properties, and Rooted Trees}
-\subsubsection{Directed Acyclic Graphs (DAGs) and Topological Ordering}
-\subsubsection{Special Graph Classes: Bipartite, Complete, Planar}
-\subsubsection{Preview: BFS and DFS as Fundamental Traversals}
+\subsubsection{Semantics: Structures and Models}
+\paragraph{Interpretations and Domains.}
+\paragraph{Satisfaction and Truth in a Model.}
+\paragraph{Validity and Logical Consequence.}
 
-%-----------------------------------------------
-\subsection{Proof Techniques: The Art of Rigorous Reasoning}
+\subsubsection{Prenex Normal Form}
+\paragraph{Quantifier Scope and Movement Rules.}
+\paragraph{Skolemization and Herbrand's Theorem.}
+
+\subsubsection{Decidability and Undecidability}
+\paragraph{Church-Turing Theorem: First-Order Logic is Undecidable.}
+\paragraph{Decidable Fragments and Applications to Verification.}
+
+\subsection{Proof Techniques and Strategies}
 \label{subsec:proof-techniques}
 
-\begin{subsectionintro}
-Algorithm correctness and complexity bounds require proofs.
-This subsection teaches you how to construct and verify arguments.
-\end{subsectionintro}
+\subsubsection{Direct Proof}
+\paragraph{Structure and Template.}
+\paragraph{Example: Properties of Even/Odd Integers.}
 
-\subsubsection{Direct Proof: Structure and Examples}
-\subsubsection{Proof by Contradiction: Assuming the Negation}
+\subsubsection{Proof by Contradiction (Reductio ad Absurdum)}
+\paragraph{Strategy and When to Use.}
+\paragraph{Example: $\sqrt{2}$ is Irrational.}
+\paragraph{Example: Infinitude of Primes (Euclid).}
+
 \subsubsection{Proof by Contrapositive}
-\subsubsection{Mathematical Induction: Weak Form}
-\subsubsection{Strong Induction and the Well-Ordering Principle}
-\subsubsection{Structural Induction for Recursive Definitions}
-\subsubsection{Common Proof Pitfalls and How to Avoid Them}
+\paragraph{Logical Equivalence to Direct Proof.}
+\paragraph{When Contrapositive is Easier.}
 
-%===============================================
-% SECTION 2: PROBABILITY THEORY
-%===============================================
-\section{Probability Theory for Algorithm Analysis}
-\label{sec:probability}
+\subsubsection{Mathematical Induction}
+\paragraph{Weak Induction Principle.}
+\paragraph{Strong Induction (Complete Induction).}
+\paragraph{Well-Ordering Principle and Equivalence.}
+\paragraph{Structural Induction on Recursive Data Types.}
+\paragraph{Example: Correctness of Merge Sort.}
 
-\begin{sectionintro}
-Randomized algorithms and average-case analysis require probability.
-This section builds intuition and formal tools for probabilistic reasoning.
-\end{sectionintro}
+\subsubsection{Proof by Construction}
+\paragraph{Existence Proofs: Constructive vs. Non-Constructive.}
+\paragraph{Algorithmic Content of Constructive Proofs.}
 
-%-----------------------------------------------
-\subsection{Foundations: Sample Spaces and Events}
-\label{subsec:sample-spaces}
+\subsubsection{Proof by Counterexample}
+\paragraph{Disproving Universal Statements.}
+\paragraph{Minimal Counterexamples.}
 
-\subsubsection{Sample Spaces: The Universe of Outcomes}
-\subsubsection{Probability Axioms: Kolmogorov's Framework}
-\subsubsection{Equally Likely Outcomes: The Discrete Uniform Distribution}
-\subsubsection{Conditional Probability: Updating Beliefs}
-\subsubsection{Law of Total Probability}
-\subsubsection{Bayes' Theorem: Inverting Conditional Probabilities}
+\subsubsection{Pigeonhole Principle}
+\paragraph{Simple Form: $n+1$ Objects in $n$ Boxes.}
+\paragraph{Generalized Form: Distribution Arguments.}
+\paragraph{Example: Birthday Paradox.}
+\paragraph{Example: Lower Bounds for Sorting.}
 
+\subsection{Common Proof Errors and How to Avoid Them}
+\label{subsec:proof-errors}
 
-%-----------------------------------------------
-\subsection{Random Variables and Expectations}
-\label{subsec:random-variables}
+\subsubsection{Circular Reasoning (Begging the Question)}
+\subsubsection{Proof by Example}
+\subsubsection{Confusion of Necessary and Sufficient Conditions}
+\subsubsection{Quantifier Errors}
+\subsubsection{Vacuous Truth}
 
-\begin{subsectionintro}
-Random variables map outcomes to numbers, allowing numerical analysis.
-Expectation is the most important summary statistic in algorithm analysis.
-\end{subsectionintro}
-\subsubsection{Discrete Random Variables: Definition}
-% $X: \Omega \to \mathbb{R}$
+\subsection{Advanced Topics in Logic}
+\label{subsec:advanced-logic}
 
-\subsubsection{Probability Mass Functions (PMF)}
-% $p_X(x) = P(X = x)$
+\subsubsection{Temporal Logic and Program Verification}
+\subsubsection{Modal Logic and Epistemic Logic}
+\subsubsection{Gödel's Incompleteness Theorems (Informal)}
 
-\subsubsection{Expected Value: Definition and Intuition}
-% $E[X] = \sum_x x \cdot p_X(x)$
+\subsection{Exercises}
+\label{subsec:logic-exercises}
 
-\subsubsection{Functions of Random Variables}
-% $E[g(X)]$ computation
+\subsubsection{Warmup Problems (20 problems)}
+\subsubsection{Standard Problems (30 problems)}
+\subsubsection{Challenging Problems (25 problems)}
+\subsubsection{Research-Level Problems ($\star$) (10 problems)}
 
-\subsubsection{Properties of Expectation}
-% Linearity، monotonicity
-
-%-----------------------------------------------
-\subsection{Common Distributions in Algorithms}
-\label{subsec:distributions}
-
-\subsubsection{Bernoulli Distribution: Single Trial}
-
-\subsubsection{Binomial Distribution: Multiple Independent Trials}
-
-\subsubsection{Geometric Distribution: Waiting Times}
-
-\subsubsection{Poisson Distribution: Rare Events}
-
-\subsubsection{Uniform Distribution: Equally Likely Values}
-
-%-----------------------------------------------
-\subsection{Linearity of Expectation: The Most Powerful Tool}
-\label{subsec:linearity-expectation}
-
-\begin{subsectionintro}
-Linearity of expectation works even when random variables are dependent—
-this makes it extraordinarily useful in algorithm analysis.
-\end{subsectionintro}
-
-\subsubsection{Statement and Proof}
-
-\subsubsection{Why Independence Is Not Required}
-
-\subsubsection{Indicator Random Variables}
-
-\subsubsection{Applications in Algorithm Analysis}
-
-\subsubsection{Case Study: Expected Number of Comparisons in QuickSort}
-
-%-----------------------------------------------
-\subsection{Independence and Conditional Expectation}
-\label{subsec:independence}
-
-\subsubsection{Independence of Events}
-\subsubsection{Independence of Random Variables}
-\subsubsection{Conditional Expectation: $E[X | Y]$}
-\subsubsection{Applications to Randomized Algorithms}
-
-%-----------------------------------------------
-\subsection{Variance and Concentration}
-\label{subsec:variance}
-
-\subsubsection{Variance: Measuring Spread}
-\subsubsection{Standard Deviation}
-\subsubsection{Properties of Variance}
-\subsubsection{Chebyshev's Inequality: Probabilistic Bounds}
-\subsubsection{Preview: Chernoff Bounds (Covered in Part 2)}
-
-%-----------------------------------------------
-\subsection{Moment Generating Functions (Brief Preview)}
-\label{subsec:mgf}
-
-\subsubsection{Definition and Intuition}
-\subsubsection{Using MGFs to Compute Moments}
-\subsubsection{Sum of Independent Random Variables}
-
-
-%===============================================
-% SECTION 3: MATHEMATICAL ANALYSIS
-%===============================================
-\section{Mathematical Analysis: Limits and Asymptotics}
-\label{sec:analysis}
+%----------------------------------------------
+% SECTION 2: SET THEORY AND RELATIONS
+%----------------------------------------------
+\section{Set Theory, Functions, and Relations}
+\label{sec:set-theory}
 
 \begin{sectionintro}
-Algorithm analysis is fundamentally about asymptotic behavior as input size grows.
-This section provides the calculus and analysis tools needed for rigorous reasoning.
+Sets are the foundation of modern mathematics. Functions and relations provide 
+the vocabulary for describing computations and data structures. This section 
+develops these concepts rigorously, with emphasis on applications to algorithm 
+design.
 \end{sectionintro}
 
-%-----------------------------------------------
-\subsection{Limits and Continuity}
-\label{subsec:limits}
+\subsection{Axiomatic Set Theory (Informal)}
+\label{subsec:axiomatic-sets}
 
-\subsubsection{Limits of Sequences: $\lim_{n \to \infty} a_n$}
-\subsubsection{Limit Laws: Addition, Multiplication, Composition}
-\subsubsection{L'Hôpital's Rule: Resolving Indeterminate Forms}
-\subsubsection{Asymptotic Equivalence: $f \sim g$}
-\subsubsection{Landau Notation: Informal Preview}
+\subsubsection{Zermelo-Fraenkel Axioms (Intuitive Overview)}
+\subsubsection{Russell's Paradox and the Need for Axioms}
+\subsubsection{The Axiom of Choice and Its Consequences}
 
-%-----------------------------------------------
-\subsection{Sequences and Series}
-\label{subsec:sequences-series}
+\subsection{Basic Set Operations}
+\label{subsec:set-operations}
 
-\subsubsection{Convergence of Sequences}
-\subsubsection{Infinite Series: $\sum_{n=1}^{\infty} a_n$}
-\subsubsection{Geometric Series: $\sum_{k=0}^{n} r^k$}
-\subsubsection{Harmonic Series and Generalizations}
-\subsubsection{Power Series and Radius of Convergence}
-%-----------------------------------------------
-\subsection{Summations and Closed Forms}
-\label{subsec:summations}
+\subsubsection{Set Builder Notation and Comprehension}
+\subsubsection{Union, Intersection, Difference, Symmetric Difference}
+\subsubsection{Power Set and Cartesian Product}
+\subsubsection{De Morgan's Laws and Duality}
+
+\subsection{Cardinality and Counting}
+\label{subsec:cardinality}
+
+\subsubsection{Finite, Countable, and Uncountable Sets}
+\subsubsection{Cantor's Diagonal Argument}
+\subsubsection{Schröder-Bernstein Theorem}
+\subsubsection{Continuum Hypothesis}
+
+\subsection{Functions: Mappings Between Sets}
+\label{subsec:functions}
+
+\subsubsection{Definition and Notation}
+\paragraph{Domain, Codomain, Range.}
+\paragraph{Function Composition and Associativity.}
+
+\subsubsection{Types of Functions}
+\paragraph{Injective (One-to-One) Functions.}
+\paragraph{Surjective (Onto) Functions.}
+\paragraph{Bijective Functions and Inverses.}
+\paragraph{Theorem: Composition of Bijections is Bijective.}
+
+\subsubsection{Special Functions}
+\paragraph{Identity Function.}
+\paragraph{Constant Functions.}
+\paragraph{Projection Functions.}
+
+\subsubsection{Image and Preimage}
+\paragraph{Properties of Image and Preimage.}
+\paragraph{Inverse Image and Set Operations.}
+
+\subsection{Relations}
+\label{subsec:relations}
+
+\subsubsection{Binary Relations}
+\paragraph{Definition as Subsets of Cartesian Products.}
+\paragraph{Representation: Matrices, Graphs, Tables.}
+
+\subsubsection{Properties of Relations}
+\paragraph{Reflexivity, Irreflexivity.}
+\paragraph{Symmetry, Antisymmetry, Asymmetry.}
+\paragraph{Transitivity.}
+
+\subsubsection{Equivalence Relations}
+\paragraph{Definition and Examples.}
+\paragraph{Equivalence Classes and Partitions.}
+\paragraph{Theorem: Equivalence Relations Induce Partitions.}
+\paragraph{Quotient Sets.}
+
+\subsubsection{Partial Orders}
+\paragraph{Definition: Reflexive, Antisymmetric, Transitive.}
+\paragraph{Hasse Diagrams.}
+\paragraph{Maximal and Minimal Elements.}
+\paragraph{Least Upper Bound (Supremum) and Greatest Lower Bound (Infimum).}
+\paragraph{Lattices.}
+
+\subsubsection{Total Orders (Linear Orders)}
+\paragraph{Definition and Examples.}
+\paragraph{Well-Orderings.}
+\paragraph{Application: Topological Sorting.}
+
+\subsection{Exercises}
+\subsubsection{Warmup Problems}
+\subsubsection{Standard Problems}
+\subsubsection{Challenging Problems}
+\subsubsection{Research Problems ($\star$)}
+
+%----------------------------------------------
+% SECTION 3: COMBINATORIAL ANALYSIS
+%----------------------------------------------
+\section{Combinatorial Analysis and Enumeration}
+\label{sec:combinatorics}
+
+\begin{sectionintro}
+Combinatorics is the mathematics of counting. It answers fundamental questions: 
+How many possible inputs exist? How many steps must an algorithm take? What is 
+the size of the search space?
+
+This section goes far beyond basic permutations and combinations, developing 
+generating functions, recurrence relations, and asymptotic enumeration 
+techniques essential for algorithm analysis.
+\end{sectionintro}
+
+\subsection{Fundamental Counting Principles}
+\label{subsec:counting-principles}
+
+\subsubsection{Sum Rule (Addition Principle)}
+\subsubsection{Product Rule (Multiplication Principle)}
+\subsubsection{Division Principle (Quotient Principle)}
+\subsubsection{Bijection Principle}
+
+\subsection{Permutations and Arrangements}
+\label{subsec:permutations}
+
+\subsubsection{Permutations of $n$ Distinct Objects}
+\paragraph{Formula: $n!$}
+\paragraph{Stirling's Approximation (Preview).}
+
+\subsubsection{Permutations with Repetition}
+\paragraph{Multiset Permutations: $\frac{n!}{n_1! n_2! \cdots n_k!}$}
+
+\subsubsection{$k$-Permutations: $P(n,k) = \frac{n!}{(n-k)!}$}
+
+\subsubsection{Circular Permutations}
+\paragraph{$(n-1)!$ Arrangements.}
+
+\subsubsection{Derangements}
+\paragraph{Permutations with No Fixed Points.}
+\paragraph{Formula: $D_n = n! \sum_{i=0}^{n} \frac{(-1)^i}{i!}$}
+\paragraph{Asymptotic: $D_n \sim \frac{n!}{e}$}
+
+\subsection{Combinations and Selections}
+\label{subsec:combinations}
+
+\subsubsection{Binomial Coefficients: $\binom{n}{k}$}
+\paragraph{Definition and Pascal's Triangle.}
+\paragraph{Symmetry: $\binom{n}{k} = \binom{n}{n-k}$}
+\paragraph{Vandermonde's Identity.}
+
+\subsubsection{Binomial Theorem}
+\paragraph{$(x+y)^n = \sum_{k=0}^{n} \binom{n}{k} x^k y^{n-k}$}
+\paragraph{Applications to Probability.}
+
+\subsubsection{Multinomial Coefficients}
+\paragraph{$\binom{n}{k_1, k_2, \ldots, k_m} = \frac{n!}{k_1! k_2! \cdots k_m!}$}
+\paragraph{Multinomial Theorem.}
+
+\subsubsection{Combinations with Repetition}
+\paragraph{Stars and Bars Method.}
+\paragraph{Formula: $\binom{n+k-1}{k}$}
+
+\subsection{Inclusion-Exclusion Principle}
+\label{subsec:inclusion-exclusion}
+
+\subsubsection{Two-Set Formula}
+\subsubsection{General Formula for $n$ Sets}
+\subsubsection{Applications}
+\paragraph{Counting Surjections.}
+\paragraph{Euler's Totient Function.}
+\paragraph{Derangement Formula (Alternative Derivation).}
+
+\subsection{Pigeonhole Principle and Ramsey Theory}
+\label{subsec:pigeonhole}
+
+\subsubsection{Simple Pigeonhole Principle}
+\subsubsection{Generalized Pigeonhole Principle}
+\subsubsection{Ramsey's Theorem (Introduction)}
+\paragraph{$R(3,3) = 6$ — The Party Problem.}
+\paragraph{Bounds on $R(m,n)$.}
+
+\subsection{Generating Functions}
+\label{subsec:generating-functions}
 
 \begin{subsectionintro}
-Converting sums to closed forms is essential for exact complexity analysis.
+Generating functions transform combinatorial problems into algebra. They are 
+indispensable for solving recurrences and asymptotic enumeration.
 \end{subsectionintro}
 
-\subsubsection{Basic Summation Formulas}
-\subsubsection{Arithmetic and Geometric Progressions}
-\subsubsection{Techniques for Finding Closed Forms}
-\subsubsection{Perturbation Method}
-\subsubsection{Repertoire Method (Concrete Mathematics Approach)}
-\subsubsection{Euler-Maclaurin Formula: Sum-Integral Connection}
+\subsubsection{Ordinary Generating Functions (OGF)}
+\paragraph{Definition: $A(x) = \sum_{n=0}^{\infty} a_n x^n$}
+\paragraph{Operations on Generating Functions.}
+\paragraph{Convolution and Product of GFs.}
 
-%-----------------------------------------------
-\subsection{Integration and Differentiation}
-\label{subsec:calculus}
+\subsubsection{Exponential Generating Functions (EGF)}
+\paragraph{Definition: $A(x) = \sum_{n=0}^{\infty} a_n \frac{x^n}{n!}$}
+\paragraph{When to Use EGF vs. OGF.}
 
-\subsubsection{Fundamental Theorem of Calculus}
-\subsubsection{Integration Techniques: Substitution, Parts, Partial Fractions}
-\subsubsection{Approximating Sums with Integrals}
-\subsubsection{Growth Rates via Derivatives}
+\subsubsection{Solving Recurrences with Generating Functions}
+\paragraph{Example: Fibonacci Numbers.}
+\paragraph{Example: Catalan Numbers.}
 
-%-----------------------------------------------
-\subsection{Taylor Series and Asymptotic Expansions}
-\label{subsec:taylor-series}
+\subsubsection{Coefficient Extraction}
+\paragraph{Cauchy's Residue Theorem (Overview).}
+\paragraph{Asymptotic Analysis via Singularities.}
 
-\subsubsection{Taylor Series: Definition and Motivation}
-\subsubsection{Common Taylor Series}
-\subsubsection{Using Taylor Series for Approximation}
-\subsubsection{Asymptotic Expansions}
+\subsection{Recurrence Relations}
+\label{subsec:recurrences-combinatorial}
 
-%-----------------------------------------------
-\subsection{Stirling's Approximation}
+\subsubsection{Linear Recurrences with Constant Coefficients}
+\paragraph{Homogeneous Recurrences.}
+\paragraph{Characteristic Equation Method.}
+\paragraph{Example: Fibonacci, Tribonacci.}
+
+\subsubsection{Non-Homogeneous Recurrences}
+\paragraph{Method of Undetermined Coefficients.}
+\paragraph{Particular Solutions.}
+
+\subsubsection{Divide-and-Conquer Recurrences}
+\paragraph{Form: $T(n) = aT(n/b) + f(n)$}
+\paragraph{Preview of Master Theorem (Full treatment in Part 2).}
+
+\subsection{Catalan Numbers}
+\label{subsec:catalan}
+
+\subsubsection{Definition and Recurrence}
+\subsubsection{Closed Form: $C_n = \frac{1}{n+1}\binom{2n}{n}$}
+\subsubsection{Applications}
+\paragraph{Balanced Parentheses.}
+\paragraph{Binary Search Trees.}
+\paragraph{Triangulations of Polygons.}
+
+\subsection{Stirling Numbers}
 \label{subsec:stirling}
 
-\begin{subsectionintro}
-Factorials grow faster than polynomials but slower than exponentials.
-Stirling's formula provides precise asymptotic behavior.
-\end{subsectionintro}
+\subsubsection{Stirling Numbers of the First Kind}
+\paragraph{Unsigned: Number of Permutations with $k$ Cycles.}
+\paragraph{Signed: Coefficients in Falling Factorial Expansion.}
 
-\subsubsection{Statement of Stirling's Formula}
-\subsubsection{Proof Sketch via Integral Approximation}
-\subsubsection{Applications in Combinatorics}
-\subsubsection{More Precise Versions and Error Bounds}
+\subsubsection{Stirling Numbers of the Second Kind}
+\paragraph{Definition: $S(n,k)$ — Partitions of $n$ Elements into $k$ Subsets.}
+\paragraph{Recurrence: $S(n,k) = k \cdot S(n-1,k) + S(n-1,k-1)$}
 
-%===============================================
-% SECTION 4: LINEAR ALGEBRA
-%===============================================
-\section{Linear Algebra for Algorithmic Applications}
-\label{sec:linear-algebra}
+\subsubsection{Bell Numbers}
+\paragraph{Total Partitions: $B_n = \sum_{k=0}^{n} S(n,k)$}
 
-\begin{sectionintro}
-Linear algebra appears in graph algorithms, Markov chains, numerical methods,
-and machine learning. We focus on computational and algorithmic aspects.
-\end{sectionintro}
+\subsection{Asymptotic Methods in Combinatorics}
+\label{subsec:asymptotic-combinatorics}
 
-%-----------------------------------------------
-\subsection{Vectors, Matrices, and Linear Systems}
-\label{subsec:vectors-matrices}
+\subsubsection{Stirling's Approximation (Full Treatment)}
+\paragraph{Statement: $n! \sim \sqrt{2\pi n} \left(\frac{n}{e}\right)^n$}
+\paragraph{Proof via Euler-Maclaurin Formula.}
+\paragraph{More Precise Expansions.}
 
-\subsubsection{Vector Spaces and Subspaces}
-\subsubsection{Linear Independence, Span, and Basis}
-\subsubsection{Matrix Operations: Addition, Multiplication, Transpose}
-\subsubsection{Matrix Multiplication as Linear Transformation Composition}
-\subsubsection{Systems of Linear Equations: Gaussian Elimination}
+\subsubsection{Asymptotic Analysis of Binomial Coefficients}
+\paragraph{Central Binomial Coefficient: $\binom{2n}{n} \sim \frac{4^n}{\sqrt{\pi n}}$}
 
-%-----------------------------------------------
-\subsection{Eigenvalues and Eigenvectors}
-\label{subsec:eigenvalues}
+\subsubsection{Saddle-Point Method (Introduction)}
 
-\subsubsection{Definitions: $Av = \lambda v$}
-\subsubsection{Characteristic Polynomial: $\det(A - \lambda I) = 0$}
-\subsubsection{Diagonalization: $A = PDP^{-1}$}
-\subsubsection{Spectral Theorem for Symmetric Matrices}
-\subsubsection{Applications to Algorithm Analysis}
+\subsection{Exercises}
+\subsubsection{Warmup Problems (30 problems)}
+\subsubsection{Standard Problems (40 problems)}
+\subsubsection{Challenging Problems (30 problems)}
+\subsubsection{Research Problems ($\star$) (15 problems)}
 
-%-----------------------------------------------
-\subsection{Markov Chains and Random Walks}
-\label{subsec:markov-chains}
-
-\begin{subsectionintro}
-Markov chains model random processes with memoryless transitions.
-They appear in randomized algorithms and probabilistic analysis.
-\end{subsectionintro}
-
-\subsubsection{Stochastic Matrices: Definition and Properties}
-\subsubsection{Steady-State Distribution: $\pi P = \pi$}
-\subsubsection{Random Walks on Graphs}
-\subsubsection{Case Study: PageRank Algorithm}
-
-%-----------------------------------------------
-\subsection{Matrix Operations and Complexity}
-\label{subsec:matrix-complexity}
-
-\subsubsection{Standard Matrix Multiplication: $O(n^3)$}
-\subsubsection{Strassen's Algorithm: $O(n^{\log_2 7}) \approx O(n^{2.81})$}
-\subsubsection{Coppersmith-Winograd and Beyond}
-\subsubsection{Matrix Inversion Complexity}
-\subsubsection{Solving Linear Systems: LU Decomposition, Cholesky}
-
-%===============================================
-% SECTION 5: NUMBER THEORY
-%===============================================
-\section{Number Theory Essentials}
-\label{sec:number-theory}
+%----------------------------------------------
+% SECTION 4: GRAPH THEORY
+%----------------------------------------------
+\section{Graph Theory Foundations}
+\label{sec:graph-theory}
 
 \begin{sectionintro}
-Number theory provides tools for cryptography, hashing, pseudorandom generation,
-and modular arithmetic—all crucial in modern algorithms.
+Graphs are the most versatile mathematical structure in computer science. They 
+model networks, dependencies, state spaces, data structures, and more. This 
+section develops graph theory from first principles, emphasizing algorithmic 
+applications.
 \end{sectionintro}
 
-%-----------------------------------------------
-\subsection{Divisibility and Modular Arithmetic}
-\label{subsec:divisibility}
+\subsection{Basic Definitions and Representations}
+\label{subsec:graph-basics}
 
-\subsubsection{Division Algorithm: $a = bq + r$}
-\subsubsection{Modular Arithmetic: $a \equiv b \pmod{m}$}
-\subsubsection{Properties of Modular Operations}
-\subsubsection{Modular Inverses: $ax \equiv 1 \pmod{m}$}
-\subsubsection{Chinese Remainder Theorem}
+\subsubsection{Graphs: Formal Definition}
+\paragraph{Undirected Graphs: $G = (V, E)$}
+\paragraph{Directed Graphs (Digraphs): $G = (V, A)$}
+\paragraph{Multigraphs and Pseudographs.}
 
-%-----------------------------------------------
-\subsection{Prime Numbers and Factorization}
-\label{subsec:primes}
+\subsubsection{Graph Terminology}
+\paragraph{Vertices (Nodes) and Edges (Arcs).}
+\paragraph{Degree: In-Degree, Out-Degree.}
+\paragraph{Handshaking Lemma: $\sum_{v \in V} \deg(v) = 2|E|$}
+\paragraph{Isolated, Pendant, and Universal Vertices.}
 
-\subsubsection{Definition of Prime Numbers}
-\subsubsection{Fundamental Theorem of Arithmetic}
-\subsubsection{Prime Distribution: Prime Number Theorem}
-\subsubsection{Sieve of Eratosthenes: $O(n \log \log n)$}
-\subsubsection{Primality Testing: Fermat, Miller-Rabin}
+\subsubsection{Special Types of Graphs}
+\paragraph{Complete Graphs: $K_n$}
+\paragraph{Bipartite Graphs and Complete Bipartite Graphs: $K_{m,n}$}
+\paragraph{Cycle Graphs: $C_n$}
+\paragraph{Wheel Graphs: $W_n$}
+\paragraph{Hypercubes: $Q_n$}
 
-%-----------------------------------------------
-\subsection{Greatest Common Divisor and Euclidean Algorithm}
-\label{subsec:gcd}
+\subsubsection{Graph Representations}
+\paragraph{Adjacency Matrix: $O(|V|^2)$ Space.}
+\paragraph{Adjacency List: $O(|V| + |E|)$ Space.}
+\paragraph{Edge List.}
+\paragraph{Incidence Matrix.}
+\paragraph{Trade-offs: Space vs. Query Time.}
 
-\begin{subsectionintro}
-The Euclidean algorithm is one of the oldest and most elegant algorithms.
-Its analysis demonstrates beautiful connections between number theory and complexity.
-\end{subsectionintro}
+\subsection{Connectivity and Paths}
+\label{subsec:connectivity}
 
-\subsubsection{GCD Definition and Properties}
-\subsubsection{Euclidean Algorithm}
-\subsubsection{Extended Euclidean Algorithm}
-\subsubsection{Complexity Analysis: $O(\log \min(a, b))$}
-\subsubsection{Lamé's Theorem: Connection to Fibonacci Numbers}
+\subsubsection{Walks, Trails, Paths, and Cycles}
+\paragraph{Definitions and Distinctions.}
+\paragraph{Simple Paths vs. Paths with Repetition.}
 
-%-----------------------------------------------
-\subsection{Applications to Cryptography and Hashing}
-\label{subsec:crypto-hash}
+\subsubsection{Connected Graphs}
+\paragraph{Connected Components.}
+\paragraph{Strong and Weak Connectivity in Digraphs.}
 
-\subsubsection{Modular Exponentiation: Fast Algorithm}
-\subsubsection{RSA Cryptosystem: Overview}
-\subsubsection{Hash Functions: Collision Resistance}
-\subsubsection{Universal Hashing (Preview)}
+\subsubsection{Distance and Diameter}
+\paragraph{Shortest Path Length: $d(u,v)$}
+\paragraph{Diameter: $\max_{u,v} d(u,v)$}
+\paragraph{Radius and Center.}
 
-%===============================================
-% SECTION 6: ADDITIONAL TOOLS
-%===============================================
-\section{Additional Mathematical Tools}
-\label{sec:additional-tools}
+\subsubsection{Eulerian Paths and Circuits}
+\paragraph{Euler's Theorem: Necessary and Sufficient Conditions.}
+\paragraph{Fleury's Algorithm.}
+\paragraph{Applications: DNA Sequencing, Route Planning.}
 
-%-----------------------------------------------
-\subsection{Logarithms and Exponentials}
-\label{subsec:log-exp}
+\subsubsection{Hamiltonian Paths and Circuits}
+\paragraph{Definition and Examples.}
+\paragraph{Dirac's and Ore's Theorems (Sufficient Conditions).}
+\paragraph{NP-Completeness (Preview).}
 
-\subsubsection{Properties of Logarithms}
-\subsubsection{Change of Base Formula}
-\subsubsection{Natural vs. Binary Logarithms in CS}
-\subsubsection{Exponential Growth and Decay}
-\subsubsection{Comparing Growth Rates}
+\subsection{Trees and Forests}
+\label{subsec:trees}
 
-%-----------------------------------------------
-\subsection{Floor and Ceiling Functions}
-\label{subsec:floor-ceiling}
+\subsubsection{Definition of Trees}
+\paragraph{Acyclic Connected Graphs.}
+\paragraph{Equivalent Characterizations of Trees.}
 
-\subsubsection{Definitions: $\lfloor x \rfloor$ and $\lceil x \rceil$}
-\subsubsection{Useful Identities and Properties}
-\subsubsection{Applications in Algorithm Analysis}
-%-----------------------------------------------
-\subsection{Asymptotic Notation: Informal Preview}
-\label{subsec:asymptotic-preview}
+\subsubsection{Properties of Trees}
+\paragraph{Theorem: A Tree with $n$ Vertices Has $n-1$ Edges.}
+\paragraph{Leaves and Internal Nodes.}
 
-\begin{subsectionintro}
-We provide intuition here; formal definitions appear in Part 2, Chapter 2.
-\end{subsectionintro}
+\subsubsection{Rooted Trees}
+\paragraph{Parent, Child, Sibling, Ancestor, Descendant.}
+\paragraph{Height and Depth.}
+\paragraph{Binary Trees, $k$-ary Trees.}
 
-\subsubsection{Intuition Behind $O$, $\Omega$, $\Theta$}
-\subsubsection{Why We Need Formal Definitions}
-\subsubsection{Common Growth Rate Hierarchy}
+\subsubsection{Spanning Trees}
+\paragraph{Definition and Existence.}
+\paragraph{Number of Spanning Trees: Cayley's Formula.}
+\paragraph{Minimum Spanning Tree Problem (Preview).}
 
-%===============================================
-% SECTION 7: SELF-ASSESSMENT AND RESOURCES
-%===============================================
-\section{Self-Assessment and Further Study}
-\label{sec:self-assessment}
+\subsection{Directed Acyclic Graphs (DAGs)}
+\label{subsec:dags}
+
+\subsubsection{Definition and Properties}
+\subsubsection{Topological Sorting}
+\paragraph{Algorithm and Correctness.}
+\paragraph{Applications: Task Scheduling, Precedence Constraints.}
+
+\subsubsection{Transitive Closure}
+\paragraph{Warshall's Algorithm.}
+
+\subsection{Graph Coloring}
+\label{subsec:coloring}
+
+\subsubsection{Vertex Coloring}
+\paragraph{Chromatic Number: $\chi(G)$}
+\paragraph{Bounds: Brooks' Theorem.}
+
+\subsubsection{Edge Coloring}
+\paragraph{Chromatic Index: $\chi'(G)$}
+\paragraph{Vizing's Theorem.}
+
+\subsubsection{Applications}
+\paragraph{Register Allocation in Compilers.}
+\paragraph{Scheduling Problems.}
+
+\subsection{Planar Graphs}
+\label{subsec:planar}
+
+\subsubsection{Definition and Examples}
+\subsubsection{Euler's Formula: $V - E + F = 2$}
+\subsubsection{Kuratowski's Theorem}
+\subsubsection{Applications: Circuit Design, Geographic Maps.}
+
+\subsection{Advanced Topics}
+\label{subsec:graph-advanced}
+
+\subsubsection{Matchings and Covers}
+\paragraph{Maximum Matching.}
+\paragraph{König's Theorem for Bipartite Graphs.}
+
+\subsubsection{Network Flows (Introduction)}
+\paragraph{Max-Flow Min-Cut Theorem (Statement).}
+
+\subsubsection{Expander Graphs}
+\paragraph{Applications to Derandomization.}
+
+\subsection{Exercises}
+\subsubsection{Warmup Problems (25 problems)}
+\subsubsection{Standard Problems (35 problems)}
+\subsubsection{Challenging Problems (25 problems)}
+\subsubsection{Research Problems ($\star$) (10 problems)}
+
+%----------------------------------------------
+% SECTION 5: ALGEBRAIC STRUCTURES
+%----------------------------------------------
+\section{Algebraic Structures for Algorithm Design}
+\label{sec:algebra}
 
 \begin{sectionintro}
-Test your understanding with these exercises before proceeding to Part 2.
-If you struggle with a section, revisit the material or consult the recommended resources.
+Abstract algebra provides powerful tools for algorithm design, especially in 
+cryptography, coding theory, and symbolic computation. This section introduces 
+groups, rings, and fields with algorithmic applications in mind.
 \end{sectionintro}
 
-%-----------------------------------------------
-\subsection{Self-Assessment Exercises}
-\label{subsec:exercises}
+\subsection{Groups}
+\label{subsec:groups}
 
-\subsubsection{Discrete Mathematics Problems}
-\subsubsection{Probability Problems}
-\subsubsection{Analysis Problems}
-\subsubsection{Linear Algebra Problems}
-\subsubsection{Number Theory Problems}
+\subsubsection{Definition and Examples}
+\paragraph{Axioms: Closure, Associativity, Identity, Inverses.}
+\paragraph{Examples: $(\mathbb{Z}, +)$, $(\mathbb{Z}_n, +_n)$, $(S_n, \circ)$}
 
-%-----------------------------------------------
-\subsection{Further Reading and Resources}
-\label{subsec:resources}
+\subsubsection{Subgroups}
+\paragraph{Definition and Lagrange's Theorem.}
 
-\subsubsection{Recommended Textbooks}
-\subsubsection{Online Resources and Video Lectures}
-\subsubsection{Practice Problem Collections}
+\subsubsection{Cyclic Groups}
+\paragraph{Generators and Order.}
 
-%-----------------------------------------------
-\subsection{Notation and Conventions Used in This Book}
-\label{subsec:notation}
+\subsubsection{Permutation Groups}
+\paragraph{Symmetric Group $S_n$.}
+\paragraph{Cayley's Theorem.}
 
-\subsubsection{Standard Mathematical Symbols}
-\subsubsection{Asymptotic Notation}
-\subsubsection{Probability Notation}
-\subsubsection{Graph Notation}
+\subsubsection{Group Homomorphisms}
+\paragraph{Kernels and Images.}
+
+\subsection{Rings and Fields}
+\label{subsec:rings-fields}
+
+\subsubsection{Rings}
+\paragraph{Definition and Examples: $\mathbb{Z}$, $\mathbb{Z}_n$, Polynomial Rings.}
+\paragraph{Units and Zero Divisors.}
+\paragraph{Integral Domains.}
+
+\subsubsection{Fields}
+\paragraph{Definition and Examples: $\mathbb{Q}$, $\mathbb{R}$, $\mathbb{Z}_p$}
+\paragraph{Finite Fields (Galois Fields): $GF(p^n)$}
+
+\subsubsection{Polynomial Arithmetic}
+\paragraph{Division Algorithm for Polynomials.}
+\paragraph{Greatest Common Divisor.}
+
+\subsection{Applications to Cryptography}
+\label{subsec:crypto-algebra}
+
+\subsubsection{RSA and Group Theory}
+\subsubsection{Diffie-Hellman Key Exchange}
+\subsubsection{Elliptic Curve Cryptography (Overview)}
+
+\subsection{Applications to Coding Theory}
+\label{subsec:coding-algebra}
+
+\subsubsection{Linear Codes}
+\subsubsection{Cyclic Codes and BCH Codes}
+
+\subsection{Exercises}
+\subsubsection{Warmup Problems}
+\subsubsection{Standard Problems}
+\subsubsection{Challenging Problems}
+\subsubsection{Research Problems ($\star$)}
+
+%==============================================
+% END OF CHAPTER 1
+%==============================================
