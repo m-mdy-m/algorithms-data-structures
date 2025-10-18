@@ -1,4 +1,3 @@
-
 %----------------------------------------------
 % CHAPTER 1: Mathematical and Algorithmic Prerequisites
 %----------------------------------------------
@@ -37,200 +36,429 @@ Unlike continuous mathematics, we work with countable, distinct objects:
 integers, graphs, logical propositions. This section covers the foundational
 concepts that appear repeatedly throughout algorithm analysis.
 \end{sectionintro}
+
 \subsection{Sets, Functions, and Relations}
-\subsubsection{Set Theory Basics}
-\subsubsection{Operations on Sets}
-\subsubsection{Functions: Injective, Surjective, Bijective}
+\label{subsec:sets-functions-relations}
+
+\subsubsection{Set Theory Fundamentals}
+\subsubsection{Operations on Sets: Union, Intersection, Difference, Cartesian Product}
+\subsubsection{Functions: Injective, Surjective, Bijective Mappings}
 \subsubsection{Relations and Equivalence Classes}
-\subsubsection{Order Relations and Partial Orders}
+\subsubsection{Order Relations: Partial Orders, Total Orders, Lattices}
 
-\subsection{Combinatorics: Permutations, Combinations, and Binomial Coefficients}
-\subsubsection{The Fundamental Counting Principles}
-\subsubsection{Permutations with and without Repetition}
+%-----------------------------------------------
+\subsection{Combinatorics: Counting and Arrangements}
+\label{subsec:combinatorics}
+
+\begin{subsectionintro}
+Combinatorics answers "how many?" questions essential to algorithm analysis:
+How many possible inputs exist? How many comparisons are necessary?
+\end{subsectionintro}
+
+\subsubsection{Fundamental Counting Principles: Sum and Product Rules}
+\subsubsection{Permutations: With and Without Repetition}
 \subsubsection{Combinations and the Binomial Theorem}
-\subsubsection{Pigeonhole Principle and Applications}
+\subsubsection{Pigeonhole Principle and Its Applications}
 \subsubsection{Inclusion-Exclusion Principle}
-\subsubsection{Combinatorial Identities Useful in Analysis}
+\subsubsection{Generating Functions for Combinatorial Sequences}
+\subsubsection{Combinatorial Identities and Proof Techniques}
 
-\subsection{Graph Theory Basics}
-\subsubsection{Graph Definitions and Representations}
-\subsubsection{Paths, Cycles, and Connectivity}
-\subsubsection{Trees and Their Properties}
-\subsubsection{Directed Graphs and DAGs}
-\subsubsection{Graph Algorithms Preview (BFS, DFS)}
+\subsection{Graph Theory Essentials}
+\label{subsec:graph-theory}
 
-\subsection{Proof Techniques: Induction, Contradiction, and Contrapositive}
-\subsubsection{Direct Proof Structure}
-\subsubsection{Proof by Contradiction}
+\begin{subsectionintro}
+Graphs model relationships between entities. They appear everywhere:
+networks, dependencies, state machines, data structures.
+\end{subsectionintro}
+
+\subsubsection{Graph Definitions: Vertices, Edges, Degree}
+\subsubsection{Representations: Adjacency Matrix, Adjacency List, Edge List}
+\subsubsection{Paths, Walks, Cycles, and Connectivity}
+\subsubsection{Trees: Definitions, Properties, and Rooted Trees}
+\subsubsection{Directed Acyclic Graphs (DAGs) and Topological Ordering}
+\subsubsection{Special Graph Classes: Bipartite, Complete, Planar}
+\subsubsection{Preview: BFS and DFS as Fundamental Traversals}
+
+%-----------------------------------------------
+\subsection{Proof Techniques: The Art of Rigorous Reasoning}
+\label{subsec:proof-techniques}
+
+\begin{subsectionintro}
+Algorithm correctness and complexity bounds require proofs.
+This subsection teaches you how to construct and verify arguments.
+\end{subsectionintro}
+
+\subsubsection{Direct Proof: Structure and Examples}
+\subsubsection{Proof by Contradiction: Assuming the Negation}
 \subsubsection{Proof by Contrapositive}
 \subsubsection{Mathematical Induction: Weak Form}
-\subsubsection{Strong Induction and Well-Ordering Principle}
+\subsubsection{Strong Induction and the Well-Ordering Principle}
 \subsubsection{Structural Induction for Recursive Definitions}
 \subsubsection{Common Proof Pitfalls and How to Avoid Them}
 
-\section{Elementary Probability Theory}
-\subsection{Sample Spaces, Events, and Probability Measures}
-\subsubsection{Sample Spaces and Events}
-\subsubsection{Probability Axioms and Basic Properties}
-\subsubsection{Equally Likely Outcomes}
-\subsubsection{Conditional Probability}
+%===============================================
+% SECTION 2: PROBABILITY THEORY
+%===============================================
+\section{Probability Theory for Algorithm Analysis}
+\label{sec:probability}
 
-\subsection{Random Variables and Expectations}
-\subsubsection{Discrete Random Variables}
-\subsubsection{Probability Mass Functions}
-\subsubsection{Expected Value: Definition and Properties}
-\subsubsection{Functions of Random Variables}
+\begin{sectionintro}
+Randomized algorithms and average-case analysis require probability.
+This section builds intuition and formal tools for probabilistic reasoning.
+\end{sectionintro}
 
-\subsection{Basic Distributions: Uniform, Bernoulli, Geometric, Binomial}
-\subsubsection{Uniform Distribution}
-\subsubsection{Bernoulli Trials}
-\subsubsection{Binomial Distribution}
-\subsubsection{Geometric Distribution}
-\subsubsection{Negative Binomial Distribution}
+%-----------------------------------------------
+\subsection{Foundations: Sample Spaces and Events}
+\label{subsec:sample-spaces}
 
-\subsection{Linearity of Expectation}
-\subsubsection{Statement and Proof}
-\subsubsection{Why Independence Is Not Required}
-\subsubsection{Applications in Algorithm Analysis}
-\subsubsection{Example: Expected Comparisons in QuickSort}
-
-\subsection{Conditional Probability and Independence}
-\subsubsection{Conditional Probability Revisited}
+\subsubsection{Sample Spaces: The Universe of Outcomes}
+\subsubsection{Probability Axioms: Kolmogorov's Framework}
+\subsubsection{Equally Likely Outcomes: The Discrete Uniform Distribution}
+\subsubsection{Conditional Probability: Updating Beliefs}
 \subsubsection{Law of Total Probability}
-\subsubsection{Bayes' Theorem}
+\subsubsection{Bayes' Theorem: Inverting Conditional Probabilities}
+
+
+%-----------------------------------------------
+\subsection{Random Variables and Expectations}
+\label{subsec:random-variables}
+
+\begin{subsectionintro}
+Random variables map outcomes to numbers, allowing numerical analysis.
+Expectation is the most important summary statistic in algorithm analysis.
+\end{subsectionintro}
+\subsubsection{Discrete Random Variables: Definition}
+% $X: \Omega \to \mathbb{R}$
+
+\subsubsection{Probability Mass Functions (PMF)}
+% $p_X(x) = P(X = x)$
+
+\subsubsection{Expected Value: Definition and Intuition}
+% $E[X] = \sum_x x \cdot p_X(x)$
+
+\subsubsection{Functions of Random Variables}
+% $E[g(X)]$ computation
+
+\subsubsection{Properties of Expectation}
+% Linearity، monotonicity
+
+%-----------------------------------------------
+\subsection{Common Distributions in Algorithms}
+\label{subsec:distributions}
+
+\subsubsection{Bernoulli Distribution: Single Trial}
+
+\subsubsection{Binomial Distribution: Multiple Independent Trials}
+
+\subsubsection{Geometric Distribution: Waiting Times}
+
+\subsubsection{Poisson Distribution: Rare Events}
+
+\subsubsection{Uniform Distribution: Equally Likely Values}
+
+%-----------------------------------------------
+\subsection{Linearity of Expectation: The Most Powerful Tool}
+\label{subsec:linearity-expectation}
+
+\begin{subsectionintro}
+Linearity of expectation works even when random variables are dependent—
+this makes it extraordinarily useful in algorithm analysis.
+\end{subsectionintro}
+
+\subsubsection{Statement and Proof}
+
+\subsubsection{Why Independence Is Not Required}
+
+\subsubsection{Indicator Random Variables}
+
+\subsubsection{Applications in Algorithm Analysis}
+
+\subsubsection{Case Study: Expected Number of Comparisons in QuickSort}
+
+%-----------------------------------------------
+\subsection{Independence and Conditional Expectation}
+\label{subsec:independence}
+
 \subsubsection{Independence of Events}
 \subsubsection{Independence of Random Variables}
-\subsubsection{Conditional Expectation}
+\subsubsection{Conditional Expectation: $E[X | Y]$}
+\subsubsection{Applications to Randomized Algorithms}
 
-\subsection{Variance and Standard Deviation}
-\subsubsection{Definitions and Properties}
-\subsubsection{Variance of Sums}
-\subsubsection{Chebyshev's Inequality (Preview)}
+%-----------------------------------------------
+\subsection{Variance and Concentration}
+\label{subsec:variance}
 
-\subsection{Moment Generating Functions (Brief Introduction)}
-\subsubsection{Definition and Basic Properties}
-\subsubsection{Using MGFs to Find Moments}
-\subsubsection{MGFs and Sum of Independent Random Variables}
+\subsubsection{Variance: Measuring Spread}
+\subsubsection{Standard Deviation}
+\subsubsection{Properties of Variance}
+\subsubsection{Chebyshev's Inequality: Probabilistic Bounds}
+\subsubsection{Preview: Chernoff Bounds (Covered in Part 2)}
 
-\section{Mathematical Analysis}
-\subsection{Limits, Continuity, and Asymptotic Behavior}
-\subsubsection{Limits of Sequences}
-\subsubsection{Limit Laws}
-\subsubsection{L'Hôpital's Rule}
-\subsubsection{Asymptotic Equivalence}
-\subsubsection{Landau Notation (Informal Preview)}
+%-----------------------------------------------
+\subsection{Moment Generating Functions (Brief Preview)}
+\label{subsec:mgf}
 
+\subsubsection{Definition and Intuition}
+\subsubsection{Using MGFs to Compute Moments}
+\subsubsection{Sum of Independent Random Variables}
+
+
+%===============================================
+% SECTION 3: MATHEMATICAL ANALYSIS
+%===============================================
+\section{Mathematical Analysis: Limits and Asymptotics}
+\label{sec:analysis}
+
+\begin{sectionintro}
+Algorithm analysis is fundamentally about asymptotic behavior as input size grows.
+This section provides the calculus and analysis tools needed for rigorous reasoning.
+\end{sectionintro}
+
+%-----------------------------------------------
+\subsection{Limits and Continuity}
+\label{subsec:limits}
+
+\subsubsection{Limits of Sequences: $\lim_{n \to \infty} a_n$}
+\subsubsection{Limit Laws: Addition, Multiplication, Composition}
+\subsubsection{L'Hôpital's Rule: Resolving Indeterminate Forms}
+\subsubsection{Asymptotic Equivalence: $f \sim g$}
+\subsubsection{Landau Notation: Informal Preview}
+
+%-----------------------------------------------
 \subsection{Sequences and Series}
-\subsubsection{Convergence of Sequences}
-\subsubsection{Infinite Series: Convergence Tests}
-\subsubsection{Geometric Series}
-\subsubsection{Harmonic Series and Generalizations}
-\subsubsection{Power Series}
+\label{subsec:sequences-series}
 
+\subsubsection{Convergence of Sequences}
+\subsubsection{Infinite Series: $\sum_{n=1}^{\infty} a_n$}
+\subsubsection{Geometric Series: $\sum_{k=0}^{n} r^k$}
+\subsubsection{Harmonic Series and Generalizations}
+\subsubsection{Power Series and Radius of Convergence}
+%-----------------------------------------------
 \subsection{Summations and Closed Forms}
+\label{subsec:summations}
+
+\begin{subsectionintro}
+Converting sums to closed forms is essential for exact complexity analysis.
+\end{subsectionintro}
+
 \subsubsection{Basic Summation Formulas}
-\subsubsection{Arithmetic and Geometric Sums}
+\subsubsection{Arithmetic and Geometric Progressions}
 \subsubsection{Techniques for Finding Closed Forms}
 \subsubsection{Perturbation Method}
-\subsubsection{Repertoire Method}
-\subsubsection{Euler-Maclaurin Formula (Overview)}
+\subsubsection{Repertoire Method (Concrete Mathematics Approach)}
+\subsubsection{Euler-Maclaurin Formula: Sum-Integral Connection}
 
-\subsection{Integration and Differentiation (Brief Review)}
+%-----------------------------------------------
+\subsection{Integration and Differentiation}
+\label{subsec:calculus}
+
 \subsubsection{Fundamental Theorem of Calculus}
-\subsubsection{Integration Techniques Relevant to Analysis}
+\subsubsection{Integration Techniques: Substitution, Parts, Partial Fractions}
 \subsubsection{Approximating Sums with Integrals}
 \subsubsection{Growth Rates via Derivatives}
 
+%-----------------------------------------------
 \subsection{Taylor Series and Asymptotic Expansions}
-\subsubsection{Taylor Series Definition}
+\label{subsec:taylor-series}
+
+\subsubsection{Taylor Series: Definition and Motivation}
 \subsubsection{Common Taylor Series}
 \subsubsection{Using Taylor Series for Approximation}
 \subsubsection{Asymptotic Expansions}
 
+%-----------------------------------------------
 \subsection{Stirling's Approximation}
+\label{subsec:stirling}
+
+\begin{subsectionintro}
+Factorials grow faster than polynomials but slower than exponentials.
+Stirling's formula provides precise asymptotic behavior.
+\end{subsectionintro}
+
 \subsubsection{Statement of Stirling's Formula}
-\subsubsection{Proof Sketch}
-\subsubsection{Applications in Combinatorics and Analysis}
-\subsubsection{More Precise Versions}
+\subsubsection{Proof Sketch via Integral Approximation}
+\subsubsection{Applications in Combinatorics}
+\subsubsection{More Precise Versions and Error Bounds}
 
-\section{Linear Algebra (Brief Overview)}
-\subsection{Vectors, Matrices, and Linear Transformations}
+%===============================================
+% SECTION 4: LINEAR ALGEBRA
+%===============================================
+\section{Linear Algebra for Algorithmic Applications}
+\label{sec:linear-algebra}
+
+\begin{sectionintro}
+Linear algebra appears in graph algorithms, Markov chains, numerical methods,
+and machine learning. We focus on computational and algorithmic aspects.
+\end{sectionintro}
+
+%-----------------------------------------------
+\subsection{Vectors, Matrices, and Linear Systems}
+\label{subsec:vectors-matrices}
+
 \subsubsection{Vector Spaces and Subspaces}
-\subsubsection{Linear Independence and Basis}
-\subsubsection{Matrix Operations}
-\subsubsection{Matrix Multiplication as Composition}
-\subsubsection{Systems of Linear Equations}
+\subsubsection{Linear Independence, Span, and Basis}
+\subsubsection{Matrix Operations: Addition, Multiplication, Transpose}
+\subsubsection{Matrix Multiplication as Linear Transformation Composition}
+\subsubsection{Systems of Linear Equations: Gaussian Elimination}
 
+%-----------------------------------------------
 \subsection{Eigenvalues and Eigenvectors}
-\subsubsection{Definitions}
-\subsubsection{Characteristic Polynomial}
-\subsubsection{Diagonalization}
-\subsubsection{Spectral Theorem (for Symmetric Matrices)}
+\label{subsec:eigenvalues}
 
-\subsection{Applications to Markov Chains and Graph Algorithms}
-\subsubsection{Stochastic Matrices}
-\subsubsection{Steady-State Distribution}
+\subsubsection{Definitions: $Av = \lambda v$}
+\subsubsection{Characteristic Polynomial: $\det(A - \lambda I) = 0$}
+\subsubsection{Diagonalization: $A = PDP^{-1}$}
+\subsubsection{Spectral Theorem for Symmetric Matrices}
+\subsubsection{Applications to Algorithm Analysis}
+
+%-----------------------------------------------
+\subsection{Markov Chains and Random Walks}
+\label{subsec:markov-chains}
+
+\begin{subsectionintro}
+Markov chains model random processes with memoryless transitions.
+They appear in randomized algorithms and probabilistic analysis.
+\end{subsectionintro}
+
+\subsubsection{Stochastic Matrices: Definition and Properties}
+\subsubsection{Steady-State Distribution: $\pi P = \pi$}
 \subsubsection{Random Walks on Graphs}
-\subsubsection{PageRank Algorithm (Overview)}
+\subsubsection{Case Study: PageRank Algorithm}
 
+%-----------------------------------------------
 \subsection{Matrix Operations and Complexity}
+\label{subsec:matrix-complexity}
+
 \subsubsection{Standard Matrix Multiplication: $O(n^3)$}
-\subsubsection{Strassen's Algorithm: $O(n^{\log_2 7})$}
+\subsubsection{Strassen's Algorithm: $O(n^{\log_2 7}) \approx O(n^{2.81})$}
+\subsubsection{Coppersmith-Winograd and Beyond}
 \subsubsection{Matrix Inversion Complexity}
-\subsubsection{Solving Linear Systems}
+\subsubsection{Solving Linear Systems: LU Decomposition, Cholesky}
 
+%===============================================
+% SECTION 5: NUMBER THEORY
+%===============================================
 \section{Number Theory Essentials}
+\label{sec:number-theory}
+
+\begin{sectionintro}
+Number theory provides tools for cryptography, hashing, pseudorandom generation,
+and modular arithmetic—all crucial in modern algorithms.
+\end{sectionintro}
+
+%-----------------------------------------------
 \subsection{Divisibility and Modular Arithmetic}
-\subsubsection{Division Algorithm}
-\subsubsection{Modular Arithmetic Operations}
-\subsubsection{Congruences and Properties}
-\subsubsection{Modular Inverses}
+\label{subsec:divisibility}
 
+\subsubsection{Division Algorithm: $a = bq + r$}
+\subsubsection{Modular Arithmetic: $a \equiv b \pmod{m}$}
+\subsubsection{Properties of Modular Operations}
+\subsubsection{Modular Inverses: $ax \equiv 1 \pmod{m}$}
+\subsubsection{Chinese Remainder Theorem}
+
+%-----------------------------------------------
 \subsection{Prime Numbers and Factorization}
-\subsubsection{Prime Number Definition}
-\subsubsection{Fundamental Theorem of Arithmetic}
-\subsubsection{Prime Distribution and the Prime Number Theorem}
-\subsubsection{Sieve of Eratosthenes}
+\label{subsec:primes}
 
+\subsubsection{Definition of Prime Numbers}
+\subsubsection{Fundamental Theorem of Arithmetic}
+\subsubsection{Prime Distribution: Prime Number Theorem}
+\subsubsection{Sieve of Eratosthenes: $O(n \log \log n)$}
+\subsubsection{Primality Testing: Fermat, Miller-Rabin}
+
+%-----------------------------------------------
 \subsection{Greatest Common Divisor and Euclidean Algorithm}
+\label{subsec:gcd}
+
+\begin{subsectionintro}
+The Euclidean algorithm is one of the oldest and most elegant algorithms.
+Its analysis demonstrates beautiful connections between number theory and complexity.
+\end{subsectionintro}
+
 \subsubsection{GCD Definition and Properties}
 \subsubsection{Euclidean Algorithm}
 \subsubsection{Extended Euclidean Algorithm}
-\subsubsection{Complexity Analysis of Euclidean Algorithm}
-\subsubsection{Lamé's Theorem}
+\subsubsection{Complexity Analysis: $O(\log \min(a, b))$}
+\subsubsection{Lamé's Theorem: Connection to Fibonacci Numbers}
 
+%-----------------------------------------------
 \subsection{Applications to Cryptography and Hashing}
-\subsubsection{Modular Exponentiation}
-\subsubsection{RSA Cryptosystem (Overview)}
-\subsubsection{Hash Functions and Collision Resistance}
+\label{subsec:crypto-hash}
+
+\subsubsection{Modular Exponentiation: Fast Algorithm}
+\subsubsection{RSA Cryptosystem: Overview}
+\subsubsection{Hash Functions: Collision Resistance}
 \subsubsection{Universal Hashing (Preview)}
 
+%===============================================
+% SECTION 6: ADDITIONAL TOOLS
+%===============================================
 \section{Additional Mathematical Tools}
+\label{sec:additional-tools}
+
+%-----------------------------------------------
 \subsection{Logarithms and Exponentials}
+\label{subsec:log-exp}
+
 \subsubsection{Properties of Logarithms}
 \subsubsection{Change of Base Formula}
-\subsubsection{Natural Logarithm vs. Binary Logarithm}
+\subsubsection{Natural vs. Binary Logarithms in CS}
 \subsubsection{Exponential Growth and Decay}
-\subsubsection{Comparing Logarithmic and Polynomial Growth}
+\subsubsection{Comparing Growth Rates}
 
+%-----------------------------------------------
 \subsection{Floor and Ceiling Functions}
-\subsubsection{Definitions and Basic Properties}
-\subsubsection{Useful Identities}
+\label{subsec:floor-ceiling}
+
+\subsubsection{Definitions: $\lfloor x \rfloor$ and $\lceil x \rceil$}
+\subsubsection{Useful Identities and Properties}
 \subsubsection{Applications in Algorithm Analysis}
+%-----------------------------------------------
+\subsection{Asymptotic Notation: Informal Preview}
+\label{subsec:asymptotic-preview}
 
-\subsection{Asymptotic Notation (Informal Preview)}
+\begin{subsectionintro}
+We provide intuition here; formal definitions appear in Part 2, Chapter 2.
+\end{subsectionintro}
+
 \subsubsection{Intuition Behind $O$, $\Omega$, $\Theta$}
-\subsubsection{Why We Need Formal Definitions (Chapter 7)}
-\subsubsection{Common Growth Rates}
+\subsubsection{Why We Need Formal Definitions}
+\subsubsection{Common Growth Rate Hierarchy}
 
-\section{Self-Assessment Exercises}
-\subsection{Discrete Mathematics Problems}
-\subsection{Probability Problems}
-\subsection{Analysis Problems}
-\subsection{Linear Algebra Problems}
-\subsection{Number Theory Problems}
+%===============================================
+% SECTION 7: SELF-ASSESSMENT AND RESOURCES
+%===============================================
+\section{Self-Assessment and Further Study}
+\label{sec:self-assessment}
 
-\section{Further Reading and Resources}
-\subsection{Recommended Textbooks for Each Topic}
-\subsection{Online Resources and Video Lectures}
-\subsection{Practice Problem Collections}
+\begin{sectionintro}
+Test your understanding with these exercises before proceeding to Part 2.
+If you struggle with a section, revisit the material or consult the recommended resources.
+\end{sectionintro}
+
+%-----------------------------------------------
+\subsection{Self-Assessment Exercises}
+\label{subsec:exercises}
+
+\subsubsection{Discrete Mathematics Problems}
+\subsubsection{Probability Problems}
+\subsubsection{Analysis Problems}
+\subsubsection{Linear Algebra Problems}
+\subsubsection{Number Theory Problems}
+
+%-----------------------------------------------
+\subsection{Further Reading and Resources}
+\label{subsec:resources}
+
+\subsubsection{Recommended Textbooks}
+\subsubsection{Online Resources and Video Lectures}
+\subsubsection{Practice Problem Collections}
+
+%-----------------------------------------------
+\subsection{Notation and Conventions Used in This Book}
+\label{subsec:notation}
+
+\subsubsection{Standard Mathematical Symbols}
+\subsubsection{Asymptotic Notation}
+\subsubsection{Probability Notation}
+\subsubsection{Graph Notation}
