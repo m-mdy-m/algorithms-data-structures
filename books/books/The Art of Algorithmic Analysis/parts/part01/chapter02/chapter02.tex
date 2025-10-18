@@ -1,4 +1,199 @@
-\chapter{Why ``Precise Analysis'' Matters — From Theory to Engineering}
-\section{The Gap Between Theoretical Complexity and Real-World Performance}
-\section{Case Studies: When Big-O Isn't Enough}
-\section{The Role of Constants, Lower-Order Terms, and Hardware}
+\chapter{Mathematical and Algorithmic Prerequisites}
+\section{Discrete Mathematics}
+\subsection{Sets, Functions, and Relations}
+\subsubsection{Set Theory Basics}
+\subsubsection{Operations on Sets}
+\subsubsection{Functions: Injective, Surjective, Bijective}
+\subsubsection{Relations and Equivalence Classes}
+\subsubsection{Order Relations and Partial Orders}
+
+\subsection{Combinatorics: Permutations, Combinations, and Binomial Coefficients}
+\subsubsection{The Fundamental Counting Principles}
+\subsubsection{Permutations with and without Repetition}
+\subsubsection{Combinations and the Binomial Theorem}
+\subsubsection{Pigeonhole Principle and Applications}
+\subsubsection{Inclusion-Exclusion Principle}
+\subsubsection{Combinatorial Identities Useful in Analysis}
+
+\subsection{Graph Theory Basics}
+\subsubsection{Graph Definitions and Representations}
+\subsubsection{Paths, Cycles, and Connectivity}
+\subsubsection{Trees and Their Properties}
+\subsubsection{Directed Graphs and DAGs}
+\subsubsection{Graph Algorithms Preview (BFS, DFS)}
+
+\subsection{Proof Techniques: Induction, Contradiction, and Contrapositive}
+\subsubsection{Direct Proof Structure}
+\subsubsection{Proof by Contradiction}
+\subsubsection{Proof by Contrapositive}
+\subsubsection{Mathematical Induction: Weak Form}
+\subsubsection{Strong Induction and Well-Ordering Principle}
+\subsubsection{Structural Induction for Recursive Definitions}
+\subsubsection{Common Proof Pitfalls and How to Avoid Them}
+
+\section{Elementary Probability Theory}
+\subsection{Sample Spaces, Events, and Probability Measures}
+\subsubsection{Sample Spaces and Events}
+\subsubsection{Probability Axioms and Basic Properties}
+\subsubsection{Equally Likely Outcomes}
+\subsubsection{Conditional Probability}
+
+\subsection{Random Variables and Expectations}
+\subsubsection{Discrete Random Variables}
+\subsubsection{Probability Mass Functions}
+\subsubsection{Expected Value: Definition and Properties}
+\subsubsection{Functions of Random Variables}
+
+\subsection{Basic Distributions: Uniform, Bernoulli, Geometric, Binomial}
+\subsubsection{Uniform Distribution}
+\subsubsection{Bernoulli Trials}
+\subsubsection{Binomial Distribution}
+\subsubsection{Geometric Distribution}
+\subsubsection{Negative Binomial Distribution}
+
+\subsection{Linearity of Expectation}
+\subsubsection{Statement and Proof}
+\subsubsection{Why Independence Is Not Required}
+\subsubsection{Applications in Algorithm Analysis}
+\subsubsection{Example: Expected Comparisons in QuickSort}
+
+\subsection{Conditional Probability and Independence}
+\subsubsection{Conditional Probability Revisited}
+\subsubsection{Law of Total Probability}
+\subsubsection{Bayes' Theorem}
+\subsubsection{Independence of Events}
+\subsubsection{Independence of Random Variables}
+\subsubsection{Conditional Expectation}
+
+\subsection{Variance and Standard Deviation}
+\subsubsection{Definitions and Properties}
+\subsubsection{Variance of Sums}
+\subsubsection{Chebyshev's Inequality (Preview)}
+
+\subsection{Moment Generating Functions (Brief Introduction)}
+\subsubsection{Definition and Basic Properties}
+\subsubsection{Using MGFs to Find Moments}
+\subsubsection{MGFs and Sum of Independent Random Variables}
+
+\section{Mathematical Analysis}
+\subsection{Limits, Continuity, and Asymptotic Behavior}
+\subsubsection{Limits of Sequences}
+\subsubsection{Limit Laws}
+\subsubsection{L'Hôpital's Rule}
+\subsubsection{Asymptotic Equivalence}
+\subsubsection{Landau Notation (Informal Preview)}
+
+\subsection{Sequences and Series}
+\subsubsection{Convergence of Sequences}
+\subsubsection{Infinite Series: Convergence Tests}
+\subsubsection{Geometric Series}
+\subsubsection{Harmonic Series and Generalizations}
+\subsubsection{Power Series}
+
+\subsection{Summations and Closed Forms}
+\subsubsection{Basic Summation Formulas}
+\subsubsection{Arithmetic and Geometric Sums}
+\subsubsection{Techniques for Finding Closed Forms}
+\subsubsection{Perturbation Method}
+\subsubsection{Repertoire Method}
+\subsubsection{Euler-Maclaurin Formula (Overview)}
+
+\subsection{Integration and Differentiation (Brief Review)}
+\subsubsection{Fundamental Theorem of Calculus}
+\subsubsection{Integration Techniques Relevant to Analysis}
+\subsubsection{Approximating Sums with Integrals}
+\subsubsection{Growth Rates via Derivatives}
+
+\subsection{Taylor Series and Asymptotic Expansions}
+\subsubsection{Taylor Series Definition}
+\subsubsection{Common Taylor Series}
+\subsubsection{Using Taylor Series for Approximation}
+\subsubsection{Asymptotic Expansions}
+
+\subsection{Stirling's Approximation}
+\subsubsection{Statement of Stirling's Formula}
+\subsubsection{Proof Sketch}
+\subsubsection{Applications in Combinatorics and Analysis}
+\subsubsection{More Precise Versions}
+
+\section{Linear Algebra (Brief Overview)}
+\subsection{Vectors, Matrices, and Linear Transformations}
+\subsubsection{Vector Spaces and Subspaces}
+\subsubsection{Linear Independence and Basis}
+\subsubsection{Matrix Operations}
+\subsubsection{Matrix Multiplication as Composition}
+\subsubsection{Systems of Linear Equations}
+
+\subsection{Eigenvalues and Eigenvectors}
+\subsubsection{Definitions}
+\subsubsection{Characteristic Polynomial}
+\subsubsection{Diagonalization}
+\subsubsection{Spectral Theorem (for Symmetric Matrices)}
+
+\subsection{Applications to Markov Chains and Graph Algorithms}
+\subsubsection{Stochastic Matrices}
+\subsubsection{Steady-State Distribution}
+\subsubsection{Random Walks on Graphs}
+\subsubsection{PageRank Algorithm (Overview)}
+
+\subsection{Matrix Operations and Complexity}
+\subsubsection{Standard Matrix Multiplication: $O(n^3)$}
+\subsubsection{Strassen's Algorithm: $O(n^{\log_2 7})$}
+\subsubsection{Matrix Inversion Complexity}
+\subsubsection{Solving Linear Systems}
+
+\section{Number Theory Essentials}
+\subsection{Divisibility and Modular Arithmetic}
+\subsubsection{Division Algorithm}
+\subsubsection{Modular Arithmetic Operations}
+\subsubsection{Congruences and Properties}
+\subsubsection{Modular Inverses}
+
+\subsection{Prime Numbers and Factorization}
+\subsubsection{Prime Number Definition}
+\subsubsection{Fundamental Theorem of Arithmetic}
+\subsubsection{Prime Distribution and the Prime Number Theorem}
+\subsubsection{Sieve of Eratosthenes}
+
+\subsection{Greatest Common Divisor and Euclidean Algorithm}
+\subsubsection{GCD Definition and Properties}
+\subsubsection{Euclidean Algorithm}
+\subsubsection{Extended Euclidean Algorithm}
+\subsubsection{Complexity Analysis of Euclidean Algorithm}
+\subsubsection{Lamé's Theorem}
+
+\subsection{Applications to Cryptography and Hashing}
+\subsubsection{Modular Exponentiation}
+\subsubsection{RSA Cryptosystem (Overview)}
+\subsubsection{Hash Functions and Collision Resistance}
+\subsubsection{Universal Hashing (Preview)}
+
+\section{Additional Mathematical Tools}
+\subsection{Logarithms and Exponentials}
+\subsubsection{Properties of Logarithms}
+\subsubsection{Change of Base Formula}
+\subsubsection{Natural Logarithm vs. Binary Logarithm}
+\subsubsection{Exponential Growth and Decay}
+\subsubsection{Comparing Logarithmic and Polynomial Growth}
+
+\subsection{Floor and Ceiling Functions}
+\subsubsection{Definitions and Basic Properties}
+\subsubsection{Useful Identities}
+\subsubsection{Applications in Algorithm Analysis}
+
+\subsection{Asymptotic Notation (Informal Preview)}
+\subsubsection{Intuition Behind $O$, $\Omega$, $\Theta$}
+\subsubsection{Why We Need Formal Definitions (Chapter 7)}
+\subsubsection{Common Growth Rates}
+
+\section{Self-Assessment Exercises}
+\subsection{Discrete Mathematics Problems}
+\subsection{Probability Problems}
+\subsection{Analysis Problems}
+\subsection{Linear Algebra Problems}
+\subsection{Number Theory Problems}
+
+\section{Further Reading and Resources}
+\subsection{Recommended Textbooks for Each Topic}
+\subsection{Online Resources and Video Lectures}
+\subsection{Practice Problem Collections}
