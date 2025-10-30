@@ -1,63 +1,79 @@
 \chapter*{Preface}
 \addcontentsline{toc}{chapter}{Preface}
 
-\lettrine{M}{athematics is not learned}—it is lived. This book emerged not from a plan, but from a necessity I could no longer ignore.
+\lettrine{I}{  kept hitting} a wall. Not in my code—that worked fine. Not in algorithms—I could trace through them step by step. The wall was deeper. It was in understanding \textit{why} things worked.
 
-During my work on \textit{Arliz} and \textit{The Art of Algorithmic Analysis}, I confronted an uncomfortable truth: my mathematical foundation was insufficient. Not superficially—I could manipulate symbols, apply formulas, solve standard problems—but fundamentally. I lacked the deep, intuitive understanding that transforms mathematics from a tool into a language of thought.\\
-The realization was humbling. Here I was, attempting to write comprehensive treatments of data structures and algorithmic analysis, yet stumbling over concepts that should have been second nature. When working through recurrence relations, I found myself mechanically applying methods without truly grasping why they worked. When analyzing probabilistic algorithms, I could follow the calculations but couldn't see the underlying structure. When dealing with matrix operations in multidimensional arrays, the algebra felt arbitrary rather than inevitable.\\
-This gap became impossible to ignore.
+You know that feeling when you follow a proof mechanically, nodding along, getting the right answer... but something's missing? That was me. I could solve problems. I couldn't \textit{see} them.
 
-\section*{The Decision to Begin Again}
+Writing \textit{Arliz} and \textit{The Art of Algorithmic Analysis} forced me to confront this. How can you explain something you don't truly understand? I'd write a section on recurrence relations, realize I was just regurgitating formulas, delete it, and start over. Again. And again.
 
-I made a choice: to pause my other work and return to the beginning. Not to the beginning of computer science, but to the beginning of mathematical thought itself. If I was to write honestly about computation, I needed to understand the mathematics that makes computation possible—not as a collection of techniques, but as a coherent intellectual tradition.\\
-I began reading widely. Aristotle's \textit{Organon} for logical foundations. Al-Khwarizmi's \textit{Al-Jabr wa-l-Muqabala} to understand algebra's origins. Ibn Sina's \textit{Al-Shifa} for its systematic treatment of mathematics within broader philosophical context. Euclid's \textit{Elements} to see how axiomatic thinking crystallized geometric intuition. The works of Descartes, Leibniz, Euler, Gauss—each revealing how mathematical structures emerged from intellectual necessity.\\
-What struck me most was the continuity. These were not isolated discoveries but conversations across centuries. Khwarizmi built on Greek algebra, which drew from Babylonian methods. Ibn Sina synthesized Aristotelian logic with Islamic mathematical traditions. European algebraists refined ideas that had traveled from India through Persia. Each generation stood on foundations laid by predecessors, adding new levels of abstraction and generality.
+So I stopped. Put everything on hold. Went back to the beginning.
 
-\section*{Why This Book Exists}
+Not back to "Intro to Discrete Math." Further. Back to Aristotle trying to formalize human reasoning. To al-Khwarizmi figuring out how to solve equations systematically. To Euclid asking "what can we build from almost nothing?" To Ibn Sina synthesizing Greek logic with Islamic mathematics. To Descartes having his crazy idea that geometry and algebra were the same thing.
 
-As I studied, I began taking notes. These notes grew into explorations. Those explorations became chapters. Eventually, I realized I was writing a book—not the book I had planned, but the book I needed.\\
-\textit{Mathesis} is my attempt to understand mathematics as computer scientists and engineers must understand it: not as pure abstraction divorced from application, nor as mere toolbox of techniques, but as living framework for systematic thought. It traces mathematical concepts from their historical origins through their modern formalizations, always asking: Why did this idea emerge? What problem did it solve? How does it connect to computation?
+I read their actual works. Not summaries. Not textbooks about them. Their words.
 
-This book completes a trilogy of sorts:
+And something clicked.
+
+These people weren't just discovering math. They were \textit{thinking}—wrestling with hard problems, making wrong turns, having insights, building frameworks. Mathematics wasn't this pristine thing handed down from on high. It was messy. Human. Incomplete. Always evolving.
+
+That's what I want to share here.
+
+\section*{What This Book Is}
+
+\textit{Mathesis} is my attempt to understand mathematics the way it actually developed—as a series of insights, each solving a real problem or answering a genuine question. Not "here are 50 formulas to memorize" but "here's why someone needed this idea, here's what they were trying to do, here's how it connects to everything else."
+
+This book sits between three others I'm writing:
 \begin{itemize}
-    \item \textit{Mathesis} provides the mathematical foundations
-    \item \textit{The Art of Algorithmic Analysis} develops analytical techniques
-    \item \textit{Arliz} applies these ideas to concrete data structures
+    \item \textit{Mathesis} — the mathematical foundations
+    \item \textit{The Art of Algorithmic Analysis} — how to analyze algorithms rigorously
+    \item \textit{Arliz} — data structures in depth
 \end{itemize}
 
-Each stands alone, but together they form a coherent whole—a pathway from ancient counting to modern algorithms.
+You can read any of them independently. But together they form a path from "what is a number?" to "how do we build efficient software?"
 
-\section*{What Makes This Book Different}
+\section*{How It's Different}
 
-Most mathematical prerequisites texts for computer science students follow a predictable pattern: rapid surveys of discrete mathematics, linear algebra, probability—topics treated as necessary evils, obstacles to overcome before "real" computer science begins. Proofs are minimized, historical context ignored, philosophical motivations unexplored.\\
-This approach fails. It produces students who can manipulate mathematical symbols without understanding what those symbols mean. They can apply algorithms without grasping why those algorithms work. They memorize rather than comprehend.\\
-\textit{Mathesis} takes a different path. It begins where mathematics began: with humans trying to make sense of quantity, pattern, and structure. It follows the intellectual journey from tally marks on bones to abstract algebraic structures, showing not just what we discovered but why each discovery was necessary.\\
-Every major concept is developed in three ways:
-\begin{itemize}
-    \item \textbf{Historical}: How did this idea emerge? What problem motivated it?
-    \item \textbf{Mathematical}: What is the precise, formal definition? Why this definition?
-    \item \textbf{Computational}: Where does this appear in computer science? How is it used?
-\end{itemize}
-The goal is not merely competence but \textit{mathematical maturity}—the ability to think mathematically, to see structure where others see complexity, to recognize patterns that transcend specific contexts.
+Most math-for-CS books treat mathematics as vegetables you have to eat before dessert. Get through the boring prerequisite chapters, then you can do the fun stuff.
 
-\section*{Acknowledgment}
+That's backwards.
 
-This book owes debts to thinkers separated by millennia: to Aristotle for showing that thought itself can be systematized; to Al-Khwarizmi for demonstrating that symbolic manipulation can solve problems; to Ibn Sina for integrating mathematics into comprehensive philosophical systems; to Descartes for making geometry algebraic; to Leibniz for dreaming of universal mathematical language; to Turing for showing that mathematics could be mechanized.\\
-More immediately, I thank the readers of my other books whose questions and insights helped me understand what I had missed. Your engagement made me a better writer and thinker.
+Mathematics \textit{is} the fun stuff. It's just taught badly.
 
-\section*{Final Thoughts}
+I'm not going to give you formulas without context. Every major idea in here starts with a question: What problem were people trying to solve? Why did existing tools fail? What insight made progress possible?
 
-Mathematics is hard. It should be hard—we are training our minds to think in ways that don't come naturally, to see abstractions that don't exist in physical world, to follow chains of reasoning that extend far beyond immediate intuition.\\
-But mathematics is also beautiful. When you finally understand a proof, when a pattern suddenly becomes clear, when disparate concepts unite into coherent theory—those moments justify every frustration that preceded them.\\
-This book is my attempt to share both the difficulty and the beauty. To show not just mathematical results but the intellectual journey that produced them. To help you develop not just mathematical knowledge but mathematical intuition.\\
+Sometimes that means historical context—seeing how Babylonians tackled problems differently than Greeks, or how Islamic scholars built bridges between cultures. Sometimes it means showing failed approaches that seem reasonable but don't work. Sometimes it means proving something rigorously because the proof itself is enlightening.
 
-Welcome to \textbf{Mathesis}. Let us begin at the beginning.
+The goal isn't to turn you into a mathematician. It's to give you \textit{mathematical intuition}—the ability to look at a problem and think "oh, this is really about X" or "I bet Y technique would work here."
 
-\vfill{}
+\section*{Who Helped (Across Centuries)}
 
+I owe debts to people I'll never meet. Aristotle for showing thought could be systematic. Al-Khwarizmi for making algebra algorithmic. Ibn Sina for treating math as part of a bigger intellectual picture. Descartes for unifying geometry and algebra. Leibniz for dreaming of universal logical languages. Turing for proving limits of computation.
+
+Also to readers of my other books who asked questions that made me realize I didn't understand something as well as I thought. You made this better.
+
+\section*{A Warning}
+
+This is hard. Not "memorize 100 formulas" hard. "Change how you think" hard.
+
+There will be moments where your brain hurts. Where a proof seems impossible to follow. Where you read the same paragraph five times and still don't get it.
+
+That's normal. That's the process. Every mathematician goes through it.
+
+The reward? Eventually—might take days, might take months—something clicks. Patterns emerge. Connections form. You start seeing structure everywhere. It's worth it.
+
+\section*{One More Thing}
+
+This book is alive. I keep learning. Readers point out mistakes. I find better ways to explain things. New connections become clear.
+
+So the version you're reading now isn't finished. It's a snapshot of current understanding. Check back in six months and parts will be better. That's the nature of genuine learning—it never stops.
+
+Let's begin.
+
+\vfill
 \begin{flushright}
-    \textit{Mahdi} \\
-    \textit{2025} \\
+\textit{Mahdi}\\
+\textit{2025}
 \end{flushright}
 
 \clearpage

@@ -1,115 +1,75 @@
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
 
-\lettrine{T}{his book} is structured as an intellectual journey—a carefully designed progression through the landscape of mathematical thought that has shaped computational science. Each part represents not merely a collection of related topics, but a distinct phase in humanity's mathematical understanding, building systematically toward the comprehensive foundation needed for modern computer science and engineering.
+\lettrine{M}{athematics is} a language. But unlike English or Persian, it's not something you pick up by immersion. You have to build it, concept by concept, proof by proof, insight by insight.
 
-\section*{The Architecture of Mathematical Knowledge}
+This book is that construction project.
 
-Mathematics is not a linear sequence of facts to be memorized. It is a vast, interconnected web of ideas, where each concept illuminates and is illuminated by countless others. This book's structure reflects that reality. We begin with origins—the cognitive and historical roots of mathematical thinking—and progressively build toward the sophisticated abstractions that enable modern computation.
+\section*{What We're Actually Doing Here}
 
-The journey follows a natural arc:
+Think of mathematics as having three layers:
 
-\textbf{Parts I-VI: Historical and Foundational Development}\\
-We trace mathematics from its primordial origins through ancient civilizations to the Renaissance mathematical revolution. These parts are not merely historical—they reveal \textit{why} mathematical concepts emerged in particular forms, \textit{what problems} motivated their development, and \textit{how} each innovation prepared the ground for subsequent advances.
+\textbf{The Surface Layer}—Formulas, notation, procedures. This is what most textbooks teach. "Here's the quadratic formula. Memorize it. Moving on."
 
-\textbf{Parts VII-XII: The Analytical Revolution}\\
-From calculus through measure theory and functional analysis, we explore the mathematics of continuity, change, and infinite processes. These parts develop the analytical machinery essential for understanding algorithms, complexity, and computational systems.
+\textbf{The Structural Layer}—Why those formulas work. How concepts connect. What patterns repeat across different areas. This is what mathematicians actually think about.
 
-\textbf{Parts XIII-XVII: Abstract Structures and Modern Mathematics}\\
-Probability theory, combinatorics, computational mathematics, category theory, and twentieth-century synthesis reveal mathematics' power through abstraction. Here we see how general frameworks unify diverse phenomena and enable systematic reasoning.
+\textbf{The Foundation Layer}—What is proof? What is number? What is computation? What can we know and how can we know it? This is where philosophy meets mathematics.
 
-\textbf{Parts XVIII-XXIV: Applied and Specialized Mathematics}\\
-The connection between mathematics and physics, contemporary frontiers, and specialized applications to electrical engineering, robotics, artificial intelligence, computer vision, natural language processing, quantum computing, and deep learning demonstrate how abstract mathematics becomes practical power.
+Most books give you the surface, maybe hint at structure, ignore foundation entirely.
 
-\section*{Three Dimensions of Understanding}
+We're going to build all three. From the ground up.
 
-Throughout this journey, we maintain three interwoven perspectives:
+\section*{How This Works}
 
-\textbf{1. Historical Development}\\
-Understanding \textit{how} mathematical ideas emerged reveals \textit{why} they take particular forms. When you see Babylonian mathematicians wrestling with positional notation, or Greek geometers discovering incommensurability, or Islamic scholars systematizing algebra, you understand these concepts' essential nature in ways that pure formal definition cannot convey.
+Each part of this book tackles a major mathematical domain. Not a survey—a complete development. We start with motivation (why does this matter?), build formal machinery (what exactly are we talking about?), prove major results (how do we know it's true?), then connect to computation (where does this appear in real systems?).
 
-Mathematics did not spring fully formed from abstract contemplation. It emerged from necessity—from practical problems requiring systematic solution, from intellectual puzzles demanding resolution, from the human drive to understand pattern and structure. Each major mathematical development represents humanity solving a problem, confronting a paradox, or discovering an unexpected connection.
+Some parts are foundational—logic, set theory, algebra. You need these to understand anything else.
 
-\textbf{2. Formal Mathematical Structure}\\
-History provides intuition, but mathematics demands precision. Each concept receives rigorous formal treatment: definitions, theorems, proofs, examples, counterexamples. We develop mathematical maturity—the ability to think precisely, reason systematically, and construct valid arguments.
+Some parts are computational—asymptotic analysis, optimization, numerical methods. These are your tools for designing and analyzing algorithms.
 
-Formal mathematics is not pedantry. It is the discipline that distinguishes reliable reasoning from wishful thinking, valid inference from plausible error. When you understand \textit{why} definitions must be precise, \textit{how} theorems connect to definitions, and \textit{what} proofs actually accomplish, mathematics transforms from mysterious ritual into comprehensible structure.
+Some parts are applied—machine learning, cryptography, computer vision. These show how abstract mathematics becomes practical technology.
 
-\textbf{3. Computational Application}\\
-Mathematics for computer scientists and engineers must connect to computation. Throughout, we emphasize: Where does this concept appear in algorithms? How does this theorem enable practical computation? Why does this abstraction matter for software systems?
+The parts are ordered to build progressively. But they're also modular—if you need quantum computing mathematics right now, jump to that part. Prerequisites are clearly marked. Come back for foundations when you're ready.
 
-This computational perspective is not separate from "pure" mathematics—it reveals mathematics' essential character. Computation is systematic symbol manipulation following precise rules. Mathematics is systematic reasoning about structure and pattern. They are intimately connected.
+\section*{Prerequisites? What Prerequisites?}
 
-\section*{Navigation Strategies}
+Here's what you actually need: willingness to think hard about abstract ideas.
 
-This book supports multiple reading paths:
+That's it.
 
-\textbf{The Complete Journey}\\
-Work through systematically from Part I to Part XXIV. This provides the fullest understanding and reveals how mathematical ideas build on one another. Recommended for students building comprehensive foundations.
+Yes, comfort with algebra helps. Yes, calculus background is useful. Yes, programming experience provides context.
 
-\textbf{The Reference Approach}\\
-Use the book as a reference when specific mathematical understanding is needed. Each part is relatively self-contained, with clear prerequisites noted. The extensive index and cross-references enable targeted consultation.
+But none of that is required. If you can follow logical arguments and tolerate temporary confusion, you can handle this material.
 
-\textbf{The Curious Explorer}\\
-Follow your interests. Skip parts that don't immediately engage you. Return when ready. Mathematics rewards patience—confusion often precedes understanding. Some concepts require mental maturation; return later and they suddenly make sense.
+The limiting factor isn't prior knowledge. It's patience. Mathematical understanding doesn't arrive in sudden flashes of insight. It arrives slowly, through repeated engagement with difficult ideas. You'll read things that don't make sense. You'll work problems that seem impossible. You'll feel stuck.
 
-\section*{Prerequisites and Preparation}
+That's normal. That's the process. Stay with it.
 
-This book assumes:
-\begin{itemize}
-    \item \textbf{Mathematical maturity equivalent to first-year university mathematics}
-    \item \textbf{Comfort with algebraic manipulation and basic proof techniques}
-    \item \textbf{Willingness to work through difficult material systematically}
-    \item \textbf{Patience with abstraction and formal reasoning}
-\end{itemize}
+\section*{Why Rigor Matters}
 
-If you find early parts too easy, skip ahead. If later parts seem too difficult, return to earlier material—mathematical understanding develops through repeated engagement from different perspectives.
+You might wonder: why prove everything? Why not just show me how to use this stuff?
 
-\section*{The Living Nature of This Work}
+Because understanding \textit{why} something works changes how you use it. It shows you when it applies and when it doesn't. It reveals connections to other techniques. It lets you adapt methods to new situations.
 
-Like all my books, \textit{Mathesis} evolves continuously. As I discover better explanations, identify errors, or recognize new connections, the book improves. Your engagement—through corrections, suggestions, and questions—contributes to this evolution.
+Hand-waving might feel faster in the moment. But it leaves you helpless when you hit problems slightly different from examples you've seen. Rigor gives you tools to think through genuinely novel situations.
 
-Mathematics itself is not static. New theorems are proved, old proofs simplified, unexpected connections discovered. A book about mathematics should reflect this dynamic reality.
+Plus—and this might sound strange—proofs are beautiful. There's aesthetic pleasure in seeing how a few simple assumptions lead inevitably to surprising conclusions. Once you develop taste for it, you'll seek out proofs the way you seek out good novels or films.
 
-\section*{A Word of Encouragement}
+\section*{A Map Is Not The Territory}
 
-The journey ahead is challenging. Mathematics demands sustained mental effort, tolerance for confusion, and persistence through difficulty. But the rewards justify the struggle:
+This introduction can't capture what actually working through this material feels like. It'll be harder than you expect in some places. Easier in others. More interesting than you anticipate in ways you can't predict.
 
-\begin{itemize}
-    \item \textbf{Intellectual power}: Mathematical thinking enables systematic problem-solving across domains
-    \item \textbf{Deep understanding}: Surface-level knowledge becomes genuine comprehension
-    \item \textbf{Professional capability}: Mathematical maturity distinguishes good practitioners from exceptional ones
-    \item \textbf{Aesthetic pleasure}: Mathematics possesses profound beauty—patterns, elegance, surprising connections
-\end{itemize}
+The only way to know what this book contains is to read it. To work through examples. To attempt exercises. To struggle with concepts until they click.
 
-When concepts seem opaque, persist. When proofs seem impenetrable, work through them line by line. When exercises seem impossible, struggle with them. Mathematical understanding arrives not in sudden revelation but through patient, sustained engagement.
+So let's stop talking about mathematics and start doing mathematics.
 
-Every mathematician—from ancient Babylonian scribes to modern research leaders—has experienced the frustration you will feel. Every significant mathematical insight in history required someone to persist through confusion toward clarity. You walk a path trodden by countless others; you will arrive.
-
-\section*{Begin}
-
-Twenty-four parts await. Each reveals another dimension of mathematical thought. Each builds the foundation for computational understanding. Each represents humanity's long conversation with quantity, pattern, and structure.
-
-Welcome to \textbf{Mathesis}. The journey begins with a simple question: How did humans learn to count?
+Turn the page.
 
 \vfill
 
 \begin{quote}
-\textit{``In mathematics, you don't understand things. You just get used to them.''}
-
-\hfill--- \textsc{John von Neumann}
-\end{quote}
-
-\begin{quote}
-\textit{``Pure mathematics is, in its way, the poetry of logical ideas.''}
-
-\hfill--- \textsc{Albert Einstein}
-\end{quote}
-
-\begin{quote}
-\textit{``Mathematics is the language in which God has written the universe.''}
-
-\hfill--- \textsc{Galileo Galilei}
+\textit{``The only way to learn mathematics is to do mathematics.''}
+\hfill--- \textsc{Paul Halmos}
 \end{quote}
 
 \clearpage
