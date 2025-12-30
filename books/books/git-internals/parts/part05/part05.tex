@@ -1,0 +1,44 @@
+\part{Design Patterns in Git's Implementation}
+\label{part:patterns}
+
+\begin{partintro}
+Git's codebase uses recognizable design patterns. Not always explicitly, but they're there.
+
+Identifying these patterns helps you understand the code and teaches you about software architecture.
+\end{partintro}
+
+\chapter{Immutable Data Structures}
+% Objects never change
+% Benefits: caching, sharing, threading
+% How git exploits immutability
+
+\chapter{Content-Addressable Store Pattern}
+% Hash as identity
+% Beyond git: IPFS, Nix, Docker
+% When to use this pattern
+
+\chapter{Command Pattern}
+% How builtin commands work
+% Registration and dispatch
+% Extensibility through this pattern
+
+\chapter{Strategy Pattern}
+% Merge strategies
+% Diff algorithms
+% Pluggable implementations
+
+\chapter{Builder Pattern}
+% Tree and commit construction
+% Index building
+% Why builders matter here
+
+\chapter{Object Pool and Caching}
+% Parsed object cache
+% Pack file caches
+% Memory management patterns
+
+\chapter{Plugin Architecture}
+% Hooks as extension points
+% Custom merge drivers
+% Credential helpers
+% How git stays extensible

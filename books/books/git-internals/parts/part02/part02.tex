@@ -1,198 +1,36 @@
-\part{Core Architecture: Source Code Organization}
+\part{The Codebase: Structure and Organization}
 \label{part:architecture}
 
 \begin{partintro}
-\lettrine[lines=3]{N}{ow we enter} \git's codebase. Before analyzing specific algorithms or data structures, we need to understand how the code is organized. Where do files live? How is functionality partitioned? What's the build system? This part provides the map you'll need for everything that follows.
+Before reading code, you need a map. Where are things? How is functionality divided? What are the major subsystems?
 
-\vspace{1em}
-\textbf{What You'll Learn:}
-\begin{itemize}[noitemsep]
-    \item \textbf{Directory Structure:} How \git's source tree is organized
-    \item \textbf{Build System:} How \git\ compiles and what happens during build
-    \item \textbf{Module Organization:} How functionality is partitioned
-    \item \textbf{Code Conventions:} C style, memory management, error handling
-    \item \textbf{The Entry Point:} Where execution begins and why
-\end{itemize}
-
-\begin{quote}
-\textit{``Programs must be written for people to read, and only incidentally for machines to execute.''}
-\hfill--- \textsc{Harold Abelson}
-\end{quote}
+This part gives you that map.
 \end{partintro}
 
-\chapter{Source Tree Organization}
-\chapter{The Build System: Makefile Analysis}
-\chapter{Module Architecture}
-\chapter{Code Conventions and Style}
-\chapter{The Entry Point: \code{cmd\_main} Deep Dive}
+\chapter{Source Tree Layout}
+% Directory structure
+% builtin/ core/ compat/ etc
+% What goes where and why
+% Build system basics
 
-\begin{chapterintro}
-Finally, we read the code. This chapter analyzes \git's entry point line by line, understanding every design decision. Why \code{cmd\_main} instead of \code{main}? Why are string vectors initialized with macros? Why is \code{find\_last\_dir\_sep} platform-dependent? We answer everything.
-\end{chapterintro}
+\chapter{The Entry Point}
+% Command dispatch system
+% How 160+ commands are handled
 
-\section{The Question of \code{main} vs \code{cmd\_main}}
+\chapter{Core vs Porcelain}
+% Plumbing vs porcelain commands
+% Low-level building blocks
+% High-level user interface
+% Why the separation matters
 
-\begin{motivation}
-Most C programs start with \code{int main(int argc, char **argv)}. \git\ doesn't. It uses \code{int cmd\_main(int argc, const char **argv)}. Why this unusual choice?
-\end{motivation}
+\chapter{Module Dependencies}
+% How components interact
+% Object database, refs, working tree
+% Index/staging area
+% Config and hooks
 
-\begin{lstlisting}[language=C, caption={The actual entry point in git.c}]
-int cmd_main(int argc, const char **argv)
-{
-    struct strvec args = STRVEC_INIT;
-    const char *cmd;
-    int done_help = 0;
-    // ...
-}
-\end{lstlisting}
-
-The answer lies in \git's build system and testing infrastructure:
-
-\begin{enumerate}
-    \item \textbf{Wrapper Programs:} \git\ has multiple entry points (\file{git}, \file{git-upload-pack}, etc.). The \code{main} function is in a thin wrapper that calls \code{cmd\_main}.
-    
-    \item \textbf{Testing:} Tests can call \code{cmd\_main} directly without going through \code{main}, allowing better test isolation.
-    
-    \item \textbf{Platform Compatibility:} Some platforms require special \code{main} handling (Windows Unicode, etc.). Separating concerns keeps \code{cmd\_main} portable.
-\end{enumerate}
-
-\section{String Vector Initialization}
-
-Look at the first line of \code{cmd\_main}:
-
-\begin{lstlisting}[language=C]
-struct strvec args = STRVEC_INIT;
-\end{lstlisting}
-
-\subsection{What is \code{strvec}?}
-
-A \textbf{string vector} is \git's dynamic array for string storage:
-
-\begin{lstlisting}[language=C, caption={strvec structure definition}]
-struct strvec {
-    const char **v;  // Array of string pointers
-    size_t nr;       // Number of strings
-    size_t alloc;    // Allocated capacity
-};
-\end{lstlisting}
-
-\subsection{Why \code{STRVEC\_INIT} Macro?}
-
-\begin{lstlisting}[language=C, caption={STRVEC\_INIT definition}]
-#define STRVEC_INIT { NULL, 0, 0 }
-\end{lstlisting}
-
-This macro initializes:
-\begin{itemize}
-    \item \code{v = NULL}: No allocation yet (lazy initialization)
-    \item \code{nr = 0}: Empty array
-    \item \code{alloc = 0}: No capacity allocated
-\end{itemize}
-
-\begin{keyidea}
-\textbf{Lazy Initialization Pattern:} Don't allocate until needed. If the program errors out early (e.g., invalid arguments), we haven't wasted memory allocating arrays we never use.
-\end{keyidea}
-
-\subsection{Why Not Use \code{malloc}?}
-
-Stack allocation + macro initialization is faster and simpler than:
-\begin{lstlisting}[language=C]
-struct strvec *args = malloc(sizeof(struct strvec));
-args->v = NULL;
-args->nr = 0;
-args->alloc = 0;
-\end{lstlisting}
-
-The macro approach:
-\begin{itemize}
-    \item Avoids heap allocation
-    \item Simplifies error handling (no need to free if we error out)
-    \item Makes intent clear: "initialize this empty"
-\end{itemize}
-
-\section{State Variables}
-
-\begin{lstlisting}[language=C]
-const char *cmd;
-int done_help = 0;
-\end{lstlisting}
-
-\subsection{The \code{cmd} Pointer}
-
-Stores the command name extracted from \code{argv[0]}. Declared \code{const char *} because:
-\begin{itemize}
-    \item We're pointing to existing memory (in \code{argv})
-    \item We won't modify the string itself
-    \item Compiler can optimize knowing this
-\end{itemize}
-
-\subsection{The \code{done\_help} Flag}
-
-This is a \textbf{state machine flag}. It tracks whether we've already attempted to provide help to the user.
-
-Flow:
-\begin{enumerate}
-    \item User types invalid command
-    \item \git\ tries to suggest similar commands (via \code{help\_unknown\_cmd})
-    \item If that fails, set \code{done\_help = 1} to prevent infinite loop
-    \item If we still can't find a command, error out
-\end{enumerate}
-
-\begin{important}
-Without \code{done\_help}, \git\ could loop infinitely trying to help with a malformed command.
-\end{important}
-
-\section{Command Name Extraction}
-
-\begin{lstlisting}[language=C, caption={Extracting command from argv[0]}]
-cmd = argv[0];
-if (!cmd)
-    cmd = "git-help";
-else {
-    const char *slash = find_last_dir_sep(cmd);
-    if (slash)
-        cmd = slash + 1;
-}
-\end{lstlisting}
-
-\subsection{Why Check \code{!cmd}?}
-
-POSIX allows \code{argv[0]} to be NULL (though rare). If it happens, default to showing help.
-
-\subsection{The \code{find\_last\_dir\_sep} Mystery}
-
-Why is this a function (or macro) instead of inline \code{strrchr}?
-
-\begin{lstlisting}[language=C, caption={Platform-specific path handling}]
-#ifdef WIN32
-    // Windows: both / and \ are path separators
-    #define find_last_dir_sep(path) /* complex logic */
-#else
-    // Unix: only / is path separator
-    #define find_last_dir_sep(path) strrchr(path, '/')
-#endif
-\end{lstlisting}
-
-\begin{keyidea}[Cross-Platform Abstraction]
-\git\ runs on Windows, macOS, Linux, BSDs, etc. Path separators differ (\\textbackslash\\  vs /). Abstracting this into a macro/function:
-\begin{itemize}
-    \item Centralizes platform-specific logic
-    \item Makes code readable (intent is clear)
-    \item Prevents bugs from hardcoding separators
-\end{itemize}
-\end{keyidea}
-
-\subsection{Why \code{cmd = slash + 1}?}
-
-If \code{argv[0]} is \code{"/usr/bin/git"}, we want just \code{"git"}.
-
-\begin{lstlisting}[caption={Pointer arithmetic explanation}]
-path:  /usr/bin/git
-       ^       ^
-       |       |
-      path   slash
-\end{lstlisting}
-
-\code{slash + 1} gives pointer to \code{'g'}, skipping the separator.
-
-(Continuing with more sections...)
+\chapter{Platform Abstraction}
+% Cross-platform C is hard
+% compat/ layer
+% Windows, macOS, Linux differences
+% Why macros everywhere

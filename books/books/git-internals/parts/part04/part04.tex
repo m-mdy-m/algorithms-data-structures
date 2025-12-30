@@ -1,0 +1,39 @@
+\part{Storage and Performance}
+\label{part:storage}
+
+\begin{partintro}
+Storing every file in every commit should use infinite space. It doesn't. How?
+
+This part covers git's storage optimizations and performance characteristics.
+\end{partintro}
+
+\chapter{Object Storage: Loose and Packed}
+% .git/objects/ layout
+% Loose objects: one file per object
+% Why this is slow
+% When git packs objects
+
+\chapter{Pack Files}
+% .pack and .idx files
+% Delta compression
+% Base objects and deltas
+% Why this saves space
+
+\chapter{Delta Algorithms}
+% How git computes deltas
+% xdelta, sliding windows
+% Time/space trade-offs
+% Complexity analysis
+
+\chapter{Transfer Protocols}
+% Fetch and push
+% Negotiation phase
+% Thin packs
+% How git minimizes data transfer
+
+\chapter{Performance Characteristics}
+% Common operations: complexity
+% Branch is O(1)
+% Commit is O(files changed)
+% Merge is O(files in merge base)
+% Where bottlenecks are

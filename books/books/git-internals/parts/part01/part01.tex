@@ -1,102 +1,32 @@
-\part{Foundations: Version Control and Historical Context}
+\part{Foundations}
 \label{part:foundations}
 
 \begin{partintro}
-\lettrine[lines=3]{B}{efore diving} into \git's implementation, we need context. Why does version control exist? What problems does it solve? How did we get from punch cards to distributed workflows? This part establishes the foundation for everything that follows.
+Before diving into git's code, we need context. Why does version control exist? What problems does it solve? How did we get to git?
 
-\vspace{1em}
-\textbf{What You'll Learn:}
-\begin{itemize}[noitemsep]
-    \item \textbf{The Problem Space:} What version control solves and why it matters
-    \item \textbf{Historical Evolution:} From SCCS to \git, understanding the journey
-    \item \textbf{Terminology:} VCS vs SCM, centralized vs distributed, and precise definitions
-    \item \textbf{\git's Origin Story:} The Linux kernel crisis and Linus's response
-    \item \textbf{Design Philosophy:} The principles that shaped \git
-\end{itemize}
-
-\begin{quote}
-\textit{``Those who cannot remember the past are condemned to repeat it.''}
-\hfill--- \textsc{George Santayana}
-\end{quote}
+This part covers the basics quickly. If you already know this stuff, skim it or skip to Part II.
 \end{partintro}
 
-\chapter{The Version Control Problem}
-\label{ch:vcs-problem}
+\chapter{Version Control: The Problem}
+% What are we trying to solve?
+% Collaboration without chaos
+% History and accountability  
+% Experimentation without breaking things
 
-\begin{chapterintro}
-Why do we need version control at all? This chapter examines the fundamental problems that version control systems solve, from coordinating multiple developers to maintaining project history. We establish precise definitions and explore the problem space before examining solutions.
-\end{chapterintro}
+\chapter{Evolution of Version Control}
+% SCCS, RCS (local)
+% CVS, SVN (centralized)
+% BitKeeper, the Linux kernel crisis
+% Birth of git (April 2005)
+% Design goals: fast, distributed, data integrity
 
-\section{Collaboration Without Chaos}
-\section{History and Accountability}
-\section{Experimentation Without Fear}
-\section{Formal Problem Statement}
+\chapter{Centralized vs Distributed}
+% The paradigm shift
+% Why distribution matters
+% Trade-offs and complexity
 
-\chapter{A Brief History of Version Control}
-\label{ch:vcs-history}
-
-\begin{chapterintro}
-Version control didn't appear fully-formed. It evolved through decades of iteration, each generation learning from the previous one's limitations. This chapter traces that evolution, from 1970s mainframe systems to modern distributed tools.
-\end{chapterintro}
-
-\section{Generation 0: Manual Version Control (1960s-1970s)}
-\section{Generation 1: Local Version Control (1972-1982)}
-\subsection{SCCS: Source Code Control System}
-\subsection{RCS: Revision Control System}
-
-\section{Generation 2: Centralized Version Control (1986-2000)}
-\subsection{CVS: Concurrent Versions System}
-\subsection{Subversion: Fixing CVS}
-\subsection{Perforce and Commercial Solutions}
-
-\section{Generation 3: Distributed Version Control (2000-Present)}
-\subsection{BitKeeper and the Linux Kernel}
-\subsection{The Birth of \git}
-\subsection{Mercurial, Bazaar, and Alternatives}
-
-\chapter{Centralized vs Distributed: The Paradigm Shift}
-\label{ch:centralized-vs-distributed}
-
-\begin{chapterintro}
-The jump from centralized to distributed version control wasn't just a feature addition—it was a fundamental reconceptualization of what version control means. This chapter examines both paradigms in depth, understanding the trade-offs and why distribution matters.
-\end{chapterintro}
-
-\section{The Centralized Model}
-\subsection{Architecture and Workflow}
-\subsection{Advantages}
-\subsection{Fundamental Limitations}
-
-\section{The Distributed Model}
-\subsection{Architecture and Workflow}
-\subsection{The Clone as First-Class Citizen}
-\subsection{Advantages and New Possibilities}
-\subsection{The Cost of Distribution}
-
-\section{Mathematical Analysis of Collaboration Models}
-
-\chapter{The Linux Kernel Crisis and \git's Birth}
-\label{ch:git-origin}
-
-\begin{chapterintro}
-\git\ wasn't created in a vacuum. It emerged from a specific crisis: the Linux kernel project needed a version control system, and nothing adequate existed. This chapter tells that story, examining the requirements that shaped \git's design.
-\end{chapterintro}
-
-\section{The BitKeeper Era (2002-2005)}
-\section{The Crisis of April 2005}
-\section{Design Goals and Non-Goals}
-\section{The First Implementation (April-July 2005)}
-\section{Linus's Design Philosophy}
-
-\chapter{Core Terminology and Concepts}
-\label{ch:terminology}
-
-\begin{chapterintro}
-Precise terminology prevents confusion. This chapter defines key terms used throughout the paper, establishing a common vocabulary for discussing version control systems.
-\end{chapterintro}
-
-\section{VCS vs SCM vs DVCS}
-\section{Repository, Working Tree, and Index}
-\section{Commits, Trees, and Blobs}
-\section{Branches, Tags, and References}
-\section{Merge, Rebase, and Cherry-Pick}
-\section{Remote, Clone, and Fork}
+\chapter{Git's Design Philosophy}
+% Linus's principles
+% Content over metadata
+% Speed matters
+% Trust nothing

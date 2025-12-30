@@ -10,11 +10,10 @@
 
 \newcommand{\PDFTitle}{Git Internals}
 \newcommand{\PDFTitleFront}{GIT}
-\newcommand{\PDFCoverTitle}{\PDFTitle}
-\newcommand{\PDFCoverDescription}{A Comprehensive Technical Analysis of Architecture, Implementation, and Design}
-\newcommand{\PDFSubject}{Version Control Systems, Software Architecture, Algorithm Analysis}
-\newcommand{\PDFKeywords}{Git, VCS, SCM, Software Engineering, Data Structures, Algorithms, C Programming, Design Patterns}
-%\newcommand{\PDFLOGO}{cover.pdf}
+\newcommand{\PDFCoverTitle}{Git Internals}
+\newcommand{\PDFCoverDescription}{Engineering a Version Control System}
+\newcommand{\PDFSubject}{Software Engineering, Architecture, Design Patterns}
+\newcommand{\PDFKeywords}{Git, Version Control, Software Architecture, C Programming, Data Structures, Algorithms}
 \newcommand{\PDFURL}{https://github.com/m-mdy-m/algorithms-data-structures/tree/main/books/books}
 
 \input{../../common/hyperref}
@@ -36,22 +35,32 @@
 \newcommand{\refdir}{\dir{.git/refs}}
 
 \begin{document}
-		%\input{../../common/frontmatter/cover}
-		\frontmatter
-		\frontmatterpagenumber
-		\input{../../common/frontmatter/title}
-		\input{../../common/frontmatter/copyright}
-		\tableofcontents
-		\listoffigures
-		\listoftables
-		\input{frontmatter/preface}
-		\input{../../common/frontmatter/acknowledgments}
-		\input{frontmatter/introduction}
+
+\frontmatter
+\frontmatterpagenumber
+
+\input{../../common/frontmatter/title}
+\input{../../common/frontmatter/copyright}
+
+\tableofcontents
+
+\input{frontmatter/preface}
+\input{frontmatter/introduction}
+
 \mainmatter
 \mainmatterpagenumber
 
 \input{parts/part01/part01}
 \input{parts/part02/part02}
 \input{parts/part03/part03}
+\input{parts/part04/part04}
+\input{parts/part05/part05}
+\input{parts/part06/part06}
+\input{parts/part07/part07}
+\input{parts/part08/part08}
+
+\backmatter
+
+\input{../../common/frontmatter/acknowledgments}
 
 \end{document}

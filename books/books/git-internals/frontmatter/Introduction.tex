@@ -1,160 +1,135 @@
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
 
-\lettrine{V}{ersion control} is fundamental to modern software development. Yet most developers use \git\ as a black box—memorizing commands without understanding the elegant engineering beneath.
+\lettrine{O}{pen up} \file{git.c} in the git source code. First thing you see:
 
-This paper changes that.
+\begin{lstlisting}[language=C]
+int cmd_main(int argc, const char **argv)
+{
+    struct strvec args = STRVEC_INIT;
+    const char *cmd;
+    int done_help = 0;
+\end{lstlisting}
 
-\section*{The Central Question}
+Wait. \code{cmd\_main}? Not \code{main}?
 
-\begin{center}
-\large\textit{How does \git\ actually work?}
-\end{center}
+That's weird. Every C program has \code{main}. Why is git different?
 
-Not "what commands do I type" but "what happens when I type them." Not "how do I use \git" but "how is \git\ built."
+And \code{struct strvec args = STRVEC\_INIT}—what's that macro doing? Why not just allocate normally?
 
-This question leads to deeper ones:
+And \code{done\_help}—that's a strange name for a variable. What does it track?
+
+These aren't just random choices. Each one solves a problem. Each one has a reason.
+
+This book is about those reasons.
+
+\section*{What You're Going To Read}
+
+This is a walkthrough of git's internals from a software engineering perspective.
+
+Not how to use git. How git is built.
+
+We're going to look at:
 \begin{itemize}
-    \item Why content-addressable storage?
-    \item Why directed acyclic graphs?
-    \item Why are branches cheap?
-    \item How does merge work?
-    \item What makes \git\ fast?
-    \item How is the source code organized?
-    \item What design patterns are used?
-    \item How does it compare to alternatives?
+    \item The data model and why it's brilliant
+    \item The codebase structure and how it's organized  
+    \item The algorithms and their complexity
+    \item The design patterns used throughout
+    \item The performance tricks and optimizations
+    \item The extension points and plugin system
+    \item How it compares to other version control systems
 \end{itemize}
 
-\section*{Scope and Approach}
+\section*{What This Book Is Not}
 
-This paper provides:
+This is not a git tutorial. I'm not teaching you commands.
 
-\textbf{Complete Source Code Analysis}—We read \git's C implementation line-by-line, explaining every design decision.
+This is not a complete reference. Git has over 2000 files. I'm covering the important parts.
 
-\textbf{Mathematical Rigor}—Every algorithm gets complexity analysis. Every data structure gets formal specification.
+This is not academic. I'll talk about algorithms and complexity, but I'm not writing proofs.
 
-\textbf{Engineering Insights}—We identify design patterns, architectural principles, and software engineering practices.
+This is not perfect. I'm figuring this stuff out as I go. I'll make mistakes. That's fine.
 
-\textbf{Comparative Context}—We compare \git\ to CVS, SVN, Mercurial, understanding what makes \git\ different.
+\section*{Why Git?}
 
-\textbf{Historical Perspective}—We trace version control evolution from SCCS to \git, understanding why it exists.
+Because it's everywhere. You probably use it every day.
 
-\section*{What You'll Learn}
+Because it's well-designed. The core model is elegant even though the command interface is messy.
 
-By the end of this paper, you'll understand:
+Because it's mature. Git has been around since 2005. The codebase has evolved, been refactored, been optimized. You can learn from that evolution.
 
-\begin{enumerate}
-    \item \textbf{The Data Model}—How \git\ represents history as a DAG of content-addressed objects
-    \item \textbf{The Architecture}—How \git's codebase is organized and why
-    \item \textbf{The Algorithms}—How merge, diff, and pack algorithms work, with complexity proofs
-    \item \textbf{The Command System}—How 150+ commands are implemented and dispatched
-    \item \textbf{The Design Patterns}—Which patterns make \git\ maintainable and extensible
-    \item \textbf{The Performance}—Why \git\ is fast and where bottlenecks exist
-    \item \textbf{The Philosophy}—The design principles and trade-offs that shaped \git
-\end{enumerate}
+Because it's interesting. Git does things differently than other version control systems. Understanding why teaches you about software design.
 
-\section*{Prerequisites and Reading Strategy}
+\section*{Prerequisites}
 
-\textbf{Required Background:}
+You should know:
 \begin{itemize}
-    \item Basic programming knowledge (any language)
-    \item Willingness to read C code
-    \item Comfort with algorithmic thinking
+    \item Basic programming (any language is fine)
+    \item Basic git usage (add, commit, push, merge)
+    \item Basic data structures (trees, graphs, hash tables)
 \end{itemize}
 
-\textbf{Helpful but Not Required:}
+You don't need to know:
 \begin{itemize}
-    \item Data structures (trees, graphs, hash tables)
-    \item Algorithm analysis (Big-O notation)
-    \item Basic \git\ usage
-    \item Software architecture concepts
+    \item C (I'll explain the tricky parts)
+    \item Advanced git (internals, plumbing commands)
+    \item Algorithm analysis (I'll teach what you need)
 \end{itemize}
 
-\textbf{Reading Strategies:}
+\section*{How To Read This}
 
-\textit{Linear Reading}—Start at Part I, work through sequentially. Best for comprehensive understanding.
+Start with Part I if you want context. Skip it if you already know what version control is and why git was created.
 
-\textit{Topic-Focused}—Jump to sections of interest (e.g., Part III for data model, Part V for algorithms).
+Part II (architecture) and Part III (data model) are essential. Read those.
 
-\textit{Code-First}—Start with Part II and IV (architecture and command system), then fill in theory.
+After that, jump around. Want to understand merge algorithms? Go to Part VI. Want to see design patterns? Part V. Interested in how pack files work? Part IV.
 
-Every section is as self-contained as possible. Cross-references guide you to prerequisites.
+Code examples are real. They're from git's actual source code. Sometimes I'll simplify for clarity, but I'll tell you when I do.
 
-\section*{Notation and Conventions}
+\section*{What Makes Git Special?}
 
-Throughout this paper:
+Most version control systems think about changes. "User X changed line 47 from A to B."
 
-\begin{itemize}
-    \item \code{Monospace text} indicates code, commands, or filenames
-    \item \cmd{Bold monospace} indicates git commands
-    \item \file{Italic monospace} indicates files
-    \item \dir{Italic monospace with /} indicates directories
-    \item Mathematical notation follows standard conventions
-    \item Complexity is expressed in Big-O, Big-Omega, Big-Theta notation
-\end{itemize}
+Git thinks about snapshots. "Here's what the entire project looked like at this moment."
 
-\section*{Why This Matters}
+That one decision—snapshots not deltas—changes everything. It makes branching cheap. It makes merging easier. It makes git fast.
 
-Understanding \git\ internals makes you a better developer:
+But it creates problems too. How do you store thousands of snapshots without using infinite disk space? How do you transfer data efficiently? How do you handle merge conflicts?
 
-\textbf{Debugging}—When \git\ behaves unexpectedly, you'll know why.
+Git solves these problems in interesting ways. We're going to look at how.
 
-\textbf{Performance}—You'll write commit histories that work with \git's model, not against it.
+\section*{The Core Insight}
 
-\textbf{Architecture}—\git\ demonstrates principles applicable to any large software system.
+Everything in git is content-addressable.
 
-\textbf{Confidence}—Understanding \textit{why} removes the fear of "don't do X or bad things happen."
+Files aren't named "README.md". They're named by their SHA-1 hash. If two files have the same content, they have the same hash, so git only stores them once.
 
-Beyond \git, this paper teaches:
-\begin{itemize}
-    \item How to analyze large C codebases
-    \item How to apply algorithm analysis to real systems
-    \item How to identify and understand design patterns in practice
-    \item How to evaluate software architecture trade-offs
-\end{itemize}
+This sounds weird but it's powerful. It means git can tell if two things are the same by comparing hashes. It means deduplication is automatic. It means you can reference any object by its hash and git can verify it hasn't been corrupted.
 
-\section*{The Structure Ahead}
+The entire git data model follows from this insight.
 
-\begin{description}
-    \item[Part I: Foundations] Historical context, terminology, motivation
-    \item[Part II: Architecture] Source code organization, build system, modules
-    \item[Part III: Data Model] Objects, DAG, content-addressable storage
-    \item[Part IV: Command System] Entry point, dispatch, option parsing
-    \item[Part V: Algorithms] Complexity analysis, merge, diff, pack algorithms
-    \item[Part VI: Design Patterns] Patterns in \git's implementation
-    \item[Part VII: Advanced Features] Branching, merging, hooks, remotes
-    \item[Part VIII: Comparative Analysis] \git\ vs. other VCS
-\end{description}
+\section*{A Note on C}
 
-\section*{A Philosophical Note}
+Git is written in C. Not modern C++ or Rust. Old school pointer-heavy manual-memory-management C.
 
-\git\ is not just a tool—it's a \textbf{masterclass in software engineering}. It demonstrates:
+Why? Because git was written in 2005 by kernel developers. C was what they knew. C is portable. C is fast. C gives you control.
 
-\begin{itemize}
-    \item How to design for distribution and offline work
-    \item How to make common operations fast
-    \item How to maintain a decade-old codebase
-    \item How to balance flexibility and simplicity
-    \item How to build extensible systems
-\end{itemize}
+Reading C code is useful even if you never write C. It teaches you what's really happening. No abstractions hiding the details. Just pointers and memory and syscalls.
 
-More fundamentally, \git\ shows how \textbf{choosing the right data model} solves problems that plague other systems. The DAG isn't a detail—it's the insight that makes everything else possible.
+I'll explain the confusing parts. You'll be fine.
 
-\section*{Ready?}
+\section*{Starting Point}
 
-Let's dive into the source code.
+We're going to start with the basics. What is git? Why does it exist? What problems does it solve?
 
-Let's understand the algorithms.
+Then we'll look at the architecture. How is the codebase organized? Where are things?
 
-Let's see why \git\ became the standard.
+Then the data model. This is the heart of git. Objects, hashes, the DAG.
 
-Turn the page.
+Then we go deeper. Algorithms, patterns, performance, extensions.
 
-\vfill
-\begin{quote}
-\textit{``The best way to understand a system is to build it. \\
-The second-best way is to take it apart.''}
-\hfill--- \textsc{Unknown}
-\end{quote}
+By the end, you'll understand how git works. Not just "here's what this command does" but "here's how this command is implemented and why."
+
+Let's start.
 
 \clearpage

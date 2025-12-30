@@ -1,96 +1,110 @@
 \chapter*{Preface}
 \addcontentsline{toc}{chapter}{Preface}
 
-\lettrine{I}{t started} with a simple question: "How does \git\ actually work?"
+\lettrine{I}{  started reading} git's source code because I was bored. 
 
-Not the surface-level answer—"it's a distributed version control system." The real answer. The one that requires reading thousands of lines of C code, understanding content-addressable storage, analyzing directed acyclic graphs, and appreciating decades of software engineering wisdom.
+Not in a bad way. I'd just finished a project and didn't want to start another one yet. So I cloned git, opened \file{common-main.c}, and started reading.
 
-This paper is my journey through that question.
+That was six months ago.
 
-\section*{The Problem with Most \git\ Resources}
+What started as "let me see how this works" turned into something else. I kept finding things that made me stop and think. Not just "oh that's clever" but "wait, why did they do it THIS way and not that way?"
 
-Most \git\ tutorials teach you commands: \cmd{git add}, \cmd{git commit}, \cmd{git push}. They're useful, but they don't explain \textit{why}. Why does \git\ use SHA-1 hashes? Why is everything a DAG? Why are branches so cheap? Why does rebasing work the way it does?
+Like why is everything a hash? Why DAG instead of a tree? Why are branches basically just text files with a hash in them? Why does merge work the way it does?
 
-Books like \textit{Pro Git} give excellent overviews. But they don't show you the source code. They don't prove the complexity bounds. They don't analyze the design patterns or compare implementation alternatives.
+These aren't git usage questions. These are software engineering questions.
 
-Academic papers on version control systems exist, but they're often theoretical or focused on narrow aspects. None provide a comprehensive, ground-up analysis of \git's actual implementation.
+\section*{What This Actually Is}
 
-That gap is what this paper fills.
+This isn't a git tutorial. There are plenty of those already. Pro Git is excellent if you want to learn how to use git.
 
-\section*{What Makes This Different}
+This is about how git is built. The code. The data structures. The algorithms. The design decisions. The patterns. The trade-offs.
 
-This is not a user manual. This is not a quick-start guide. This is a \textbf{technical deep-dive into \git's internals}, written for:
+I'm reading the source code and explaining what I find. Not line by line of everything—that would be insane and boring. But the interesting parts. The parts that teach you something about building software.
 
-\begin{itemize}
-    \item Software engineers who want to understand how sophisticated systems are built
-    \item Computer science students learning about data structures, algorithms, and software architecture
-    \item Anyone who's used \git\ and wondered "how does this actually work?"
-\end{itemize}
+Why does git's source look like this? Why these data structures? What problems were they solving? What did they try that didn't work? Where are the clever bits?
 
-Every claim is backed by:
-\begin{itemize}
-    \item Source code analysis from the actual \git\ repository
-    \item Mathematical complexity analysis with proofs
-    \item Comparative studies with other version control systems
-    \item Historical context and design rationale
-\end{itemize}
+\section*{Who This Is For}
 
-\section*{The Journey}
+You if you've ever wondered "how does git actually work under the hood?"
 
-I started by reading \git's \file{git.c}—the entry point. Line by line. Function by function. Understanding why \code{cmd\_main} exists instead of \code{main}. Why string vectors are initialized with macros. Why \code{find\_last\_dir\_sep} is platform-dependent.
+You if you want to see what a mature, complex C codebase looks like.
 
-Then I dove into the data model. Blobs, trees, commits, tags. Content-addressable storage. The DAG structure. Pack files and delta compression. The mathematical foundations that make it all work.
+You if you're interested in software architecture, not just using tools.
 
-Next came the command system. How 150+ commands are registered and dispatched. How options are parsed. How aliases are expanded. The design patterns that keep it maintainable.
+You if you want to understand the engineering, not just memorize commands.
 
-Then algorithms: object lookup, tree traversal, merge strategies, diff algorithms. Complexity analysis. Trade-offs. Why certain choices were made.
+You don't need to be a C expert. You don't need to be a git expert. You just need to be curious about how things work.
 
-Finally, the bigger picture: how \git\ compares to CVS, SVN, Mercurial. Why \git\ won. What makes it special. Where it's going.
+\section*{What I'm Not Doing}
 
-\section*{How to Read This Paper}
+I'm not teaching you git commands. I assume you already know basic git or can learn it elsewhere.
 
-This paper is structured in Parts, each building on previous ones:
+I'm not proving theorems. This isn't a CS paper. When I talk about complexity or algorithms, I keep it practical.
 
-\textbf{Part I} establishes foundations—what version control is, why \git\ was created, terminology, and historical context.
+I'm not being comprehensive. Git has thousands of files. I'm focusing on the core stuff that matters.
 
-\textbf{Part II} analyzes the core architecture—source code organization, build system, module structure.
+I'm not being perfect. I'll probably get some things wrong. That's fine. The goal is understanding, not perfection.
 
-\textbf{Part III} deeply examines the data model—objects, DAG, content-addressable storage, with full mathematical treatment.
+\section*{How I'm Writing This}
 
-\textbf{Part IV} dissects the command system—entry point, dispatch, option parsing, every line explained.
+I'm trying to write the way I actually think about code. Informal. Direct. Sometimes messy.
 
-\textbf{Part V} provides algorithmic analysis—complexity proofs, trade-off analysis, performance characteristics.
+When I say "this is clever" I mean it. When I say "I don't get why they did this" I mean that too.
 
-\textbf{Part VI} identifies design patterns—which patterns \git\ uses and why they matter.
+I'll show you code. Real code from git. Not cleaned up pseudocode. The actual thing.
 
-\textbf{Part VII} covers advanced features—branching, merging, rebasing, hooks, remotes.
+I'll explain design patterns when I see them. Not because I want to sound academic, but because patterns matter. They're how you make sense of large codebases.
 
-\textbf{Part VIII} offers comparative analysis—\git\ vs. everything else, and why \git\ succeeded.
+\section*{The Structure}
 
-You can read linearly or jump to sections that interest you. Prerequisites are clearly marked. Code is thoroughly commented. Mathematics is rigorous but explained.
+Part I: What git is, why it exists, basic concepts. Quick. Just enough context.
 
-\section*{A Living Document}
+Part II: The architecture. How the codebase is organized. Where things are. How to navigate it.
 
-This paper continues to evolve. \git\ itself evolves—new features, performance improvements, design changes. My understanding deepens. Readers provide feedback.
+Part III: The data model. This is the core insight that makes git work. Objects, hashes, DAG.
 
-The version you're reading is a snapshot. Check the repository for updates, corrections, and additions.
+Part IV: Storage and performance. Pack files, delta compression, why git is fast.
 
-\section*{Acknowledgments}
+Part V: Design patterns. The engineering patterns I see throughout the code.
 
-To Linus Torvalds and the \git\ development community—for building something worth studying.
+Part VI: Core algorithms. Merge, diff, tree traversal. The complicated stuff.
 
-To the authors of \textit{Pro Git}, \textit{Version Control with Git}, and countless blog posts that helped me understand pieces of the puzzle.
+Part VII: Extension points. Hooks, custom commands, how git lets you extend it.
 
-To every developer who's contributed to \git's codebase, documentation, and tests. Your work made this analysis possible.
+Part VIII: Comparisons. Git vs Mercurial vs SVN. What's different and why.
 
-\section*{Let's Begin}
+\section*{A Note on the Code}
 
-Enough preamble. Time to understand \git\ from the ground up.
+Git is written in C. Old school C. Pointers everywhere. Manual memory management. Platform-specific macros.
+
+If that scares you, don't worry. I'll explain the tricky bits. And honestly, reading real C code is a useful skill even if you never write C.
+
+The patterns and ideas in git's code apply to any language. Content-addressable storage works in Python. DAG algorithms work in Go. Design patterns are language-agnostic.
+
+\section*{This Is Incomplete}
+
+I'm still learning this stuff. Still reading the code. Still finding new things.
+
+So this book is a snapshot. What I understand right now. In six months I'll probably understand more and want to rewrite parts of it.
+
+That's okay. That's how learning works.
+
+\section*{Why Bother?}
+
+Because git is everywhere. Every developer uses it. Most don't understand it.
+
+Because understanding tools makes you better with them.
+
+Because git's codebase has lessons about software engineering that apply way beyond version control.
+
+Because it's interesting.
+
+Let's start.
 
 \vfill
 \begin{flushright}
-\textit{Your Name}\\
-\textit{\today}
+\textit{Mahdi}\\
+\textit{2025}
 \end{flushright}
 
 \clearpage
