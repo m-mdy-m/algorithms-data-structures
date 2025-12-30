@@ -25,3 +25,4 @@ arch*.tex
 .backups
 __pycache__
 *.drp
+*.spl

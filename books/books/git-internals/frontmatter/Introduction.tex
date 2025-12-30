@@ -1,0 +1,160 @@
+\chapter*{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+
+\lettrine{V}{ersion control} is fundamental to modern software development. Yet most developers use \git\ as a black box—memorizing commands without understanding the elegant engineering beneath.
+
+This paper changes that.
+
+\section*{The Central Question}
+
+\begin{center}
+\large\textit{How does \git\ actually work?}
+\end{center}
+
+Not "what commands do I type" but "what happens when I type them." Not "how do I use \git" but "how is \git\ built."
+
+This question leads to deeper ones:
+\begin{itemize}
+    \item Why content-addressable storage?
+    \item Why directed acyclic graphs?
+    \item Why are branches cheap?
+    \item How does merge work?
+    \item What makes \git\ fast?
+    \item How is the source code organized?
+    \item What design patterns are used?
+    \item How does it compare to alternatives?
+\end{itemize}
+
+\section*{Scope and Approach}
+
+This paper provides:
+
+\textbf{Complete Source Code Analysis}—We read \git's C implementation line-by-line, explaining every design decision.
+
+\textbf{Mathematical Rigor}—Every algorithm gets complexity analysis. Every data structure gets formal specification.
+
+\textbf{Engineering Insights}—We identify design patterns, architectural principles, and software engineering practices.
+
+\textbf{Comparative Context}—We compare \git\ to CVS, SVN, Mercurial, understanding what makes \git\ different.
+
+\textbf{Historical Perspective}—We trace version control evolution from SCCS to \git, understanding why it exists.
+
+\section*{What You'll Learn}
+
+By the end of this paper, you'll understand:
+
+\begin{enumerate}
+    \item \textbf{The Data Model}—How \git\ represents history as a DAG of content-addressed objects
+    \item \textbf{The Architecture}—How \git's codebase is organized and why
+    \item \textbf{The Algorithms}—How merge, diff, and pack algorithms work, with complexity proofs
+    \item \textbf{The Command System}—How 150+ commands are implemented and dispatched
+    \item \textbf{The Design Patterns}—Which patterns make \git\ maintainable and extensible
+    \item \textbf{The Performance}—Why \git\ is fast and where bottlenecks exist
+    \item \textbf{The Philosophy}—The design principles and trade-offs that shaped \git
+\end{enumerate}
+
+\section*{Prerequisites and Reading Strategy}
+
+\textbf{Required Background:}
+\begin{itemize}
+    \item Basic programming knowledge (any language)
+    \item Willingness to read C code
+    \item Comfort with algorithmic thinking
+\end{itemize}
+
+\textbf{Helpful but Not Required:}
+\begin{itemize}
+    \item Data structures (trees, graphs, hash tables)
+    \item Algorithm analysis (Big-O notation)
+    \item Basic \git\ usage
+    \item Software architecture concepts
+\end{itemize}
+
+\textbf{Reading Strategies:}
+
+\textit{Linear Reading}—Start at Part I, work through sequentially. Best for comprehensive understanding.
+
+\textit{Topic-Focused}—Jump to sections of interest (e.g., Part III for data model, Part V for algorithms).
+
+\textit{Code-First}—Start with Part II and IV (architecture and command system), then fill in theory.
+
+Every section is as self-contained as possible. Cross-references guide you to prerequisites.
+
+\section*{Notation and Conventions}
+
+Throughout this paper:
+
+\begin{itemize}
+    \item \code{Monospace text} indicates code, commands, or filenames
+    \item \cmd{Bold monospace} indicates git commands
+    \item \file{Italic monospace} indicates files
+    \item \dir{Italic monospace with /} indicates directories
+    \item Mathematical notation follows standard conventions
+    \item Complexity is expressed in Big-O, Big-Omega, Big-Theta notation
+\end{itemize}
+
+\section*{Why This Matters}
+
+Understanding \git\ internals makes you a better developer:
+
+\textbf{Debugging}—When \git\ behaves unexpectedly, you'll know why.
+
+\textbf{Performance}—You'll write commit histories that work with \git's model, not against it.
+
+\textbf{Architecture}—\git\ demonstrates principles applicable to any large software system.
+
+\textbf{Confidence}—Understanding \textit{why} removes the fear of "don't do X or bad things happen."
+
+Beyond \git, this paper teaches:
+\begin{itemize}
+    \item How to analyze large C codebases
+    \item How to apply algorithm analysis to real systems
+    \item How to identify and understand design patterns in practice
+    \item How to evaluate software architecture trade-offs
+\end{itemize}
+
+\section*{The Structure Ahead}
+
+\begin{description}
+    \item[Part I: Foundations] Historical context, terminology, motivation
+    \item[Part II: Architecture] Source code organization, build system, modules
+    \item[Part III: Data Model] Objects, DAG, content-addressable storage
+    \item[Part IV: Command System] Entry point, dispatch, option parsing
+    \item[Part V: Algorithms] Complexity analysis, merge, diff, pack algorithms
+    \item[Part VI: Design Patterns] Patterns in \git's implementation
+    \item[Part VII: Advanced Features] Branching, merging, hooks, remotes
+    \item[Part VIII: Comparative Analysis] \git\ vs. other VCS
+\end{description}
+
+\section*{A Philosophical Note}
+
+\git\ is not just a tool—it's a \textbf{masterclass in software engineering}. It demonstrates:
+
+\begin{itemize}
+    \item How to design for distribution and offline work
+    \item How to make common operations fast
+    \item How to maintain a decade-old codebase
+    \item How to balance flexibility and simplicity
+    \item How to build extensible systems
+\end{itemize}
+
+More fundamentally, \git\ shows how \textbf{choosing the right data model} solves problems that plague other systems. The DAG isn't a detail—it's the insight that makes everything else possible.
+
+\section*{Ready?}
+
+Let's dive into the source code.
+
+Let's understand the algorithms.
+
+Let's see why \git\ became the standard.
+
+Turn the page.
+
+\vfill
+\begin{quote}
+\textit{``The best way to understand a system is to build it. \\
+The second-best way is to take it apart.''}
+\hfill--- \textsc{Unknown}
+\end{quote}
+
+\clearpage

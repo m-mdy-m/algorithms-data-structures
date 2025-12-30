@@ -1,0 +1,96 @@
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+
+\lettrine{I}{t started} with a simple question: "How does \git\ actually work?"
+
+Not the surface-level answer—"it's a distributed version control system." The real answer. The one that requires reading thousands of lines of C code, understanding content-addressable storage, analyzing directed acyclic graphs, and appreciating decades of software engineering wisdom.
+
+This paper is my journey through that question.
+
+\section*{The Problem with Most \git\ Resources}
+
+Most \git\ tutorials teach you commands: \cmd{git add}, \cmd{git commit}, \cmd{git push}. They're useful, but they don't explain \textit{why}. Why does \git\ use SHA-1 hashes? Why is everything a DAG? Why are branches so cheap? Why does rebasing work the way it does?
+
+Books like \textit{Pro Git} give excellent overviews. But they don't show you the source code. They don't prove the complexity bounds. They don't analyze the design patterns or compare implementation alternatives.
+
+Academic papers on version control systems exist, but they're often theoretical or focused on narrow aspects. None provide a comprehensive, ground-up analysis of \git's actual implementation.
+
+That gap is what this paper fills.
+
+\section*{What Makes This Different}
+
+This is not a user manual. This is not a quick-start guide. This is a \textbf{technical deep-dive into \git's internals}, written for:
+
+\begin{itemize}
+    \item Software engineers who want to understand how sophisticated systems are built
+    \item Computer science students learning about data structures, algorithms, and software architecture
+    \item Anyone who's used \git\ and wondered "how does this actually work?"
+\end{itemize}
+
+Every claim is backed by:
+\begin{itemize}
+    \item Source code analysis from the actual \git\ repository
+    \item Mathematical complexity analysis with proofs
+    \item Comparative studies with other version control systems
+    \item Historical context and design rationale
+\end{itemize}
+
+\section*{The Journey}
+
+I started by reading \git's \file{git.c}—the entry point. Line by line. Function by function. Understanding why \code{cmd\_main} exists instead of \code{main}. Why string vectors are initialized with macros. Why \code{find\_last\_dir\_sep} is platform-dependent.
+
+Then I dove into the data model. Blobs, trees, commits, tags. Content-addressable storage. The DAG structure. Pack files and delta compression. The mathematical foundations that make it all work.
+
+Next came the command system. How 150+ commands are registered and dispatched. How options are parsed. How aliases are expanded. The design patterns that keep it maintainable.
+
+Then algorithms: object lookup, tree traversal, merge strategies, diff algorithms. Complexity analysis. Trade-offs. Why certain choices were made.
+
+Finally, the bigger picture: how \git\ compares to CVS, SVN, Mercurial. Why \git\ won. What makes it special. Where it's going.
+
+\section*{How to Read This Paper}
+
+This paper is structured in Parts, each building on previous ones:
+
+\textbf{Part I} establishes foundations—what version control is, why \git\ was created, terminology, and historical context.
+
+\textbf{Part II} analyzes the core architecture—source code organization, build system, module structure.
+
+\textbf{Part III} deeply examines the data model—objects, DAG, content-addressable storage, with full mathematical treatment.
+
+\textbf{Part IV} dissects the command system—entry point, dispatch, option parsing, every line explained.
+
+\textbf{Part V} provides algorithmic analysis—complexity proofs, trade-off analysis, performance characteristics.
+
+\textbf{Part VI} identifies design patterns—which patterns \git\ uses and why they matter.
+
+\textbf{Part VII} covers advanced features—branching, merging, rebasing, hooks, remotes.
+
+\textbf{Part VIII} offers comparative analysis—\git\ vs. everything else, and why \git\ succeeded.
+
+You can read linearly or jump to sections that interest you. Prerequisites are clearly marked. Code is thoroughly commented. Mathematics is rigorous but explained.
+
+\section*{A Living Document}
+
+This paper continues to evolve. \git\ itself evolves—new features, performance improvements, design changes. My understanding deepens. Readers provide feedback.
+
+The version you're reading is a snapshot. Check the repository for updates, corrections, and additions.
+
+\section*{Acknowledgments}
+
+To Linus Torvalds and the \git\ development community—for building something worth studying.
+
+To the authors of \textit{Pro Git}, \textit{Version Control with Git}, and countless blog posts that helped me understand pieces of the puzzle.
+
+To every developer who's contributed to \git's codebase, documentation, and tests. Your work made this analysis possible.
+
+\section*{Let's Begin}
+
+Enough preamble. Time to understand \git\ from the ground up.
+
+\vfill
+\begin{flushright}
+\textit{Your Name}\\
+\textit{\today}
+\end{flushright}
+
+\clearpage
