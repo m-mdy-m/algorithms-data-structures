@@ -1,110 +1,60 @@
 \chapter*{Preface}
 \addcontentsline{toc}{chapter}{Preface}
 
-\lettrine{I}{  started reading} git's source code because I was bored. 
+\lettrine{I}{  had just finished} a project and wanted to start something new. I was working on gix—a Git wrapper I'd been thinking about—and realized I didn't actually understand Git well enough.\\
+Sure, I could use it. I knew the commands. But how does it work? Why is it designed this way? What makes it different from other version control systems?\\
+I read some articles. Looked at Pro Git's internals chapter. Found a small booklet on Git internals. But I wanted more. I wanted to see the actual code. The decisions. The trade-offs.\\
+So I cloned the Git repository and started reading.
 
-Not in a bad way. I'd just finished a project and didn't want to start another one yet. So I cloned git, opened \file{common-main.c}, and started reading.
+\section*{Why I'm Writing This}
 
-That was six months ago.
+At first, I was just making notes for myself. Trying to understand the codebase. Mapping out how things connect.\\
+Then I thought maybe I could write an article about it. Share what I learned.\\
+But the more I read, the more I found. This wasn't article material. There was too much to say.\\
+So here we are. A book about Git's internals from an engineering perspective.\\
 
-What started as "let me see how this works" turned into something else. I kept finding things that made me stop and think. Not just "oh that's clever" but "wait, why did they do it THIS way and not that way?"
-
-Like why is everything a hash? Why DAG instead of a tree? Why are branches basically just text files with a hash in them? Why does merge work the way it does?
-
-These aren't git usage questions. These are software engineering questions.
-
-\section*{What This Actually Is}
-
-This isn't a git tutorial. There are plenty of those already. Pro Git is excellent if you want to learn how to use git.
-
-This is about how git is built. The code. The data structures. The algorithms. The design decisions. The patterns. The trade-offs.
-
-I'm reading the source code and explaining what I find. Not line by line of everything—that would be insane and boring. But the interesting parts. The parts that teach you something about building software.
-
-Why does git's source look like this? Why these data structures? What problems were they solving? What did they try that didn't work? Where are the clever bits?
+\section*{What This Book Actually Is}
+This is me reading Git's source code and explaining what I find.\\
+Not line by line—that would be boring and pointless. But the important parts. The clever solutions. The patterns that keep showing up. The reasons things are built the way they are.\\
+I care about software engineering. How systems are designed. Why certain approaches work. What problems they solve. Git is interesting because it does things differently and those differences matter.
 
 \section*{Who This Is For}
 
-You if you've ever wondered "how does git actually work under the hood?"
+You if you've used Git but want to understand how it works underneath.\\
+You if you're interested in system design and want to see a real, mature codebase.\\
+You if you like reading code and learning from it.\\
+You don't need to be a C expert. I'll explain the tricky bits. You don't need to know Git internals already. That's what this book is about.
 
-You if you want to see what a mature, complex C codebase looks like.
+\section*{What This Isn't}
 
-You if you're interested in software architecture, not just using tools.
+This isn't a Git tutorial. I'm not teaching you how to use Git. There are better resources for that.\\
+This isn't comprehensive. Git's codebase is massive. I'm focusing on the core ideas and the interesting engineering choices.\\
+This isn't perfect. I'm still learning this stuff. I'll probably get some things wrong. That's okay.
 
-You if you want to understand the engineering, not just memorize commands.
+\section*{How I'm Approaching This}
 
-You don't need to be a C expert. You don't need to be a git expert. You just need to be curious about how things work.
+I started with Git's first commit. The original implementation by Linus Torvalds. It's small and shows the core model clearly.\\
+Then I worked forward, looking at how the codebase evolved. What got added. What got changed. Why.\\
+I'm trying to explain not just what the code does but why it's designed that way. What problem was being solved? What alternatives existed? What trade-offs were made?
 
-\section*{What I'm Not Doing}
+\section*{This Is Ongoing}
 
-I'm not teaching you git commands. I assume you already know basic git or can learn it elsewhere.
-
-I'm not proving theorems. This isn't a CS paper. When I talk about complexity or algorithms, I keep it practical.
-
-I'm not being comprehensive. Git has thousands of files. I'm focusing on the core stuff that matters.
-
-I'm not being perfect. I'll probably get some things wrong. That's fine. The goal is understanding, not perfection.
-
-\section*{How I'm Writing This}
-
-I'm trying to write the way I actually think about code. Informal. Direct. Sometimes messy.
-
-When I say "this is clever" I mean it. When I say "I don't get why they did this" I mean that too.
-
-I'll show you code. Real code from git. Not cleaned up pseudocode. The actual thing.
-
-I'll explain design patterns when I see them. Not because I want to sound academic, but because patterns matter. They're how you make sense of large codebases.
-
-\section*{The Structure}
-
-Part I: What git is, why it exists, basic concepts. Quick. Just enough context.
-
-Part II: The architecture. How the codebase is organized. Where things are. How to navigate it.
-
-Part III: The data model. This is the core insight that makes git work. Objects, hashes, DAG.
-
-Part IV: Storage and performance. Pack files, delta compression, why git is fast.
-
-Part V: Design patterns. The engineering patterns I see throughout the code.
-
-Part VI: Core algorithms. Merge, diff, tree traversal. The complicated stuff.
-
-Part VII: Extension points. Hooks, custom commands, how git lets you extend it.
-
-Part VIII: Comparisons. Git vs Mercurial vs SVN. What's different and why.
-
-\section*{A Note on the Code}
-
-Git is written in C. Old school C. Pointers everywhere. Manual memory management. Platform-specific macros.
-
-If that scares you, don't worry. I'll explain the tricky bits. And honestly, reading real C code is a useful skill even if you never write C.
-
-The patterns and ideas in git's code apply to any language. Content-addressable storage works in Python. DAG algorithms work in Go. Design patterns are language-agnostic.
-
-\section*{This Is Incomplete}
-
-I'm still learning this stuff. Still reading the code. Still finding new things.
-
-So this book is a snapshot. What I understand right now. In six months I'll probably understand more and want to rewrite parts of it.
-
-That's okay. That's how learning works.
+I'm still reading the code. Still learning. This book reflects what I understand right now.\\
+Maybe in six months I'll understand more and want to revise some sections. That's how learning works.\\
+Consider this a snapshot of the journey, not the final destination.
 
 \section*{Why Bother?}
 
-Because git is everywhere. Every developer uses it. Most don't understand it.
-
-Because understanding tools makes you better with them.
-
-Because git's codebase has lessons about software engineering that apply way beyond version control.
-
-Because it's interesting.
-
+Because Git is everywhere and most people don't understand it.\\
+Because understanding your tools makes you better at using them.\\
+Because Git's design has lessons that apply beyond version control.\\
+Because it's interesting.\\
 Let's start.
 
 \vfill
 \begin{flushright}
-\textit{Mahdi}\\
-\textit{2025}
+	\textit{Mahdi}\\
+	\textit{2025}
 \end{flushright}
 
 \clearpage
