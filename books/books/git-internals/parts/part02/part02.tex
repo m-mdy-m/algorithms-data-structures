@@ -1,36 +1,40 @@
-\part{The Codebase: Structure and Organization}
+\part{Architecture}
 \label{part:architecture}
 
 \begin{partintro}
-Before reading code, you need a map. Where are things? How is functionality divided? What are the major subsystems?
-
-This part gives you that map.
+How is a 20-year-old codebase organized? Where does functionality live? How do pieces connect? This part maps the terrain before we dive into details.
 \end{partintro}
 
-\chapter{Source Tree Layout}
-% Directory structure
-% builtin/ core/ compat/ etc
-% What goes where and why
-% Build system basics
+\chapter{Codebase Structure}
+% Directory layout and purpose
+% builtin/ - porcelain commands
+% core/ - fundamental operations  
+% compat/ - platform abstraction
+% contrib/ - extensions
+% Build system architecture
+% How code is modularized
 
-\chapter{The Entry Point}
-% Command dispatch system
-% How 160+ commands are handled
-
-\chapter{Core vs Porcelain}
-% Plumbing vs porcelain commands
-% Low-level building blocks
-% High-level user interface
-% Why the separation matters
-
-\chapter{Module Dependencies}
-% How components interact
-% Object database, refs, working tree
-% Index/staging area
-% Config and hooks
+\chapter{Command Dispatch System}
+% How Git handles 160+ commands
+% Execution path from shell to implementation
+% Command registration
+% Built-in vs external commands
+% Alias resolution
+% Extension mechanism
 
 \chapter{Platform Abstraction}
-% Cross-platform C is hard
-% compat/ layer
-% Windows, macOS, Linux differences
-% Why macros everywhere
+% Cross-platform C challenges
+% POSIX vs Windows
+% Abstraction layers (git-compat-util.h)
+% Conditional compilation
+% Wrapper functions
+% Platform-specific implementations
+% Endianness handling
+
+\chapter{The Entry Point and Initialization}
+% Program startup
+% Environment setup
+% Repository discovery
+% Configuration loading
+% Working directory setup
+% Error handling initialization

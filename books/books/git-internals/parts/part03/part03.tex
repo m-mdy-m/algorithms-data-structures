@@ -1,45 +1,53 @@
-\part{The Data Model: Git's Core Insight}
-\label{part:data-model}
+\part{Memory and Resource Management}
+\label{part:memory}
 
 \begin{partintro}
-This is what makes git work. The data model is elegant, simple, and powerful.
-
-Everything else in git follows from this model.
+Manual memory management in C. How Git allocates, tracks, and frees memory without leaking or crashing. The unglamorous foundation that everything else relies on.
 \end{partintro}
 
-\chapter{Content-Addressable Storage}
-% Hash everything
-% SHA-1 (and SHA-256)
-% Why hashing solves problems
-% Deduplication for free
+\chapter{Memory Allocation Patterns}
+% xmalloc, xrealloc, xcalloc wrappers
+% Why wrapper functions
+% Out-of-memory handling
+% Allocation failure strategy
+% Memory zeroing practices
+% Alignment considerations
 
-\chapter{The Four Object Types}
-% Blob: file content
-% Tree: directory structure
-% Commit: snapshot + metadata
-% Tag: named reference
-% How they relate
+\chapter{Memory Pools and Arenas}
+% Pool allocators
+% Arena allocation
+% Bulk allocation patterns
+% When and why
+% Lifetime management
+% Performance implications
 
-\chapter{The DAG: Directed Acyclic Graph}
-% Commits form a DAG
-% Why DAG not tree?
-% Merge commits have multiple parents
-% Mathematical properties
+\chapter{Reference Counting}
+% Where ref counting is used
+% Implementation patterns
+% Avoiding cycles
+% Release mechanisms
+% Thread safety considerations
 
-\chapter{References: Branches and Tags}
-% refs/heads/, refs/tags/, refs/remotes/
-% Branches are just pointers
-% HEAD is special
-% Symbolic refs
+\chapter{Buffer Management}
+% strbuf: dynamic strings
+% Implementation details
+% Growth strategies
+% Use cases throughout codebase
+% strvec: string vectors
+% string_list: sorted string arrays
+% When to use which
 
-\chapter{The Index (Staging Area)}
-% What it is and why
-% Three-way merge foundation
-% How add/rm modify it
-% Index file format
+\chapter{Object Cache}
+% Parsed object cache
+% Cache invalidation
+% Memory pressure handling
+% LRU considerations
+% Cache size tuning
 
-\chapter{The Working Directory}
-% Tracked vs untracked
-% Modified vs staged vs committed
-% .git/ directory structure
-% What's stored where
+\chapter{Memory Mapping}
+% mmap usage in Git
+% Pack file mapping
+% Large file handling
+% Platform differences
+% When mmap wins
+% When it doesn't

@@ -1,32 +1,54 @@
-\part{Git vs The World}
-\label{part:comparison}
+\part{File System and I/O}
+\label{part:filesystem}
 
 \begin{partintro}
-Git isn't the only version control system. How does it compare?
-
-What did git do differently? What are the trade-offs?
+Git interacts with the file system constantly. Reading, writing, watching for changes. How it does this efficiently and correctly.
 \end{partintro}
 
-\chapter{Git vs Mercurial}
-% Similar data models
-% Different philosophies
-% Command interface differences
-% Performance comparison
+\chapter{File I/O Patterns}
+% Read/write wrappers
+% Atomic writes
+% Temporary files
+% Rename atomicity
+% Error handling
+% Recovery strategies
 
-\chapter{Git vs Subversion}
-% Centralized vs distributed
-% Branching models
-% Merge handling
-% Migration paths
+\chapter{Directory Traversal}
+% Recursive descent
+% Ignoring files (.gitignore)
+% Pattern matching
+% Efficiency optimizations
+% Parallel traversal
+% Sparse checkout
 
-\chapter{Git vs Perforce}
-% Scale differences
-% Large binary files
-% Git LFS as response
-% When Perforce wins
+\chapter{File System Watching}
+% FSMonitor integration
+% Change detection
+% Polling vs events
+% Platform differences
+% Watchman integration
+% Performance impact
 
-\chapter{Git's Influence}
-% What other tools learned
-% Content-addressable storage everywhere
-% Fossil, Pijul, Jujutsu
-% Future of version control
+\chapter{Working Tree State}
+% Stat information
+% Modification detection
+% Race conditions
+% Timestamp precision
+% Inode reuse
+% Why stat is not enough
+
+\chapter{Lock Files}
+% Preventing concurrent access
+% Lock file protocol
+% Cleanup on failure
+% Deadlock avoidance
+% Per-reference locks
+% Index locking
+
+\chapter{Temporary Files and Cleanup}
+% tmpfile usage
+% Cleanup handlers
+% Signal safety
+% Atexit handlers
+% Emergency cleanup
+% Disk space management

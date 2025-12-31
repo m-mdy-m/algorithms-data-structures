@@ -1,39 +1,71 @@
-\part{Storage and Performance}
-\label{part:storage}
+\part{Data Structures and Algorithms}
+\label{part:data-structures}
 
 \begin{partintro}
-Storing every file in every commit should use infinite space. It doesn't. How?
-
-This part covers git's storage optimizations and performance characteristics.
+The building blocks. Hash tables, lists, trees, graphs. How Git implements them, optimizes them, and uses them everywhere.
 \end{partintro}
 
-\chapter{Object Storage: Loose and Packed}
-% .git/objects/ layout
-% Loose objects: one file per object
-% Why this is slow
-% When git packs objects
+\chapter{Hash Tables}
+% hashmap implementation
+% Collision resolution
+% Load factor management
+% Resize strategy
+% Hash functions used
+% Use cases in Git
+% Performance characteristics
 
-\chapter{Pack Files}
-% .pack and .idx files
-% Delta compression
-% Base objects and deltas
-% Why this saves space
+\chapter{Dynamic Arrays}
+% Generic array implementation
+% Growth policies
+% ALLOC_GROW macro
+% Type safety in C
+% Memory efficiency
+% Common patterns
 
-\chapter{Delta Algorithms}
-% How git computes deltas
-% xdelta, sliding windows
-% Time/space trade-offs
-% Complexity analysis
+\chapter{Linked Lists}
+% list.h implementation
+% Intrusive lists
+% Why intrusive
+% Trade-offs
+% Traversal patterns
+% Use throughout codebase
 
-\chapter{Transfer Protocols}
-% Fetch and push
-% Negotiation phase
-% Thin packs
-% How git minimizes data transfer
+\chapter{Trees and Tries}
+% Tree structures in Git
+% Directory trees
+% Prefix trees for paths
+% Radix trees
+% Where they're used
+% Implementation details
 
-\chapter{Performance Characteristics}
-% Common operations: complexity
-% Branch is O(1)
-% Commit is O(files changed)
-% Merge is O(files in merge base)
-% Where bottlenecks are
+\chapter{Graphs and DAGs}
+% Commit graph structure
+% Edge representation
+% Parent relationships
+% Graph properties Git exploits
+% Memory representation
+% Serialization format
+
+\chapter{Bitmaps and Bit Manipulation}
+% Bitmap usage in Git
+% Reachability bitmaps
+% Bitmap indices (.bitmap files)
+% Bit operations
+% EWAH compression
+% Use cases: fetch, push optimization
+% Space-time trade-offs
+
+\chapter{Bloom Filters}
+% Where Git uses Bloom filters
+% False positive rates
+% Commit graph optimization
+% Changed-path Bloom filters
+% Size tuning
+% Performance impact
+
+\chapter{Union-Find (Disjoint Set)}
+% Connected components
+% Path compression
+% Union by rank
+% Where Git uses it
+% Implementation details

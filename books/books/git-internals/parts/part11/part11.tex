@@ -1,0 +1,69 @@
+
+\part{Performance and Optimization}
+\label{part:performance}
+
+\begin{partintro}
+Git is fast. Not by accident. Specific optimizations, careful profiling, constant attention to performance. How it stays fast as repositories grow.
+\end{partintro}
+
+\chapter{Operation Complexity}
+% Common operations analyzed
+% Branch: O(1)
+% Commit: O(changed files)
+% Merge: O(merge base distance)
+% Log: O(commits traversed)
+% Blame: O(n * log n)
+% Where bottlenecks occur
+
+\chapter{Caching Strategies}
+% What gets cached
+% Object cache
+% Parsed commits
+% Tree structure
+% Config values
+% Name hash cache
+% Invalidation strategies
+
+\chapter{Parallelization}
+% Pack compression threads
+% Index preload
+% Directory traversal
+% Checkout parallelization
+% Thread pool management
+% Scalability limits
+
+\chapter{I/O Optimization}
+% Batching reads
+% Prefetching
+% Async I/O (where supported)
+% Direct I/O
+% Page cache interaction
+
+\chapter{Network Optimization}
+% Protocol efficiency
+% Pack negotiation
+% Shallow clones
+% Partial clones
+% Resumable operations
+% Bandwidth minimization
+
+\chapter{Geometric Repacking}
+% Why exponential pack sizes
+% Maintenance strategy
+% Reducing repack cost
+% Write amplification
+% Long-term efficiency
+
+\chapter{Commit Graph Optimization}
+% Generation numbers v2
+% Reachability queries
+% Bloom filter acceleration
+% Write-ahead log
+% Incremental updates
+
+\chapter{Profiling and Benchmarking}
+% trace2 API
+% Performance counters
+% Memory profiling
+% Bottleneck identification
+% Regression testing

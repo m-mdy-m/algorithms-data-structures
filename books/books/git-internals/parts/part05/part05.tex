@@ -1,44 +1,68 @@
-\part{Design Patterns in Git's Implementation}
-\label{part:patterns}
+\part{The Object Model}
+\label{part:object-model}
 
 \begin{partintro}
-Git's codebase uses recognizable design patterns. Not always explicitly, but they're there.
-
-Identifying these patterns helps you understand the code and teaches you about software architecture.
+Git's core insight. Content-addressable storage. Four object types. How they relate. Why this model is powerful. This is the heart of everything.
 \end{partintro}
 
-\chapter{Immutable Data Structures}
-% Objects never change
-% Benefits: caching, sharing, threading
-% How git exploits immutability
-
-\chapter{Content-Addressable Store Pattern}
+\chapter{Content-Addressable Storage}
 % Hash as identity
-% Beyond git: IPFS, Nix, Docker
-% When to use this pattern
+% SHA-1 mechanics
+% SHA-256 transition
+% Why hashing solves problems
+% Deduplication
+% Integrity verification
+% Hash collision handling
 
-\chapter{Command Pattern}
-% How builtin commands work
-% Registration and dispatch
-% Extensibility through this pattern
+\chapter{Object Types and Structure}
+% Blob: raw file content
+% Tree: directory structure
+% Commit: snapshot + metadata
+% Tag: named references
+% Object header format
+% Size encoding
+% Type identification
 
-\chapter{Strategy Pattern}
-% Merge strategies
-% Diff algorithms
-% Pluggable implementations
+\chapter{Object Serialization}
+% Binary format
+% Zlib compression
+% Header structure
+% Content encoding
+% Parsing implementation
+% Writing implementation
 
-\chapter{Builder Pattern}
-% Tree and commit construction
-% Index building
-% Why builders matter here
+\chapter{Loose Objects}
+% File system layout (.git/objects)
+% Fanout directories
+% Filename from hash
+% Permissions and security
+% When created
+% Storage inefficiency
 
-\chapter{Object Pool and Caching}
-% Parsed object cache
-% Pack file caches
-% Memory management patterns
+\chapter{References System}
+% refs/heads/ - branches
+% refs/tags/ - tags
+% refs/remotes/ - remote tracking
+% HEAD and symbolic refs
+% Packed refs format
+% Reference transactions
+% Atomicity guarantees
 
-\chapter{Plugin Architecture}
-% Hooks as extension points
-% Custom merge drivers
-% Credential helpers
-% How git stays extensible
+\chapter{The Index (Staging Area)}
+% What it stores
+% Binary format
+% Stat information
+% Flags and extended flags
+% Multiple stages (merge state)
+% Cache tree extension
+% Split index
+% FS monitor integration
+% Why three-way merge needs this
+
+\chapter{RefLog}
+% What reflog tracks
+% Format and storage
+% Expiration policy
+% Recovery using reflog
+% Per-reference logs
+% Use in garbage collection

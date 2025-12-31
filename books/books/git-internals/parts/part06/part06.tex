@@ -1,52 +1,79 @@
-\part{Core Algorithms}
-\label{part:algorithms}
+\part{Pack Files and Compression}
+\label{part:packs}
 
 \begin{partintro}
-The interesting algorithms. Merge, diff, tree traversal, conflict resolution.
-
-This is where complexity analysis matters.
+How Git stores thousands of objects efficiently. Delta compression. Pack formats. Transfer protocols. The engineering that makes Git fast.
 \end{partintro}
 
-\chapter{Three-Way Merge}
-% Merge base algorithm
-% LCA in DAG
-% How conflicts are detected
-% Complexity and optimization
+\chapter{Pack File Format}
+% .pack structure
+% Object ordering
+% Delta chains
+% Base objects
+% Object types in packs
+% Trailer and checksums
+% Version 2 vs version 3
 
-\chapter{Merge Strategies}
-% Recursive (default)
-% Ours, theirs
-% Octopus (multiple branches)
-% Resolve, subtree
-% When to use which
+\chapter{Pack Index Format}
+% .idx file structure
+% Version 1 vs version 2
+% Fanout table
+% Binary search structure
+% CRC checksums
+% Large file offsets
+% Why separate index file
 
-\chapter{Diff Algorithms}
-% Myers' diff algorithm
-% Patience diff
-% Histogram diff
-% Minimal vs patience: trade-offs
-% Complexity: O(ND) where D is edit distance
+\chapter{Delta Compression}
+% What gets deltified
+% Delta selection heuristics
+% Sliding window algorithm
+% XDelta algorithm
+% Base selection strategy
+% Delta depth limits
+% Undeltified objects
+% Performance trade-offs
 
-\chapter{Tree Comparison}
-% Comparing directory trees
-% Recursive descent
-% Optimization: hash comparison
-% Unchanged subtrees: O(1)
+\chapter{Deltification Process}
+% When packs are created
+% git gc mechanics
+% Incremental repacking
+% Full repacking
+% Window size parameter
+% Depth parameter
+% Thread count
+% Memory usage
 
-\chapter{Object Lookup}
-% Finding objects by hash
-% Pack index format
-% Binary search
-% O(log n) lookup
+\chapter{Multi-Pack Index (MIDX)}
+% What problem it solves
+% Format and structure
+% Reachability bitmaps in MIDX
+% Preferred packs
+% Object lookup with MIDX
+% Maintenance commands
+% Performance gains
 
-\chapter{Reachability and Graph Traversal}
-% Commit reachability
-% git log implementation
-% Topological sort
-% Rev-list and its uses
+\chapter{Cruft Packs}
+% Unreachable objects
+% Why keep them
+% Cruft pack format
+% .mtimes file
+% Graceful degradation
+% Expiration policy
 
-\chapter{Blame and History Mining}
-% git blame algorithm
-% Line-level history
-% Pickaxe (-S) and log -G
-% Performance considerations
+\chapter{Pack Protocol}
+% Negotiation phase
+% Want/have exchange
+% Common commits
+% Minimizing transfer
+% Thin packs
+% Thick packs
+% Protocol v0, v1, v2
+% Capabilities negotiation
+
+\chapter{Pack Window Management}
+% Memory-mapped pack windows
+% Window size
+% LRU eviction
+% Multiple packs open
+% Thread safety
+% Platform limits

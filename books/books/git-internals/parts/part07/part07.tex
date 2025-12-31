@@ -1,44 +1,66 @@
-\part{Advanced Topics}
-\label{part:advanced}
+\part{String Handling and Parsing}
+\label{part:strings}
 
 \begin{partintro}
-Features that aren't core but matter: rebasing, hooks, submodules, worktrees.
-
-How they work and why they're complicated.
+C doesn't have good string handling. Git built its own. How it manages strings, parses formats, and handles text safely.
 \end{partintro}
 
-\chapter{Rebasing}
-% What is rebase?
-% How it's implemented
-% Interactive rebase
-% Why it's dangerous
-% Rebase vs merge trade-offs
+\chapter{String Buffer (strbuf)}
+% Dynamic string implementation
+% API design
+% Growth strategy
+% NUL termination guarantees
+% Memory management
+% Common patterns
+% Use cases everywhere
 
-\chapter{Cherry-pick and Revert}
-% Applying commits elsewhere
-% How patches are computed
-% Conflict handling
+\chapter{String Lists and Vectors}
+% string_list: sorted arrays
+% Lookup performance
+% Duplicate handling
+% strvec: argument vectors
+% Use in command execution
+% Memory ownership
 
-\chapter{Hooks}
-% Client-side vs server-side
-% Pre-commit, post-commit, etc
-% How hooks are invoked
+\chapter{Path Handling}
+% Path normalization
+% Separator handling
+% Absolute vs relative
+% Platform differences
+% path.c utilities
 % Security considerations
 
-\chapter{Submodules and Subtrees}
-% Nested repositories
-% Why they're painful
-% Subtree alternative
-% When to use each
+\chapter{Config File Parsing}
+% INI-like format
+% Section and key structure
+% Value types
+% Multi-line values
+% Include directives
+% Conditional includes
+% Parsing implementation
+% Error handling
 
-\chapter{Worktrees}
-% Multiple working directories
-% One .git, many checkouts
-% How it's implemented
-% Use cases
+\chapter{Command Line Parsing}
+% parse-options.h
+% Option types
+% Callbacks
+% Built-in help
+% Subcommand handling
+% Argument validation
+% Error messages
 
-\chapter{Garbage Collection}
-% Unreachable objects
-% Reflog and retention
-% git gc and git prune
-% Automatic vs manual GC
+\chapter{Object Format Parsing}
+% Parsing blob, tree, commit, tag
+% Header validation
+% Content extraction
+% Malformed object handling
+% Security checks
+% Fuzzing considerations
+
+\chapter{Diff Format Parsing}
+% Unified diff format
+% Git's extensions
+% Patch application
+% Hunk parsing
+% Context matching
+% Whitespace handling
