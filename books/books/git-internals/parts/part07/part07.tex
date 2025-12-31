@@ -1,66 +1,87 @@
-\part{String Handling and Parsing}
-\label{part:strings}
+\part{Engineering Concepts}
+\label{part:engineering-concepts}
 
 \begin{partintro}
-C doesn't have good string handling. Git built its own. How it manages strings, parses formats, and handles text safely.
+Patterns, tricks, and techniques that appear throughout the codebase. How Git handles complexity, maintains performance, and stays extensible.
 \end{partintro}
 
-\chapter{String Buffer (strbuf)}
-% Dynamic string implementation
-% API design
-% Growth strategy
-% NUL termination guarantees
-% Memory management
-% Common patterns
-% Use cases everywhere
+\chapter{Immutability and Its Consequences}
+% Objects never change
+% Caching implications
+% Threading benefits
+% Debugging advantages
+% Refcounting simplification
+% What can't be immutable
 
-\chapter{String Lists and Vectors}
-% string_list: sorted arrays
-% Lookup performance
-% Duplicate handling
-% strvec: argument vectors
-% Use in command execution
-% Memory ownership
+\chapter{Copy-on-Write Patterns}
+% Where Git uses COW
+% Forking objects
+% Lazy copying
+% Performance benefits
+% Memory overhead
 
-\chapter{Path Handling}
-% Path normalization
-% Separator handling
-% Absolute vs relative
+\chapter{Lazy Loading and Evaluation}
+% Deferred operations
+% On-demand parsing
+% Commit graph generation
+% Index loading
+% Performance impact
+
+\chapter{State Machines}
+% Where Git uses state machines
+% Parsing state
+% Protocol state
+% Merge state
+% Implementation patterns
+
+\chapter{Callback and Iterator Patterns}
+% Function pointers in C
+% Generic iteration
+% Tree walking callbacks
+% Ref iteration
+% Type safety approaches
+
+\chapter{Bitmap Indices}
+% Reachability bitmaps
+% EWAH compression
+% Bitmap generation
+% Bitmap selection
+% Query optimization
+% Space-time trade-offs
+
+\chapter{Prefix Compression}
+% Delta encoding
+% Path compression in trees
+% Packed refs
+% Where else used
+% Decompression cost
+
+\chapter{Sparse Data Structures}
+% Sparse file representation
+% Sparse checkout implementation
+% Cone mode vs legacy
+% Pattern matching
+% Performance optimization
+
+\chapter{Atomic Operations}
+% Where atomicity matters
+% CAS operations
+% Memory barriers
+% Lock-free structures
 % Platform differences
-% path.c utilities
-% Security considerations
 
-\chapter{Config File Parsing}
-% INI-like format
-% Section and key structure
-% Value types
-% Multi-line values
-% Include directives
-% Conditional includes
-% Parsing implementation
-% Error handling
-
-\chapter{Command Line Parsing}
-% parse-options.h
-% Option types
-% Callbacks
-% Built-in help
-% Subcommand handling
-% Argument validation
+\chapter{Error Handling Strategies}
+% Return codes
+% die() and exit()
+% Error propagation
+% Resource cleanup
+% Graceful degradation
 % Error messages
 
-\chapter{Object Format Parsing}
-% Parsing blob, tree, commit, tag
-% Header validation
-% Content extraction
-% Malformed object handling
-% Security checks
-% Fuzzing considerations
-
-\chapter{Diff Format Parsing}
-% Unified diff format
-% Git's extensions
-% Patch application
-% Hunk parsing
-% Context matching
-% Whitespace handling
+\chapter{Extension and Plugin Architecture}
+% Hooks system
+% Custom merge drivers
+% Diff drivers
+% Clean/smudge filters
+% Credential helpers
+% How extensibility is achieved

@@ -1,87 +1,63 @@
-\part{Advanced Engineering Concepts}
-\label{part:advanced-concepts}
+\part{Advanced Features}
+\label{part:advanced-features}
 
 \begin{partintro}
-Patterns, tricks, and techniques that appear throughout the codebase. How Git handles complexity, maintains performance, and stays extensible.
+Features built on the core. More complex because they combine multiple primitives. Understanding implementation reveals trade-offs.
 \end{partintro}
 
-\chapter{Immutability and Its Consequences}
-% Objects never change
-% Caching implications
-% Threading benefits
-% Debugging advantages
-% Refcounting simplification
-% What can't be immutable
+\chapter{Rebasing Internals}
+% What rebase actually does
+% Cherry-pick in loop
+% Interactive rebase
+% Conflict resolution
+% Rebase state management
+% Why it's dangerous
+% Preservation of metadata
 
-\chapter{Copy-on-Write Patterns}
-% Where Git uses COW
-% Forking objects
-% Lazy copying
+\chapter{Submodules}
+% Nested repository model
+% .gitmodules file
+% Submodule commands
+% Update strategies
+% Recursion handling
+% Why they're complex
+% Alternatives
+
+\chapter{Worktrees}
+% Multiple working directories
+% Shared object database
+% Linked worktrees
+% Reference isolation
+% Lock management
+% Use cases
+
+\chapter{Partial Clone}
+% Lazy object fetching
+% Promisor remotes
+% Missing object handling
+% Filter specifications
+% Performance implications
+% Maintenance considerations
+
+\chapter{Sparse Checkout}
+% Pattern-based checkout
+% Cone vs non-cone mode
+% Index implications
 % Performance benefits
-% Memory overhead
+% Limitations
 
-\chapter{Lazy Loading and Evaluation}
-% Deferred operations
-% On-demand parsing
-% Commit graph generation
-% Index loading
-% Performance impact
-
-\chapter{State Machines}
-% Where Git uses state machines
-% Parsing state
-% Protocol state
-% Merge state
-% Implementation patterns
-
-\chapter{Callback and Iterator Patterns}
-% Function pointers in C
-% Generic iteration
-% Tree walking callbacks
-% Ref iteration
-% Type safety approaches
-
-\chapter{Bitmap Indices}
-% Reachability bitmaps
-% EWAH compression
-% Bitmap generation
-% Bitmap selection
-% Query optimization
-% Space-time trade-offs
-
-\chapter{Prefix Compression}
-% Delta encoding
-% Path compression in trees
-% Packed refs
-% Where else used
-% Decompression cost
-
-\chapter{Sparse Data Structures}
-% Sparse file representation
-% Sparse checkout implementation
-% Cone mode vs legacy
-% Pattern matching
-% Performance optimization
-
-\chapter{Atomic Operations}
-% Where atomicity matters
-% CAS operations
-% Memory barriers
-% Lock-free structures
-% Platform differences
-
-\chapter{Error Handling Strategies}
-% Return codes
-% die() and exit()
-% Error propagation
-% Resource cleanup
-% Graceful degradation
-% Error messages
-
-\chapter{Extension and Plugin Architecture}
-% Hooks system
-% Custom merge drivers
-% Diff drivers
+\chapter{LFS Integration}
+% Large file handling
+% Pointer files
 % Clean/smudge filters
-% Credential helpers
-% How extensibility is achieved
+% Deduplication
+% Storage backends
+% Migration strategies
+
+\chapter{Garbage Collection}
+% Reachability analysis
+% Reflog consideration
+% Expiration policy
+% Prune operation
+% Auto GC triggers
+% Maintenance scheduling

@@ -1,69 +1,39 @@
-
-\part{Performance and Optimization}
-\label{part:performance}
+\part{Comparisons and Evolution}
+\label{part:comparisons}
 
 \begin{partintro}
-Git is fast. Not by accident. Specific optimizations, careful profiling, constant attention to performance. How it stays fast as repositories grow.
+Git vs other systems. What trade-offs were made. What we can learn from alternatives.
 \end{partintro}
 
-\chapter{Operation Complexity}
-% Common operations analyzed
-% Branch: O(1)
-% Commit: O(changed files)
-% Merge: O(merge base distance)
-% Log: O(commits traversed)
-% Blame: O(n * log n)
-% Where bottlenecks occur
+\chapter{Git vs Mercurial}
+% Similar models
+% Different interfaces
+% Extension systems
+% Performance
+% Philosophy
 
-\chapter{Caching Strategies}
-% What gets cached
-% Object cache
-% Parsed commits
-% Tree structure
-% Config values
-% Name hash cache
-% Invalidation strategies
+\chapter{Git vs Subversion}
+% Distributed vs centralized
+% Branching models
+% Merge handling
+% Storage
+% Migration
 
-\chapter{Parallelization}
-% Pack compression threads
-% Index preload
-% Directory traversal
-% Checkout parallelization
-% Thread pool management
-% Scalability limits
+\chapter{Git vs Perforce}
+% Centralized scale
+% Large binaries
+% Locking
+% When Perforce wins
 
-\chapter{I/O Optimization}
-% Batching reads
-% Prefetching
-% Async I/O (where supported)
-% Direct I/O
-% Page cache interaction
+\chapter{Modern VCS}
+% Jujutsu
+% Pijul
+% Fossil
+% What they learned
+% Different approaches
 
-\chapter{Network Optimization}
-% Protocol efficiency
-% Pack negotiation
-% Shallow clones
-% Partial clones
-% Resumable operations
-% Bandwidth minimization
-
-\chapter{Geometric Repacking}
-% Why exponential pack sizes
-% Maintenance strategy
-% Reducing repack cost
-% Write amplification
-% Long-term efficiency
-
-\chapter{Commit Graph Optimization}
-% Generation numbers v2
-% Reachability queries
-% Bloom filter acceleration
-% Write-ahead log
-% Incremental updates
-
-\chapter{Profiling and Benchmarking}
-% trace2 API
-% Performance counters
-% Memory profiling
-% Bottleneck identification
-% Regression testing
+\chapter{Git's Influence}
+% Content-addressable storage
+% Distributed workflows
+% What changed
+% Future directions

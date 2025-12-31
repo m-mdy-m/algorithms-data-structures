@@ -1,53 +1,51 @@
-\part{Memory and Resource Management}
-\label{part:memory}
+\part{The Data Model}
+\label{part:data-model}
 
 \begin{partintro}
-Manual memory management in C. How Git allocates, tracks, and frees memory without leaking or crashing. The unglamorous foundation that everything else relies on.
+Git's core insight. Everything builds on this. Content-addressable storage. Four object types. The DAG.
 \end{partintro}
 
-\chapter{Memory Allocation Patterns}
-% xmalloc, xrealloc, xcalloc wrappers
-% Why wrapper functions
-% Out-of-memory handling
-% Allocation failure strategy
-% Memory zeroing practices
-% Alignment considerations
+\chapter{Content-Addressable Storage}
+% Hash as identity
+% SHA-1 and SHA-256
+% Why this solves problems
+% Automatic deduplication
+% Integrity verification
 
-\chapter{Memory Pools and Arenas}
-% Pool allocators
-% Arena allocation
-% Bulk allocation patterns
-% When and why
-% Lifetime management
-% Performance implications
+\chapter{Object Types}
+% Blob: file content
+% Tree: directory structure
+% Commit: snapshot
+% Tag: annotated reference
+% How they connect
+% Object format
 
-\chapter{Reference Counting}
-% Where ref counting is used
-% Implementation patterns
-% Avoiding cycles
-% Release mechanisms
-% Thread safety considerations
+\chapter{The DAG}
+% Why graph not tree
+% Parent relationships
+% Merge commits
+% Graph properties
+% Implications for algorithms
 
-\chapter{Buffer Management}
-% strbuf: dynamic strings
-% Implementation details
-% Growth strategies
-% Use cases throughout codebase
-% strvec: string vectors
-% string_list: sorted string arrays
-% When to use which
+\chapter{References}
+% Branches as pointers
+% Tags
+% HEAD and symbolic refs
+% Remote tracking
+% Packed refs
+% Reference transactions
 
-\chapter{Object Cache}
-% Parsed object cache
-% Cache invalidation
-% Memory pressure handling
-% LRU considerations
-% Cache size tuning
+\chapter{The Index}
+% What it is and why
+% Binary format
+% Stat cache
+% Multiple stages (merge state)
+% Extensions (cache-tree, split-index)
+% Three-way merge foundation
 
-\chapter{Memory Mapping}
-% mmap usage in Git
-% Pack file mapping
-% Large file handling
-% Platform differences
-% When mmap wins
-% When it doesn't
+\chapter{Repository Structure}
+% .git/ directory layout
+% objects/ and refs/
+% hooks/, info/, logs/
+% config and HEAD
+% What lives where

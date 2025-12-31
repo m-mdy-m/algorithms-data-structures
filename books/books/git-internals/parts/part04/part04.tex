@@ -1,71 +1,103 @@
-\part{Data Structures and Algorithms}
-\label{part:data-structures}
+\part{Algorithms}
+\label{part:algorithms}
 
 \begin{partintro}
-The building blocks. Hash tables, lists, trees, graphs. How Git implements them, optimizes them, and uses them everywhere.
+The complex parts. Graph algorithms. Diff. Merge. Tree comparison. Where algorithmic choices determine performance and correctness.
 \end{partintro}
 
-\chapter{Hash Tables}
-% hashmap implementation
-% Collision resolution
-% Load factor management
-% Resize strategy
-% Hash functions used
-% Use cases in Git
+\chapter{Graph Traversal}
+% Commit graph walking
+% Topological sort
+% Priority queues
+% Reachability queries
+% Date-ordered traversal
+% Skipping logic
+% Complexity analysis
+
+\chapter{Merge Base Computation}
+% LCA in DAG
+% Multiple merge bases
+% Virtual merge base
+% Recursive strategy foundation
+% Complexity: O(n + m)
+% Optimization techniques
+
+\chapter{Three-Way Merge}
+% Base, ours, theirs
+% Content merging
+% Conflict detection
+% Markers and resolution
+% Binary file handling
+% Rename detection in merge
+
+\chapter{Merge Strategies}
+% Recursive (default)
+% Resolve
+% Octopus
+% Ours/Theirs
+% Subtree
+% When each applies
+% Strategy options
+
+\chapter{Diff Algorithms}
+% Myers' algorithm
+% O(ND) complexity
+% Patience diff
+% Histogram diff
+% Minimal vs patience trade-offs
+% Line ending handling
+% Binary diff
+
+\chapter{Rename Detection}
+% Similarity scoring
+% Hash-based comparison
+% Threshold tuning
+% Exact renames
+% Inexact renames
+% Copy detection
+% Complexity: O(n²) limiting
+
+\chapter{Tree Comparison}
+% Recursive tree diff
+% Hash shortcuts
+% Unchanged subtree pruning
+% Performance optimization
+% Complexity analysis
+
+\chapter{Object Lookup}
+% Hash prefix search
+% Fanout table usage
+% Binary search in index
+% Abbreviation ambiguity
+% Performance: O(log n)
+
+\chapter{Reachability Algorithms}
+% Commit reachability
+% Generation numbers
+% Commit graph file
+% Bitmap-based reachability
+% Range queries
+% Optimization techniques
+
+\chapter{History Simplification}
+% log --simplify-by-decoration
+% First-parent traversal
+% History pruning
+% TREESAME logic
+% Complexity considerations
+
+\chapter{Blame Algorithm}
+% Line-level history
+% Parent analysis
+% Rename following
+% Copy detection
 % Performance characteristics
+% Incremental blame
 
-\chapter{Dynamic Arrays}
-% Generic array implementation
-% Growth policies
-% ALLOC_GROW macro
-% Type safety in C
-% Memory efficiency
-% Common patterns
-
-\chapter{Linked Lists}
-% list.h implementation
-% Intrusive lists
-% Why intrusive
-% Trade-offs
-% Traversal patterns
-% Use throughout codebase
-
-\chapter{Trees and Tries}
-% Tree structures in Git
-% Directory trees
-% Prefix trees for paths
-% Radix trees
-% Where they're used
-% Implementation details
-
-\chapter{Graphs and DAGs}
-% Commit graph structure
-% Edge representation
-% Parent relationships
-% Graph properties Git exploits
-% Memory representation
-% Serialization format
-
-\chapter{Bitmaps and Bit Manipulation}
-% Bitmap usage in Git
-% Reachability bitmaps
-% Bitmap indices (.bitmap files)
-% Bit operations
-% EWAH compression
-% Use cases: fetch, push optimization
-% Space-time trade-offs
-
-\chapter{Bloom Filters}
-% Where Git uses Bloom filters
-% False positive rates
-% Commit graph optimization
-% Changed-path Bloom filters
-% Size tuning
-% Performance impact
-
-\chapter{Union-Find (Disjoint Set)}
-% Connected components
-% Path compression
-% Union by rank
-% Where Git uses it
-% Implementation details
+\chapter{Packfile Generation}
+% Object selection
+% Delta base selection
+% Compression level
+% Thread parallelization
+% Progress reporting
+% Memory limits

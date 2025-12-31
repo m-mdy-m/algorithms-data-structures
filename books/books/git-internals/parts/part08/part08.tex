@@ -1,54 +1,68 @@
-\part{File System and I/O}
-\label{part:filesystem}
+\part{Performance and Optimization}
+\label{part:performance}
 
 \begin{partintro}
-Git interacts with the file system constantly. Reading, writing, watching for changes. How it does this efficiently and correctly.
+Git is fast. Not by accident. Specific optimizations, careful profiling, constant attention to performance. How it stays fast as repositories grow.
 \end{partintro}
 
-\chapter{File I/O Patterns}
-% Read/write wrappers
-% Atomic writes
-% Temporary files
-% Rename atomicity
-% Error handling
-% Recovery strategies
+\chapter{Operation Complexity}
+% Common operations analyzed
+% Branch: O(1)
+% Commit: O(changed files)
+% Merge: O(merge base distance)
+% Log: O(commits traversed)
+% Blame: O(n * log n)
+% Where bottlenecks occur
 
-\chapter{Directory Traversal}
-% Recursive descent
-% Ignoring files (.gitignore)
-% Pattern matching
-% Efficiency optimizations
-% Parallel traversal
-% Sparse checkout
+\chapter{Caching Strategies}
+% What gets cached
+% Object cache
+% Parsed commits
+% Tree structure
+% Config values
+% Name hash cache
+% Invalidation strategies
 
-\chapter{File System Watching}
-% FSMonitor integration
-% Change detection
-% Polling vs events
-% Platform differences
-% Watchman integration
-% Performance impact
+\chapter{Parallelization}
+% Pack compression threads
+% Index preload
+% Directory traversal
+% Checkout parallelization
+% Thread pool management
+% Scalability limits
 
-\chapter{Working Tree State}
-% Stat information
-% Modification detection
-% Race conditions
-% Timestamp precision
-% Inode reuse
-% Why stat is not enough
+\chapter{I/O Optimization}
+% Batching reads
+% Prefetching
+% Async I/O
+% Direct I/O
+% Page cache interaction
 
-\chapter{Lock Files}
-% Preventing concurrent access
-% Lock file protocol
-% Cleanup on failure
-% Deadlock avoidance
-% Per-reference locks
-% Index locking
+\chapter{Network Optimization}
+% Protocol efficiency
+% Pack negotiation
+% Shallow clones
+% Partial clones
+% Resumable operations
+% Bandwidth minimization
 
-\chapter{Temporary Files and Cleanup}
-% tmpfile usage
-% Cleanup handlers
-% Signal safety
-% Atexit handlers
-% Emergency cleanup
-% Disk space management
+\chapter{Geometric Repacking}
+% Why exponential pack sizes
+% Maintenance strategy
+% Reducing repack cost
+% Write amplification
+% Long-term efficiency
+
+\chapter{Commit Graph Optimization}
+% Generation numbers v2
+% Reachability queries
+% Bloom filter acceleration
+% Write-ahead log
+% Incremental updates
+
+\chapter{Profiling and Benchmarking}
+% trace2 API
+% Performance counters
+% Memory profiling
+% Bottleneck identification
+% Regression testing
